@@ -1,0 +1,591 @@
+<m:xml version="1.0" >
+<topics xmlns="http://www.w3.org/1998/Math/MathML">
+  <topic>
+    <num>A.1</num>
+    <query>
+      <formula id="q_2"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f(x)=\frac{x^{2}+x+c}{x^{2}+2x+c}" display="block">   <m:mrow>     <m:mrow>       <m:mi>f</m:mi>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mi>x</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:msup>           <m:mi>x</m:mi>           <m:mn>2</m:mn>         </m:msup>         <m:mo>+</m:mo>         <m:mi>x</m:mi>         <m:mo>+</m:mo>         <m:mi>c</m:mi>       </m:mrow>       <m:mrow>         <m:msup>           <m:mi>x</m:mi>           <m:mn>2</m:mn>         </m:msup>         <m:mo>+</m:mo>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>⁢</m:mo>           <m:mi>x</m:mi>         </m:mrow>         <m:mo>+</m:mo>         <m:mi>c</m:mi>       </m:mrow>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.2</num>
+    <query>
+      <formula id="q_8"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f^{\prime}(x)=f(x+1)" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mi>f</m:mi>         <m:mo>′</m:mo>       </m:msup>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mi>x</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mi>f</m:mi>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mi>x</m:mi>           <m:mo>+</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.3</num>
+    <query>
+      <formula id="q_10"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sqrt{5}" display="block">   <m:msqrt>     <m:mn>5</m:mn>   </m:msqrt> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.4</num>
+    <query>
+      <formula id="q_22"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{k=0}^{n}\binom{n}{k}k" display="block">   <m:mrow>     <m:munderover>       <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>       <m:mrow>         <m:mi>k</m:mi>         <m:mo>=</m:mo>         <m:mn>0</m:mn>       </m:mrow>       <m:mi>n</m:mi>     </m:munderover>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\binom</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>n</m:mi>       <m:mo>⁢</m:mo>       <m:mi>k</m:mi>       <m:mo>⁢</m:mo>       <m:mi>k</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.5</num>
+    <query>
+      <formula id="q_24"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="P((2)|(1))=\frac{P((2)\cap(1))}{P((1))}=\frac{P((2))P((1))}{P((1))}=P((2))" display="block">   <m:mrow>     <m:mi>P</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mn>2</m:mn>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo stretchy="false">|</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mn>1</m:mn>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:mi>P</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mn>2</m:mn>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mo>∩</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mn>1</m:mn>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mrow>         <m:mi>P</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mn>1</m:mn>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>     </m:mfrac>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:mi>P</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mn>2</m:mn>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mi>P</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mn>1</m:mn>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mrow>         <m:mi>P</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mn>1</m:mn>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>     </m:mfrac>     <m:mo>=</m:mo>     <m:mi>P</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mn>2</m:mn>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo stretchy="false">)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.6</num>
+    <query>
+      <formula id="q_28"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="5^{133}\mod 8=5" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mn>5</m:mn>         <m:mn>133</m:mn>       </m:msup>       <m:mo>⁢</m:mo>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mod</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mn>8</m:mn>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>5</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.7</num>
+    <query>
+      <formula id="q_29"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\frac{11^{\text}{10}-1}{100}" display="block">   <m:mfrac>     <m:mrow>       <m:mrow>         <m:msup>           <m:mn>11</m:mn>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>\text</m:mtext>           </m:merror>         </m:msup>         <m:mo>⁢</m:mo>         <m:mn>10</m:mn>       </m:mrow>       <m:mo>-</m:mo>       <m:mn>1</m:mn>     </m:mrow>     <m:mn>100</m:mn>   </m:mfrac> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.8</num>
+    <query>
+      <formula id="q_48"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\lim_{n\rightarrow\infty}\sqrt[n]{\frac{(27)^{n}(n!)^{3}}{(3n)!}}" display="block">   <m:mrow>     <m:munder>       <m:mo movablelimits="false">lim</m:mo>       <m:mrow>         <m:mi>n</m:mi>         <m:mo>→</m:mo>         <mi mathvariant="normal">∞</m:mi>       </m:mrow>     </m:munder>     <m:mo>⁡</m:mo>     <m:mroot>       <m:mfrac>         <m:mrow>           <m:msup>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mn>27</m:mn>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mi>n</m:mi>           </m:msup>           <m:mo>⁢</m:mo>           <m:msup>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mi>n</m:mi>                 <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mn>3</m:mn>           </m:msup>         </m:mrow>         <m:mrow>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mrow>               <m:mn>3</m:mn>               <m:mo>⁢</m:mo>               <m:mi>n</m:mi>             </m:mrow>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>         </m:mrow>       </m:mfrac>       <m:mi>n</m:mi>     </m:mroot>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.9</num>
+    <query>
+      <formula id="q_53"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{i=0}^{n}i^{2}=\frac{(n^{2}+n)(2n+1)}{6}" display="block">   <m:mrow>     <m:mrow>       <m:munderover>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>i</m:mi>           <m:mo>=</m:mo>           <m:mn>0</m:mn>         </m:mrow>         <m:mi>n</m:mi>       </m:munderover>       <m:msup>         <m:mi>i</m:mi>         <m:mn>2</m:mn>       </m:msup>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:msup>               <m:mi>n</m:mi>               <m:mn>2</m:mn>             </m:msup>             <m:mo>+</m:mo>             <m:mi>n</m:mi>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mrow>               <m:mn>2</m:mn>               <m:mo>⁢</m:mo>               <m:mi>n</m:mi>             </m:mrow>             <m:mo>+</m:mo>             <m:mn>1</m:mn>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mn>6</m:mn>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.10</num>
+    <query>
+      <formula id="q_54"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int_{0}^{\infty}\frac{\sin x}{x^{a}}" display="block">   <m:mrow>     <m:msubsup>       <m:mo largeop="true" symmetric="true">∫</m:mo>       <m:mn>0</m:mn>       <mi mathvariant="normal">∞</m:mi>     </m:msubsup>     <m:mfrac>       <m:mrow>         <m:mi>sin</m:mi>         <m:mo>⁡</m:mo>         <m:mi>x</m:mi>       </m:mrow>       <m:msup>         <m:mi>x</m:mi>         <m:mi>a</m:mi>       </m:msup>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.11</num>
+    <query>
+      <formula id="q_71"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\iint_{V}f(x,y)dx\ dy=\iint_{Q}f(\Phi(u,v)\Bigg{|}\frac{\partial{\Phi}}{%&amp;#10;\partial{u}}\times\frac{\partial{\Phi}}{\partial{v}}\Bigg{|}" display="block">   <m:mrow>     <m:msub>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\iint</m:mtext>       </m:merror>       <m:mi>V</m:mi>     </m:msub>     <m:mi>f</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mi>x</m:mi>       <m:mo>,</m:mo>       <m:mi>y</m:mi>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mi>d</m:mi>     <m:mpadded width="+5pt">       <m:mi>x</m:mi>     </m:mpadded>     <m:mi>d</m:mi>     <m:mi>y</m:mi>     <m:mo>=</m:mo>     <m:msub>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\iint</m:mtext>       </m:merror>       <m:mi>Q</m:mi>     </m:msub>     <m:mi>f</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <mi mathvariant="normal">Φ</m:mi>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mi>u</m:mi>         <m:mo>,</m:mo>         <m:mi>v</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo maxsize="260%" minsize="260%">|</m:mo>       <m:mfrac>         <m:mrow>           <m:mo>∂</m:mo>           <m:mo>⁡</m:mo>           <mi mathvariant="normal">Φ</m:mi>         </m:mrow>         <m:mrow>           <m:mo>∂</m:mo>           <m:mo>⁡</m:mo>           <m:mi>u</m:mi>         </m:mrow>       </m:mfrac>       <m:mo>×</m:mo>       <m:mfrac>         <m:mrow>           <m:mo>∂</m:mo>           <m:mo>⁡</m:mo>           <mi mathvariant="normal">Φ</m:mi>         </m:mrow>         <m:mrow>           <m:mo>∂</m:mo>           <m:mo>⁡</m:mo>           <m:mi>v</m:mi>         </m:mrow>       </m:mfrac>       <m:mo maxsize="260%" minsize="260%">|</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.12</num>
+    <query>
+      <formula id="q_73"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="(1+i\sqrt{3})^{1/2}" display="block">   <m:msup>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mrow>         <m:mn>1</m:mn>         <m:mo>+</m:mo>         <m:mrow>           <m:mi>i</m:mi>           <m:mo>⁢</m:mo>           <m:msqrt>             <m:mn>3</m:mn>           </m:msqrt>         </m:mrow>       </m:mrow>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mrow>       <m:mn>1</m:mn>       <m:mo>/</m:mo>       <m:mn>2</m:mn>     </m:mrow>   </m:msup> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.13</num>
+    <query>
+      <formula id="q_74"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int_{a}^{b}f(x)dx+\int_{f(a)}^{f(b)}f^{-1}(x)dx\ ?" display="block">   <m:mrow>     <m:mrow>       <m:msubsup>         <m:mo largeop="true" symmetric="true">∫</m:mo>         <m:mi>a</m:mi>         <m:mi>b</m:mi>       </m:msubsup>       <m:mrow>         <m:mi>f</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo>𝑑</m:mo>           <m:mi>x</m:mi>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>+</m:mo>     <m:mrow>       <m:msubsup>         <m:mo largeop="true" symmetric="true">∫</m:mo>         <m:mrow>           <m:mi>f</m:mi>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mi>a</m:mi>             <m:mo stretchy="false">)</m:mo>           </m:mrow>         </m:mrow>         <m:mrow>           <m:mi>f</m:mi>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mi>b</m:mi>             <m:mo stretchy="false">)</m:mo>           </m:mrow>         </m:mrow>       </m:msubsup>       <m:mrow>         <m:msup>           <m:mi>f</m:mi>           <m:mrow>             <m:mo>-</m:mo>             <m:mn>1</m:mn>           </m:mrow>         </m:msup>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo>𝑑</m:mo>           <m:mpadded width="+5pt">             <m:mi>x</m:mi>           </m:mpadded>         </m:mrow>         <m:mo>⁢</m:mo>         <mi mathvariant="normal">?</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.14</num>
+    <query>
+      <formula id="q_80"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="t^{\prime}=2x+y^{\prime}\\&amp;#10;(t^{\prime}-2x)t^{\prime}=2t-2x^{2}" display="block">   <m:mrow>     <m:msup>       <m:mi>t</m:mi>       <m:mo>′</m:mo>     </m:msup>     <m:mo>=</m:mo>     <m:mrow>       <m:mrow>         <m:mn>2</m:mn>         <m:mo>⁢</m:mo>         <m:mi>x</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:msup>           <m:mi>y</m:mi>           <m:mo>′</m:mo>         </m:msup>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:msup>               <m:mi>t</m:mi>               <m:mo>′</m:mo>             </m:msup>             <m:mo>-</m:mo>             <m:mrow>               <m:mn>2</m:mn>               <m:mo>⁢</m:mo>               <m:mi>x</m:mi>             </m:mrow>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>t</m:mi>           <m:mo>′</m:mo>         </m:msup>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mrow>         <m:mn>2</m:mn>         <m:mo>⁢</m:mo>         <m:mi>t</m:mi>       </m:mrow>       <m:mo>-</m:mo>       <m:mrow>         <m:mn>2</m:mn>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>x</m:mi>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.15</num>
+    <query>
+      <formula id="q_81"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{i=1}^{n}ix^{i-1}" display="block">   <m:mrow>     <m:munderover>       <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>       <m:mrow>         <m:mi>i</m:mi>         <m:mo>=</m:mo>         <m:mn>1</m:mn>       </m:mrow>       <m:mi>n</m:mi>     </m:munderover>     <m:mrow>       <m:mi>i</m:mi>       <m:mo>⁢</m:mo>       <m:msup>         <m:mi>x</m:mi>         <m:mrow>           <m:mi>i</m:mi>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.16</num>
+    <query>
+      <formula id="q_91"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int_{0}^{1}\frac{\ln(1+x)\ln(1-x)}{1+x}dx" display="block">   <m:mrow>     <m:msubsup>       <m:mo largeop="true" symmetric="true">∫</m:mo>       <m:mn>0</m:mn>       <m:mn>1</m:mn>     </m:msubsup>     <m:mrow>       <m:mfrac>         <m:mrow>           <m:mrow>             <m:mi>ln</m:mi>             <m:mo>⁡</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mn>1</m:mn>                 <m:mo>+</m:mo>                 <m:mi>x</m:mi>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mi>ln</m:mi>             <m:mo>⁡</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mn>1</m:mn>                 <m:mo>-</m:mo>                 <m:mi>x</m:mi>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>         </m:mrow>         <m:mrow>           <m:mn>1</m:mn>           <m:mo>+</m:mo>           <m:mi>x</m:mi>         </m:mrow>       </m:mfrac>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo>𝑑</m:mo>         <m:mi>x</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.17</num>
+    <query>
+      <formula id="q_95"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int_{x=0}^{\infty}\frac{\sin(x)}{x}" display="block">   <m:mrow>     <m:msubsup>       <m:mo largeop="true" symmetric="true">∫</m:mo>       <m:mrow>         <m:mi>x</m:mi>         <m:mo>=</m:mo>         <m:mn>0</m:mn>       </m:mrow>       <mi mathvariant="normal">∞</m:mi>     </m:msubsup>     <m:mfrac>       <m:mrow>         <m:mi>sin</m:mi>         <m:mo>⁡</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mi>x</m:mi>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.18</num>
+    <query>
+      <formula id="q_109"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\lim_{n\rightarrow\infty}\frac{[(n+1)(n+2)\cdots(n+n)]^{1/n}}{n}" display="block">   <m:mrow>     <m:munder>       <m:mo movablelimits="false">lim</m:mo>       <m:mrow>         <m:mi>n</m:mi>         <m:mo>→</m:mo>         <mi mathvariant="normal">∞</m:mi>       </m:mrow>     </m:munder>     <m:mo>⁡</m:mo>     <m:mfrac>       <m:msup>         <m:mrow>           <m:mo stretchy="false">[</m:mo>           <m:mrow>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mi>n</m:mi>                 <m:mo>+</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mo>⁢</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mi>n</m:mi>                 <m:mo>+</m:mo>                 <m:mn>2</m:mn>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mo>⁢</m:mo>             <mi mathvariant="normal">⋯</m:mi>             <m:mo>⁢</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mi>n</m:mi>                 <m:mo>+</m:mo>                 <m:mi>n</m:mi>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>           <m:mo stretchy="false">]</m:mo>         </m:mrow>         <m:mrow>           <m:mn>1</m:mn>           <m:mo>/</m:mo>           <m:mi>n</m:mi>         </m:mrow>       </m:msup>       <m:mi>n</m:mi>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.19</num>
+    <query>
+      <formula id="q_116"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="p^{4}-1" display="block">   <m:mrow>     <m:msup>       <m:mi>p</m:mi>       <m:mn>4</m:mn>     </m:msup>     <m:mo>-</m:mo>     <m:mn>1</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.20</num>
+    <query>
+      <formula id="q_127"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="n\in\Bbb N\setminus\{41\}" display="block">   <m:mrow>     <m:mi>n</m:mi>     <m:mo>∈</m:mo>     <m:mrow>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\Bbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>N</m:mi>       </m:mrow>       <m:mo>∖</m:mo>       <m:mrow>         <m:mo stretchy="false">{</m:mo>         <m:mn>41</m:mn>         <m:mo stretchy="false">}</m:mo>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.21</num>
+    <query>
+      <formula id="q_134"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="9^{9^{9^{…{{}^{9}}}}}" display="block">   <m:msup>     <m:mn>9</m:mn>     <m:msup>       <m:mn>9</m:mn>       <m:msup>         <m:mn>9</m:mn>         <m:mrow>           <m:mi>â</m:mi>           <mi mathvariant="normal"></m:mi>           <mi mathvariant="normal">¦</m:mi>           <m:msup>             <mi/>             <m:mn>9</m:mn>           </m:msup>         </m:mrow>       </m:msup>     </m:msup>   </m:msup> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.22</num>
+    <query>
+      <formula id="q_155"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="d,d+1,d+2...=N" display="block">   <m:mrow>     <m:mrow>       <m:mi>d</m:mi>       <m:mo>,</m:mo>       <m:mrow>         <m:mi>d</m:mi>         <m:mo>+</m:mo>         <m:mn>1</m:mn>       </m:mrow>       <m:mo>,</m:mo>       <m:mrow>         <m:mi>d</m:mi>         <m:mo>+</m:mo>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>⁢</m:mo>           <mi mathvariant="normal">…</m:mi>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mi>N</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.23</num>
+    <query>
+      <formula id="q_166"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="2^{7}\cdot 3^{8}\cdot 5^{2}\cdot 7^{11}" display="block">   <m:mrow>     <m:msup>       <m:mn>2</m:mn>       <m:mn>7</m:mn>     </m:msup>     <m:mo>⋅</m:mo>     <m:msup>       <m:mn>3</m:mn>       <m:mn>8</m:mn>     </m:msup>     <m:mo>⋅</m:mo>     <m:msup>       <m:mn>5</m:mn>       <m:mn>2</m:mn>     </m:msup>     <m:mo>⋅</m:mo>     <m:msup>       <m:mn>7</m:mn>       <m:mn>11</m:mn>     </m:msup>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.24</num>
+    <query>
+      <formula id="q_171"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sqrt{2i-1}?" display="block">   <m:mrow>     <m:msqrt>       <m:mrow>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>⁢</m:mo>           <m:mi>i</m:mi>         </m:mrow>         <m:mo>-</m:mo>         <m:mn>1</m:mn>       </m:mrow>     </m:msqrt>     <m:mo>⁢</m:mo>     <mi mathvariant="normal">?</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.25</num>
+    <query>
+      <formula id="q_183"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="P(x^{2}+1)=(P(x))^{2}+1" display="block">   <m:mrow>     <m:mrow>       <m:mi>P</m:mi>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:msup>             <m:mi>x</m:mi>             <m:mn>2</m:mn>           </m:msup>           <m:mo>+</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:msup>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mi>P</m:mi>             <m:mo>⁢</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mi>x</m:mi>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:mn>1</m:mn>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.26</num>
+    <query>
+      <formula id="q_205"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="x-\frac{x^{3}}{3\times 3!}+\frac{x^{5}}{5\times 5!}-\frac{x^{7}}{7\times 7!}+%&amp;#10;\cdots=\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{(2n+1)}}{(2n+1)\times(2n+1)!}" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mrow>           <m:mrow>             <m:mi>x</m:mi>             <m:mo>-</m:mo>             <m:mfrac>               <m:msup>                 <m:mi>x</m:mi>                 <m:mn>3</m:mn>               </m:msup>               <m:mrow>                 <m:mn>3</m:mn>                 <m:mo>×</m:mo>                 <m:mrow>                   <m:mn>3</m:mn>                   <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>                 </m:mrow>               </m:mrow>             </m:mfrac>           </m:mrow>           <m:mo>+</m:mo>           <m:mfrac>             <m:msup>               <m:mi>x</m:mi>               <m:mn>5</m:mn>             </m:msup>             <m:mrow>               <m:mn>5</m:mn>               <m:mo>×</m:mo>               <m:mrow>                 <m:mn>5</m:mn>                 <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>               </m:mrow>             </m:mrow>           </m:mfrac>         </m:mrow>         <m:mo>-</m:mo>         <m:mfrac>           <m:msup>             <m:mi>x</m:mi>             <m:mn>7</m:mn>           </m:msup>           <m:mrow>             <m:mn>7</m:mn>             <m:mo>×</m:mo>             <m:mrow>               <m:mn>7</m:mn>               <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>             </m:mrow>           </m:mrow>         </m:mfrac>       </m:mrow>       <m:mo>+</m:mo>       <mi mathvariant="normal">⋯</m:mi>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:munderover>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>n</m:mi>           <m:mo>=</m:mo>           <m:mn>0</m:mn>         </m:mrow>         <mi mathvariant="normal">∞</m:mi>       </m:munderover>       <m:mrow>         <m:msup>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mrow>               <m:mo>-</m:mo>               <m:mn>1</m:mn>             </m:mrow>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mi>n</m:mi>         </m:msup>         <m:mo>⁢</m:mo>         <m:mfrac>           <m:msup>             <m:mi>x</m:mi>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mrow>                   <m:mn>2</m:mn>                   <m:mo>⁢</m:mo>                   <m:mi>n</m:mi>                 </m:mrow>                 <m:mo>+</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:msup>           <m:mrow>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mrow>                 <m:mrow>                   <m:mn>2</m:mn>                   <m:mo>⁢</m:mo>                   <m:mi>n</m:mi>                 </m:mrow>                 <m:mo>+</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mo stretchy="false">)</m:mo>             </m:mrow>             <m:mo>×</m:mo>             <m:mrow>               <m:mrow>                 <m:mo stretchy="false">(</m:mo>                 <m:mrow>                   <m:mrow>                     <m:mn>2</m:mn>                     <m:mo>⁢</m:mo>                     <m:mi>n</m:mi>                   </m:mrow>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>                 <m:mo stretchy="false">)</m:mo>               </m:mrow>               <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>             </m:mrow>           </m:mrow>         </m:mfrac>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.27</num>
+    <query>
+      <formula id="q_207"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="e^{3i\pi/2}" display="block">   <m:msup>     <m:mi>e</m:mi>     <m:mrow>       <m:mrow>         <m:mn>3</m:mn>         <m:mo>⁢</m:mo>         <m:mi>i</m:mi>         <m:mo>⁢</m:mo>         <m:mi>π</m:mi>       </m:mrow>       <m:mo>/</m:mo>       <m:mn>2</m:mn>     </m:mrow>   </m:msup> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.28</num>
+    <query>
+      <formula id="q_213"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sin(18^{\circ})=\frac{a+\sqrt{b}}{c}" display="block">   <m:mrow>     <m:mrow>       <m:mi>sin</m:mi>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:msup>           <m:mn>18</m:mn>           <m:mo>∘</m:mo>         </m:msup>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:mi>a</m:mi>         <m:mo>+</m:mo>         <m:msqrt>           <m:mi>b</m:mi>         </m:msqrt>       </m:mrow>       <m:mi>c</m:mi>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.29</num>
+    <query>
+      <formula id="q_240"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\frac{5}{\infty}\cdot\frac{\sqrt{-1}}{\infty}=0\cdot 0=0," display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mfrac>           <m:mn>5</m:mn>           <mi mathvariant="normal">∞</m:mi>         </m:mfrac>         <m:mo>⋅</m:mo>         <m:mfrac>           <m:msqrt>             <m:mrow>               <m:mo>-</m:mo>               <m:mn>1</m:mn>             </m:mrow>           </m:msqrt>           <mi mathvariant="normal">∞</m:mi>         </m:mfrac>       </m:mrow>       <m:mo>=</m:mo>       <m:mrow>         <m:mn>0</m:mn>         <m:mo>⋅</m:mo>         <m:mn>0</m:mn>       </m:mrow>       <m:mo>=</m:mo>       <m:mn>0</m:mn>     </m:mrow>     <m:mo>,</m:mo>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.30</num>
+    <query>
+      <formula id="q_243"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="a^{3}+b^{3}+c^{3}-3abc" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mi>a</m:mi>         <m:mn>3</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mi>b</m:mi>         <m:mn>3</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mi>c</m:mi>         <m:mn>3</m:mn>       </m:msup>     </m:mrow>     <m:mo>-</m:mo>     <m:mrow>       <m:mn>3</m:mn>       <m:mo>⁢</m:mo>       <m:mi>a</m:mi>       <m:mo>⁢</m:mo>       <m:mi>b</m:mi>       <m:mo>⁢</m:mo>       <m:mi>c</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.32</num>
+    <query>
+      <formula id="q_262"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="Empty(x)\iff\not\exists y(y\in x)" display="block">   <m:mrow>     <m:mi>E</m:mi>     <m:mi>m</m:mi>     <m:mi>p</m:mi>     <m:mi>t</m:mi>     <m:mi>y</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mi>x</m:mi>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mo>⇔</m:mo>     <m:mo>∄</m:mo>     <m:mi>y</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mi>y</m:mi>       <m:mo>∈</m:mo>       <m:mi>x</m:mi>       <m:mo stretchy="false">)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.33</num>
+    <query>
+      <formula id="q_266"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\frac{\partial^{3}f}{\partial t^{3}}" display="block">   <m:mfrac>     <m:mrow>       <m:msup>         <m:mo>∂</m:mo>         <m:mn>3</m:mn>       </m:msup>       <m:mo>⁡</m:mo>       <m:mi>f</m:mi>     </m:mrow>     <m:mrow>       <m:mo>∂</m:mo>       <m:mo>⁡</m:mo>       <m:msup>         <m:mi>t</m:mi>         <m:mn>3</m:mn>       </m:msup>     </m:mrow>   </m:mfrac> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.34</num>
+    <query>
+      <formula id="q_268"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\align*a\uparrow b&amp;amp;amp;=a^{b}\\&amp;#10;a\uparrow^{n}b&amp;amp;amp;=\underbrace{a\uparrow^{n-1}(a\uparrow^{n-1}(\dots(a%&amp;#10;\uparrow^{n-1}a)\dots))}_{b\text{copiesof}a}" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>{align*}</m:mtext>     </m:merror>     <m:mi>a</m:mi>     <m:mo>↑</m:mo>     <m:mi>b</m:mi>     <mi mathvariant="normal">&amp;amp;</m:mi>     <m:mi>a</m:mi>     <m:mi>m</m:mi>     <m:mi>p</m:mi>     <m:mo>;</m:mo>     <m:mo>=</m:mo>     <m:msup>       <m:mi>a</m:mi>       <m:mi>b</m:mi>     </m:msup>     <m:mi>a</m:mi>     <m:msup>       <m:mo>↑</m:mo>       <m:mi>n</m:mi>     </m:msup>     <m:mi>b</m:mi>     <mi mathvariant="normal">&amp;amp;</m:mi>     <m:mi>a</m:mi>     <m:mi>m</m:mi>     <m:mi>p</m:mi>     <m:mo>;</m:mo>     <m:mo>=</m:mo>     <m:munder>       <m:munder accentunder="true">         <m:mrow>           <m:mi>a</m:mi>           <m:msup>             <m:mo movablelimits="false">↑</m:mo>             <m:mrow>               <m:mi>n</m:mi>               <m:mo movablelimits="false">-</m:mo>               <m:mn>1</m:mn>             </m:mrow>           </m:msup>           <m:mrow>             <m:mo movablelimits="false" stretchy="false">(</m:mo>             <m:mi>a</m:mi>             <m:msup>               <m:mo movablelimits="false">↑</m:mo>               <m:mrow>                 <m:mi>n</m:mi>                 <m:mo movablelimits="false">-</m:mo>                 <m:mn>1</m:mn>               </m:mrow>             </m:msup>             <m:mrow>               <m:mo movablelimits="false" stretchy="false">(</m:mo>               <mi mathvariant="normal">…</m:mi>               <m:mrow>                 <m:mo movablelimits="false" stretchy="false">(</m:mo>                 <m:mi>a</m:mi>                 <m:msup>                   <m:mo movablelimits="false">↑</m:mo>                   <m:mrow>                     <m:mi>n</m:mi>                     <m:mo movablelimits="false">-</m:mo>                     <m:mn>1</m:mn>                   </m:mrow>                 </m:msup>                 <m:mi>a</m:mi>                 <m:mo movablelimits="false" stretchy="false">)</m:mo>               </m:mrow>               <mi mathvariant="normal">…</m:mi>               <m:mo movablelimits="false" stretchy="false">)</m:mo>             </m:mrow>             <m:mo movablelimits="false" stretchy="false">)</m:mo>           </m:mrow>         </m:mrow>         <m:mo movablelimits="false">⏟</m:mo>       </m:munder>       <m:mrow>         <m:mi>b</m:mi>         <m:mo>⁢</m:mo>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\text</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>c</m:mi>         <m:mo>⁢</m:mo>         <m:mi>o</m:mi>         <m:mo>⁢</m:mo>         <m:mi>p</m:mi>         <m:mo>⁢</m:mo>         <m:mi>i</m:mi>         <m:mo>⁢</m:mo>         <m:mi>e</m:mi>         <m:mo>⁢</m:mo>         <m:mi>s</m:mi>         <m:mo>⁢</m:mo>         <m:mi>o</m:mi>         <m:mo>⁢</m:mo>         <m:mi>f</m:mi>         <m:mo>⁢</m:mo>         <m:mi>a</m:mi>       </m:mrow>     </m:munder>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.35</num>
+    <query>
+      <formula id="q_290"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int e^{x^{2}}dx" display="block">   <m:mrow>     <m:mo largeop="true" symmetric="true">∫</m:mo>     <m:mrow>       <m:msup>         <m:mi>e</m:mi>         <m:msup>           <m:mi>x</m:mi>           <m:mn>2</m:mn>         </m:msup>       </m:msup>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo>𝑑</m:mo>         <m:mi>x</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.36</num>
+    <query>
+      <formula id="q_295"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\lnot P\to P\iff\lnot(\lnot P)\lor P\iff P" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <mi mathvariant="normal">¬</m:mi>         <m:mo>⁢</m:mo>         <m:mi>P</m:mi>       </m:mrow>       <m:mo>→</m:mo>       <m:mi>P</m:mi>     </m:mrow>     <m:mo>⇔</m:mo>     <m:mrow>       <m:mrow>         <mi mathvariant="normal">¬</m:mi>         <m:mo>⁡</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <mi mathvariant="normal">¬</m:mi>             <m:mo>⁢</m:mo>             <m:mi>P</m:mi>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mo>∨</m:mo>       <m:mi>P</m:mi>     </m:mrow>     <m:mo>⇔</m:mo>     <m:mi>P</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.37</num>
+    <query>
+      <formula id="q_302"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f\neq\mathrm{id}\neq g" display="block">   <m:mrow>     <m:mi>f</m:mi>     <m:mo>≠</m:mo>     <m:mi>id</m:mi>     <m:mo>≠</m:mo>     <m:mi>g</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.38</num>
+    <query>
+      <formula id="q_319"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="q,r:a=bq+r" display="block">   <m:mrow>     <m:mrow>       <m:mi>q</m:mi>       <m:mo>,</m:mo>       <m:mi>r</m:mi>     </m:mrow>     <m:mo>:</m:mo>     <m:mrow>       <m:mi>a</m:mi>       <m:mo>=</m:mo>       <m:mrow>         <m:mrow>           <m:mi>b</m:mi>           <m:mo>⁢</m:mo>           <m:mi>q</m:mi>         </m:mrow>         <m:mo>+</m:mo>         <m:mi>r</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.39</num>
+    <query>
+      <formula id="q_326"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\log 2019\gt\log 2018" display="block">   <m:mrow>     <m:mi>log</m:mi>     <m:mo>⁡</m:mo>     <m:mrow>       <m:mn>2019</m:mn>       <m:mo>⁢</m:mo>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\gt</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mi>log</m:mi>         <m:mo>⁡</m:mo>         <m:mn>2018</m:mn>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.40</num>
+    <query>
+      <formula id="q_329"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="a(x)y+b(x)y^{\prime}+c(x)y&amp;quot;+d(x)y^{\prime\prime\prime}+...+q(x)=0" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mi>a</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mi>y</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>b</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>y</m:mi>           <m:mo>′</m:mo>         </m:msup>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>c</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mi>y</m:mi>         <m:mo>⁢</m:mo>         <mi mathvariant="normal">"</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>d</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>y</m:mi>           <m:mi>′′′</m:mi>         </m:msup>       </m:mrow>       <m:mo>+</m:mo>       <mi mathvariant="normal">…</m:mi>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>q</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>0</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.41</num>
+    <query>
+      <formula id="q_336"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{r=1}^{n}(-1)^{(n-r)}{n\choose r}(r)^{m}" display="block">   <m:mrow>     <m:munderover>       <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>       <m:mrow>         <m:mi>r</m:mi>         <m:mo>=</m:mo>         <m:mn>1</m:mn>       </m:mrow>       <m:mi>n</m:mi>     </m:munderover>     <m:mrow>       <m:msup>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mo>-</m:mo>             <m:mn>1</m:mn>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:mi>n</m:mi>             <m:mo>-</m:mo>             <m:mi>r</m:mi>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:msup>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo>(</m:mo>         <mfrac linethickness="0pt">           <m:mi>n</m:mi>           <m:mi>r</m:mi>         </m:mfrac>         <m:mo>)</m:mo>       </m:mrow>       <m:mo>⁢</m:mo>       <m:msup>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>r</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mi>m</m:mi>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.42</num>
+    <query>
+      <formula id="q_337"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="x^{2}+1=0" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mi>x</m:mi>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:mn>1</m:mn>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>0</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.43</num>
+    <query>
+      <formula id="q_339"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{n\geq 1}\frac{1}{n^{2}+1}=\frac{\pi\coth\pi-1}{2}" display="block">   <m:mrow>     <m:mrow>       <m:munder>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>n</m:mi>           <m:mo>≥</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:munder>       <m:mfrac>         <m:mn>1</m:mn>         <m:mrow>           <m:msup>             <m:mi>n</m:mi>             <m:mn>2</m:mn>           </m:msup>           <m:mo>+</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:mfrac>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mrow>         <m:mrow>           <m:mi>π</m:mi>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mi>coth</m:mi>             <m:mo>⁡</m:mo>             <m:mi>π</m:mi>           </m:mrow>         </m:mrow>         <m:mo>-</m:mo>         <m:mn>1</m:mn>       </m:mrow>       <m:mn>2</m:mn>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.44</num>
+    <query>
+      <formula id="q_348"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="A,B\in\mathscr{M}_{2\times 2}(\mathbb{Q})" display="block">   <m:mrow>     <m:mrow>       <m:mi>A</m:mi>       <m:mo>,</m:mo>       <m:mi>B</m:mi>     </m:mrow>     <m:mo>∈</m:mo>     <m:mrow>       <m:msub>         <mi class="ltx_font_mathscript">ℳ</m:mi>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>×</m:mo>           <m:mn>2</m:mn>         </m:mrow>       </m:msub>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>\mathbb</m:mtext>           </m:merror>           <m:mo>⁢</m:mo>           <m:mi>Q</m:mi>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.45</num>
+    <query>
+      <formula id="q_360"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sin(x),\sin(2x),\sin(3x),...,\sin(nx)" display="block">   <m:mrow>     <m:mrow>       <m:mi>sin</m:mi>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mi>x</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mi>sin</m:mi>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>⁢</m:mo>           <m:mi>x</m:mi>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mi>sin</m:mi>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mn>3</m:mn>           <m:mo>⁢</m:mo>           <m:mi>x</m:mi>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>,</m:mo>     <mi mathvariant="normal">…</m:mi>     <m:mo>,</m:mo>     <m:mrow>       <m:mi>sin</m:mi>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mi>n</m:mi>           <m:mo>⁢</m:mo>           <m:mi>x</m:mi>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.46</num>
+    <query>
+      <formula id="q_370"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\int x^{k}f(x)dx=0" display="block">   <m:mrow>     <m:mrow>       <m:mo largeop="true" symmetric="true">∫</m:mo>       <m:mrow>         <m:msup>           <m:mi>x</m:mi>           <m:mi>k</m:mi>         </m:msup>         <m:mo>⁢</m:mo>         <m:mi>f</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>x</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo>𝑑</m:mo>           <m:mi>x</m:mi>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>0</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.47</num>
+    <query>
+      <formula id="q_402"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="rq\equiv 1\bmod p" display="block">   <m:mrow>     <m:mrow>       <m:mi>r</m:mi>       <m:mo>⁢</m:mo>       <m:mi>q</m:mi>     </m:mrow>     <m:mo>≡</m:mo>     <m:mrow>       <m:mn>1</m:mn>       <m:mo lspace="2.5pt" rspace="2.5pt">mod</m:mo>       <m:mi>p</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.48</num>
+    <query>
+      <formula id="q_424"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="(x+y)^{k}\geq x^{k}+y^{k}" display="block">   <m:mrow>     <m:msup>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mi>x</m:mi>           <m:mo>+</m:mo>           <m:mi>y</m:mi>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mi>k</m:mi>     </m:msup>     <m:mo>≥</m:mo>     <m:mrow>       <m:msup>         <m:mi>x</m:mi>         <m:mi>k</m:mi>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mi>y</m:mi>         <m:mi>k</m:mi>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.49</num>
+    <query>
+      <formula id="q_455"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\left(1+x\right)^{2n}=\left[(1+x)^{n}\right]^{2}" display="block">   <m:mrow>     <m:msup>       <m:mrow>         <m:mo>(</m:mo>         <m:mrow>           <m:mn>1</m:mn>           <m:mo>+</m:mo>           <m:mi>x</m:mi>         </m:mrow>         <m:mo>)</m:mo>       </m:mrow>       <m:mrow>         <m:mn>2</m:mn>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>     </m:msup>     <m:mo>=</m:mo>     <m:msup>       <m:mrow>         <m:mo>[</m:mo>         <m:msup>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mrow>               <m:mn>1</m:mn>               <m:mo>+</m:mo>               <m:mi>x</m:mi>             </m:mrow>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mi>n</m:mi>         </m:msup>         <m:mo>]</m:mo>       </m:mrow>       <m:mn>2</m:mn>     </m:msup>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.50</num>
+    <query>
+      <formula id="q_459"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum{\frac{1}{n^{2+\cos{n}}}}" display="block">   <m:mrow>     <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>     <m:mfrac>       <m:mn>1</m:mn>       <m:msup>         <m:mi>n</m:mi>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>+</m:mo>           <m:mrow>             <m:mi>cos</m:mi>             <m:mo>⁡</m:mo>             <m:mi>n</m:mi>           </m:mrow>         </m:mrow>       </m:msup>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.51</num>
+    <query>
+      <formula id="q_470"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\binom{n}{n}+\binom{n+1}{n}\frac{1}{2}+\binom{n+2}{n}\frac{1}{2^{2}}+\binom{n+%&amp;#10;3}{n}\frac{1}{2^{3}}+\cdots+\binom{n+n}{n}\frac{1}{2^{n}}." display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mn>1</m:mn>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mfrac>           <m:mn>1</m:mn>           <m:mn>2</m:mn>         </m:mfrac>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mn>2</m:mn>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mfrac>           <m:mn>1</m:mn>           <m:msup>             <m:mn>2</m:mn>             <m:mn>2</m:mn>           </m:msup>         </m:mfrac>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mn>3</m:mn>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mfrac>           <m:mn>1</m:mn>           <m:msup>             <m:mn>2</m:mn>             <m:mn>3</m:mn>           </m:msup>         </m:mfrac>       </m:mrow>       <m:mo>+</m:mo>       <mi mathvariant="normal">⋯</m:mi>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:mfrac>           <m:mn>1</m:mn>           <m:msup>             <m:mn>2</m:mn>             <m:mi>n</m:mi>           </m:msup>         </m:mfrac>       </m:mrow>     </m:mrow>     <m:mo>.</m:mo>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.52</num>
+    <query>
+      <formula id="q_473"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\forall n\in\mathbb{N}" display="block">   <m:mrow>     <m:mrow>       <m:mo>∀</m:mo>       <m:mi>n</m:mi>     </m:mrow>     <m:mo>∈</m:mo>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mathbb</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>N</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.53</num>
+    <query>
+      <formula id="q_498"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="AB=1\nRightarrow BA=1" display="block">   <m:mrow>     <m:mrow>       <m:mi>A</m:mi>       <m:mo>⁢</m:mo>       <m:mi>B</m:mi>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mn>1</m:mn>       <m:mo>⁢</m:mo>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\nRightarrow</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>B</m:mi>       <m:mo>⁢</m:mo>       <m:mi>A</m:mi>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>1</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.54</num>
+    <query>
+      <formula id="q_502"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="P(N)=(S|S⊆N)" display="block">   <m:mrow>     <m:mi>P</m:mi>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mi>N</m:mi>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mi>S</m:mi>       <m:mo stretchy="false">|</m:mo>       <m:mi>S</m:mi>       <m:mi>â</m:mi>       <mi mathvariant="normal"></m:mi>       <mi mathvariant="normal"></m:mi>       <m:mi>N</m:mi>       <m:mo stretchy="false">)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.55</num>
+    <query>
+      <formula id="q_504"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\frac{1}{\sqrt{-1}}=\sqrt{-1}" display="block">   <m:mrow>     <m:mfrac>       <m:mn>1</m:mn>       <m:msqrt>         <m:mrow>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:msqrt>     </m:mfrac>     <m:mo>=</m:mo>     <m:msqrt>       <m:mrow>         <m:mo>-</m:mo>         <m:mn>1</m:mn>       </m:mrow>     </m:msqrt>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.56</num>
+    <query>
+      <formula id="q_510"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\exists p\ \bigl{(}\text{pisprime}\rightarrow\forall x\text{(xisprime)}\bigr{)}" display="block">   <m:mrow>     <m:mo>∃</m:mo>     <m:mpadded width="+5pt">       <m:mi>p</m:mi>     </m:mpadded>     <m:mrow>       <m:mo maxsize="120%" minsize="120%">(</m:mo>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\text</m:mtext>       </m:merror>       <m:mi>p</m:mi>       <m:mi>i</m:mi>       <m:mi>s</m:mi>       <m:mi>p</m:mi>       <m:mi>r</m:mi>       <m:mi>i</m:mi>       <m:mi>m</m:mi>       <m:mi>e</m:mi>       <m:mo>→</m:mo>       <m:mo>∀</m:mo>       <m:mi>x</m:mi>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\text</m:mtext>       </m:merror>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mi>x</m:mi>         <m:mi>i</m:mi>         <m:mi>s</m:mi>         <m:mi>p</m:mi>         <m:mi>r</m:mi>         <m:mi>i</m:mi>         <m:mi>m</m:mi>         <m:mi>e</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo maxsize="120%" minsize="120%">)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.57</num>
+    <query>
+      <formula id="q_522"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f^{-1}:f(X)\mapsto X" display="block">   <m:mrow>     <m:msup>       <m:mi>f</m:mi>       <m:mrow>         <m:mo>-</m:mo>         <m:mn>1</m:mn>       </m:mrow>     </m:msup>     <m:mo>:</m:mo>     <m:mrow>       <m:mrow>         <m:mi>f</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>X</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mo>↦</m:mo>       <m:mi>X</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.58</num>
+    <query>
+      <formula id="q_524"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="3\arcsin\frac{1}{4}+\arccos\frac{11}{16}=\frac{\pi}{2}" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mn>3</m:mn>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mi>arcsin</m:mi>           <m:mo>⁡</m:mo>           <m:mfrac>             <m:mn>1</m:mn>             <m:mn>4</m:mn>           </m:mfrac>         </m:mrow>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:mi>arccos</m:mi>         <m:mo>⁡</m:mo>         <m:mfrac>           <m:mn>11</m:mn>           <m:mn>16</m:mn>         </m:mfrac>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mfrac>       <m:mi>π</m:mi>       <m:mn>2</m:mn>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.59</num>
+    <query>
+      <formula id="q_526"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{d|n}{\phi(d)}=n" display="block">   <m:mrow>     <m:mrow>       <m:munder>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>d</m:mi>           <m:mo stretchy="false">|</m:mo>           <m:mi>n</m:mi>         </m:mrow>       </m:munder>       <m:mrow>         <m:mi>ϕ</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>d</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mi>n</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.60</num>
+    <query>
+      <formula id="q_540"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\left(1-\frac{1}{\sqrt{1+1}}\right)*\left(1-\frac{1}{\sqrt{2+1}}\right)*\left(%&amp;#10;1-\frac{1}{\sqrt{3+1}}\right)*\left(1-\frac{1}{\sqrt{4+1}}\right)*\left(1-%&amp;#10;\frac{1}{\sqrt{5+1}}\right)*\left(1-\frac{1}{\sqrt{6+1}}\right)*\left(1-\frac{%&amp;#10;1}{\sqrt{7+1}}\right)*\left(1-\frac{1}{\sqrt{8+1}}\right)*.........*\left(1-%&amp;#10;\frac{1}{\sqrt{n+1}}\right)" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>1</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>2</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>3</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>4</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>5</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>6</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>7</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mrow>             <m:mn>1</m:mn>             <m:mo>-</m:mo>             <m:mfrac>               <m:mn>1</m:mn>               <m:msqrt>                 <m:mrow>                   <m:mn>8</m:mn>                   <m:mo>+</m:mo>                   <m:mn>1</m:mn>                 </m:mrow>               </m:msqrt>             </m:mfrac>           </m:mrow>           <m:mo>)</m:mo>         </m:mrow>         <m:mo>*</m:mo>         <mi mathvariant="normal">…</m:mi>       </m:mrow>       <m:mo>⁢</m:mo>       <mi mathvariant="normal">…</m:mi>       <m:mo>⁢</m:mo>       <mi mathvariant="normal">…</m:mi>     </m:mrow>     <m:mo>*</m:mo>     <m:mrow>       <m:mo>(</m:mo>       <m:mrow>         <m:mn>1</m:mn>         <m:mo>-</m:mo>         <m:mfrac>           <m:mn>1</m:mn>           <m:msqrt>             <m:mrow>               <m:mi>n</m:mi>               <m:mo>+</m:mo>               <m:mn>1</m:mn>             </m:mrow>           </m:msqrt>         </m:mfrac>       </m:mrow>       <m:mo>)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.61</num>
+    <query>
+      <formula id="q_547"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="i,j\in\mathbb{N}" display="block">   <m:mrow>     <m:mrow>       <m:mi>i</m:mi>       <m:mo>,</m:mo>       <m:mi>j</m:mi>     </m:mrow>     <m:mo>∈</m:mo>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mathbb</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>N</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.62</num>
+    <query>
+      <formula id="q_564"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="|\mathbb{Z}\times\mathbb{Z}|=|\mathbb{Z}|" display="block">   <m:mrow>     <m:mrow>       <m:mo stretchy="false">|</m:mo>       <m:mrow>         <m:mrow>           <m:mrow>             <m:merror class="ltx_ERROR undefined undefined">               <m:mtext>\mathbb</m:mtext>             </m:merror>             <m:mo>⁢</m:mo>             <m:mi>Z</m:mi>           </m:mrow>           <m:mo>×</m:mo>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>\mathbb</m:mtext>           </m:merror>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mi>Z</m:mi>       </m:mrow>       <m:mo stretchy="false">|</m:mo>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mo stretchy="false">|</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\mathbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>Z</m:mi>       </m:mrow>       <m:mo stretchy="false">|</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.63</num>
+    <query>
+      <formula id="q_566"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\text{lcm}" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>\text</m:mtext>     </m:merror>     <m:mo>⁢</m:mo>     <m:mi>l</m:mi>     <m:mo>⁢</m:mo>     <m:mi>c</m:mi>     <m:mo>⁢</m:mo>     <m:mi>m</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.64</num>
+    <query>
+      <formula id="q_573"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f:[a,b]\to\mathbb{R}" display="block">   <m:mrow>     <m:mi>f</m:mi>     <m:mo>:</m:mo>     <m:mrow>       <m:mrow>         <m:mo stretchy="false">[</m:mo>         <m:mi>a</m:mi>         <m:mo>,</m:mo>         <m:mi>b</m:mi>         <m:mo stretchy="false">]</m:mo>       </m:mrow>       <m:mo>→</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\mathbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>R</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.65</num>
+    <query>
+      <formula id="q_598"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="e^{-2\lambda t}\lambda^{2}\leq\frac{1}{e^{2}t^{2}}" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mi>e</m:mi>         <m:mrow>           <m:mo>-</m:mo>           <m:mrow>             <m:mn>2</m:mn>             <m:mo>⁢</m:mo>             <m:mi>λ</m:mi>             <m:mo>⁢</m:mo>             <m:mi>t</m:mi>           </m:mrow>         </m:mrow>       </m:msup>       <m:mo>⁢</m:mo>       <m:msup>         <m:mi>λ</m:mi>         <m:mn>2</m:mn>       </m:msup>     </m:mrow>     <m:mo>≤</m:mo>     <m:mfrac>       <m:mn>1</m:mn>       <m:mrow>         <m:msup>           <m:mi>e</m:mi>           <m:mn>2</m:mn>         </m:msup>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>t</m:mi>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.66</num>
+    <query>
+      <formula id="q_608"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="A\in\mathbb{R}^{d\times d}" display="block">   <m:mrow>     <m:mi>A</m:mi>     <m:mo>∈</m:mo>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mathbb</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:msup>         <m:mi>R</m:mi>         <m:mrow>           <m:mi>d</m:mi>           <m:mo>×</m:mo>           <m:mi>d</m:mi>         </m:mrow>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.67</num>
+    <query>
+      <formula id="q_616"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\det{\bmatrix A&amp;amp;amp;B\\&amp;#10;O&amp;amp;amp;C}=\det(A)\det(C)" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mo movablelimits="false">det</m:mo>         <m:mo>⁡</m:mo>         <m:mrow>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>{bmatrix}</m:mtext>           </m:merror>           <m:mo>⁢</m:mo>           <m:mi>A</m:mi>           <m:mo>⁢</m:mo>           <mi mathvariant="normal">&amp;amp;</m:mi>           <m:mo>⁢</m:mo>           <m:mi>a</m:mi>           <m:mo>⁢</m:mo>           <m:mi>m</m:mi>           <m:mo>⁢</m:mo>           <m:mi>p</m:mi>         </m:mrow>       </m:mrow>       <m:mo>;</m:mo>       <m:mrow>         <m:mi>B</m:mi>         <m:mo>⁢</m:mo>         <m:mi>O</m:mi>         <m:mo>⁢</m:mo>         <mi mathvariant="normal">&amp;amp;</m:mi>         <m:mo>⁢</m:mo>         <m:mi>a</m:mi>         <m:mo>⁢</m:mo>         <m:mi>m</m:mi>         <m:mo>⁢</m:mo>         <m:mi>p</m:mi>       </m:mrow>       <m:mo>;</m:mo>       <m:mi>C</m:mi>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mo movablelimits="false">det</m:mo>       <m:mo>⁡</m:mo>       <m:mrow>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mi>A</m:mi>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo movablelimits="false">det</m:mo>           <m:mo>⁡</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mi>C</m:mi>             <m:mo stretchy="false">)</m:mo>           </m:mrow>         </m:mrow>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.68</num>
+    <query>
+      <formula id="q_617"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="a^{n}+1" display="block">   <m:mrow>     <m:msup>       <m:mi>a</m:mi>       <m:mi>n</m:mi>     </m:msup>     <m:mo>+</m:mo>     <m:mn>1</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.69</num>
+    <query>
+      <formula id="q_637"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\ {s\choose s}+{s+1\choose s}+...+{n\choose s}={n+1\choose s+1}" display="block">   <m:mrow>     <m:mrow>       <m:mpadded lspace="5pt" width="+5pt">         <m:mrow>           <m:mo>(</m:mo>           <mfrac linethickness="0pt">             <m:mi>s</m:mi>             <m:mi>s</m:mi>           </m:mfrac>           <m:mo>)</m:mo>         </m:mrow>       </m:mpadded>       <m:mo>+</m:mo>       <m:mrow>         <m:mo>(</m:mo>         <mfrac linethickness="0pt">           <m:mrow>             <m:mi>s</m:mi>             <m:mo>+</m:mo>             <m:mn>1</m:mn>           </m:mrow>           <m:mi>s</m:mi>         </m:mfrac>         <m:mo>)</m:mo>       </m:mrow>       <m:mo>+</m:mo>       <mi mathvariant="normal">…</m:mi>       <m:mo>+</m:mo>       <m:mrow>         <m:mo>(</m:mo>         <mfrac linethickness="0pt">           <m:mi>n</m:mi>           <m:mi>s</m:mi>         </m:mfrac>         <m:mo>)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mo>(</m:mo>       <mfrac linethickness="0pt">         <m:mrow>           <m:mi>n</m:mi>           <m:mo>+</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mrow>           <m:mi>s</m:mi>           <m:mo>+</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:mfrac>       <m:mo>)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.70</num>
+    <query>
+      <formula id="q_640"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{j=0}^{N-1}\cos\frac{\left(2j+1\right)\pi}{2N}=0" display="block">   <m:mrow>     <m:mrow>       <m:munderover>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>j</m:mi>           <m:mo>=</m:mo>           <m:mn>0</m:mn>         </m:mrow>         <m:mrow>           <m:mi>N</m:mi>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>       </m:munderover>       <m:mrow>         <m:mi>cos</m:mi>         <m:mo>⁡</m:mo>         <m:mfrac>           <m:mrow>             <m:mrow>               <m:mo>(</m:mo>               <m:mrow>                 <m:mrow>                   <m:mn>2</m:mn>                   <m:mo>⁢</m:mo>                   <m:mi>j</m:mi>                 </m:mrow>                 <m:mo>+</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mo>)</m:mo>             </m:mrow>             <m:mo>⁢</m:mo>             <m:mi>π</m:mi>           </m:mrow>           <m:mrow>             <m:mn>2</m:mn>             <m:mo>⁢</m:mo>             <m:mi>N</m:mi>           </m:mrow>         </m:mfrac>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>0</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.71</num>
+    <query>
+      <formula id="q_645"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="1^{2}+2^{2}+....+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mn>1</m:mn>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mn>2</m:mn>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <mi mathvariant="normal">…</m:mi>     </m:mrow>     <m:mo>.</m:mo>     <m:mrow>       <m:mrow>         <m:mo>+</m:mo>         <m:msup>           <m:mi>n</m:mi>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>       <m:mo>=</m:mo>       <m:mfrac>         <m:mrow>           <m:mi>n</m:mi>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mrow>               <m:mi>n</m:mi>               <m:mo>+</m:mo>               <m:mn>1</m:mn>             </m:mrow>             <m:mo stretchy="false">)</m:mo>           </m:mrow>           <m:mo>⁢</m:mo>           <m:mrow>             <m:mo stretchy="false">(</m:mo>             <m:mrow>               <m:mrow>                 <m:mn>2</m:mn>                 <m:mo>⁢</m:mo>                 <m:mi>n</m:mi>               </m:mrow>               <m:mo>+</m:mo>               <m:mn>1</m:mn>             </m:mrow>             <m:mo stretchy="false">)</m:mo>           </m:mrow>         </m:mrow>         <m:mn>6</m:mn>       </m:mfrac>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.72</num>
+    <query>
+      <formula id="q_658"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathcal{X}\in\mathcal{Y}" display="block">   <m:mrow>     <mi class="ltx_font_mathcaligraphic">𝒳</m:mi>     <m:mo>∈</m:mo>     <mi class="ltx_font_mathcaligraphic">𝒴</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.73</num>
+    <query>
+      <formula id="q_661"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\binom{n}{0}^{2}+\binom{n}{1}^{2}+...+\binom{n}{n}^{2}=\binom{2n}{n}" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:msup>           <m:mn>0</m:mn>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:msup>           <m:mn>1</m:mn>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>       <m:mo>+</m:mo>       <mi mathvariant="normal">…</m:mi>       <m:mo>+</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\binom</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>n</m:mi>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>n</m:mi>           <m:mn>2</m:mn>         </m:msup>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\binom</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mn>2</m:mn>       <m:mo>⁢</m:mo>       <m:mi>n</m:mi>       <m:mo>⁢</m:mo>       <m:mi>n</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.74</num>
+    <query>
+      <formula id="q_686"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f:(0,\infty)\rightarrow\mathbb{R}" display="block">   <m:mrow>     <m:mi>f</m:mi>     <m:mo>:</m:mo>     <m:mrow>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mn>0</m:mn>         <m:mo>,</m:mo>         <mi mathvariant="normal">∞</m:mi>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo>→</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\mathbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>R</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.75</num>
+    <query>
+      <formula id="q_696"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\lim_{u\to\infty}\frac{u^{m}}{e^{u}}=0" display="block">   <m:mrow>     <m:mrow>       <m:munder>         <m:mo movablelimits="false">lim</m:mo>         <m:mrow>           <m:mi>u</m:mi>           <m:mo>→</m:mo>           <mi mathvariant="normal">∞</m:mi>         </m:mrow>       </m:munder>       <m:mo>⁡</m:mo>       <m:mfrac>         <m:msup>           <m:mi>u</m:mi>           <m:mi>m</m:mi>         </m:msup>         <m:msup>           <m:mi>e</m:mi>           <m:mi>u</m:mi>         </m:msup>       </m:mfrac>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>0</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.76</num>
+    <query>
+      <formula id="q_702"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathbb{Z}" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>\mathbb</m:mtext>     </m:merror>     <m:mo>⁢</m:mo>     <m:mi>Z</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.77</num>
+    <query>
+      <formula id="q_726"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="(-1)(-1)=1" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo stretchy="false">(</m:mo>         <m:mrow>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mo stretchy="false">)</m:mo>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mn>1</m:mn>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.79</num>
+    <query>
+      <formula id="q_739"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\displaystyle\left|{\frac{e^{-ixu}-1}{u}}\right|\leq|x|" display="block">   <m:mrow>     <m:mrow>       <m:mo>|</m:mo>       <m:mfrac>         <m:mrow>           <m:msup>             <m:mi>e</m:mi>             <m:mrow>               <m:mo>-</m:mo>               <m:mrow>                 <m:mi>i</m:mi>                 <m:mo>⁢</m:mo>                 <m:mi>x</m:mi>                 <m:mo>⁢</m:mo>                 <m:mi>u</m:mi>               </m:mrow>             </m:mrow>           </m:msup>           <m:mo>-</m:mo>           <m:mn>1</m:mn>         </m:mrow>         <m:mi>u</m:mi>       </m:mfrac>       <m:mo>|</m:mo>     </m:mrow>     <m:mo>≤</m:mo>     <m:mrow>       <m:mo stretchy="false">|</m:mo>       <m:mi>x</m:mi>       <m:mo stretchy="false">|</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.80</num>
+    <query>
+      <formula id="q_743"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\emptyset,\{1\},\{2\},\{1,2\},\{3\},\{1,3\},\{2,3\},\{1,2,3\},\{4\},\ldots" display="block">   <m:mrow>     <mi mathvariant="normal">∅</m:mi>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>1</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>2</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>1</m:mn>       <m:mo>,</m:mo>       <m:mn>2</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>3</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>1</m:mn>       <m:mo>,</m:mo>       <m:mn>3</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>2</m:mn>       <m:mo>,</m:mo>       <m:mn>3</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>1</m:mn>       <m:mo>,</m:mo>       <m:mn>2</m:mn>       <m:mo>,</m:mo>       <m:mn>3</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">{</m:mo>       <m:mn>4</m:mn>       <m:mo stretchy="false">}</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <mi mathvariant="normal">…</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.81</num>
+    <query>
+      <formula id="q_790"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="(n_{1}+1,g(n_{1}+1)),\cdots,(n_{3},g(n_{3}))" display="block">   <m:mrow>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:mrow>         <m:msub>           <m:mi>n</m:mi>           <m:mn>1</m:mn>         </m:msub>         <m:mo>+</m:mo>         <m:mn>1</m:mn>       </m:mrow>       <m:mo>,</m:mo>       <m:mrow>         <m:mi>g</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:msub>               <m:mi>n</m:mi>               <m:mn>1</m:mn>             </m:msub>             <m:mo>+</m:mo>             <m:mn>1</m:mn>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mo stretchy="false">)</m:mo>     </m:mrow>     <m:mo>,</m:mo>     <mi mathvariant="normal">⋯</m:mi>     <m:mo>,</m:mo>     <m:mrow>       <m:mo stretchy="false">(</m:mo>       <m:msub>         <m:mi>n</m:mi>         <m:mn>3</m:mn>       </m:msub>       <m:mo>,</m:mo>       <m:mrow>         <m:mi>g</m:mi>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:msub>             <m:mi>n</m:mi>             <m:mn>3</m:mn>           </m:msub>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mo stretchy="false">)</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.82</num>
+    <query>
+      <formula id="q_807"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="A=\displaystyle\int_{0}^{2\pi}{g(x)\cdot\cos(x)\mathrm{d}x}" display="block">   <m:mrow>     <m:mi>A</m:mi>     <m:mo>=</m:mo>     <m:mrow>       <m:msubsup>         <m:mo largeop="true" symmetric="true">∫</m:mo>         <m:mn>0</m:mn>         <m:mrow>           <m:mn>2</m:mn>           <m:mo>⁢</m:mo>           <m:mi>π</m:mi>         </m:mrow>       </m:msubsup>       <m:mrow>         <m:mrow>           <m:mrow>             <m:mi>g</m:mi>             <m:mo>⁢</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mi>x</m:mi>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>           <m:mo>⋅</m:mo>           <m:mrow>             <m:mi>cos</m:mi>             <m:mo>⁡</m:mo>             <m:mrow>               <m:mo stretchy="false">(</m:mo>               <m:mi>x</m:mi>               <m:mo stretchy="false">)</m:mo>             </m:mrow>           </m:mrow>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo>d</m:mo>           <m:mi>x</m:mi>         </m:mrow>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.83</num>
+    <query>
+      <formula id="q_819"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="1,1+\frac{1}{2},1+\frac{1}{2}+\frac{1}{3},1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4%&amp;#10;},..." display="block">   <m:mrow>     <m:mn>1</m:mn>     <m:mo>,</m:mo>     <m:mrow>       <m:mn>1</m:mn>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>2</m:mn>       </m:mfrac>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mn>1</m:mn>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>2</m:mn>       </m:mfrac>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>3</m:mn>       </m:mfrac>     </m:mrow>     <m:mo>,</m:mo>     <m:mrow>       <m:mn>1</m:mn>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>2</m:mn>       </m:mfrac>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>3</m:mn>       </m:mfrac>       <m:mo>+</m:mo>       <m:mfrac>         <m:mn>1</m:mn>         <m:mn>4</m:mn>       </m:mfrac>     </m:mrow>     <m:mo>,</m:mo>     <mi mathvariant="normal">…</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.84</num>
+    <query>
+      <formula id="q_823"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{4,x}" display="block">   <m:mrow>     <m:mn>4</m:mn>     <m:mo>,</m:mo>     <m:mi>x</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.85</num>
+    <query>
+      <formula id="q_831"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="N" display="block">   <m:mi>N</m:mi> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.86</num>
+    <query>
+      <formula id="q_848"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{k=0}^{n}k\cdot\left(\begin{array}[]{l}{n}\\&amp;#10;{k}\end{array}\right)=O\left(2^{n\log_{3}n}\right)?" display="block">   <m:mrow>     <m:mrow>       <m:munderover>         <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>         <m:mrow>           <m:mi>k</m:mi>           <m:mo>=</m:mo>           <m:mn>0</m:mn>         </m:mrow>         <m:mi>n</m:mi>       </m:munderover>       <m:mrow>         <m:mi>k</m:mi>         <m:mo>⋅</m:mo>         <m:mrow>           <m:mo>(</m:mo>           <m:mtable displaystyle="true" rowspacing="0pt">             <m:mtr>               <m:mtd columnalign="left">                 <m:mi>n</m:mi>               </m:mtd>             </m:mtr>             <m:mtr>               <m:mtd columnalign="left">                 <m:mi>k</m:mi>               </m:mtd>             </m:mtr>           </m:mtable>           <m:mo>)</m:mo>         </m:mrow>       </m:mrow>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:mi>O</m:mi>       <m:mo>⁢</m:mo>       <m:mrow>         <m:mo>(</m:mo>         <m:msup>           <m:mn>2</m:mn>           <m:mrow>             <m:mi>n</m:mi>             <m:mo>⁢</m:mo>             <m:mrow>               <m:msub>                 <m:mi>log</m:mi>                 <m:mn>3</m:mn>               </m:msub>               <m:mo>⁡</m:mo>               <m:mi>n</m:mi>             </m:mrow>           </m:mrow>         </m:msup>         <m:mo>)</m:mo>       </m:mrow>       <m:mo>⁢</m:mo>       <mi mathvariant="normal">?</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.87</num>
+    <query>
+      <formula id="q_851"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\forall n\in\Bbb{N}:(\sum_{i=1}^{n}a_{i})(\sum_{i=1}^{n}\frac{1}{a_{i}})\geq n%&amp;#10;^{2}" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:mo>∀</m:mo>         <m:mi>n</m:mi>       </m:mrow>       <m:mo>∈</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\Bbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>N</m:mi>       </m:mrow>     </m:mrow>     <m:mo>:</m:mo>     <m:mrow>       <m:mrow>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:munderover>               <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>               <m:mrow>                 <m:mi>i</m:mi>                 <m:mo>=</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mi>n</m:mi>             </m:munderover>             <m:msub>               <m:mi>a</m:mi>               <m:mi>i</m:mi>             </m:msub>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>         <m:mo>⁢</m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mrow>             <m:munderover>               <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>               <m:mrow>                 <m:mi>i</m:mi>                 <m:mo>=</m:mo>                 <m:mn>1</m:mn>               </m:mrow>               <m:mi>n</m:mi>             </m:munderover>             <m:mfrac>               <m:mn>1</m:mn>               <m:msub>                 <m:mi>a</m:mi>                 <m:mi>i</m:mi>               </m:msub>             </m:mfrac>           </m:mrow>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>       <m:mo>≥</m:mo>       <m:msup>         <m:mi>n</m:mi>         <m:mn>2</m:mn>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.88</num>
+    <query>
+      <formula id="q_881"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathbb{Z}[x]" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>\mathbb</m:mtext>     </m:merror>     <m:mo>⁢</m:mo>     <m:mi>Z</m:mi>     <m:mo>⁢</m:mo>     <m:mrow>       <m:mo stretchy="false">[</m:mo>       <m:mi>x</m:mi>       <m:mo stretchy="false">]</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.89</num>
+    <query>
+      <formula id="q_884"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="A^{2}+B^{2}=C^{2}+D^{2}" display="block">   <m:mrow>     <m:mrow>       <m:msup>         <m:mi>A</m:mi>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mi>B</m:mi>         <m:mn>2</m:mn>       </m:msup>     </m:mrow>     <m:mo>=</m:mo>     <m:mrow>       <m:msup>         <m:mi>C</m:mi>         <m:mn>2</m:mn>       </m:msup>       <m:mo>+</m:mo>       <m:msup>         <m:mi>D</m:mi>         <m:mn>2</m:mn>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.90</num>
+    <query>
+      <formula id="q_891"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="A^{-1}A=\mathbb I_{n}\ \ \land\ \ AA^{-1}=\mathbb I_{n}\ \ \ \ (1)" display="block">   <m:mrow>     <m:mrow>       <m:mrow>         <m:msup>           <m:mi>A</m:mi>           <m:mrow>             <m:mo>-</m:mo>             <m:mn>1</m:mn>           </m:mrow>         </m:msup>         <m:mo>⁢</m:mo>         <m:mi>A</m:mi>       </m:mrow>       <m:mo>=</m:mo>       <m:mrow>         <m:mrow>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>\mathbb</m:mtext>           </m:merror>           <m:mo>⁢</m:mo>           <m:msub>             <m:mi>I</m:mi>             <m:mi>n</m:mi>           </m:msub>         </m:mrow>         <m:mo mathvariant="italic" separator="true"> </m:mo>         <m:mo>∧</m:mo>       </m:mrow>     </m:mrow>     <m:mo mathvariant="italic" separator="true"> </m:mo>     <m:mrow>       <m:mrow>         <m:mi>A</m:mi>         <m:mo>⁢</m:mo>         <m:msup>           <m:mi>A</m:mi>           <m:mrow>             <m:mo>-</m:mo>             <m:mn>1</m:mn>           </m:mrow>         </m:msup>       </m:mrow>       <m:mo>=</m:mo>       <m:mrow>         <m:mrow>           <m:merror class="ltx_ERROR undefined undefined">             <m:mtext>\mathbb</m:mtext>           </m:merror>           <m:mo>⁢</m:mo>           <m:msub>             <m:mi>I</m:mi>             <m:mi>n</m:mi>           </m:msub>         </m:mrow>         <m:mo mathvariant="italic" separator="true">  </m:mo>         <m:mrow>           <m:mo stretchy="false">(</m:mo>           <m:mn>1</m:mn>           <m:mo stretchy="false">)</m:mo>         </m:mrow>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.91</num>
+    <query>
+      <formula id="q_896"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathbb{R}\to\mathbb{R}" display="block">   <m:mrow>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mathbb</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>R</m:mi>     </m:mrow>     <m:mo>→</m:mo>     <m:mrow>       <m:merror class="ltx_ERROR undefined undefined">         <m:mtext>\mathbb</m:mtext>       </m:merror>       <m:mo>⁢</m:mo>       <m:mi>R</m:mi>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.92</num>
+    <query>
+      <formula id="q_901"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathbb F_{q}[X,Y]" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>\mathbb</m:mtext>     </m:merror>     <m:mo>⁢</m:mo>     <m:msub>       <m:mi>F</m:mi>       <m:mi>q</m:mi>     </m:msub>     <m:mo>⁢</m:mo>     <m:mrow>       <m:mo stretchy="false">[</m:mo>       <m:mi>X</m:mi>       <m:mo>,</m:mo>       <m:mi>Y</m:mi>       <m:mo stretchy="false">]</m:mo>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.93</num>
+    <query>
+      <formula id="q_935"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="AB=" display="block">   <m:mrow>     <m:mrow>       <m:mi>A</m:mi>       <m:mo>⁢</m:mo>       <m:mi>B</m:mi>     </m:mrow>     <m:mo>=</m:mo>     <mi/>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.94</num>
+    <query>
+      <formula id="q_943"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="2^{\aleph_{0}}" display="block">   <m:msup>     <m:mn>2</m:mn>     <m:msub>       <mi mathvariant="normal">ℵ</m:mi>       <m:mn>0</m:mn>     </m:msub>   </m:msup> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.95</num>
+    <query>
+      <formula id="q_949"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sin x" display="block">   <m:mrow>     <m:mi>sin</m:mi>     <m:mo>⁡</m:mo>     <m:mi>x</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.96</num>
+    <query>
+      <formula id="q_977"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\sum_{i}\frac{a_{i}}{a_{i}+a_{i+1}+a_{i+2}+\cdots}" display="block">   <m:mrow>     <m:munder>       <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>       <m:mi>i</m:mi>     </m:munder>     <m:mfrac>       <m:msub>         <m:mi>a</m:mi>         <m:mi>i</m:mi>       </m:msub>       <m:mrow>         <m:msub>           <m:mi>a</m:mi>           <m:mi>i</m:mi>         </m:msub>         <m:mo>+</m:mo>         <m:msub>           <m:mi>a</m:mi>           <m:mrow>             <m:mi>i</m:mi>             <m:mo>+</m:mo>             <m:mn>1</m:mn>           </m:mrow>         </m:msub>         <m:mo>+</m:mo>         <m:msub>           <m:mi>a</m:mi>           <m:mrow>             <m:mi>i</m:mi>             <m:mo>+</m:mo>             <m:mn>2</m:mn>           </m:mrow>         </m:msub>         <m:mo>+</m:mo>         <mi mathvariant="normal">⋯</m:mi>       </m:mrow>     </m:mfrac>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.97</num>
+    <query>
+      <formula id="q_984"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\mathbb{R}" display="block">   <m:mrow>     <m:merror class="ltx_ERROR undefined undefined">       <m:mtext>\mathbb</m:mtext>     </m:merror>     <m:mo>⁢</m:mo>     <m:mi>R</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.98</num>
+    <query>
+      <formula id="q_1000"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="R:S^{1}\rightarrow S^{1}" display="block">   <m:mrow>     <m:mi>R</m:mi>     <m:mo>:</m:mo>     <m:mrow>       <m:msup>         <m:mi>S</m:mi>         <m:mn>1</m:mn>       </m:msup>       <m:mo>→</m:mo>       <m:msup>         <m:mi>S</m:mi>         <m:mn>1</m:mn>       </m:msup>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.99</num>
+    <query>
+      <formula id="q_1022"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="f:\mathbb{R}\to\mathbb{R}" display="block">   <m:mrow>     <m:mi>f</m:mi>     <m:mo>:</m:mo>     <m:mrow>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\mathbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>R</m:mi>       </m:mrow>       <m:mo>→</m:mo>       <m:mrow>         <m:merror class="ltx_ERROR undefined undefined">           <m:mtext>\mathbb</m:mtext>         </m:merror>         <m:mo>⁢</m:mo>         <m:mi>R</m:mi>       </m:mrow>     </m:mrow>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>A.100</num>
+    <query>
+      <formula id="q_1025"> <m:math xmlns="http://www.w3.org/1998/Math/MathML" alttext="E\subseteq R" display="block">   <m:mrow>     <m:mi>E</m:mi>     <m:mo>⊆</m:mo>     <m:mi>R</m:mi>   </m:mrow> </m:math> </formula>
+    </query>
+  </topic>
+</topics>

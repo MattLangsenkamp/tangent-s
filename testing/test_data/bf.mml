@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+    </head>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" xref="S4.Thmthm6.p1.3.1.m1.1.cmml" alttext="W({\bf x})"
+          class="ltx_Math" id="S4.Thmthm6.p1.3.1.m1.1" display="inline">
+        <semantics xref="S4.Thmthm6.p1.3.1.m1.1.cmml" id="S4.Thmthm6.p1.3.1.m1.1a">
+            <mrow xref="S4.Thmthm6.p1.3.1.m1.1.5.cmml" id="S4.Thmthm6.p1.3.1.m1.1.5">
+                <mi xref="S4.Thmthm6.p1.3.1.m1.1.1.cmml" id="S4.Thmthm6.p1.3.1.m1.1.1">W</mi>
+                <mo xref="S4.Thmthm6.p1.3.1.m1.1.5.1.cmml" mathvariant="italic" id="S4.Thmthm6.p1.3.1.m1.1.5.1">⁢</mo>
+                <mrow xref="S4.Thmthm6.p1.3.1.m1.1.3.cmml" id="S4.Thmthm6.p1.3.1.m1.1.3">
+                    <mo xref="S4.Thmthm6.p1.3.1.m1.1.3.cmml" mathvariant="italic" id="S4.Thmthm6.p1.3.1.m1.1.3a">(</mo>
+                    <mi xref="S4.Thmthm6.p1.3.1.m1.1.3.cmml" id="S4.Thmthm6.p1.3.1.m1.1.3b">𝐱</mi>
+                    <mo xref="S4.Thmthm6.p1.3.1.m1.1.3.cmml" mathvariant="italic" id="S4.Thmthm6.p1.3.1.m1.1.3c">)</mo>
+                </mrow>
+            </mrow>
+            <annotation-xml xref="S4.Thmthm6.p1.3.1.m1.1" id="S4.Thmthm6.p1.3.1.m1.1.cmml" encoding="MathML-Content">
+                <apply xref="S4.Thmthm6.p1.3.1.m1.1.5" id="S4.Thmthm6.p1.3.1.m1.1.5.cmml">
+                    <times xref="S4.Thmthm6.p1.3.1.m1.1.5.1" id="S4.Thmthm6.p1.3.1.m1.1.5.1.cmml"></times>
+                    <ci xref="S4.Thmthm6.p1.3.1.m1.1.1" id="S4.Thmthm6.p1.3.1.m1.1.1.cmml">W</ci>
+                    <ci xref="S4.Thmthm6.p1.3.1.m1.1.3" id="S4.Thmthm6.p1.3.1.m1.1.3.cmml">𝐱</ci>
+                </apply>
+            </annotation-xml>
+            <annotation xref="S4.Thmthm6.p1.3.1.m1.1.cmml" id="S4.Thmthm6.p1.3.1.m1.1b" encoding="application/x-tex">
+                W({\bf x})
+            </annotation>
+        </semantics>
+    </math>
+
+</html>

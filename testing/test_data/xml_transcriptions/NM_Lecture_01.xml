@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\documentclass[11pt]{article}\usepackage{aahomework}\usepackage{mathtools}%&#10;\usepackage{subcaption}\usepackage{epstopdf}\usepackage{float}\tikzstyle{blk}=%&#10;[circle,innersep=0pt,minimumsize=4pt,draw,fill=black,linewidth=0.8pt]%&#10;\tikzstyle{blanknode}=[circle,innersep=3pt,minimumsize=8pt,draw,linewidth=0.8%&#10;pt]\tikzstyle{blk}=[circle,innersep=0pt,minimumsize=4pt,draw,fill=black,%&#10;linewidth=0.8pt]\par&#10;\geometry{letterpaper,textwidth=17cm,textheight=22cm}%&#10;\par&#10;\usetikzlibrary{arrows}\usetikzlibrary{plotmarks}\par&#10;\par&#10;\par&#10;%&#10;\begin{document}&#10;\par&#10;\@@section{section}{Sx1}{}{}{}{System of Linear Equations}&#10;\par&#10; A {system of linear equations} is a set of equations, all of which are %&#10;linear (powers of $x$ and $y$ are at most $1$).&#10;\@@amsalign$\displaystyle\left\{\begin{aligned}\displaystyle 3x&amp;\displaystyle=%&#10;1\\&#10;\displaystyle x+2y&amp;\displaystyle=3\end{aligned}\right.$&#10;\par&#10; There are two ways of interpreting such as system:&#10;\begin{enumerate}&#10;\enumerate@item{&#10;{Geometric way}&#10;}&#10;\enumerate@item{&#10;{Algebraic way}&#10;}&#10;\end{enumerate}&#10;\par&#10; As an example, consider what does $x=1$ represent? Some may say a {point%&#10;}, others may say a {line}.&#10;\par&#10; It is important to consider the {ambient space} in which the equation(s)%&#10; are to be considered.&#10;\par&#10;\begin{figure}[H]&#10;\centering\subfigure[t]{.3}&#10;\centering\tikzpicture&#10;\node[font=\Huge] at (-1,2) {$\bbR$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (3,0);&#10;\node[blk] at (1,0) [label=-90:{$x=1$}] {};&#10;\@@toccaption{{\@tag[][ ]{1}Point}}\@@caption{{\@tag[][: ]{Figure~1}Point}}&#10;\@add@centering&#10;\subfigure[t]{.3}&#10;\centering\tikzpicture&#10;\node[font=\Huge] at (-1,2) {$\bbR^{2}$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (3,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,3);&#10;\draw[dashed] (1,-1) to (1,3);&#10;\node at (1,1) [label=right:{$x=1$}] {};&#10;\@@toccaption{{\@tag[][ ]{2}Line}}\@@caption{{\@tag[][: ]{Figure~2}Line}}&#10;\@add@centering&#10;\subfigure[t]{.3}&#10;\centering\tikzpicture&#10;\node[font=\Huge] at (-1,2) {$\bbR^{3}$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0) to (2,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0) to (0,3);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0) to (-1,-1);&#10;\node at (0,3) [label=right:$x$] {};&#10;\node at (2,0) [label=right:$y$] {};&#10;\node at (-1,-1) [label=below:$z$] {};&#10;\draw[dashed] (0,2) to (3,2) to (2,1) to (-1,1) to (0,2);&#10;\node at (.5,1.5) [label=right:{$x=1$}] {};&#10;\@@toccaption{{\@tag[][ ]{3}Plane}}\@@caption{{\@tag[][: ]{Figure~3}Plane}}&#10;\@add@centering&#10;\@@toccaption{{\@tag[][ ]{4}Examples of the object $x=1$ in the ambient spaces%&#10; $\bbR,\bbR^{2},$ and $\bbR^{3}$.}}\@@caption{{\@tag[][: ]{Figure~4}Examples %&#10;of the object $x=1$ in the ambient spaces $\bbR,\bbR^{2},$ and $\bbR^{3}$.}}&#10;\@add@centering\end{figure}&#10;\par&#10; Consider again the system&#10;\@@amsalign$\displaystyle\left\{\begin{aligned}\displaystyle 3x&amp;\displaystyle=%&#10;1\\&#10;\displaystyle x+2y&amp;\displaystyle=3\end{aligned}\right.$&#10;Since there are two variables, we know that the system is in at least two %&#10;dimensions (maybe more). For now, let us consider the system in two dimensions%&#10;. What will be the solution?&#10;\par&#10;\vspace{.5cm}&#10;\par&#10; The equation $3x=1$ represents a line, as does $x+2y=3$. Figure \ref{fig%&#10;:lineintersectexample} shows these lines:&#10;\begin{figure}[H]&#10;\centering\tikzpicture[scale=3]&#10;\clip(-.5,2) to (4.5,2) to (4.5,-.5) to (-.5,-.5);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (4,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[dashed] (1/3,-1) to (1/3,2);&#10;\draw[dashed] (-1,2) to (4,-1/2);&#10;\node at (1/3,.5) [label=right:{Line $3x=1$}] {};&#10;\node at (1.6,3/4) [label=right:{Line $x+2y=3$}] {};&#10;\par&#10;\node[blk] (sol) at (1/3, 4/3) {};&#10;\node(sollabel) at (1,5/3) [label=above:{$(\qvar@construct{,}\qvar@construct{)%&#10;}$}] {Solution};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (sollabel) to (sol);&#10;\@@toccaption{{\@tag[][ ]{5}Visual depiction of two intersecting lines from %&#10;system \eqref{eq:system1}.}}\@@caption{{\@tag[][: ]{Figure~5}Visual depiction %&#10;of two intersecting lines from system \eqref{eq:system1}.}}&#10;\@add@centering\end{figure}&#10;\par&#10; Once we have this geometric picture of the system, a solution to the %&#10;system will be a point common to both lines.&#10;\par&#10; This is a geometric picture of the system. We still need some sort of %&#10;algebraic way of finding the exact solution. In this case, the first equation %&#10;gives us that $x=1/3$, and the second equation gives us that&#10;\@@amsalign$\displaystyle y=\frac{3-x}{2}=\frac{3-\frac{1}{3}}{2}=\frac{8}{6}=%&#10;\frac{4}{3}$&#10;\par&#10; We now have the coordinates of the solution to the equations: $(1/3,4/3)%&#10;$. Formally, we can now claim that we have found the solution $(1/3,4/3)$ to %&#10;the system \eqref{eq:system1} considered in $\bbR^{2}$.&#10;\par&#10;\vspace{1cm}&#10;\par&#10; In the above example, there is only one solution. We may ask ourselves, %&#10;given any system, will there always be one solution, can there be more than %&#10;one solution, or may there not be any solution? It turns out that examining %&#10;these possibilities through a geometric perspective holds the answer and will %&#10;allow us to generalize the answer to this question.&#10;\par&#10;\par&#10; Two lines may either intersect at one point (Figure \ref{fig:%&#10;lineintersections}a), yielding a {unique solution}; never intersect (Figure %&#10;\ref{fig:lineintersections}b), which results in {no solutions} existing; or be%&#10; on top of one another (Figure \ref{fig:lineintersections}c), which results in%&#10; {infinitely many solutions}.&#10;\begin{figure}[H]&#10;\centering\subfigure[t]{.3}&#10;\centering\tikzpicture[scale=1.5]&#10;\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (3,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[dashed] (-1,3) to (2,-1);&#10;\draw[dashed] (-1,1) to (5,-1);&#10;\@@toccaption{{\@tag[][ ]{6}One unique solution.}}\@@caption{{\@tag[][: ]{%&#10;Figure~6}One unique solution.}}&#10;\@add@centering&#10;\subfigure[t]{.3}&#10;\centering\tikzpicture[scale=1.5]&#10;\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (3,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[dashed] (-1,1) to (5,-1);&#10;\draw[dashed] (-1,1.5) to (5,-.5);&#10;\@@toccaption{{\@tag[][ ]{7}No solution.}}\@@caption{{\@tag[][: ]{Figure~7}No %&#10;solution.}}&#10;\@add@centering&#10;\subfigure[t]{.3}&#10;\centering\tikzpicture[scale=1.5]&#10;\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (3,0);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[line width=1.5mm, blue!50] (-1,1) to (5,-1);&#10;\draw[line width=.5mm, red, dashed] (-1,1) to (5,-1);&#10;\@@toccaption{{\@tag[][ ]{8}Infinitely many solutions.}}\@@caption{{\@tag[][: %&#10;]{Figure~8}Infinitely many solutions.}}&#10;\@add@centering&#10;\@@toccaption{{\@tag[][ ]{9}The ways in which two lines may or may not %&#10;intersect.}}\@@caption{{\@tag[][: ]{Figure~9}The ways in which two lines may %&#10;or may not intersect.}}&#10;\@add@centering\end{figure}&#10;\par&#10; A natural question is whether it is possible for there to be finitely %&#10;many solutions, and more than one solution? Geometrically, we can see that %&#10;since two points define a line, two lines cannot intersect at more than one %&#10;point without being the same line. The situation in $\bbR^{2}$ seems to be %&#10;then that we can have either one solution, no solutions, or infinitely many %&#10;solutions.&#10;\par&#10; It is natural to ask whether we can generalize this to higher dimensions%&#10;. Let us consider $\bbR^{3}$.&#10;\par&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle x-y+z&amp;%&#10;\displaystyle=1\\&#10;\displaystyle 2x-3y+7z&amp;\displaystyle=2\end{aligned}\right\}$&#10;\par&#10; In $\bbR^{3}$, these equations represent {planes}. If we are given two %&#10;planes, they may intersect, and if they do, they must intersect in a line, %&#10;similar to how pages in a book intersect at the spine of the book. In this %&#10;case, there are infinitely many solutions. Alternatively the planes may not %&#10;intersect at all, in which case there are no solutions. The planes may also be%&#10; on top of one another; that is, they are the same plane, in which case there %&#10;are also infinitely many solutions.&#10;\par&#10;\begin{figure}[H]&#10;\centering\includegraphics[width=7cm]{parallelplanes.eps}&#10;  &#10;\includegraphics[width=7cm]{intersectingplanes.eps}&#10;\@@toccaption{{\@tag[][ ]{10}Parallel and intersecting planes.}}\@@caption{{%&#10;\@tag[][: ]{Figure~10}Parallel and intersecting planes.}}&#10;\@add@centering\end{figure}&#10;\par&#10; Can it be that two planes may have a unique solution? It seems to be %&#10;that the answer is no. But if we are given a third plane, we may have a unique%&#10; solution. Consider for instance the corner of a room. Here the floor and two %&#10;walls are meeting at a unique point.&#10;\par&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle 3x-y+z&amp;%&#10;\displaystyle=7\\&#10;\displaystyle x-y+z&amp;\displaystyle=1\\&#10;\displaystyle 2x-3y+7z&amp;\displaystyle=2\end{aligned}\right\}\qquad\text{A %&#10;system consisting of three planes}$&#10;\par&#10;\par&#10; This tells us that in $\bbR^{2}$ or $\bbR^{3}$, there seem to be %&#10;always either one solution, no solutions, or infinitely many solutions. In %&#10;fact, we will find that it is always that case that:&#10;\par&#10;\par&#10; The number of solutions in $\bbR^{n}$ of a system of linear %&#10;equations will be only one of&#10;\begin{enumerate}&#10;\enumerate@item{&#10;One solution&#10;}&#10;\enumerate@item{&#10;Zero solutions&#10;}&#10;\enumerate@item{&#10;Infinitely many solutions&#10;}&#10;\end{enumerate}&#10;\par&#10; Right now we cannot conclude this. Later we will, but that proof comes %&#10;from understanding these systems in more algebraic terms.&#10;\par&#10;\par&#10;\LTX@newpage\par&#10;\@@section{section}{Sx2}{}{}{}{Solve system of %&#10;linear equations}&#10;\par&#10; Before we move on to solving systems of linear equations, it is %&#10;important to note that the variables used in these equations are not the focus%&#10; of the problem. Consider the following two systems:&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle x-2y&amp;\displaystyle%&#10;=3\\&#10;\displaystyle 2x+3y&amp;\displaystyle=7\end{aligned}\right\}$&amp;$$&amp;$\displaystyle%&#10;\left.\begin{aligned}\displaystyle a-2b&amp;\displaystyle=3\\&#10;\displaystyle 2a+3b&amp;\displaystyle=7\end{aligned}\right\}$&#10;The equations in the two systems are identical except for the variables, so in%&#10; fact they represent the same system.&#10;\par&#10; The important part of these systems are the coefficients of the %&#10;variables. What we will do is put the coefficients in a matrix:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrc]1&amp;-2&amp;3\\&#10;2&amp;3&amp;7\end{matrix}\right]$&#10;In order to preserve the fact that the $3$ and $7$ are on the right-hand-side %&#10;of the equations, we will put a vertical bar within the matrix:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rr|c]1&amp;-2&amp;3\\&#10;2&amp;3&amp;7\end{matrix}\right]$&#10;This is referred to as an {augmented matrix}.&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[c|c]A&amp;\vec{b}\end{matrix}\right]%&#10;$&amp;$\displaystyle=\underbrace{\left[\begin{matrix}[rr|c]1&amp;-2\\&#10;2&amp;3\end{matrix}\right.}_{\mathclap{\text{Coefficients}}}\overbracket{\left.%&#10;\begin{matrix}[cc]&amp;3\\&#10;&amp;7\end{matrix}\right]}^{\mathclap{\text{Right-hand side vector}}}$&#10;In general, we say the left part $A$ of the augmented matrix is the {%&#10;coefficient matrix}, and the right part $\vec{b}$ is the {right-hand-side %&#10;vector}, or the constant vector.&#10;\par&#10; Every system of linear equations can be translated into an augmented %&#10;matrix, and every augmented matrix can be translated back into a system of %&#10;linear equations.&#10;\par&#10; This notation saves time and we will be using it a lot.&#10;\par&#10;\par&#10;\begin{center}&#10;\begin{minipage}[t]{208.1376pt}&#10;\@@section{subsection}{Sx2.SSx1}{}{}{}{Row Picture}&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle x-2y&amp;\displaystyle%&#10;=3\\&#10;\displaystyle 2x+3y&amp;\displaystyle=7\end{aligned}\right\}\begin{aligned}%&#10;\displaystyle\longleftarrow\\&#10;\displaystyle\longleftarrow\end{aligned}\quad\text{Rows}$&#10;Row Picture: Intersection of two lines&#10;\end{minipage}&#10;\begin{minipage}[t]{208.1376pt}&#10;\@@section{subsection}{Sx2.SSx2}{}{}{}{Column Picture}&#10;\@@amsalign$\displaystyle x\begin{bmatrix}1\\&#10;2\end{bmatrix}+y\begin{bmatrix}[r]-2\\&#10;3\end{bmatrix}=x\begin{bmatrix}3\\&#10;7\end{bmatrix}$&#10;Column Picture: Can $\begin{bmatrix}3\\&#10;7\end{bmatrix}$ be written as a linear combination of $\begin{bmatrix}1\\&#10;2\end{bmatrix}$ and $\begin{bmatrix}-2\\&#10;3\end{bmatrix}$?&#10;\end{minipage}&#10;\end{center}&#10;\par&#10; The advantages of the column picture may not be apparent now, but %&#10;looking at things in the language in linear combinations will be very useful %&#10;later.&#10;\par&#10; It is important to note that in the above case, the row and column %&#10;picture are in the same number of dimensions. Consider instead&#10;\par&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle x-y+z&amp;%&#10;\displaystyle=21\\&#10;\displaystyle 3x+y-3z&amp;\displaystyle=0\end{aligned}\right\}$&amp;$$&amp;$\displaystyle%&#10;\begin{aligned}\displaystyle x\begin{bmatrix}1\\&#10;3\end{bmatrix}+y\begin{bmatrix}[r]-1\\&#10;1\end{bmatrix}+z\begin{bmatrix}[r]1\\&#10;-3\end{bmatrix}&amp;\displaystyle=\begin{bmatrix}21\\&#10;0\end{bmatrix}\end{aligned}$&#10;\par&#10; Here the row picture is the intersection of two planes in $\bbR^{3}$. %&#10;The column picture is a linear combination of vectors in $\bbR^{2}$.&#10;\par&#10; These perspectives will be useful, and in particular pay attention to %&#10;the idea of linear combinations.&#10;\par&#10;\@@section{subsection}{Sx2.SSx3}{}{}{}{Solving a system}&#10;Consider the system in $\bbR^{2}$,&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle x&amp;\displaystyle=1%&#10;\\&#10;\displaystyle y&amp;\displaystyle=3\end{aligned}\right\}\qquad\longrightarrow%&#10;\qquad\left.\begin{matrix}[rcrl]x&amp;+&amp;0y&amp;=1\\&#10;0x&amp;+&amp;y&amp;=3\end{matrix}\right\}$&#10;We can easily convert the system to and from an augmented matrix:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[cc|c]1&amp;0&amp;1\\&#10;0&amp;1&amp;3\end{matrix}\right]$&#10;This is in a sense our `Dream augmented matrix', in that from it we can %&#10;directly determine the solution to the system. The technical term for this %&#10;sort of matrix is a {row-reduced echelon form matrix}.&#10;\par&#10; In some sense then, the row-reduced echelon form matrix is our goal when%&#10; solving systems of linear equations. The question is, how will we go from a %&#10;general matrix to a row-reduced echelon form matrix? To do so, we will learn {%&#10;row operations}&#10;\par&#10;\end{document}" display="block">
+  <mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>a</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+    <mi>n</mi>
+    <mi>o</mi>
+    <mi>d</mi>
+    <mi>e</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>3</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\geometry</mtext>
+    </merror>
+    <mi>l</mi>
+    <mi>e</mi>
+    <mi>t</mi>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mi>p</mi>
+    <mi>a</mi>
+    <mi>p</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>w</mi>
+    <mi>i</mi>
+    <mi>d</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mo>=</mo>
+    <mn>17</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mi>e</mi>
+    <mi>i</mi>
+    <mi>g</mi>
+    <mi>h</mi>
+    <mi>t</mi>
+    <mo>=</mo>
+    <mn>22</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>r</mi>
+    <mi>o</mi>
+    <mi>w</mi>
+    <mi>s</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>p</mi>
+    <mi>l</mi>
+    <mi>o</mi>
+    <mi>t</mi>
+    <mi>m</mi>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>k</mi>
+    <mi>s</mi>
+    <mtext xml:id="Sx1">System of Linear EquationsA system of linear equations is a set of equations, all of which are linear (powers of x and y are at most 1).{3⁢x=1x+2⁢y=3{3⁢x=1x+2⁢y=3There are two ways of interpreting such as system:1.Geometric way2.Algebraic wayAs an example, consider what does x=1 represent? Some may say a point, others may say a line.It is important to consider the ambient space in which the equation(s) are to be considered.{subfigure}[t].3
+{tikzpicture}
+\node[font=] at (-1,2) \bbR;
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (3,0);
+\node[blk] at (1,0) [label=-90:x=1] ;
+1PointFigure 1Point{subfigure}[t].3
+{tikzpicture}
+\node[font=] at (-1,2) \bbR2;
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (3,0);
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,3);
+\draw[dashed] (1,-1) to (1,3);
+\nodeat (1,1) [label=right:x=1] ;
+2LineFigure 2Line{subfigure}[t].3
+{tikzpicture}
+\node[font=] at (-1,2) \bbR3;
+\draw[-¿,¿=triangle 60,thick] (0,0) to (2,0);
+\draw[-¿,¿=triangle 60,thick] (0,0) to (0,3);
+\draw[-¿,¿=triangle 60,thick] (0,0) to (-1,-1);
+\nodeat (0,3) [label=right:x] ;
+\nodeat (2,0) [label=right:y] ;
+\nodeat (-1,-1) [label=below:z] ;
+\draw[dashed] (0,2) to (3,2) to (2,1) to (-1,1) to (0,2);
+\nodeat (.5,1.5) [label=right:x=1] ;
+3PlaneFigure 3Plane4Examples of the object x=1 in the ambient spaces \bbR,\bbR2, and \bbR3.Figure 4Examples of the object x=1 in the ambient spaces \bbR,\bbR2, and \bbR3.Consider again the system{3⁢x=1x+2⁢y=3{3⁢x=1x+2⁢y=3Since there are two variables, we know that the system is in at least two dimensions (maybe more). For now, let us consider the system in two dimensions. What will be the solution?The equation 3⁢x=1 represents a line, as does x+2⁢y=3. Figure 5Visual depiction of two intersecting lines from system (). shows these lines:{tikzpicture}[scale=3]
+\clip(-.5,2) to (4.5,2) to (4.5,-.5) to (-.5,-.5);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (4,0);
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[dashed] (1/3,-1) to (1/3,2);
+\draw[dashed] (-1,2) to (4,-1/2);
+\nodeat (1/3,.5) [label=right:Line 3⁢x=1] ;
+\nodeat (1.6,3/4) [label=right:Line x+2⁢y=3] ;\node[blk] (sol) at (1/3, 4/3) ;
+\node(sollabel) at (1,5/3) [label=above:(qvar_,qvar_)] Solution;
+\draw[-¿,¿=triangle 60,thick] (sollabel) to (sol);5Visual depiction of two intersecting lines from system (System of Linear Equations).Figure 5Visual depiction of two intersecting lines from system (System of Linear Equations).Once we have this geometric picture of the system, a solution to the system will be a point common to both lines.This is a geometric picture of the system. We still need some sort of algebraic way of finding the exact solution. In this case, the first equation gives us that x=1/3, and the second equation gives us thaty=3-x2=3-132=86=43y=3-x2=3-132=86=43We now have the coordinates of the solution to the equations: (1/3,4/3). Formally, we can now claim that we have found the solution (1/3,4/3) to the system (System of Linear Equations) considered in \bbR2.In the above example, there is only one solution. We may ask ourselves, given any system, will there always be one solution, can there be more than one solution, or may there not be any solution? It turns out that examining these possibilities through a geometric perspective holds the answer and will allow us to generalize the answer to this question.Two lines may either intersect at one point (Figure 6One unique solution.a), yielding a unique solution; never intersect (Figure 6One unique solution.b), which results in no solutions existing; or be on top of one another (Figure 6One unique solution.c), which results in infinitely many solutions.{subfigure}[t].3
+{tikzpicture}[scale=1.5]
+\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (3,0);
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[dashed] (-1,3) to (2,-1);
+\draw[dashed] (-1,1) to (5,-1);6One unique solution.Figure 6One unique solution.{subfigure}[t].3
+{tikzpicture}[scale=1.5]
+\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (3,0);
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[dashed] (-1,1) to (5,-1);
+\draw[dashed] (-1,1.5) to (5,-.5);7No solution.Figure 7No solution.{subfigure}[t].3
+{tikzpicture}[scale=1.5]
+\clip(-.25,2) to (3,2) to (3,-.25) to (-.25,-.25);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (3,0);
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[line width=1.5mm, blue!50] (-1,1) to (5,-1);
+\draw[line width=.5mm, red, dashed] (-1,1) to (5,-1);8Infinitely many solutions.Figure 8Infinitely many solutions.9The ways in which two lines may or may not intersect.Figure 9The ways in which two lines may or may not intersect.A natural question is whether it is possible for there to be finitely many solutions, and more than one solution? Geometrically, we can see that since two points define a line, two lines cannot intersect at more than one point without being the same line. The situation in \bbR2 seems to be then that we can have either one solution, no solutions, or infinitely many solutions.It is natural to ask whether we can generalize this to higher dimensions. Let us consider \bbR3.x-y+z=12⁢x-3⁢y+7⁢z=2}x-y+z=12⁢x-3⁢y+7⁢z=2}In \bbR3, these equations represent planes. If we are given two planes, they may intersect, and if they do, they must intersect in a line, similar to how pages in a book intersect at the spine of the book. In this case, there are infinitely many solutions. Alternatively the planes may not intersect at all, in which case there are no solutions. The planes may also be on top of one another; that is, they are the same plane, in which case there are also infinitely many solutions.\includegraphics[width=7cm]parallelplanes.eps
+  
+\includegraphics[width=7cm]intersectingplanes.eps10Parallel and intersecting planes.Figure 10Parallel and intersecting planes.Can it be that two planes may have a unique solution? It seems to be that the answer is no. But if we are given a third plane, we may have a unique solution. Consider for instance the corner of a room. Here the floor and two walls are meeting at a unique point.3⁢x-y+z=7x-y+z=12⁢x-3⁢y+7⁢z=2}  A system consisting of three planes3⁢x-y+z=7x-y+z=12⁢x-3⁢y+7⁢z=2}  A system consisting of three planesThis tells us that in \bbR2 or \bbR3, there seem to be always either one solution, no solutions, or infinitely many solutions. In fact, we will find that it is always that case that:The number of solutions in \bbRn of a system of linear equations will be only one of1.One solution2.Zero solutions3.Infinitely many solutionsRight now we cannot conclude this. Later we will, but that proof comes from understanding these systems in more algebraic terms.Solve system of linear equationsBefore we move on to solving systems of linear equations, it is important to note that the variables used in these equations are not the focus of the problem. Consider the following two systems:x-2⁢y=32⁢x+3⁢y=7}x-2⁢y=32⁢x+3⁢y=7}a-2⁢b=32⁢a+3⁢b=7}a-2⁢b=32⁢a+3⁢b=7}The equations in the two systems are identical except for the variables, so in fact they represent the same system.The important part of these systems are the coefficients of the variables. What we will do is put the coefficients in a matrix:[[r⁢r⁢c]⁢1-23237][[r⁢r⁢c]⁢1-23237]In order to preserve the fact that the 3 and 7 are on the right-hand-side of the equations, we will put a vertical bar within the matrix:[[rr|c]1-23237][[rr|c]1-23237]This is referred to as an augmented matrix.[[c|c]Ab→]=[[rr|c]1-223⏟\mathclap⁢Coefficients\overbracket[c⁢c]37]\mathclap⁢Right-hand side vector[[c|c]Ab→]=[[rr|c]1-223⏟\mathclap⁢Coefficients\overbracket[c⁢c]37]\mathclap⁢Right-hand side vectorIn general, we say the left part A of the augmented matrix is the coefficient matrix, and the right part b→ is the right-hand-side vector, or the constant vector.Every system of linear equations can be translated into an augmented matrix, and every augmented matrix can be translated back into a system of linear equations.This notation saves time and we will be using it a lot.Row Picturex-2⁢y=32⁢x+3⁢y=7}⟵⟵ Rowsx-2⁢y=32⁢x+3⁢y=7}⟵⟵ RowsRow Picture: Intersection of two lines
+
+Column Picturex⁢[12]+y⁢[[r]-23]=x⁢[37]x⁢[12]+y⁢[[r]-23]=x⁢[37]Column Picture: Can [37] be written as a linear combination of [12] and [-23]?The advantages of the column picture may not be apparent now, but looking at things in the language in linear combinations will be very useful later.It is important to note that in the above case, the row and column picture are in the same number of dimensions. Consider insteadx-y+z=213⁢x+y-3⁢z=0}x-y+z=213⁢x+y-3⁢z=0}x⁢[13]+y⁢[[r]-11]+z⁢[[r]⁢1-3]=[210]x⁢[13]+y⁢[[r]-11]+z⁢[[r]⁢1-3]=[210]Here the row picture is the intersection of two planes in \bbR3. The column picture is a linear combination of vectors in \bbR2.These perspectives will be useful, and in particular pay attention to the idea of linear combinations.Solving a systemConsider the system in \bbR2,x=1y=3}  ⟶  [r⁢c⁢r⁢l]⁢x+0⁢y=10⁢x+y=3}x=1y=3}  ⟶  [r⁢c⁢r⁢l]⁢x+0⁢y=10⁢x+y=3}We can easily convert the system to and from an augmented matrix:[[cc|c]101013][[cc|c]101013]This is in a sense our ‘Dream augmented matrix’, in that from it we can directly determine the solution to the system. The technical term for this sort of matrix is a row-reduced echelon form matrix.In some sense then, the row-reduced echelon form matrix is our goal when solving systems of linear equations. The question is, how will we go from a general matrix to a row-reduced echelon form matrix? To do so, we will learn row operations</mtext>
+  </mrow>
+</math>

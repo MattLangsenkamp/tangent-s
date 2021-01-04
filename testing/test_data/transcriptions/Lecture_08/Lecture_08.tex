@@ -1,0 +1,398 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vek}[1]{\vec{#1}}
+\newcommand{\note}{\textsc{Note:} }
+\title{Lecture 8}
+\author{A. Agarwal}
+\date{February 14, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Recall}
+
+Matrix Algebra: addition, subtraction, scalar multiplication, and \emph{matrix multiplication}.
+
+Matrix multiplication can be thought of in several ways:
+\begin{align*}
+\mat{A} \mat{B} &=
+\begin{bmatrix}
+\,&&\\
+\leftarrow & i^{\text{th}} & \rightarrow \\
+&&
+\end{bmatrix}
+\begin{bmatrix}
+\!&\uparrow& \\
+& j^{\text{th}} & \\
+&\downarrow&
+\end{bmatrix}
+\\
+&= \text{Linear combination of columns of $\mat{A}$}
+\\
+&= \text{Linear combination of rows of $\mat{B}$}
+\end{align*}
+
+For $\mat{A} \mat{B}$ to be defined, the number of columns of $\mat{A}$ must equal the number of rows of $\mat{B}$. If $\mat{A}_{m \times n}$ and $\mat{B}_{n \times p}$, then their product $\mat{C} = \mat{A}\mat{B}$ is defined and
+\begin{align*}
+\mat{C} = (\mat{A}\mat{B})_{m \times p}
+\end{align*}
+It is important to note a few points:
+\begin{enumerate}
+\item{
+$\mat{B}\mat{A}$ need not be even defined. Thus $\mat{A} \mat{B} \neq \mat{B} \mat{A}$.
+
+Consider for example
+\begin{align*}
+\mat{A}_{3 \times 4}
+\qquad
+\mat{B}_{4 \times 5}
+\qquad
+(\mat{A} \mat{B})_{3 \times 5}
+\end{align*}
+But $\mat{B} \mat{A}$ is not defined.
+}
+\item{
+In some cases, both $\mat{A}\mat{B}$ and $\mat{B}\mat{A}$ are defined. However, it is still not the case that they are equal. Suppose we have two matrices, $\mat{A}_{3 \times 2}$ and $\mat{B}_{2 \times 3}$. Then the dimensions of their products will be given by
+\begin{align*}
+(\mat{A} \mat{B})_{3 \times 3} \neq (\mat{B} \mat{A})_{2 \times 2}
+\end{align*}
+since the dimensions do not match, the matrices cannot be equal.
+}
+\item{
+Finally, even if $\mat{A}\mat{B}$ and $\mat{B}\mat{A}$ are of the same size, they still may be unequal. Suppose we have two matrices, $\mat{A}_{2 \times 2}$ and $\mat{B}_{2 \times 2}$. Both of their products will be of size $2 \times 2$, yet they may not be equal:
+\begin{align*}
+\begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}
+\begin{pmatrix}0 & 7 \\ 1 & 2\end{pmatrix}
+\neq
+\begin{pmatrix}0 & 7 \\ 1 & 2\end{pmatrix}
+\begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}
+\end{align*}
+this is most easily determined by comparing the the top-left entry of both products: $2$ for the first matrix, and $21$ for the second.
+}
+\end{enumerate}
+We can see then that matrix multiplication is fundamentally a non-commutative operation. This is very different from the kind of algebra that we are familiar with. There are several other instances where matrix multiplication leads to counterintuitive results.
+
+\begin{enumerate}
+\item{
+Consider $(A+B)^2$. We normally write $(A+B)^2 = A^2 + 2AB + B^2$ for numbers, but note that for matrices,
+\begin{align*}
+(\mat{A} + \mat{B})^2 &= (\mat{A} + \mat{B})(\mat{A} + \mat{B})
+\\
+&= \mat{A} ( \mat{A} + \mat{B} ) + \mat{B} ( \mat{A} + \mat{B} )
+\\
+&= \mat{A}\mat{A} + \mat{A}\mat{B} + \mat{B}\mat{A} + \mat{B}\mat{B}
+\\
+&= \mat{A}^2 + \mat{A} \mat{B} + \mat{B} \mat{A} + \mat{B}^2
+\end{align*}
+As we have just found, $\mat{A}\mat{B}$ need not be equal to $\mat{B}\mat{A}$, so we cannot write that $\mat{A}\mat{B} + \mat{B}\mat{A} = 2 \mat{A} \mat{B}$.
+
+}
+\item{
+
+Consider also the normally valid identity
+\begin{align*}
+A^2 - B^2 &= (A-B)(A+B)
+\end{align*}
+\textbf{This identity need not hold for matrices.}
+}
+\item{
+We regularly make use of the fact that if $AB = 0$, then one of $A$ or $B$ (or both) are zero. This is a fundamental property of what are called \emph{integral domains}. Does this hold for matrices?
+\begin{align*}
+\begin{bmatrix}
+1 & 0 \\ 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 \\ 0 & 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 \\ 0 & 0
+\end{bmatrix}
+\end{align*}
+The two matrices on the left are non-zero matrices, yet their product is the zero matrix. Thus $\mat{A} \mat{B} = 0$ does not imply that one of $\mat{A}$ or $\mat{B}$ are zero
+}
+\end{enumerate}
+
+\section*{Matrix Equations}
+We have discussed previously, and become comfortable with the notion that a system of linear equations can be expressed as a so-called augmented matrix:
+\begin{align*}
+\left.
+\begin{aligned}
+x + 3y &= 5
+\\
+2x - 3y &= 7
+\end{aligned}
+\right\}
+\Leftrightarrow
+\left[\begin{matrix}
+1 & 3 & 5 \\
+2 & -3 & 7
+\end{matrix}\right]
+\end{align*}
+Now however, we can also write this system as
+\begin{align*}
+\left.
+\begin{aligned}
+x + 3y &= 5
+\\
+2x - 3y &= 7
+\end{aligned}
+\right\}
+\Longrightarrow
+\begin{bmatrix}
+1 & 3 \\ 2 & -3
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 \\ 7
+\end{bmatrix}
+\end{align*}
+This form should look very similar: $\mat{A} \vek{x} = \vek{b}$. That is, this looks like a regular linear equation.
+
+\section*{Special Types of Matrices}
+There are many special types of matrices.
+\subsection*{Square Matrices: $(n \times n)$}
+
+\begin{enumerate}
+\item{
+Diagonal matrix:
+
+A \keyphrase{diagonal matrix} has non-zero entries only on its \keyphrase{main diagonal}.
+\begin{align*}
+\begin{bmatrix}
+d_1 & 0 & \cdots & 0 \\
+0 & d_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & d_n
+\end{bmatrix}
+&&
+a_{i,j} = 0 \text{ if $i \neq j$}
+\end{align*}
+}
+\item{
+Upper triangular matrix
+
+An \keyphrase{upper triangular} matrix has only zero entries below its main diagonal.
+\begin{align*}
+\begin{bmatrix}
+u_{1,1} & u_{1,2} & \cdots & u_{1,n} \\
+0 & u_{2,2} & \cdots & u_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & u_{n,n}
+\end{bmatrix}
+&&
+u_{i,j} = 0 \text{ if $i < j$}
+\end{align*}
+}
+\item{
+Lower triangular matrix
+
+A \keyphrase{lower triangular} matrix has only zero entries above its main diagonal.
+\begin{align*}
+\begin{bmatrix}
+l_{1,1} & 0 & \cdots & 0 \\
+l_{2,1} & l_{2,2} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+l_{n,1} & l_{n,2} & \cdots & l_{n,n}
+\end{bmatrix}
+&&
+u_{i,j} = 0 \text{ if $i > j$}
+\end{align*}
+}
+\item{
+Identity matrix ($\mat{I}_n$)
+
+The \keyphrase{identity matrix} is a diagonal matrix with $1$'s on all of its diagonal entries.
+\begin{align*}
+\mat{I}_n = \begin{bmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{bmatrix}
+\end{align*}
+
+The identity matrix is very important because multiplying any square $n \times n$ matrix $\mat{A}$ by the identity matrix $\mat{I}_n$ will yield $\mat{A}$:
+\begin{align*}
+\mat{A} \mat{I}_n = \mat{I}_n \mat{A} = \mat{A}
+\end{align*}
+In this way, $\mat{I}_n$ in $n \times n$ matrices is like the number $\mathbf{1}$ in the real numbers.
+}
+\item{
+Permutation matrix
+
+A \keyphrase{permutation} matrix is formed by permuting (swapping) the rows of the identity matrix.
+
+\begin{align*}
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y \\ z
+\end{bmatrix}
+=
+\begin{bmatrix}
+z \\ x \\ y
+\end{bmatrix}
+\end{align*}
+
+\textsc{Remark:} The set of all permutation matrices of a given size $n$ is called $S_n$. For example:
+\begin{align*}
+S_3 = \left\{ \mat{A}_{3 \times 3} | \text{$\mat{A}$ is a permutation matrix} \right\}
+\end{align*}
+Note that taking any two elements in $S_3$ and multiplying them together yields another element in $S_3$. That is, $S_3$ is closed under multiplication. The name for this type of structure is a group. One feature is that $|S_3| = 3! = 6$. There are $n!$ permutation matrices of a given size $n$.
+}
+\end{enumerate}
+
+\subsection*{Transpose: $\mat{A}^T$}
+
+Transposition is an operation unique to matrices. Let $\mat{A}_{m \times n}$ be a matrix (not necessarily square). Then we define the \keyphrase{transpose of $\mat{A}$}, written as $\mat{A}^T$, by letting its columns be the rows of $\mat{A}$.
+{\Large\begin{align*}
+\mat{A}_{m \times n}
+\Rightarrow
+\mat{A}^T_{n \times m}
+\end{align*}}
+For example,
+\begin{align*}
+\mat{A} &= \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+&
+\mat{A}^T &= \begin{bmatrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{bmatrix}
+\end{align*}
+
+Some properties of the transpose include:
+\begin{enumerate}
+\item{
+$(\mat{A}+\mat{B})^T = \mat{A}^T + \mat{B}^T$
+}
+\item{
+$(k\mat{A})^T = k \mat{A}^T$
+}
+\item{
+$\Big( \mat{A} \mat{B} \Big)^T = \mat{B}^T \mat{A}^T$
+}
+\item{
+$\Big( \mat{A}^T \Big)^T = \mat{A}$
+}
+\end{enumerate}
+
+\subsection*{Symmetric Matrices}
+Transposition allows us to define two important types of matrices:
+
+\begin{itemize}
+\item{
+$\mat{A}$ is \keyphrase{symmetric} if $\mat{A}^T = \mat{A}$.
+}
+\item{
+$\mat{A}$ is \keyphrase{skew-symmetric} if $\mat{A}^T = -\mat{A}$.
+}
+\end{itemize}
+Examining these definitions, it is easy to see that a symmetric or skew-symmetric matrix must be an $n \times n$ matrix, even though transposition is defined for all matrices.
+
+Let us examine some features of symmetric matrices. Consider $\mat{B} = \mat{A} + \mat{A}^T$ with $\mat{A}$ an $n \times n$ matrix. Is $\mat{B}$ symmetric?
+
+\begin{align*}
+\mat{B} &= \Big( \mat{A} + \mat{A}^T \Big)^T
+\\
+&= \mat{A}^T + \Big( \mat{A}^T \Big)^T
+\\
+&= \mat{A}^T + \mat{A}
+\\
+&= \mat{B}
+\end{align*}
+Therefore $\mat{B}$ is symmetric.
+
+Consider $\mat{C} = \mat{A} - \mat{A}^T$. Is $\mat{C}$ symmetric / skew-symmetric?
+
+\begin{align*}
+\mat{C}^T &= \Big( \mat{A} - \mat{A}^T \Big)^T
+\\
+&= \mat{A}^T - \Big( \mat{A}^T \Big)^T
+\\
+&= \mat{A}^T - \mat{A}
+\\
+&= -\mat{C}
+\end{align*}
+Thus $\mat{C}$ is skew-symmetric.
+
+It is natural to wonder what types of matrices are symmetric or skew-symmetric. Consider for example:
+\begin{align*}
+\mat{A} &= \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+&
+\mat{A}^T &= \begin{bmatrix}1 & 3 \\ 2 & 4\end{bmatrix}
+\end{align*}
+Note that $\mat{A}^T \neq \mat{A}$ and $\mat{A}^T \neq -\mat{A}$. Thus $\mat{A}$ is neither symmetric nor skew-symmetric.
+
+An important observation can be made by asking: what kinds of matrices can in general be skew-symmetric?
+\begin{align*}
+\mat{A} &= \begin{bmatrix}a & b \\ c & d\end{bmatrix}
+&
+\mat{A}^T &= \begin{bmatrix}a & c \\ b & d\end{bmatrix}
+\end{align*}
+For $\mat{A}$ to be skew-symmetric,
+\begin{align*}
+\mat{A}^T &= -\mat{A}
+\\
+\begin{bmatrix}a & c \\ b & d\end{bmatrix}
+&=
+\begin{bmatrix}-a & -b \\ -c & -d\end{bmatrix}
+\end{align*}
+Thus $a = -a$ and $d = -d$. This can only be true when $a = d = 0$. This can be generalized to any size $n$:
+
+Proposition: If $\mat{A}$ is a skew-symmetric matrix then the diagonal entries must be $0$.
+
+
+Here is a question to consider. If you recall, for any function $f(x)$, it is possible to write $f(x)$ as the sum of an even and an odd function. Is a similar result true for matrices?
+\begin{align*}
+f(x) &= \text{even function} + \text{odd function}
+\\
+\\
+\mat{A}_{n \times n} &= \text{symmetric matrix} + \text{skew-symmetric matrix}
+\end{align*}
+If it were true that this is the case, then we would want
+\begin{align*}
+\mat{A} &= \mat{B} + \mat{C}
+\end{align*}
+where $\mat{B}$ is symmetric and $\mat{C}$ is skew-symmetric. Then
+\begin{align*}
+\mat{A}^T &= \mat{B}^T + \mat{C}^T = \mat{B} - \mat{C}
+\end{align*}
+Adding and subtracting these two equations, we obtain the two equations
+\begin{align*}
+\frac{\mat{A} + \mat{A}^T}{2} &= \mat{B}
+&
+\frac{\mat{A} - \mat{A}^T}{2} &= \mat{C}
+\end{align*}
+What is the use in this result? Apart from it being interesting that this type of expression of an arbitrary matrix is always possible, the advantage of this decomposition is that if, perhaps, we can gain insight into features of symmetric and skew-symmetric matrices, then we can apply those understandings to other matrices using the decomposition.
+
+\end{document}

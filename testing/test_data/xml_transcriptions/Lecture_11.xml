@@ -1,0 +1,2886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\documentclass[11pt]{article}\usepackage{aahomework}\usepackage{mathtools}%&#10;\usepackage{subcaption}\usepackage{epstopdf}\usepackage{float}\usepackage{%&#10;xcolor}\usepackage{parskip}\tikzstyle{blk}=[circle,innersep=0pt,minimumsize=4%&#10;pt,draw,fill=black,linewidth=0.8pt]\tikzstyle{blanknode}=[circle,innersep=3pt,%&#10;minimumsize=8pt,draw,linewidth=0.8pt]\par&#10;\geometry{letterpaper,textwidth=17cm%&#10;,textheight=22cm}\par&#10;\usetikzlibrary{arrows}\usetikzlibrary{plotmarks}\par&#10;%&#10;\par&#10;\par&#10;\par&#10;\begin{document}&#10;\par&#10;\@@section{section}{Sx1}{}{}{}{Vector Spaces}&#10;\par&#10; The idea of a vector space is a generalization of the concepts we've %&#10;studied so far to other sets of objects.&#10;\par&#10;\par&#10;\par&#10;\framebox[][r]{&#10;\begin{minipage}{0.0pt}&#10;\par&#10; Let $V$ be a set of objects (vectors) with addition ($+$) defined. $V$ %&#10;is a vector space if&#10;\begin{enumerate}&#10;\enumerate@item{&#10;{$V$ is closed under addition.}&#10;\par&#10; If $\vec{u}\in V$ and $\vec{w}\in V$, then $\vec{u+w}\in V$. In other %&#10;words, $V$ is closed under vector addition.&#10;}&#10;\enumerate@item{&#10;{$V$ is closed under scalar multiplication.}&#10;\par&#10; If $c$ is a scalar in $\bbR$ or $\bbC$, and $\vec{u}\in V$, then $c\vec{%&#10;u}\in V$.&#10;}&#10;\enumerate@item{&#10;{Zero element.}&#10;\par&#10; There exists some `zero element' $\vec{z}\in V$ such that $\vec{u}+\vec{%&#10;z}=\vec{u}$ for all $\vec{u}\in V$.&#10;}&#10;\enumerate@item{&#10;{Additive inverses.}&#10;\par&#10; For every $\vec{u}\in V$, there exists some $\vec{m}\in V$ such that $%&#10;\vec{u}+\vec{m}=\vec{m}+\vec{u}=\vec{z}$.&#10;}&#10;\end{enumerate}&#10;\end{minipage}&#10;}&#10;\par&#10; These concepts and rules apply to a great number of spaces, such as the %&#10;familiar real numbers $\bbR$ and vectors $\bbR^{n}$, but they also apply to %&#10;sets such as polynomials, continuous functions, and matrices.&#10;\begin{table}[H]&#10;\begin{tabular}[]{p{2cm}||c|c|c|p{5cm}}\tabularcell@hbox{Space}&amp;$+$ Closure&amp;$%&#10;\cdot$ Closure&amp;Zero vector&amp;\tabularcell@hbox{Additive Inverses}\\&#10;\hline\tabularcell@hbox{$\bbR^{n}$}&amp;\checkmark&amp;\checkmark&amp;$(0,0,\dots,0)$&amp;%&#10;\tabularcell@hbox{$(u_{1},u_{2},\dots,u_{n})$}\\&#10;\tabularcell@hbox{$\vec{m}=(-u_{1},-u_{2},\dots,-u_{n})$}\\&#10;\tabularcell@hbox{$\mathbb{P}_{3}(x)$}&amp;\checkmark&amp;\checkmark&amp;$p(x)=0$&amp;%&#10;\tabularcell@hbox{$p(x)=ax^{3}+bx^{2}+cx+d$}\\&#10;\tabularcell@hbox{$-p(x)=-ax^{3}-bx^{2}-cx-d$}\\&#10;\tabularcell@hbox{Continuous functions}\\&#10;\tabularcell@hbox{$C[0,1]$}&amp;\checkmark&amp;\checkmark&amp;$f(x)=0$&amp;\tabularcell@hbox{$%&#10;f(x)\rightarrow-f(x)$}\\&#10;\tabularcell@hbox{Matrices}\\&#10;\tabularcell@hbox{$M_{b}(\bbR)$}&amp;\checkmark&amp;\checkmark&amp;$\begin{bmatrix}0&amp;0&amp;%&#10;\cdots&amp;0\\&#10;0&amp;0&amp;\cdots&amp;0\\&#10;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\&#10;0&amp;0&amp;\cdots&amp;0\end{bmatrix}$&amp;\tabularcell@hbox{$\mathbf{A},-\mathbf{A}$}\end{%&#10;tabular}&#10;\end{table}&#10;\par&#10; Not everything is a vector space -- even small differences can matter. %&#10;Consider the set&#10;\@@amsalign$\displaystyle S=\left\{a(x)|\text{$a(x)$ has degree $3$}\right\}$&#10;Consider for the polynomials $3x^{3}$ and $2x^{3}-7$. Both are of degree $3$ %&#10;and their sum $5x^{3}-7$ is also of degree $3$. On the other hand, the %&#10;polynomials $3x^{3}$ and $-3x^{3}$ are also both of degree $3$, and their sum %&#10;is the zero polynomial, which is of degree $0$. Thus the set is not a vector %&#10;space.&#10;\par&#10; Consider next the matrix equation&#10;\@@amsalign$\displaystyle\mathbf{A}\vec{x}$&amp;$\displaystyle=\vec{0}$&#10;Call the solution set $S$ by&#10;\@@amsalign$\displaystyle S=\left\{\vec{x}_{0}\in\bbR^{n}:\mathbf{A}\vec{x}_{0%&#10;}=\vec{0}\right\}$&#10;Does this space have the properties of a vector space? That is, do the %&#10;solutions to the above matrix equation form a vector space? We will soon see %&#10;that it does.&#10;\par&#10; Let $\vec{u},\vec{v}\in S$ and take $c$ to be a scalar.&#10;\begin{enumerate}&#10;\enumerate@item{&#10;Additive closure:&#10;\par&#10; Observe that&#10;\@@amsalign$\displaystyle A(\vec{u}+\vec{v})=A\vec{u}+A\vec{v}=\vec{0}+\vec{0}%&#10;=\vec{0}$&#10;Thus $\vec{u}+\vec{v}\in S$.&#10;}&#10;\enumerate@item{&#10;Scalar multiplication:&#10;\@@amsalign$\displaystyle A(c\vec{u})=cA\vec{u}=c\vec{0}=\vec{0}$&#10;Thus $\vec{cu}\in S$.&#10;}&#10;\enumerate@item{&#10;Zero element:&#10;\par&#10; If $\vec{x}_{0}=\vec{0}$, then $\mathbf{A}\vec{x}_{0}=\vec{0}$ for any $%&#10;\mathbf{A}$. $\vec{0}+\vec{u}=\vec{u}$, thus $S$ will always have a zero %&#10;element.&#10;}&#10;\enumerate@item{&#10;If $\mathbf{A}\vec{x}_{0}=\vec{0}$, then $-\mathbf{A}\vec{x}_{0}=-\vec{0}=\vec%&#10;{0}$ and so $\mathbf{A}\left(-\vec{x}_{0}\right)=\vec{0}$.&#10;}&#10;\end{enumerate}&#10;\par&#10;\@@section{section}{Sx2}{}{}{}{Operations and Properties of Vector Spaces%&#10;}&#10;There are several additional important properties of vector spaces that are %&#10;important to the structure of vector spaces.&#10;\begin{enumerate}&#10;\enumerate@item{&#10;$V$ is closed under $+$: If $\vec{u}\in V$ and $\vec{w}\in V$, then $\vec{u+w}%&#10;\in V$. In other words, $V$ is closed under vector addition.&#10;}&#10;\enumerate@item{&#10;$V$ is closed under scalar multiplication: If $c$ is a scalar in $\bbR$ or $%&#10;\bbC$, and $\vec{u}\in V$, then $c\vec{u}\in V$.&#10;}&#10;\enumerate@item{&#10;Zero element: There exists some $\vec{z}\in V$ such that $\vec{u}+\vec{z}=\vec%&#10;{u}$ for all $\vec{u}\in V$.&#10;}&#10;\enumerate@item{&#10;Additive inverses: For every $\vec{u}\in V$, there exists some $\vec{m}\in V$ %&#10;such that $\vec{u}+\vec{m}=\vec{m}+\vec{u}=\vec{z}$.&#10;}&#10;\enumerate@item{&#10;Commutativity of addition: $\vec{u}+\vec{v}=\vec{v}+\vec{u}$ for all $\vec{u},%&#10;\vec{v}\in V$.&#10;}&#10;\enumerate@item{&#10;Associativity: $\left(\vec{u}+\vec{v}\right)+\vec{w}=\vec{u}+\left(\vec{v}+%&#10;\vec{w}\right)$&#10;}&#10;\enumerate@item{&#10;For scalars $c,d\in\bbR$, then $c\left(d\vec{u}\right)=(cd)\vec{u}$&#10;}&#10;\enumerate@item{&#10;Distributivity: $c\left(\vec{u}+\vec{w}\right)=c\vec{u}+c\vec{w}$&#10;}&#10;\enumerate@item{&#10;Distributivity: $(c+d)\vec{u}=c\vec{u}+d\vec{u}$&#10;}&#10;\end{enumerate}&#10;\par&#10;\@@section{section}{Sx3}{}{}{}{Subspaces}&#10;Let $S\subseteq V$ such that&#10;\begin{enumerate}&#10;\enumerate@item{&#10;$S$ is non-empty.&#10;}&#10;\enumerate@item{&#10;$S$ is a vector space in its own right with the operations of $V$.&#10;}&#10;\end{enumerate}&#10;\par&#10; Given a properly selected subset of a vector space, many of the %&#10;properties of the vector space will be carried over to the subspace. Many such%&#10; properties carry over because they are results of the operations being the %&#10;same between both sets.&#10;\par&#10;\vspace{1cm}&#10;\par&#10; Let us look at some examples of subspaces. Without naming a particular %&#10;vector space, we can say some things already:&#10;\@@section{paragraph}{Sx3.SS0.SSS0.Px1}{}{}{}{Question:}Is $\{\vec{0}\}%&#10;\subseteq V$ a subspace? Yes. Looks better than '\left\{' and '\right\}'&#10;\@@section{paragraph}{Sx3.SS0.SSS0.Px2}{}{}{}{Question:}Is $V$ a subspace? Yes%&#10;.&#10;\par&#10;\vspace{1cm}&#10;\par&#10; Let us consider a more complicated example. Consider $\bbR^{2}$. Is the %&#10;$x$-axis a vector space? Call this set $S$:&#10;\@@amsalign$\displaystyle S=\left\{\begin{pmatrix}x\\&#10;0\end{pmatrix}:x\in\bbR\right\}$&#10;Then if $\vec{u},\vec{v}\in S$,&#10;\@@amsalign$\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;0\end{pmatrix}$&amp;$$&amp;$\displaystyle\vec{v}=\begin{pmatrix}b\\&#10;0\end{pmatrix}$&#10;Then&#10;\@@amsalign$\displaystyle\vec{u}+\vec{v}=\begin{pmatrix}a+b\\&#10;0\end{pmatrix}\in S$&amp;$$&amp;$\displaystyle c\vec{u}=\begin{pmatrix}ca\\&#10;0\end{pmatrix}\in S$&#10;So $S$ is a subspace of $\bbR^{2}$. Similarly, the $y$-axis is also a subspace%&#10; by similar arguments.&#10;\par&#10;\vspace{1cm}&#10;\par&#10; Consider the following sets:&#10;\@@amsalign$\displaystyle T$&amp;$\displaystyle=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=-5c\right\}$&amp;$\displaystyle W$&amp;$\displaystyle=\left\{\begin{%&#10;pmatrix}x\\&#10;y\end{pmatrix}:y=x+1\right\}$&#10;are they vector spaces?&#10;\par&#10; The set $T$ is simply a line. It has slope $-5$ and passes through the %&#10;origin.&#10;Let $\vec{u},\vec{w}\in T$. Then for some $a,b\in\bbR$,&#10;\@@amsalign$\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;-5a\end{pmatrix}$&amp;$$&amp;$\displaystyle\vec{w}=\begin{pmatrix}b\\&#10;-5b\end{pmatrix}$&#10;Then&#10;\@@amsalign$\displaystyle\vec{u}+\vec{w}$&amp;$\displaystyle=\begin{pmatrix}a+b\\&#10;-5(a+b)\end{pmatrix}\in T$&#10;Thus $T$ is closed under addition. Furthermore,&#10;\@@amsalign$\displaystyle c\vec{u}=c\begin{pmatrix}a\\&#10;-5a\end{pmatrix}=\begin{pmatrix}ac-5ac\end{pmatrix}\in T$&#10;so $T$ is closed under scalar multiplication.&#10;\par&#10;\vspace{.5cm}&#10;\par&#10; Next consider $W$. It is also a line, but we can note immediately that %&#10;it does not contain the zero vector. What if we append a zero element to $W$? %&#10;That is, let $F=W\cup\left\{\vec{0}\right\}$. We find that there are still %&#10;problems -- consider for instance the two vectors&#10;\@@amsalign$\displaystyle\vec{u}=\begin{bmatrix}1\\&#10;2\end{bmatrix}$&amp;$$&amp;$\displaystyle\vec{w}=\begin{bmatrix}2\\&#10;3\end{bmatrix}$&#10;both are clearly members of $W$, but their sum is not:&#10;\@@amsalign$\displaystyle\vec{u}+\vec{w}=\begin{bmatrix}3\\&#10;5\end{bmatrix}$&#10;Since $3+1=4\neq 5$, thus $\vec{u}+\vec{w}\notin F$. Thus $W$ is not a vector %&#10;space, and so it is not a subspace of $\bbR^{2}$.&#10;\par&#10;\@@section{paragraph}{Sx3.SS0.SSS0.Px3}{}{}{}{Question:}What are all the %&#10;subspaces of $\bbR^{2}$?&#10;\par&#10; Guess: $\bbR^{2},\left\{\vec{0}\right\},$ and any line passing through $%&#10;\begin{pmatrix}0\\&#10;0\end{pmatrix}$.&#10;\par&#10;\@@section{paragraph}{Sx3.SS0.SSS0.Px4}{}{}{}{Question:}What about $\bbR^%&#10;{3},\bbR^{4},$ and beyond?&#10;\par&#10; A good place to start is with linear objects. What kind of linear %&#10;objects exist in $\bbR^{3}$? We know of lines and planes.&#10;\par&#10; Consider&#10;\@@amsalign$\displaystyle S=\left\{\begin{pmatrix}x\\&#10;y\\&#10;z\end{pmatrix}:x+y+z=0\right\}$&#10;Is $S$ a subspace of $\bbR^{3}$. If we observe that $S$ is the set of %&#10;solutions to a homogeneous system, then it must be, from our earlier %&#10;observations.&#10;\par&#10; Next consider that the system can be rewritten in terms of a dot product%&#10;:&#10;\@@amsalign$\displaystyle x+y+z$&amp;$\displaystyle=0$\\&#10;$\displaystyle\left\langle x,y,z\right\rangle\cdot\left\langle 1,1,1\right%&#10;\rangle$&amp;$\displaystyle=0$&#10;Thus $S$ is equivalently&#10;\@@amsalign$\displaystyle S=\left\{\vec{w}\in\bbR^{3}:\vec{w}\cdot\left\langle&#10;1%&#10;,1,1\right\rangle=0\right\}$&#10;in other words, $S$ is the set of vectors orthogonal to $\left\langle 1,1,1%&#10;\right\rangle$.&#10;\par&#10; Note that&#10;\begin{enumerate}&#10;\enumerate@item{&#10;$\vec{0}\in S$&#10;}&#10;\enumerate@item{&#10;Let $\vec{u}_{1},\vec{u}_{2}\in S$. Then&#10;\@@amsalign$\displaystyle\left(\vec{u}_{1}+\vec{u}_{2}\right)\cdot\left\langle&#10;1%&#10;,1,1\right\rangle=\vec{u}_{1}\cdot\left\langle 1,1,1\right\rangle+\vec{u}_{2}%&#10;\cdot\left\langle 1,1,1\right\rangle=0+0=0$&#10;}&#10;\enumerate@item{&#10;\@@amsalign$\displaystyle\left(c\vec{u}_{1}\right)\cdot\left\langle 1,1,1%&#10;\right\rangle$&amp;$\displaystyle=c\left(\vec{u}\cdot\left\langle 1,1,1\right%&#10;\rangle\right)=c(0)=0$&#10;}&#10;\end{enumerate}&#10;The vector $\left\langle 1,1,1\right\rangle$ was chosen arbitrarily, and in %&#10;fact any vector would induce a vector space composed of vectors orthogonal to %&#10;it. Without proof, we seem to be finding that the subspaces of $\bbR^{3}$ are %&#10;the zero subspace, lines, planes, and the whole of $\bbR^{3}$ itself.&#10;\par&#10;\vspace{1cm}&#10;Consider again the set of polynomials of degree $3$ or less:&#10;\@@amsalign$\displaystyle\mathbb{P}_{3}(x)=\left\{a(x):\text{$a(x)$ has degree%&#10; $\leq 3$}\right\}$&#10;Consider the subset $S\subseteq\mathbb{P}_{3}(x)$,&#10;\@@amsalign$\displaystyle S=\left\{a(x):a(0)=0\right\}$&#10;This set contains elements such as $x,-x^{3}-7x^{2}+\pi x,\sqrt{2}x^{2},0$.&#10;\par&#10; Is $S$ a subspace of $\mathbb{P}_{3}(x)$? Let $a(x),b(x)\in S$. Then $a(%&#10;0)=b(0)=0$ and hence&#10;\@@amsalign$\displaystyle a(x)+b(x)$&amp;$\displaystyle=c(x)$\\&#10;$\displaystyle a(0)+b(0)$&amp;$\displaystyle=c(0)$\\&#10;$\displaystyle 0+0$&amp;$\displaystyle=c(0)$&#10;\par&#10; Consider that we can identify a polynomial of degree $3$ or less with a %&#10;vector of length $4$.&#10;\@@amsalign$\displaystyle ax^{3}+bx^{2}+cx+d\longleftrightarrow\begin{pmatrix}%&#10;a\\&#10;b\\&#10;c\\&#10;d\end{pmatrix}$&#10;The set $S$ can similarly be represented:&#10;\@@amsalign$\displaystyle ax^{3}+bx^{2}+cx+0\longleftrightarrow\begin{pmatrix}%&#10;a\\&#10;b\\&#10;c\\&#10;0\end{pmatrix}$&#10;The two spaces $\mathbb{P}_{3}(x)$ and $\bbR^{4}$ seem to behave very %&#10;similarly. In fact, there is a term called isomorphism which denotes that %&#10;their structures are indeed essentially identical. The point of studying this %&#10;is that these two seemingly different spaces behave in the same way. It is %&#10;thus beneficial to study a generic model rather only sticking to one space, so%&#10; that the concepts learned about vector spaces can be more widely applied.&#10;\par&#10;\end{document}" display="block">
+  <mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>a</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+    <mi>n</mi>
+    <mi>o</mi>
+    <mi>d</mi>
+    <mi>e</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>3</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\geometry</mtext>
+    </merror>
+    <mi>l</mi>
+    <mi>e</mi>
+    <mi>t</mi>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mi>p</mi>
+    <mi>a</mi>
+    <mi>p</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>w</mi>
+    <mi>i</mi>
+    <mi>d</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mo>=</mo>
+    <mn>17</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mi>e</mi>
+    <mi>i</mi>
+    <mi>g</mi>
+    <mi>h</mi>
+    <mi>t</mi>
+    <mo>=</mo>
+    <mn>22</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>r</mi>
+    <mi>o</mi>
+    <mi>w</mi>
+    <mi>s</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>p</mi>
+    <mi>l</mi>
+    <mi>o</mi>
+    <mi>t</mi>
+    <mi>m</mi>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>k</mi>
+    <mi>s</mi>
+    <mtext xml:id="Sx1">Vector SpacesThe idea of a vector space is a generalization of the concepts we’ve studied so far to other sets of objects.
+Let V be a set of objects (vectors) with addition (+) defined. V is a vector space if1.V is closed under addition.If u→∈V and w→∈V, then u+w→∈V. In other words, V is closed under vector addition.2.V is closed under scalar multiplication.If c is a scalar in \bbR or \bbC, and u→∈V, then c⁢u→∈V.3.Zero element.There exists some ‘zero element’ z→∈V such that u→+z→=u→ for all u→∈V.4.Additive inverses.For every u→∈V, there exists some m→∈V such that u→+m→=m→+u→=z→.
+These concepts and rules apply to a great number of spaces, such as the familiar real numbers \bbR and vectors \bbRn, but they also apply to sets such as polynomials, continuous functions, and matrices.Space+ Closure⋅ ClosureZero vectorAdditive Inverses\bbRn✓✓(0,0,…,0)(u1,u2,…,un)m→=(-u1,-u2,…,-un)ℙ3⁢(x)✓✓p⁢(x)=0p⁢(x)=a⁢x3+b⁢x2+c⁢x+d-p⁢(x)=-a⁢x3-b⁢x2-c⁢x-dContinuous functionsC⁢[0,1]✓✓f⁢(x)=0f⁢(x)→-f⁢(x)MatricesMb⁢(\bbR)✓✓[00⋯000⋯0⋮⋮⋱⋮00⋯0]𝐀,-𝐀Not everything is a vector space – even small differences can matter. Consider the setS={a⁢(x)|a⁢(x) has degree 3}S={a⁢(x)|a⁢(x) has degree 3}Consider for the polynomials 3⁢x3 and 2⁢x3-7. Both are of degree 3 and their sum 5⁢x3-7 is also of degree 3. On the other hand, the polynomials 3⁢x3 and -3⁢x3 are also both of degree 3, and their sum is the zero polynomial, which is of degree 0. Thus the set is not a vector space.Consider next the matrix equation𝐀⁢x→=0→𝐀⁢x→=0→Call the solution set S byS={x→0∈\bbRn:𝐀⁢x→0=0→}S={x→0∈\bbRn:𝐀⁢x→0=0→}Does this space have the properties of a vector space? That is, do the solutions to the above matrix equation form a vector space? We will soon see that it does.Let u→,v→∈S and take c to be a scalar.1.Additive closure:Observe thatA⁢(u→+v→)=A⁢u→+A⁢v→=0→+0→=0→A⁢(u→+v→)=A⁢u→+A⁢v→=0→+0→=0→Thus u→+v→∈S.2.Scalar multiplication:A⁢(c⁢u→)=c⁢A⁢u→=c⁢0→=0→A⁢(c⁢u→)=c⁢A⁢u→=c⁢0→=0→Thus c⁢u→∈S.3.Zero element:If x→0=0→, then 𝐀⁢x→0=0→ for any 𝐀. 0→+u→=u→, thus S will always have a zero element.4.If 𝐀⁢x→0=0→, then -𝐀⁢x→0=-0→=0→ and so 𝐀⁢(-x→0)=0→.Operations and Properties of Vector SpacesThere are several additional important properties of vector spaces that are important to the structure of vector spaces.1.V is closed under +: If u→∈V and w→∈V, then u+w→∈V. In other words, V is closed under vector addition.2.V is closed under scalar multiplication: If c is a scalar in \bbR or \bbC, and u→∈V, then c⁢u→∈V.3.Zero element: There exists some z→∈V such that u→+z→=u→ for all u→∈V.4.Additive inverses: For every u→∈V, there exists some m→∈V such that u→+m→=m→+u→=z→.5.Commutativity of addition: u→+v→=v→+u→ for all u→,v→∈V.6.Associativity: (u→+v→)+w→=u→+(v→+w→)7.For scalars c,d∈\bbR, then c⁢(d⁢u→)=(c⁢d)⁢u→8.Distributivity: c⁢(u→+w→)=c⁢u→+c⁢w→9.Distributivity: (c+d)⁢u→=c⁢u→+d⁢u→SubspacesLet S⊆V such that1.S is non-empty.2.S is a vector space in its own right with the operations of V.Given a properly selected subset of a vector space, many of the properties of the vector space will be carried over to the subspace. Many such properties carry over because they are results of the operations being the same between both sets.Let us look at some examples of subspaces. Without naming a particular vector space, we can say some things already:Question:Is {0→}⊆V a subspace? Yes. Looks better than ’</mtext>
+    <mrow>
+      <mo>{</mo>
+      <mtext>’ and ’</mtext>
+      <mo>}</mo>
+    </mrow>
+    <mrow>
+      <mtext>’ </mtext>
+      <mtext>
+        <paragraph xmlns="http://dlmf.nist.gov/LaTeXML" xml:id="Sx3.SS0.SSS0.Px2nest" fragid="Sx3.SS0.SSS0.Px2nest">
+          <title>Question:</title>
+          <para xml:id="Sx3.SS0.SSS0.Px2.p1nest" fragid="Sx3.SS0.SSS0.Px2.p1nest">
+            <p>Is <Math mode="inline" tex="V" text="V" xml:id="Sx3.SS0.SSS0.Px2.p1.m1nest" fragid="Sx3.SS0.SSS0.Px2.p1.m1nest"><math alttext="V" display="inline"><mi>V</mi></math></Math> a subspace? Yes.</p>
+          </para>
+          <para xml:id="Sx3.SS0.SSS0.Px2.p2nest" fragid="Sx3.SS0.SSS0.Px2.p2nest">
+            <p>Let us consider a more complicated example. Consider <Math mode="inline" tex="\bbR^{2}" text="[\bbR] ^ 2" xml:id="Sx3.SS0.SSS0.Px2.p2.m1nest" fragid="Sx3.SS0.SSS0.Px2.p2.m1nest"><math alttext="\bbR^{2}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>2</mn></msup></math></Math>. Is the <Math mode="inline" tex="x" text="x" xml:id="Sx3.SS0.SSS0.Px2.p2.m2nest" fragid="Sx3.SS0.SSS0.Px2.p2.m2nest"><math alttext="x" display="inline"><mi>x</mi></math></Math>-axis a vector space? Call this set <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px2.p2.m3nest" fragid="Sx3.SS0.SSS0.Px2.p2.m3nest"><math alttext="S" display="inline"><mi>S</mi></math></Math>:</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx6nest" fragid="Sx3.EGx6nest">
+              <equation xml:id="Ex7nest" fragid="Ex7nest">
+                <MathFork>
+                  <Math tex="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;0\end{pmatrix}:x\in\bbR\right\}" text="S = conditional-set@(matrix[[x], [0]], x element-of [\bbR])" xml:id="Ex7.m2nest" fragid="Ex7.m2nest">
+                    <math alttext="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;0\end{pmatrix}:x\in\bbR\right\}" display="inline">
+                      <mrow>
+                        <mi>S</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>{</mo>
+                          <mrow xml:id="XM77bnest">
+                            <mo xml:id="XM77nest">(</mo>
+                            <mtable xml:id="Ex7.m1.xm1.mfnest">
+                              <mtr xml:id="Ex7.m1.xm1.mfanest">
+                                <mtd columnalign="center" xml:id="Ex7.m1.xm1.mfbnest">
+                                  <mi>x</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr xml:id="Ex7.m1.xm1.mfcnest">
+                                <mtd columnalign="center" xml:id="Ex7.m1.xm1.mfdnest">
+                                  <mn>0</mn>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo xml:id="XM77anest">)</mo>
+                          </mrow>
+                          <mo>:</mo>
+                          <mrow xml:id="XM78nest">
+                            <mi>x</mi>
+                            <mo>∈</mo>
+                            <merror class="ltx_ERROR undefined undefined">
+                              <mtext>\bbR</mtext>
+                            </merror>
+                          </mrow>
+                          <mo>}</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;0\end{pmatrix}:x\in\bbR\right\}" text="S = conditional-set@(matrix[[x], [0]], x element-of [\bbR])" xml:id="Ex7.m1nest" fragid="Ex7.m1nest">
+                        <math alttext="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;0\end{pmatrix}:x\in\bbR\right\}" display="inline">
+                          <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM79bnest">
+                                <mo xml:id="XM79nest">(</mo>
+                                <mtable xml:id="Ex7.m1.xm1nest">
+                                  <mtr xml:id="Ex7.m1.xm1anest">
+                                    <mtd columnalign="center" xml:id="Ex7.m1.xm1bnest">
+                                      <mi>x</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex7.m1.xm1cnest">
+                                    <mtd columnalign="center" xml:id="Ex7.m1.xm1dnest">
+                                      <mn>0</mn>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mo xml:id="XM79anest">)</mo>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM80nest">
+                                <mi>x</mi>
+                                <mo>∈</mo>
+                                <merror class="ltx_ERROR undefined undefined">
+                                  <mtext>\bbR</mtext>
+                                </merror>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>Then if <Math mode="inline" tex="\vec{u},\vec{v}\in S" text="list@(vec@(u), vec@(v)) element-of S" xml:id="Sx3.SS0.SSS0.Px2.p2.m4nest" fragid="Sx3.SS0.SSS0.Px2.p2.m4nest"><math alttext="\vec{u},\vec{v}\in S" display="inline"><mrow><mrow><mover accent="true" xml:id="XM81nest"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" xml:id="XM82nest"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mi>S</mi></mrow></math></Math>,</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx7nest" fragid="Sx3.EGx7nest">
+              <equation xml:id="Ex8nest" fragid="Ex8nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;0\end{pmatrix}" text="vec@(u) = matrix[[a], [0]]" xml:id="Ex8.m4nest" fragid="Ex8.m4nest">
+                    <math alttext="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;0\end{pmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>u</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex8.m1.xm1.mfnest">
+                            <mtr xml:id="Ex8.m1.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex8.m1.xm1.mfbnest">
+                                <mi>a</mi>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex8.m1.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex8.m1.xm1.mfdnest">
+                                <mn>0</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;0\end{pmatrix}" text="vec@(u) = matrix[[a], [0]]" xml:id="Ex8.m1nest" fragid="Ex8.m1nest">
+                        <math alttext="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;0\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>u</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex8.m1.xm1nest">
+                                <mtr xml:id="Ex8.m1.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex8.m1.xm1bnest">
+                                    <mi>a</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex8.m1.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex8.m1.xm1dnest">
+                                    <mn>0</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left"/>
+                  </MathBranch>
+                </MathFork>
+                <MathFork>
+                  <Math tex="\displaystyle\vec{v}=\begin{pmatrix}b\\&#10;0\end{pmatrix}" text="vec@(v) = matrix[[b], [0]]" xml:id="Ex8.m5nest" fragid="Ex8.m5nest">
+                    <math alttext="\displaystyle\vec{v}=\begin{pmatrix}b\\&#10;0\end{pmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>v</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex8.m3.xm1.mfnest">
+                            <mtr xml:id="Ex8.m3.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex8.m3.xm1.mfbnest">
+                                <mi>b</mi>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex8.m3.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex8.m3.xm1.mfdnest">
+                                <mn>0</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{v}=\begin{pmatrix}b\\&#10;0\end{pmatrix}" text="vec@(v) = matrix[[b], [0]]" xml:id="Ex8.m3nest" fragid="Ex8.m3nest">
+                        <math alttext="\displaystyle\vec{v}=\begin{pmatrix}b\\&#10;0\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>v</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex8.m3.xm1nest">
+                                <mtr xml:id="Ex8.m3.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex8.m3.xm1bnest">
+                                    <mi>b</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex8.m3.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex8.m3.xm1dnest">
+                                    <mn>0</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>Then</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx8nest" fragid="Sx3.EGx8nest">
+              <equation xml:id="Ex9nest" fragid="Ex9nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}+\vec{v}=\begin{pmatrix}a+b\\&#10;0\end{pmatrix}\in S" text="vec@(u) + vec@(v) = matrix[[a + b], [0]] element-of S" xml:id="Ex9.m4nest" fragid="Ex9.m4nest">
+                    <math alttext="\displaystyle\vec{u}+\vec{v}=\begin{pmatrix}a+b\\&#10;0\end{pmatrix}\in S" display="inline">
+                      <mrow>
+                        <mrow>
+                          <mover accent="true">
+                            <mi>u</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                          <mo>+</mo>
+                          <mover accent="true">
+                            <mi>v</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex9.m1.xm1.mfnest">
+                            <mtr xml:id="Ex9.m1.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex9.m1.xm1.mfbnest">
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>+</mo>
+                                  <mi>b</mi>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex9.m1.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex9.m1.xm1.mfdnest">
+                                <mn>0</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>∈</mo>
+                        <mi>S</mi>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}+\vec{v}=\begin{pmatrix}a+b\\&#10;0\end{pmatrix}\in S" text="vec@(u) + vec@(v) = matrix[[a + b], [0]] element-of S" xml:id="Ex9.m1nest" fragid="Ex9.m1nest">
+                        <math alttext="\displaystyle\vec{u}+\vec{v}=\begin{pmatrix}a+b\\&#10;0\end{pmatrix}\in S" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mover accent="true">
+                                <mi>u</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                              <mo>+</mo>
+                              <mover accent="true">
+                                <mi>v</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex9.m1.xm1nest">
+                                <mtr xml:id="Ex9.m1.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex9.m1.xm1bnest">
+                                    <mrow>
+                                      <mi>a</mi>
+                                      <mo>+</mo>
+                                      <mi>b</mi>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex9.m1.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex9.m1.xm1dnest">
+                                    <mn>0</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>∈</mo>
+                            <mi>S</mi>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left"/>
+                  </MathBranch>
+                </MathFork>
+                <MathFork>
+                  <Math tex="\displaystyle c\vec{u}=\begin{pmatrix}ca\\&#10;0\end{pmatrix}\in S" text="c * vec@(u) = matrix[[c * a], [0]] element-of S" xml:id="Ex9.m5nest" fragid="Ex9.m5nest">
+                    <math alttext="\displaystyle c\vec{u}=\begin{pmatrix}ca\\&#10;0\end{pmatrix}\in S" display="inline">
+                      <mrow>
+                        <mrow>
+                          <mi>c</mi>
+                          <mo>⁢</mo>
+                          <mover accent="true">
+                            <mi>u</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex9.m3.xm1.mfnest">
+                            <mtr xml:id="Ex9.m3.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex9.m3.xm1.mfbnest">
+                                <mrow>
+                                  <mi>c</mi>
+                                  <mo>⁢</mo>
+                                  <mi>a</mi>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex9.m3.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex9.m3.xm1.mfdnest">
+                                <mn>0</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>∈</mo>
+                        <mi>S</mi>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle c\vec{u}=\begin{pmatrix}ca\\&#10;0\end{pmatrix}\in S" text="c * vec@(u) = matrix[[c * a], [0]] element-of S" xml:id="Ex9.m3nest" fragid="Ex9.m3nest">
+                        <math alttext="\displaystyle c\vec{u}=\begin{pmatrix}ca\\&#10;0\end{pmatrix}\in S" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mover accent="true">
+                                <mi>u</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex9.m3.xm1nest">
+                                <mtr xml:id="Ex9.m3.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex9.m3.xm1bnest">
+                                    <mrow>
+                                      <mi>c</mi>
+                                      <mo>⁢</mo>
+                                      <mi>a</mi>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex9.m3.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex9.m3.xm1dnest">
+                                    <mn>0</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>∈</mo>
+                            <mi>S</mi>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>So <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px2.p2.m5nest" fragid="Sx3.SS0.SSS0.Px2.p2.m5nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> is a subspace of <Math mode="inline" tex="\bbR^{2}" text="[\bbR] ^ 2" xml:id="Sx3.SS0.SSS0.Px2.p2.m6nest" fragid="Sx3.SS0.SSS0.Px2.p2.m6nest"><math alttext="\bbR^{2}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>2</mn></msup></math></Math>. Similarly, the <Math mode="inline" tex="y" text="y" xml:id="Sx3.SS0.SSS0.Px2.p2.m7nest" fragid="Sx3.SS0.SSS0.Px2.p2.m7nest"><math alttext="y" display="inline"><mi>y</mi></math></Math>-axis is also a subspace by similar arguments.</p>
+          </para>
+          <para xml:id="Sx3.SS0.SSS0.Px2.p3nest" fragid="Sx3.SS0.SSS0.Px2.p3nest">
+            <p>Consider the following sets:</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx9nest" fragid="Sx3.EGx9nest">
+              <equation xml:id="Ex10nest" fragid="Ex10nest">
+                <MathFork>
+                  <Math tex="\displaystyle T=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=-5c\right\}" text="T = conditional-set@(matrix[[x], [y]], y = - 5 * c)" xml:id="Ex10.m5nest" fragid="Ex10.m5nest">
+                    <math alttext="\displaystyle T=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=-5c\right\}" display="inline">
+                      <mrow>
+                        <mi>T</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>{</mo>
+                          <mrow xml:id="XM83bnest">
+                            <mo xml:id="XM83nest">(</mo>
+                            <mtable xml:id="Ex10.m2.xm1.mfnest">
+                              <mtr xml:id="Ex10.m2.xm1.mfanest">
+                                <mtd columnalign="center" xml:id="Ex10.m2.xm1.mfbnest">
+                                  <mi>x</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr xml:id="Ex10.m2.xm1.mfcnest">
+                                <mtd columnalign="center" xml:id="Ex10.m2.xm1.mfdnest">
+                                  <mi>y</mi>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo xml:id="XM83anest">)</mo>
+                          </mrow>
+                          <mo>:</mo>
+                          <mrow xml:id="XM84nest">
+                            <mi>y</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>-</mo>
+                              <mrow>
+                                <mn>5</mn>
+                                <mo>⁢</mo>
+                                <mi>c</mi>
+                              </mrow>
+                            </mrow>
+                          </mrow>
+                          <mo>}</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle T" text="T" xml:id="Ex10.m1nest" fragid="Ex10.m1nest">
+                        <math alttext="\displaystyle T" display="inline">
+                          <mi>T</mi>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left">
+                      <Math mode="inline" tex="\displaystyle=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=-5c\right\}" text="absent = conditional-set@(matrix[[x], [y]], y = - 5 * c)" xml:id="Ex10.m2nest" fragid="Ex10.m2nest">
+                        <math alttext="\displaystyle=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=-5c\right\}" display="inline">
+                          <mrow>
+                            <mi/>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM85bnest">
+                                <mo xml:id="XM85nest">(</mo>
+                                <mtable xml:id="Ex10.m2.xm1nest">
+                                  <mtr xml:id="Ex10.m2.xm1anest">
+                                    <mtd columnalign="center" xml:id="Ex10.m2.xm1bnest">
+                                      <mi>x</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex10.m2.xm1cnest">
+                                    <mtd columnalign="center" xml:id="Ex10.m2.xm1dnest">
+                                      <mi>y</mi>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mo xml:id="XM85anest">)</mo>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM86nest">
+                                <mi>y</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mn>5</mn>
+                                    <mo>⁢</mo>
+                                    <mi>c</mi>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+                <MathFork>
+                  <Math tex="\displaystyle W=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=x+1\right\}" text="W = conditional-set@(matrix[[x], [y]], y = x + 1)" xml:id="Ex10.m6nest" fragid="Ex10.m6nest">
+                    <math alttext="\displaystyle W=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=x+1\right\}" display="inline">
+                      <mrow>
+                        <mi>W</mi>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>{</mo>
+                          <mrow xml:id="XM87bnest">
+                            <mo xml:id="XM87nest">(</mo>
+                            <mtable xml:id="Ex10.m4.xm1.mfnest">
+                              <mtr xml:id="Ex10.m4.xm1.mfanest">
+                                <mtd columnalign="center" xml:id="Ex10.m4.xm1.mfbnest">
+                                  <mi>x</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr xml:id="Ex10.m4.xm1.mfcnest">
+                                <mtd columnalign="center" xml:id="Ex10.m4.xm1.mfdnest">
+                                  <mi>y</mi>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo xml:id="XM87anest">)</mo>
+                          </mrow>
+                          <mo>:</mo>
+                          <mrow xml:id="XM88nest">
+                            <mi>y</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mi>x</mi>
+                              <mo>+</mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </mrow>
+                          <mo>}</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle W" text="W" xml:id="Ex10.m3nest" fragid="Ex10.m3nest">
+                        <math alttext="\displaystyle W" display="inline">
+                          <mi>W</mi>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left">
+                      <Math mode="inline" tex="\displaystyle=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=x+1\right\}" text="absent = conditional-set@(matrix[[x], [y]], y = x + 1)" xml:id="Ex10.m4nest" fragid="Ex10.m4nest">
+                        <math alttext="\displaystyle=\left\{\begin{pmatrix}x\\&#10;y\end{pmatrix}:y=x+1\right\}" display="inline">
+                          <mrow>
+                            <mi/>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM89bnest">
+                                <mo xml:id="XM89nest">(</mo>
+                                <mtable xml:id="Ex10.m4.xm1nest">
+                                  <mtr xml:id="Ex10.m4.xm1anest">
+                                    <mtd columnalign="center" xml:id="Ex10.m4.xm1bnest">
+                                      <mi>x</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex10.m4.xm1cnest">
+                                    <mtd columnalign="center" xml:id="Ex10.m4.xm1dnest">
+                                      <mi>y</mi>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mo xml:id="XM89anest">)</mo>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM90nest">
+                                <mi>y</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mi>x</mi>
+                                  <mo>+</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>are they vector spaces?</p>
+          </para>
+          <para xml:id="Sx3.SS0.SSS0.Px2.p4nest" fragid="Sx3.SS0.SSS0.Px2.p4nest">
+            <p>The set <Math mode="inline" tex="T" text="T" xml:id="Sx3.SS0.SSS0.Px2.p4.m1nest" fragid="Sx3.SS0.SSS0.Px2.p4.m1nest"><math alttext="T" display="inline"><mi>T</mi></math></Math> is simply a line. It has slope <Math mode="inline" tex="-5" text="- 5" xml:id="Sx3.SS0.SSS0.Px2.p4.m2nest" fragid="Sx3.SS0.SSS0.Px2.p4.m2nest"><math alttext="-5" display="inline"><mrow><mo>-</mo><mn>5</mn></mrow></math></Math> and passes through the origin.
+Let <Math mode="inline" tex="\vec{u},\vec{w}\in T" text="list@(vec@(u), vec@(w)) element-of T" xml:id="Sx3.SS0.SSS0.Px2.p4.m3nest" fragid="Sx3.SS0.SSS0.Px2.p4.m3nest"><math alttext="\vec{u},\vec{w}\in T" display="inline"><mrow><mrow><mover accent="true" xml:id="XM91nest"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" xml:id="XM92nest"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mi>T</mi></mrow></math></Math>. Then for some <Math mode="inline" tex="a,b\in\bbR" text="list@(a, b) element-of [\bbR]" xml:id="Sx3.SS0.SSS0.Px2.p4.m4nest" fragid="Sx3.SS0.SSS0.Px2.p4.m4nest"><math alttext="a,b\in\bbR" display="inline"><mrow><mrow><mi xml:id="XM93nest">a</mi><mo>,</mo><mi xml:id="XM94nest">b</mi></mrow><mo>∈</mo><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror></mrow></math></Math>,</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx10nest" fragid="Sx3.EGx10nest">
+              <equation xml:id="Ex11nest" fragid="Ex11nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;-5a\end{pmatrix}" text="vec@(u) = matrix[[a], [- 5 * a]]" xml:id="Ex11.m4nest" fragid="Ex11.m4nest">
+                    <math alttext="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;-5a\end{pmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>u</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex11.m1.xm1.mfnest">
+                            <mtr xml:id="Ex11.m1.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex11.m1.xm1.mfbnest">
+                                <mi>a</mi>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex11.m1.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex11.m1.xm1.mfdnest">
+                                <mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mn>5</mn>
+                                    <mo>⁢</mo>
+                                    <mi>a</mi>
+                                  </mrow>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;-5a\end{pmatrix}" text="vec@(u) = matrix[[a], [- 5 * a]]" xml:id="Ex11.m1nest" fragid="Ex11.m1nest">
+                        <math alttext="\displaystyle\vec{u}=\begin{pmatrix}a\\&#10;-5a\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>u</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex11.m1.xm1nest">
+                                <mtr xml:id="Ex11.m1.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex11.m1.xm1bnest">
+                                    <mi>a</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex11.m1.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex11.m1.xm1dnest">
+                                    <mrow>
+                                      <mo>-</mo>
+                                      <mrow>
+                                        <mn>5</mn>
+                                        <mo>⁢</mo>
+                                        <mi>a</mi>
+                                      </mrow>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left"/>
+                  </MathBranch>
+                </MathFork>
+                <MathFork>
+                  <Math tex="\displaystyle\vec{w}=\begin{pmatrix}b\\&#10;-5b\end{pmatrix}" text="vec@(w) = matrix[[b], [- 5 * b]]" xml:id="Ex11.m5nest" fragid="Ex11.m5nest">
+                    <math alttext="\displaystyle\vec{w}=\begin{pmatrix}b\\&#10;-5b\end{pmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>w</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex11.m3.xm1.mfnest">
+                            <mtr xml:id="Ex11.m3.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex11.m3.xm1.mfbnest">
+                                <mi>b</mi>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex11.m3.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex11.m3.xm1.mfdnest">
+                                <mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mn>5</mn>
+                                    <mo>⁢</mo>
+                                    <mi>b</mi>
+                                  </mrow>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{w}=\begin{pmatrix}b\\&#10;-5b\end{pmatrix}" text="vec@(w) = matrix[[b], [- 5 * b]]" xml:id="Ex11.m3nest" fragid="Ex11.m3nest">
+                        <math alttext="\displaystyle\vec{w}=\begin{pmatrix}b\\&#10;-5b\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>w</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex11.m3.xm1nest">
+                                <mtr xml:id="Ex11.m3.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex11.m3.xm1bnest">
+                                    <mi>b</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex11.m3.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex11.m3.xm1dnest">
+                                    <mrow>
+                                      <mo>-</mo>
+                                      <mrow>
+                                        <mn>5</mn>
+                                        <mo>⁢</mo>
+                                        <mi>b</mi>
+                                      </mrow>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>Then</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx11nest" fragid="Sx3.EGx11nest">
+              <equation xml:id="Ex12nest" fragid="Ex12nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}+\vec{w}=\begin{pmatrix}a+b\\&#10;-5(a+b)\end{pmatrix}\in T" text="vec@(u) + vec@(w) = matrix[[a + b], [- 5 * (a + b)]] element-of T" xml:id="Ex12.m3nest" fragid="Ex12.m3nest">
+                    <math alttext="\displaystyle\vec{u}+\vec{w}=\begin{pmatrix}a+b\\&#10;-5(a+b)\end{pmatrix}\in T" display="inline">
+                      <mrow>
+                        <mrow>
+                          <mover accent="true">
+                            <mi>u</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                          <mo>+</mo>
+                          <mover accent="true">
+                            <mi>w</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex12.m2.xm1.mfnest">
+                            <mtr xml:id="Ex12.m2.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex12.m2.xm1.mfbnest">
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>+</mo>
+                                  <mi>b</mi>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex12.m2.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex12.m2.xm1.mfdnest">
+                                <mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mn>5</mn>
+                                    <mo>⁢</mo>
+                                    <mrow>
+                                      <mo stretchy="false">(</mo>
+                                      <mrow xml:id="XM95nest">
+                                        <mi>a</mi>
+                                        <mo>+</mo>
+                                        <mi>b</mi>
+                                      </mrow>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                  </mrow>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>∈</mo>
+                        <mi>T</mi>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}+\vec{w}" text="vec@(u) + vec@(w)" xml:id="Ex12.m1nest" fragid="Ex12.m1nest">
+                        <math alttext="\displaystyle\vec{u}+\vec{w}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>u</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>+</mo>
+                            <mover accent="true">
+                              <mi>w</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left">
+                      <Math mode="inline" tex="\displaystyle=\begin{pmatrix}a+b\\&#10;-5(a+b)\end{pmatrix}\in T" text="absent = matrix[[a + b], [- 5 * (a + b)]] element-of T" xml:id="Ex12.m2nest" fragid="Ex12.m2nest">
+                        <math alttext="\displaystyle=\begin{pmatrix}a+b\\&#10;-5(a+b)\end{pmatrix}\in T" display="inline">
+                          <mrow>
+                            <mi/>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex12.m2.xm1nest">
+                                <mtr xml:id="Ex12.m2.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex12.m2.xm1bnest">
+                                    <mrow>
+                                      <mi>a</mi>
+                                      <mo>+</mo>
+                                      <mi>b</mi>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex12.m2.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex12.m2.xm1dnest">
+                                    <mrow>
+                                      <mo>-</mo>
+                                      <mrow>
+                                        <mn>5</mn>
+                                        <mo>⁢</mo>
+                                        <mrow>
+                                          <mo stretchy="false">(</mo>
+                                          <mrow xml:id="XM96nest">
+                                            <mi>a</mi>
+                                            <mo>+</mo>
+                                            <mi>b</mi>
+                                          </mrow>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                      </mrow>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>∈</mo>
+                            <mi>T</mi>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>Thus <Math mode="inline" tex="T" text="T" xml:id="Sx3.SS0.SSS0.Px2.p4.m5nest" fragid="Sx3.SS0.SSS0.Px2.p4.m5nest"><math alttext="T" display="inline"><mi>T</mi></math></Math> is closed under addition. Furthermore,</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx12nest" fragid="Sx3.EGx12nest">
+              <equation xml:id="Ex13nest" fragid="Ex13nest">
+                <MathFork>
+                  <Math tex="\displaystyle c\vec{u}=c\begin{pmatrix}a\\&#10;-5a\end{pmatrix}=\begin{pmatrix}ac-5ac\end{pmatrix}\in T" text="c * vec@(u) = c * matrix[[a], [- 5 * a]] = matrix[[a * c - 5 * a * c]] element-of T" xml:id="Ex13.m2nest" fragid="Ex13.m2nest">
+                    <math alttext="\displaystyle c\vec{u}=c\begin{pmatrix}a\\&#10;-5a\end{pmatrix}=\begin{pmatrix}ac-5ac\end{pmatrix}\in T" display="inline">
+                      <mrow>
+                        <mrow>
+                          <mi>c</mi>
+                          <mo>⁢</mo>
+                          <mover accent="true">
+                            <mi>u</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mi>c</mi>
+                          <mo>⁢</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <mtable xml:id="Ex13.m1.xm1.mfnest">
+                              <mtr xml:id="Ex13.m1.xm1.mfanest">
+                                <mtd columnalign="center" xml:id="Ex13.m1.xm1.mfbnest">
+                                  <mi>a</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr xml:id="Ex13.m1.xm1.mfcnest">
+                                <mtd columnalign="center" xml:id="Ex13.m1.xm1.mfdnest">
+                                  <mrow>
+                                    <mo>-</mo>
+                                    <mrow>
+                                      <mn>5</mn>
+                                      <mo>⁢</mo>
+                                      <mi>a</mi>
+                                    </mrow>
+                                  </mrow>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mtable xml:id="Ex13.m1.xm2.mfnest">
+                            <mtr xml:id="Ex13.m1.xm2.mfanest">
+                              <mtd columnalign="center" xml:id="Ex13.m1.xm2.mfbnest">
+                                <mrow>
+                                  <mrow>
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <mi>c</mi>
+                                  </mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mn>5</mn>
+                                    <mo>⁢</mo>
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <mi>c</mi>
+                                  </mrow>
+                                </mrow>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>)</mo>
+                        </mrow>
+                        <mo>∈</mo>
+                        <mi>T</mi>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle c\vec{u}=c\begin{pmatrix}a\\&#10;-5a\end{pmatrix}=\begin{pmatrix}ac-5ac\end{pmatrix}\in T" text="c * vec@(u) = c * matrix[[a], [- 5 * a]] = matrix[[a * c - 5 * a * c]] element-of T" xml:id="Ex13.m1nest" fragid="Ex13.m1nest">
+                        <math alttext="\displaystyle c\vec{u}=c\begin{pmatrix}a\\&#10;-5a\end{pmatrix}=\begin{pmatrix}ac-5ac\end{pmatrix}\in T" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mover accent="true">
+                                <mi>u</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mtable xml:id="Ex13.m1.xm1nest">
+                                  <mtr xml:id="Ex13.m1.xm1anest">
+                                    <mtd columnalign="center" xml:id="Ex13.m1.xm1bnest">
+                                      <mi>a</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex13.m1.xm1cnest">
+                                    <mtd columnalign="center" xml:id="Ex13.m1.xm1dnest">
+                                      <mrow>
+                                        <mo>-</mo>
+                                        <mrow>
+                                          <mn>5</mn>
+                                          <mo>⁢</mo>
+                                          <mi>a</mi>
+                                        </mrow>
+                                      </mrow>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex13.m1.xm2nest">
+                                <mtr xml:id="Ex13.m1.xm2anest">
+                                  <mtd columnalign="center" xml:id="Ex13.m1.xm2bnest">
+                                    <mrow>
+                                      <mrow>
+                                        <mi>a</mi>
+                                        <mo>⁢</mo>
+                                        <mi>c</mi>
+                                      </mrow>
+                                      <mo>-</mo>
+                                      <mrow>
+                                        <mn>5</mn>
+                                        <mo>⁢</mo>
+                                        <mi>a</mi>
+                                        <mo>⁢</mo>
+                                        <mi>c</mi>
+                                      </mrow>
+                                    </mrow>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>∈</mo>
+                            <mi>T</mi>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>so <Math mode="inline" tex="T" text="T" xml:id="Sx3.SS0.SSS0.Px2.p4.m6nest" fragid="Sx3.SS0.SSS0.Px2.p4.m6nest"><math alttext="T" display="inline"><mi>T</mi></math></Math> is closed under scalar multiplication.</p>
+          </para>
+          <para xml:id="Sx3.SS0.SSS0.Px2.p5nest" fragid="Sx3.SS0.SSS0.Px2.p5nest">
+            <p>Next consider <Math mode="inline" tex="W" text="W" xml:id="Sx3.SS0.SSS0.Px2.p5.m1nest" fragid="Sx3.SS0.SSS0.Px2.p5.m1nest"><math alttext="W" display="inline"><mi>W</mi></math></Math>. It is also a line, but we can note immediately that it does not contain the zero vector. What if we append a zero element to <Math mode="inline" tex="W" text="W" xml:id="Sx3.SS0.SSS0.Px2.p5.m2nest" fragid="Sx3.SS0.SSS0.Px2.p5.m2nest"><math alttext="W" display="inline"><mi>W</mi></math></Math>? That is, let <Math mode="inline" tex="F=W\cup\left\{\vec{0}\right\}" text="F = W union set@(vec@(0))" xml:id="Sx3.SS0.SSS0.Px2.p5.m3nest" fragid="Sx3.SS0.SSS0.Px2.p5.m3nest"><math alttext="F=W\cup\left\{\vec{0}\right\}" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mi>W</mi><mo>∪</mo><mrow><mo>{</mo><mover accent="true" xml:id="XM97nest"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow></mrow></math></Math>. We find that there are still problems – consider for instance the two vectors</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx13nest" fragid="Sx3.EGx13nest">
+              <equation xml:id="Ex14nest" fragid="Ex14nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}=\begin{bmatrix}1\\&#10;2\end{bmatrix}" text="vec@(u) = matrix[[1], [2]]" xml:id="Ex14.m4nest" fragid="Ex14.m4nest">
+                    <math alttext="\displaystyle\vec{u}=\begin{bmatrix}1\\&#10;2\end{bmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>u</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>[</mo>
+                          <mtable xml:id="Ex14.m1.xm1.mfnest">
+                            <mtr xml:id="Ex14.m1.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex14.m1.xm1.mfbnest">
+                                <mn>1</mn>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex14.m1.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex14.m1.xm1.mfdnest">
+                                <mn>2</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>]</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}=\begin{bmatrix}1\\&#10;2\end{bmatrix}" text="vec@(u) = matrix[[1], [2]]" xml:id="Ex14.m1nest" fragid="Ex14.m1nest">
+                        <math alttext="\displaystyle\vec{u}=\begin{bmatrix}1\\&#10;2\end{bmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>u</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>[</mo>
+                              <mtable xml:id="Ex14.m1.xm1nest">
+                                <mtr xml:id="Ex14.m1.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex14.m1.xm1bnest">
+                                    <mn>1</mn>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex14.m1.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex14.m1.xm1dnest">
+                                    <mn>2</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>]</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                    <td align="left"/>
+                  </MathBranch>
+                </MathFork>
+                <MathFork>
+                  <Math tex="\displaystyle\vec{w}=\begin{bmatrix}2\\&#10;3\end{bmatrix}" text="vec@(w) = matrix[[2], [3]]" xml:id="Ex14.m5nest" fragid="Ex14.m5nest">
+                    <math alttext="\displaystyle\vec{w}=\begin{bmatrix}2\\&#10;3\end{bmatrix}" display="inline">
+                      <mrow>
+                        <mover accent="true">
+                          <mi>w</mi>
+                          <mo stretchy="false">→</mo>
+                        </mover>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>[</mo>
+                          <mtable xml:id="Ex14.m3.xm1.mfnest">
+                            <mtr xml:id="Ex14.m3.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex14.m3.xm1.mfbnest">
+                                <mn>2</mn>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex14.m3.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex14.m3.xm1.mfdnest">
+                                <mn>3</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>]</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{w}=\begin{bmatrix}2\\&#10;3\end{bmatrix}" text="vec@(w) = matrix[[2], [3]]" xml:id="Ex14.m3nest" fragid="Ex14.m3nest">
+                        <math alttext="\displaystyle\vec{w}=\begin{bmatrix}2\\&#10;3\end{bmatrix}" display="inline">
+                          <mrow>
+                            <mover accent="true">
+                              <mi>w</mi>
+                              <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>[</mo>
+                              <mtable xml:id="Ex14.m3.xm1nest">
+                                <mtr xml:id="Ex14.m3.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex14.m3.xm1bnest">
+                                    <mn>2</mn>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex14.m3.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex14.m3.xm1dnest">
+                                    <mn>3</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>]</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>both are clearly members of <Math mode="inline" tex="W" text="W" xml:id="Sx3.SS0.SSS0.Px2.p5.m4nest" fragid="Sx3.SS0.SSS0.Px2.p5.m4nest"><math alttext="W" display="inline"><mi>W</mi></math></Math>, but their sum is not:</p>
+            <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx14nest" fragid="Sx3.EGx14nest">
+              <equation xml:id="Ex15nest" fragid="Ex15nest">
+                <MathFork>
+                  <Math tex="\displaystyle\vec{u}+\vec{w}=\begin{bmatrix}3\\&#10;5\end{bmatrix}" text="vec@(u) + vec@(w) = matrix[[3], [5]]" xml:id="Ex15.m2nest" fragid="Ex15.m2nest">
+                    <math alttext="\displaystyle\vec{u}+\vec{w}=\begin{bmatrix}3\\&#10;5\end{bmatrix}" display="inline">
+                      <mrow>
+                        <mrow>
+                          <mover accent="true">
+                            <mi>u</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                          <mo>+</mo>
+                          <mover accent="true">
+                            <mi>w</mi>
+                            <mo stretchy="false">→</mo>
+                          </mover>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                          <mo>[</mo>
+                          <mtable xml:id="Ex15.m1.xm1.mfnest">
+                            <mtr xml:id="Ex15.m1.xm1.mfanest">
+                              <mtd columnalign="center" xml:id="Ex15.m1.xm1.mfbnest">
+                                <mn>3</mn>
+                              </mtd>
+                            </mtr>
+                            <mtr xml:id="Ex15.m1.xm1.mfcnest">
+                              <mtd columnalign="center" xml:id="Ex15.m1.xm1.mfdnest">
+                                <mn>5</mn>
+                              </mtd>
+                            </mtr>
+                          </mtable>
+                          <mo>]</mo>
+                        </mrow>
+                      </mrow>
+                    </math>
+                  </Math>
+                  <MathBranch>
+                    <td align="right">
+                      <Math mode="inline" tex="\displaystyle\vec{u}+\vec{w}=\begin{bmatrix}3\\&#10;5\end{bmatrix}" text="vec@(u) + vec@(w) = matrix[[3], [5]]" xml:id="Ex15.m1nest" fragid="Ex15.m1nest">
+                        <math alttext="\displaystyle\vec{u}+\vec{w}=\begin{bmatrix}3\\&#10;5\end{bmatrix}" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mover accent="true">
+                                <mi>u</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                              <mo>+</mo>
+                              <mover accent="true">
+                                <mi>w</mi>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>[</mo>
+                              <mtable xml:id="Ex15.m1.xm1nest">
+                                <mtr xml:id="Ex15.m1.xm1anest">
+                                  <mtd columnalign="center" xml:id="Ex15.m1.xm1bnest">
+                                    <mn>3</mn>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex15.m1.xm1cnest">
+                                  <mtd columnalign="center" xml:id="Ex15.m1.xm1dnest">
+                                    <mn>5</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>]</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                    </td>
+                  </MathBranch>
+                </MathFork>
+              </equation>
+            </equationgroup>
+            <p>Since <Math mode="inline" tex="3+1=4\neq 5" text="3 + 1 = 4 not-equals 5" xml:id="Sx3.SS0.SSS0.Px2.p5.m5nest" fragid="Sx3.SS0.SSS0.Px2.p5.m5nest"><math alttext="3+1=4\neq 5" display="inline"><mrow><mrow><mn>3</mn><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>4</mn><mo>≠</mo><mn>5</mn></mrow></math></Math>, thus <Math mode="inline" tex="\vec{u}+\vec{w}\notin F" text="vec@(u) + vec@(w) not-element-of F" xml:id="Sx3.SS0.SSS0.Px2.p5.m6nest" fragid="Sx3.SS0.SSS0.Px2.p5.m6nest"><math alttext="\vec{u}+\vec{w}\notin F" display="inline"><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>+</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo>∉</mo><mi>F</mi></mrow></math></Math>. Thus <Math mode="inline" tex="W" text="W" xml:id="Sx3.SS0.SSS0.Px2.p5.m7nest" fragid="Sx3.SS0.SSS0.Px2.p5.m7nest"><math alttext="W" display="inline"><mi>W</mi></math></Math> is not a vector space, and so it is not a subspace of <Math mode="inline" tex="\bbR^{2}" text="[\bbR] ^ 2" xml:id="Sx3.SS0.SSS0.Px2.p5.m8nest" fragid="Sx3.SS0.SSS0.Px2.p5.m8nest"><math alttext="\bbR^{2}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>2</mn></msup></math></Math>.</p>
+          </para>
+          <paragraph xml:id="Sx3.SS0.SSS0.Px3nest" fragid="Sx3.SS0.SSS0.Px3nest">
+            <title>Question:</title>
+            <para xml:id="Sx3.SS0.SSS0.Px3.p1nest" fragid="Sx3.SS0.SSS0.Px3.p1nest">
+              <p>What are all the subspaces of <Math mode="inline" tex="\bbR^{2}" text="[\bbR] ^ 2" xml:id="Sx3.SS0.SSS0.Px3.p1.m1nest" fragid="Sx3.SS0.SSS0.Px3.p1.m1nest"><math alttext="\bbR^{2}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>2</mn></msup></math></Math>?</p>
+            </para>
+            <para xml:id="Sx3.SS0.SSS0.Px3.p2nest" fragid="Sx3.SS0.SSS0.Px3.p2nest">
+              <p>Guess: <Math mode="inline" tex="\bbR^{2},\left\{\vec{0}\right\}," text="list@([\bbR] ^ 2, set@(vec@(0)))" xml:id="Sx3.SS0.SSS0.Px3.p2.m1nest" fragid="Sx3.SS0.SSS0.Px3.p2.m1nest"><math alttext="\bbR^{2},\left\{\vec{0}\right\}," display="inline"><mrow><mrow><msup xml:id="XM99nest"><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>2</mn></msup><mo>,</mo><mrow><mo>{</mo><mover accent="true" xml:id="XM98nest"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></Math> and any line passing through <Math mode="inline" tex="\begin{pmatrix}0\\&#10;0\end{pmatrix}" text="matrix[[0], [0]]" xml:id="Sx3.SS0.SSS0.Px3.p2.m2nest" fragid="Sx3.SS0.SSS0.Px3.p2.m2nest"><math alttext="\begin{pmatrix}0\\&#10;0\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable xml:id="Sx3.SS0.SSS0.Px3.p2.m2.xm1nest"><mtr xml:id="Sx3.SS0.SSS0.Px3.p2.m2.xm1anest"><mtd columnalign="center" xml:id="Sx3.SS0.SSS0.Px3.p2.m2.xm1bnest"><mn>0</mn></mtd></mtr><mtr xml:id="Sx3.SS0.SSS0.Px3.p2.m2.xm1cnest"><mtd columnalign="center" xml:id="Sx3.SS0.SSS0.Px3.p2.m2.xm1dnest"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></math></Math>.</p>
+            </para>
+            <paragraph xml:id="Sx3.SS0.SSS0.Px4nest" fragid="Sx3.SS0.SSS0.Px4nest">
+              <title>Question:</title>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p1nest" fragid="Sx3.SS0.SSS0.Px4.p1nest">
+                <p>What about <Math mode="inline" tex="\bbR^{3},\bbR^{4}," text="list@([\bbR] ^ 3, [\bbR] ^ 4)" xml:id="Sx3.SS0.SSS0.Px4.p1.m1nest" fragid="Sx3.SS0.SSS0.Px4.p1.m1nest"><math alttext="\bbR^{3},\bbR^{4}," display="inline"><mrow><mrow><msup xml:id="XM101nest"><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>3</mn></msup><mo>,</mo><msup xml:id="XM102nest"><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>4</mn></msup></mrow><mo>,</mo></mrow></math></Math> and beyond?</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p2nest" fragid="Sx3.SS0.SSS0.Px4.p2nest">
+                <p>A good place to start is with linear objects. What kind of linear objects exist in <Math mode="inline" tex="\bbR^{3}" text="[\bbR] ^ 3" xml:id="Sx3.SS0.SSS0.Px4.p2.m1nest" fragid="Sx3.SS0.SSS0.Px4.p2.m1nest"><math alttext="\bbR^{3}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>3</mn></msup></math></Math>? We know of lines and planes.</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p3nest" fragid="Sx3.SS0.SSS0.Px4.p3nest">
+                <p>Consider</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx15nest" fragid="Sx3.EGx15nest">
+                  <equation xml:id="Ex16nest" fragid="Ex16nest">
+                    <MathFork>
+                      <Math tex="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;y\\&#10;z\end{pmatrix}:x+y+z=0\right\}" text="S = conditional-set@(matrix[[x], [y], [z]], x + y + z = 0)" xml:id="Ex16.m2nest" fragid="Ex16.m2nest">
+                        <math alttext="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;y\\&#10;z\end{pmatrix}:x+y+z=0\right\}" display="inline">
+                          <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM103bnest">
+                                <mo xml:id="XM103nest">(</mo>
+                                <mtable xml:id="Ex16.m1.xm1.mfnest">
+                                  <mtr xml:id="Ex16.m1.xm1.mfanest">
+                                    <mtd columnalign="center" xml:id="Ex16.m1.xm1.mfbnest">
+                                      <mi>x</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex16.m1.xm1.mfcnest">
+                                    <mtd columnalign="center" xml:id="Ex16.m1.xm1.mfdnest">
+                                      <mi>y</mi>
+                                    </mtd>
+                                  </mtr>
+                                  <mtr xml:id="Ex16.m1.xm1.mfenest">
+                                    <mtd columnalign="center" xml:id="Ex16.m1.xm1.mffnest">
+                                      <mi>z</mi>
+                                    </mtd>
+                                  </mtr>
+                                </mtable>
+                                <mo xml:id="XM103anest">)</mo>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM104nest">
+                                <mrow>
+                                  <mi>x</mi>
+                                  <mo>+</mo>
+                                  <mi>y</mi>
+                                  <mo>+</mo>
+                                  <mi>z</mi>
+                                </mrow>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;y\\&#10;z\end{pmatrix}:x+y+z=0\right\}" text="S = conditional-set@(matrix[[x], [y], [z]], x + y + z = 0)" xml:id="Ex16.m1nest" fragid="Ex16.m1nest">
+                            <math alttext="\displaystyle S=\left\{\begin{pmatrix}x\\&#10;y\\&#10;z\end{pmatrix}:x+y+z=0\right\}" display="inline">
+                              <mrow>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mo>{</mo>
+                                  <mrow xml:id="XM105bnest">
+                                    <mo xml:id="XM105nest">(</mo>
+                                    <mtable xml:id="Ex16.m1.xm1nest">
+                                      <mtr xml:id="Ex16.m1.xm1anest">
+                                        <mtd columnalign="center" xml:id="Ex16.m1.xm1bnest">
+                                          <mi>x</mi>
+                                        </mtd>
+                                      </mtr>
+                                      <mtr xml:id="Ex16.m1.xm1cnest">
+                                        <mtd columnalign="center" xml:id="Ex16.m1.xm1dnest">
+                                          <mi>y</mi>
+                                        </mtd>
+                                      </mtr>
+                                      <mtr xml:id="Ex16.m1.xm1enest">
+                                        <mtd columnalign="center" xml:id="Ex16.m1.xm1fnest">
+                                          <mi>z</mi>
+                                        </mtd>
+                                      </mtr>
+                                    </mtable>
+                                    <mo xml:id="XM105anest">)</mo>
+                                  </mrow>
+                                  <mo>:</mo>
+                                  <mrow xml:id="XM106nest">
+                                    <mrow>
+                                      <mi>x</mi>
+                                      <mo>+</mo>
+                                      <mi>y</mi>
+                                      <mo>+</mo>
+                                      <mi>z</mi>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                  <mo>}</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>Is <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p3.m1nest" fragid="Sx3.SS0.SSS0.Px4.p3.m1nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> a subspace of <Math mode="inline" tex="\bbR^{3}" text="[\bbR] ^ 3" xml:id="Sx3.SS0.SSS0.Px4.p3.m2nest" fragid="Sx3.SS0.SSS0.Px4.p3.m2nest"><math alttext="\bbR^{3}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>3</mn></msup></math></Math>. If we observe that <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p3.m3nest" fragid="Sx3.SS0.SSS0.Px4.p3.m3nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> is the set of solutions to a homogeneous system, then it must be, from our earlier observations.</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p4nest" fragid="Sx3.SS0.SSS0.Px4.p4nest">
+                <p>Next consider that the system can be rewritten in terms of a dot product:</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx16nest" fragid="Sx3.EGx16nest">
+                  <equation xml:id="Ex17nest" fragid="Ex17nest">
+                    <MathFork>
+                      <Math tex="\displaystyle x+y+z=0" text="x + y + z = 0" xml:id="Ex17.m3nest" fragid="Ex17.m3nest">
+                        <math alttext="\displaystyle x+y+z=0" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mi>x</mi>
+                              <mo>+</mo>
+                              <mi>y</mi>
+                              <mo>+</mo>
+                              <mi>z</mi>
+                            </mrow>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle x+y+z" text="x + y + z" xml:id="Ex17.m1nest" fragid="Ex17.m1nest">
+                            <math alttext="\displaystyle x+y+z" display="inline">
+                              <mrow>
+                                <mi>x</mi>
+                                <mo>+</mo>
+                                <mi>y</mi>
+                                <mo>+</mo>
+                                <mi>z</mi>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                        <td align="left">
+                          <Math mode="inline" tex="\displaystyle=0" text="absent = 0" xml:id="Ex17.m2nest" fragid="Ex17.m2nest">
+                            <math alttext="\displaystyle=0" display="inline">
+                              <mrow>
+                                <mi/>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                  <equation xml:id="Ex18nest" fragid="Ex18nest">
+                    <MathFork>
+                      <Math tex="\displaystyle\left\langle x,y,z\right\rangle\cdot\left\langle 1,1,1\right%&#10;\rangle=0" text="list@(x, y, z) cdot list@(1, 1, 1) = 0" xml:id="Ex18.m3nest" fragid="Ex18.m3nest">
+                        <math alttext="\displaystyle\left\langle x,y,z\right\rangle\cdot\left\langle 1,1,1\right%&#10;\rangle=0" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mrow>
+                                <mo>⟨</mo>
+                                <mi xml:id="XM107nest">x</mi>
+                                <mo>,</mo>
+                                <mi xml:id="XM108nest">y</mi>
+                                <mo>,</mo>
+                                <mi xml:id="XM109nest">z</mi>
+                                <mo>⟩</mo>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow>
+                                <mo>⟨</mo>
+                                <mn xml:id="XM110nest">1</mn>
+                                <mo>,</mo>
+                                <mn xml:id="XM111nest">1</mn>
+                                <mo>,</mo>
+                                <mn xml:id="XM112nest">1</mn>
+                                <mo>⟩</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle\left\langle x,y,z\right\rangle\cdot\left\langle 1,1,1\right\rangle" text="list@(x, y, z) cdot list@(1, 1, 1)" xml:id="Ex18.m1nest" fragid="Ex18.m1nest">
+                            <math alttext="\displaystyle\left\langle x,y,z\right\rangle\cdot\left\langle 1,1,1\right\rangle" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <mo>⟨</mo>
+                                  <mi xml:id="XM113nest">x</mi>
+                                  <mo>,</mo>
+                                  <mi xml:id="XM114nest">y</mi>
+                                  <mo>,</mo>
+                                  <mi xml:id="XM115nest">z</mi>
+                                  <mo>⟩</mo>
+                                </mrow>
+                                <mo>⋅</mo>
+                                <mrow>
+                                  <mo>⟨</mo>
+                                  <mn xml:id="XM116nest">1</mn>
+                                  <mo>,</mo>
+                                  <mn xml:id="XM117nest">1</mn>
+                                  <mo>,</mo>
+                                  <mn xml:id="XM118nest">1</mn>
+                                  <mo>⟩</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                        <td align="left">
+                          <Math mode="inline" tex="\displaystyle=0" text="absent = 0" xml:id="Ex18.m2nest" fragid="Ex18.m2nest">
+                            <math alttext="\displaystyle=0" display="inline">
+                              <mrow>
+                                <mi/>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>Thus <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p4.m1nest" fragid="Sx3.SS0.SSS0.Px4.p4.m1nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> is equivalently</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx17nest" fragid="Sx3.EGx17nest">
+                  <equation xml:id="Ex19nest" fragid="Ex19nest">
+                    <MathFork>
+                      <Math tex="\displaystyle S=\left\{\vec{w}\in\bbR^{3}:\vec{w}\cdot\left\langle 1,1,1\right%&#10;\rangle=0\right\}" text="S = conditional-set@(vec@(w) element-of [\bbR] ^ 3, vec@(w) cdot list@(1, 1, 1) = 0)" xml:id="Ex19.m2nest" fragid="Ex19.m2nest">
+                        <math alttext="\displaystyle S=\left\{\vec{w}\in\bbR^{3}:\vec{w}\cdot\left\langle 1,1,1\right%&#10;\rangle=0\right\}" display="inline">
+                          <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM122nest">
+                                <mover accent="true">
+                                  <mi>w</mi>
+                                  <mo stretchy="false">→</mo>
+                                </mover>
+                                <mo>∈</mo>
+                                <msup>
+                                  <merror class="ltx_ERROR undefined undefined">
+                                    <mtext>\bbR</mtext>
+                                  </merror>
+                                  <mn>3</mn>
+                                </msup>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM123nest">
+                                <mrow>
+                                  <mover accent="true">
+                                    <mi>w</mi>
+                                    <mo stretchy="false">→</mo>
+                                  </mover>
+                                  <mo>⋅</mo>
+                                  <mrow>
+                                    <mo>⟨</mo>
+                                    <mn xml:id="XM119nest">1</mn>
+                                    <mo>,</mo>
+                                    <mn xml:id="XM120nest">1</mn>
+                                    <mo>,</mo>
+                                    <mn xml:id="XM121nest">1</mn>
+                                    <mo>⟩</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle S=\left\{\vec{w}\in\bbR^{3}:\vec{w}\cdot\left\langle 1,1,1\right%&#10;\rangle=0\right\}" text="S = conditional-set@(vec@(w) element-of [\bbR] ^ 3, vec@(w) cdot list@(1, 1, 1) = 0)" xml:id="Ex19.m1nest" fragid="Ex19.m1nest">
+                            <math alttext="\displaystyle S=\left\{\vec{w}\in\bbR^{3}:\vec{w}\cdot\left\langle 1,1,1\right%&#10;\rangle=0\right\}" display="inline">
+                              <mrow>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mo>{</mo>
+                                  <mrow xml:id="XM127nest">
+                                    <mover accent="true">
+                                      <mi>w</mi>
+                                      <mo stretchy="false">→</mo>
+                                    </mover>
+                                    <mo>∈</mo>
+                                    <msup>
+                                      <merror class="ltx_ERROR undefined undefined">
+                                        <mtext>\bbR</mtext>
+                                      </merror>
+                                      <mn>3</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mo>:</mo>
+                                  <mrow xml:id="XM128nest">
+                                    <mrow>
+                                      <mover accent="true">
+                                        <mi>w</mi>
+                                        <mo stretchy="false">→</mo>
+                                      </mover>
+                                      <mo>⋅</mo>
+                                      <mrow>
+                                        <mo>⟨</mo>
+                                        <mn xml:id="XM124nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM125nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM126nest">1</mn>
+                                        <mo>⟩</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                  <mo>}</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>in other words, <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p4.m2nest" fragid="Sx3.SS0.SSS0.Px4.p4.m2nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> is the set of vectors orthogonal to <Math mode="inline" tex="\left\langle 1,1,1\right\rangle" text="list@(1, 1, 1)" xml:id="Sx3.SS0.SSS0.Px4.p4.m3nest" fragid="Sx3.SS0.SSS0.Px4.p4.m3nest"><math alttext="\left\langle 1,1,1\right\rangle" display="inline"><mrow><mo>⟨</mo><mn xml:id="XM129nest">1</mn><mo>,</mo><mn xml:id="XM130nest">1</mn><mo>,</mo><mn xml:id="XM131nest">1</mn><mo>⟩</mo></mrow></math></Math>.</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p5nest" fragid="Sx3.SS0.SSS0.Px4.p5nest">
+                <p>Note that</p>
+                <enumerate xml:id="I5nest" fragid="I5nest">
+                  <item frefnum="1." refnum="1" xml:id="I5.i1nest" fragid="I5.i1nest">
+                    <tag>1.</tag>
+                    <para xml:id="I5.i1.p1nest" fragid="I5.i1.p1nest">
+                      <p>
+                        <Math mode="inline" tex="\vec{0}\in S" text="vec@(0) element-of S" xml:id="I5.i1.p1.m1nest" fragid="I5.i1.p1.m1nest">
+                          <math alttext="\vec{0}\in S" display="inline">
+                            <mrow>
+                              <mover accent="true">
+                                <mn>0</mn>
+                                <mo stretchy="false">→</mo>
+                              </mover>
+                              <mo>∈</mo>
+                              <mi>S</mi>
+                            </mrow>
+                          </math>
+                        </Math>
+                      </p>
+                    </para>
+                  </item>
+                  <item frefnum="2." refnum="2" xml:id="I5.i2nest" fragid="I5.i2nest">
+                    <tag>2.</tag>
+                    <para xml:id="I5.i2.p1nest" fragid="I5.i2.p1nest">
+                      <p>Let <Math mode="inline" tex="\vec{u}_{1},\vec{u}_{2}\in S" text="list@((vec@(u)) _ 1, (vec@(u)) _ 2) element-of S" xml:id="I5.i2.p1.m1nest" fragid="I5.i2.p1.m1nest"><math alttext="\vec{u}_{1},\vec{u}_{2}\in S" display="inline"><mrow><mrow><msub xml:id="XM132nest"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub xml:id="XM133nest"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>∈</mo><mi>S</mi></mrow></math></Math>. Then</p>
+                      <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx18nest" fragid="Sx3.EGx18nest">
+                        <equation xml:id="Ex20nest" fragid="Ex20nest">
+                          <MathFork>
+                            <Math tex="\displaystyle\left(\vec{u}_{1}+\vec{u}_{2}\right)\cdot\left\langle 1,1,1\right%&#10;\rangle=\vec{u}_{1}\cdot\left\langle 1,1,1\right\rangle+\vec{u}_{2}\cdot\left%&#10;\langle 1,1,1\right\rangle=0+0=0" text="((vec@(u)) _ 1 + (vec@(u)) _ 2) cdot list@(1, 1, 1) = (vec@(u)) _ 1 cdot list@(1, 1, 1) + (vec@(u)) _ 2 cdot list@(1, 1, 1) = 0 + 0 = 0" xml:id="Ex20.m2nest" fragid="Ex20.m2nest">
+                              <math alttext="\displaystyle\left(\vec{u}_{1}+\vec{u}_{2}\right)\cdot\left\langle 1,1,1\right%&#10;\rangle=\vec{u}_{1}\cdot\left\langle 1,1,1\right\rangle+\vec{u}_{2}\cdot\left%&#10;\langle 1,1,1\right\rangle=0+0=0" display="inline">
+                                <mrow>
+                                  <mrow>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow xml:id="XM134nest">
+                                        <msub>
+                                          <mover accent="true">
+                                            <mi>u</mi>
+                                            <mo stretchy="false">→</mo>
+                                          </mover>
+                                          <mn>1</mn>
+                                        </msub>
+                                        <mo>+</mo>
+                                        <msub>
+                                          <mover accent="true">
+                                            <mi>u</mi>
+                                            <mo stretchy="false">→</mo>
+                                          </mover>
+                                          <mn>2</mn>
+                                        </msub>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mo>⋅</mo>
+                                    <mrow>
+                                      <mo>⟨</mo>
+                                      <mn xml:id="XM135nest">1</mn>
+                                      <mo>,</mo>
+                                      <mn xml:id="XM136nest">1</mn>
+                                      <mo>,</mo>
+                                      <mn xml:id="XM137nest">1</mn>
+                                      <mo>⟩</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mrow>
+                                    <mrow>
+                                      <msub>
+                                        <mover accent="true">
+                                          <mi>u</mi>
+                                          <mo stretchy="false">→</mo>
+                                        </mover>
+                                        <mn>1</mn>
+                                      </msub>
+                                      <mo>⋅</mo>
+                                      <mrow>
+                                        <mo>⟨</mo>
+                                        <mn xml:id="XM138nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM139nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM140nest">1</mn>
+                                        <mo>⟩</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mo>+</mo>
+                                    <mrow>
+                                      <msub>
+                                        <mover accent="true">
+                                          <mi>u</mi>
+                                          <mo stretchy="false">→</mo>
+                                        </mover>
+                                        <mn>2</mn>
+                                      </msub>
+                                      <mo>⋅</mo>
+                                      <mrow>
+                                        <mo>⟨</mo>
+                                        <mn xml:id="XM141nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM142nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM143nest">1</mn>
+                                        <mo>⟩</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mrow>
+                                    <mn>0</mn>
+                                    <mo>+</mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mn>0</mn>
+                                </mrow>
+                              </math>
+                            </Math>
+                            <MathBranch>
+                              <td align="right">
+                                <Math mode="inline" tex="\displaystyle\left(\vec{u}_{1}+\vec{u}_{2}\right)\cdot\left\langle 1,1,1\right%&#10;\rangle=\vec{u}_{1}\cdot\left\langle 1,1,1\right\rangle+\vec{u}_{2}\cdot\left%&#10;\langle 1,1,1\right\rangle=0+0=0" text="((vec@(u)) _ 1 + (vec@(u)) _ 2) cdot list@(1, 1, 1) = (vec@(u)) _ 1 cdot list@(1, 1, 1) + (vec@(u)) _ 2 cdot list@(1, 1, 1) = 0 + 0 = 0" xml:id="Ex20.m1nest" fragid="Ex20.m1nest">
+                                  <math alttext="\displaystyle\left(\vec{u}_{1}+\vec{u}_{2}\right)\cdot\left\langle 1,1,1\right%&#10;\rangle=\vec{u}_{1}\cdot\left\langle 1,1,1\right\rangle+\vec{u}_{2}\cdot\left%&#10;\langle 1,1,1\right\rangle=0+0=0" display="inline">
+                                    <mrow>
+                                      <mrow>
+                                        <mrow>
+                                          <mo>(</mo>
+                                          <mrow xml:id="XM144nest">
+                                            <msub>
+                                              <mover accent="true">
+                                                <mi>u</mi>
+                                                <mo stretchy="false">→</mo>
+                                              </mover>
+                                              <mn>1</mn>
+                                            </msub>
+                                            <mo>+</mo>
+                                            <msub>
+                                              <mover accent="true">
+                                                <mi>u</mi>
+                                                <mo stretchy="false">→</mo>
+                                              </mover>
+                                              <mn>2</mn>
+                                            </msub>
+                                          </mrow>
+                                          <mo>)</mo>
+                                        </mrow>
+                                        <mo>⋅</mo>
+                                        <mrow>
+                                          <mo>⟨</mo>
+                                          <mn xml:id="XM145nest">1</mn>
+                                          <mo>,</mo>
+                                          <mn xml:id="XM146nest">1</mn>
+                                          <mo>,</mo>
+                                          <mn xml:id="XM147nest">1</mn>
+                                          <mo>⟩</mo>
+                                        </mrow>
+                                      </mrow>
+                                      <mo>=</mo>
+                                      <mrow>
+                                        <mrow>
+                                          <msub>
+                                            <mover accent="true">
+                                              <mi>u</mi>
+                                              <mo stretchy="false">→</mo>
+                                            </mover>
+                                            <mn>1</mn>
+                                          </msub>
+                                          <mo>⋅</mo>
+                                          <mrow>
+                                            <mo>⟨</mo>
+                                            <mn xml:id="XM148nest">1</mn>
+                                            <mo>,</mo>
+                                            <mn xml:id="XM149nest">1</mn>
+                                            <mo>,</mo>
+                                            <mn xml:id="XM150nest">1</mn>
+                                            <mo>⟩</mo>
+                                          </mrow>
+                                        </mrow>
+                                        <mo>+</mo>
+                                        <mrow>
+                                          <msub>
+                                            <mover accent="true">
+                                              <mi>u</mi>
+                                              <mo stretchy="false">→</mo>
+                                            </mover>
+                                            <mn>2</mn>
+                                          </msub>
+                                          <mo>⋅</mo>
+                                          <mrow>
+                                            <mo>⟨</mo>
+                                            <mn xml:id="XM151nest">1</mn>
+                                            <mo>,</mo>
+                                            <mn xml:id="XM152nest">1</mn>
+                                            <mo>,</mo>
+                                            <mn xml:id="XM153nest">1</mn>
+                                            <mo>⟩</mo>
+                                          </mrow>
+                                        </mrow>
+                                      </mrow>
+                                      <mo>=</mo>
+                                      <mrow>
+                                        <mn>0</mn>
+                                        <mo>+</mo>
+                                        <mn>0</mn>
+                                      </mrow>
+                                      <mo>=</mo>
+                                      <mn>0</mn>
+                                    </mrow>
+                                  </math>
+                                </Math>
+                              </td>
+                            </MathBranch>
+                          </MathFork>
+                        </equation>
+                      </equationgroup>
+                    </para>
+                  </item>
+                  <item frefnum="3." refnum="3" xml:id="I5.i3nest" fragid="I5.i3nest">
+                    <tag>3.</tag>
+                    <para xml:id="I5.i3.p1nest" fragid="I5.i3.p1nest">
+                      <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx19nest" fragid="Sx3.EGx19nest">
+                        <equation xml:id="Ex21nest" fragid="Ex21nest">
+                          <MathFork>
+                            <Math tex="\displaystyle\left(c\vec{u}_{1}\right)\cdot\left\langle 1,1,1\right\rangle=c%&#10;\left(\vec{u}\cdot\left\langle 1,1,1\right\rangle\right)=c(0)=0" text="(c * (vec@(u)) _ 1) cdot list@(1, 1, 1) = c * (vec@(u) cdot list@(1, 1, 1)) = c * 0 = 0" xml:id="Ex21.m3nest" fragid="Ex21.m3nest">
+                              <math alttext="\displaystyle\left(c\vec{u}_{1}\right)\cdot\left\langle 1,1,1\right\rangle=c%&#10;\left(\vec{u}\cdot\left\langle 1,1,1\right\rangle\right)=c(0)=0" display="inline">
+                                <mrow>
+                                  <mrow>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow xml:id="XM154nest">
+                                        <mi>c</mi>
+                                        <mo>⁢</mo>
+                                        <msub>
+                                          <mover accent="true">
+                                            <mi>u</mi>
+                                            <mo stretchy="false">→</mo>
+                                          </mover>
+                                          <mn>1</mn>
+                                        </msub>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mo>⋅</mo>
+                                    <mrow>
+                                      <mo>⟨</mo>
+                                      <mn xml:id="XM155nest">1</mn>
+                                      <mo>,</mo>
+                                      <mn xml:id="XM156nest">1</mn>
+                                      <mo>,</mo>
+                                      <mn xml:id="XM157nest">1</mn>
+                                      <mo>⟩</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mrow>
+                                    <mi>c</mi>
+                                    <mo>⁢</mo>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow xml:id="XM161nest">
+                                        <mover accent="true">
+                                          <mi>u</mi>
+                                          <mo stretchy="false">→</mo>
+                                        </mover>
+                                        <mo>⋅</mo>
+                                        <mrow>
+                                          <mo>⟨</mo>
+                                          <mn xml:id="XM158nest">1</mn>
+                                          <mo>,</mo>
+                                          <mn xml:id="XM159nest">1</mn>
+                                          <mo>,</mo>
+                                          <mn xml:id="XM160nest">1</mn>
+                                          <mo>⟩</mo>
+                                        </mrow>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mrow>
+                                    <mi>c</mi>
+                                    <mo>⁢</mo>
+                                    <mrow>
+                                      <mo stretchy="false">(</mo>
+                                      <mn xml:id="XM162nest">0</mn>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mn>0</mn>
+                                </mrow>
+                              </math>
+                            </Math>
+                            <MathBranch>
+                              <td align="right">
+                                <Math mode="inline" tex="\displaystyle\left(c\vec{u}_{1}\right)\cdot\left\langle 1,1,1\right\rangle" text="(c * (vec@(u)) _ 1) cdot list@(1, 1, 1)" xml:id="Ex21.m1nest" fragid="Ex21.m1nest">
+                                  <math alttext="\displaystyle\left(c\vec{u}_{1}\right)\cdot\left\langle 1,1,1\right\rangle" display="inline">
+                                    <mrow>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mrow xml:id="XM163nest">
+                                          <mi>c</mi>
+                                          <mo>⁢</mo>
+                                          <msub>
+                                            <mover accent="true">
+                                              <mi>u</mi>
+                                              <mo stretchy="false">→</mo>
+                                            </mover>
+                                            <mn>1</mn>
+                                          </msub>
+                                        </mrow>
+                                        <mo>)</mo>
+                                      </mrow>
+                                      <mo>⋅</mo>
+                                      <mrow>
+                                        <mo>⟨</mo>
+                                        <mn xml:id="XM164nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM165nest">1</mn>
+                                        <mo>,</mo>
+                                        <mn xml:id="XM166nest">1</mn>
+                                        <mo>⟩</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </math>
+                                </Math>
+                              </td>
+                              <td align="left">
+                                <Math mode="inline" tex="\displaystyle=c\left(\vec{u}\cdot\left\langle 1,1,1\right\rangle\right)=c(0)=0" text="absent = c * (vec@(u) cdot list@(1, 1, 1)) = c * 0 = 0" xml:id="Ex21.m2nest" fragid="Ex21.m2nest">
+                                  <math alttext="\displaystyle=c\left(\vec{u}\cdot\left\langle 1,1,1\right\rangle\right)=c(0)=0" display="inline">
+                                    <mrow>
+                                      <mi/>
+                                      <mo>=</mo>
+                                      <mrow>
+                                        <mi>c</mi>
+                                        <mo>⁢</mo>
+                                        <mrow>
+                                          <mo>(</mo>
+                                          <mrow xml:id="XM170nest">
+                                            <mover accent="true">
+                                              <mi>u</mi>
+                                              <mo stretchy="false">→</mo>
+                                            </mover>
+                                            <mo>⋅</mo>
+                                            <mrow>
+                                              <mo>⟨</mo>
+                                              <mn xml:id="XM167nest">1</mn>
+                                              <mo>,</mo>
+                                              <mn xml:id="XM168nest">1</mn>
+                                              <mo>,</mo>
+                                              <mn xml:id="XM169nest">1</mn>
+                                              <mo>⟩</mo>
+                                            </mrow>
+                                          </mrow>
+                                          <mo>)</mo>
+                                        </mrow>
+                                      </mrow>
+                                      <mo>=</mo>
+                                      <mrow>
+                                        <mi>c</mi>
+                                        <mo>⁢</mo>
+                                        <mrow>
+                                          <mo stretchy="false">(</mo>
+                                          <mn xml:id="XM171nest">0</mn>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                      </mrow>
+                                      <mo>=</mo>
+                                      <mn>0</mn>
+                                    </mrow>
+                                  </math>
+                                </Math>
+                              </td>
+                            </MathBranch>
+                          </MathFork>
+                        </equation>
+                      </equationgroup>
+                    </para>
+                  </item>
+                </enumerate>
+                <p>The vector <Math mode="inline" tex="\left\langle 1,1,1\right\rangle" text="list@(1, 1, 1)" xml:id="Sx3.SS0.SSS0.Px4.p5.m1nest" fragid="Sx3.SS0.SSS0.Px4.p5.m1nest"><math alttext="\left\langle 1,1,1\right\rangle" display="inline"><mrow><mo>⟨</mo><mn xml:id="XM172nest">1</mn><mo>,</mo><mn xml:id="XM173nest">1</mn><mo>,</mo><mn xml:id="XM174nest">1</mn><mo>⟩</mo></mrow></math></Math> was chosen arbitrarily, and in fact any vector would induce a vector space composed of vectors orthogonal to it. Without proof, we seem to be finding that the subspaces of <Math mode="inline" tex="\bbR^{3}" text="[\bbR] ^ 3" xml:id="Sx3.SS0.SSS0.Px4.p5.m2nest" fragid="Sx3.SS0.SSS0.Px4.p5.m2nest"><math alttext="\bbR^{3}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>3</mn></msup></math></Math> are the zero subspace, lines, planes, and the whole of <Math mode="inline" tex="\bbR^{3}" text="[\bbR] ^ 3" xml:id="Sx3.SS0.SSS0.Px4.p5.m3nest" fragid="Sx3.SS0.SSS0.Px4.p5.m3nest"><math alttext="\bbR^{3}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>3</mn></msup></math></Math> itself.</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p6nest" fragid="Sx3.SS0.SSS0.Px4.p6nest">
+                <p>Consider again the set of polynomials of degree <Math mode="inline" tex="3" text="3" xml:id="Sx3.SS0.SSS0.Px4.p6.m1nest" fragid="Sx3.SS0.SSS0.Px4.p6.m1nest"><math alttext="3" display="inline"><mn>3</mn></math></Math> or less:</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx20nest" fragid="Sx3.EGx20nest">
+                  <equation xml:id="Ex22nest" fragid="Ex22nest">
+                    <MathFork>
+                      <Math tex="\displaystyle\mathbb{P}_{3}(x)=\left\{a(x):\text{$a(x)$ has degree $\leq 3$}\right\}" text="P _ 3 * x = conditional-set@(a * x, [⁢a(x) has degree ≤3])" xml:id="Ex22.m2nest" fragid="Ex22.m2nest">
+                        <math alttext="\displaystyle\mathbb{P}_{3}(x)=\left\{a(x):\text{$a(x)$ has degree $\leq 3$}\right\}" display="inline">
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mi>ℙ</mi>
+                                <mn>3</mn>
+                              </msub>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <mi xml:id="XM176nest">x</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM178nest">
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mi xml:id="XM177nest">x</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM179nest">
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi>x</mi>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mtext xml:id="XM179hnest"> has degree </mtext>
+                                <mrow>
+                                  <mi/>
+                                  <mo>≤</mo>
+                                  <mn>3</mn>
+                                </mrow>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle\mathbb{P}_{3}(x)=\left\{a(x):\text{$a(x)$ has degree $\leq 3$}\right\}" text="P _ 3 * x = conditional-set@(a * x, [⁢a(x) has degree ≤3])" xml:id="Ex22.m1nest" fragid="Ex22.m1nest">
+                            <math alttext="\displaystyle\mathbb{P}_{3}(x)=\left\{a(x):\text{$a(x)$ has degree $\leq 3$}\right\}" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mi>ℙ</mi>
+                                    <mn>3</mn>
+                                  </msub>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi xml:id="XM182nest">x</mi>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mo>{</mo>
+                                  <mrow xml:id="XM184nest">
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <mrow>
+                                      <mo stretchy="false">(</mo>
+                                      <mi xml:id="XM183nest">x</mi>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>:</mo>
+                                  <mrow xml:id="XM185nest">
+                                    <mrow>
+                                      <mi>a</mi>
+                                      <mo>⁢</mo>
+                                      <mrow>
+                                        <mo stretchy="false">(</mo>
+                                        <mi>x</mi>
+                                        <mo stretchy="false">)</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mtext xml:id="XM185hnest"> has degree </mtext>
+                                    <mrow>
+                                      <mi/>
+                                      <mo>≤</mo>
+                                      <mn>3</mn>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>}</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>Consider the subset <Math mode="inline" tex="S\subseteq\mathbb{P}_{3}(x)" text="S subset-of-or-equals P _ 3 * x" xml:id="Sx3.SS0.SSS0.Px4.p6.m2nest" fragid="Sx3.SS0.SSS0.Px4.p6.m2nest"><math alttext="S\subseteq\mathbb{P}_{3}(x)" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mrow><msub><mi>ℙ</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi xml:id="XM187nest">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></Math>,</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx21nest" fragid="Sx3.EGx21nest">
+                  <equation xml:id="Ex23nest" fragid="Ex23nest">
+                    <MathFork>
+                      <Math tex="\displaystyle S=\left\{a(x):a(0)=0\right\}" text="S = conditional-set@(a * x, a * 0 = 0)" xml:id="Ex23.m2nest" fragid="Ex23.m2nest">
+                        <math alttext="\displaystyle S=\left\{a(x):a(0)=0\right\}" display="inline">
+                          <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mrow>
+                              <mo>{</mo>
+                              <mrow xml:id="XM190nest">
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mi xml:id="XM188nest">x</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                              <mo>:</mo>
+                              <mrow xml:id="XM191nest">
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mn xml:id="XM189nest">0</mn>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>=</mo>
+                                <mn>0</mn>
+                              </mrow>
+                              <mo>}</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle S=\left\{a(x):a(0)=0\right\}" text="S = conditional-set@(a * x, a * 0 = 0)" xml:id="Ex23.m1nest" fragid="Ex23.m1nest">
+                            <math alttext="\displaystyle S=\left\{a(x):a(0)=0\right\}" display="inline">
+                              <mrow>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mo>{</mo>
+                                  <mrow xml:id="XM194nest">
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <mrow>
+                                      <mo stretchy="false">(</mo>
+                                      <mi xml:id="XM192nest">x</mi>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>:</mo>
+                                  <mrow xml:id="XM195nest">
+                                    <mrow>
+                                      <mi>a</mi>
+                                      <mo>⁢</mo>
+                                      <mrow>
+                                        <mo stretchy="false">(</mo>
+                                        <mn xml:id="XM193nest">0</mn>
+                                        <mo stretchy="false">)</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                  <mo>}</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>This set contains elements such as <Math mode="inline" tex="x,-x^{3}-7x^{2}+\pi x,\sqrt{2}x^{2},0" text="list@(x, (- x ^ 3 - 7 * x ^ 2) + pi * x, square-root@(2) * x ^ 2, 0)" xml:id="Sx3.SS0.SSS0.Px4.p6.m3nest" fragid="Sx3.SS0.SSS0.Px4.p6.m3nest"><math alttext="x,-x^{3}-7x^{2}+\pi x,\sqrt{2}x^{2},0" display="inline"><mrow><mi xml:id="XM196nest">x</mi><mo>,</mo><mrow xml:id="XM197nest"><mrow><mrow><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><mn>7</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>,</mo><mrow xml:id="XM198nest"><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>,</mo><mn xml:id="XM199nest">0</mn></mrow></math></Math>.</p>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p7nest" fragid="Sx3.SS0.SSS0.Px4.p7nest">
+                <p>Is <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p7.m1nest" fragid="Sx3.SS0.SSS0.Px4.p7.m1nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> a subspace of <Math mode="inline" tex="\mathbb{P}_{3}(x)" text="P _ 3 * x" xml:id="Sx3.SS0.SSS0.Px4.p7.m2nest" fragid="Sx3.SS0.SSS0.Px4.p7.m2nest"><math alttext="\mathbb{P}_{3}(x)" display="inline"><mrow><msub><mi>ℙ</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi xml:id="XM200nest">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></Math>? Let <Math mode="inline" tex="a(x),b(x)\in S" text="list@(a * x, b * x) element-of S" xml:id="Sx3.SS0.SSS0.Px4.p7.m3nest" fragid="Sx3.SS0.SSS0.Px4.p7.m3nest"><math alttext="a(x),b(x)\in S" display="inline"><mrow><mrow><mrow xml:id="XM203nest"><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi xml:id="XM201nest">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow xml:id="XM204nest"><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi xml:id="XM202nest">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∈</mo><mi>S</mi></mrow></math></Math>. Then <Math mode="inline" tex="a(0)=b(0)=0" text="a * 0 = b * 0 = 0" xml:id="Sx3.SS0.SSS0.Px4.p7.m4nest" fragid="Sx3.SS0.SSS0.Px4.p7.m4nest"><math alttext="a(0)=b(0)=0" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn xml:id="XM205nest">0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn xml:id="XM206nest">0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></Math> and hence</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx22nest" fragid="Sx3.EGx22nest">
+                  <equation xml:id="Ex24nest" fragid="Ex24nest">
+                    <MathFork>
+                      <Math tex="\displaystyle a(x)+b(x)=c(x)" text="a * x + b * x = c * x" xml:id="Ex24.m3nest" fragid="Ex24.m3nest">
+                        <math alttext="\displaystyle a(x)+b(x)=c(x)" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mrow>
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mi xml:id="XM207nest">x</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>b</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mi xml:id="XM208nest">x</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <mi xml:id="XM209nest">x</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle a(x)+b(x)" text="a * x + b * x" xml:id="Ex24.m1nest" fragid="Ex24.m1nest">
+                            <math alttext="\displaystyle a(x)+b(x)" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi xml:id="XM210nest">x</mi>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>+</mo>
+                                <mrow>
+                                  <mi>b</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi xml:id="XM211nest">x</mi>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                        <td align="left">
+                          <Math mode="inline" tex="\displaystyle=c(x)" text="absent = c * x" xml:id="Ex24.m2nest" fragid="Ex24.m2nest">
+                            <math alttext="\displaystyle=c(x)" display="inline">
+                              <mrow>
+                                <mi/>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mi>c</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi xml:id="XM212nest">x</mi>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                  <equation xml:id="Ex25nest" fragid="Ex25nest">
+                    <MathFork>
+                      <Math tex="\displaystyle a(0)+b(0)=c(0)" text="a * 0 + b * 0 = c * 0" xml:id="Ex25.m3nest" fragid="Ex25.m3nest">
+                        <math alttext="\displaystyle a(0)+b(0)=c(0)" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mrow>
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mn xml:id="XM213nest">0</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>b</mi>
+                                <mo>⁢</mo>
+                                <mrow>
+                                  <mo stretchy="false">(</mo>
+                                  <mn xml:id="XM214nest">0</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mrow>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <mn xml:id="XM215nest">0</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle a(0)+b(0)" text="a * 0 + b * 0" xml:id="Ex25.m1nest" fragid="Ex25.m1nest">
+                            <math alttext="\displaystyle a(0)+b(0)" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <mi>a</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mn xml:id="XM216nest">0</mn>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>+</mo>
+                                <mrow>
+                                  <mi>b</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mn xml:id="XM217nest">0</mn>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                        <td align="left">
+                          <Math mode="inline" tex="\displaystyle=c(0)" text="absent = c * 0" xml:id="Ex25.m2nest" fragid="Ex25.m2nest">
+                            <math alttext="\displaystyle=c(0)" display="inline">
+                              <mrow>
+                                <mi/>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mi>c</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mn xml:id="XM218nest">0</mn>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                  <equation xml:id="Ex26nest" fragid="Ex26nest">
+                    <MathFork>
+                      <Math tex="\displaystyle 0+0=c(0)" text="0 + 0 = c * 0" xml:id="Ex26.m3nest" fragid="Ex26.m3nest">
+                        <math alttext="\displaystyle 0+0=c(0)" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mn>0</mn>
+                              <mo>+</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                              <mi>c</mi>
+                              <mo>⁢</mo>
+                              <mrow>
+                                <mo stretchy="false">(</mo>
+                                <mn xml:id="XM219nest">0</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle 0+0" text="0 + 0" xml:id="Ex26.m1nest" fragid="Ex26.m1nest">
+                            <math alttext="\displaystyle 0+0" display="inline">
+                              <mrow>
+                                <mn>0</mn>
+                                <mo>+</mo>
+                                <mn>0</mn>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                        <td align="left">
+                          <Math mode="inline" tex="\displaystyle=c(0)" text="absent = c * 0" xml:id="Ex26.m2nest" fragid="Ex26.m2nest">
+                            <math alttext="\displaystyle=c(0)" display="inline">
+                              <mrow>
+                                <mi/>
+                                <mo>=</mo>
+                                <mrow>
+                                  <mi>c</mi>
+                                  <mo>⁢</mo>
+                                  <mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mn xml:id="XM220nest">0</mn>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+              </para>
+              <para xml:id="Sx3.SS0.SSS0.Px4.p8nest" fragid="Sx3.SS0.SSS0.Px4.p8nest">
+                <p>Consider that we can identify a polynomial of degree <Math mode="inline" tex="3" text="3" xml:id="Sx3.SS0.SSS0.Px4.p8.m1nest" fragid="Sx3.SS0.SSS0.Px4.p8.m1nest"><math alttext="3" display="inline"><mn>3</mn></math></Math> or less with a vector of length <Math mode="inline" tex="4" text="4" xml:id="Sx3.SS0.SSS0.Px4.p8.m2nest" fragid="Sx3.SS0.SSS0.Px4.p8.m2nest"><math alttext="4" display="inline"><mn>4</mn></math></Math>.</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx23nest" fragid="Sx3.EGx23nest">
+                  <equation xml:id="Ex27nest" fragid="Ex27nest">
+                    <MathFork>
+                      <Math tex="\displaystyle ax^{3}+bx^{2}+cx+d\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;d\end{pmatrix}" text="a * x ^ 3 + b * x ^ 2 + c * x + d longleftrightarrow matrix[[a], [b], [c], [d]]" xml:id="Ex27.m2nest" fragid="Ex27.m2nest">
+                        <math alttext="\displaystyle ax^{3}+bx^{2}+cx+d\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;d\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mrow>
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <msup>
+                                  <mi>x</mi>
+                                  <mn>3</mn>
+                                </msup>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>b</mi>
+                                <mo>⁢</mo>
+                                <msup>
+                                  <mi>x</mi>
+                                  <mn>2</mn>
+                                </msup>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>c</mi>
+                                <mo>⁢</mo>
+                                <mi>x</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mi>d</mi>
+                            </mrow>
+                            <mo>⟷</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex27.m1.xm1.mfnest">
+                                <mtr xml:id="Ex27.m1.xm1.mfanest">
+                                  <mtd columnalign="center" xml:id="Ex27.m1.xm1.mfbnest">
+                                    <mi>a</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex27.m1.xm1.mfcnest">
+                                  <mtd columnalign="center" xml:id="Ex27.m1.xm1.mfdnest">
+                                    <mi>b</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex27.m1.xm1.mfenest">
+                                  <mtd columnalign="center" xml:id="Ex27.m1.xm1.mffnest">
+                                    <mi>c</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex27.m1.xm1.mfgnest">
+                                  <mtd columnalign="center" xml:id="Ex27.m1.xm1.mfhnest">
+                                    <mi>d</mi>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle ax^{3}+bx^{2}+cx+d\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;d\end{pmatrix}" text="a * x ^ 3 + b * x ^ 2 + c * x + d longleftrightarrow matrix[[a], [b], [c], [d]]" xml:id="Ex27.m1nest" fragid="Ex27.m1nest">
+                            <math alttext="\displaystyle ax^{3}+bx^{2}+cx+d\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;d\end{pmatrix}" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <mrow>
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>x</mi>
+                                      <mn>3</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>b</mi>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>x</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>c</mi>
+                                    <mo>⁢</mo>
+                                    <mi>x</mi>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mi>d</mi>
+                                </mrow>
+                                <mo>⟷</mo>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mtable xml:id="Ex27.m1.xm1nest">
+                                    <mtr xml:id="Ex27.m1.xm1anest">
+                                      <mtd columnalign="center" xml:id="Ex27.m1.xm1bnest">
+                                        <mi>a</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex27.m1.xm1cnest">
+                                      <mtd columnalign="center" xml:id="Ex27.m1.xm1dnest">
+                                        <mi>b</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex27.m1.xm1enest">
+                                      <mtd columnalign="center" xml:id="Ex27.m1.xm1fnest">
+                                        <mi>c</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex27.m1.xm1gnest">
+                                      <mtd columnalign="center" xml:id="Ex27.m1.xm1hnest">
+                                        <mi>d</mi>
+                                      </mtd>
+                                    </mtr>
+                                  </mtable>
+                                  <mo>)</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>The set <Math mode="inline" tex="S" text="S" xml:id="Sx3.SS0.SSS0.Px4.p8.m3nest" fragid="Sx3.SS0.SSS0.Px4.p8.m3nest"><math alttext="S" display="inline"><mi>S</mi></math></Math> can similarly be represented:</p>
+                <equationgroup class="ltx_eqn_align" xml:id="Sx3.EGx24nest" fragid="Sx3.EGx24nest">
+                  <equation xml:id="Ex28nest" fragid="Ex28nest">
+                    <MathFork>
+                      <Math tex="\displaystyle ax^{3}+bx^{2}+cx+0\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;0\end{pmatrix}" text="a * x ^ 3 + b * x ^ 2 + c * x + 0 longleftrightarrow matrix[[a], [b], [c], [0]]" xml:id="Ex28.m2nest" fragid="Ex28.m2nest">
+                        <math alttext="\displaystyle ax^{3}+bx^{2}+cx+0\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;0\end{pmatrix}" display="inline">
+                          <mrow>
+                            <mrow>
+                              <mrow>
+                                <mi>a</mi>
+                                <mo>⁢</mo>
+                                <msup>
+                                  <mi>x</mi>
+                                  <mn>3</mn>
+                                </msup>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>b</mi>
+                                <mo>⁢</mo>
+                                <msup>
+                                  <mi>x</mi>
+                                  <mn>2</mn>
+                                </msup>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>c</mi>
+                                <mo>⁢</mo>
+                                <mi>x</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mo>⟷</mo>
+                            <mrow>
+                              <mo>(</mo>
+                              <mtable xml:id="Ex28.m1.xm1.mfnest">
+                                <mtr xml:id="Ex28.m1.xm1.mfanest">
+                                  <mtd columnalign="center" xml:id="Ex28.m1.xm1.mfbnest">
+                                    <mi>a</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex28.m1.xm1.mfcnest">
+                                  <mtd columnalign="center" xml:id="Ex28.m1.xm1.mfdnest">
+                                    <mi>b</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex28.m1.xm1.mfenest">
+                                  <mtd columnalign="center" xml:id="Ex28.m1.xm1.mffnest">
+                                    <mi>c</mi>
+                                  </mtd>
+                                </mtr>
+                                <mtr xml:id="Ex28.m1.xm1.mfgnest">
+                                  <mtd columnalign="center" xml:id="Ex28.m1.xm1.mfhnest">
+                                    <mn>0</mn>
+                                  </mtd>
+                                </mtr>
+                              </mtable>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                        </math>
+                      </Math>
+                      <MathBranch>
+                        <td align="right">
+                          <Math mode="inline" tex="\displaystyle ax^{3}+bx^{2}+cx+0\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;0\end{pmatrix}" text="a * x ^ 3 + b * x ^ 2 + c * x + 0 longleftrightarrow matrix[[a], [b], [c], [0]]" xml:id="Ex28.m1nest" fragid="Ex28.m1nest">
+                            <math alttext="\displaystyle ax^{3}+bx^{2}+cx+0\longleftrightarrow\begin{pmatrix}a\\&#10;b\\&#10;c\\&#10;0\end{pmatrix}" display="inline">
+                              <mrow>
+                                <mrow>
+                                  <mrow>
+                                    <mi>a</mi>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>x</mi>
+                                      <mn>3</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>b</mi>
+                                    <mo>⁢</mo>
+                                    <msup>
+                                      <mi>x</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>c</mi>
+                                    <mo>⁢</mo>
+                                    <mi>x</mi>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mn>0</mn>
+                                </mrow>
+                                <mo>⟷</mo>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mtable xml:id="Ex28.m1.xm1nest">
+                                    <mtr xml:id="Ex28.m1.xm1anest">
+                                      <mtd columnalign="center" xml:id="Ex28.m1.xm1bnest">
+                                        <mi>a</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex28.m1.xm1cnest">
+                                      <mtd columnalign="center" xml:id="Ex28.m1.xm1dnest">
+                                        <mi>b</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex28.m1.xm1enest">
+                                      <mtd columnalign="center" xml:id="Ex28.m1.xm1fnest">
+                                        <mi>c</mi>
+                                      </mtd>
+                                    </mtr>
+                                    <mtr xml:id="Ex28.m1.xm1gnest">
+                                      <mtd columnalign="center" xml:id="Ex28.m1.xm1hnest">
+                                        <mn>0</mn>
+                                      </mtd>
+                                    </mtr>
+                                  </mtable>
+                                  <mo>)</mo>
+                                </mrow>
+                              </mrow>
+                            </math>
+                          </Math>
+                        </td>
+                      </MathBranch>
+                    </MathFork>
+                  </equation>
+                </equationgroup>
+                <p>The two spaces <Math mode="inline" tex="\mathbb{P}_{3}(x)" text="P _ 3 * x" xml:id="Sx3.SS0.SSS0.Px4.p8.m4nest" fragid="Sx3.SS0.SSS0.Px4.p8.m4nest"><math alttext="\mathbb{P}_{3}(x)" display="inline"><mrow><msub><mi>ℙ</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi xml:id="XM221nest">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></Math> and <Math mode="inline" tex="\bbR^{4}" text="[\bbR] ^ 4" xml:id="Sx3.SS0.SSS0.Px4.p8.m5nest" fragid="Sx3.SS0.SSS0.Px4.p8.m5nest"><math alttext="\bbR^{4}" display="inline"><msup><merror class="ltx_ERROR undefined undefined"><mtext>\bbR</mtext></merror><mn>4</mn></msup></math></Math> seem to behave very similarly. In fact, there is a term called isomorphism which denotes that their structures are indeed essentially identical. The point of studying this is that these two seemingly different spaces behave in the same way. It is thus beneficial to study a generic model rather only sticking to one space, so that the concepts learned about vector spaces can be more widely applied.</p>
+              </para>
+            </paragraph>
+          </paragraph>
+        </paragraph>
+      </mtext>
+    </mrow>
+  </mrow>
+</math>

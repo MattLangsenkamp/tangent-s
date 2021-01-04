@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="z=\begin{pmatrix}5\end{pmatrix}+1" display="block">
+  <mrow>
+    <mi>z</mi>
+    <mo>=</mo>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mtable rowspacing="0.2ex" columnspacing="0.4em">
+          <mtr>
+            <mtd columnalign="center">
+              <mn>5</mn>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </mrow>
+</math>

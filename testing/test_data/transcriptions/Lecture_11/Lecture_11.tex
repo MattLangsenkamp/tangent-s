@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vek}[1]{\vec{#1}}
+\newcommand{\note}{\textsc{Note:} }
+\newcommand{\rank}{\text{rank}}
+
+\title{Lecture 11}
+\author{A. Agarwal}
+\date{April 17, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Vector Spaces}
+
+The idea of a vector space is a generalization of the concepts we've studied so far to other sets of objects.
+
+
+\begin{minipage}{.95\textwidth}
+
+Let $V$ be a set of objects (vectors) with addition ($+$) defined. $V$ is a vector space if
+\begin{enumerate}
+\item{
+\textbf{$V$ is closed under addition.}
+
+If $\vek{u} \in V$ and $\vek{w} \in V$, then $\vek{u+w} \in V$. In other words, $V$ is closed under vector addition.
+}
+\item{
+\textbf{$V$ is closed under scalar multiplication.}
+
+If $c$ is a scalar in $\bbR$ or $\bbC$, and $\vek{u} \in V$, then $c \vek{u} \in V$.
+}
+\item{
+\textbf{Zero element.}
+
+There exists some `zero element' $\vek{z} \in V$ such that $\vek{u} + \vek{z} = \vek{u}$ for all $\vek{u} \in V$.
+}
+\item{
+\textbf{Additive inverses.}
+
+For every $\vek{u} \in V$, there exists some $\vek{m} \in V$ such that $\vek{u} + \vek{m} = \vek{m} + \vek{u} = \vek{z}$.
+}
+\end{enumerate}
+\end{minipage}
+
+These concepts and rules apply to a great number of spaces, such as the familiar real numbers $\bbR$ and vectors $\bbR^n$, but they also apply to sets such as polynomials, continuous functions, and matrices.
+\begin{table}[H]
+\begin{tabular}{p{2cm}||c|c|c|p{5cm}}
+Space & $+$ Closure & $\cdot$ Closure & Zero vector & Additive Inverses
+\\ \hline
+%$\bbR^n$ & \checkmark & \checkmark & $(0,0,\dots,0)$ & $(u_1, u_2, \dots, u_n)$ \newline $\vek{m} = (-u_1, -u_2, \dots, -u_n)$ \\[2ex]
+$\bbR^n$ & \checkmark & \checkmark & $(0,0,\dots,0)$ & $(u_1, u_2, \dots, u_n)$ \\
+  & & & & $\vek{m} = (-u_1, -u_2, \dots, -u_n)$ \\[2ex]
+
+%$\mathbb{P}_3(x)$ & \checkmark & \checkmark & $p(x) = 0$ & $p(x) = ax^3 + bx^2 + cx + d$ \newline $-p(x) = -ax^3 - bx^2 - cx - d$ \\[2ex]
+
+$\mathbb{P}_3(x)$ & \checkmark & \checkmark & $p(x) = 0$ & $p(x) = ax^3 + bx^2 + cx + d$ \\
+ & & & & $-p(x) = -ax^3 - bx^2 - cx - d$ \\[2ex]
+
+% Continuous functions \newline $C[0,1]$ & \checkmark & \checkmark & $f(x) = 0$ & $f(x) \rightarrow -f(x)$ \\[2ex]
+
+Continuous functions $C[0,1]$ & \checkmark & \checkmark & $f(x) = 0$ & $f(x) \rightarrow -f(x)$ \\[2ex]
+
+%Matrices \newline $M_b(\bbR)$ & \checkmark & \checkmark & $\begin{bmatrix}0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0\end{bmatrix}$ & $\mat{A}, -\mat{A}$
+
+Matrices  $M_b(\bbR)$ & \checkmark & \checkmark & $\begin{bmatrix}0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0\end{bmatrix}$ & $\mat{A}, -\mat{A}$
+
+\end{tabular}
+\end{table}
+
+Not everything is a vector space -- even small differences can matter. Consider the set
+\begin{align*}
+S = \left\{ a(x) | \text{$a(x)$ has degree $3$} \right\}
+\end{align*}
+Consider for the polynomials $3 x^3$ and $2x^3 - 7$. Both are of degree $3$ and their sum $5x^3 - 7$ is also of degree $3$. On the other hand, the polynomials $3 x^3$ and $-3x^3$ are also both of degree $3$, and their sum is the zero polynomial, which is of degree $0$. Thus the set is not a vector space.
+
+Consider next the matrix equation
+\begin{align*}
+\mat{A} \vek{x} &= \vek{0}
+\end{align*}
+Call the solution set $S$ by
+\begin{align*}
+S = \left\{ \vek{x}_0 \in \bbR^n : \mat{A} \vek{x}_0 = \vek{0} \right\}
+\end{align*}
+Does this space have the properties of a vector space? That is, do the solutions to the above matrix equation form a vector space? We will soon see that it does.
+
+Let $\vek{u}, \vek{v} \in S$ and take $c$ to be a scalar.
+\begin{enumerate}
+\item{
+Additive closure:
+
+Observe that
+\begin{align*}
+A ( \vek{u} + \vek{v} ) = A \vek{u} + A \vek{v} = \vek{0} + \vek{0} = \vek{0}
+\end{align*}
+Thus $\vek{u} + \vek{v} \in S$.
+}
+\item{
+Scalar multiplication:
+\begin{align*}
+A ( c \vek{u} ) = c A \vek{u} = c \vek{0} = \vek{0}
+\end{align*}
+Thus $\vek{c u} \in S$.
+}
+\item{
+Zero element:
+
+If $\vek{x}_0 = \vek{0}$, then $\mat{A} \vek{x}_0 = \vek{0}$ for any $\mat{A}$. $\vek{0} + \vek{u} = \vek{u}$, thus $S$ will always have a zero element.
+}
+\item{
+If $\mat{A} \vek{x}_0 = \vek{0}$, then $- \mat{A} \vek{x}_0 = - \vek{0} = \vek{0}$ and so $\mat{A} \left( - \vek{x}_0 \right) = \vek{0}$.
+}
+\end{enumerate}
+
+\section*{Operations and Properties of Vector Spaces}
+There are several additional important properties of vector spaces that are important to the structure of vector spaces.
+\begin{enumerate}
+\item{
+$V$ is closed under $+$: If $\vek{u} \in V$ and $\vek{w} \in V$, then $\vek{u+w} \in V$. In other words, $V$ is closed under vector addition.
+}
+\item{
+$V$ is closed under scalar multiplication: If $c$ is a scalar in $\bbR$ or $\bbC$, and $\vek{u} \in V$, then $c \vek{u} \in V$.
+}
+\item{
+Zero element: There exists some $\vek{z} \in V$ such that $\vek{u} + \vek{z} = \vek{u}$ for all $\vek{u} \in V$.
+}
+\item{
+Additive inverses: For every $\vek{u} \in V$, there exists some $\vek{m} \in V$ such that $\vek{u} + \vek{m} = \vek{m} + \vek{u} = \vek{z}$.
+}
+\item{
+Commutativity of addition: $\vek{u} + \vek{v} = \vek{v} + \vek{u}$ for all $\vek{u}, \vek{v} \in V$.
+}
+\item{
+Associativity: $\left( \vek{u} + \vek{v} \right) + \vek{w} = \vek{u} + \left( \vek{v} + \vek{w} \right)$
+}
+\item{
+For scalars $c,d \in \bbR$, then $c \left( d \vek{u} \right) = (cd) \vek{u}$
+}
+\item{
+Distributivity: $c \left( \vek{u} + \vek{w} \right) = c \vek{u} + c \vek{w}$
+}
+\item{
+Distributivity: $(c+d) \vek{u} = c \vek{u} + d \vek{u}$
+}
+\end{enumerate}
+
+\section*{Subspaces}
+Let $S \subseteq V$ such that
+\begin{enumerate}
+\item{
+$S$ is non-empty.
+}
+\item{
+$S$ is a vector space in its own right with the operations of $V$.
+}
+\end{enumerate}
+
+Given a properly selected subset of a vector space, many of the properties of the vector space will be carried over to the subspace. Many such properties carry over because they are results of the operations being the same between both sets.
+
+\vspace{1cm}
+
+Let us look at some examples of subspaces. Without naming a particular vector space, we can say some things already:
+\ques Is $\{ \vek{0} \} \subseteq V$ a subspace? Yes. % Looks better than '\left\{' and '\right\}'
+\ques Is $V$ a subspace? Yes.
+
+\vspace{1cm}
+
+Let us consider a more complicated example. Consider $\bbR^2$. Is the $x$-axis a vector space? Call this set $S$:
+\begin{align*}
+S = \left\{ \begin{pmatrix}x \\ 0\end{pmatrix} : x \in \bbR \right\}
+\end{align*}
+Then if $\vek{u}, \vek{v} \in S$,
+\begin{align*}
+\vek{u} = \begin{pmatrix}a \\ 0\end{pmatrix}
+&&
+\vek{v} = \begin{pmatrix}b \\ 0\end{pmatrix}
+\end{align*}
+Then
+\begin{align*}
+\vek{u} + \vek{v} = \begin{pmatrix}a+b \\ 0\end{pmatrix} \in S
+&&
+c \vek{u} = \begin{pmatrix}c a \\ 0\end{pmatrix} \in S
+\end{align*}
+So $S$ is a subspace of $\bbR^2$. Similarly, the $y$-axis is also a subspace by similar arguments.
+
+\vspace{1cm}
+
+Consider the following sets:
+\begin{align*}
+T &= \left\{ \begin{pmatrix}x \\ y\end{pmatrix} : y = -5 c \right\}
+&
+W &= \left\{ \begin{pmatrix}x \\ y\end{pmatrix} : y = x+1 \right\}
+\end{align*}
+are they vector spaces?
+
+The set $T$ is simply a line. It has slope $-5$ and passes through the origin.
+Let $\vek{u}, \vek{w} \in T$. Then for some $a,b \in \bbR$,
+\begin{align*}
+\vek{u} = \begin{pmatrix}a \\ -5a\end{pmatrix}
+&&
+\vek{w} = \begin{pmatrix}b \\ -5b\end{pmatrix}
+\end{align*}
+Then
+\begin{align*}
+\vek{u} + \vek{w} &= \begin{pmatrix}a+b \\ -5(a+b)\end{pmatrix} \in T
+\end{align*}
+Thus $T$ is closed under addition. Furthermore,
+\begin{align*}
+c \vek{u} = c \begin{pmatrix}a \\ -5a\end{pmatrix} = \begin{pmatrix}ac -5ac\end{pmatrix} \in T
+\end{align*}
+so $T$ is closed under scalar multiplication.
+
+\vspace{.5cm}
+
+Next consider $W$. It is also a line, but we can note immediately that it does not contain the zero vector. What if we append a zero element to $W$? That is, let $F = W \cup \left\{ \vek{0} \right\}$. We find that there are still problems -- consider for instance the two vectors
+\begin{align*}
+\vek{u} = \begin{bmatrix}1 \\ 2\end{bmatrix}
+&&
+\vek{w} = \begin{bmatrix}2 \\ 3\end{bmatrix}
+\end{align*}
+both are clearly members of $W$, but their sum is not:
+\begin{align*}
+\vek{u} + \vek{w} = \begin{bmatrix}3 \\ 5\end{bmatrix}
+\end{align*}
+Since $3+1 = 4 \neq 5$, thus $\vek{u} + \vek{w} \notin F$. Thus $W$ is not a vector space, and so it is not a subspace of $\bbR^2$.
+
+\ques What are all the subspaces of $\bbR^2$?
+
+Guess: $\bbR^2, \left\{ \vek{0} \right\},$ and any line passing through $\begin{pmatrix}0 \\ 0\end{pmatrix}$.
+
+\ques What about $\bbR^3, \bbR^4,$ and beyond?
+
+A good place to start is with linear objects. What kind of linear objects exist in $\bbR^3$? We know of lines and planes.
+
+Consider
+\begin{align*}
+S = \left\{ \begin{pmatrix}x \\ y \\ z\end{pmatrix} : x + y + z = 0 \right\}
+\end{align*}
+Is $S$ a subspace of $\bbR^3$. If we observe that $S$ is the set of solutions to a homogeneous system, then it must be, from our earlier observations.
+
+Next consider that the system can be rewritten in terms of a dot product:
+\begin{align*}
+x + y + z &= 0
+\\
+\left\langle x, y, z \right\rangle \cdot \left\langle 1, 1, 1 \right\rangle &= 0
+\end{align*}
+Thus $S$ is equivalently
+\begin{align*}
+S = \left\{ \vek{w} \in \bbR^3 : \vek{w} \cdot \left\langle 1,1,1 \right\rangle = 0 \right\}
+\end{align*}
+in other words, $S$ is the set of vectors orthogonal to $\left\langle 1,1,1 \right\rangle$.
+
+Note that
+\begin{enumerate}
+\item{
+$\vek{0} \in S$
+}
+\item{
+Let $\vek{u}_1, \vek{u}_2 \in S$. Then
+\begin{align*}
+\left( \vek{u}_1 + \vek{u}_2 \right) \cdot \left\langle 1,1,1 \right\rangle
+= \vek{u}_1 \cdot \left\langle 1,1,1 \right\rangle + \vek{u}_2 \cdot \left\langle 1,1,1 \right\rangle
+= 0 + 0
+= 0
+\end{align*}
+}
+\item{
+\begin{align*}
+\left( c \vek{u}_1 \right) \cdot \left\langle 1,1,1 \right\rangle &= c \left( \vek{u} \cdot \left\langle 1,1,1 \right\rangle \right) = c(0) = 0
+\end{align*}
+}
+\end{enumerate}
+The vector $\left\langle 1,1,1 \right\rangle$ was chosen arbitrarily, and in fact any vector would induce a vector space composed of vectors orthogonal to it. Without proof, we seem to be finding that the subspaces of $\bbR^3$ are the zero subspace, lines, planes, and the whole of $\bbR^3$ itself.
+
+\vspace{1cm}
+Consider again the set of polynomials of degree $3$ or less:
+\begin{align*}
+\mathbb{P}_3(x) = \left\{ a(x) : \text{$a(x)$ has degree $\le 3$} \right\}
+\end{align*}
+Consider the subset $S \subseteq \mathbb{P}_3(x)$,
+\begin{align*}
+S = \left\{ a(x) : a(0) = 0 \right\}
+\end{align*}
+This set contains elements such as $x, -x^3 - 7x^2 + \pi x, \sqrt{2} x^2, 0$.
+
+Is $S$ a subspace of $\mathbb{P}_3(x)$? Let $a(x), b(x) \in S$. Then $a(0) = b(0) = 0$ and hence
+\begin{align*}
+a(x) + b(x) &= c(x)
+\\
+a(0) + b(0) &= c(0)
+\\
+0 + 0 &= c(0)
+\end{align*}
+
+Consider that we can identify a polynomial of degree $3$ or less with a vector of length $4$.
+\begin{align*}
+a x^3 + b x^2 + cx + d
+\longleftrightarrow
+\begin{pmatrix}a \\ b \\ c \\ d\end{pmatrix}
+\end{align*}
+The set $S$ can similarly be represented:
+\begin{align*}
+a x^3 + b x^2 + c x + 0
+\longleftrightarrow
+\begin{pmatrix}a \\ b \\ c \\ 0\end{pmatrix}
+\end{align*}
+The two spaces $\mathbb{P}_3(x)$ and $\bbR^4$ seem to behave very similarly. In fact, there is a term called isomorphism which denotes that their structures are indeed essentially identical. The point of studying this is that these two seemingly different spaces behave in the same way. It is thus beneficial to study a generic model rather only sticking to one space, so that the concepts learned about vector spaces can be more widely applied.
+
+\end{document}

@@ -1,0 +1,410 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 1</title>
+<!--Generated on Sat Jun  3 19:47:12 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on December 7, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 1</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">December 7, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">System of Linear Equations</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">system of linear equations</span> is a set of equations, all of which are linear (powers of <math id="Sx1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Sx1.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are at most <math id="Sx1.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>).</p>
+<table id="Sx2.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\displaystyle\left\{\begin{aligned}\displaystyle 3x&amp;\displaystyle=1\\
+\displaystyle x+2y&amp;\displaystyle=3\end{aligned}\right." display="inline"><mrow><mo>{</mo><mtable><mtr><mtd columnalign="right"><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">There are two ways of interpreting such as system:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Geometric way</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algebraic way</span></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">As an example, consider what does <math id="Sx1.p3.m1" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> represent? Some may say a <span class="ltx_text ltx_font_bold">point</span>, others may say a <span class="ltx_text ltx_font_bold">line</span>.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">It is important to consider the <span class="ltx_text ltx_font_bold">ambient space</span> in which the equation(s) are to be considered.
+</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">Examples of the object <math id="Sx1.p5.m1" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> in the ambient spaces <math id="Sx1.p5.m2" class="ltx_Math" alttext="\mathds{R},\mathds{R}^{2}," display="inline"><mrow><mrow><mi id="XM11">ℝ</mi><mo>,</mo><msup id="XM12"><mi>ℝ</mi><mn>2</mn></msup></mrow><mo>,</mo></mrow></math> and <math id="Sx1.p5.m3" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>.</p>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">Consider again the system</p>
+<table id="Sx2.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.E1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.E1.m1" class="ltx_Math" alttext="\displaystyle\left\{\begin{aligned}\displaystyle 3x&amp;\displaystyle=1\\
+\displaystyle x+2y&amp;\displaystyle=3\end{aligned}\right." display="inline"><mrow><mo>{</mo><mtable><mtr><mtd columnalign="right"><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since there are two variables, we know that the system is in at least two dimensions (maybe more). For now, let us consider the system in two dimensions. What will be the solution?</p>
+</div>
+<div id="Sx1.p7" class="ltx_para">
+<p class="ltx_p">The equation <math id="Sx1.p7.m1" class="ltx_Math" alttext="3x=1" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow></math> represents a line, as does <math id="Sx1.p7.m2" class="ltx_Math" alttext="x+2y=3" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. Figure [x] shows these lines:</p>
+</div>
+<div id="Sx1.p8" class="ltx_para">
+<p class="ltx_p">Line <math id="Sx1.p8.m1" class="ltx_Math" alttext="3x=1" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow></math></p>
+</div>
+<div id="Sx1.p9" class="ltx_para">
+<p class="ltx_p">Line <math id="Sx1.p9.m1" class="ltx_Math" alttext="x+2y=3" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math></p>
+</div>
+<div id="Sx1.p10" class="ltx_para">
+<p class="ltx_p">Once we have this geometric picture of the system, a solution to the system will be a point common to both lines.</p>
+</div>
+<div id="Sx1.p11" class="ltx_para">
+<p class="ltx_p">This is a geometric picture of the system. We still need some sort of algebraic way of finding the exact solution. In this case, the first equation gives us that <math id="Sx1.p11.m1" class="ltx_Math" alttext="x=1/3" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mrow></math>, and the second equation gives us that</p>
+<table id="Sx2.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\displaystyle y=\frac{3-x}{2}=\frac{3-\frac{1}{3}}{2}=\frac{8}{6}=\frac{4}{3}" display="inline"><mrow><mi>y</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>-</mo><mi>x</mi></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>8</mn><mn>6</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p12" class="ltx_para">
+<p class="ltx_p">We now have the coordinates of the solution to the equations: <math id="Sx1.p12.m1" class="ltx_Math" alttext="(1/3,4/3)" display="inline"><mrow><mo stretchy="false">(</mo><mrow id="XM13"><mn>1</mn><mo>/</mo><mn>3</mn></mrow><mo>,</mo><mrow id="XM14"><mn>4</mn><mo>/</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></math>. Formally, we can now claim that we have found the solution <math id="Sx1.p12.m2" class="ltx_Math" alttext="(1/3,4/3)" display="inline"><mrow><mo stretchy="false">(</mo><mrow id="XM15"><mn>1</mn><mo>/</mo><mn>3</mn></mrow><mo>,</mo><mrow id="XM16"><mn>4</mn><mo>/</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></math> to the system (<a href="#Sx1.E1" title="(1) ‣ System of Linear Equations ‣ Lecture 1" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) considered in <math id="Sx1.p12.m3" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx1.p13" class="ltx_para">
+<p class="ltx_p">In the above example, there is only one solution. We may ask ourselves, given any system, will there always be one solution, can there be more than one solution, or may there not be any solution? It turns out that examining these possibilities through a geometric perspective holds the answer and will allow us to generalize the answer to this question.</p>
+</div>
+<div id="Sx1.p14" class="ltx_para">
+<p class="ltx_p">Two lines may either intersect at one point (Figure <span class="ltx_ref ltx_ref_self">LABEL:fig:lineintersections</span>a), yielding a <span class="ltx_text ltx_font_bold">unique solution</span>; never intersect (Figure <span class="ltx_ref ltx_ref_self">LABEL:fig:lineintersections</span>b), which results in <span class="ltx_text ltx_font_bold">no solutions</span> existing; or be on top of one another (Figure <span class="ltx_ref ltx_ref_self">LABEL:fig:lineintersections</span>c), which results in <span class="ltx_text ltx_font_bold">infinitely many solutions</span>.</p>
+</div>
+<div id="Sx1.p15" class="ltx_para">
+<p class="ltx_p">One unique solution.</p>
+</div>
+<div id="Sx1.p16" class="ltx_para">
+<p class="ltx_p">No solution.</p>
+</div>
+<div id="Sx1.p17" class="ltx_para">
+<p class="ltx_p">Infinitely many solutions.</p>
+</div>
+<div id="Sx1.p18" class="ltx_para">
+<p class="ltx_p">The ways in which two lines may or may not intersect.
+</p>
+</div>
+<div id="Sx1.p19" class="ltx_para">
+<p class="ltx_p">A natural question is whether it is possible for there to be finitely many solutions, and more than one solution? Geometrically, we can see that since two points define a line, two lines cannot intersect at more than one point without being the same line. The situation in <math id="Sx1.p19.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> seems to be then that we can have either one solution, no solutions, or infinitely many solutions.</p>
+</div>
+<div id="Sx1.p20" class="ltx_para">
+<p class="ltx_p">It is natural to ask whether we can generalize this to higher dimensions. Let us consider <math id="Sx1.p20.m1" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>.</p>
+</div>
+<div id="Sx1.p21" class="ltx_para">
+<table id="Sx2.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x-y+z&amp;\displaystyle=1\\
+\displaystyle 2x-3y+7z&amp;\displaystyle=2\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>+</mo><mi>z</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p22" class="ltx_para">
+<p class="ltx_p">In <math id="Sx1.p22.m1" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, these equations represent <span class="ltx_text ltx_font_bold">planes</span>. If we are given two planes, they may intersect, and if they do, they must intersect in a line, similar to how pages in a book intersect at the spine of the book. In this case, there are infinitely many solutions. Alternatively the planes may not intersect at all, in which case there are no solutions. The planes may also be on top of one another; that is, they are the same plane, in which case there are also infinitely many solutions.</p>
+</div>
+<figure id="Sx1.F1" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subgraphics"><img src="x1.png" id="Sx1.F1.g1" class="ltx_graphics ltx_centering" width="311" height="208" alt=""></td>
+<td class="ltx_subgraphics"><img src="x2.png" id="Sx1.F1.g2" class="ltx_graphics ltx_centering" width="311" height="208" alt=""></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Parallel and intersecting planes.</figcaption>
+</figure>
+<div id="Sx1.p23" class="ltx_para">
+<p class="ltx_p">Can it be that two planes may have a unique solution? It seems to be that the answer is no. But if we are given a third plane, we may have a unique solution. Consider for instance the corner of a room. Here the floor and two walls are meeting at a unique point.</p>
+</div>
+<div id="Sx1.p24" class="ltx_para">
+<table id="Sx2.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex4.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle 3x-y+z&amp;\displaystyle=7\\
+\displaystyle x-y+z&amp;\displaystyle=1\\
+\displaystyle 2x-3y+7z&amp;\displaystyle=2\end{aligned}\right\}\qquad\text{A %
+system consisting of three planes}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow><mo>+</mo><mi>z</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>+</mo><mi>z</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>}</mo><mo mathvariant="italic" separator="true">  </mo><mtext>A system consisting of three planes</mtext></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p25" class="ltx_para">
+<p class="ltx_p">This tells us that in <math id="Sx1.p25.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> or <math id="Sx1.p25.m2" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, there seem to be always either one solution, no solutions, or infinitely many solutions. In fact, we will find that it is always that case that:</p>
+</div>
+<div id="Sx1.p26" class="ltx_para">
+<p class="ltx_p">The number of solutions in <math id="Sx1.p26.m1" class="ltx_Math" alttext="\mathds{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> of a system of linear equations will be only one of</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">One solution
+
+</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Zero solutions</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Infinitely many solutions</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.p27" class="ltx_para">
+<p class="ltx_p">Right now we cannot conclude this. Later we will, but that proof comes from understanding these systems in more algebraic terms.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Solve system of linear equations</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Before we move on to solving systems of linear equations, it is important to note that the variables used in these equations are not the focus of the problem. Consider the following two systems:</p>
+<table id="Sx2.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x-2y&amp;\displaystyle=3\\
+\displaystyle 2x+3y&amp;\displaystyle=7\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex5.m3" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle a-2b&amp;\displaystyle=3\\
+\displaystyle 2a+3b&amp;\displaystyle=7\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>a</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>b</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The equations in the two systems are identical except for the variables, so in fact they represent the same system.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">The important part of these systems are the coefficients of the variables. What we will do is put the coefficients in a matrix:</p>
+<table id="Sx2.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-2&amp;3\\
+2&amp;3&amp;7\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM18"><mtr id="XM18a"><mtd columnalign="center" id="XM18b"><mn>1</mn></mtd><mtd columnalign="center" id="XM18c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM18d"><mn>3</mn></mtd></mtr><mtr id="XM18e"><mtd columnalign="center" id="XM18f"><mn>2</mn></mtd><mtd columnalign="center" id="XM18g"><mn>3</mn></mtd><mtd columnalign="center" id="XM18h"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In order to preserve the fact that the <math id="Sx2.p2.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> and <math id="Sx2.p2.m2" class="ltx_Math" alttext="7" display="inline"><mn>7</mn></math> are on the right-hand-side of the equations, we will put a vertical bar within the matrix:</p>
+<table id="Sx2.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex7.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-2&amp;3\\
+2&amp;3&amp;7\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM20"><mtr id="XM20a"><mtd columnalign="center" id="XM20b"><mn>1</mn></mtd><mtd columnalign="center" id="XM20c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM20d"><mn>3</mn></mtd></mtr><mtr id="XM20e"><mtd columnalign="center" id="XM20f"><mn>2</mn></mtd><mtd columnalign="center" id="XM20g"><mn>3</mn></mtd><mtd columnalign="center" id="XM20h"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is referred to as an <span class="ltx_text ltx_font_bold">augmented matrix</span>.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<table id="Sx2.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex8.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}A&amp;\vec{b}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM23"><mtr id="XM23a"><mtd columnalign="center" id="XM23b"><mi>A</mi></mtd><mtd columnalign="center" id="XM23c"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=\left[\begin{matrix}1&amp;-2&amp;3\\
+2&amp;3&amp;7\end{matrix}\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="XM24"><mtr id="XM24a"><mtd columnalign="center" id="XM24b"><mn>1</mn></mtd><mtd columnalign="center" id="XM24c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM24d"><mn>3</mn></mtd></mtr><mtr id="XM24e"><mtd columnalign="center" id="XM24f"><mn>2</mn></mtd><mtd columnalign="center" id="XM24g"><mn>3</mn></mtd><mtd columnalign="center" id="XM24h"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx2.p4" class="ltx_para">
+<p class="ltx_p">In general, we say the left part <math id="Sx2.p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of the augmented matrix is the <span class="ltx_text ltx_font_bold">coefficient matrix</span>, and the right part <math id="Sx2.p4.m2" class="ltx_Math" alttext="\vec{b}" display="inline"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></math> is the <span class="ltx_text ltx_font_bold">right-hand-side vector</span>, or the constant vector.</p>
+</div>
+<div id="Sx2.p5" class="ltx_para">
+<p class="ltx_p">Every system of linear equations can be translated into an augmented matrix, and every augmented matrix can be translated back into a system of linear equations.</p>
+</div>
+<div id="Sx2.p6" class="ltx_para">
+<p class="ltx_p">This notation saves time and we will be using it a lot.</p>
+</div>
+<section id="Sx2.SSx1" class="ltx_subsection ltx_centering">
+<h3 class="ltx_title ltx_title_subsection">Row Picture</h3>
+
+<div id="Sx2.SSx1.p1" class="ltx_para">
+<table id="Sx2.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex9.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x-2y&amp;\displaystyle=3\\
+\displaystyle 2x+3y&amp;\displaystyle=7\end{aligned}\right\}\begin{aligned}%
+\displaystyle\longleftarrow\\
+\displaystyle\longleftarrow\end{aligned}\quad\text{Rows}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>}</mo><mtable><mtr><mtd columnalign="right"><mo>⟵</mo></mtd></mtr><mtr><mtd columnalign="right"><mo>⟵</mo></mtd></mtr></mtable><mo mathvariant="italic" separator="true"> </mo><mtext>Rows</mtext></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Row Picture: Intersection of two lines
+
+</p>
+</div>
+</section>
+<section id="Sx2.SSx2" class="ltx_subsection ltx_centering">
+<h3 class="ltx_title ltx_title_subsection">Column Picture</h3>
+
+<div id="Sx2.SSx2.p1" class="ltx_para">
+<table id="Sx2.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex10.m1" class="ltx_Math" alttext="\displaystyle x\begin{bmatrix}1\\
+2\end{bmatrix}+y\begin{bmatrix}-2\\
+3\end{bmatrix}=x\begin{bmatrix}3\\
+7\end{bmatrix}" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex10.m1.xm1"><mtr id="Sx2.Ex10.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex10.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx2.Ex10.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex10.m1.xm1d"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex10.m1.xm2"><mtr id="Sx2.Ex10.m1.xm2a"><mtd columnalign="center" id="Sx2.Ex10.m1.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx2.Ex10.m1.xm2c"><mtd columnalign="center" id="Sx2.Ex10.m1.xm2d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex10.m1.xm3"><mtr id="Sx2.Ex10.m1.xm3a"><mtd columnalign="center" id="Sx2.Ex10.m1.xm3b"><mn>3</mn></mtd></mtr><mtr id="Sx2.Ex10.m1.xm3c"><mtd columnalign="center" id="Sx2.Ex10.m1.xm3d"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Column Picture: Can <math id="Sx2.SSx2.p1.m1" class="ltx_Math" alttext="\begin{bmatrix}3\\
+7\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx2.SSx2.p1.m1.xm1"><mtr id="Sx2.SSx2.p1.m1.xm1a"><mtd columnalign="center" id="Sx2.SSx2.p1.m1.xm1b"><mn>3</mn></mtd></mtr><mtr id="Sx2.SSx2.p1.m1.xm1c"><mtd columnalign="center" id="Sx2.SSx2.p1.m1.xm1d"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></math> be written as a linear combination of <math id="Sx2.SSx2.p1.m2" class="ltx_Math" alttext="\begin{bmatrix}1\\
+2\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx2.SSx2.p1.m2.xm1"><mtr id="Sx2.SSx2.p1.m2.xm1a"><mtd columnalign="center" id="Sx2.SSx2.p1.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx2.SSx2.p1.m2.xm1c"><mtd columnalign="center" id="Sx2.SSx2.p1.m2.xm1d"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></math> and <math id="Sx2.SSx2.p1.m3" class="ltx_Math" alttext="\begin{bmatrix}-2\\
+3\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx2.SSx2.p1.m3.xm1"><mtr id="Sx2.SSx2.p1.m3.xm1a"><mtd columnalign="center" id="Sx2.SSx2.p1.m3.xm1b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx2.SSx2.p1.m3.xm1c"><mtd columnalign="center" id="Sx2.SSx2.p1.m3.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>?</p>
+</div>
+</section>
+<div id="Sx2.p8" class="ltx_para">
+<p class="ltx_p">The advantages of the column picture may not be apparent now, but looking at things in the language in linear combinations will be very useful later.</p>
+</div>
+<div id="Sx2.p9" class="ltx_para">
+<p class="ltx_p">It is important to note that in the above case, the row and column picture are in the same number of dimensions. Consider instead</p>
+</div>
+<div id="Sx2.p10" class="ltx_para">
+<table id="Sx2.EGx12" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex11.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x-y+z&amp;\displaystyle=21\\
+\displaystyle 3x+y-3z&amp;\displaystyle=0\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>+</mo><mi>z</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>21</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>y</mi></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex11.m3" class="ltx_Math" alttext="\displaystyle\begin{aligned}\displaystyle x\begin{bmatrix}1\\
+3\end{bmatrix}+y\begin{bmatrix}-1\\
+1\end{bmatrix}+z\begin{bmatrix}1\\
+-3\end{bmatrix}&amp;\displaystyle=\begin{bmatrix}21\\
+0\end{bmatrix}\end{aligned}" display="inline"><mtable><mtr><mtd columnalign="right"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex11.m3.xm1"><mtr id="Sx2.Ex11.m3.xm1a"><mtd columnalign="center" id="Sx2.Ex11.m3.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx2.Ex11.m3.xm1c"><mtd columnalign="center" id="Sx2.Ex11.m3.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex11.m3.xm2"><mtr id="Sx2.Ex11.m3.xm2a"><mtd columnalign="center" id="Sx2.Ex11.m3.xm2b"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr id="Sx2.Ex11.m3.xm2c"><mtd columnalign="center" id="Sx2.Ex11.m3.xm2d"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx2.Ex11.m3.xm3"><mtr id="Sx2.Ex11.m3.xm3a"><mtd columnalign="center" id="Sx2.Ex11.m3.xm3b"><mn>1</mn></mtd></mtr><mtr id="Sx2.Ex11.m3.xm3c"><mtd columnalign="center" id="Sx2.Ex11.m3.xm3d"><mrow><mo>-</mo><mn>3</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx2.Ex11.m3.xm4"><mtr id="Sx2.Ex11.m3.xm4a"><mtd columnalign="center" id="Sx2.Ex11.m3.xm4b"><mn>21</mn></mtd></mtr><mtr id="Sx2.Ex11.m3.xm4c"><mtd columnalign="center" id="Sx2.Ex11.m3.xm4d"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mtd></mtr></mtable></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx2.p11" class="ltx_para">
+<p class="ltx_p">Here the row picture is the intersection of two planes in <math id="Sx2.p11.m1" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>. The column picture is a linear combination of vectors in <math id="Sx2.p11.m2" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx2.p12" class="ltx_para">
+<p class="ltx_p">These perspectives will be useful, and in particular pay attention to the idea of linear combinations.</p>
+</div>
+<section id="Sx2.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Solving a system</h3>
+
+<div id="Sx2.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Consider the system in <math id="Sx2.SSx3.p1.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>,
+</p>
+<table id="Sx2.EGx13" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex12.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x&amp;\displaystyle=1\\
+\displaystyle y&amp;\displaystyle=3\end{aligned}\right\}\qquad\longrightarrow%
+\qquad\left.\begin{matrix}x&amp;+&amp;0y&amp;=1\\
+0x&amp;+&amp;y&amp;=3\end{matrix}\right\}" display="inline"><mrow><mrow><mtable><mtr><mtd columnalign="right"><mi>x</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mi>y</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mo>⟶</mo><mo mathvariant="italic" separator="true">  </mo><mtable><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mo>+</mo></mtd><mtd columnalign="center"><mrow><mn>0</mn><mo>⁢</mo><mi>y</mi></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>0</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mo>+</mo></mtd><mtd columnalign="center"><mi>y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We can easily convert the system to and from an augmented matrix:</p>
+<table id="Sx2.EGx14" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex13.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;0&amp;1\\
+0&amp;1&amp;3\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM26"><mtr id="XM26a"><mtd columnalign="center" id="XM26b"><mn>1</mn></mtd><mtd columnalign="center" id="XM26c"><mn>0</mn></mtd><mtd columnalign="center" id="XM26d"><mn>1</mn></mtd></mtr><mtr id="XM26e"><mtd columnalign="center" id="XM26f"><mn>0</mn></mtd><mtd columnalign="center" id="XM26g"><mn>1</mn></mtd><mtd columnalign="center" id="XM26h"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is in a sense our ‘Dream augmented matrix’, in that from it we can directly determine the solution to the system. The technical term for this sort of matrix is a <span class="ltx_text ltx_font_bold">row-reduced echelon form matrix</span>.</p>
+</div>
+<div id="Sx2.SSx3.p2" class="ltx_para">
+<p class="ltx_p">In some sense then, the row-reduced echelon form matrix is our goal when solving systems of linear equations. The question is, how will we go from a general matrix to a row-reduced echelon form matrix? To do so, we will learn <span class="ltx_text ltx_font_bold">row operations</span></p>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Jun  3 19:47:12 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

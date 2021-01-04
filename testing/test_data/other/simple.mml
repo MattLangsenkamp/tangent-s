@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xml:id="Document">
+  <para xml:id="p1" fragid="p1">
+    <p>
+        <math alttext="2x^{3}+3" display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <semantics>
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢</mo>
+                  <msup>
+                    <mi>x</mi>
+                    <mn>3</mn>
+                  </msup>
+                </mrow>
+                <mo>+</mo>
+                <mrow>
+                  <mn>3</mn>
+                </mrow>
+              </mrow>
+            </mrow>
+            <annotation encoding="application/x-tex">2x^{3}+3</annotation>
+          </semantics>
+        </math>
+    </p>
+  </para>
+</document>

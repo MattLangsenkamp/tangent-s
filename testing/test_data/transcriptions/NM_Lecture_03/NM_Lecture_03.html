@@ -1,0 +1,691 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 3</title>
+<!--Generated on Sun Jun  4 02:49:23 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on December 7, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 3</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">December 7, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Recall</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Row-echelon form</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Reduced row echelon form (rref)</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Row operations</p>
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Multiply a row by a scalar: <math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="{\color{black}\boxed@math{{\color{black}cR_{i}}}}" display="inline"><menclose notation="box"><mrow><mi mathcolor="#000000">c</mi><mo>⁢</mo><msub><mi mathcolor="#000000">R</mi><mi mathcolor="#000000">i</mi></msub></mrow></menclose></math></p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Swap rows: <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="{\color{black}\boxed@math{{\color{black}R_{i}\circlearrowright R_{j}}}}" display="inline"><menclose notation="box"><mrow><msub><mi mathcolor="#000000">R</mi><mi mathcolor="#000000">i</mi></msub><mo mathcolor="#000000">↻</mo><msub><mi mathcolor="#000000">R</mi><mi mathcolor="#000000">j</mi></msub></mrow></menclose></math></p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Add a multiple of one row to another: <math id="I1.I1.i3.p1.m1" class="ltx_Math" alttext="{\color{black}\boxed@math{{\color{black}R_{i}+cR_{j}}}}" display="inline"><menclose notation="box"><mrow><msub><mi mathcolor="#000000">R</mi><mi mathcolor="#000000">i</mi></msub><mo mathcolor="#000000">+</mo><mrow><mi mathcolor="#000000">c</mi><mo>⁢</mo><msub><mi mathcolor="#000000">R</mi><mi mathcolor="#000000">j</mi></msub></mrow></mrow></menclose></math>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">It is important to note that a matrix can have many row-echelon forms – row echelon form is not unique. It is only the <em class="ltx_emph">reduced</em> row echelon form that is unique.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">Let us take a look at an example. Consider the system</p>
+<table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\
+\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mn>7</mn></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">First, we represent this system as an augmented matrix. Our goal then is to perform row operations to achieve one of two forms</p>
+<table id="Sx1.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\
+5&amp;-4&amp;-7\end{matrix}\right]\longrightarrow\underbrace{\left[\begin{matrix}1&amp;0&amp;*%
+\\
+0&amp;1&amp;*\end{matrix}\right]\text{ or }\left[\begin{matrix}1&amp;0&amp;*\\
+0&amp;0&amp;1\end{matrix}\right]}_{\text{rref.}}" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM15"><mtr id="XM15a"><mtd columnalign="center" id="XM15b"><mn>1</mn></mtd><mtd columnalign="center" id="XM15c"><mn>3</mn></mtd><mtd columnalign="center" id="XM15d"><mn>4</mn></mtd></mtr><mtr id="XM15e"><mtd columnalign="center" id="XM15f"><mn>5</mn></mtd><mtd columnalign="center" id="XM15g"><mrow><mo>-</mo><mn>4</mn></mrow></mtd><mtd columnalign="center" id="XM15h"><mrow><mo>-</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⟶</mo><munder><munder accentunder="true"><mrow><mrow><mo movablelimits="false">[</mo><mtable id="XM13"><mtr id="XM13a"><mtd columnalign="center" id="XM13b"><mn>1</mn></mtd><mtd columnalign="center" id="XM13c"><mn>0</mn></mtd><mtd columnalign="center" id="XM13d"><mo movablelimits="false">*</mo></mtd></mtr><mtr id="XM13e"><mtd columnalign="center" id="XM13f"><mn>0</mn></mtd><mtd columnalign="center" id="XM13g"><mn>1</mn></mtd><mtd columnalign="center" id="XM13h"><mo movablelimits="false">*</mo></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⁢</mo><mtext> or </mtext><mo movablelimits="false">⁢</mo><mrow><mo movablelimits="false">[</mo><mtable id="XM14"><mtr id="XM14a"><mtd columnalign="center" id="XM14b"><mn>1</mn></mtd><mtd columnalign="center" id="XM14c"><mn>0</mn></mtd><mtd columnalign="center" id="XM14d"><mo movablelimits="false">*</mo></mtd></mtr><mtr id="XM14e"><mtd columnalign="center" id="XM14f"><mn>0</mn></mtd><mtd columnalign="center" id="XM14g"><mn>0</mn></mtd><mtd columnalign="center" id="XM14h"><mn>1</mn></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow></mrow><mo movablelimits="false">⏟</mo></munder><mtext>rref.</mtext></munder></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">After we achieve one of these forms, we can determine much of the information that we want to know about the system.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<table id="Sx1.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\
+5&amp;-4&amp;-7\end{matrix}\right]\ \xrightarrow[]{-5R_{1}+R_{2}}\ \left[\begin{matrix%
+}1&amp;3&amp;4\\
+0&amp;-19&amp;-27\end{matrix}\right]\ \xrightarrow[]{-\frac{1}{19}R_{2}}\ \left[\begin%
+{matrix}1&amp;3&amp;4\\
+0&amp;1&amp;\frac{27}{19}\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM19"><mtr id="XM19a"><mtd columnalign="center" id="XM19b"><mn>1</mn></mtd><mtd columnalign="center" id="XM19c"><mn>3</mn></mtd><mtd columnalign="center" id="XM19d"><mn>4</mn></mtd></mtr><mtr id="XM19e"><mtd columnalign="center" id="XM19f"><mn>5</mn></mtd><mtd columnalign="center" id="XM19g"><mrow><mo>-</mo><mn>4</mn></mrow></mtd><mtd columnalign="center" id="XM19h"><mrow><mo>-</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo rspace="7.5pt">]</mo></mrow><mpadded width="+5pt"><mover accent="true"><mo>→</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>R</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mover></mpadded><mrow><mo>[</mo><mtable id="XM20"><mtr id="XM20a"><mtd columnalign="center" id="XM20b"><mn>1</mn></mtd><mtd columnalign="center" id="XM20c"><mn>3</mn></mtd><mtd columnalign="center" id="XM20d"><mn>4</mn></mtd></mtr><mtr id="XM20e"><mtd columnalign="center" id="XM20f"><mn>0</mn></mtd><mtd columnalign="center" id="XM20g"><mrow><mo>-</mo><mn>19</mn></mrow></mtd><mtd columnalign="center" id="XM20h"><mrow><mo>-</mo><mn>27</mn></mrow></mtd></mtr></mtable><mo rspace="7.5pt">]</mo></mrow><mpadded width="+5pt"><mover accent="true"><mo>→</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true" scriptlevel="-1"><mfrac><mn>1</mn><mn>19</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mrow></mover></mpadded><mrow><mo>[</mo><mtable id="XM21"><mtr id="XM21a"><mtd columnalign="center" id="XM21b"><mn>1</mn></mtd><mtd columnalign="center" id="XM21c"><mn>3</mn></mtd><mtd columnalign="center" id="XM21d"><mn>4</mn></mtd></mtr><mtr id="XM21e"><mtd columnalign="center" id="XM21f"><mn>0</mn></mtd><mtd columnalign="center" id="XM21g"><mn>1</mn></mtd><mtd columnalign="center" id="XM21h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">Both of these matrices are in echelon form. If we want to find the reduced row echelon form of the matrix, then we still need to eliminate non-zero entries in the columns above leading non-zero entries:</p>
+<table id="Sx1.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex4.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\
+0&amp;1&amp;\frac{27}{19}\end{matrix}\right]\ \xrightarrow[]{-3R_{2}+R_{1}}\ %
+\underbrace{\left[\begin{matrix}1&amp;0&amp;\frac{-5}{19}\\
+0&amp;1&amp;\frac{27}{19}\end{matrix}\right]}_{\text{rref.}}" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM25"><mtr id="XM25a"><mtd columnalign="center" id="XM25b"><mn>1</mn></mtd><mtd columnalign="center" id="XM25c"><mn>3</mn></mtd><mtd columnalign="center" id="XM25d"><mn>4</mn></mtd></mtr><mtr id="XM25e"><mtd columnalign="center" id="XM25f"><mn>0</mn></mtd><mtd columnalign="center" id="XM25g"><mn>1</mn></mtd><mtd columnalign="center" id="XM25h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo rspace="7.5pt">]</mo></mrow><mpadded width="+5pt"><mover accent="true"><mo>→</mo><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><msub><mi>R</mi><mn>1</mn></msub></mrow></mover></mpadded><munder><munder accentunder="true"><mrow><mo movablelimits="false">[</mo><mtable id="XM24"><mtr id="XM24a"><mtd columnalign="center" id="XM24b"><mn>1</mn></mtd><mtd columnalign="center" id="XM24c"><mn>0</mn></mtd><mtd columnalign="center" id="XM24d"><mfrac><mrow><mo movablelimits="false">-</mo><mn>5</mn></mrow><mn>19</mn></mfrac></mtd></mtr><mtr id="XM24e"><mtd columnalign="center" id="XM24f"><mn>0</mn></mtd><mtd columnalign="center" id="XM24g"><mn>1</mn></mtd><mtd columnalign="center" id="XM24h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏟</mo></munder><mtext>rref.</mtext></munder></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We have now obtained the reduced row echelon form of the augmented matrix. Our goal was to solve the original system. We can see how the reduced row echelon form helps us find the solution by converting it back into a system:</p>
+<table id="Sx1.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex5.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;0&amp;\frac{-5}{19}\\
+0&amp;1&amp;\frac{27}{19}\end{matrix}\right]\longrightarrow\left\{\begin{aligned}%
+\displaystyle x&amp;&amp;&amp;\displaystyle=\frac{-5}{19}\\
+&amp;&amp;\displaystyle y&amp;\displaystyle=\frac{27}{19}\end{aligned}\right." display="inline"><mrow><mrow><mo>[</mo><mtable id="XM27"><mtr id="XM27a"><mtd columnalign="center" id="XM27b"><mn>1</mn></mtd><mtd columnalign="center" id="XM27c"><mn>0</mn></mtd><mtd columnalign="center" id="XM27d"><mfrac><mrow><mo>-</mo><mn>5</mn></mrow><mn>19</mn></mfrac></mtd></mtr><mtr id="XM27e"><mtd columnalign="center" id="XM27f"><mn>0</mn></mtd><mtd columnalign="center" id="XM27g"><mn>1</mn></mtd><mtd columnalign="center" id="XM27h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow><mo>⟶</mo><mrow><mo>{</mo><mtable><mtr><mtd columnalign="right"><mi>x</mi></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mo>-</mo><mn>5</mn></mrow><mn>19</mn></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd columnalign="right"><mi>y</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>27</mn><mn>19</mn></mfrac></mstyle></mrow></mtd></mtr></mtable></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We see that the solution to the system comes very easily from the reduced row echelon form.
+</p>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">The leading non-zero entries in the echelon and reduced row echelon form matrices were very important in this process. We can now introduce some new terminology.</p>
+</div>
+<div id="Sx1.p7" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">pivot entry</span> is the leading non-zero entry in a matrix in echelon form. Non-pivot entries are simply those entries that are not pivot entries.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">pivot column</span> or basic column is the column containing a pivot entry.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">free column</span> is a column that does not contain pivot entries.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx1.p8" class="ltx_para">
+<p class="ltx_p">Looking back at the previous example,</p>
+<table id="Sx1.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex6.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}{\color{red}\boxed@math{{\color{black}1}}}&amp;3&amp;%
+4\\
+0&{\color{red}\boxed@math{{\color{black}1}}}&amp;\frac{27}{19}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM29"><mtr id="XM29a"><mtd columnalign="center" id="XM29b"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM29c"><mn>3</mn></mtd><mtd columnalign="center" id="XM29d"><mn>4</mn></mtd></mtr><mtr id="XM29e"><mtd columnalign="center" id="XM29f"><mn>0</mn></mtd><mtd columnalign="center" id="XM29g"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM29h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We find the matrix has two pivot entries (red), and so this matrix has two pivot columns and one free column.</p>
+</div>
+<div id="Sx1.p9" class="ltx_para">
+<p class="ltx_p">These ideas have meaning in the sense of variables as well.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">pivot variable</span> is a variable of the system corresponding to a pivot column.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">free variable</span> is a a variable corresponding to a free column.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">One obvious but important fact is that the sum of the pivot and non-pivot variables equals the total number of variables in the system.</p>
+</div>
+<div id="Sx1.p10" class="ltx_para">
+<p class="ltx_p">If we consider the previous example, we find there are two pivot variables and no free variables:</p>
+</div>
+<div id="Sx1.p11" class="ltx_para">
+<table id="Sx1.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex7.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;0&amp;\frac{-5}{19}\\
+0&amp;1&amp;\frac{27}{19}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM31"><mtr id="XM31a"><mtd columnalign="center" id="XM31b"><mn>1</mn></mtd><mtd columnalign="center" id="XM31c"><mn>0</mn></mtd><mtd columnalign="center" id="XM31d"><mfrac><mrow><mo>-</mo><mn>5</mn></mrow><mn>19</mn></mfrac></mtd></mtr><mtr id="XM31e"><mtd columnalign="center" id="XM31f"><mn>0</mn></mtd><mtd columnalign="center" id="XM31g"><mn>1</mn></mtd><mtd columnalign="center" id="XM31h"><mfrac><mn>27</mn><mn>19</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p12" class="ltx_para">
+<p class="ltx_p">With this terminology in mind, let us address the question of whether we can predict the number of solutions a system will have.</p>
+</div>
+<div id="Sx1.p13" class="ltx_para">
+<p class="ltx_p">Suppose we have some system that we reduce to this form.
+</p>
+<table id="Sx1.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex8.m1" class="ltx_Math" alttext="\displaystyle\text{System}\longrightarrow\left[\begin{matrix}1&amp;0&amp;0&amp;2\\
+0&amp;0&amp;0&amp;3\\
+0&amp;0&amp;1&amp;1\end{matrix}\right]" display="inline"><mrow><mtext>System</mtext><mo>⟶</mo><mrow><mo>[</mo><mtable id="XM33"><mtr id="XM33a"><mtd columnalign="center" id="XM33b"><mn>1</mn></mtd><mtd columnalign="center" id="XM33c"><mn>0</mn></mtd><mtd columnalign="center" id="XM33d"><mn>0</mn></mtd><mtd columnalign="center" id="XM33e"><mn>2</mn></mtd></mtr><mtr id="XM33f"><mtd columnalign="center" id="XM33g"><mn>0</mn></mtd><mtd columnalign="center" id="XM33h"><mn>0</mn></mtd><mtd columnalign="center" id="XM33i"><mn>0</mn></mtd><mtd columnalign="center" id="XM33j"><mn>3</mn></mtd></mtr><mtr id="XM33k"><mtd columnalign="center" id="XM33l"><mn>0</mn></mtd><mtd columnalign="center" id="XM33m"><mn>0</mn></mtd><mtd columnalign="center" id="XM33n"><mn>1</mn></mtd><mtd columnalign="center" id="XM33o"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Examining this matrix, we find it has three pivot entries:</p>
+<table id="Sx1.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex9.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}{\color{red}\boxed@math{{\color{black}1}}}&amp;0&amp;%
+0&amp;2\\
+0&amp;0&amp;0&{\color{red}\boxed@math{{\color{black}3}}}\\
+0&amp;0&{\color{red}\boxed@math{{\color{black}1}}}&amp;1\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM35"><mtr id="XM35a"><mtd columnalign="center" id="XM35b"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM35c"><mn>0</mn></mtd><mtd columnalign="center" id="XM35d"><mn>0</mn></mtd><mtd columnalign="center" id="XM35e"><mn>2</mn></mtd></mtr><mtr id="XM35f"><mtd columnalign="center" id="XM35g"><mn>0</mn></mtd><mtd columnalign="center" id="XM35h"><mn>0</mn></mtd><mtd columnalign="center" id="XM35i"><mn>0</mn></mtd><mtd columnalign="center" id="XM35j"><menclose notation="box"><mn mathcolor="#000000">3</mn></menclose></mtd></mtr><mtr id="XM35k"><mtd columnalign="center" id="XM35l"><mn>0</mn></mtd><mtd columnalign="center" id="XM35m"><mn>0</mn></mtd><mtd columnalign="center" id="XM35n"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM35o"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This then tells us that</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">There are two pivot entries, which are both <math id="I4.i1.p1.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">There are two pivot columns: the first and third.</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">There are two free columns: the second and fourth.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">To address which variables are free and which are pivots, we need to associate a variable with each column. Suppose the variables of the first, second, and third columns are, respectively, <math id="Sx1.p13.m1" class="ltx_Math" alttext="x,y,z" display="inline"><mrow><mi id="XM36">x</mi><mo>,</mo><mi id="XM37">y</mi><mo>,</mo><mi id="XM38">z</mi></mrow></math>.</p>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">There are two pivot variables: <math id="I5.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="I5.i1.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">There is one free variable: <math id="I5.i2.p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx1.p14" class="ltx_para">
+<p class="ltx_p">In presenting this problem, note that we were not actually given a matrix in echelon form. The reason the matrix does not qualify as echelon is due to the fact that there are non-zero entries in the third row that are not to the right of the leading non-zero entry in the second row.</p>
+</div>
+<div id="Sx1.p15" class="ltx_para">
+<p class="ltx_p">To fix this, we need to perform additional row operations.</p>
+<table id="Sx1.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex10.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;0&amp;0&amp;2\\
+0&amp;0&amp;0&amp;3\\
+0&amp;0&amp;1&amp;1\end{matrix}\right]\xrightarrow[]{R_{2}\circlearrowright R_{3}}\left[%
+\begin{matrix}1&amp;0&amp;0&amp;2\\
+0&amp;0&amp;1&amp;1\\
+0&amp;0&amp;0&amp;3\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM41"><mtr id="XM41a"><mtd columnalign="center" id="XM41b"><mn>1</mn></mtd><mtd columnalign="center" id="XM41c"><mn>0</mn></mtd><mtd columnalign="center" id="XM41d"><mn>0</mn></mtd><mtd columnalign="center" id="XM41e"><mn>2</mn></mtd></mtr><mtr id="XM41f"><mtd columnalign="center" id="XM41g"><mn>0</mn></mtd><mtd columnalign="center" id="XM41h"><mn>0</mn></mtd><mtd columnalign="center" id="XM41i"><mn>0</mn></mtd><mtd columnalign="center" id="XM41j"><mn>3</mn></mtd></mtr><mtr id="XM41k"><mtd columnalign="center" id="XM41l"><mn>0</mn></mtd><mtd columnalign="center" id="XM41m"><mn>0</mn></mtd><mtd columnalign="center" id="XM41n"><mn>1</mn></mtd><mtd columnalign="center" id="XM41o"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo>→</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>↻</mo><msub><mi>R</mi><mn>3</mn></msub></mrow></mover><mrow><mo>[</mo><mtable id="XM42"><mtr id="XM42a"><mtd columnalign="center" id="XM42b"><mn>1</mn></mtd><mtd columnalign="center" id="XM42c"><mn>0</mn></mtd><mtd columnalign="center" id="XM42d"><mn>0</mn></mtd><mtd columnalign="center" id="XM42e"><mn>2</mn></mtd></mtr><mtr id="XM42f"><mtd columnalign="center" id="XM42g"><mn>0</mn></mtd><mtd columnalign="center" id="XM42h"><mn>0</mn></mtd><mtd columnalign="center" id="XM42i"><mn>1</mn></mtd><mtd columnalign="center" id="XM42j"><mn>1</mn></mtd></mtr><mtr id="XM42k"><mtd columnalign="center" id="XM42l"><mn>0</mn></mtd><mtd columnalign="center" id="XM42m"><mn>0</mn></mtd><mtd columnalign="center" id="XM42n"><mn>0</mn></mtd><mtd columnalign="center" id="XM42o"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The matrix is now in echelon form.</p>
+</div>
+<div id="Sx1.p16" class="ltx_para">
+<p class="ltx_p">Let us reassess this matrix. First, it is in echelon form but not rref due to the fact that the leading non-zero entry in the third row is a <math id="Sx1.p16.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>. The pivot entries are now different:</p>
+<table id="Sx1.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex11.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}{\color{red}\boxed@math{{\color{black}1}}}&amp;0&amp;%
+0&amp;2\\
+0&amp;0&{\color{red}\boxed@math{{\color{black}1}}}&amp;1\\
+0&amp;0&amp;0&{\color{red}\boxed@math{{\color{black}3}}}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM44"><mtr id="XM44a"><mtd columnalign="center" id="XM44b"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM44c"><mn>0</mn></mtd><mtd columnalign="center" id="XM44d"><mn>0</mn></mtd><mtd columnalign="center" id="XM44e"><mn>2</mn></mtd></mtr><mtr id="XM44f"><mtd columnalign="center" id="XM44g"><mn>0</mn></mtd><mtd columnalign="center" id="XM44h"><mn>0</mn></mtd><mtd columnalign="center" id="XM44i"><menclose notation="box"><mn mathcolor="#000000">1</mn></menclose></mtd><mtd columnalign="center" id="XM44j"><mn>1</mn></mtd></mtr><mtr id="XM44k"><mtd columnalign="center" id="XM44l"><mn>0</mn></mtd><mtd columnalign="center" id="XM44m"><mn>0</mn></mtd><mtd columnalign="center" id="XM44n"><mn>0</mn></mtd><mtd columnalign="center" id="XM44o"><menclose notation="box"><mn mathcolor="#000000">3</mn></menclose></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p">Pivots: <math id="I6.i1.p1.m1" class="ltx_Math" alttext="1,1,3" display="inline"><mrow><mn id="XM45">1</mn><mo>,</mo><mn id="XM46">1</mn><mo>,</mo><mn id="XM47">3</mn></mrow></math></p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i2.p1" class="ltx_para">
+<p class="ltx_p">Pivot columns: <math id="I6.i2.p1.m1" class="ltx_Math" alttext="1,3,4" display="inline"><mrow><mn id="XM48">1</mn><mo>,</mo><mn id="XM49">3</mn><mo>,</mo><mn id="XM50">4</mn></mrow></math></p>
+</div>
+</li>
+<li id="I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i3.p1" class="ltx_para">
+<p class="ltx_p">Free columns: <math id="I6.i3.p1.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></p>
+</div>
+</li>
+<li id="I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i4.p1" class="ltx_para">
+<p class="ltx_p">Pivot variables: <math id="I6.i4.p1.m1" class="ltx_Math" alttext="x,z" display="inline"><mrow><mi id="XM51">x</mi><mo>,</mo><mi id="XM52">z</mi></mrow></math></p>
+</div>
+</li>
+<li id="I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i5.p1" class="ltx_para">
+<p class="ltx_p">Free variables: <math id="I6.i5.p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx1.p17" class="ltx_para">
+<p class="ltx_p">Let us convert this matrix into a system of equations:</p>
+</div>
+<div id="Sx1.p18" class="ltx_para">
+<table id="Sx1.EGx12" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex12.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;0&amp;0&amp;2\\
+0&amp;0&amp;1&amp;1\\
+0&amp;0&amp;0&amp;3\end{matrix}\right]\longrightarrow\left\{\begin{aligned}\displaystyle x%
+&amp;&amp;&amp;&amp;&amp;\displaystyle=2\\
+&amp;&amp;&amp;&amp;\displaystyle z&amp;\displaystyle=1\\
+&amp;&amp;&amp;&amp;\displaystyle 0&amp;\displaystyle=3\end{aligned}\right." display="inline"><mrow><mrow><mo>[</mo><mtable id="XM54"><mtr id="XM54a"><mtd columnalign="center" id="XM54b"><mn>1</mn></mtd><mtd columnalign="center" id="XM54c"><mn>0</mn></mtd><mtd columnalign="center" id="XM54d"><mn>0</mn></mtd><mtd columnalign="center" id="XM54e"><mn>2</mn></mtd></mtr><mtr id="XM54f"><mtd columnalign="center" id="XM54g"><mn>0</mn></mtd><mtd columnalign="center" id="XM54h"><mn>0</mn></mtd><mtd columnalign="center" id="XM54i"><mn>1</mn></mtd><mtd columnalign="center" id="XM54j"><mn>1</mn></mtd></mtr><mtr id="XM54k"><mtd columnalign="center" id="XM54l"><mn>0</mn></mtd><mtd columnalign="center" id="XM54m"><mn>0</mn></mtd><mtd columnalign="center" id="XM54n"><mn>0</mn></mtd><mtd columnalign="center" id="XM54o"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⟶</mo><mrow><mo>{</mo><mtable><mtr><mtd columnalign="right"><mi>x</mi></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd columnalign="right"><mi>z</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>3</mn></mrow></mtd></mtr></mtable></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that this tells us that <math id="Sx1.p18.m1" class="ltx_Math" alttext="x=2" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></math>, <math id="Sx1.p18.m2" class="ltx_Math" alttext="z=1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="Sx1.p18.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> can be anything. However, observe that it also says that <math id="Sx1.p18.m4" class="ltx_Math" alttext="0=3" display="inline"><mrow><mn>0</mn><mo>=</mo><mn>3</mn></mrow></math>.
+</p>
+</div>
+<div id="Sx1.p19" class="ltx_para">
+<p class="ltx_p">Because the system of equations says that <math id="Sx1.p19.m1" class="ltx_Math" alttext="0=3" display="inline"><mrow><mn>0</mn><mo>=</mo><mn>3</mn></mrow></math>, the system can have no solution. This is thus an example of an <em class="ltx_emph">inconsistent</em> system, as we have discussed previously.</p>
+</div>
+<div id="Sx1.p20" class="ltx_para">
+<p class="ltx_p">This suggests that we might be able to tell when this will occur by looking at the echelon form matrix. Thinking about it, it is apparent that whenever a pivot is in the constant vector column, the resulting system will have such an inconsistent equation.</p>
+</div>
+<div id="Sx1.p21" class="ltx_para">
+<p class="ltx_p">Succinctly,</p>
+</div>
+<div id="Sx1.p22" class="ltx_para">
+<span class="ltx_inline-block ltx_minipage ltx_align_top" style="width:411.9pt;">
+<span class="ltx_p">Suppose we have a system, represented by an augmented matrix</span>
+<table id="Sx1.EGx13" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex13.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}A&amp;\vec{b}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM56"><mtr id="XM56a"><mtd columnalign="center" id="XM56b"><mi>A</mi></mtd><mtd columnalign="center" id="XM56c"><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<span class="ltx_p">which we reduce it to</span>
+<table id="Sx1.EGx14" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex14" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex14.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}R&amp;\vec{c}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM58"><mtr id="XM58a"><mtd columnalign="center" id="XM58b"><mi>R</mi></mtd><mtd columnalign="center" id="XM58c"><mover accent="true"><mi>c</mi><mo stretchy="false">→</mo></mover></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<span class="ltx_p">where <math id="Sx1.p22.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is echelon or rref. of <math id="Sx1.p22.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and this reduction results in <math id="Sx1.p22.m3" class="ltx_Math" alttext="\vec{b}\to\vec{c}" display="inline"><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>→</mo><mover accent="true"><mi>c</mi><mo stretchy="false">→</mo></mover></mrow></math>.</span>
+</span>
+</div>
+<div id="Sx1.p23" class="ltx_para">
+<p class="ltx_p">If the right side column of <math id="Sx1.p23.m1" class="ltx_Math" alttext="\left[\begin{matrix}R&amp;\vec{c}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM59"><mtr id="XM59a"><mtd columnalign="center" id="XM59b"><mi>R</mi></mtd><mtd columnalign="center" id="XM59c"><mover accent="true"><mi>c</mi><mo stretchy="false">→</mo></mover></mtd></mtr></mtable><mo>]</mo></mrow></math> has a pivot, then the system is inconsistent.</p>
+</div>
+<section id="Sx1.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Question:</h3>
+
+<div id="Sx1.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Is the converse also true? That is, that if a system is inconsistent, that a pivot must be present in the constant column?</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">The answer to this will come later.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">It seems that pivot and free variables determine the nature of the system. Let us consider another example system:</p>
+<table id="Sx1.EGx15" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex15" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex15.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;2&amp;3&amp;4&amp;0\\
+0&amp;0&amp;2&amp;1&amp;2\\
+0&amp;0&amp;0&amp;7&amp;5\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM61"><mtr id="XM61a"><mtd columnalign="center" id="XM61b"><mn>1</mn></mtd><mtd columnalign="center" id="XM61c"><mn>2</mn></mtd><mtd columnalign="center" id="XM61d"><mn>3</mn></mtd><mtd columnalign="center" id="XM61e"><mn>4</mn></mtd><mtd columnalign="center" id="XM61f"><mn>0</mn></mtd></mtr><mtr id="XM61g"><mtd columnalign="center" id="XM61h"><mn>0</mn></mtd><mtd columnalign="center" id="XM61i"><mn>0</mn></mtd><mtd columnalign="center" id="XM61j"><mn>2</mn></mtd><mtd columnalign="center" id="XM61k"><mn>1</mn></mtd><mtd columnalign="center" id="XM61l"><mn>2</mn></mtd></mtr><mtr id="XM61m"><mtd columnalign="center" id="XM61n"><mn>0</mn></mtd><mtd columnalign="center" id="XM61o"><mn>0</mn></mtd><mtd columnalign="center" id="XM61p"><mn>0</mn></mtd><mtd columnalign="center" id="XM61q"><mn>7</mn></mtd><mtd columnalign="center" id="XM61r"><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We’ll assign variables to the columns: <math id="Sx1.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="x,y,z,w" display="inline"><mrow><mi id="XM62">x</mi><mo>,</mo><mi id="XM63">y</mi><mo>,</mo><mi id="XM64">z</mi><mo>,</mo><mi id="XM65">w</mi></mrow></math> for columns <math id="Sx1.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> through <math id="Sx1.SS0.SSS0.Px1.p3.m3" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>, respectively.</p>
+<ol id="I7" class="ltx_enumerate">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I7.i1.p1" class="ltx_para">
+<p class="ltx_p">Pivot columns: 1,3,4</p>
+</div>
+</li>
+<li id="I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I7.i2.p1" class="ltx_para">
+<p class="ltx_p">Free columns: 2,5</p>
+</div>
+</li>
+<li id="I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I7.i3.p1" class="ltx_para">
+<p class="ltx_p">Pivot variables: <math id="I7.i3.p1.m1" class="ltx_Math" alttext="x,z,w" display="inline"><mrow><mi id="XM66">x</mi><mo>,</mo><mi id="XM67">z</mi><mo>,</mo><mi id="XM68">w</mi></mrow></math></p>
+</div>
+</li>
+<li id="I7.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I7.i4.p1" class="ltx_para">
+<p class="ltx_p">Free variables: <math id="I7.i4.p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">The first question we probably want to answer is: is the system consistent or inconsistent? Let us convert the augmented matrix back into a system:</p>
+<table id="Sx1.EGx16" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex16" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex16.m1" class="ltx_Math" alttext="\displaystyle\begin{aligned}\displaystyle x+2y+3z+4w&amp;\displaystyle=0\\
+\displaystyle 2z+w&amp;\displaystyle=2\\
+\displaystyle 7w&amp;\displaystyle=5\end{aligned}" display="inline"><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>w</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mi>w</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mn>7</mn><mo>⁢</mo><mi>w</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>5</mn></mrow></mtd></mtr></mtable></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From here, it is apparent that we can use the third equation to obtain a value for <math id="Sx1.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>. We can then plug this value into the second equation to obtain a value for <math id="Sx1.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Plugging these two into the first equation, we might think we can then obtain the value of <math id="Sx1.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. But, remember that <math id="Sx1.SS0.SSS0.Px1.p4.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is a free variable. After isolating the values of <math id="Sx1.SS0.SSS0.Px1.p4.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="Sx1.SS0.SSS0.Px1.p4.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, we should then be able to pick any value of <math id="Sx1.SS0.SSS0.Px1.p4.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and be able to find the value of <math id="Sx1.SS0.SSS0.Px1.p4.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> that satisfies the values of <math id="Sx1.SS0.SSS0.Px1.p4.m9" class="ltx_Math" alttext="w,z," display="inline"><mrow><mrow><mi id="XM69">w</mi><mo>,</mo><mi id="XM70">z</mi></mrow><mo>,</mo></mrow></math> and <math id="Sx1.SS0.SSS0.Px1.p4.m10" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>. This tells us that the system is consistent.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">Let us actually solve the system. The last line gives us that <math id="Sx1.SS0.SSS0.Px1.p5.m1" class="ltx_Math" alttext="w=5/7" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mn>5</mn><mo>/</mo><mn>7</mn></mrow></mrow></math>. Then from the second equation,</p>
+<table id="Sx1.EGx17" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex17" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex17.m1" class="ltx_Math" alttext="\displaystyle 2z+w" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mi>w</mi></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex17.m2" class="ltx_Math" alttext="\displaystyle=2" display="inline"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex18" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex18.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex18.m2" class="ltx_Math" alttext="\displaystyle=\frac{2-w}{2}=\frac{2-\frac{5}{7}}{2}=\frac{9}{14}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>-</mo><mi>w</mi></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>-</mo><mfrac><mn>5</mn><mn>7</mn></mfrac></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>14</mn></mfrac></mstyle></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Next, we can use these two values in the first equation to obtain</p>
+<table id="Sx1.EGx18" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex19" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex19.m1" class="ltx_Math" alttext="\displaystyle x+2y+3z+4w" display="inline"><mrow><mi>x</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>w</mi></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex19.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex20" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex20.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex20.m2" class="ltx_Math" alttext="\displaystyle=-2y-3z-4w" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>w</mi></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex21" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex21.m2" class="ltx_Math" alttext="\displaystyle=-2y-\frac{27}{14}-\frac{20}{7}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>27</mn><mn>14</mn></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>20</mn><mn>7</mn></mfrac></mstyle></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex22" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex22.m2" class="ltx_Math" alttext="\displaystyle=-2y-\frac{47}{14}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>47</mn><mn>14</mn></mfrac></mstyle></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We haven’t selected any value for <math id="Sx1.SS0.SSS0.Px1.p5.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> yet, even though since it is a free variable we should be able to pick any value we want for it. For example, we can select <math id="Sx1.SS0.SSS0.Px1.p5.m3" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> and then we simply have that <math id="Sx1.SS0.SSS0.Px1.p5.m4" class="ltx_Math" alttext="x=-47/14" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>-</mo><mrow><mn>47</mn><mo>/</mo><mn>14</mn></mrow></mrow></mrow></math>. If we pick <math id="Sx1.SS0.SSS0.Px1.p5.m5" class="ltx_Math" alttext="y=-2" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mo>-</mo><mn>2</mn></mrow></mrow></math>, we obtain <math id="Sx1.SS0.SSS0.Px1.p5.m6" class="ltx_Math" alttext="y=-2-(47/14)=-75/14" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mo>-</mo><mn>2</mn></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow id="XM71"><mn>47</mn><mo>/</mo><mn>14</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>75</mn><mo>/</mo><mn>14</mn></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p6" class="ltx_para">
+<p class="ltx_p">We find that for every <math id="Sx1.SS0.SSS0.Px1.p6.m1" class="ltx_Math" alttext="y\in\mathds{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> we pick, there is a <math id="Sx1.SS0.SSS0.Px1.p6.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> corresponding to it. Hence the system is consistent. Additionally, we have found much more than just that the system is consistent, we have in fact found that it will have infinitely many solutions.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p7" class="ltx_para">
+<p class="ltx_p">Having a free variable makes it <em class="ltx_emph">possible</em> for the system to have infinitely many solutions. We just need to be careful that the system has any solutions at all; <em class="ltx_emph">there could be an inconsistent system that still has free variables</em>. In that case, there would still be no solutions to the system.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p8" class="ltx_para">
+<p class="ltx_p">Otherwise, it is the case that for a consistent system, having a free variable means it will have infinitely many solutions.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p9" class="ltx_para">
+<p class="ltx_p">It still remains to be seen what determines whether there will be a unique solution to a system.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p10" class="ltx_para">
+<p class="ltx_p">Before we move on, let us discuss how to write the solution to a system. We have found the solution to a system already, but there is a more convenient way to present such a solution, called the <span class="ltx_text ltx_font_bold">vector form</span> of a solution.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p11" class="ltx_para">
+<p class="ltx_p">Looking at the previous example, we will first write the variables of the system in a column vector</p>
+<table id="Sx1.EGx19" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex23" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex23.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}x\\
+y\\
+z\\
+w\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx1.Ex23.m1.xm1"><mtr id="Sx1.Ex23.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx1.Ex23.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1d"><mi>y</mi></mtd></mtr><mtr id="Sx1.Ex23.m1.xm1e"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1f"><mi>z</mi></mtd></mtr><mtr id="Sx1.Ex23.m1.xm1g"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1h"><mi>w</mi></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex23.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p12" class="ltx_para">
+<p class="ltx_p">We isolated specific values for <math id="Sx1.SS0.SSS0.Px1.p12.m1" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="Sx1.SS0.SSS0.Px1.p12.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Since <math id="Sx1.SS0.SSS0.Px1.p12.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is free we will simply write <math id="Sx1.SS0.SSS0.Px1.p12.m4" class="ltx_Math" alttext="y=y" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>y</mi></mrow></math>, and we will write the expression for <math id="Sx1.SS0.SSS0.Px1.p12.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> that depends on <math id="Sx1.SS0.SSS0.Px1.p12.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>. Since <math id="Sx1.SS0.SSS0.Px1.p12.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is free it is good practice to write the choice of <math id="Sx1.SS0.SSS0.Px1.p12.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>; in this case, <math id="Sx1.SS0.SSS0.Px1.p12.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> can be any real number (<math id="Sx1.SS0.SSS0.Px1.p12.m10" class="ltx_Math" alttext="y\in\mathds{R}" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>).</p>
+<table id="Sx1.EGx20" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex24" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex24.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}x\\
+y\\
+z\\
+w\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx1.Ex24.m1.xm1"><mtr id="Sx1.Ex24.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx1.Ex24.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1d"><mi>y</mi></mtd></mtr><mtr id="Sx1.Ex24.m1.xm1e"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1f"><mi>z</mi></mtd></mtr><mtr id="Sx1.Ex24.m1.xm1g"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1h"><mi>w</mi></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}-2y-\frac{47}{14}\\
+y\\
+\frac{9}{14}\\
+\frac{5}{7}\end{bmatrix}\qquad,y\in\mathds{R}" display="inline"><mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx1.Ex24.m2.xm1"><mtr id="Sx1.Ex24.m2.xm1a"><mtd columnalign="center" id="Sx1.Ex24.m2.xm1b"><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mfrac><mn>47</mn><mn>14</mn></mfrac></mrow></mtd></mtr><mtr id="Sx1.Ex24.m2.xm1c"><mtd columnalign="center" id="Sx1.Ex24.m2.xm1d"><mi>y</mi></mtd></mtr><mtr id="Sx1.Ex24.m2.xm1e"><mtd columnalign="center" id="Sx1.Ex24.m2.xm1f"><mfrac><mn>9</mn><mn>14</mn></mfrac></mtd></mtr><mtr id="Sx1.Ex24.m2.xm1g"><mtd columnalign="center" id="Sx1.Ex24.m2.xm1h"><mfrac><mn>5</mn><mn>7</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mo>,</mo><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will always present the <em class="ltx_emph">solution set</em> in this form.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p13" class="ltx_para">
+<p class="ltx_p">Next, let us try writing the solution in a slightly different manner:</p>
+<table id="Sx1.EGx21" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex25" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex25.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}x\\
+y\\
+z\\
+w\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx1.Ex25.m1.xm1"><mtr id="Sx1.Ex25.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex25.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx1.Ex25.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex25.m1.xm1d"><mi>y</mi></mtd></mtr><mtr id="Sx1.Ex25.m1.xm1e"><mtd columnalign="center" id="Sx1.Ex25.m1.xm1f"><mi>z</mi></mtd></mtr><mtr id="Sx1.Ex25.m1.xm1g"><mtd columnalign="center" id="Sx1.Ex25.m1.xm1h"><mi>w</mi></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex25.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}\frac{-47}{14}\\
+\par
+\\
+\frac{9}{14}\\
+\frac{5}{7}\end{bmatrix}+y\begin{bmatrix}-2\\
+1\\
+\par
+\\
+\par
+\end{bmatrix}\qquad,y\in\mathds{R}" display="inline"><mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx1.Ex25.m2.xm1"><mtr id="Sx1.Ex25.m2.xm1a"><mtd columnalign="center" id="Sx1.Ex25.m2.xm1b"><mfrac><mrow><mo>-</mo><mn>47</mn></mrow><mn>14</mn></mfrac></mtd></mtr><mtr id="Sx1.Ex25.m2.xm1c"><mtd columnalign="center" id="Sx1.Ex25.m2.xm1d"><mi></mi></mtd></mtr><mtr id="Sx1.Ex25.m2.xm1e"><mtd columnalign="center" id="Sx1.Ex25.m2.xm1f"><mfrac><mn>9</mn><mn>14</mn></mfrac></mtd></mtr><mtr id="Sx1.Ex25.m2.xm1g"><mtd columnalign="center" id="Sx1.Ex25.m2.xm1h"><mfrac><mn>5</mn><mn>7</mn></mfrac></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mi>y</mi><mrow><mo>[</mo><mtable id="Sx1.Ex25.m2.xm2"><mtr id="Sx1.Ex25.m2.xm2a"><mtd columnalign="center" id="Sx1.Ex25.m2.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex25.m2.xm2c"><mtd columnalign="center" id="Sx1.Ex25.m2.xm2d"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex25.m2.xm2e"><mtd columnalign="center" id="Sx1.Ex25.m2.xm2f"><mi></mi></mtd></mtr><mtr id="Sx1.Ex25.m2.xm2g"><mtd columnalign="center" id="Sx1.Ex25.m2.xm2h"><mi></mi></mtd></mtr></mtable><mo>]</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mo>,</mo><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">There are some benefits of splitting the solution in this way. First, this form indicates that the solution, in four dimensions, is actually a line. We can interpret this by considering a lower-dimensional case.</p>
+</div>
+<figure id="Sx1.SS0.SSS0.Px1.fig1" class="ltx_figure">
+<p class="ltx_p ltx_align_center">Particular point
+Vector along line</p>
+</figure>
+<div id="Sx1.SS0.SSS0.Px1.p14" class="ltx_para">
+<p class="ltx_p">In two dimensions, a line is determined by any particular point on the line, and the vector that lies along the line. Back in the current example, the first vector represents the particular point, whereas the second is the vector lying along the line.</p>
+<table id="Sx1.EGx22" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex26" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex26.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}x\\
+y\\
+z\\
+w\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx1.Ex26.m1.xm1"><mtr id="Sx1.Ex26.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx1.Ex26.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1d"><mi>y</mi></mtd></mtr><mtr id="Sx1.Ex26.m1.xm1e"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1f"><mi>z</mi></mtd></mtr><mtr id="Sx1.Ex26.m1.xm1g"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1h"><mi>w</mi></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex26.m2" class="ltx_Math" alttext="\displaystyle=\underbrace{\begin{bmatrix}\frac{-47}{14}\\
+\par
+\\
+\frac{9}{14}\\
+\frac{5}{7}\end{bmatrix}}_{\text{Particular point on the line}}+y\overbrace{%
+\begin{bmatrix}-2\\
+1\\
+\par
+\\
+\par
+\end{bmatrix}}^{\text{Vector along the line}}\qquad,y\in\mathds{R}" display="inline"><mrow><mo>=</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false">[</mo><mtable id="Sx1.Ex26.m2.xm1"><mtr id="Sx1.Ex26.m2.xm1a"><mtd columnalign="center" id="Sx1.Ex26.m2.xm1b"><mfrac><mrow><mo movablelimits="false">-</mo><mn>47</mn></mrow><mn>14</mn></mfrac></mtd></mtr><mtr id="Sx1.Ex26.m2.xm1c"><mtd columnalign="center" id="Sx1.Ex26.m2.xm1d"><mi></mi></mtd></mtr><mtr id="Sx1.Ex26.m2.xm1e"><mtd columnalign="center" id="Sx1.Ex26.m2.xm1f"><mfrac><mn>9</mn><mn>14</mn></mfrac></mtd></mtr><mtr id="Sx1.Ex26.m2.xm1g"><mtd columnalign="center" id="Sx1.Ex26.m2.xm1h"><mfrac><mn>5</mn><mn>7</mn></mfrac></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏟</mo></munder><mtext>Particular point on the line</mtext></munder><mo>+</mo><mi>y</mi><mover><mover accent="true"><mrow><mo movablelimits="false">[</mo><mtable id="Sx1.Ex26.m2.xm2"><mtr id="Sx1.Ex26.m2.xm2a"><mtd columnalign="center" id="Sx1.Ex26.m2.xm2b"><mrow><mo movablelimits="false">-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex26.m2.xm2c"><mtd columnalign="center" id="Sx1.Ex26.m2.xm2d"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex26.m2.xm2e"><mtd columnalign="center" id="Sx1.Ex26.m2.xm2f"><mi></mi></mtd></mtr><mtr id="Sx1.Ex26.m2.xm2g"><mtd columnalign="center" id="Sx1.Ex26.m2.xm2h"><mi></mi></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏞</mo></mover><mtext>Vector along the line</mtext></mover><mo mathvariant="italic" separator="true">  </mo><mo>,</mo><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SS0.SSS0.Px1.p15" class="ltx_para">
+<p class="ltx_p">This may be familiar to those who have taken differential equations. The particular point is analogous to the particular solution, whereas the vector part of the solution is the homogeneous solution.</p>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Jun  4 02:49:23 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

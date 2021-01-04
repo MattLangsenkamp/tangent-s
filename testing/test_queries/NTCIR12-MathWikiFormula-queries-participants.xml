@@ -1,0 +1,4259 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<topics xmlns="http://www.w3.org/1998/Math/MathML">
+  <topic>
+    <num>NTCIR12-MathWiki-1</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+  <m:semantics>
+	<m:mrow>
+	  <m:mo>-</m:mo>
+	  <m:mrow>
+		<m:mn>0.026838601</m:mn>
+		<m:mi mathvariant="normal">…</m:mi>
+	  </m:mrow>
+	</m:mrow>
+	<m:annotation-xml encoding="MathML-Content">
+	  <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:times/>
+		  <m:cn type="float">0.026838601</m:cn>
+		  <m:ci>normal-…</m:ci>
+		</m:apply>
+	  </m:apply>
+	</m:annotation-xml>
+	<m:annotation encoding="application/x-tex">-0.026838601\ldots</m:annotation>
+  </m:semantics>
+</m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-2</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+  <m:semantics>
+	<m:mi>𝔓</m:mi>
+	<m:annotation-xml encoding="MathML-Content">
+	  <ci>𝔓</m:ci>
+	</m:annotation-xml>
+	<m:annotation encoding="application/x-tex">\mathfrak{P}</m:annotation>
+  </m:semantics>
+</m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-3</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mi>N</m:mi>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>⌊</m:mo>
+                <m:mrow>
+                  <m:mn>0.5</m:mn>
+                  <m:mo>-</m:mo>
+                  <m:mrow>
+                    <m:msub>
+                      <m:mi>log</m:mi>
+                      <m:mn>2</m:mn>
+                    </m:msub>
+                    <m:mo>⁡</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mfrac>
+                        <m:mtext>Frequency of this item</m:mtext>
+                        <m:mtext> Frequency of most common item</m:mtext>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>⌋</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:ci>N</m:ci>
+                <m:apply>
+                  <m:floor/>
+                  <m:apply>
+                    <m:minus/>
+                    <m:cn type="float">0.5</m:cn>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:log/>
+                        <m:cn type="integer">2</m:cn>
+                      </m:apply>
+                      <m:apply>
+                        <m:divide/>
+                        <m:mtext>Frequency of this item</m:mtext>
+                        <m:mtext>
+Frequency of most common item</m:mtext>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">N=\left\lfloor 0.5-\log_{2}\left(\frac{\text{Frequency of this item}}{\text{
+Frequency of most common item}}\right)\right\rfloor</m:annotation>
+          </m:semantics>
+        </m:math>
+
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-4</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>∇</m:mo>
+                <m:mo>×</m:mo>
+                <m:mi>𝐁</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>μ</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                  <m:mi>𝐉</m:mi>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:munder>
+                  <m:munder accentunder="true">
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>μ</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo movablelimits="false">⁢</m:mo>
+                      <m:msub>
+                        <m:mi>ϵ</m:mi>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                      <m:mo movablelimits="false">⁢</m:mo>
+                      <m:mfrac>
+                        <m:mo movablelimits="false">∂</m:mo>
+                        <m:mrow>
+                          <m:mo movablelimits="false">∂</m:mo>
+                          <m:mo movablelimits="false">⁡</m:mo>
+                          <m:mi>t</m:mi>
+                        </m:mrow>
+                      </m:mfrac>
+                      <m:mo movablelimits="false">⁢</m:mo>
+                      <m:mi>𝐄</m:mi>
+                    </m:mrow>
+                    <m:mo movablelimits="false">⏟</m:mo>
+                  </m:munder>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>Maxwell</m:mi>
+                      <m:mo>′</m:mo>
+                    </m:msup>
+                    <m:mi mathvariant="normal">s</m:mi>
+                    <m:mi>term</m:mi>
+                  </m:mrow>
+                </m:munder>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:times/>
+                  <m:ci>normal-∇</m:ci>
+                  <m:ci>𝐁</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:times/>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>μ</m:ci>
+                      <m:cn type="integer">0</m:cn>
+                    </m:apply>
+                    <m:ci>𝐉</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                    <m:apply>
+                      <m:ci>normal-⏟</m:ci>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>μ</m:ci>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>ϵ</m:ci>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:divide/>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:partialdiff/>
+                            <m:ci>t</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:ci>𝐄</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:ci>Maxwell</m:ci>
+                        <m:ci>normal-′</m:ci>
+                      </m:apply>
+                      <m:ci>normal-s</m:ci>
+                      <m:ci>term</m:ci>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\mathbf{\nabla}\times\mathbf{B}=\mu_{0}\mathbf{J}+\underbrace{\mu_{0}\epsilon_%
+{0}\frac{\partial}{\partial t}\mathbf{E}}_{\mathrm{Maxwell^{\prime}s\ term}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-5</num>
+    <query>
+      <formula id="f.0">
+        		<m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mstyle displaystyle="true">
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mo>+</m:mo>
+                    <m:mstyle displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mrow>
+                          <m:mn>5</m:mn>
+                          <m:mo>+</m:mo>
+                          <m:mstyle displaystyle="true">
+                            <m:mfrac>
+                              <m:mn>1</m:mn>
+                              <m:mrow>
+                                <m:mn>5</m:mn>
+                                <m:mo>+</m:mo>
+                                <m:mstyle displaystyle="true">
+                                  <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:mrow>
+                                      <m:mn>4</m:mn>
+                                      <m:mo>+</m:mo>
+                                      <m:mi mathvariant="normal">⋱</m:mi>
+                                    </m:mrow>
+                                  </m:mfrac>
+                                </m:mstyle>
+                              </m:mrow>
+                            </m:mfrac>
+                          </m:mstyle>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mstyle>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:plus/>
+                <m:cn type="integer">1</m:cn>
+                <m:apply>
+                  <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                  <m:cn type="integer">1</m:cn>
+                  <m:apply>
+                    <m:plus/>
+                    <m:cn type="integer">2</m:cn>
+                    <m:apply>
+                      <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                      <m:cn type="integer">1</m:cn>
+                      <m:apply>
+                        <m:plus/>
+                        <m:cn type="integer">5</m:cn>
+                        <m:apply>
+                          <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                          <m:cn type="integer">1</m:cn>
+                          <m:apply>
+                            <m:plus/>
+                            <m:cn type="integer">5</m:cn>
+                            <m:apply>
+                              <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                              <m:cn type="integer">1</m:cn>
+                              <m:apply>
+                                <m:plus/>
+                                <m:cn type="integer">4</m:cn>
+                                <m:ci>normal-⋱</m:ci>
+                              </m:apply>
+                            </m:apply>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">1+\cfrac{1}{2+\cfrac{1}{5+\cfrac{1}{5+\cfrac{1}{4+\ddots}}}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-6</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mmultiscripts>
+                  <m:mi mathvariant="normal">U</m:mi>
+                  <m:mprescripts/>
+                  <m:mn>92</m:mn>
+                  <m:mn>238</m:mn>
+                </m:mmultiscripts>
+                <m:msubsup>
+                  <m:mo>+</m:mo>
+                  <m:mn>28</m:mn>
+                  <m:mn>64</m:mn>
+                </m:msubsup>
+                <m:mi>Ni</m:mi>
+              </m:mrow>
+              <m:msubsup>
+                <m:mo>→</m:mo>
+                <m:mn>120</m:mn>
+                <m:mn>302</m:mn>
+              </m:msubsup>
+              <m:msup>
+                <m:mi>Ubn</m:mi>
+                <m:mo>*</m:mo>
+              </m:msup>
+              <m:mo>→</m:mo>
+              <m:mrow>
+                <m:mi>𝑓𝑖𝑠𝑠𝑖𝑜𝑛</m:mi>
+                <m:mi>𝑜𝑛𝑙𝑦</m:mi>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:and/>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>normal-→</m:ci>
+                      <m:cn type="integer">302</m:cn>
+                    </m:apply>
+                    <m:cn type="integer">120</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:plus/>
+                        <m:cn type="integer">64</m:cn>
+                      </m:apply>
+                      <m:cn type="integer">28</m:cn>
+                    </m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>normal-U</m:ci>
+                        <m:cn type="integer">92</m:cn>
+                      </m:apply>
+                      <m:cn type="integer">238</m:cn>
+                    </m:apply>
+                    <m:ci>Ni</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>Ubn</m:ci>
+                    <m:times/>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:ci>normal-→</m:ci>
+                  <m:share href="#.cmml"/>
+                  <m:apply>
+                    <m:times/>
+                    <m:ci>𝑓𝑖𝑠𝑠𝑖𝑜𝑛</m:ci>
+                    <m:ci>𝑜𝑛𝑙𝑦</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\,{}^{238}_{92}\mathrm{U}+\,^{64}_{28}\mathrm{Ni}\to\,^{302}_{120}\mathrm{Ubn}%
+^{*}\to\ \mathit{fission\ only}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </m:formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-7</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mn>0</m:mn>
+              <m:mo>→</m:mo>
+              <m:msup>
+                <m:mi>G</m:mi>
+                <m:mo>∧</m:mo>
+              </m:msup>
+              <m:mover>
+                <m:mo movablelimits="false">→</m:mo>
+                <m:msup>
+                  <m:mi>π</m:mi>
+                  <m:mo>∧</m:mo>
+                </m:msup>
+              </m:mover>
+              <m:msup>
+                <m:mi>X</m:mi>
+                <m:mo>∧</m:mo>
+              </m:msup>
+              <m:mover>
+                <m:mo movablelimits="false">→</m:mo>
+                <m:msup>
+                  <m:mi>ı</m:mi>
+                  <m:mo>∧</m:mo>
+                </m:msup>
+              </m:mover>
+              <m:msup>
+                <m:mi>H</m:mi>
+                <m:mo>∧</m:mo>
+              </m:msup>
+              <m:mo>→</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:and/>
+                <m:apply>
+                  <m:ci>normal-→</m:ci>
+                  <m:cn type="integer">0</m:cn>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>G</m:ci>
+                    <m:and/>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>normal-→</m:ci>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>π</m:ci>
+                      <m:and/>
+                    </m:apply>
+                  </m:apply>
+                  <m:share href="#.cmml"/>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>X</m:ci>
+                    <m:and/>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>normal-→</m:ci>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>ı</m:ci>
+                      <m:and/>
+                    </m:apply>
+                  </m:apply>
+                  <m:share href="#.cmml"/>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>H</m:ci>
+                    <m:and/>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:ci>normal-→</m:ci>
+                  <m:share href="#.cmml"/>
+                  <m:cn type="integer">0</m:cn>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">0\to G^{\wedge}\stackrel{\pi^{\wedge}}{\to}X^{\wedge}\stackrel{\imath^{\wedge}%
+}{\to}H^{\wedge}\to 0</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-8</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mi>w</m:mi>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>{</m:mo>
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd columnalign="left">
+                      <m:msup>
+                        <m:mi>w</m:mi>
+                        <m:mo>*</m:mo>
+                      </m:msup>
+                    </m:mtd>
+                    <m:mtd columnalign="left">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mtext>if </m:mtext>
+                            <m:msup>
+                              <m:mi>w</m:mi>
+                              <m:mo>*</m:mo>
+                            </m:msup>
+                          </m:mrow>
+                          <m:mo>&gt;</m:mo>
+                          <m:mfrac>
+                            <m:mn>1</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:mfrac>
+                        </m:mrow>
+                        <m:mo>,</m:mo>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd columnalign="left">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:mn>2</m:mn>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="left">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mtext>if </m:mtext>
+                            <m:msup>
+                              <m:mi>w</m:mi>
+                              <m:mo>*</m:mo>
+                            </m:msup>
+                          </m:mrow>
+                          <m:mo>≤</m:mo>
+                          <m:mfrac>
+                            <m:mn>1</m:mn>
+                            <m:mn>2</m:mn>
+                          </m:mfrac>
+                        </m:mrow>
+                        <m:mo>.</m:mo>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:ci>w</m:ci>
+                <m:apply>
+                  <m:csymbol cd="latexml">cases</m:csymbol>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:ci>w</m:ci>
+                    <m:times/>
+                  </m:apply>
+                  <m:apply>
+                    <m:gt/>
+                    <m:apply>
+                      <m:times/>
+                      <m:mtext>if </m:mtext>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:ci>w</m:ci>
+                        <m:times/>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:cn type="integer">1</m:cn>
+                      <m:cn type="integer">2</m:cn>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">2</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:leq/>
+                    <m:apply>
+                      <m:times/>
+                      <m:mtext>if </m:mtext>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:ci>w</m:ci>
+                        <m:times/>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:cn type="integer">1</m:cn>
+                      <m:cn type="integer">2</m:cn>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">w=\begin{cases}w^{*}&amp;\mbox{if }w^{*}&gt;\frac{1}{2},\\
+\frac{1}{2}&amp;\mbox{if }w^{*}\leq\frac{1}{2}.\\
+\end{cases}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-9</num>
+    <query>
+      <formula id="f.0">
+        		<m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:msub>
+                        <m:mi>V</m:mi>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:msub>
+                        <m:mi>I</m:mi>
+                        <m:mn>2</m:mn>
+                      </m:msub>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+                <m:mo>]</m:mo>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mtable>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>h</m:mi>
+                          <m:mn>11</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>h</m:mi>
+                          <m:mn>12</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                    </m:mtr>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>h</m:mi>
+                          <m:mn>21</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>h</m:mi>
+                          <m:mn>22</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                    </m:mtr>
+                  </m:mtable>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mtable>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>I</m:mi>
+                          <m:mn>1</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                    </m:mtr>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:msub>
+                          <m:mi>V</m:mi>
+                          <m:mn>2</m:mn>
+                        </m:msub>
+                      </m:mtd>
+                    </m:mtr>
+                  </m:mtable>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:matrix>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>V</m:ci>
+                      <m:cn type="integer">1</m:cn>
+                    </m:apply>
+                  </m:matrixrow>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>I</m:ci>
+                      <m:cn type="integer">2</m:cn>
+                    </m:apply>
+                  </m:matrixrow>
+                </m:matrix>
+                <m:apply>
+                  <m:times/>
+                  <m:matrix>
+                    <m:matrixrow>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>h</m:ci>
+                        <m:cn type="integer">11</m:cn>
+                      </m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>h</m:ci>
+                        <m:cn type="integer">12</m:cn>
+                      </m:apply>
+                    </m:matrixrow>
+                    <m:matrixrow>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>h</m:ci>
+                        <m:cn type="integer">21</m:cn>
+                      </m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>h</m:ci>
+                        <m:cn type="integer">22</m:cn>
+                      </m:apply>
+                    </m:matrixrow>
+                  </m:matrix>
+                  <m:matrix>
+                    <m:matrixrow>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>I</m:ci>
+                        <m:cn type="integer">1</m:cn>
+                      </m:apply>
+                    </m:matrixrow>
+                    <m:matrixrow>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>V</m:ci>
+                        <m:cn type="integer">2</m:cn>
+                      </m:apply>
+                    </m:matrixrow>
+                  </m:matrix>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\begin{bmatrix}V_{1}\\
+I_{2}\end{bmatrix}=\begin{bmatrix}h_{11}&amp;h_{12}\\
+h_{21}&amp;h_{22}\end{bmatrix}\begin{bmatrix}I_{1}\\
+V_{2}\end{bmatrix}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-10</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>L</m:mi>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mi>λ</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>α</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>s</m:mi>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>=</m:mo>
+                <m:mrow>
+                  <m:msubsup>
+                    <m:mo largeop="true" symmetric="true">∑</m:mo>
+                    <m:mrow>
+                      <m:mi>n</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>0</m:mn>
+                    </m:mrow>
+                    <m:mi mathvariant="normal">∞</m:mi>
+                  </m:msubsup>
+                  <m:mfrac>
+                    <m:mrow>
+                      <m:mi>exp</m:mi>
+                      <m:mo>⁡</m:mo>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:mn>2</m:mn>
+                          <m:mi>π</m:mi>
+                          <m:mi>i</m:mi>
+                          <m:mi>λ</m:mi>
+                          <m:mi>n</m:mi>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:mi>n</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mi>α</m:mi>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>s</m:mi>
+                    </m:msup>
+                  </m:mfrac>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:times/>
+                  <m:ci>L</m:ci>
+                  <m:vector>
+                    <m:ci>λ</m:ci>
+                    <m:ci>α</m:ci>
+                    <m:ci>s</m:ci>
+                  </m:vector>
+                </m:apply>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:sum/>
+                      <m:apply>
+                        <m:eq/>
+                        <m:ci>n</m:ci>
+                        <m:cn type="integer">0</m:cn>
+                      </m:apply>
+                    </m:apply>
+                    <m:infinity/>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+                        <m:cn type="integer">2</m:cn>
+                        <m:ci>π</m:ci>
+                        <m:ci>i</m:ci>
+                        <m:ci>λ</m:ci>
+                        <m:ci>n</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:apply>
+                        <m:plus/>
+                        <m:ci>n</m:ci>
+                        <m:ci>α</m:ci>
+                      </m:apply>
+                      <m:ci>s</m:ci>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">L(\lambda,\alpha,s)=\sum_{n=0}^{\infty}\frac{\exp(2\pi i\lambda n)}{(n+\alpha)%
+^{s}}.</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-11</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:mi>b</m:mi>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mi>c</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:times/>
+                    <m:ci>a</m:ci>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>x</m:ci>
+                      <m:cn type="integer">2</m:cn>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:ci>b</m:ci>
+                    <m:ci>x</m:ci>
+                  </m:apply>
+                  <m:ci>c</m:ci>
+                </m:apply>
+                <m:cn type="integer">0</m:cn>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\ ax^{2}+bx+c=0</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-12</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mi>O</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mrow>
+                  <m:mi>m</m:mi>
+                  <m:mi>n</m:mi>
+                  <m:mrow>
+                    <m:mi>log</m:mi>
+                    <m:mo>⁡</m:mo>
+                    <m:mi>m</m:mi>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:times/>
+                <m:ci>O</m:ci>
+                <m:apply>
+                  <m:times/>
+                  <m:ci>m</m:ci>
+                  <m:ci>n</m:ci>
+                  <m:apply>
+                    <m:log/>
+                    <m:ci>m</m:ci>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">O(mn\log m)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-13</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>A</m:mi>
+                <m:mo>⊕</m:mo>
+                <m:mi>B</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mi>A</m:mi>
+                      <m:mi>c</m:mi>
+                    </m:msup>
+                    <m:mo>⊖</m:mo>
+                    <m:msup>
+                      <m:mi>B</m:mi>
+                      <m:mi>s</m:mi>
+                    </m:msup>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mi>c</m:mi>
+              </m:msup>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:csymbol cd="latexml">direct-sum</m:csymbol>
+                  <m:ci>A</m:ci>
+                  <m:ci>B</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:apply>
+                    <m:csymbol cd="latexml">symmetric-difference</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>A</m:ci>
+                      <m:ci>c</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>B</m:ci>
+                      <m:ci>s</m:ci>
+                    </m:apply>
+                  </m:apply>
+                  <m:ci>c</m:ci>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">A\oplus B=(A^{c}\ominus B^{s})^{c}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-14</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>cos</m:mi>
+                  <m:mo>⁡</m:mo>
+                  <m:mi>α</m:mi>
+                </m:mrow>
+                <m:mo>=</m:mo>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>-</m:mo>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mi>cos</m:mi>
+                        <m:mo>⁡</m:mo>
+                        <m:mi>β</m:mi>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mi>cos</m:mi>
+                        <m:mo>⁡</m:mo>
+                        <m:mi>γ</m:mi>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mo>+</m:mo>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mi>sin</m:mi>
+                      <m:mo>⁡</m:mo>
+                      <m:mi>β</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>sin</m:mi>
+                      <m:mo>⁡</m:mo>
+                      <m:mi>γ</m:mi>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mi>cosh</m:mi>
+                      <m:mo>⁡</m:mo>
+                      <m:mfrac>
+                        <m:mi>a</m:mi>
+                        <m:mi>k</m:mi>
+                      </m:mfrac>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>,</m:mo>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:cos/>
+                  <m:ci>α</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:minus/>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:cos/>
+                        <m:ci>β</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:cos/>
+                        <m:ci>γ</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:apply>
+                      <m:sin/>
+                      <m:ci>β</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:sin/>
+                      <m:ci>γ</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:cosh/>
+                      <m:apply>
+                        <m:divide/>
+                        <m:ci>a</m:ci>
+                        <m:ci>k</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\cos\alpha=-\cos\beta\cos\gamma+\sin\beta\sin\gamma\cosh\frac{a}{k},\,</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-15</num>
+    <query>
+      <formula id="f.0">
+       <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mo>∀</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>∈</m:mo>
+              <m:mi>A</m:mi>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>≠</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>→</m:mo>
+                <m:mi mathvariant="normal">¬</m:mi>
+                <m:mo>∃</m:mo>
+                <m:mi>z</m:mi>
+                <m:mo>∈</m:mo>
+                <m:mi>X</m:mi>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>≤</m:mo>
+                  <m:mi>x</m:mi>
+                  <m:mo>∧</m:mo>
+                  <m:mi>z</m:mi>
+                  <m:mo>≤</m:mo>
+                  <m:mi>y</m:mi>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+                <m:mo>]</m:mo>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:cerror>
+                <m:csymbol cd="ambiguous">fragments</m:csymbol>
+                <m:csymbol cd="latexml">for-all</m:csymbol>
+                <m:csymbol cd="unknown">x</m:csymbol>
+                <m:ci>normal-,</m:ci>
+                <m:csymbol cd="unknown">y</m:csymbol>
+                <m:in/>
+                <m:csymbol cd="unknown">A</m:csymbol>
+                <m:cerror>
+                  <m:csymbol cd="ambiguous">fragments</m:csymbol>
+                  <m:ci>normal-[</m:ci>
+                  <m:csymbol cd="unknown">x</m:csymbol>
+                  <m:neq/>
+                  <m:csymbol cd="unknown">y</m:csymbol>
+                  <m:ci>normal-→</m:ci>
+                  <m:not/>
+                  <m:exists/>
+                  <m:csymbol cd="unknown">z</m:csymbol>
+                  <m:in/>
+                  <m:csymbol cd="unknown">X</m:csymbol>
+                  <m:cerror>
+                    <m:csymbol cd="ambiguous">fragments</m:csymbol>
+                    <m:ci>normal-[</m:ci>
+                    <m:csymbol cd="unknown">z</m:csymbol>
+                    <m:leq/>
+                    <m:csymbol cd="unknown">x</m:csymbol>
+                    <m:and/>
+                    <m:csymbol cd="unknown">z</m:csymbol>
+                    <m:leq/>
+                    <m:csymbol cd="unknown">y</m:csymbol>
+                    <m:ci>normal-]</m:ci>
+                  </m:cerror>
+                  <m:ci>normal-]</m:ci>
+                </m:cerror>
+                <m:ci>normal-.</m:ci>
+              </m:cerror>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\forall x,y\in A\;[x\neq y\rightarrow\neg\exists z\in X\;[z\leq x\land z\leq y%
+]].</m:annotation>
+          </m:semantics>
+        </m:math> 
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-16</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:msub>
+                <m:mi>τ</m:mi>
+                <m:mtext>rms</m:mtext>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:msqrt>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:msubsup>
+                        <m:mo largeop="true" symmetric="true">∫</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mi mathvariant="normal">∞</m:mi>
+                      </m:msubsup>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:msup>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mrow>
+                            <m:mi>τ</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mover accent="true">
+                              <m:mi>τ</m:mi>
+                              <m:mo>¯</m:mo>
+                            </m:mover>
+                          </m:mrow>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:msub>
+                        <m:mi>A</m:mi>
+                        <m:mi>c</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>τ</m:mi>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:msubsup>
+                        <m:mo largeop="true" symmetric="true">∫</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mi mathvariant="normal">∞</m:mi>
+                      </m:msubsup>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>A</m:mi>
+                        <m:mi>c</m:mi>
+                      </m:msub>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mi>τ</m:mi>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mi>d</m:mi>
+                      <m:mi>τ</m:mi>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:msqrt>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                  <m:ci>τ</m:ci>
+                  <m:mtext>rms</m:mtext>
+                </m:apply>
+                <m:apply>
+                  <m:root/>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:int/>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:infinity/>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:apply>
+                            <m:minus/>
+                            <m:ci>τ</m:ci>
+                            <m:apply>
+                              <m:ci>normal-¯</m:ci>
+                              <m:ci>τ</m:ci>
+                            </m:apply>
+                          </m:apply>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>A</m:ci>
+                          <m:ci>c</m:ci>
+                        </m:apply>
+                        <m:ci>τ</m:ci>
+                        <m:ci>d</m:ci>
+                        <m:ci>τ</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:int/>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:infinity/>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>A</m:ci>
+                          <m:ci>c</m:ci>
+                        </m:apply>
+                        <m:ci>τ</m:ci>
+                        <m:ci>d</m:ci>
+                        <m:ci>τ</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\tau_{\text{rms}}=\sqrt{\frac{\int_{0}^{\infty}(\tau-\overline{\tau})^{2}A_{c}%
+(\tau)d\tau}{\int_{0}^{\infty}A_{c}(\tau)d\tau}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-17</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>x</m:mi>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>2</m:mn>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>4</m:mn>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>5</m:mn>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>6</m:mn>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mn>9</m:mn>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mi mathvariant="normal">⋯</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mn>1</m:mn>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:minus/>
+                  <m:ci>x</m:ci>
+                  <m:cn type="integer">1</m:cn>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">2</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">4</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">5</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">6</m:cn>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:cn type="integer">9</m:cn>
+                  </m:apply>
+                  <m:ci>normal-⋯</m:ci>
+                </m:apply>
+                <m:cn type="integer">1</m:cn>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">x-1-\frac{1}{2}-\frac{1}{4}-\frac{1}{5}-\frac{1}{6}-\frac{1}{9}-\cdots=1</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-18</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:msubsup>
+                <m:mi>P</m:mi>
+                <m:mi>i</m:mi>
+                <m:mi>x</m:mi>
+              </m:msubsup>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:msub>
+                        <m:mi>n</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:msub>
+                      <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                    </m:mrow>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:mi>N</m:mi>
+                          <m:mo>-</m:mo>
+                          <m:msub>
+                            <m:mi>n</m:mi>
+                            <m:mi>x</m:mi>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+                <m:msubsup>
+                  <m:mi>p</m:mi>
+                  <m:mi>x</m:mi>
+                  <m:msub>
+                    <m:mi>n</m:mi>
+                    <m:mi>x</m:mi>
+                  </m:msub>
+                </m:msubsup>
+                <m:msup>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>-</m:mo>
+                      <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mi>x</m:mi>
+                      </m:msub>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mi>N</m:mi>
+                    <m:mo>-</m:mo>
+                    <m:msub>
+                      <m:mi>n</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:msup>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                    <m:ci>P</m:ci>
+                    <m:ci>i</m:ci>
+                  </m:apply>
+                  <m:ci>x</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:times/>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:factorial/>
+                      <m:ci>N</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:factorial/>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>n</m:ci>
+                          <m:ci>x</m:ci>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:factorial/>
+                        <m:apply>
+                          <m:minus/>
+                          <m:ci>N</m:ci>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>n</m:ci>
+                            <m:ci>x</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>p</m:ci>
+                      <m:ci>x</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>n</m:ci>
+                      <m:ci>x</m:ci>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:minus/>
+                      <m:cn type="integer">1</m:cn>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>p</m:ci>
+                        <m:ci>x</m:ci>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:minus/>
+                      <m:ci>N</m:ci>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>n</m:ci>
+                        <m:ci>x</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">P_{i}^{x}=\frac{N!}{n_{x}!(N-n_{x})!}p_{x}^{n_{x}}(1-p_{x})^{N-n_{x}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-19</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:msub>
+                <m:mi>H</m:mi>
+                <m:mrow>
+                  <m:mi>i</m:mi>
+                  <m:mi>j</m:mi>
+                </m:mrow>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>x</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>y</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:msub>
+                            <m:mi>V</m:mi>
+                            <m:mrow>
+                              <m:mi>i</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:mrow>
+                          </m:msub>
+                        </m:mrow>
+                        <m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                          <m:mrow>
+                            <m:mo>∂</m:mo>
+                            <m:mo>⁡</m:mo>
+                            <m:msub>
+                              <m:mi>z</m:mi>
+                              <m:mi>j</m:mi>
+                            </m:msub>
+                          </m:mrow>
+                        </m:mrow>
+                      </m:mfrac>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+                <m:mo>]</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                  <m:ci>H</m:ci>
+                  <m:apply>
+                    <m:times/>
+                    <m:ci>i</m:ci>
+                    <m:ci>j</m:ci>
+                  </m:apply>
+                </m:apply>
+                <m:matrix>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:matrixrow>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:matrixrow>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:ci>V</m:ci>
+                          <m:apply>
+                            <m:times/>
+                            <m:ci>i</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:partialdiff/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>z</m:ci>
+                            <m:ci>j</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:matrixrow>
+                </m:matrix>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">H_{ij}=\begin{bmatrix}{\partial^{2}V_{ij}\over\partial x_{i}\partial x_{j}}&amp;{%
+\partial^{2}V_{ij}\over\partial x_{i}\partial y_{j}}&amp;{\partial^{2}V_{ij}\over%
+\partial x_{i}\partial z_{j}}\\
+{\partial^{2}V_{ij}\over\partial y_{i}\partial x_{j}}&amp;{\partial^{2}V_{ij}\over%
+\partial y_{i}\partial y_{j}}&amp;{\partial^{2}V_{ij}\over\partial y_{i}\partial z%
+_{j}}\\
+{\partial^{2}V_{ij}\over\partial z_{i}\partial x_{j}}&amp;{\partial^{2}V_{ij}\over%
+\partial z_{i}\partial y_{j}}&amp;{\partial^{2}V_{ij}\over\partial z_{i}\partial z%
+_{j}}\end{bmatrix}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-20</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:msub>
+                  <m:mi>r</m:mi>
+                  <m:mrow>
+                    <m:mi>x</m:mi>
+                    <m:mi>y</m:mi>
+                  </m:mrow>
+                </m:msub>
+                <m:mo>=</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:munderover>
+                        <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mo>=</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                        <m:mi>n</m:mi>
+                      </m:munderover>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mi>i</m:mi>
+                          </m:msub>
+                          <m:mo>-</m:mo>
+                          <m:mover accent="true">
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                          </m:mover>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:msub>
+                            <m:mi>y</m:mi>
+                            <m:mi>i</m:mi>
+                          </m:msub>
+                          <m:mo>-</m:mo>
+                          <m:mover accent="true">
+                            <m:mi>y</m:mi>
+                            <m:mo>¯</m:mo>
+                          </m:mover>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mrow>
+                        <m:mi>n</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:msub>
+                      <m:mi>s</m:mi>
+                      <m:mi>x</m:mi>
+                    </m:msub>
+                    <m:msub>
+                      <m:mi>s</m:mi>
+                      <m:mi>y</m:mi>
+                    </m:msub>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>=</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:munderover>
+                        <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                        <m:mrow>
+                          <m:mi>i</m:mi>
+                          <m:mo>=</m:mo>
+                          <m:mn>1</m:mn>
+                        </m:mrow>
+                        <m:mi>n</m:mi>
+                      </m:munderover>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mi>i</m:mi>
+                          </m:msub>
+                          <m:mo>-</m:mo>
+                          <m:mover accent="true">
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                          </m:mover>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:msub>
+                            <m:mi>y</m:mi>
+                            <m:mi>i</m:mi>
+                          </m:msub>
+                          <m:mo>-</m:mo>
+                          <m:mover accent="true">
+                            <m:mi>y</m:mi>
+                            <m:mo>¯</m:mo>
+                          </m:mover>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:msqrt>
+                    <m:mrow>
+                      <m:mstyle displaystyle="false">
+                        <m:munderover>
+                          <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                          <m:mrow>
+                            <m:mi>i</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>n</m:mi>
+                        </m:munderover>
+                      </m:mstyle>
+                      <m:mrow>
+                        <m:msup>
+                          <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mrow>
+                              <m:msub>
+                                <m:mi>x</m:mi>
+                                <m:mi>i</m:mi>
+                              </m:msub>
+                              <m:mo>-</m:mo>
+                              <m:mover accent="true">
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                              </m:mover>
+                            </m:mrow>
+                            <m:mo>)</m:mo>
+                          </m:mrow>
+                          <m:mn>2</m:mn>
+                        </m:msup>
+                        <m:mrow>
+                          <m:mstyle displaystyle="false">
+                            <m:munderover>
+                              <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                              <m:mrow>
+                                <m:mi>i</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>1</m:mn>
+                              </m:mrow>
+                              <m:mi>n</m:mi>
+                            </m:munderover>
+                          </m:mstyle>
+                          <m:msup>
+                            <m:mrow>
+                              <m:mo>(</m:mo>
+                              <m:mrow>
+                                <m:msub>
+                                  <m:mi>y</m:mi>
+                                  <m:mi>i</m:mi>
+                                </m:msub>
+                                <m:mo>-</m:mo>
+                                <m:mover accent="true">
+                                  <m:mi>y</m:mi>
+                                  <m:mo>¯</m:mo>
+                                </m:mover>
+                              </m:mrow>
+                              <m:mo>)</m:mo>
+                            </m:mrow>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                        </m:mrow>
+                      </m:mrow>
+                    </m:mrow>
+                  </m:msqrt>
+                </m:mfrac>
+              </m:mrow>
+              <m:mo>,</m:mo>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:and/>
+                <m:apply>
+                  <m:eq/>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                    <m:ci>r</m:ci>
+                    <m:apply>
+                      <m:times/>
+                      <m:ci>x</m:ci>
+                      <m:ci>y</m:ci>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:sum/>
+                          <m:apply>
+                            <m:eq/>
+                            <m:ci>i</m:ci>
+                            <m:cn type="integer">1</m:cn>
+                          </m:apply>
+                        </m:apply>
+                        <m:ci>n</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                          <m:apply>
+                            <m:ci>normal-¯</m:ci>
+                            <m:ci>x</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                          <m:apply>
+                            <m:ci>normal-¯</m:ci>
+                            <m:ci>y</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:minus/>
+                        <m:ci>n</m:ci>
+                        <m:cn type="integer">1</m:cn>
+                      </m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>s</m:ci>
+                        <m:ci>x</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:ci>s</m:ci>
+                        <m:ci>y</m:ci>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:eq/>
+                  <m:share href="#.cmml"/>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:sum/>
+                          <m:apply>
+                            <m:eq/>
+                            <m:ci>i</m:ci>
+                            <m:cn type="integer">1</m:cn>
+                          </m:apply>
+                        </m:apply>
+                        <m:ci>n</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>x</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                          <m:apply>
+                            <m:ci>normal-¯</m:ci>
+                            <m:ci>x</m:ci>
+                          </m:apply>
+                        </m:apply>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:ci>y</m:ci>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                          <m:apply>
+                            <m:ci>normal-¯</m:ci>
+                            <m:ci>y</m:ci>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:root/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:sum/>
+                            <m:apply>
+                              <m:eq/>
+                              <m:ci>i</m:ci>
+                              <m:cn type="integer">1</m:cn>
+                            </m:apply>
+                          </m:apply>
+                          <m:ci>n</m:ci>
+                        </m:apply>
+                        <m:apply>
+                          <m:times/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                            <m:apply>
+                              <m:minus/>
+                              <m:apply>
+                                <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                                <m:ci>x</m:ci>
+                                <m:ci>i</m:ci>
+                              </m:apply>
+                              <m:apply>
+                                <m:ci>normal-¯</m:ci>
+                                <m:ci>x</m:ci>
+                              </m:apply>
+                            </m:apply>
+                            <m:cn type="integer">2</m:cn>
+                          </m:apply>
+                          <m:apply>
+                            <m:apply>
+                              <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                              <m:apply>
+                                <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                                <m:sum/>
+                                <m:apply>
+                                  <m:eq/>
+                                  <m:ci>i</m:ci>
+                                  <m:cn type="integer">1</m:cn>
+                                </m:apply>
+                              </m:apply>
+                              <m:ci>n</m:ci>
+                            </m:apply>
+                            <m:apply>
+                              <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                              <m:apply>
+                                <m:minus/>
+                                <m:apply>
+                                  <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                                  <m:ci>y</m:ci>
+                                  <m:ci>i</m:ci>
+                                </m:apply>
+                                <m:apply>
+                                  <m:ci>normal-¯</m:ci>
+                                  <m:ci>y</m:ci>
+                                </m:apply>
+                              </m:apply>
+                              <m:cn type="integer">2</m:cn>
+                            </m:apply>
+                          </m:apply>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">r_{xy}=\frac{\sum\limits_{i=1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{(n-1)s_{x}s_%
+{y}}=\frac{\sum\limits_{i=1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sqrt{\sum%
+\limits_{i=1}^{n}(x_{i}-\bar{x})^{2}\sum\limits_{i=1}^{n}(y_{i}-\bar{y})^{2}}},</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-21</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mo>-</m:mo>
+              <m:mrow>
+                <m:mn>0.</m:mn>
+                <m:qvar>*1*</m:qvar>
+                <m:mi mathvariant="normal">…</m:mi>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:minus/>
+                <m:apply>
+                  <m:times/>
+                  <m:cn type="float">0.</m:cn>
+                  <m:qvar>*1*</m:qvar>
+                  <m:ci>normal-…</m:ci>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">-0.\qvar{*1*}\ldots</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-22</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:msup>
+              <m:mi>𝔓</m:mi>
+              <m:qvar>*1*</m:qvar>
+            </m:msup>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                <m:ci>𝔓</m:ci>
+                <m:qvar>*1*</m:qvar>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\mathfrak{P}^{\qvar{*1*}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-23</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:qvar>*1*</m:qvar>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mtext>Frequency </m:mtext>
+                    <m:qvar>*2*</m:qvar>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mtext>Frequency </m:mtext>
+					<m:qvar>*3*</m:qvar>
+                  </m:mrow>
+                </m:mfrac>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:times/>
+                <m:qvar>*1*</m:qvar>
+                <m:apply>
+					<m:divide/>
+					<m:apply>
+					<m:times/>
+				  	  <m:ci>Frequency</m:ci>
+					  <m:qvar>*2*</m:qvar>
+					</m:apply>	
+					<m:apply>
+						<m:times/>
+						<m:ci>Frequency</m:ci>
+						<m:qvar>*3*</m:qvar>
+					</m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}\left(\frac{\text{Frequency \qvar{*2*}}}{\text{Frequency \qvar{*3*}}%
+}\right)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-24</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:munder>
+              <m:munder accentunder="true">
+                <m:qvar>*1*</m:qvar>
+                <m:mo movablelimits="false">⏟</m:mo>
+              </m:munder>
+              <m:qvar>*2*</m:qvar>
+            </m:munder>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                <m:apply>
+                  <m:ci>normal-⏟</m:ci>
+                  <m:qvar>*1*</m:qvar>
+                </m:apply>
+                <m:qvar>*2*</m:qvar>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\underbrace{\qvar{*1*}}_{\qvar{*2*}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-25</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mn>1</m:mn>
+              <m:mo>+</m:mo>
+              <m:mstyle displaystyle="true">
+                <m:mfrac>
+                  <m:mn>1</m:mn>
+                  <m:mrow>
+                    <m:qvar>*1*</m:qvar>
+                    <m:mo>+</m:mo>
+                    <m:mstyle displaystyle="true">
+                      <m:mfrac>
+                        <m:mn>1</m:mn>
+                        <m:qvar>*2*</m:qvar>
+                      </m:mfrac>
+                    </m:mstyle>
+                  </m:mrow>
+                </m:mfrac>
+              </m:mstyle>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:plus/>
+                <m:cn type="integer">1</m:cn>
+                <m:apply>
+                  <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                  <m:cn type="integer">1</m:cn>
+                  <m:apply>
+                    <m:plus/>
+                    <m:qvar>*1*</m:qvar>
+                    <m:apply>
+                      <m:csymbol cd="latexml">continued-fraction</m:csymbol>
+                      <m:cn type="integer">1</m:cn>
+                      <m:qvar>*2*</m:qvar>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">1+\cfrac{1}{\qvar{*1*}+\cfrac{1}{\qvar{*2*}}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-26</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mmultiscripts>
+                  <m:mi mathvariant="normal">U</m:mi>
+                  <m:mprescripts/>
+                  <m:mn>92</m:mn>
+                  <m:mn>238</m:mn>
+                </m:mmultiscripts>
+                <m:mo>+</m:mo>
+                <m:qvar>*1*</m:qvar>
+              </m:mrow>
+              <m:mo>→</m:mo>
+              <m:qvar>*2*</m:qvar>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:ci>normal-→</m:ci>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:ci>normal-U</m:ci>
+                      <m:cn type="integer">92</m:cn>
+                    </m:apply>
+                    <m:cn type="integer">238</m:cn>
+                  </m:apply>
+                  <m:qvar>*1*</m:qvar>
+                </m:apply>
+                <m:qvar>*2*</m:qvar>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\,{}^{238}_{92}\mathrm{U}+\qvar{*1*}\to\qvar{*2*}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-27</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:msup>
+                <m:qvar>*1*</m:qvar>
+                <m:mo>∧</m:mo>
+              </m:msup>
+              <m:mover>
+                <m:mo movablelimits="false">→</m:mo>
+                <m:msup>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mo>∧</m:mo>
+                </m:msup>
+              </m:mover>
+              <m:msup>
+                <m:qvar>*3*</m:qvar>
+                <m:mo>∧</m:mo>
+              </m:msup>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:ci>normal-→</m:ci>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:qvar>*2*</m:qvar>
+                    <m:and/>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:qvar>*1*</m:qvar>
+                  <m:and/>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:qvar>*3*</m:qvar>
+                  <m:and/>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}^{\wedge}\stackrel{\qvar{*2*}^{\wedge}}{\to}\qvar{*3*}^{\wedge}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-28</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:qvar>*1*</m:qvar>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>{</m:mo>
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd columnalign="left">
+                      <m:qvar>*2*</m:qvar>
+                    </m:mtd>
+                    <m:mtd columnalign="left">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mtext>if </m:mtext>
+						  <m:qvar>*3*</m:qvar>                          
+                        </m:mrow>
+                        <m:mo>&gt;</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                  <m:mtr>
+                    <m:mtd columnalign="left">
+                      <m:qvar>*4*</m:qvar>
+                    </m:mtd>
+                    <m:mtd columnalign="left">
+                      <m:mrow>
+                        <m:mrow>
+                          <m:mtext>if </m:mtext>
+						  <m:qvar>*3*</m:qvar>                          
+                        </m:mrow>
+                        <m:mo>≤</m:mo>
+                        <m:mfrac>
+                          <m:mn>1</m:mn>
+                          <m:mn>2</m:mn>
+                        </m:mfrac>
+                      </m:mrow>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+                <m:mi/>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:qvar>*1*</m:qvar>
+                <m:apply>
+                  <m:csymbol cd="latexml">cases</m:csymbol>
+                  <m:matrix>
+                    <m:matrixrow>
+                      <m:qvar>*2*</m:qvar>
+                      <m:apply>
+                        <m:gt/>
+						<m:mtext>if</m:mtext>
+						<m:qvar>*3*</m:qvar>
+                        <m:apply>
+                          <m:divide/>
+                          <m:cn type="integer">1</m:cn>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                      </m:apply>
+                    </m:matrixrow>
+                    <m:matrixrow>
+                      <m:qvar>*4*</m:qvar>
+                      <m:apply>
+                        <m:leq/>
+						<m:mtext>if</m:mtext>
+						<m:qvar>*3*</m:qvar>
+                        <m:apply>
+                          <m:divide/>
+                          <m:cn type="integer">1</m:cn>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                      </m:apply>
+                    </m:matrixrow>
+                  </m:matrix>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}=\{\begin{array}[]{ll}\qvar{*2*}&amp;\mbox{if }\qvar{*3*}&gt;\frac{1}{2}\\
+\qvar{*4*}&amp;\mbox{if }\qvar{*3*}\leq\frac{1}{2}\\
+\end{array}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-29</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:qvar>*1*</m:qvar>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mtable>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*2*</m:qvar>
+                      </m:mtd>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*3*</m:qvar>
+                      </m:mtd>
+                    </m:mtr>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*4*</m:qvar>
+                      </m:mtd>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*5*</m:qvar>
+                      </m:mtd>
+                    </m:mtr>
+                  </m:mtable>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mo>[</m:mo>
+                  <m:mtable>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*6*</m:qvar>
+                      </m:mtd>
+                    </m:mtr>
+                    <m:mtr>
+                      <m:mtd columnalign="center">
+                        <m:qvar>*7*</m:qvar>
+                      </m:mtd>
+                    </m:mtr>
+                  </m:mtable>
+                  <m:mo>]</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:qvar>*1*</m:qvar>
+                <m:apply>
+                  <m:times/>
+                  <m:matrix>
+                    <m:matrixrow>
+                      <m:qvar>*2*</m:qvar>
+                      <m:qvar>*3*</m:qvar>
+                    </m:matrixrow>
+                    <m:matrixrow>
+                      <m:qvar>*4*</m:qvar>
+                      <m:qvar>*5*</m:qvar>
+                    </m:matrixrow>
+                  </m:matrix>
+                  <m:matrix>
+                    <m:matrixrow>
+                      <m:qvar>*6*</m:qvar>
+                    </m:matrixrow>
+                    <m:matrixrow>
+                      <m:qvar>*7*</m:qvar>
+                    </m:matrixrow>
+                  </m:matrix>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}=\begin{bmatrix}\qvar{*2*}&amp;\qvar{*3*}\\
+\qvar{*4*}&amp;\qvar{*5*}\end{bmatrix}\begin{bmatrix}\qvar{*6*}\\
+\qvar{*7*}\end{bmatrix}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-30</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>L</m:mi>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:qvar>*1*</m:qvar>
+                  <m:mo>,</m:mo>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mo>,</m:mo>
+                  <m:qvar>*3*</m:qvar>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:msubsup>
+                  <m:mo largeop="true" symmetric="true">∑</m:mo>
+                  <m:mrow>
+                    <m:qvar>*4*</m:qvar>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                  <m:mi mathvariant="normal">∞</m:mi>
+                </m:msubsup>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mi>exp</m:mi>
+                    <m:mo>⁡</m:mo>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mrow>
+                        <m:mn>2</m:mn>
+                        <m:mi>π</m:mi>
+                        <m:mi>i</m:mi>
+                        <m:qvar>*1*</m:qvar>
+                        <m:qvar>*4*</m:qvar>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:msup>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mrow>
+                        <m:qvar>*4*</m:qvar>
+                        <m:mo>+</m:mo>
+                        <m:qvar>*2*</m:qvar>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:qvar>*3*</m:qvar>
+                  </m:msup>
+                </m:mfrac>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:times/>
+                  <m:ci>L</m:ci>
+                  <m:vector>
+                    <m:qvar>*1*</m:qvar>
+                    <m:qvar>*2*</m:qvar>
+                    <m:qvar>*3*</m:qvar>
+                  </m:vector>
+                </m:apply>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:sum/>
+                      <m:apply>
+                        <m:eq/>
+                        <m:qvar>*4*</m:qvar>
+                        <m:cn type="integer">0</m:cn>
+                      </m:apply>
+                    </m:apply>
+                    <m:infinity/>
+                  </m:apply>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:exp/>
+                      <m:apply>
+                        <m:times/>
+                        <m:cn type="integer">2</m:cn>
+                        <m:ci>π</m:ci>
+                        <m:ci>i</m:ci>
+                        <m:qvar>*1*</m:qvar>
+                        <m:qvar>*4*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:apply>
+                        <m:plus/>
+                        <m:qvar>*4*</m:qvar>
+                        <m:qvar>*2*</m:qvar>
+                      </m:apply>
+                      <m:qvar>*3*</m:qvar>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">L(\qvar{*1*},\qvar{*2*},\qvar{*3*})=\sum_{\qvar{*4*}=0}^{\infty}\frac{\exp(2%
+\pi i\qvar{*1*}\qvar{*4*})}{(\qvar{*4*}+\qvar{*2*})^{\qvar{*3*}}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-31</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:qvar>*1*</m:qvar>
+                  <m:msup>
+                    <m:mi>x</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msup>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mi>x</m:mi>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:qvar>*3*</m:qvar>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mn>0</m:mn>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:times/>
+                    <m:qvar>*1*</m:qvar>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:ci>x</m:ci>
+                      <m:cn type="integer">2</m:cn>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:qvar>*2*</m:qvar>
+                    <m:ci>x</m:ci>
+                  </m:apply>
+                  <m:qvar>*3*</m:qvar>
+                </m:apply>
+                <m:cn type="integer">0</m:cn>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}x^{2}+\qvar{*2*}x+\qvar{*3*}=0</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-32</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mi>O</m:mi>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mrow>
+                  <m:qvar>*1*</m:qvar>
+                  <m:mrow>
+                    <m:mi>log</m:mi>
+                    <m:mo>⁡</m:mo>
+                    <m:qvar>*2*</m:qvar>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:times/>
+                <m:ci>O</m:ci>
+                <m:apply>
+                  <m:times/>
+                  <m:qvar>*1*</m:qvar>
+                  <m:apply>
+                    <m:log/>
+                    <m:qvar>*2*</m:qvar>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">O(\qvar{*1*}\log\qvar{*2*})</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-33</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>A</m:mi>
+                <m:qvar>*1*</m:qvar>
+                <m:mi>B</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:qvar>*3*</m:qvar>
+              </m:msup>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:times/>
+                  <m:ci>A</m:ci>
+                  <m:qvar>*1*</m:qvar>
+                  <m:ci>B</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:qvar>*2*</m:qvar>
+                  <m:qvar>*3*</m:qvar>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">A~{}\qvar{*1*}~{}B=(\qvar{*2*})^{\qvar{*3*}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-34</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:qvar>*1*</m:qvar>
+                <m:mi>α</m:mi>
+              </m:mrow>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mrow>
+                  <m:mo>-</m:mo>
+                  <m:mrow>
+                    <m:qvar>*1*</m:qvar>
+                    <m:mi>β</m:mi>
+                    <m:qvar>*1*</m:qvar>
+                    <m:mi>γ</m:mi>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>+</m:mo>
+                <m:mrow>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mi>β</m:mi>
+                  <m:qvar>*2*</m:qvar>
+                  <m:mi>γ</m:mi>
+                  <m:qvar>*3*</m:qvar>
+                </m:mrow>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:times/>
+                  <m:qvar>*1*</m:qvar>
+                  <m:ci>α</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:plus/>
+                  <m:apply>
+                    <m:minus/>
+                    <m:apply>
+                      <m:times/>
+                      <m:qvar>*1*</m:qvar>
+                      <m:ci>β</m:ci>
+                      <m:qvar>*1*</m:qvar>
+                      <m:ci>γ</m:ci>
+                    </m:apply>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:qvar>*2*</m:qvar>
+                    <m:ci>β</m:ci>
+                    <m:qvar>*2*</m:qvar>
+                    <m:ci>γ</m:ci>
+                    <m:qvar>*3*</m:qvar>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}\alpha=-\qvar{*1*}\beta\qvar{*1*}\gamma+\qvar{*2*}\beta\qvar{*2*}%
+\gamma\qvar{*3*}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-35</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mo>∀</m:mo>
+              <m:mi>x</m:mi>
+              <m:mo>,</m:mo>
+              <m:mi>y</m:mi>
+              <m:mo>∈</m:mo>
+              <m:qvar>*1*</m:qvar>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mi>x</m:mi>
+                <m:mo>≠</m:mo>
+                <m:mi>y</m:mi>
+                <m:mo>→</m:mo>
+                <m:qvar>*2*</m:qvar>
+                <m:mo>]</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:cerror>
+                <m:csymbol cd="ambiguous">fragments</m:csymbol>
+                <m:csymbol cd="latexml">for-all</m:csymbol>
+                <m:csymbol cd="unknown">x</m:csymbol>
+                <m:ci>normal-,</m:ci>
+                <m:csymbol cd="unknown">y</m:csymbol>
+                <m:in/>
+                <m:qvar>*1*</m:qvar>
+                <m:cerror>
+                  <m:csymbol cd="ambiguous">fragments</m:csymbol>
+                  <m:ci>normal-[</m:ci>
+                  <m:csymbol cd="unknown">x</m:csymbol>
+                  <m:neq/>
+                  <m:csymbol cd="unknown">y</m:csymbol>
+                  <m:ci>normal-→</m:ci>
+                  <m:qvar>*2*</m:qvar>
+                  <m:ci>normal-]</m:ci>
+                </m:cerror>
+              </m:cerror>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\forall x,y\in\qvar{*1*}\;[x\neq y\rightarrow\qvar{*2*}]</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-36</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:qvar>*1*</m:qvar>
+              <m:mo>=</m:mo>
+              <m:msqrt>
+                <m:mfrac>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:msubsup>
+                        <m:mo largeop="true" symmetric="true">∫</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mi mathvariant="normal">∞</m:mi>
+                      </m:msubsup>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:msup>
+                        <m:qvar>*2*</m:qvar>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                      <m:qvar>*3*</m:qvar>
+                      <m:mi>d</m:mi>
+                      <m:qvar>*1*</m:qvar>
+                    </m:mrow>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mstyle displaystyle="false">
+                      <m:msubsup>
+                        <m:mo largeop="true" symmetric="true">∫</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mi mathvariant="normal">∞</m:mi>
+                      </m:msubsup>
+                    </m:mstyle>
+                    <m:mrow>
+                      <m:qvar>*3*</m:qvar>
+                      <m:mi>d</m:mi>
+                      <m:qvar>*1*</m:qvar>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mfrac>
+              </m:msqrt>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:qvar>*1*</m:qvar>
+                <m:apply>
+                  <m:root/>
+                  <m:apply>
+                    <m:divide/>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:int/>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:infinity/>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:qvar>*2*</m:qvar>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:qvar>*3*</m:qvar>
+                        <m:ci>d</m:ci>
+                        <m:qvar>*1*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                          <m:int/>
+                          <m:cn type="integer">0</m:cn>
+                        </m:apply>
+                        <m:infinity/>
+                      </m:apply>
+                      <m:apply>
+                        <m:times/>
+                        <m:qvar>*3*</m:qvar>
+                        <m:ci>d</m:ci>
+                        <m:qvar>*1*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\qvar{*1*}=\sqrt{\frac{\int_{0}^{\infty}\qvar{*2*}^{2}\qvar{*3*}~{}d\qvar{*1*}%
+}{\int_{0}^{\infty}\qvar{*3*}~{}d\qvar{*1*}}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-37</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:qvar>*1*</m:qvar>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:qvar>*2*</m:qvar>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:qvar>*3*</m:qvar>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:qvar>*4*</m:qvar>
+              </m:mfrac>
+              <m:mo>-</m:mo>
+              <m:mfrac>
+                <m:mn>1</m:mn>
+                <m:qvar>*5*</m:qvar>
+              </m:mfrac>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:minus/>
+                <m:apply>
+                  <m:divide/>
+                  <m:cn type="integer">1</m:cn>
+                  <m:qvar>*1*</m:qvar>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:cn type="integer">1</m:cn>
+                  <m:qvar>*2*</m:qvar>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:cn type="integer">1</m:cn>
+                  <m:qvar>*3*</m:qvar>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:cn type="integer">1</m:cn>
+                  <m:qvar>*4*</m:qvar>
+                </m:apply>
+                <m:apply>
+                  <m:divide/>
+                  <m:cn type="integer">1</m:cn>
+                  <m:qvar>*5*</m:qvar>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\frac{1}{\qvar{*1*}}-\frac{1}{\qvar{*2*}}-\frac{1}{\qvar{*3*}}-\frac{1}{\qvar{%
+*4*}}-\frac{1}{\qvar{*5*}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-38</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>N</m:mi>
+                  <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mrow>
+                    <m:qvar>*1*</m:qvar>
+                    <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mrow>
+                        <m:mi>N</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:qvar>*1*</m:qvar>
+                      </m:mrow>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mo lspace="0pt" rspace="3.5pt">!</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mfrac>
+              <m:msup>
+                <m:mi>p</m:mi>
+                <m:qvar>*1*</m:qvar>
+              </m:msup>
+              <m:msup>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>N</m:mi>
+                  <m:mo>-</m:mo>
+                  <m:qvar>*1*</m:qvar>
+                </m:mrow>
+              </m:msup>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:times/>
+                <m:apply>
+                  <m:divide/>
+                  <m:apply>
+                    <m:factorial/>
+                    <m:ci>N</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:apply>
+                      <m:factorial/>
+                      <m:qvar>*1*</m:qvar>
+                    </m:apply>
+                    <m:apply>
+                      <m:factorial/>
+                      <m:apply>
+                        <m:minus/>
+                        <m:ci>N</m:ci>
+                        <m:qvar>*1*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:ci>p</m:ci>
+                  <m:qvar>*1*</m:qvar>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                  <m:apply>
+                    <m:minus/>
+                    <m:cn type="integer">1</m:cn>
+                    <m:ci>p</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:minus/>
+                    <m:ci>N</m:ci>
+                    <m:qvar>*1*</m:qvar>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\frac{N!}{\qvar{*1*}!(N-\qvar{*1*})!}p^{\qvar{*1*}}(1-p)^{N-\qvar{*1*}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-39</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mrow>
+              <m:msub>
+                <m:mi>H</m:mi>
+                <m:qvar>*1*</m:qvar>
+              </m:msub>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo>[</m:mo>
+                <m:mtable>
+                  <m:mtr>
+                    <m:mtd columnalign="center">
+                      <m:mfrac>
+                        <m:mrow>
+                          <m:msup>
+                            <m:mo>∂</m:mo>
+                            <m:mn>2</m:mn>
+                          </m:msup>
+                          <m:mo>⁡</m:mo>
+                          <m:qvar>*2*</m:qvar>
+                        </m:mrow>
+                        <m:qvar>*3*</m:qvar>
+                      </m:mfrac>
+                    </m:mtd>
+                  </m:mtr>
+                </m:mtable>
+                <m:mo>]</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:eq/>
+                <m:apply>
+                  <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                  <m:ci>H</m:ci>
+                  <m:qvar>*1*</m:qvar>
+                </m:apply>
+                <m:matrix>
+                  <m:matrixrow>
+                    <m:apply>
+                      <m:divide/>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:partialdiff/>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                        <m:qvar>*2*</m:qvar>
+                      </m:apply>
+                      <m:qvar>*3*</m:qvar>
+                    </m:apply>
+                  </m:matrixrow>
+                </m:matrix>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">H_{\qvar{*1*}}=\begin{bmatrix}{\partial^{2}\qvar{*2*}\over\qvar{*3*}}\end{bmatrix}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>NTCIR12-MathWiki-40</num>
+    <query>
+      <formula id="f.0">
+        <m:math>
+          <m:semantics>
+            <m:mfrac>
+              <m:mrow>
+                <m:mstyle displaystyle="false">
+                  <m:munderover>
+                    <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                    <m:mrow>
+                      <m:mi>i</m:mi>
+                      <m:mo>=</m:mo>
+                      <m:mn>1</m:mn>
+                    </m:mrow>
+                    <m:mi>n</m:mi>
+                  </m:munderover>
+                </m:mstyle>
+                <m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:msub>
+                        <m:qvar>*1*</m:qvar>
+                        <m:mi>i</m:mi>
+                      </m:msub>
+                      <m:mo>-</m:mo>
+                      <m:mover accent="true">
+                        <m:qvar>*1*</m:qvar>
+                        <m:mo>¯</m:mo>
+                      </m:mover>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:msub>
+                        <m:qvar>*2*</m:qvar>
+                        <m:mi>i</m:mi>
+                      </m:msub>
+                      <m:mo>-</m:mo>
+                      <m:mover accent="true">
+                        <m:qvar>*2*</m:qvar>
+                        <m:mo>¯</m:mo>
+                      </m:mover>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mrow>
+              <m:msqrt>
+                <m:mrow>
+                  <m:mstyle displaystyle="false">
+                    <m:munderover>
+                      <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                      <m:mrow>
+                        <m:mi>i</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>1</m:mn>
+                      </m:mrow>
+                      <m:mi>n</m:mi>
+                    </m:munderover>
+                  </m:mstyle>
+                  <m:mrow>
+                    <m:msup>
+                      <m:mrow>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                          <m:msub>
+                            <m:qvar>*1*</m:qvar>
+                            <m:mi>i</m:mi>
+                          </m:msub>
+                          <m:mo>-</m:mo>
+                          <m:mover accent="true">
+                            <m:qvar>*1*</m:qvar>
+                            <m:mo>¯</m:mo>
+                          </m:mover>
+                        </m:mrow>
+                        <m:mo>)</m:mo>
+                      </m:mrow>
+                      <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mrow>
+                      <m:mstyle displaystyle="false">
+                        <m:munderover>
+                          <m:mo largeop="true" movablelimits="false" symmetric="true">∑</m:mo>
+                          <m:mrow>
+                            <m:mi>i</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                          </m:mrow>
+                          <m:mi>n</m:mi>
+                        </m:munderover>
+                      </m:mstyle>
+                      <m:msup>
+                        <m:mrow>
+                          <m:mo>(</m:mo>
+                          <m:mrow>
+                            <m:msub>
+                              <m:qvar>*2*</m:qvar>
+                              <m:mi>i</m:mi>
+                            </m:msub>
+                            <m:mo>-</m:mo>
+                            <m:mover accent="true">
+                              <m:qvar>*2*</m:qvar>
+                              <m:mo>¯</m:mo>
+                            </m:mover>
+                          </m:mrow>
+                          <m:mo>)</m:mo>
+                        </m:mrow>
+                        <m:mn>2</m:mn>
+                      </m:msup>
+                    </m:mrow>
+                  </m:mrow>
+                </m:mrow>
+              </m:msqrt>
+            </m:mfrac>
+            <m:annotation-xml encoding="MathML-Content">
+              <m:apply>
+                <m:divide/>
+                <m:apply>
+                  <m:apply>
+                    <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                      <m:sum/>
+                      <m:apply>
+                        <m:eq/>
+                        <m:ci>i</m:ci>
+                        <m:cn type="integer">1</m:cn>
+                      </m:apply>
+                    </m:apply>
+                    <m:ci>n</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                    <m:apply>
+                      <m:minus/>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:qvar>*1*</m:qvar>
+                        <m:ci>i</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:ci>normal-¯</m:ci>
+                        <m:qvar>*1*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                    <m:apply>
+                      <m:minus/>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:qvar>*2*</m:qvar>
+                        <m:ci>i</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:ci>normal-¯</m:ci>
+                        <m:qvar>*2*</m:qvar>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+                <m:apply>
+                  <m:root/>
+                  <m:apply>
+                    <m:apply>
+                      <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                        <m:sum/>
+                        <m:apply>
+                          <m:eq/>
+                          <m:ci>i</m:ci>
+                          <m:cn type="integer">1</m:cn>
+                        </m:apply>
+                      </m:apply>
+                      <m:ci>n</m:ci>
+                    </m:apply>
+                    <m:apply>
+                      <m:times/>
+                      <m:apply>
+                        <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                        <m:apply>
+                          <m:minus/>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:qvar>*1*</m:qvar>
+                            <m:ci>i</m:ci>
+                          </m:apply>
+                          <m:apply>
+                            <m:ci>normal-¯</m:ci>
+                            <m:qvar>*1*</m:qvar>
+                          </m:apply>
+                        </m:apply>
+                        <m:cn type="integer">2</m:cn>
+                      </m:apply>
+                      <m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:apply>
+                            <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                            <m:sum/>
+                            <m:apply>
+                              <m:eq/>
+                              <m:ci>i</m:ci>
+                              <m:cn type="integer">1</m:cn>
+                            </m:apply>
+                          </m:apply>
+                          <m:ci>n</m:ci>
+                        </m:apply>
+                        <m:apply>
+                          <m:csymbol cd="ambiguous">superscript</m:csymbol>
+                          <m:apply>
+                            <m:minus/>
+                            <m:apply>
+                              <m:csymbol cd="ambiguous">subscript</m:csymbol>
+                              <m:qvar>*2*</m:qvar>
+                              <m:ci>i</m:ci>
+                            </m:apply>
+                            <m:apply>
+                              <m:ci>normal-¯</m:ci>
+                              <m:qvar>*2*</m:qvar>
+                            </m:apply>
+                          </m:apply>
+                          <m:cn type="integer">2</m:cn>
+                        </m:apply>
+                      </m:apply>
+                    </m:apply>
+                  </m:apply>
+                </m:apply>
+              </m:apply>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex">\frac{\sum\limits_{i=1}^{n}(\qvar{*1*}_{i}-\bar{\qvar{*1*}})(\qvar{*2*}_{i}-%
+\bar{\qvar{*2*}})}{\sqrt{\sum\limits_{i=1}^{n}(\qvar{*1*}_{i}-\bar{\qvar{*1*}}%
+)^{2}\sum\limits_{i=1}^{n}(\qvar{*2*}_{i}-\bar{\qvar{*2*}})^{2}}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+    </query>
+  </topic>
+</topics>

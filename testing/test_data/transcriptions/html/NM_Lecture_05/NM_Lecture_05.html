@@ -1,0 +1,693 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 5</title>
+<!--Generated on Sun Jun  4 03:57:39 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 17, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 5</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">January 17, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Linear Span of a set of vectors</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">If we have a collection of vectors, and within that space we pick a vector, we want to know the <em class="ltx_emph">span</em> of that vector. Geometrically, this is what we can reach by moving along the vector.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">If we next consider the span of two vectors, then their span contains everything we can reach by moving along either vector, but also those points that can be reached through a combination of the two vectors.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">The difference between the span of one vector and the span of two vectors is significant; in the first case it is a line, and in the second it is a plane. Depending on the space they are in, this might account for the entire space.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">This geometric interpretation is useful but we wish to understand this concept algebraically as well.</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">Suppose we are working in an <math id="Sx1.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional space, and we have a set <math id="Sx1.p5.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> of <math id="Sx1.p5.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> vectors:</p>
+<table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">Space:</td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx1.Ex1.m2" class="ltx_Math" alttext="\displaystyle\mathds{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+              </td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex1.m3" class="ltx_Math" alttext="\displaystyle S" display="inline"><mi>S</mi></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx1.Ex1.m4" class="ltx_Math" alttext="\displaystyle=\left\{\vec{v_{1}},\vec{v_{2}},\dots,\vec{v_{k}}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mover accent="true" id="XM49"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" id="XM50"><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><mo>,</mo><mi mathvariant="normal" id="XM51">…</mi><mo>,</mo><mover accent="true" id="XM52"><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">What exactly is the linear span of <math id="Sx1.p5.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>?</p>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">Intuitively, we have an idea of this concept: given all of these vectors along which we can travel, what places can be visited in the space? Can all points be visited or is it limited? In what way is it limited?</p>
+</div>
+<div id="Sx1.p7" class="ltx_para">
+<p class="ltx_p">Suppose, for instance, that we are dealing with the space <math id="Sx1.p7.m1" class="ltx_Math" alttext="\mathds{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>. This space is similar to a room, so perhaps the vectors that we are given all lie on the floor of such a room. Then the span of those vectors would be restricted to the floor. No points above the floor can be reached by vectors lying in the floor. Thus the span of these vectors is confined to a plane. Formally: two vectors in the <math id="Sx1.p7.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane may be able to span the entire <math id="Sx1.p7.m3" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane.</p>
+</div>
+<div id="Sx1.p8" class="ltx_para">
+<p class="ltx_p">Is the use of the phrase “may be” necessary here, or is it always the case that two vectors in the <math id="Sx1.p8.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane will span the entire <math id="Sx1.p8.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane? Consider a specific example: suppose the two vectors are</p>
+<table id="Sx1.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\displaystyle v_{1}=\begin{bmatrix}1\\
+0\\
+0\end{bmatrix}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable id="Sx1.Ex2.m1.xm1"><mtr id="Sx1.Ex2.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex2.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex2.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex2.m1.xm1d"><mn>0</mn></mtd></mtr><mtr id="Sx1.Ex2.m1.xm1e"><mtd columnalign="center" id="Sx1.Ex2.m1.xm1f"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx1.Ex2.m3" class="ltx_Math" alttext="\displaystyle v_{2}=\begin{bmatrix}-3\\
+0\\
+0\end{bmatrix}" display="inline"><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable id="Sx1.Ex2.m3.xm1"><mtr id="Sx1.Ex2.m3.xm1a"><mtd columnalign="center" id="Sx1.Ex2.m3.xm1b"><mrow><mo>-</mo><mn>3</mn></mrow></mtd></mtr><mtr id="Sx1.Ex2.m3.xm1c"><mtd columnalign="center" id="Sx1.Ex2.m3.xm1d"><mn>0</mn></mtd></mtr><mtr id="Sx1.Ex2.m3.xm1e"><mtd columnalign="center" id="Sx1.Ex2.m3.xm1f"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Both vectors are aligned with the <math id="Sx1.p8.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis, so in this case their span is only a single line.</p>
+</div>
+<div id="Sx1.p9" class="ltx_para">
+<p class="ltx_p">Some key questions that we may ask ourselves now are:</p>
+</div>
+<section id="Sx1.SS0.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Given a set of vectors describe geometric and algebraic picture of the span.</p>
+</div>
+</section>
+<section id="Sx1.SS0.SSS0.Px2" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Given a vector <math id="Sx1.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>, does it lie in the span of <math id="Sx1.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>?
+</p>
+</div>
+</section>
+<section id="Sx1.SS0.SSS0.Px3" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">How many vectors are required to span <math id="Sx1.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\mathds{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>? What is the <em class="ltx_emph">minimum number</em> needed?</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">First, let us introduce the definition of linear span.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p3" class="ltx_para">
+<span class="ltx_inline-block ltx_minipage ltx_align_top" style="width:411.9pt;">
+<span class="ltx_p">Let <math id="Sx1.SS0.SSS0.Px3.p3.m1" class="ltx_Math" alttext="S=\left\{v_{1},v_{2},\dots,v_{k}\right\}\in\mathds{R}^{n}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><msub id="XM57"><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub id="XM58"><mi>v</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM55">…</mi><mo>,</mo><msub id="XM59"><mi>v</mi><mi>k</mi></msub><mo>}</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>. The <span class="ltx_text ltx_font_bold">linear span</span> <math id="Sx1.SS0.SSS0.Px3.p3.m2" class="ltx_Math" alttext="L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM60">S</mi><mo stretchy="false">)</mo></mrow></mrow></math> of the set of vectors <math id="Sx1.SS0.SSS0.Px3.p3.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is</span>
+<table id="Sx1.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\displaystyle L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM64">S</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx1.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\left\{w\in\mathds{R}^{n}\,|\,w=\text{linear combination of %
+vectors in $S$}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM65"><mi>w</mi><mo>∈</mo><mpadded width="+1.7pt"><msup><mi>ℝ</mi><mi>n</mi></msup></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM66"><mi>w</mi><mo>=</mo><mrow><mtext>linear combination of vectors in </mtext><mi>S</mi></mrow></mrow><mo>}</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx1.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\text{collection of all possible linear combinations of vectors %
+in $S$}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mtext>collection of all possible linear combinations of vectors in </mtext><mi>S</mi></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</span>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p4" class="ltx_para">
+<p class="ltx_p">This is a very loaded definition, in particular, the phrase <span class="ltx_text ltx_font_bold">linear combination</span> has a very precise meaning. We say that a vector <math id="Sx1.SS0.SSS0.Px3.p4.m1" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> is a linear combination of vectors in <math id="Sx1.SS0.SSS0.Px3.p4.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> if</p>
+<table id="Sx1.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex5.m1" class="ltx_Math" alttext="\displaystyle w" display="inline"><mi>w</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex5.m2" class="ltx_Math" alttext="\displaystyle=c_{1}v_{1}+c_{2}v_{2}+\dots+c_{k}v_{k}\qquad c_{i}=\text{scalars%
+ from $\mathds{R}$}" display="inline"><mrow><mrow id="XM69"><mi></mi><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow id="XM70"><msub><mi>c</mi><mi>i</mi></msub><mo>=</mo><mrow><mtext>scalars from </mtext><mi>ℝ</mi></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p5" class="ltx_para">
+<p class="ltx_p">To explore these ideas, let us consider a familiar space: <math id="Sx1.SS0.SSS0.Px3.p5.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p6" class="ltx_para">
+<p class="ltx_p">Suppose we are given one vector. What is the linear span in this case?
+</p>
+<table id="Sx1.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex6.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\vec{v_{1}}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mover accent="true" id="XM72"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex6.m3" class="ltx_Math" alttext="\displaystyle L(S)=\left\{c\vec{v_{1}}\,|\,c\in\mathds{R}\right\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM76">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow id="XM77"><mi>c</mi><mo>⁢</mo><mpadded width="+1.7pt"><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM78"><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this case, the linear span is a line. This is the algebraic picture of the span. Geometrically, the span is a line in the direction of <math id="Sx1.SS0.SSS0.Px3.p6.m1" class="ltx_Math" alttext="\vec{v_{1}}" display="inline"><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></math>. But there are many lines in any given direction – in fact, there are infinitely many. Which one is the span? Considering that we can pick any value for the scalar <math id="Sx1.SS0.SSS0.Px3.p6.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, we can pick <math id="Sx1.SS0.SSS0.Px3.p6.m3" class="ltx_Math" alttext="c=0" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow></math>, and so the point <math id="Sx1.SS0.SSS0.Px3.p6.m4" class="ltx_Math" alttext="0\vec{v_{1}}=\vec{0}" display="inline"><mrow><mrow><mn>0</mn><mo>⁢</mo><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math> is on the line. This means it must be the line in the direction of <math id="Sx1.SS0.SSS0.Px3.p6.m5" class="ltx_Math" alttext="\vec{v_{1}}" display="inline"><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></math> through the origin.</p>
+</div>
+<figure id="Sx1.SS0.SSS0.Px3.fig1" class="ltx_figure">
+<p class="ltx_p ltx_align_center"><math id="Sx1.SS0.SSS0.Px3.m1" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn id="XM79">0</mn><mo>,</mo><mn id="XM80">0</mn><mo stretchy="false">)</mo></mrow></math></p>
+</figure>
+<div id="Sx1.SS0.SSS0.Px3.p7" class="ltx_para">
+<p class="ltx_p">Next, consider if the set contains two vectors. Then</p>
+<table id="Sx1.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex7.m1" class="ltx_Math" alttext="\displaystyle S=\left\{v_{1},v_{2}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><msub id="XM87"><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub id="XM88"><mi>v</mi><mn>2</mn></msub><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex7.m3" class="ltx_Math" alttext="\displaystyle L(S)=\left\{c_{1}v_{1}+c_{2}v_{2}\,|\,c_{1},c_{2}\in\mathds{R}\right\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM96">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow id="XM101"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>v</mi><mn>2</mn></msub></mpadded></mrow></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM102"><mrow><msub id="XM99"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM100"><mi>c</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">How can we interpret this geometrically and algebraically? There are two cases to consider: if the two vectors are pointing in different directions, then their combinations will allow us to reach any point, so the span is the entire plane. If, on the other hand, the vectors point in the same direction, then their span will simply be a line – <em class="ltx_emph">the</em> line – that they both point in.</p>
+</div>
+<figure id="Sx1.SS0.SSS0.Px3.fig2" class="ltx_figure">
+<p class="ltx_p ltx_align_center"><math id="Sx1.SS0.SSS0.Px3.m2" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math>
+<math id="Sx1.SS0.SSS0.Px3.m3" class="ltx_Math" alttext="v_{2}" display="inline"><msub><mi>v</mi><mn>2</mn></msub></math>
+<math id="Sx1.SS0.SSS0.Px3.m4" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn id="XM103">0</mn><mo>,</mo><mn id="XM104">0</mn><mo stretchy="false">)</mo></mrow></math>
+</p>
+</figure>
+<div id="Sx1.SS0.SSS0.Px3.p8" class="ltx_para">
+<p class="ltx_p">Next let us consider the case where we have a set of three vectors. For this case, let us consider a specific example.</p>
+<table id="Sx1.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex8.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\begin{pmatrix}1\\
+0\end{pmatrix},\begin{pmatrix}0\\
+1\end{pmatrix},\begin{pmatrix}2\\
+3\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM108b"><mo id="XM108">(</mo><mtable id="Sx1.Ex8.m1.xm1"><mtr id="Sx1.Ex8.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex8.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex8.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex8.m1.xm1d"><mn>0</mn></mtd></mtr></mtable><mo id="XM108a">)</mo></mrow><mo>,</mo><mrow id="XM109b"><mo id="XM109">(</mo><mtable id="Sx1.Ex8.m1.xm2"><mtr id="Sx1.Ex8.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex8.m1.xm2b"><mn>0</mn></mtd></mtr><mtr id="Sx1.Ex8.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex8.m1.xm2d"><mn>1</mn></mtd></mtr></mtable><mo id="XM109a">)</mo></mrow><mo>,</mo><mrow id="XM110b"><mo id="XM110">(</mo><mtable id="Sx1.Ex8.m1.xm3"><mtr id="Sx1.Ex8.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex8.m1.xm3b"><mn>2</mn></mtd></mtr><mtr id="Sx1.Ex8.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex8.m1.xm3d"><mn>3</mn></mtd></mtr></mtable><mo id="XM110a">)</mo></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then the span is given algebraically by</p>
+<table id="Sx1.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex9.m1" class="ltx_Math" alttext="\displaystyle L(S)=\left\{c_{1}\begin{pmatrix}1\\
+0\end{pmatrix}+c_{2}\begin{pmatrix}0\\
+1\end{pmatrix}+c_{3}\begin{pmatrix}2\\
+3\end{pmatrix}\,|\,c_{1},c_{2},c_{3}\in\mathds{R}\right\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM120">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow id="XM127"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex9.m1.xm1"><mtr id="Sx1.Ex9.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex9.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex9.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex9.m1.xm1d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex9.m1.xm2"><mtr id="Sx1.Ex9.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex9.m1.xm2b"><mn>0</mn></mtd></mtr><mtr id="Sx1.Ex9.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex9.m1.xm2d"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mpadded width="+1.7pt"><mrow><mo>(</mo><mtable id="Sx1.Ex9.m1.xm3"><mtr id="Sx1.Ex9.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex9.m1.xm3b"><mn>2</mn></mtd></mtr><mtr id="Sx1.Ex9.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex9.m1.xm3d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mpadded></mrow></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM128"><mrow><msub id="XM124"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM125"><mi>c</mi><mn>2</mn></msub><mo>,</mo><msub id="XM126"><mi>c</mi><mn>3</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This isn’t very helpful for understanding the span. What is its geometric interpretation in this case?</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p9" class="ltx_para">
+<p class="ltx_p">None of the vectors point in the same direction, so no matter which two we choose, we could travel the entire <math id="Sx1.SS0.SSS0.Px3.p9.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> space using only those two vectors. In a sense then, the third vector does not add anything to the span.</p>
+</div>
+<figure id="Sx1.SS0.SSS0.Px3.fig3" class="ltx_figure">
+<p class="ltx_p ltx_align_center"><math id="Sx1.SS0.SSS0.Px3.m5" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math>
+<math id="Sx1.SS0.SSS0.Px3.m6" class="ltx_Math" alttext="v_{2}" display="inline"><msub><mi>v</mi><mn>2</mn></msub></math>
+<math id="Sx1.SS0.SSS0.Px3.m7" class="ltx_Math" alttext="v_{3}" display="inline"><msub><mi>v</mi><mn>3</mn></msub></math></p>
+<p class="ltx_p ltx_align_center"><math id="Sx1.SS0.SSS0.Px3.m8" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn id="XM129">0</mn><mo>,</mo><mn id="XM130">0</mn><mo stretchy="false">)</mo></mrow></math></p>
+</figure>
+<div id="Sx1.SS0.SSS0.Px3.p10" class="ltx_para">
+<p class="ltx_p">These geometric and algebraic analyses are important to understanding a given set of vectors, but there must be some way of simplifying this process in order for it to be useful.</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p11" class="ltx_para">
+<p class="ltx_p">Before going on, let us note some things we have observed in the span:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The zero-vector is always in the linear span. That is, <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\vec{0}\in L(S)" display="inline"><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM131">S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM132">S</mi><mo stretchy="false">)</mo></mrow></mrow></math> usually contains infinitely many vectors.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.SS0.SSS0.Px3.p12" class="ltx_para">
+<p class="ltx_p">Is it true to say that <math id="Sx1.SS0.SSS0.Px3.p12.m1" class="ltx_Math" alttext="L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM133">S</mi><mo stretchy="false">)</mo></mrow></mrow></math> <em class="ltx_emph">always</em> contains infinitely many vectors? That is, we should answer the question of:</p>
+</div>
+</section>
+<section id="Sx1.SS0.SSS0.Px4" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Can the linear span be finite?</p>
+</div>
+<div id="Sx1.SS0.SSS0.Px4.p2" class="ltx_para">
+<p class="ltx_p">Let us consider the simplest case: suppose <math id="Sx1.SS0.SSS0.Px4.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> contains one vector. Is it possible that the span of <math id="Sx1.SS0.SSS0.Px4.p2.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> may be finite?</p>
+<table id="Sx1.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex10.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\vec{v_{1}}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mover accent="true" id="XM135"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex10.m3" class="ltx_Math" alttext="\displaystyle L(S)=\left\{c\vec{v_{1}}\,|\,c\in\mathds{R}\right\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM139">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow id="XM140"><mi>c</mi><mo>⁢</mo><mpadded width="+1.7pt"><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM141"><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It would seem that since we can pick any <math id="Sx1.SS0.SSS0.Px4.p2.m3" class="ltx_Math" alttext="c\in\mathds{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, we can obtain infinitely many vectors. However, there is one exception. Suppose <math id="Sx1.SS0.SSS0.Px4.p2.m4" class="ltx_Math" alttext="\vec{v_{1}}=\vec{0}" display="inline"><mrow><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>. Then</p>
+<table id="Sx1.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex11.m1" class="ltx_Math" alttext="\displaystyle L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM145">S</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex11.m2" class="ltx_Math" alttext="\displaystyle=\left\{c\vec{v_{1}}\,|\,c\in\mathds{R}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM146"><mi>c</mi><mo>⁢</mo><mpadded width="+1.7pt"><mover accent="true"><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM147"><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex12.m2" class="ltx_Math" alttext="\displaystyle=\left\{c\vec{0}\,|\,c\in\mathds{R}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM150"><mi>c</mi><mo>⁢</mo><mpadded width="+1.7pt"><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow id="XM151"><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx1.Ex13.m2" class="ltx_Math" alttext="\displaystyle=\left\{\vec{0}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>{</mo><mover accent="true" id="XM153"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus if the set of vectors contains just the zero vector, its span will be only the zero vector.</p>
+</div>
+</section>
+<section id="Sx1.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Determining if a Vector is in the Span of a Set of Vectors</h3>
+
+<div id="Sx1.SSx1.p1" class="ltx_para">
+<p class="ltx_p">It is natural to wonder what this has to do with solving linear systems. What is the connection between linear systems and the concept of linear span? Let us try an example.</p>
+<table id="Sx1.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex14" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex14.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\begin{pmatrix}1\\
+3\end{pmatrix},\begin{pmatrix}-2\\
+0\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM156b"><mo id="XM156">(</mo><mtable id="Sx1.Ex14.m1.xm1"><mtr id="Sx1.Ex14.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex14.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex14.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex14.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo id="XM156a">)</mo></mrow><mo>,</mo><mrow id="XM157b"><mo id="XM157">(</mo><mtable id="Sx1.Ex14.m1.xm2"><mtr id="Sx1.Ex14.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex14.m1.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex14.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex14.m1.xm2d"><mn>0</mn></mtd></mtr></mtable><mo id="XM157a">)</mo></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="Sx1.SSx1.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SSx1.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx1.SSx1.SSS0.Px1.p1.m1" class="ltx_Math" alttext="w=\begin{pmatrix}\pi\\
+e\end{pmatrix}\in L(S)" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mo>(</mo><mtable id="Sx1.SSx1.SSS0.Px1.p1.m1.xm1"><mtr id="Sx1.SSx1.SSS0.Px1.p1.m1.xm1a"><mtd columnalign="center" id="Sx1.SSx1.SSS0.Px1.p1.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.SSx1.SSS0.Px1.p1.m1.xm1c"><mtd columnalign="center" id="Sx1.SSx1.SSS0.Px1.p1.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM158">S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>?</p>
+</div>
+<div id="Sx1.SSx1.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Can we find <math id="Sx1.SSx1.SSS0.Px1.p2.m1" class="ltx_Math" alttext="c_{1},c_{2}\in\mathds{R}" display="inline"><mrow><mrow><msub id="XM159"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM160"><mi>c</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> such that</p>
+<table id="Sx1.EGx12" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex15" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex15.m1" class="ltx_Math" alttext="\displaystyle w" display="inline"><mi>w</mi></math>
+                  </td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx1.Ex15.m2" class="ltx_Math" alttext="\displaystyle=c_{1}\begin{pmatrix}1\\
+3\end{pmatrix}+c_{2}\begin{pmatrix}-2\\
+0\end{pmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex15.m2.xm1"><mtr id="Sx1.Ex15.m2.xm1a"><mtd columnalign="center" id="Sx1.Ex15.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex15.m2.xm1c"><mtd columnalign="center" id="Sx1.Ex15.m2.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex15.m2.xm2"><mtr id="Sx1.Ex15.m2.xm2a"><mtd columnalign="center" id="Sx1.Ex15.m2.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex15.m2.xm2c"><mtd columnalign="center" id="Sx1.Ex15.m2.xm2d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">this system becomes</p>
+<table id="Sx1.EGx13" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex16" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex16.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}\pi\\
+e\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx1.Ex16.m1.xm1"><mtr id="Sx1.Ex16.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex16.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.Ex16.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex16.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx1.Ex16.m2" class="ltx_Math" alttext="\displaystyle=c_{1}\begin{bmatrix}1\\
+3\end{bmatrix}+c_{2}\begin{bmatrix}-2\\
+0\end{bmatrix}\quad\Longleftrightarrow\quad\left\{\begin{aligned}\displaystyle%
+\pi&amp;\displaystyle=c_{1}-2c_{2}\\
+\displaystyle e&amp;\displaystyle=3c_{1}\end{aligned}\right\}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow id="XM166"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx1.Ex16.m2.xm1"><mtr id="Sx1.Ex16.m2.xm1a"><mtd columnalign="center" id="Sx1.Ex16.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex16.m2.xm1c"><mtd columnalign="center" id="Sx1.Ex16.m2.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx1.Ex16.m2.xm2"><mtr id="Sx1.Ex16.m2.xm2a"><mtd columnalign="center" id="Sx1.Ex16.m2.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex16.m2.xm2c"><mtd columnalign="center" id="Sx1.Ex16.m2.xm2d"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mo id="XM167">⟺</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo>{</mo><mtable id="XM165"><mtr id="XM165a"><mtd columnalign="right" id="XM165b"><mi>π</mi></mtd><mtd columnalign="left" id="XM165c"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mrow></mtd></mtr><mtr id="XM165d"><mtd columnalign="right" id="XM165e"><mi>e</mi></mtd><mtd columnalign="left" id="XM165f"><mrow><mi></mi><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the set up we have for the linear span is simply the <em class="ltx_emph">column picture</em> of a system of equations.</p>
+</div>
+<div id="Sx1.SSx1.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">We will see soon that many of the concepts that we have studied so far will now be tied together. Checking whether a vector is in the span of a set of vectors is equivalent to solving a system of linear equations, for example. In the current example, we should proceed with solving the system using augmented matrices and row operations:</p>
+<table id="Sx1.EGx14" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex17" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex17.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-2&amp;\pi\\
+3&amp;0&amp;e\end{matrix}\right]\xrightarrow[]{-3R_{1}+R_{2}}\left[\begin{matrix}1&amp;-2&amp;%
+\pi\\
+0&amp;6&amp;e-3\pi\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM171"><mtr id="XM171a"><mtd columnalign="center" id="XM171b"><mn>1</mn></mtd><mtd columnalign="center" id="XM171c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM171d"><mi>π</mi></mtd></mtr><mtr id="XM171e"><mtd columnalign="center" id="XM171f"><mn>3</mn></mtd><mtd columnalign="center" id="XM171g"><mn>0</mn></mtd><mtd columnalign="center" id="XM171h"><mi>e</mi></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo>→</mo><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>R</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mover><mrow><mo>[</mo><mtable id="XM172"><mtr id="XM172a"><mtd columnalign="center" id="XM172b"><mn>1</mn></mtd><mtd columnalign="center" id="XM172c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM172d"><mi>π</mi></mtd></mtr><mtr id="XM172e"><mtd columnalign="center" id="XM172f"><mn>0</mn></mtd><mtd columnalign="center" id="XM172g"><mn>6</mn></mtd><mtd columnalign="center" id="XM172h"><mrow><mi>e</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">After reducing the matrix, we find that</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">This is echelon form.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The rank is <math id="I2.i2.p1.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>.
+
+item
+There is no pivot in the rightmost column, so it is consistent.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Thus this vector is in the span, since the system has consistent solutions.</p>
+</div>
+<div id="Sx1.SSx1.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">This still doesn’t tell us exactly how to achieve the desired vector <math id="Sx1.SSx1.SSS0.Px1.p4.m1" class="ltx_Math" alttext="\begin{pmatrix}\pi\\
+e\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx1.SSS0.Px1.p4.m1.xm1"><mtr id="Sx1.SSx1.SSS0.Px1.p4.m1.xm1a"><mtd columnalign="center" id="Sx1.SSx1.SSS0.Px1.p4.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.SSx1.SSS0.Px1.p4.m1.xm1c"><mtd columnalign="center" id="Sx1.SSx1.SSS0.Px1.p4.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>)</mo></mrow></math>. That is, we still need to find exactly what values of <math id="Sx1.SSx1.SSS0.Px1.p4.m2" class="ltx_Math" alttext="c_{1},c_{2}" display="inline"><mrow><msub id="XM173"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM174"><mi>c</mi><mn>2</mn></msub></mrow></math> produce the desired linear combination. To obtain <math id="Sx1.SSx1.SSS0.Px1.p4.m3" class="ltx_Math" alttext="c_{1},c_{2}" display="inline"><mrow><msub id="XM175"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM176"><mi>c</mi><mn>2</mn></msub></mrow></math>, we convert the augmented matrix back into a system of equations:</p>
+<table id="Sx1.EGx15" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex18" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex18.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle c_{1}-2c_{2}&amp;\displaystyle=\pi%
+\\
+\displaystyle 6c_{2}&amp;\displaystyle=e-3\pi\end{aligned}\right\}\qquad%
+\Longrightarrow\qquad\begin{aligned}\displaystyle c_{2}&amp;\displaystyle=\frac{e-%
+3\pi}{6}\\
+\displaystyle c_{1}&amp;\displaystyle=\pi+2c_{2}\\
+&amp;\displaystyle=\pi+\frac{e-3\pi}{3}\\
+&amp;\displaystyle=\frac{e}{3}\end{aligned}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mi>π</mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mn>6</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mi>e</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></mrow></mtd></mtr></mtable><mo>}</mo><mo mathvariant="italic" separator="true">  </mo><mo>⟹</mo><mo mathvariant="italic" separator="true">  </mo><mtable><mtr><mtd columnalign="right"><msub><mi>c</mi><mn>2</mn></msub></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>e</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow></mrow><mn>6</mn></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd columnalign="right"><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mi>π</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mi>π</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>e</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow></mrow><mn>3</mn></mfrac></mstyle></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>e</mi><mn>3</mn></mfrac></mstyle></mrow></mtd></mtr></mtable></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This tells us that</p>
+<table id="Sx1.EGx16" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex19" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex19.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}\pi\\
+e\end{pmatrix}=c_{1}\begin{pmatrix}1\\
+3\end{pmatrix}+c_{2}\begin{pmatrix}-2\\
+0\end{pmatrix}=\frac{e}{3}\begin{pmatrix}1\\
+3\end{pmatrix}+\frac{e-3\pi}{6}\begin{pmatrix}-2\\
+0\end{pmatrix}" display="inline"><mrow><mrow><mo>(</mo><mtable id="Sx1.Ex19.m1.xm1"><mtr id="Sx1.Ex19.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex19.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.Ex19.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex19.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex19.m1.xm2"><mtr id="Sx1.Ex19.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex19.m1.xm2b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex19.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex19.m1.xm2d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex19.m1.xm3"><mtr id="Sx1.Ex19.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex19.m1.xm3b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex19.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex19.m1.xm3d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>e</mi><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex19.m1.xm4"><mtr id="Sx1.Ex19.m1.xm4a"><mtd columnalign="center" id="Sx1.Ex19.m1.xm4b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex19.m1.xm4c"><mtd columnalign="center" id="Sx1.Ex19.m1.xm4d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>e</mi><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>π</mi></mrow></mrow><mn>6</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex19.m1.xm5"><mtr id="Sx1.Ex19.m1.xm5a"><mtd columnalign="center" id="Sx1.Ex19.m1.xm5b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex19.m1.xm5c"><mtd columnalign="center" id="Sx1.Ex19.m1.xm5d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+<section id="Sx1.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Finding the Entire Linear Span</h3>
+
+<div id="Sx1.SSx2.p1" class="ltx_para">
+<p class="ltx_p">If we swap out the vector <math id="Sx1.SSx2.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}\pi\\
+e\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx2.p1.m1.xm1"><mtr id="Sx1.SSx2.p1.m1.xm1a"><mtd columnalign="center" id="Sx1.SSx2.p1.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.SSx2.p1.m1.xm1c"><mtd columnalign="center" id="Sx1.SSx2.p1.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>)</mo></mrow></math> for some other vector we can follow a similar procedure. We would proceed with reducing the augmented matrix, finding its rank and checking for consistency. If it were consistent, then the vector would be in the span and we could determine the values of the coefficients. If it were inconsistent, then we would know that the vector is not in the span.</p>
+</div>
+<div id="Sx1.SSx2.p2" class="ltx_para">
+<p class="ltx_p">A natural next question to ask is – if we can check whether any given vector is in the span, is there some way of determining the entire span? What will the span look like geometrically?</p>
+</div>
+<section id="Sx1.SSx2.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx1.SSx2.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">What is the span of <math id="Sx1.SSx2.SSS0.Px1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>?</p>
+<table id="Sx1.EGx17" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex20" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex20.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\begin{pmatrix}1\\
+3\end{pmatrix},\begin{pmatrix}-2\\
+0\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM179b"><mo id="XM179">(</mo><mtable id="Sx1.Ex20.m1.xm1"><mtr id="Sx1.Ex20.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex20.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex20.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex20.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo id="XM179a">)</mo></mrow><mo>,</mo><mrow id="XM180b"><mo id="XM180">(</mo><mtable id="Sx1.Ex20.m1.xm2"><mtr id="Sx1.Ex20.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex20.m1.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex20.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex20.m1.xm2d"><mn>0</mn></mtd></mtr></mtable><mo id="XM180a">)</mo></mrow><mo>}</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SSx2.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">First, we can say that since both vectors come from <math id="Sx1.SSx2.SSS0.Px1.p2.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>, vectors in their span must also be from <math id="Sx1.SSx2.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Sx1.SSx2.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Instead of asking what the values of <math id="Sx1.SSx2.SSS0.Px1.p3.m1" class="ltx_Math" alttext="c_{1},c_{2}" display="inline"><mrow><msub id="XM181"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM182"><mi>c</mi><mn>2</mn></msub></mrow></math> should be for a given vector, we can instead ask: which vectors are in the span? That is, which vectors can be written as a linear combination of <math id="Sx1.SSx2.SSS0.Px1.p3.m2" class="ltx_Math" alttext="\begin{pmatrix}1\\
+3\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx2.SSS0.Px1.p3.m2.xm1"><mtr id="Sx1.SSx2.SSS0.Px1.p3.m2.xm1a"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p3.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.SSx2.SSS0.Px1.p3.m2.xm1c"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p3.m2.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></math> and <math id="Sx1.SSx2.SSS0.Px1.p3.m3" class="ltx_Math" alttext="\begin{pmatrix}-2\\
+0\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx2.SSS0.Px1.p3.m3.xm1"><mtr id="Sx1.SSx2.SSS0.Px1.p3.m3.xm1a"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p3.m3.xm1b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.SSx2.SSS0.Px1.p3.m3.xm1c"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p3.m3.xm1d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></math>?</p>
+</div>
+<div id="Sx1.SSx2.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">We can answer this question in a way similar to the previous example. The setup will be nearly the same, but instead of testing whether a specific vector will be in the span, we will keep the form of that vector general:</p>
+<table id="Sx1.EGx18" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex21" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex21.m1" class="ltx_Math" alttext="\displaystyle c_{1}\begin{bmatrix}1\\
+3\end{bmatrix}+c_{2}\begin{bmatrix}-2\\
+0\end{bmatrix}=\begin{bmatrix}b_{1}\\
+b_{2}\end{bmatrix}" display="inline"><mrow><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx1.Ex21.m1.xm1"><mtr id="Sx1.Ex21.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex21.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex21.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex21.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx1.Ex21.m1.xm2"><mtr id="Sx1.Ex21.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex21.m1.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex21.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex21.m1.xm2d"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx1.Ex21.m1.xm3"><mtr id="Sx1.Ex21.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex21.m1.xm3b"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="Sx1.Ex21.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex21.m1.xm3d"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SSx2.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">Now, the question we are concerned with is: what are those <math id="Sx1.SSx2.SSS0.Px1.p5.m1" class="ltx_Math" alttext="b_{1},b_{2}" display="inline"><mrow><msub id="XM183"><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub id="XM184"><mi>b</mi><mn>2</mn></msub></mrow></math> for which the system is consistent?</p>
+<table id="Sx1.EGx19" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex22" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx1.Ex22.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-2&amp;b_{1}\\
+3&amp;0&amp;b_{2}\end{matrix}\right]\to\left[\begin{matrix}1&amp;-2&amp;b_{1}\\
+0&amp;6&amp;b_{2}-3b_{1}\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM187"><mtr id="XM187a"><mtd columnalign="center" id="XM187b"><mn>1</mn></mtd><mtd columnalign="center" id="XM187c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM187d"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM187e"><mtd columnalign="center" id="XM187f"><mn>3</mn></mtd><mtd columnalign="center" id="XM187g"><mn>0</mn></mtd><mtd columnalign="center" id="XM187h"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>→</mo><mrow><mo>[</mo><mtable id="XM188"><mtr id="XM188a"><mtd columnalign="center" id="XM188b"><mn>1</mn></mtd><mtd columnalign="center" id="XM188c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM188d"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM188e"><mtd columnalign="center" id="XM188f"><mn>0</mn></mtd><mtd columnalign="center" id="XM188g"><mn>6</mn></mtd><mtd columnalign="center" id="XM188h"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We find that the properties of this augmented matrix are similar to those of the previous example:</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">This is echelon form.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">The rank is <math id="I3.i2.p1.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>.
+
+item
+There is no pivot in the rightmost column, since no matter the value of <math id="I3.i2.p1.m2" class="ltx_Math" alttext="b_{2}-3b_{1}" display="inline"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></math>, there is a <math id="I3.i2.p1.m3" class="ltx_Math" alttext="6" display="inline"><mn>6</mn></math> in the column to the left of it.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Thus the system is consistent for any values of <math id="I3.i3.p1.m1" class="ltx_Math" alttext="b_{1},b_{2}" display="inline"><mrow><msub id="XM189"><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub id="XM190"><mi>b</mi><mn>2</mn></msub></mrow></math>, so <math id="I3.i3.p1.m2" class="ltx_Math" alttext="L(S)=\mathds{R}^{2}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM191">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>.
+
+</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">This tells us that no matter the values of <math id="Sx1.SSx2.SSS0.Px1.p5.m2" class="ltx_Math" alttext="b_{1}" display="inline"><msub><mi>b</mi><mn>1</mn></msub></math> and <math id="Sx1.SSx2.SSS0.Px1.p5.m3" class="ltx_Math" alttext="b_{2}" display="inline"><msub><mi>b</mi><mn>2</mn></msub></math>, we can always find <math id="Sx1.SSx2.SSS0.Px1.p5.m4" class="ltx_Math" alttext="c_{1},c_{2}" display="inline"><mrow><msub id="XM192"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM193"><mi>c</mi><mn>2</mn></msub></mrow></math> to form a linear combination with the given vectors. Thus the vector <math id="Sx1.SSx2.SSS0.Px1.p5.m5" class="ltx_Math" alttext="\begin{pmatrix}b_{1}\\
+b_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx2.SSS0.Px1.p5.m5.xm1"><mtr id="Sx1.SSx2.SSS0.Px1.p5.m5.xm1a"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p5.m5.xm1b"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="Sx1.SSx2.SSS0.Px1.p5.m5.xm1c"><mtd columnalign="center" id="Sx1.SSx2.SSS0.Px1.p5.m5.xm1d"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math> is in the span for any <math id="Sx1.SSx2.SSS0.Px1.p5.m6" class="ltx_Math" alttext="b_{1},b_{2}" display="inline"><mrow><msub id="XM194"><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub id="XM195"><mi>b</mi><mn>2</mn></msub></mrow></math>, so <math id="Sx1.SSx2.SSS0.Px1.p5.m7" class="ltx_Math" alttext="L(S)=\mathds{R}^{2}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM196">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>. That is, the span is the entire space of <math id="Sx1.SSx2.SSS0.Px1.p5.m8" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+</section>
+</section>
+<section id="Sx1.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Another Example of Linear Span</h3>
+
+<div id="Sx1.SSx3.p1" class="ltx_para">
+<p class="ltx_p">This will not always be the case. Let us try this with another example to see how things might change.</p>
+</div>
+<div id="Sx1.SSx3.p2" class="ltx_para">
+<p class="ltx_p">Suppose we have the same vectors as before, but we also have the vector <math id="Sx1.SSx3.p2.m1" class="ltx_Math" alttext="\begin{pmatrix}3\\
+10\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx3.p2.m1.xm1"><mtr id="Sx1.SSx3.p2.m1.xm1a"><mtd columnalign="center" id="Sx1.SSx3.p2.m1.xm1b"><mn>3</mn></mtd></mtr><mtr id="Sx1.SSx3.p2.m1.xm1c"><mtd columnalign="center" id="Sx1.SSx3.p2.m1.xm1d"><mn>10</mn></mtd></mtr></mtable><mo>)</mo></mrow></math>:</p>
+<table id="Sx1.EGx20" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex23" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex23.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\begin{pmatrix}1\\
+3\end{pmatrix},\begin{pmatrix}-2\\
+0\end{pmatrix},\begin{pmatrix}3\\
+10\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM200b"><mo id="XM200">(</mo><mtable id="Sx1.Ex23.m1.xm1"><mtr id="Sx1.Ex23.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex23.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex23.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo id="XM200a">)</mo></mrow><mo>,</mo><mrow id="XM201b"><mo id="XM201">(</mo><mtable id="Sx1.Ex23.m1.xm2"><mtr id="Sx1.Ex23.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex23.m1.xm2b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex23.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex23.m1.xm2d"><mn>0</mn></mtd></mtr></mtable><mo id="XM201a">)</mo></mrow><mo>,</mo><mrow id="XM202b"><mo id="XM202">(</mo><mtable id="Sx1.Ex23.m1.xm3"><mtr id="Sx1.Ex23.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex23.m1.xm3b"><mn>3</mn></mtd></mtr><mtr id="Sx1.Ex23.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex23.m1.xm3d"><mn>10</mn></mtd></mtr></mtable><mo id="XM202a">)</mo></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Suppose we still want to know whether any given vector is in the span. Thinking about it, it is apparent that since we could achieve any vector with just the first two vectors, we will still be able to with an added vector. We can simply let the coefficient of the new vector be zero:</p>
+<table id="Sx1.EGx21" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex24" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex24.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}\pi\\
+e\end{pmatrix}=c_{1}\begin{pmatrix}1\\
+3\end{pmatrix}+c_{2}\begin{pmatrix}-2\\
+0\end{pmatrix}+0\begin{pmatrix}3\\
+10\end{pmatrix}" display="inline"><mrow><mrow><mo>(</mo><mtable id="Sx1.Ex24.m1.xm1"><mtr id="Sx1.Ex24.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1b"><mi>π</mi></mtd></mtr><mtr id="Sx1.Ex24.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex24.m1.xm1d"><mi>e</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex24.m1.xm2"><mtr id="Sx1.Ex24.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex24.m1.xm2b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex24.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex24.m1.xm2d"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex24.m1.xm3"><mtr id="Sx1.Ex24.m1.xm3a"><mtd columnalign="center" id="Sx1.Ex24.m1.xm3b"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr id="Sx1.Ex24.m1.xm3c"><mtd columnalign="center" id="Sx1.Ex24.m1.xm3d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx1.Ex24.m1.xm4"><mtr id="Sx1.Ex24.m1.xm4a"><mtd columnalign="center" id="Sx1.Ex24.m1.xm4b"><mn>3</mn></mtd></mtr><mtr id="Sx1.Ex24.m1.xm4c"><mtd columnalign="center" id="Sx1.Ex24.m1.xm4d"><mn>10</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and find <math id="Sx1.SSx3.p2.m2" class="ltx_Math" alttext="c_{1}" display="inline"><msub><mi>c</mi><mn>1</mn></msub></math> and <math id="Sx1.SSx3.p2.m3" class="ltx_Math" alttext="c_{2}" display="inline"><msub><mi>c</mi><mn>2</mn></msub></math> using the procedure from the last example.</p>
+</div>
+<div id="Sx1.SSx3.p3" class="ltx_para">
+<p class="ltx_p">If we want to show this from scratch with a similar procedure as before, we would set it up in the same way:</p>
+<table id="Sx1.EGx22" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex25" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex25.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-2&amp;3&amp;b_{1}\\
+3&amp;0&amp;10&amp;b_{2}\end{matrix}\right]\longrightarrow\left[\begin{matrix}1&amp;-2&amp;3&amp;b_{1}%
+\\
+0&amp;6&amp;1&amp;b_{2}-3b_{1}\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM205"><mtr id="XM205a"><mtd columnalign="center" id="XM205b"><mn>1</mn></mtd><mtd columnalign="center" id="XM205c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM205d"><mn>3</mn></mtd><mtd columnalign="center" id="XM205e"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM205f"><mtd columnalign="center" id="XM205g"><mn>3</mn></mtd><mtd columnalign="center" id="XM205h"><mn>0</mn></mtd><mtd columnalign="center" id="XM205i"><mn>10</mn></mtd><mtd columnalign="center" id="XM205j"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⟶</mo><mrow><mo>[</mo><mtable id="XM206"><mtr id="XM206a"><mtd columnalign="center" id="XM206b"><mn>1</mn></mtd><mtd columnalign="center" id="XM206c"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center" id="XM206d"><mn>3</mn></mtd><mtd columnalign="center" id="XM206e"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM206f"><mtd columnalign="center" id="XM206g"><mn>0</mn></mtd><mtd columnalign="center" id="XM206h"><mn>6</mn></mtd><mtd columnalign="center" id="XM206i"><mn>1</mn></mtd><mtd columnalign="center" id="XM206j"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We still have that the matrix has two pivots and is of rank <math id="Sx1.SSx3.p3.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, but we also have a third column which is in this case a free column. Thus, the system has a free variable. It is also consistent, and so it has infinitely many solutions. Thus the desired vector can be written as a linear combination of the three vectors in infinitely many ways. This is very different from the previous case in which there was one unique way to represent the desired vector.</p>
+</div>
+</section>
+<section id="Sx1.SSx4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">A Different Case for the Span</h3>
+
+<div id="Sx1.SSx4.p1" class="ltx_para">
+<p class="ltx_p">Suppose we have a set of vectors, <math id="Sx1.SSx4.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>:</p>
+<table id="Sx1.EGx23" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex26" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex26.m1" class="ltx_Math" alttext="\displaystyle S=\left\{\begin{pmatrix}1\\
+3\end{pmatrix},\begin{pmatrix}-3\\
+-9\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM209b"><mo id="XM209">(</mo><mtable id="Sx1.Ex26.m1.xm1"><mtr id="Sx1.Ex26.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx1.Ex26.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex26.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo id="XM209a">)</mo></mrow><mo>,</mo><mrow id="XM210b"><mo id="XM210">(</mo><mtable id="Sx1.Ex26.m1.xm2"><mtr id="Sx1.Ex26.m1.xm2a"><mtd columnalign="center" id="Sx1.Ex26.m1.xm2b"><mrow><mo>-</mo><mn>3</mn></mrow></mtd></mtr><mtr id="Sx1.Ex26.m1.xm2c"><mtd columnalign="center" id="Sx1.Ex26.m1.xm2d"><mrow><mo>-</mo><mn>9</mn></mrow></mtd></mtr></mtable><mo id="XM210a">)</mo></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.SSx4.p2" class="ltx_para">
+<p class="ltx_p">What is <math id="Sx1.SSx4.p2.m1" class="ltx_Math" alttext="L(S)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM211">S</mi><mo stretchy="false">)</mo></mrow></mrow></math>? That is, if we write the system as an augmented matrix:</p>
+<table id="Sx1.EGx24" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex27" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex27.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-3&amp;b_{1}\\
+3&amp;-9&amp;b_{2}\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM213"><mtr id="XM213a"><mtd columnalign="center" id="XM213b"><mn>1</mn></mtd><mtd columnalign="center" id="XM213c"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center" id="XM213d"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM213e"><mtd columnalign="center" id="XM213f"><mn>3</mn></mtd><mtd columnalign="center" id="XM213g"><mrow><mo>-</mo><mn>9</mn></mrow></mtd><mtd columnalign="center" id="XM213h"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which righthand side vectors <math id="Sx1.SSx4.p2.m2" class="ltx_Math" alttext="\begin{pmatrix}b_{1}\\
+b_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx4.p2.m2.xm1"><mtr id="Sx1.SSx4.p2.m2.xm1a"><mtd columnalign="center" id="Sx1.SSx4.p2.m2.xm1b"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="Sx1.SSx4.p2.m2.xm1c"><mtd columnalign="center" id="Sx1.SSx4.p2.m2.xm1d"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math> will make the system consistent?</p>
+</div>
+<div id="Sx1.SSx4.p3" class="ltx_para">
+<p class="ltx_p">Performing the appropriate row operations, we find that</p>
+<table id="Sx1.EGx25" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex28" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex28.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;-3&amp;b_{1}\\
+3&amp;-9&amp;b_{2}\end{matrix}\right]\longrightarrow\left[\begin{matrix}1&amp;-3&amp;b_{1}\\
+0&amp;0&amp;b_{2}-3b_{1}\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM216"><mtr id="XM216a"><mtd columnalign="center" id="XM216b"><mn>1</mn></mtd><mtd columnalign="center" id="XM216c"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center" id="XM216d"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM216e"><mtd columnalign="center" id="XM216f"><mn>3</mn></mtd><mtd columnalign="center" id="XM216g"><mrow><mo>-</mo><mn>9</mn></mrow></mtd><mtd columnalign="center" id="XM216h"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⟶</mo><mrow><mo>[</mo><mtable id="XM217"><mtr id="XM217a"><mtd columnalign="center" id="XM217b"><mn>1</mn></mtd><mtd columnalign="center" id="XM217c"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center" id="XM217d"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="XM217e"><mtd columnalign="center" id="XM217f"><mn>0</mn></mtd><mtd columnalign="center" id="XM217g"><mn>0</mn></mtd><mtd columnalign="center" id="XM217h"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this case, the properties of the augmented matrix are not so obvious. In particular, the status of whether there is a pivot in the rightmost column depends on the choice of <math id="Sx1.SSx4.p3.m1" class="ltx_Math" alttext="b_{1}" display="inline"><msub><mi>b</mi><mn>1</mn></msub></math> and <math id="Sx1.SSx4.p3.m2" class="ltx_Math" alttext="b_{2}" display="inline"><msub><mi>b</mi><mn>2</mn></msub></math>. For consistency, we must have that <math id="Sx1.SSx4.p3.m3" class="ltx_Math" alttext="b_{2}-3b_{1}" display="inline"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></math> does not become a pivot. Thus we need <math id="Sx1.SSx4.p3.m4" class="ltx_Math" alttext="b_{2}-3b_{1}=0" display="inline"><mrow><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="Sx1.SSx4.p3.m5" class="ltx_Math" alttext="b_{1}=b_{2}/3" display="inline"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>/</mo><mn>3</mn></mrow></mrow></math> for the vector <math id="Sx1.SSx4.p3.m6" class="ltx_Math" alttext="\begin{pmatrix}b_{1}\\
+b_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable id="Sx1.SSx4.p3.m6.xm1"><mtr id="Sx1.SSx4.p3.m6.xm1a"><mtd columnalign="center" id="Sx1.SSx4.p3.m6.xm1b"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="Sx1.SSx4.p3.m6.xm1c"><mtd columnalign="center" id="Sx1.SSx4.p3.m6.xm1d"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math> to be in the span.</p>
+</div>
+<div id="Sx1.SSx4.p4" class="ltx_para">
+<p class="ltx_p">This gives a criterion for vectors to be in the span:</p>
+<table id="Sx1.EGx26" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex29" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx1.Ex29.m1" class="ltx_Math" alttext="\displaystyle L(S)=\left\{\begin{pmatrix}b_{1}\\
+b_{2}\end{pmatrix}|b_{2}-3b_{1}=0\right\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi id="XM221">S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mrow id="XM222b"><mo id="XM222">(</mo><mtable id="Sx1.Ex29.m1.xm1"><mtr id="Sx1.Ex29.m1.xm1a"><mtd columnalign="center" id="Sx1.Ex29.m1.xm1b"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr id="Sx1.Ex29.m1.xm1c"><mtd columnalign="center" id="Sx1.Ex29.m1.xm1d"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr></mtable><mo id="XM222a">)</mo></mrow><mo stretchy="false">|</mo><mrow id="XM223"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Geometrically, this has a very nice representation. It is a line in <math id="Sx1.SSx4.p4.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> passing through the origin.</p>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Jun  4 03:57:39 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,2742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02"?>
+<?latexml package="amsmath"?>
+<?latexml package="amsfonts"?>
+<?latexml package="aahomework"?>
+<?latexml package="enumitem"?>
+<?latexml package="shortlst"?>
+<?latexml class="article" options="11pt"?>
+<?latexml package="aahomework"?>
+<?latexml package="mathtools"?>
+<?latexml package="subcaption"?>
+<?latexml package="epstopdf"?>
+<?latexml package="float"?>
+<?latexml package="xcolor"?>
+<?latexml package="parskip"?>
+<!-- %“usetikzlibrary–arrows˝ -->
+<!-- %“usetikzlibrary–plotmarks˝ -->
+<!-- %**** Lecture˙02.tex Line 25 **** -->
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Lecture 1</title>
+  <creator role="author">
+    <personname>A. Agarwal</personname>
+  </creator>
+  <date role="creation">December 7, 2012</date>
+  <!-- %“maketitle -->
+  <section xml:id="Sx1">
+    <title>Recall</title>
+    <para xml:id="Sx1.p1">
+      <enumerate xml:id="I1">
+        <item frefnum="1." refnum="1" xml:id="I1.i1">
+          <tag>1.</tag>
+          <para xml:id="I1.i1.p1">
+            <p>System of linear equations.</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I1.i2">
+          <tag>2.</tag>
+          <para xml:id="I1.i2.p1">
+            <p>Number of solutions of a system.</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I1.i3">
+          <tag>3.</tag>
+          <para xml:id="I1.i3.p1">
+            <p>Row picture and column picture.</p>
+          </para>
+        </item>
+      </enumerate>
+    </para>
+  </section>
+  <section xml:id="Sx2">
+    <title>New Terminology</title>
+    <para xml:id="Sx2.p1">
+      <p>Two terms characterize the number of solutions to an equation:</p>
+    </para>
+    <para xml:id="Sx2.p2">
+      <p><text font="bold">Consistent systems</text> have at least one solution. This could mean the system has one solution or infinitely many solutions.</p>
+    </para>
+    <para xml:id="Sx2.p3">
+      <p><text font="bold">Inconsistent systems</text> have no solution.</p>
+    </para>
+    <!-- %**** Lecture˙02.tex Line 50 **** -->
+    <para xml:id="Sx2.p4">
+      <p>Consider a system of equations:</p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx1">
+        <equation xml:id="Sx2.Ex1">
+          <MathFork>
+            <Math xml:id="Sx2.Ex1.m2" tex="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}">
+              <XMath>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="7" role="NUMBER">7</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+                <XMTok role="CLOSE">}</XMTok>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}" xml:id="Sx2.Ex1.m1">
+                  <XMath>
+                    <XMArray name="aligned">
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="7" role="NUMBER">7</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok role="CLOSE">}</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+      <p>For such a system, we established that we can create an augmented matrix that represents it. The augmented matrix is made up of a coefficient matrix and a constant vector:</p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx2">
+        <equation xml:id="Sx2.Ex2">
+          <MathFork>
+            <Math xml:id="Sx2.Ex2.m2" tex="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\&#10;5&amp;-4&amp;-7\end{matrix}\right]" text="delimited-[]@(matrix[[1, 3, 4], [5, - 4, - 7]])">
+              <XMath>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="delimited-[]"/>
+                    <XMRef idref="XM10"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok role="OPEN">[</XMTok>
+                    <XMArray meaning="matrix" xml:id="XM10">
+                      <XMRow>
+                        <XMCell align="center">
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMCell>
+                        <XMCell align="center">
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMCell>
+                        <XMCell align="center">
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="center">
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                        </XMCell>
+                        <XMCell align="center">
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="center">
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok role="CLOSE">]</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\&#10;5&amp;-4&amp;-7\end{matrix}\right]" xml:id="Sx2.Ex2.m1" text="delimited-[]@(matrix[[1, 3, 4], [5, - 4, - 7]])">
+                  <XMath>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="delimited-[]"/>
+                        <XMRef idref="XM11"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN">[</XMTok>
+                        <XMArray meaning="matrix" xml:id="XM11">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">]</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+    </para>
+    <para xml:id="Sx2.p5">
+      <p>Given an augmented matrix, we wish to reduce it to a ‘nice’ form.</p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx3">
+        <equation xml:id="Sx2.Ex3">
+          <MathFork>
+            <Math xml:id="Sx2.Ex3.m2" tex="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\&#10;5&amp;-4&amp;-7\end{matrix}\right]\xrightarrow[\text{to a nice form}]{\text{reduce %&#10;this}}\left[\begin{matrix}1&amp;0&amp;*\\&#10;0&amp;1&amp;*\end{matrix}\right]" text="delimited-[]@(matrix[[1, 3, 4], [5, - 4, - 7]]) [to a nice form]@([reduce this]@(rightarrow)) delimited-[]@(matrix[[1, 0, *], [0, 1, *]])">
+              <XMath>
+                <XMApp>
+                  <XMApp role="ARROW">
+                    <XMText role="UNDERACCENT">to a nice form</XMText>
+                    <XMApp role="ARROW">
+                      <XMText role="OVERACCENT">reduce this</XMText>
+                      <XMTok name="rightarrow" role="ARROW">→</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="delimited-[]"/>
+                      <XMRef idref="XM12"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN">[</XMTok>
+                      <XMArray meaning="matrix" xml:id="XM12">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            </XMApp>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="7" role="NUMBER">7</XMTok>
+                            </XMApp>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="delimited-[]"/>
+                      <XMRef idref="XM13"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN">[</XMTok>
+                      <XMArray meaning="matrix" xml:id="XM13">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="times" role="MULOP">*</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="times" role="MULOP">*</XMTok>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\&#10;5&amp;-4&amp;-7\end{matrix}\right]\xrightarrow[\text{to a nice form}]{\text{reduce %&#10;this}}\left[\begin{matrix}1&amp;0&amp;*\\&#10;0&amp;1&amp;*\end{matrix}\right]" xml:id="Sx2.Ex3.m1" text="delimited-[]@(matrix[[1, 3, 4], [5, - 4, - 7]]) [to a nice form]@([reduce this]@(rightarrow)) delimited-[]@(matrix[[1, 0, *], [0, 1, *]])">
+                  <XMath>
+                    <XMApp>
+                      <XMApp role="ARROW">
+                        <XMText role="UNDERACCENT">to a nice form</XMText>
+                        <XMApp role="ARROW">
+                          <XMText role="OVERACCENT">reduce this</XMText>
+                          <XMTok name="rightarrow" role="ARROW">→</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMApp>
+                          <XMTok meaning="delimited-[]"/>
+                          <XMRef idref="XM14"/>
+                        </XMApp>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMArray meaning="matrix" xml:id="XM14">
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                </XMApp>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok meaning="7" role="NUMBER">7</XMTok>
+                                </XMApp>
+                              </XMCell>
+                            </XMRow>
+                          </XMArray>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                      <XMDual>
+                        <XMApp>
+                          <XMTok meaning="delimited-[]"/>
+                          <XMRef idref="XM15"/>
+                        </XMApp>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMArray meaning="matrix" xml:id="XM15">
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="times" role="MULOP">*</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="times" role="MULOP">*</XMTok>
+                              </XMCell>
+                            </XMRow>
+                          </XMArray>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+      <p>From this ‘nice’ form of the augmented matrix, we can get the solutions of the system fairly easily. This will also tell us whether the system is consistent or inconsistent.</p>
+    </para>
+    <para xml:id="Sx2.p6">
+      <p>A good question is whether or not it is always possible for any augmented matrix to reduce the matrix to this type of form.</p>
+    </para>
+  </section>
+  <section xml:id="Sx3">
+    <title>Row-operations</title>
+    <para xml:id="Sx3.p1">
+      <p><text font="bold">Row-operations</text> or elementary row operations allow us <emph>reduce</emph> a matrix to achieve the matrix form that we want.</p>
+      <enumerate xml:id="I2">
+        <item frefnum="1." refnum="1" xml:id="I2.i1">
+          <tag>1.</tag>
+          <para xml:id="I2.i1.p1">
+            <p>Swap rows</p>
+          </para>
+        </item>
+        <item frefnum="2." refnum="2" xml:id="I2.i2">
+          <tag>2.</tag>
+          <!-- %**** Lecture˙02.tex Line 100 **** -->
+          <para xml:id="I2.i2.p1">
+            <p>Multiply one row by a non-zero scalar</p>
+          </para>
+        </item>
+        <item frefnum="3." refnum="3" xml:id="I2.i3">
+          <tag>3.</tag>
+          <para xml:id="I2.i3.p1">
+            <p>Adding a multiple of one row to another row</p>
+          </para>
+        </item>
+      </enumerate>
+      <p>It is not immediately clear why these operations are the important ones or why we are focusing on them. To understand these operations, we will consider again some system of equations. The key to row-operations is that they do not alter the solutions to a system of equations.</p>
+    </para>
+    <para xml:id="Sx3.p2">
+      <p>The first row operation is swapping the order of the equations. It is fairly intuitive that swapping the order of the equations will not change the solutions.</p>
+    </para>
+    <para xml:id="Sx3.p3">
+      <p>What about multiplication by a scalar? Consider the two systems below, where the second is obtained by multiplying the first equation by <Math mode="inline" xml:id="Sx3.p3.m1" tex="2" text="2"><XMath><XMTok meaning="2" role="NUMBER">2</XMTok></XMath></Math>:</p>
+    </para>
+    <para xml:id="Sx3.p4">
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx4">
+        <equation xml:id="Sx3.Ex4">
+          <MathFork>
+            <Math xml:id="Sx3.Ex4.m2" tex="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}\Longrightarrow\left.%&#10;\begin{aligned}\displaystyle 2x+6y&amp;\displaystyle=8\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}">
+              <XMath>
+                <XMWrap>
+                  <XMArray name="aligned">
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMCell>
+                      <XMCell align="left">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMTok meaning="absent"/>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="5" role="NUMBER">5</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMCell>
+                      <XMCell align="left">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMTok meaning="absent"/>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                  </XMArray>
+                  <XMTok role="CLOSE">}</XMTok>
+                </XMWrap>
+                <XMTok name="Longrightarrow" role="ARROW">⟹</XMTok>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="6" role="NUMBER">6</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="8" role="NUMBER">8</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="7" role="NUMBER">7</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+                <XMTok role="CLOSE">}</XMTok>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}\Longrightarrow\left.%&#10;\begin{aligned}\displaystyle 2x+6y&amp;\displaystyle=8\\&#10;\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}" xml:id="Sx3.Ex4.m1">
+                  <XMath>
+                    <XMWrap>
+                      <XMArray name="aligned">
+                        <XMRow>
+                          <XMCell align="right">
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMCell>
+                          <XMCell align="left">
+                            <XMApp>
+                              <XMTok meaning="equals" role="RELOP">=</XMTok>
+                              <XMTok meaning="absent"/>
+                              <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            </XMApp>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="right">
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMCell>
+                          <XMCell align="left">
+                            <XMApp>
+                              <XMTok meaning="equals" role="RELOP">=</XMTok>
+                              <XMTok meaning="absent"/>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">}</XMTok>
+                    </XMWrap>
+                    <XMTok name="Longrightarrow" role="ARROW">⟹</XMTok>
+                    <XMArray name="aligned">
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="6" role="NUMBER">6</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMTok meaning="8" role="NUMBER">8</XMTok>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="7" role="NUMBER">7</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                    <XMTok role="CLOSE">}</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+    </para>
+    <para xml:id="Sx3.p5">
+      <p>Next consider the third operation: adding a multiple of one row to another row. Of the operations, it is least obvious why this one does not alter the solutions of the system. In essence this operation is the addition a multiple of one equation to another equation. Consider within the example, adding negative-five times the first equation to the second equation:</p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx5">
+        <equation xml:id="Sx3.Ex5">
+          <MathFork>
+            <Math xml:id="Sx3.Ex5.m6" tex="\displaystyle\begin{aligned}\displaystyle\left[\text{equation 1}\right]\\&#10;\displaystyle\left[\text{equation 1}\right](-5)+\left[\text{equation 2}\right]%&#10;\end{aligned}" text="aligned[[delimited-[]@([equation 1])], [delimited-[]@([equation 1]) * (- 5) + delimited-[]@([equation 2])]]">
+              <XMath>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMDual>
+                        <XMApp>
+                          <XMTok meaning="delimited-[]"/>
+                          <XMRef idref="XM16"/>
+                        </XMApp>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMText xml:id="XM16">equation 1</XMText>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="delimited-[]"/>
+                              <XMRef idref="XM17"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok role="OPEN">[</XMTok>
+                              <XMText xml:id="XM17">equation 1</XMText>
+                              <XMTok role="CLOSE">]</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                          <XMDual>
+                            <XMRef idref="XM18"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="XM18">
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="delimited-[]"/>
+                            <XMRef idref="XM19"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN">[</XMTok>
+                            <XMText xml:id="XM19">equation 2</XMText>
+                            <XMTok role="CLOSE">]</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\begin{aligned}\displaystyle\left[\text{equation 1}\right]\\&#10;\displaystyle\left[\text{equation 1}\right](-5)+\left[\text{equation 2}\right]%&#10;\end{aligned}" xml:id="Sx3.Ex5.m1" text="aligned[[delimited-[]@([equation 1])], [delimited-[]@([equation 1]) * (- 5) + delimited-[]@([equation 2])]]">
+                  <XMath>
+                    <XMArray name="aligned">
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="delimited-[]"/>
+                              <XMRef idref="XM20"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok role="OPEN">[</XMTok>
+                              <XMText xml:id="XM20">equation 1</XMText>
+                              <XMTok role="CLOSE">]</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMDual>
+                                <XMApp>
+                                  <XMTok meaning="delimited-[]"/>
+                                  <XMRef idref="XM21"/>
+                                </XMApp>
+                                <XMWrap>
+                                  <XMTok role="OPEN">[</XMTok>
+                                  <XMText xml:id="XM21">equation 1</XMText>
+                                  <XMTok role="CLOSE">]</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                              <XMDual>
+                                <XMRef idref="XM22"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="XM22">
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMDual>
+                              <XMApp>
+                                <XMTok meaning="delimited-[]"/>
+                                <XMRef idref="XM23"/>
+                              </XMApp>
+                              <XMWrap>
+                                <XMTok role="OPEN">[</XMTok>
+                                <XMText xml:id="XM23">equation 2</XMText>
+                                <XMTok role="CLOSE">]</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                  </XMath>
+                </Math>
+              </td>
+              <td align="left"/>
+            </MathBranch>
+          </MathFork>
+          <MathFork>
+            <Math xml:id="Sx3.Ex5.m7" tex="\displaystyle\longrightarrow" text="longrightarrow">
+              <XMath>
+                <XMTok name="longrightarrow" role="ARROW">⟶</XMTok>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\longrightarrow" xml:id="Sx3.Ex5.m3" text="longrightarrow">
+                  <XMath>
+                    <XMTok name="longrightarrow" role="ARROW">⟶</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+              <td align="left"/>
+            </MathBranch>
+          </MathFork>
+          <MathFork>
+            <Math xml:id="Sx3.Ex5.m8" tex="\displaystyle\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle-19y&amp;\displaystyle=-27\end{aligned}" text="aligned[[x + 3 * y, absent = 4], [- 19 * y, absent = - 27]]">
+              <XMath>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="19" role="NUMBER">19</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="27" role="NUMBER">27</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\&#10;\displaystyle-19y&amp;\displaystyle=-27\end{aligned}" xml:id="Sx3.Ex5.m5" text="aligned[[x + 3 * y, absent = 4], [- 19 * y, absent = - 27]]">
+                  <XMath>
+                    <XMArray name="aligned">
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                      <XMRow>
+                        <XMCell align="right">
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="19" role="NUMBER">19</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                        <XMCell align="left">
+                          <XMApp>
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMTok meaning="absent"/>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="27" role="NUMBER">27</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMCell>
+                      </XMRow>
+                    </XMArray>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+    </para>
+    <paragraph xml:id="Sx3.SS0.SSS0.Px1">
+      <title>Question:</title>
+      <para xml:id="Sx3.SS0.SSS0.Px1.p1">
+        <p>Will the solution set of the new system be the same as the solution set of the old system?</p>
+      </para>
+      <para xml:id="Sx3.SS0.SSS0.Px1.p2">
+        <p>We can interpret this geometrically: each equation represents a line which we can plot.
+<!-- %**** Lecture˙02.tex Line 150 **** --></p>
+      </para>
+      <figure placement="H" xml:id="Sx3.SS0.SSS0.Px1.fig1">
+        <graphics candidates="rowop3_visual.eps" graphic="rowop3_visual.eps" options="width=284.527559pt" xml:id="Sx3.SS0.SSS0.Px1.g1" class="ltx_centering"/>
+      </figure>
+      <para xml:id="Sx3.SS0.SSS0.Px1.p3">
+        <p>It turns out that the line <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p3.m1" tex="L_{3}" text="L _ 3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math> will intersect the first two lines at the mutual solution of those lines.</p>
+      </para>
+      <para xml:id="Sx3.SS0.SSS0.Px1.p4">
+        <p>To interpret this algebraically, we can consider <emph>adding</emph> the lines. The line <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m1" tex="L_{3}" text="L _ 3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math> was obtained by adding <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m2" tex="L_{2}" text="L _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> to <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m3" tex="-5" text="- 5"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMTok meaning="5" role="NUMBER">5</XMTok></XMApp></XMath></Math> times <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m4" tex="L_{1}" text="L _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>:</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx6">
+          <equation xml:id="Sx3.Ex6">
+            <MathFork>
+              <Math xml:id="Sx3.Ex6.m3" tex="\displaystyle L_{3}=-5L_{1}+L_{2}" text="L _ 3 = (- 5 * L _ 1) + L _ 2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                      <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle L_{3}" xml:id="Sx3.Ex6.m1" text="L _ 3">
+                    <XMath>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-5L_{1}+L_{2}" xml:id="Sx3.Ex6.m2" text="absent = (- 5 * L _ 1) + L _ 2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                                <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>If we consider replacing the expression “<Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m5" tex="L_{1}" text="L _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>” by the equation <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m6" tex="x+3y-4" text="(x + 3 * y) - 4"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMApp><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMath></Math> which algebraically represents it, and doing the same for <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m7" tex="L_{2}" text="L _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>, then we obtain the following:</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx7">
+          <equation xml:id="Sx3.Ex7">
+            <MathFork>
+              <Math xml:id="Sx3.Ex7.m3" tex="\displaystyle L_{3}=-5L_{1}+L_{2}" text="L _ 3 = (- 5 * L _ 1) + L _ 2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                      <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle L_{3}" xml:id="Sx3.Ex7.m1" text="L _ 3">
+                    <XMath>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-5L_{1}+L_{2}" xml:id="Sx3.Ex7.m2" text="absent = (- 5 * L _ 1) + L _ 2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                                <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="Sx3.Ex8">
+            <MathFork>
+              <Math xml:id="Sx3.Ex8.m3" tex="\displaystyle=-5(x+3y-4)+(5x-4y+7)" text="absent = (- 5 * ((x + 3 * y) - 4)) + (5 * x - 4 * y) + 7">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="absent"/>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMDual>
+                            <XMRef idref="XM24"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="XM24">
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="XM25"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="XM25">
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right"/>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-5(x+3y-4)+(5x-4y+7)" xml:id="Sx3.Ex8.m2" text="absent = (- 5 * ((x + 3 * y) - 4)) + (5 * x - 4 * y) + 7">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMDual>
+                                <XMRef idref="XM26"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="XM26">
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="XM27"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="XM27">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>Whenever the expression <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m8" tex="x+3y-4" text="(x + 3 * y) - 4"><XMath><XMApp><XMTok meaning="minus" role="ADDOP">-</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMTok role="UNKNOWN" font="italic">x</XMTok><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok><XMTok role="UNKNOWN" font="italic">y</XMTok></XMApp></XMApp><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMath></Math> is zero, then the point <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m9" tex="(x,y)" text="open-interval@(x, y)"><XMath><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="XM28"/><XMRef idref="XM29"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="XM28" font="italic">x</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="XM29" font="italic">y</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMath></Math> is on the line <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m10" tex="L_{1}" text="L _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>, and similarly for <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p4.m11" tex="L_{2}" text="L _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>. Combining the two expressions, we arrive at an expression that will be zero only when the point lies on <emph>both</emph> lines.</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx8">
+          <equation xml:id="Sx3.Ex9">
+            <MathFork>
+              <Math xml:id="Sx3.Ex9.m3" tex="\displaystyle L_{3}=-5L_{1}+L_{2}" text="L _ 3 = (- 5 * L _ 1) + L _ 2">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                      <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle L_{3}" xml:id="Sx3.Ex9.m1" text="L _ 3">
+                    <XMath>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                        <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-5L_{1}+L_{2}" xml:id="Sx3.Ex9.m2" text="absent = (- 5 * L _ 1) + L _ 2">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                                <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">L</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="Sx3.Ex10">
+            <MathFork>
+              <Math xml:id="Sx3.Ex10.m3" tex="\displaystyle=-5(x+3y-4)+(5x-4y+7)" text="absent = (- 5 * ((x + 3 * y) - 4)) + (5 * x - 4 * y) + 7">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="absent"/>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMDual>
+                            <XMRef idref="XM30"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="XM30">
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="XM31"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="XM31">
+                            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                            <XMApp>
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              </XMApp>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right"/>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-5(x+3y-4)+(5x-4y+7)" xml:id="Sx3.Ex10.m2" text="absent = (- 5 * ((x + 3 * y) - 4)) + (5 * x - 4 * y) + 7">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMDual>
+                                <XMRef idref="XM32"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="XM32">
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="XM33"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp xml:id="XM33">
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+          <equation xml:id="Sx3.Ex11">
+            <MathFork>
+              <Math xml:id="Sx3.Ex11.m3" tex="\displaystyle=-19y+27" text="absent = (- 19 * y) + 27">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="absent"/>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="19" role="NUMBER">19</XMTok>
+                          <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="27" role="NUMBER">27</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right"/>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=-19y+27" xml:id="Sx3.Ex11.m2" text="absent = (- 19 * y) + 27">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="19" role="NUMBER">19</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok meaning="27" role="NUMBER">27</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+      </para>
+      <!-- %**** Lecture˙02.tex Line 175 **** -->
+      <para xml:id="Sx3.SS0.SSS0.Px1.p5">
+        <p>That is, if a point <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p5.m1" tex="P=(x,y)" text="P = open-interval@(x, y)"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">P</XMTok><XMDual><XMApp><XMTok meaning="open-interval"/><XMRef idref="XM34"/><XMRef idref="XM35"/></XMApp><XMWrap><XMTok role="OPEN" stretchy="false">(</XMTok><XMTok role="UNKNOWN" xml:id="XM34" font="italic">x</XMTok><XMTok role="PUNCT">,</XMTok><XMTok role="UNKNOWN" xml:id="XM35" font="italic">y</XMTok><XMTok role="CLOSE" stretchy="false">)</XMTok></XMWrap></XMDual></XMApp></XMath></Math> is a solution to both lines <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p5.m2" tex="L_{1}" text="L _ 1"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> and <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p5.m3" tex="L_{2}" text="L _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>, then it must be a solution to the line <Math mode="inline" xml:id="Sx3.SS0.SSS0.Px1.p5.m4" tex="L_{3}" text="L _ 3"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">L</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math>:</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx9">
+          <equation xml:id="Sx3.Ex12">
+            <MathFork>
+              <Math xml:id="Sx3.Ex12.m2" tex="\displaystyle-5(\underbrace{x+3y-4}_{{\color{red}=0}})+(\underbrace{5x-4y+7}_{%&#10;{\color{red}=0}})=\underbrace{-19y+27}_{{\color{red}\Rightarrow\hskip{22.76220%&#10;5pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}" text="(- 5 * (underbrace@((x + 3 * y) - 4)) _ (absent = 0)) + (underbrace@((5 * x - 4 * y) + 7)) _ (absent = 0) = (underbrace@((- 19 * y) + 27)) _ [⇒   =0   ]">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="5" role="NUMBER">5</XMTok>
+                          <XMDual>
+                            <XMRef idref="XM38"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp scriptpos="mid" xml:id="XM38">
+                                <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                <XMApp scriptpos="mid">
+                                  <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                                  <XMTok meaning="absent"/>
+                                  <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="XM39"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp scriptpos="mid" xml:id="XM39">
+                            <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                            <XMApp scriptpos="mid">
+                              <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                              <XMApp>
+                                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                  </XMApp>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                    <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                              <XMTok meaning="absent"/>
+                              <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                    <XMApp scriptpos="mid">
+                      <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                      <XMApp scriptpos="mid">
+                        <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="19" role="NUMBER">19</XMTok>
+                              <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok meaning="27" role="NUMBER">27</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMArg rule="Subscript">
+                        <XMTok name="Rightarrow" role="ARROW" xml:id="XM36" color="#FF0000">⇒</XMTok>
+                        <XMTok name="qquad" role="PUNCT" font="italic">   </XMTok>
+                        <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                        <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                        <XMTok name="qquad" role="PUNCT" font="italic">   </XMTok>
+                      </XMArg>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle-5(\underbrace{x+3y-4}_{{\color{red}=0}})+(\underbrace{5x-4y+7}_{%&#10;{\color{red}=0}})=\underbrace{-19y+27}_{{\color{red}\Rightarrow\hskip{22.76220%&#10;5pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}" xml:id="Sx3.Ex12.m1" text="(- 5 * (underbrace@((x + 3 * y) - 4)) _ (absent = 0)) + (underbrace@((5 * x - 4 * y) + 7)) _ (absent = 0) = (underbrace@((- 19 * y) + 27)) _ [⇒   =0   ]">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="5" role="NUMBER">5</XMTok>
+                              <XMDual>
+                                <XMRef idref="XM42"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp scriptpos="mid" xml:id="XM42">
+                                    <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                    <XMApp scriptpos="mid">
+                                      <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                        <XMApp>
+                                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                          <XMApp>
+                                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                            <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                          </XMApp>
+                                        </XMApp>
+                                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMApp>
+                                      <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                                      <XMTok meaning="absent"/>
+                                      <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                                    </XMApp>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMDual>
+                            <XMRef idref="XM43"/>
+                            <XMWrap>
+                              <XMTok role="OPEN" stretchy="false">(</XMTok>
+                              <XMApp scriptpos="mid" xml:id="XM43">
+                                <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                                <XMApp scriptpos="mid">
+                                  <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                                    <XMApp>
+                                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok meaning="5" role="NUMBER">5</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                                      </XMApp>
+                                      <XMApp>
+                                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                                        <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                      </XMApp>
+                                    </XMApp>
+                                    <XMTok meaning="7" role="NUMBER">7</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMApp>
+                                  <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                                  <XMTok meaning="absent"/>
+                                  <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMApp scriptpos="mid">
+                          <XMTok role="SUBSCRIPTOP" scriptpos="mid7"/>
+                          <XMApp scriptpos="mid">
+                            <XMTok name="underbrace" role="UNDERACCENT">⏟</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMApp>
+                                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="19" role="NUMBER">19</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">y</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok meaning="27" role="NUMBER">27</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMArg rule="Subscript">
+                            <XMTok name="Rightarrow" role="ARROW" xml:id="XM40" color="#FF0000">⇒</XMTok>
+                            <XMTok name="qquad" role="PUNCT" font="italic">   </XMTok>
+                            <XMTok meaning="equals" role="RELOP" color="#FF0000">=</XMTok>
+                            <XMTok meaning="0" role="NUMBER" color="#FF0000">0</XMTok>
+                            <XMTok name="qquad" role="PUNCT" font="italic">   </XMTok>
+                          </XMArg>
+                        </XMApp>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+      </para>
+    </paragraph>
+  </section>
+  <section xml:id="Sx4">
+    <title>Echelon form of a matrix</title>
+    <para xml:id="Sx4.p1">
+      <p>The nice matrix forms that we want come in two forms. The first is <text font="bold">echelon form</text>.</p>
+    </para>
+    <para xml:id="Sx4.p2">
+      <inline-block class="ltx_minipage" vattach="top" width="411.9pt">
+        <p>A matrix <Math mode="inline" xml:id="Sx4.p2.m1" tex="M" text="M"><XMath><XMTok role="UNKNOWN" font="italic">M</XMTok></XMath></Math> is in echelon form if</p>
+        <enumerate xml:id="I3">
+          <item frefnum="1." refnum="1" xml:id="I3.i1">
+            <tag>1.</tag>
+            <para xml:id="I3.i1.p1">
+              <p>All the zero rows are at the bottom.</p>
+            </para>
+          </item>
+          <item frefnum="2." refnum="2" xml:id="I3.i2">
+            <tag>2.</tag>
+            <para xml:id="I3.i2.p1">
+              <p>The leading non-zero entry of each row is to the right of the leading non-zero entry of the row above it.</p>
+            </para>
+          </item>
+        </enumerate>
+      </inline-block>
+    </para>
+    <paragraph xml:id="Sx4.SS0.SSS0.Px1">
+      <title>Examples.</title>
+      <para xml:id="Sx4.SS0.SSS0.Px1.p1">
+        <p>Consider the following matrices</p>
+        <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx10">
+          <equation xml:id="Sx4.Ex13">
+            <MathFork>
+              <Math xml:id="Sx4.Ex13.m7" tex="\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;0&amp;0\end{bmatrix}" text="A = matrix[[1, 2, 3], [0, 0, 0]]">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                    <XMDual>
+                      <XMRef idref="Sx4.Ex13.m2.xm1.mf"/>
+                      <XMWrap>
+                        <XMTok role="OPEN">[</XMTok>
+                        <XMArray meaning="matrix" xml:id="Sx4.Ex13.m2.xm1.mf">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">]</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle A" xml:id="Sx4.Ex13.m1" text="A">
+                    <XMath>
+                      <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;0&amp;0\end{bmatrix}" xml:id="Sx4.Ex13.m2" text="absent = matrix[[1, 2, 3], [0, 0, 0]]">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMDual>
+                          <XMRef idref="Sx4.Ex13.m2.xm1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN">[</XMTok>
+                            <XMArray meaning="matrix" xml:id="Sx4.Ex13.m2.xm1">
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                </XMCell>
+                              </XMRow>
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                              </XMRow>
+                            </XMArray>
+                            <XMTok role="CLOSE">]</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+            <MathFork>
+              <Math xml:id="Sx4.Ex13.m8" tex="\displaystyle B=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;1&amp;0\\&#10;0&amp;1&amp;0\end{bmatrix}" text="B = matrix[[1, 2, 3], [0, 1, 0], [0, 1, 0]]">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">B</XMTok>
+                    <XMDual>
+                      <XMRef idref="Sx4.Ex13.m4.xm1.mf"/>
+                      <XMWrap>
+                        <XMTok role="OPEN">[</XMTok>
+                        <XMArray meaning="matrix" xml:id="Sx4.Ex13.m4.xm1.mf">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="3" role="NUMBER">3</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">]</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle B" xml:id="Sx4.Ex13.m3" text="B">
+                    <XMath>
+                      <XMTok role="UNKNOWN" font="italic">B</XMTok>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;1&amp;0\\&#10;0&amp;1&amp;0\end{bmatrix}" xml:id="Sx4.Ex13.m4" text="absent = matrix[[1, 2, 3], [0, 1, 0], [0, 1, 0]]">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMDual>
+                          <XMRef idref="Sx4.Ex13.m4.xm1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN">[</XMTok>
+                            <XMArray meaning="matrix" xml:id="Sx4.Ex13.m4.xm1">
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                                </XMCell>
+                              </XMRow>
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                              </XMRow>
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                              </XMRow>
+                            </XMArray>
+                            <XMTok role="CLOSE">]</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+            <MathFork>
+              <Math xml:id="Sx4.Ex13.m9" tex="\displaystyle C=\begin{bmatrix}1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;7\end{bmatrix}" text="C = matrix[[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 7]]">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok role="UNKNOWN" font="italic">C</XMTok>
+                    <XMDual>
+                      <XMRef idref="Sx4.Ex13.m6.xm1.mf"/>
+                      <XMWrap>
+                        <XMTok role="OPEN">[</XMTok>
+                        <XMArray meaning="matrix" xml:id="Sx4.Ex13.m6.xm1.mf">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="0" role="NUMBER">0</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok meaning="7" role="NUMBER">7</XMTok>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                        <XMTok role="CLOSE">]</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                </XMath>
+              </Math>
+              <MathBranch>
+                <td align="right">
+                  <Math mode="inline" tex="\displaystyle C" xml:id="Sx4.Ex13.m5" text="C">
+                    <XMath>
+                      <XMTok role="UNKNOWN" font="italic">C</XMTok>
+                    </XMath>
+                  </Math>
+                </td>
+                <td align="left">
+                  <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;7\end{bmatrix}" xml:id="Sx4.Ex13.m6" text="absent = matrix[[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 7]]">
+                    <XMath>
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMDual>
+                          <XMRef idref="Sx4.Ex13.m6.xm1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN">[</XMTok>
+                            <XMArray meaning="matrix" xml:id="Sx4.Ex13.m6.xm1">
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                              </XMRow>
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                              </XMRow>
+                              <XMRow>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="0" role="NUMBER">0</XMTok>
+                                </XMCell>
+                                <XMCell align="center">
+                                  <XMTok meaning="7" role="NUMBER">7</XMTok>
+                                </XMCell>
+                              </XMRow>
+                            </XMArray>
+                            <XMTok role="CLOSE">]</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMath>
+                  </Math>
+                </td>
+              </MathBranch>
+            </MathFork>
+          </equation>
+        </equationgroup>
+        <p>The matrix <Math mode="inline" xml:id="Sx4.SS0.SSS0.Px1.p1.m1" tex="A" text="A"><XMath><XMTok role="UNKNOWN" font="italic">A</XMTok></XMath></Math> satisfies condition (1) and since the first row is the only one with a leading non-zero entry and there is no row above it, <Math mode="inline" xml:id="Sx4.SS0.SSS0.Px1.p1.m2" tex="A" text="A"><XMath><XMTok role="UNKNOWN" font="italic">A</XMTok></XMath></Math> satisfies condition (2) as well.</p>
+      </para>
+      <para xml:id="Sx4.SS0.SSS0.Px1.p2">
+        <p>Matrix <Math mode="inline" xml:id="Sx4.SS0.SSS0.Px1.p2.m1" tex="B" text="B"><XMath><XMTok role="UNKNOWN" font="italic">B</XMTok></XMath></Math> has no zero rows, so it satisfies condition (1). We see however that the leading non-zero entry of the third row is not to the right of the leading non-zero entry of the second row; thus matrix <Math mode="inline" xml:id="Sx4.SS0.SSS0.Px1.p2.m2" tex="B" text="B"><XMath><XMTok role="UNKNOWN" font="italic">B</XMTok></XMath></Math> does not satisfy condition (2).</p>
+      </para>
+      <para xml:id="Sx4.SS0.SSS0.Px1.p3">
+        <p>Matrix <Math mode="inline" xml:id="Sx4.SS0.SSS0.Px1.p3.m1" tex="C" text="C"><XMath><XMTok role="UNKNOWN" font="italic">C</XMTok></XMath></Math> satisfies condition (1) and (2), so it is in echelon form. We can see that the leading non-zero entries of each row are strictly to the right of the leading non-zero entry of the rows above it.</p>
+      </para>
+    </paragraph>
+  </section>
+  <section xml:id="Sx5">
+    <title>Row-reduced echelon form: (rref)</title>
+    <!-- %**** Lecture˙02.tex Line 225 **** -->
+    <para xml:id="Sx5.p1">
+      <inline-block class="ltx_minipage" vattach="top" width="411.9pt">
+        <p>A matrix <Math mode="inline" xml:id="Sx5.p1.m1" tex="M" text="M"><XMath><XMTok role="UNKNOWN" font="italic">M</XMTok></XMath></Math> is in row-reduced echelon form (rref) if</p>
+        <enumerate xml:id="I4">
+          <item frefnum="1." refnum="1" xml:id="I4.i1">
+            <tag>1.</tag>
+            <para xml:id="I4.i1.p1">
+              <p><Math mode="inline" xml:id="I4.i1.p1.m1" tex="M" text="M"><XMath><XMTok role="UNKNOWN" font="italic">M</XMTok></XMath></Math> is in echelon form</p>
+            </para>
+          </item>
+          <item frefnum="2." refnum="2" xml:id="I4.i2">
+            <tag>2.</tag>
+            <para xml:id="I4.i2.p1">
+              <p>All the leading non-zero entries must be <Math mode="inline" xml:id="I4.i2.p1.m1" tex="1" text="1"><XMath><XMTok meaning="1" role="NUMBER">1</XMTok></XMath></Math>.</p>
+            </para>
+          </item>
+          <item frefnum="3." refnum="3" xml:id="I4.i3">
+            <tag>3.</tag>
+            <para xml:id="I4.i3.p1">
+              <p>All the other entries in the column with leading <Math mode="inline" xml:id="I4.i3.p1.m1" tex="1" text="1"><XMath><XMTok meaning="1" role="NUMBER">1</XMTok></XMath></Math> should be <Math mode="inline" xml:id="I4.i3.p1.m2" tex="0" text="0"><XMath><XMTok meaning="0" role="NUMBER">0</XMTok></XMath></Math>.</p>
+            </para>
+          </item>
+        </enumerate>
+      </inline-block>
+    </para>
+    <para xml:id="Sx5.p2">
+      <p>Consider again the matrices</p>
+      <equationgroup class="ltx_eqn_align" xml:id="Sx5.EGx11">
+        <equation xml:id="Sx5.Ex14">
+          <MathFork>
+            <Math xml:id="Sx5.Ex14.m7" tex="\displaystyle A=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;0&amp;0\end{bmatrix}" text="A = matrix[[1, 2, 3], [0, 0, 0]]">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                  <XMDual>
+                    <XMRef idref="Sx5.Ex14.m2.xm1.mf"/>
+                    <XMWrap>
+                      <XMTok role="OPEN">[</XMTok>
+                      <XMArray meaning="matrix" xml:id="Sx5.Ex14.m2.xm1.mf">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle A" xml:id="Sx5.Ex14.m1" text="A">
+                  <XMath>
+                    <XMTok role="UNKNOWN" font="italic">A</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+              <td align="left">
+                <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;0&amp;0\end{bmatrix}" xml:id="Sx5.Ex14.m2" text="absent = matrix[[1, 2, 3], [0, 0, 0]]">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="absent"/>
+                      <XMDual>
+                        <XMRef idref="Sx5.Ex14.m2.xm1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMArray meaning="matrix" xml:id="Sx5.Ex14.m2.xm1">
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                            </XMRow>
+                          </XMArray>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+          <MathFork>
+            <Math xml:id="Sx5.Ex14.m8" tex="\displaystyle B=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;1&amp;0\\&#10;0&amp;1&amp;0\end{bmatrix}" text="B = matrix[[1, 2, 3], [0, 1, 0], [0, 1, 0]]">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">B</XMTok>
+                  <XMDual>
+                    <XMRef idref="Sx5.Ex14.m4.xm1.mf"/>
+                    <XMWrap>
+                      <XMTok role="OPEN">[</XMTok>
+                      <XMArray meaning="matrix" xml:id="Sx5.Ex14.m4.xm1.mf">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle B" xml:id="Sx5.Ex14.m3" text="B">
+                  <XMath>
+                    <XMTok role="UNKNOWN" font="italic">B</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+              <td align="left">
+                <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;1&amp;0\\&#10;0&amp;1&amp;0\end{bmatrix}" xml:id="Sx5.Ex14.m4" text="absent = matrix[[1, 2, 3], [0, 1, 0], [0, 1, 0]]">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="absent"/>
+                      <XMDual>
+                        <XMRef idref="Sx5.Ex14.m4.xm1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMArray meaning="matrix" xml:id="Sx5.Ex14.m4.xm1">
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                            </XMRow>
+                          </XMArray>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+          <MathFork>
+            <Math xml:id="Sx5.Ex14.m9" tex="\displaystyle C=\begin{bmatrix}1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;7\end{bmatrix}" text="C = matrix[[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 7]]">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">C</XMTok>
+                  <XMDual>
+                    <XMRef idref="Sx5.Ex14.m6.xm1.mf"/>
+                    <XMWrap>
+                      <XMTok role="OPEN">[</XMTok>
+                      <XMArray meaning="matrix" xml:id="Sx5.Ex14.m6.xm1.mf">
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                        </XMRow>
+                        <XMRow>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          </XMCell>
+                          <XMCell align="center">
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMCell>
+                        </XMRow>
+                      </XMArray>
+                      <XMTok role="CLOSE">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMath>
+            </Math>
+            <MathBranch>
+              <td align="right">
+                <Math mode="inline" tex="\displaystyle C" xml:id="Sx5.Ex14.m5" text="C">
+                  <XMath>
+                    <XMTok role="UNKNOWN" font="italic">C</XMTok>
+                  </XMath>
+                </Math>
+              </td>
+              <td align="left">
+                <Math mode="inline" tex="\displaystyle=\begin{bmatrix}1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;7\end{bmatrix}" xml:id="Sx5.Ex14.m6" text="absent = matrix[[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 7]]">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="absent"/>
+                      <XMDual>
+                        <XMRef idref="Sx5.Ex14.m6.xm1"/>
+                        <XMWrap>
+                          <XMTok role="OPEN">[</XMTok>
+                          <XMArray meaning="matrix" xml:id="Sx5.Ex14.m6.xm1">
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                            </XMRow>
+                            <XMRow>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                              </XMCell>
+                              <XMCell align="center">
+                                <XMTok meaning="7" role="NUMBER">7</XMTok>
+                              </XMCell>
+                            </XMRow>
+                          </XMArray>
+                          <XMTok role="CLOSE">]</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math>
+              </td>
+            </MathBranch>
+          </MathFork>
+        </equation>
+      </equationgroup>
+    </para>
+    <para xml:id="Sx5.p3">
+      <p><Math mode="inline" xml:id="Sx5.p3.m1" tex="A" text="A"><XMath><XMTok role="UNKNOWN" font="italic">A</XMTok></XMath></Math> is in echelon form, but is it in row-reduced echelon form? It is, because all leading non-zero entries are <Math mode="inline" xml:id="Sx5.p3.m2" tex="1" text="1"><XMath><XMTok meaning="1" role="NUMBER">1</XMTok></XMath></Math>, and the other entries in that column are <Math mode="inline" xml:id="Sx5.p3.m3" tex="0" text="0"><XMath><XMTok meaning="0" role="NUMBER">0</XMTok></XMath></Math>.</p>
+    </para>
+    <para xml:id="Sx5.p4">
+      <p><Math mode="inline" xml:id="Sx5.p4.m1" tex="B" text="B"><XMath><XMTok role="UNKNOWN" font="italic">B</XMTok></XMath></Math> is not in echelon form, so it cannot be in row-reduced echelon form.</p>
+    </para>
+    <para xml:id="Sx5.p5">
+      <p><Math mode="inline" xml:id="Sx5.p5.m1" tex="C" text="C"><XMath><XMTok role="UNKNOWN" font="italic">C</XMTok></XMath></Math> is in echelon form, but it has a leading non-zero entry that is <Math mode="inline" xml:id="Sx5.p5.m2" tex="7" text="7"><XMath><XMTok meaning="7" role="NUMBER">7</XMTok></XMath></Math>, which violates condition (2).</p>
+    </para>
+    <!-- %“begin–figure˝[h!] 
+     %“begin–subfigure˝[b]–.3“linewidth˝-->
+    <figure frefnum="Figure 1" refnum="1" xml:id="Sx5.F1">
+      <equation xml:id="Sx5.Ex15" class="ltx_centering">
+        <Math mode="display" xml:id="Sx5.Ex15.m1" tex="\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;0&amp;0\end{bmatrix}" text="matrix[[1, 2, 3], [0, 0, 0]]">
+          <XMath>
+            <XMDual>
+              <XMRef idref="Sx5.Ex15.m1.xm1"/>
+              <XMWrap>
+                <XMTok role="OPEN">[</XMTok>
+                <XMArray meaning="matrix" xml:id="Sx5.Ex15.m1.xm1">
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+                <XMTok role="CLOSE">]</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMath>
+        </Math>
+      </equation>
+      <!-- %**** Lecture˙02.tex Line 275 **** -->
+      <toccaption class="ltx_centering"><tag close=" ">1</tag>Echelon and rref.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Figure 1</tag>Echelon and rref.</caption>
+    </figure>
+    <!-- %“end–subfigure˝ 
+     %“begin–subfigure˝[b]–.3“linewidth˝-->
+    <figure frefnum="Figure 2" refnum="2" xml:id="Sx5.F2">
+      <equation xml:id="Sx5.Ex16" class="ltx_centering">
+        <Math mode="display" xml:id="Sx5.Ex16.m1" tex="\begin{bmatrix}1&amp;2&amp;3\\&#10;0&amp;1&amp;0\\&#10;0&amp;1&amp;0\end{bmatrix}" text="matrix[[1, 2, 3], [0, 1, 0], [0, 1, 0]]">
+          <XMath>
+            <XMDual>
+              <XMRef idref="Sx5.Ex16.m1.xm1"/>
+              <XMWrap>
+                <XMTok role="OPEN">[</XMTok>
+                <XMArray meaning="matrix" xml:id="Sx5.Ex16.m1.xm1">
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+                <XMTok role="CLOSE">]</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMath>
+        </Math>
+      </equation>
+      <toccaption class="ltx_centering"><tag close=" ">2</tag>Not echelon.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Figure 2</tag>Not echelon.</caption>
+    </figure>
+    <!-- %“end–subfigure˝ 
+     %“begin–subfigure˝[b]–.3“linewidth˝-->
+    <figure frefnum="Figure 3" refnum="3" xml:id="Sx5.F3">
+      <equation xml:id="Sx5.Ex17" class="ltx_centering">
+        <Math mode="display" xml:id="Sx5.Ex17.m1" tex="\begin{bmatrix}1&amp;0&amp;0&amp;0\\&#10;0&amp;0&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;7\end{bmatrix}" text="matrix[[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 7]]">
+          <XMath>
+            <XMDual>
+              <XMRef idref="Sx5.Ex17.m1.xm1"/>
+              <XMWrap>
+                <XMTok role="OPEN">[</XMTok>
+                <XMArray meaning="matrix" xml:id="Sx5.Ex17.m1.xm1">
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMCell>
+                    <XMCell align="center">
+                      <XMTok meaning="7" role="NUMBER">7</XMTok>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+                <XMTok role="CLOSE">]</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMath>
+        </Math>
+      </equation>
+      <toccaption class="ltx_centering"><tag close=" ">3</tag>Echelon but not rref.</toccaption>
+      <caption class="ltx_centering"><tag close=": ">Figure 3</tag>Echelon but not rref.</caption>
+    </figure>
+    <!-- %“end–subfigure˝ 
+     %“end–figure˝-->
+    <para xml:id="Sx5.p6">
+      <p>From a theoretical perspective, echelon form and row-reduced echelon form are not very different. We can obtain the same information from a matrix in echelon form that we can from a matrix in row-reduced echelon form. From a matrix in row-reduced echelon form, we can fairly easily obtain the solutions, but it requires more computation to get a matrix into this form. Obtaining a solution from a matrix in echelon form may require back substitution to obtain answers.</p>
+    </para>
+    <para xml:id="Sx5.p7">
+      <p>Given an augmented matrix, we wish to obtain its echelon form and row-reduced echelon form.</p>
+    </para>
+  </section>
+</document>

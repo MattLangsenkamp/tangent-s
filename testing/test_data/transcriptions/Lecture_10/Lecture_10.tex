@@ -1,0 +1,321 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vek}[1]{\vec{#1}}
+\newcommand{\note}{\textsc{Note:} }
+\newcommand{\rank}{\text{rank}}
+
+\title{Lecture 10}
+\author{A. Agarwal}
+\date{April 10, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Recall}
+
+Previously, we saw the inverse $\mat{M}$ of a matrix $\mat{A}$:
+\begin{align*}
+\mat{A} \mat{M} = \mat{M} \mat{A} = \mat{I}_n
+\end{align*}
+where $\mat{A}$ is an $n \times n$ matrix; that is, $\mat{A}$ must be square to have an inverse.
+
+In a $3 \times 3$ matrix, this equates to solving each of
+\begin{align*}
+\mat{A} \vek{x} &= \begin{bmatrix}1\\0\\0\end{bmatrix}
+&
+\mat{A} \vek{x} &= \begin{bmatrix}0\\1\\0\end{bmatrix}
+&
+\mat{A} \vek{x} &= \begin{bmatrix}0\\0\\1\end{bmatrix}
+\end{align*}
+which can be formulated as the process of transforming an extended augmented matrix through row reductions:
+\begin{align*}
+\left[\begin{matrix} \mat{A} & \mat{I}\end{matrix}\right]
+\longrightarrow
+\left[\begin{matrix} \mat{I} & \mat{M}\end{matrix}\right]
+\end{align*}
+
+\section*{Fundamental Theorem of Invertible Matrices}
+
+\begin{minipage}{.95\textwidth}
+Let $\mat{A}_{n \times n}$ be a matrix over a field $\mathbb{F}$. Then the following are equivalent (TFAE):
+\begin{enumerate}
+\item{
+$\mat{A}$ is invertible.
+}
+\item{
+The reduced row echelon form (rref) of $\mat{A}$ is $\mat{I}$.
+}
+\item{
+The $\rank(A) = n$.
+}
+\item{
+The columns of $\mat{A}$ are linearly independent.
+}
+\item{
+The rows of $\mat{A}$ are linearly independent.
+}
+\item{
+The \emph{homogeneous system} $\mat{A} \vek{x} = \vek{0}$ has only the zero solution $\vek{x} = \vek{0}$.
+}
+\item{
+$\mat{A} \vek{x} = \vek{b}$ will have a unique solution for all $\vek{b} \in \bbR^n$.
+}
+\item{
+The span of the columns of $\mat{A} = \bbR^n$.
+}
+\item{
+The columns and rows of $\mat{A}$ form a basis of $\bbR^n$.
+}
+\item{
+The $\det(\mat{A}) \neq 0$.
+}
+\item{
+$\mat{A}$ is the product of elementary matrices.
+}
+\end{enumerate}
+\end{minipage}
+
+
+\paragraph{Proof of (6).} Consider $\mat{A} \vek{x} = \vek{0}$. If $\mat{A}$ has an inverse $\mat{M}$, then
+\begin{align*}
+\mat{A} \vek{x} &= \vek{0}
+\\
+\mat{M} \mat{A} \vek{x} &= \mat{M} \vek{0}
+\\
+\mat{I} \vek{x} &= \vek{0}
+\\
+\vek{x} &= \vek{0}
+\end{align*}
+
+\paragraph{Proof of (7).} Suppose $\vek{b} \in \bbR^n$ is an arbitrary vector. Next consider the system
+\begin{align*}
+\mat{A} \vek{x} &= \vek{b}
+\\
+\mat{M} \mat{A} \vek{x} &= \mat{M} \vek{b}
+\\
+\vek{x} &= \mat{M} \vek{b}
+\end{align*}
+so the system has a unique solution for any $\vek{b}$.
+
+\vspace{1cm}
+
+Let us take a closer look at some of the implications of this theorem. Suppose $\mat{A}$ is a $3 \times 3$ matrix. Suppose each of the following systems
+\begin{align*}
+\mat{A} \vek{x} &= \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
+&
+\mat{A} \vek{x} &= \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}
+&
+\mat{A} \vek{x} &= \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}
+\end{align*}
+has a solution, called $\vek{x}_1, \vek{x}_2, \vek{x}_3$, respectively.
+
+Suppose we want to find the solution of $\mat{A} \vek{x} = \begin{bmatrix}1 \\ e \\ \pi\end{bmatrix}$. Note that
+\begin{align*}
+\begin{bmatrix}1 \\ e \\ \pi\end{bmatrix}
+&=
+1 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} +
+e \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} +
+\pi \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}
+\\
+&= 1 \mat{A} \vek{x}_1 + e \mat{A} \vek{x}_2 + \pi \mat{A} \vek{x}_3
+\\
+&= A \Big( 1 \vek{x}_1 + e \vek{x}_2 + \pi \vek{x}_3 \Big)
+\end{align*}
+So the solution is given by $\vek{x}_1 + e \vek{x}_2 + \pi \vek{x}_3$.
+
+\section*{Elementary Matrices}
+
+An \keyphrase{elementary matrix}, $\mat{E}$, is a matrix we obtain by performing exactly one row operation on an identity matrix.
+
+For example, in the $2 \times 2$ case,
+\begin{align*}
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\xrightarrow[]{2 R_2}
+\begin{bmatrix}1 & 0 \\ 0 & 2\end{bmatrix}
+&&
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\xrightarrow[]{-3 R_1 + R_2}
+\begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix}
+&&
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\xrightarrow[]{R_2 \circlearrowright R_1}
+\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}
+\end{align*}
+The matrices $\begin{bmatrix}1 & 0 \\ 0 & 2\end{bmatrix},\begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix},\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$ are all elementary matrices.
+
+Consider multiplying a $2 \times 2$ matrix $\mat{A}$ by the second of these elementary matrices:
+\begin{align*}
+\begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix} \mat{A}
+&=
+\begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix}
+\begin{bmatrix}a & b \\ c & d\end{bmatrix}
+\\
+&= \begin{bmatrix}a & b \\ -3a+c & -3b+d\end{bmatrix}
+\\
+\\
+\begin{bmatrix}a & b \\ c & d\end{bmatrix}
+\xrightarrow{-3 R_1 + R_2} &
+\begin{bmatrix} a & b \\ -3a+c & -3b+d\end{bmatrix}
+\end{align*}
+We find that multiplying $\mat{A}$ by an elementary matrix has the same effect as performing the same single row operation on $\mat{A}$ as was performed to obtain the elementary matrix. This shows us that to perform one row operation on a matrix $\mat{A}$ we just need to multiply $\mat{A}$ on the left by an appropriate elementary matrix.
+
+\subsection*{Properties of Inverses}
+For a matrix $\mat{A}$, the following are true of its inverse $\mat{A}^{-1}$:
+\begin{enumerate}
+\item{
+$\left( \mat{A}^{-1} \right)^{-1} = \mat{A}$
+}
+\item{
+$\left( k \mat{A} \right)^{-1} = \frac{1}{k} \mat{A}^{-1}$
+}
+\item{
+$\mat{A}^{-1}$ is unique
+}
+\item{
+$\left(\mat{A} \mat{B}\right)^{-1} = \mat{B}^{-1} \mat{A}^{-1}$
+}
+\end{enumerate}
+
+\begin{proof}
+Suppose $\mat{M}_1$ and $\mat{M}_2$ act as inverses of $\mat{A}$. That is,
+\begin{align*}
+\mat{A} \mat{M}_1 &= \mat{M}_1 \mat{A} &= \mat{I}
+\\
+\mat{A} \mat{M}_2 &= \mat{M}_2 \mat{A} &= \mat{I}
+\end{align*}
+Note then that
+\begin{align*}
+\mat{M}_1 &= \mat{M}_1 \mat{I}
+\\
+&= \mat{M}_1 \left( \mat{A} \mat{M}_2 \right)
+\\
+&= \left( \mat{M}_1 \mat{A} \right) \mat{M}_2
+\\
+&= \mat{I} \mat{M}_2
+\end{align*}
+So $\mat{M}_1 = \mat{M}_2$.
+\end{proof}
+
+\begin{proof}
+Assume that $\mat{A}$ and $\mat{B}$ are both invertible.
+\begin{align*}
+\left( \mat{A} \mat{B} \right) \mat{B}^{-1} \mat{A}^{-1} &=
+\mat{A} \left( \mat{B} \mat{B}^{-1} \right) \mat{A}^{-1}
+\\
+&= \mat{A} \mat{I} \mat{A}^{-1}
+\\
+&= \mat{A} \mat{A}^{-1}
+\\
+&= I
+\end{align*}
+Similarly we can show that $\mat{B}^{-1} \mat{A}^{-1} \left( \mat{A} \mat{B} \right) = \mat{I}$.
+\end{proof}
+
+\ques Can $\left( \mat{A} \mat{B} \right)$ be invertible while one of $\mat{A}$ or $\mat{B}$ is not invertible? Must one be invertible, must both be invertible?
+
+What if $\mat{B}$ is not invertible? By the fundamental theorem of invertible matrices, we have that $\mat{B} \vek{x} = \vek{0}$ must have a non-trivial solution, $\vek{x}_0$. Then
+\begin{align*}
+\left( \mat{A} \mat{B} \right) \vek{x}_0
+&= \mat{A} \left( \mat{B} \vek{x}_0 \right)
+\\
+&= \mat{A} \vek{0}
+\\
+&= \vek{0}
+\end{align*}
+Then the equation $\left( \mat{A} \mat{b} \right) \vek{x} = \vek{0}$ also has a non-trivial solution. Thus $\left(\mat{A}\mat{B}\right)$ cannot be invertible.
+
+\section*{Elementary Matrices and Invertible Matrices}
+Consider the following matrix $\mat{A}$ and its row reduced echelon form:
+\begin{align*}
+\mat{A} = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+\xrightarrow[]{-3 R_1 + R_2}
+\begin{bmatrix}1 & 2 \\ 0 & -2\end{bmatrix}
+\xrightarrow[]{\frac{-1}{2} R_2}
+\begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}
+\xrightarrow[]{-2 R_1 + R_2}
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\end{align*}
+By the fundamental theorem of matrices, this shows us that $\mat{A}$ is invertible.
+
+Note though that we have said that we can represent row operations as elementary matrices. Corresponding to these row operations then, are the matrices
+\begin{align*}
+\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+\underbrace{\xrightarrow[]{-3 R_1 + R_2}}_{\mat{E} = \begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix}}
+\begin{bmatrix}1 & 2 \\ 0 & -2\end{bmatrix}
+\underbrace{\xrightarrow[]{\frac{-1}{2} R_2}}_{\mat{F} = \begin{bmatrix}1 & 0 \\ 0 & \frac{-1}{2}\end{bmatrix}}
+\begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}
+\underbrace{\xrightarrow[]{-2 R_1 + R_2}}_{\mat{G} = \begin{bmatrix}1 & -2 \\ 0 & 1\end{bmatrix}}
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\end{align*}
+If we call the matrices between $\mat{A}$ and $\mat{I}$ as $\mat{B}$ and $\mat{C}$, then we have that
+\begin{align*}
+\mat{B} &= \mat{E} \mat{A}
+\\
+\mat{C} &= \mat{F} \mat{B} = \mat{F} \mat{E} \mat{A}
+\\
+\mat{I} &= \mat{G} \mat{C} = \mat{G} \mat{F} \mat{E} \mat{A}
+\end{align*}
+and so $\left( \mat{G} \mat{F} \mat{E} \right)$ is the inverse of $\mat{A}$:
+\begin{align*}
+\left( \mat{G} \mat{F} \mat{E} \right) \mat{A} &= \mat{I}
+\end{align*}
+so
+\begin{align*}
+\mat{A} = \left( \mat{G} \mat{F} \mat{E} \right)^{-1}
+= \mat{E}^{-1} \mat{F}^{-1} \mat{G}^{-1}
+\end{align*}
+but this assumes that the matrices $\mat{E}, \mat{F}, \mat{G}$ are invertible. This brings us to an important question:
+\ques Are elementary matrices invertible?
+In essence, this equates to asking how to reverse a row operation. Every row operation can be reversed, and so every elementary matrix is invertible.
+\begin{align*}
+\mat{E} &= \begin{bmatrix}1 & 0 \\ -3 & 1\end{bmatrix}
+&
+\mat{F} &= \begin{bmatrix}1 & 0 \\ 0 & \frac{-1}{2}\end{bmatrix}
+&
+\mat{G} &= \begin{bmatrix}1 & -2 \\ 0 & 1\end{bmatrix}
+\\
+\mat{E}^{-1} &= \begin{bmatrix}1 & 0 \\ 3 & 0\end{bmatrix}
+&
+\mat{F}^{-1} &= \begin{bmatrix}1 & 0 \\ 0 & -2\end{bmatrix}
+&
+\mat{G}^{-1} &= \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix}
+\end{align*}
+
+\section*{Vector Space}
+The term vector space shouldn't be confused for what we know as vectors. Consider the set
+\begin{align*}
+\mathbb{P}_2 &= \text{Polynomials of degree $\le 2$}
+\end{align*}
+That is, elements of $\mathbb{P}_2$ are of the form
+\begin{align*}
+a x^2 + b x + c
+\end{align*}
+where $a,b,c \in \bbR$.
+
+Let $u,v \in \mathbb{P}_2$. It is apparent then that $u(x) + v(x) \in \mathbb{P}_2$ and for any $k \in \bbR$, $k u(x) \in \mathbb{P}_2$.
+
+This is very similar to $\bbR^3$. Consider $\vek{u}, \vek{v} \in \bbR^3$. Then $\vek{u} + \vek{v} \in \bbR^3$ and for any $k \in \bbR^3$, $k \vek{u} \in \bbR^3$.
+
+In fact, many things besides standard vectors will be considered as vectors. Polynomials, functions, and matrices can all be seen as vectors in their respective vector spaces.
+
+
+\end{document}

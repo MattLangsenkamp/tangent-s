@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/raid/des1613/wikipedia_math/tex"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" xml:id="Document">
+  <!-- %**** ̵String ̵Line ̵25 ̵**** 
+     %Some ̵control ̵structure ̵from ̵latex.ltx
+     %(amazing ̵that ̵it ̵actually ̵works!)
+     %How ̵much ̵of ̵this ̵control ̵struture ̵will ̵I ̵need?
+     %**** ̵String ̵Line ̵50 ̵****-->
+  <para xml:id="p1" fragid="p1">
+    <p>
+      <Math mode="inline" xml:id="p1.m1" tex="p" text="p" fragid="p1.m1">
+        <m:math alttext="p" display="inline">
+          <m:semantics>
+            <m:mi>p</m:mi>
+            <m:annotation encoding="application/x-tex">p</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m2" tex="q" text="q" fragid="p1.m2">
+        <m:math alttext="q" display="inline">
+          <m:semantics>
+            <m:mi>q</m:mi>
+            <m:annotation encoding="application/x-tex">q</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m3" tex="S(k)" text="S * k" fragid="p1.m3">
+        <m:math alttext="S(k)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mi>S</m:mi>
+              <m:mo>⁢</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mi>k</m:mi>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">S(k)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m4" tex="\{1,\ldots,k\}" text="set@(1, ldots, k)" fragid="p1.m4">
+        <m:math alttext="\{1,\ldots,k\}" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mo>{</m:mo>
+              <m:mrow>
+                <m:mn>1</m:mn>
+                <m:mo>,</m:mo>
+                <m:mi mathvariant="normal">…</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>k</m:mi>
+              </m:mrow>
+              <m:mo>}</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">\{1,\ldots,k\}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m5" tex="\tau" text="tau" fragid="p1.m5">
+        <m:math alttext="\tau" display="inline">
+          <m:semantics>
+            <m:mi>τ</m:mi>
+            <m:annotation encoding="application/x-tex">\tau</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m6" tex="S(p+q)" text="S * (p + q)" fragid="p1.m6">
+        <m:math alttext="S(p+q)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mi>S</m:mi>
+              <m:mo>⁢</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mrow>
+                  <m:mi>p</m:mi>
+                  <m:mo>+</m:mo>
+                  <m:mi>q</m:mi>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">S(p+q)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m7" tex="\tau(1)&lt;\cdots&lt;\tau(p)\," text="tau * 1 less cdots less tau * p" fragid="p1.m7">
+        <m:math alttext="\tau(1)&lt;\cdots&lt;\tau(p)\," display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>⁢</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mn>1</m:mn>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>&lt;</m:mo>
+              <m:mi mathvariant="normal">⋯</m:mi>
+              <m:mo>&lt;</m:mo>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>⁢</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mi>p</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">\tau(1)&lt;\cdots&lt;\tau(p)\,</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m8" tex="\tau(p+1)&lt;\cdots&lt;\tau(p+q)\," text="tau * (p + 1) less cdots less tau * (p + q)" fragid="p1.m8">
+        <m:math alttext="\tau(p+1)&lt;\cdots&lt;\tau(p+q)\," display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>⁢</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>&lt;</m:mo>
+              <m:mi mathvariant="normal">⋯</m:mi>
+              <m:mo>&lt;</m:mo>
+              <m:mrow>
+                <m:mi>τ</m:mi>
+                <m:mo>⁢</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>+</m:mo>
+                    <m:mi>q</m:mi>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">\tau(p+1)&lt;\cdots&lt;\tau(p+q)\,</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m9" tex="(p,q)" text="open-interval@(p, q)" fragid="p1.m9">
+        <m:math alttext="(p,q)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mrow>
+                <m:mi>p</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>q</m:mi>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">(p,q)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m10" tex="S(p,q)." text="S * open-interval@(p, q)" fragid="p1.m10">
+        <m:math alttext="S(p,q)." display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mi>S</m:mi>
+                <m:mo>⁢</m:mo>
+                <m:mrow>
+                  <m:mo>(</m:mo>
+                  <m:mrow>
+                    <m:mi>p</m:mi>
+                    <m:mo>,</m:mo>
+                    <m:mi>q</m:mi>
+                  </m:mrow>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">S(p,q).</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m11" tex="S(p,q)\subset S(p+q)." text="S * open-interval@(p, q) subset-of S * (p + q)" fragid="p1.m11">
+        <m:math alttext="S(p,q)\subset S(p+q)." display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mrow>
+                  <m:mi>S</m:mi>
+                  <m:mo>⁢</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:mi>p</m:mi>
+                      <m:mo>,</m:mo>
+                      <m:mi>q</m:mi>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+                <m:mo>⊂</m:mo>
+                <m:mrow>
+                  <m:mi>S</m:mi>
+                  <m:mo>⁢</m:mo>
+                  <m:mrow>
+                    <m:mo>(</m:mo>
+                    <m:mrow>
+                      <m:mi>p</m:mi>
+                      <m:mo>+</m:mo>
+                      <m:mi>q</m:mi>
+                    </m:mrow>
+                    <m:mo>)</m:mo>
+                  </m:mrow>
+                </m:mrow>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">S(p,q)\subset S(p+q).</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m12" tex="(p,q)" text="open-interval@(p, q)" fragid="p1.m12">
+        <m:math alttext="(p,q)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mrow>
+                <m:mi>p</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>q</m:mi>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">(p,q)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m13" tex="p" text="p" fragid="p1.m13">
+        <m:math alttext="p" display="inline">
+          <m:semantics>
+            <m:mi>p</m:mi>
+            <m:annotation encoding="application/x-tex">p</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m14" tex="S(p,q)" text="S * open-interval@(p, q)" fragid="p1.m14">
+        <m:math alttext="S(p,q)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mi>S</m:mi>
+              <m:mo>⁢</m:mo>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mrow>
+                  <m:mi>p</m:mi>
+                  <m:mo>,</m:mo>
+                  <m:mi>q</m:mi>
+                </m:mrow>
+                <m:mo>)</m:mo>
+              </m:mrow>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">S(p,q)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m15" tex="{p+q\choose p}." text="binomial@(p + q, p)" fragid="p1.m15">
+        <m:math alttext="{p+q\choose p}." display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mrow>
+                <m:mo>(</m:mo>
+                <m:mstyle scriptlevel="+1">
+                  <m:mtable rowspacing="0.2ex" columnspacing="0.4em">
+                    <m:mtr>
+                      <m:mtd>
+                        <m:mrow>
+                          <m:mi>p</m:mi>
+                          <m:mo>+</m:mo>
+                          <m:mi>q</m:mi>
+                        </m:mrow>
+                      </m:mtd>
+                    </m:mtr>
+                    <m:mtr>
+                      <m:mtd>
+                        <m:mi>p</m:mi>
+                      </m:mtd>
+                    </m:mtr>
+                  </m:mtable>
+                </m:mstyle>
+                <m:mo>)</m:mo>
+              </m:mrow>
+              <m:mo>.</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">{p+q\choose p}.</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m16" tex="p" text="p" fragid="p1.m16">
+        <m:math alttext="p" display="inline">
+          <m:semantics>
+            <m:mi>p</m:mi>
+            <m:annotation encoding="application/x-tex">p</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m17" tex="q" text="q" fragid="p1.m17">
+        <m:math alttext="q" display="inline">
+          <m:semantics>
+            <m:mi>q</m:mi>
+            <m:annotation encoding="application/x-tex">q</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m18" tex="(p,q)" text="open-interval@(p, q)" fragid="p1.m18">
+        <m:math alttext="(p,q)" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mo>(</m:mo>
+              <m:mrow>
+                <m:mi>p</m:mi>
+                <m:mo>,</m:mo>
+                <m:mi>q</m:mi>
+              </m:mrow>
+              <m:mo>)</m:mo>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">(p,q)</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+    </p>
+  </para>
+</document>

@@ -1,0 +1,557 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+
+\title{Lecture 4}
+\author{A. Agarwal}
+\date{January 10, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Recall}
+
+\begin{enumerate}
+\item{
+System of linear equations
+}
+\item{
+Augmented matrix from a system
+\begin{align*}
+\left[\begin{matrix}
+A & \vec{b}
+\end{matrix}\right]
+\end{align*}
+}
+\item{
+Pivot entries and variables, and free variables
+}
+\item{
+Row operations to reduce matrices to `nice forms'
+}
+\item{
+Echelon form and row-reduced echelon form (rref.)
+}
+\end{enumerate}
+
+Using these ideas, we will try to interpret the behavior of the system, and perhaps gain information about the solutions and types of solutions we will obtain, before even finding them.
+
+\section*{Rank}
+
+The \keyphrase{rank} of a matrix $A$, written as $r(A)$ is the number of pivot columns in the row echelon form of $A$.
+
+One may wonder why this definition includes the pivot columns but not the \emph{pivot rows}. We will find that in fact, they are equivalent. To see this, let us consider an example.
+
+Consider a matrix $A$ of size $2 \times 4$.
+\begin{align*}
+A =
+\left[
+\begin{matrix}
+1 & 2 & 3 & 4
+\\
+0 & 2 & -1 & 0
+\end{matrix}
+\right]
+\end{align*}
+Suppose we want to find $r(A)$. The first step is to determine the row echelon form of $A$. Recalling the definition of row echelon form, we find that $A$ satisfies the criteria that the leading non-zero entry in the second row is strictly to the right of the leading non-zero entry in the first row, so it is in echelon form. There are two pivot columns in $A$, so $r(A) = 2$.
+
+Next, we will look at $A$ from the perspective of rows. Note that there are two pivot rows in $A$. In fact, the number of pivot columns should equal the number of pivot rows for any matrix.
+
+It is not yet apparent how the notion of rank is useful. Can the rank of a matrix help us in our goal of determining solutions to a system of linear equations?
+
+
+First, let us address a question. How can the dimensions of the matrix affect the possible value of its rank?
+
+\ques What is the maximum possible value of $r(A)$ if $A$ is a matrix of size $4 \times 6$?
+
+Let us try to consider a general $4 \times 6$ matrix, and see what can happen after reducing it to row echelon form, since that will determine its rank.
+
+It is clear that we may obtain four pivots if the row echelon form turns out like so:
+\begin{align*}
+\begin{bmatrix}
+* & * & * & * & * & *
+\\
+* & * & * & * & * & *
+\\
+* & * & * & * & * & *
+\\
+* & * & * & * & * & *
+\end{bmatrix}
+\to
+\begin{bmatrix}
+\blacksquare & * & * & * & * & *
+\\
+0 & \blacksquare & * & * & * & *
+\\
+0 & 0 & \blacksquare & * & * & *
+\\
+0 & 0 & 0 & \blacksquare & \square & *
+\end{bmatrix}
+&&
+\left\{
+\begin{aligned}
+* && \text{any number}
+\\
+\blacksquare && \text{non-zero}
+\\
+0 && \text{zero}
+\end{aligned}
+\right.
+\end{align*}
+And we see that there is no way to obtain a fifth pivot -- any non-zero entry besides the already-existing pivots will not be a leading non-zero entry, and thus not be a pivot.
+
+\ques What if $A$ is $6 \times 4$?
+\begin{align*}
+\begin{bmatrix}
+* & * & * & *
+\\
+* & * & * & *
+\\
+* & * & * & *
+\\
+* & * & * & *
+\\
+* & * & * & *
+\\
+* & * & * & *
+\end{bmatrix}
+\end{align*}
+Since we can at most obtain one pivot per column, we are still limited to at most four pivots. Thus the maximum rank is still $4$.
+
+It still remains to be seen how the notion of rank can be useful in solving a system.
+
+\vspace{1cm}
+
+Consider the following system:
+\begin{align*}
+\left\{
+\begin{aligned}
+x + 2y - 3z &= 1
+\\
+x - y + z &= 0
+\\
+3x + 3y - 5z &= 3
+\end{aligned}
+\right.
+\end{align*}
+and suppose that we wish to find the number of solutions of the system and what they are.
+
+First, we convert the augmented matrix of the system to row echelon form:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+1 & -1 & 1 & 0
+\\
+3 & 3 & -5 & 3
+\end{matrix}
+\right]
+\xrightarrow[-3R_1 + R_3]{-R_1 + R_2}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+0 & -3 & 4 & -1
+\\
+0 & -3 & 4 & 0
+\end{matrix}
+\right]
+\xrightarrow[]{-R_2 + R_3}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+0 & -3 & 4 & -1
+\\
+0 & 0 & 0 & 1
+\end{matrix}
+\right]
+\end{align*}
+We find that the augmented matrix has three pivots. Then the entire matrix has rank $3$.
+
+The last row says that $0=1$. Thus the system is inconsistent.
+
+It is important to distinguish between the rank of the entire augmented matrix and the rank of the coefficient matrix. Note that in this example the augmented matrix has rank $3$ whereas the coefficient matrix has rank $2$.
+
+Let us re-examine the system in a slightly different way. We will introduce the parameter $k$:
+\begin{align*}
+\left\{
+\begin{aligned}
+x + 2y - 3z &= 1
+\\
+x - y + z &= 0
+\\
+3x + 3y - 5z &= \mathbf{k}
+\end{aligned}
+\right.
+\end{align*}
+Find those values of $k$ for which the system is consistent.
+
+One important thing to note is that changing values in the constant column really does not have an effect on the row reduction operations. Only the values in the constant column will change in the intermediate (and final) steps.
+\begin{align*}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+1 & -1 & 1 & 0
+\\
+3 & 3 & -5 & \mathbf{k}
+\end{matrix}
+\right]
+\xrightarrow[-3R_1 + R_3]{-R_1 + R_2}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+0 & -3 & 4 & -1
+\\
+0 & -3 & 4 & \mathbf{k-3}
+\end{matrix}
+\right]
+\xrightarrow[]{-R_2 + R_3}
+\left[
+\begin{matrix}
+1 & 2 & -3 & 1
+\\
+0 & -3 & 4 & -1
+\\
+0 & 0 & 0 & \mathbf{k-2}
+\end{matrix}
+\right]
+\end{align*}
+
+Recall what we have discussed previously: for consistency we cannot have a pivot appearing in the last column of the augmented matrix.
+
+The only way this can happen is if $k-2 = 0$ so that it is not a pivot. Then $k=2$ for the system to be consistent.
+
+\ques For $k=2$, find the number of solutions.
+
+For $k=2$, the augmented matrix becomes
+\begin{align*}
+\left[
+\begin{matrix}
+\boxit{red}{1} & 2 & -3 & 1
+\\
+0 & \boxit{red}{-3} & 4 & -1
+\\
+0 & 0 & 0 & 0
+\end{matrix}
+\right]
+\end{align*}
+which is in echelon form. Let us call the coefficient matrix $A$. Then
+
+The number of pivot columns $ = r(A) = 2$.
+
+The number of free columns is $3 - r(A) = 1$.
+
+Because we are considering only the coefficient matrix and there is a free column, this means the system has a free variable.
+
+We have shown that the system is consistent in this case, so it has at least one solution. Since there is a free variable, there are in fact infinitely many solutions. Note that if the system were inconsistent, then there would be no solutions rather than infinitely many solutions.
+
+Note that we did not have to solve the system to determine the number of solutions that it has!
+
+
+
+Consider the following matrix:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 & 0 & s
+\\
+0 & 0 & 1 & 0 & 1 & t
+\\
+0 & 0 & 0 & 1 & 0 & u
+\end{matrix}
+\right]
+\end{align*}
+Is the system consistent for all $s,t,u$? How many solutions are there?
+
+Let us again call the coefficient matrix of the augmented matrix $A$.
+
+Because of the placement of the $1$'s in the coefficient matrix, none of $s,t,u$ can become pivots for any values they may take on. They will never become leading non-zero entries, and thus never be pivots. This also tells us that a pivot will never enter the constant vector.
+
+Thus, the system will always be consistent and $r(A) = 3$ for all $s,t,u$. The number of free variables equals the number of columns of $A$ minus $r(A)$; that is, $5-3 = 2$.
+
+Since the system is consistent and there are two free variables, therefore the system has infinitely many solutions.
+
+Moreover, we now know quite a bit about how the solution will look. The solution will be a two dimensional object in five dimensions ($\bbR^5$), and will have the form
+\begin{align*}
+\begin{bmatrix}
+x_1
+\\
+x_2
+\\
+x_3
+\\
+x_4
+\\
+x_5
+\end{bmatrix}
+=
+\underbrace{\begin{bmatrix} * \\ * \\ * \\ * \\ * \end{bmatrix}}_{\text{Particular solution}}
++
+\overbrace{x_2 \begin{bmatrix} * \\ * \\ * \\ * \\ * \end{bmatrix}
++
+x_5 \begin{bmatrix} * \\ * \\ * \\ * \\ * \end{bmatrix}
+}^{\text{Solution to the homogeneous equation}}
+\end{align*}
+This is because there are two free variables and five variables in total.
+
+
+Let us look at this example with actual values in place of the variables $s,t,u$:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 & 0 & 7
+\\
+0 & 0 & 1 & 0 & 1 & 3
+\\
+0 & 0 & 0 & 1 & 0 & -2
+\end{matrix}
+\right]
+\longrightarrow
+\left\{
+\begin{aligned}
+x_1 &+& 0 x_2 &+& 0 x_3 &+& 0 x_4 &+& 0 x_5 &=& 7
+\\
+&&&&x_3 &+&&& x_5 &=& 3
+\\
+&&&&&&x_4 && &=& -2
+\end{aligned}
+\right.
+\end{align*}
+
+The system tells us that $x_3 = 5 - x_5$. Writing the solution in vector form, we obtain
+\begin{align*}
+\begin{bmatrix}
+x_1
+\\
+x_2
+\\
+x_3
+\\
+x_4
+\\
+x_5
+\end{bmatrix}
+=
+\begin{bmatrix}7\\x_2\\3-x_5\\-2\\x_5\end{bmatrix}
+=
+\begin{bmatrix}7\\0\\3\\-2\\0\end{bmatrix}
++ x_2 \begin{bmatrix}0\\1\\0\\0\\0\end{bmatrix}
++ x_5 \begin{bmatrix}0\\0\\-1\\0\\1\end{bmatrix}
+\end{align*}
+
+Thus there are infinitely many solutions, and the vector $\begin{bmatrix}7\\0\\3\\-2\\0\end{bmatrix}$ represents one particular solution to the system.
+
+Here is an important observation:
+
+If we examine the last part of the solution we have found, plugging in the two vectors $\begin{bmatrix}0\\1\\0\\0\\0\end{bmatrix}, \begin{bmatrix} 0\\0\\-1\\0\\1\end{bmatrix}$ into the system, then the result is zeroes:
+\begin{align*}
+x_2 \begin{bmatrix}0\\1\\0\\0\\0\end{bmatrix}
++ x_5 \begin{bmatrix}0\\0\\-1\\0\\1\end{bmatrix}
+&&
+\left\{
+\begin{aligned}
+x_1 &&&&&&&& &=& 0
+\\
+&&&&x_3 &+&&& x_5 &=& 0
+\\
+&&&&&&x_4 && &=& 0
+\end{aligned}
+\right.
+\end{align*}
+
+\begin{align*}
+\begin{bmatrix}
+x_1
+\\
+x_2
+\\
+x_3
+\\
+x_4
+\\
+x_5
+\end{bmatrix}
+=
+\begin{bmatrix}7\\x_2\\3-x_5\\-2\\x_5\end{bmatrix}
+=
+\begin{bmatrix}7\\0\\3\\-2\\0\end{bmatrix}
++ \overbrace{
+x_2
+\underbrace{\begin{bmatrix}0\\1\\0\\0\\0\end{bmatrix}}_{v_1}
++ x_5
+\underbrace{\begin{bmatrix}0\\0\\-1\\0\\1\end{bmatrix}}_{v_2}
+}^{\text{Homogenous solutions}}
+\end{align*}
+
+The solution being in this form should remind us of the form of a plane. In fact, this is the equation of a two dimensional plane within five dimensions. We might draw it as
+
+\begin{figure}[H]
+\centering
+
+$v_1$
+$v_2$
+$(0,0)$ 
+\end{figure}
+
+In which case the solution to the original system represents a translation of this plane.
+\begin{figure}[H]
+
+$v_1$
+$v_2$
+$(0,0)$
+\end{figure}
+
+One may wonder whether a (consistent) linear system can have infinitely many solutions and no free variables. The answer is no because there will only be a particular solution.
+
+\ques
+Does the existence of a free variable guarantee infinitely many solutions?
+
+Consider the matrix
+\begin{align*}
+\left[
+\begin{matrix}
+1 & 0 & 0 & 0 & 1
+\\
+0 & 0 & 0 & 0 & 2
+\end{matrix}
+\right]
+\end{align*}
+Note that the second, third, and fourth columns have all zero entries, and so they represent free variables. However, the second row indicates that the system is inconsistent because a pivot has entered the constant column.
+
+
+\section*{Linear Span}
+
+Suppose we wish to `travel' in $\bbR^2$ from the origin. What points can we reach? Suppose we can only move along a certain vector, $v_1$:
+
+\begin{figure}[H]
+\centering
+\begin{align*}
+v_1 = \begin{bmatrix}1\\0\end{bmatrix}
+\\
+\\
+\end{align*}
+\end{figure}
+
+\begin{figure}[b]
+$\bbR^2$
+$v_1$
+$(2,1)$
+\end{figure}
+
+It is apparent that for instance, we cannot reach the point $(2,1)$ solely by moving along the direction of $v_1$. Then we cannot reach every point in $\bbR^2$ by moving along $v_1$.
+
+If we go along $v_1$, what can we ``span''? In this case we can travel along a single line: the $x$-axis.
+
+The answer is that in general, we can travel along the line in the direction of $v_1$, which can be represented by $c v_1$, where $c$ is a scaling factor.
+
+
+What if we are given two vectors that we can travel along? Suppose we now can travel along the vectors $v_1, v_2$:
+\begin{figure}[H]
+\centering
+\begin{align*}
+v_1 = \begin{bmatrix}1\\0\end{bmatrix}
+&&
+v_2 = \begin{bmatrix}0\\1\end{bmatrix}
+\\
+\end{align*}
+\end{figure}
+
+\begin{figure}
+ {$\bbR^2$}
+$v_1$
+$v_2$
+\end{figure}
+Can we now reach, for instance, the point $\begin{bmatrix}\pi \\ e\end{bmatrix}$?
+
+We find this is possible, by moving `$\pi$' units along $v_1$ and `$e$' units along $v_2$:
+\begin{align*}
+\begin{bmatrix}
+\pi \\ e
+\end{bmatrix}
+&= \pi \begin{bmatrix}1 \\ 0\end{bmatrix}
++ e \begin{bmatrix}0 \\ 1\end{bmatrix}
+\\
+&= \pi v_1 + e v_2
+\end{align*}
+
+In fact, we can reach any point in $\bbR^2$. Thus we say that the $\text{Span} \left\{ v_1, v_2 \right\} = \bbR^2$.
+
+Next, suppose that we have access to three vectors, $v_1,v_2,v_3$, which we may move along.
+
+\begin{figure}[H]
+\centering
+\begin{align*}
+v_1 = \begin{bmatrix}1\\0\end{bmatrix}
+&&
+v_2 = \begin{bmatrix}0\\1\end{bmatrix}
+&&
+v_3 = \begin{bmatrix}1\\-1\end{bmatrix}
+\\
+\end{align*}
+\end{figure}
+
+\begin{figure}
+
+{$\bbR^2$}
+
+{$v_1$}
+
+{$v_2$}
+
+$v_3$
+\end{figure}
+
+We find that given one vector, we can travel along a line. Two vectors allow us to travel all of $\bbR^2$, and a third vector doesn't add any extra mobility apart from convenience in moving in a diagonal direction.
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+$v_1 = \begin{bmatrix}1 \\ 0\end{bmatrix}$
+&
+Line
+\\[2em]
+$v_1, v_2 = \begin{bmatrix}0 \\ 1\end{bmatrix}$
+&
+$\bbR^2$
+\\[2em]
+$v_1, v_2, v_3 = \begin{bmatrix}1 \\ -1\end{bmatrix}$
+&
+$\bbR^2$
+\end{tabular}
+\end{table}
+
+Now that we have an basic intuitive understanding of span, we can introduce its definition:
+
+\begin{minipage}[t]{.95\textwidth}
+Let $\left\{ v_1, v_2, \dots, v_k \right\}$ be a set of vectors in $\bbR^n$. Then the \keyphrase{linear span} of $\left\{ v_1, v_2, \dots, v_k \right\}$ is defined as
+\begin{align*}
+\text{Span} \left( \left\{ v_1, v_2, \dots, v_k \right\} \right)
+=
+\text{set of all possible linear combinations of $v_1, v_2, \dots, v_k$}
+\end{align*}
+\end{minipage}
+
+
+The span of a set of vectors is every possible combination of the vectors, and any such combination is said to be \emph{in the span} of the vectors.
+\end{document}

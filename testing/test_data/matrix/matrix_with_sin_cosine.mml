@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" xref="S4.E5.m1.1.cmml" alttext="R_{x}=\left(\begin{array}[]{ll}\cos(2\pi\nu_{x})&amp;\sin(2\pi\nu_{x})\\&#xA;-\sin(2\pi\nu_{x})&amp;\cos(2\pi\nu_{x})\end{array}\right)," class="ltx_Math" id="S4.E5.m1.1" display="block">
+   <semantics xref="S4.E5.m1.1.cmml" id="S4.E5.m1.1a">
+      <mrow xref="S4.E5.m1.1.8.cmml" id="S4.E5.m1.1.8">
+         <mrow xref="S4.E5.m1.1.8.cmml" id="S4.E5.m1.1.8a">
+            <msub xref="S4.E5.m1.1.8.1.cmml" id="S4.E5.m1.1.8.1">
+               <mi xref="S4.E5.m1.1.1.cmml" id="S4.E5.m1.1.1">R</mi>
+               <mi xref="S4.E5.m1.1.2.1.cmml" id="S4.E5.m1.1.2.1">x</mi>
+            </msub>
+            <mo xref="S4.E5.m1.1.3.cmml" id="S4.E5.m1.1.3">=</mo>
+            <mrow xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5">
+               <mo xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5a">(</mo>
+               <mtable xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5b" rowspacing="0.2ex" columnspacing="0.4em">
+                  <mtr xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5c">
+                     <mtd xref="S4.E5.m1.1.5.cmml" columnalign="left" id="S4.E5.m1.1.5d">
+                        <mrow id="S4.E5.m1.1.5.1.1.1">
+                           <mi id="S4.E5.m1.1.5.1.1.1.1">cos</mi>
+                           <mo id="S4.E5.m1.1.5.1.1.1a">⁡</mo>
+                           <mrow id="S4.E5.m1.1.5.1.1.1b">
+                              <mo id="S4.E5.m1.1.5.1.1.1c">(</mo>
+                              <mrow id="S4.E5.m1.1.5.1.1.1.8">
+                                 <mn id="S4.E5.m1.1.5.1.1.1.3">2</mn>
+                                 <mo id="S4.E5.m1.1.5.1.1.1.8.1">⁢</mo>
+                                 <mi id="S4.E5.m1.1.5.1.1.1.4">π</mi>
+                                 <mo id="S4.E5.m1.1.5.1.1.1.8.1a">⁢</mo>
+                                 <msub id="S4.E5.m1.1.5.1.1.1.8.2">
+                                    <mi id="S4.E5.m1.1.5.1.1.1.5">ν</mi>
+                                    <mi id="S4.E5.m1.1.5.1.1.1.6.1">x</mi>
+                                 </msub>
+                              </mrow>
+                              <mo id="S4.E5.m1.1.5.1.1.1d">)</mo>
+                           </mrow>
+                        </mrow>
+                     </mtd>
+                     <mtd xref="S4.E5.m1.1.5.cmml" columnalign="left" id="S4.E5.m1.1.5e">
+                        <mrow id="S4.E5.m1.1.5.1.2.1">
+                           <mi id="S4.E5.m1.1.5.1.2.1.1">sin</mi>
+                           <mo id="S4.E5.m1.1.5.1.2.1a">⁡</mo>
+                           <mrow id="S4.E5.m1.1.5.1.2.1b">
+                              <mo id="S4.E5.m1.1.5.1.2.1c">(</mo>
+                              <mrow id="S4.E5.m1.1.5.1.2.1.8">
+                                 <mn id="S4.E5.m1.1.5.1.2.1.3">2</mn>
+                                 <mo id="S4.E5.m1.1.5.1.2.1.8.1">⁢</mo>
+                                 <mi id="S4.E5.m1.1.5.1.2.1.4">π</mi>
+                                 <mo id="S4.E5.m1.1.5.1.2.1.8.1a">⁢</mo>
+                                 <msub id="S4.E5.m1.1.5.1.2.1.8.2">
+                                    <mi id="S4.E5.m1.1.5.1.2.1.5">ν</mi>
+                                    <mi id="S4.E5.m1.1.5.1.2.1.6.1">x</mi>
+                                 </msub>
+                              </mrow>
+                              <mo id="S4.E5.m1.1.5.1.2.1d">)</mo>
+                           </mrow>
+                        </mrow>
+                     </mtd>
+                  </mtr>
+                  <mtr xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5f">
+                     <mtd xref="S4.E5.m1.1.5.cmml" columnalign="left" id="S4.E5.m1.1.5g">
+                        <mrow id="S4.E5.m1.1.5.2.1.1">
+                           <mo id="S4.E5.m1.1.5.2.1.1.1">-</mo>
+                           <mrow id="S4.E5.m1.1.5.2.1.1.9">
+                              <mi id="S4.E5.m1.1.5.2.1.1.2">sin</mi>
+                              <mo id="S4.E5.m1.1.5.2.1.1.9a">⁡</mo>
+                              <mrow id="S4.E5.m1.1.5.2.1.1.9b">
+                                 <mo id="S4.E5.m1.1.5.2.1.1.9c">(</mo>
+                                 <mrow id="S4.E5.m1.1.5.2.1.1.9.1">
+                                    <mn id="S4.E5.m1.1.5.2.1.1.4">2</mn>
+                                    <mo id="S4.E5.m1.1.5.2.1.1.9.1.1">⁢</mo>
+                                    <mi id="S4.E5.m1.1.5.2.1.1.5">π</mi>
+                                    <mo id="S4.E5.m1.1.5.2.1.1.9.1.1a">⁢</mo>
+                                    <msub id="S4.E5.m1.1.5.2.1.1.9.1.2">
+                                       <mi id="S4.E5.m1.1.5.2.1.1.6">ν</mi>
+                                       <mi id="S4.E5.m1.1.5.2.1.1.7.1">x</mi>
+                                    </msub>
+                                 </mrow>
+                                 <mo id="S4.E5.m1.1.5.2.1.1.9d">)</mo>
+                              </mrow>
+                           </mrow>
+                        </mrow>
+                     </mtd>
+                     <mtd xref="S4.E5.m1.1.5.cmml" columnalign="left" id="S4.E5.m1.1.5h">
+                        <mrow id="S4.E5.m1.1.5.2.2.1">
+                           <mi id="S4.E5.m1.1.5.2.2.1.1">cos</mi>
+                           <mo id="S4.E5.m1.1.5.2.2.1a">⁡</mo>
+                           <mrow id="S4.E5.m1.1.5.2.2.1b">
+                              <mo id="S4.E5.m1.1.5.2.2.1c">(</mo>
+                              <mrow id="S4.E5.m1.1.5.2.2.1.8">
+                                 <mn id="S4.E5.m1.1.5.2.2.1.3">2</mn>
+                                 <mo id="S4.E5.m1.1.5.2.2.1.8.1">⁢</mo>
+                                 <mi id="S4.E5.m1.1.5.2.2.1.4">π</mi>
+                                 <mo id="S4.E5.m1.1.5.2.2.1.8.1a">⁢</mo>
+                                 <msub id="S4.E5.m1.1.5.2.2.1.8.2">
+                                    <mi id="S4.E5.m1.1.5.2.2.1.5">ν</mi>
+                                    <mi id="S4.E5.m1.1.5.2.2.1.6.1">x</mi>
+                                 </msub>
+                              </mrow>
+                              <mo id="S4.E5.m1.1.5.2.2.1d">)</mo>
+                           </mrow>
+                        </mrow>
+                     </mtd>
+                  </mtr>
+               </mtable>
+               <mo xref="S4.E5.m1.1.5.cmml" id="S4.E5.m1.1.5i">)</mo>
+            </mrow>
+         </mrow>
+         <mo xref="S4.E5.m1.1.8.cmml" id="S4.E5.m1.1.8b">,</mo>
+      </mrow>
+      <annotation-xml xref="S4.E5.m1.1" id="S4.E5.m1.1.cmml" encoding="MathML-Content">
+         <apply xref="S4.E5.m1.1.8" id="S4.E5.m1.1.8.cmml">
+            <eq xref="S4.E5.m1.1.3" id="S4.E5.m1.1.3.cmml" />
+            <apply xref="S4.E5.m1.1.8.1" id="S4.E5.m1.1.8.1.cmml">
+               <csymbol cd="ambiguous" id="S4.E5.m1.1.8.1.1.cmml">subscript</csymbol>
+               <ci xref="S4.E5.m1.1.1" id="S4.E5.m1.1.1.cmml">R</ci>
+               <ci xref="S4.E5.m1.1.2.1" id="S4.E5.m1.1.2.1.cmml">x</ci>
+            </apply>
+            <mtext xref="S4.E5.m1.1.5" id="S4.E5.m1.1.5.cmml">cos⁢2πνxsin⁢2πνx-sin⁢2πνxcos⁢2πνx</mtext>
+         </apply>
+      </annotation-xml>
+      <annotation xref="S4.E5.m1.1.cmml" id="S4.E5.m1.1b" encoding="application/x-tex">R_{x}=\left(\begin{array}[]{ll}\cos(2\pi\nu_{x})&amp;\sin(2\pi\nu_{x})\\
+-\sin(2\pi\nu_{x})&amp;\cos(2\pi\nu_{x})\end{array}\right),</annotation>
+   </semantics>
+</math>

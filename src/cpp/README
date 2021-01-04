@@ -1,0 +1,15 @@
+README
+Building the C++ Indexing tools
+Tangent-3
+--------------------------------------
+
+To build the indexing executable and place in the tangent-s/bin directory, issue:
+
+	make install
+
+To simply build the indexing executable in the current directory, issue:
+
+	make
+
+
+-R. Zanibbi, Dec. 22, 2020

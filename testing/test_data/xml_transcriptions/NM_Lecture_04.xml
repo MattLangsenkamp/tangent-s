@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\documentclass[11pt]{article}\usepackage{aahomework}\usepackage{mathtools}%&#10;\usepackage{subcaption}\usepackage{epstopdf}\usepackage{float}\usepackage{%&#10;xcolor}\usepackage{parskip}\tikzstyle{blk}=[circle,innersep=0pt,minimumsize=4%&#10;pt,draw,fill=black,linewidth=0.8pt]\tikzstyle{blanknode}=[circle,innersep=3pt,%&#10;minimumsize=8pt,draw,linewidth=0.8pt]\tikzstyle{blk}=[circle,innersep=0pt,%&#10;minimumsize=4pt,draw,fill=black,linewidth=0.8pt]\par&#10;\geometry{letterpaper,%&#10;textwidth=17cm,textheight=22cm}\par&#10;\usetikzlibrary{arrows}\usetikzlibrary{%&#10;plotmarks}\par&#10;\par&#10;\par&#10;\par&#10;\begin{document}&#10;\par&#10;\@@section{section}{Sx1}{}{}{}{Recall}&#10;\par&#10;\begin{enumerate}&#10;\enumerate@item{&#10;System of linear equations&#10;}&#10;\enumerate@item{&#10;Augmented matrix from a system&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[c|c]A&amp;\vec{b}\end{matrix}\right]%&#10;$&#10;}&#10;\enumerate@item{&#10;Pivot entries and variables, and free variables&#10;}&#10;\enumerate@item{&#10;Row operations to reduce matrices to `nice forms'&#10;}&#10;\enumerate@item{&#10;Echelon form and row-reduced echelon form (rref.)&#10;}&#10;\end{enumerate}&#10;\par&#10; Using these ideas, we will try to interpret the behavior of the system, %&#10;and perhaps gain information about the solutions and types of solutions we %&#10;will obtain, before even finding them.&#10;\par&#10;\@@section{section}{Sx2}{}{}{}{Rank}&#10;\par&#10; The {rank} of a matrix $A$, written as $r(A)$ is the number of pivot %&#10;columns in the row echelon form of $A$.&#10;\par&#10; One may wonder why this definition includes the pivot columns but not %&#10;the \emph{pivot rows}. We will find that in fact, they are equivalent. To see %&#10;this, let us consider an example.&#10;\par&#10; Consider a matrix $A$ of size $2\times 4$.&#10;\@@amsalign$\displaystyle A=\left[\begin{matrix}1&amp;2&amp;3&amp;4\\&#10;0&amp;2&amp;-1&amp;0\end{matrix}\right]$&#10;Suppose we want to find $r(A)$. The first step is to determine the row echelon%&#10; form of $A$. Recalling the definition of row echelon form, we find that $A$ %&#10;satisfies the criteria that the leading non-zero entry in the second row is %&#10;strictly to the right of the leading non-zero entry in the first row, so it is%&#10; in echelon form. There are two pivot columns in $A$, so $r(A)=2$.&#10;\par&#10; Next, we will look at $A$ from the perspective of rows. Note that there %&#10;are two pivot rows in $A$. In fact, the number of pivot columns should equal %&#10;the number of pivot rows for any matrix.&#10;\par&#10; It is not yet apparent how the notion of rank is useful. Can the rank of%&#10; a matrix help us in our goal of determining solutions to a system of linear %&#10;equations?&#10;\par&#10;\par&#10; First, let us address a question. How can the dimensions of the %&#10;matrix affect the possible value of its rank?&#10;\par&#10;\@@section{paragraph}{Sx2.SS0.SSS0.Px1}{}{}{}{Question:}What is the %&#10;maximum possible value of $r(A)$ if $A$ is a matrix of size $4\times 6$?&#10;\par&#10; Let us try to consider a general $4\times 6$ matrix, and see what can %&#10;happen after reducing it to row echelon form, since that will determine its %&#10;rank.&#10;\par&#10; It is clear that we may obtain four pivots if the row echelon form turns%&#10; out like so:&#10;\@@amsalign$\displaystyle\begin{bmatrix}*&amp;*&amp;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*&amp;*&amp;*\end{bmatrix}\to\begin{bmatrix}\blacksquare&amp;*&amp;*&amp;*&amp;*&amp;*\\&#10;0&amp;\blacksquare&amp;*&amp;*&amp;*&amp;*\\&#10;0&amp;0&amp;\blacksquare&amp;*&amp;*&amp;*\\&#10;0&amp;0&amp;0&amp;\blacksquare&amp;\square&amp;*\end{bmatrix}$&amp;$$&amp;$\displaystyle\left\{\begin{%&#10;aligned}\displaystyle*&amp;&amp;\displaystyle\text{any number}\\&#10;\displaystyle\blacksquare&amp;&amp;\displaystyle\text{non-zero}\\&#10;\displaystyle 0&amp;&amp;\displaystyle\text{zero}\end{aligned}\right.$&#10;And we see that there is no way to obtain a fifth pivot -- any non-zero entry %&#10;besides the already-existing pivots will not be a leading non-zero entry, and %&#10;thus not be a pivot.&#10;\par&#10;\@@section{paragraph}{Sx2.SS0.SSS0.Px2}{}{}{}{Question:}What if $A$ is $6%&#10;\times 4$?&#10;\@@amsalign$\displaystyle\begin{bmatrix}*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*\\&#10;*&amp;*&amp;*&amp;*\end{bmatrix}$&#10;Since we can at most obtain one pivot per column, we are still limited to at %&#10;most four pivots. Thus the maximum rank is still $4$.&#10;\par&#10; It still remains to be seen how the notion of rank can be useful in %&#10;solving a system.&#10;\par&#10;\vspace{1cm}&#10;\par&#10; Consider the following system:&#10;\@@amsalign$\displaystyle\left\{\begin{aligned}\displaystyle x+2y-3z&amp;%&#10;\displaystyle=1\\&#10;\displaystyle x-y+z&amp;\displaystyle=0\\&#10;\displaystyle 3x+3y-5z&amp;\displaystyle=3\end{aligned}\right.$&#10;and suppose that we wish to find the number of solutions of the system and %&#10;what they are.&#10;\par&#10; First, we convert the augmented matrix of the system to row echelon form%&#10;:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|r]1&amp;2&amp;-3&amp;1\\&#10;1&amp;-1&amp;1&amp;0\\&#10;3&amp;3&amp;-5&amp;3\end{matrix}\right]\xrightarrow[-3R_{1}+R_{3}]{-R_{1}+R_{2}}\left[%&#10;\begin{matrix}[rrr|r]1&amp;2&amp;-3&amp;1\\&#10;0&amp;-3&amp;4&amp;-1\\&#10;0&amp;-3&amp;4&amp;0\end{matrix}\right]\xrightarrow[]{-R_{2}+R_{3}}\left[\begin{matrix}[%&#10;rrr|r]1&amp;2&amp;-3&amp;1\\&#10;0&amp;-3&amp;4&amp;-1\\&#10;0&amp;0&amp;0&amp;1\end{matrix}\right]$&#10;We find that the augmented matrix has three pivots. Then the entire matrix has%&#10; rank $3$.&#10;\par&#10; The last row says that $0=1$. Thus the system is inconsistent.&#10;\par&#10; It is important to distinguish between the rank of the entire augmented %&#10;matrix and the rank of the coefficient matrix. Note that in this example the %&#10;augmented matrix has rank $3$ whereas the coefficient matrix has rank $2$.&#10;\par&#10; Let us re-examine the system in a slightly different way. We will %&#10;introduce the parameter $k$:&#10;\@@amsalign$\displaystyle\left\{\begin{aligned}\displaystyle x+2y-3z&amp;%&#10;\displaystyle=1\\&#10;\displaystyle x-y+z&amp;\displaystyle=0\\&#10;\displaystyle 3x+3y-5z&amp;\displaystyle=\mathbf{k}\end{aligned}\right.$&#10;Find those values of $k$ for which the system is consistent.&#10;\par&#10; One important thing to note is that changing values in the constant %&#10;column really does not have an effect on the row reduction operations. Only %&#10;the values in the constant column will change in the intermediate (and final) %&#10;steps.&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|c]1&amp;2&amp;-3&amp;1\\&#10;1&amp;-1&amp;1&amp;0\\&#10;3&amp;3&amp;-5&amp;\mathbf{k}\end{matrix}\right]\xrightarrow[-3R_{1}+R_{3}]{-R_{1}+R_{2}}%&#10;\left[\begin{matrix}[rrr|c]1&amp;2&amp;-3&amp;1\\&#10;0&amp;-3&amp;4&amp;-1\\&#10;0&amp;-3&amp;4&amp;\mathbf{k-3}\end{matrix}\right]\xrightarrow[]{-R_{2}+R_{3}}\left[\begin%&#10;{matrix}[rrr|c]1&amp;2&amp;-3&amp;1\\&#10;0&amp;-3&amp;4&amp;-1\\&#10;0&amp;0&amp;0&amp;\mathbf{k-2}\end{matrix}\right]$&#10;\par&#10; Recall what we have discussed previously: for consistency we cannot have%&#10; a pivot appearing in the last column of the augmented matrix.&#10;\par&#10; The only way this can happen is if $k-2=0$ so that it is not a pivot. %&#10;Then $k=2$ for the system to be consistent.&#10;\par&#10;\@@section{paragraph}{Sx2.SS0.SSS0.Px3}{}{}{}{Question:}For $k=2$, find %&#10;the number of solutions.&#10;\par&#10; For $k=2$, the augmented matrix becomes&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|r]{\color{red}\boxed@math{{%&#10;\color{black}1}}}&amp;2&amp;-3&amp;1\\&#10;0&amp;{\color{red}\boxed@math{{\color{black}-3}}}&amp;4&amp;-1\\&#10;0&amp;0&amp;0&amp;0\end{matrix}\right]$&#10;which is in echelon form. Let us call the coefficient matrix $A$. Then&#10;\par&#10; The number of pivot columns $=r(A)=2$.&#10;\par&#10; The number of free columns is $3-r(A)=1$.&#10;\par&#10; Because we are considering only the coefficient matrix and there is a %&#10;free column, this means the system has a free variable.&#10;\par&#10; We have shown that the system is consistent in this case, so it has at %&#10;least one solution. Since there is a free variable, there are in fact %&#10;infinitely many solutions. Note that if the system were inconsistent, then %&#10;there would be no solutions rather than infinitely many solutions.&#10;\par&#10; Note that we did not have to solve the system to determine the number of%&#10; solutions that it has!&#10;\par&#10;\par&#10;\par&#10; Consider the following matrix:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[ccccc|c]1&amp;0&amp;0&amp;0&amp;0&amp;s\\&#10;0&amp;0&amp;1&amp;0&amp;1&amp;t\\&#10;0&amp;0&amp;0&amp;1&amp;0&amp;u\end{matrix}\right]$&#10;Is the system consistent for all $s,t,u$? How many solutions are there?&#10;\par&#10; Let us again call the coefficient matrix of the augmented matrix $A$.&#10;\par&#10; Because of the placement of the $1$'s in the coefficient matrix, none of%&#10; $s,t,u$ can become pivots for any values they may take on. They will never %&#10;become leading non-zero entries, and thus never be pivots. This also tells us %&#10;that a pivot will never enter the constant vector.&#10;\par&#10; Thus, the system will always be consistent and $r(A)=3$ for all $s,t,u$.%&#10; The number of free variables equals the number of columns of $A$ minus $r(A)$%&#10;; that is, $5-3=2$.&#10;\par&#10; Since the system is consistent and there are two free variables, %&#10;therefore the system has infinitely many solutions.&#10;\par&#10; Moreover, we now know quite a bit about how the solution will look. The %&#10;solution will be a two dimensional object in five dimensions ($\bbR^{5}$), and%&#10; will have the form&#10;\@@amsalign$\displaystyle\begin{bmatrix}x_{1}\\&#10;x_{2}\\&#10;x_{3}\\&#10;x_{4}\\&#10;x_{5}\end{bmatrix}=\underbrace{\begin{bmatrix}*\\&#10;*\\&#10;*\\&#10;*\\&#10;*\end{bmatrix}}_{\mathclap{\text{Particular solution}}}+\overbrace{x_{2}\begin%&#10;{bmatrix}*\\&#10;*\\&#10;*\\&#10;*\\&#10;*\end{bmatrix}+x_{5}\begin{bmatrix}*\\&#10;*\\&#10;*\\&#10;*\\&#10;*\end{bmatrix}}^{\mathclap{\text{Solution to the homogeneous equation}}}$&#10;This is because there are two free variables and five variables in total.&#10;\par&#10;\par&#10; Let us look at this example with actual values in place of the %&#10;variables $s,t,u$:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[ccccc|r]1&amp;0&amp;0&amp;0&amp;0&amp;7\\&#10;0&amp;0&amp;1&amp;0&amp;1&amp;3\\&#10;0&amp;0&amp;0&amp;1&amp;0&amp;-2\end{matrix}\right]\longrightarrow\left\{\begin{aligned}%&#10;\displaystyle x_{1}&amp;\displaystyle+&amp;\displaystyle 0x_{2}&amp;\displaystyle+&amp;%&#10;\displaystyle 0x_{3}&amp;\displaystyle+&amp;\displaystyle 0x_{4}&amp;\displaystyle+&amp;%&#10;\displaystyle 0x_{5}&amp;\displaystyle=&amp;\displaystyle 7\\&#10;&amp;&amp;&amp;&amp;\displaystyle x_{3}&amp;\displaystyle+&amp;&amp;&amp;\displaystyle x_{5}&amp;\displaystyle=&amp;%&#10;\displaystyle 3\\&#10;&amp;&amp;&amp;&amp;&amp;&amp;\displaystyle x_{4}&amp;&amp;&amp;\displaystyle=&amp;\displaystyle-2\end{aligned}\right.%&#10;$&#10;\par&#10; The system tells us that $x_{3}=5-x_{5}$. Writing the solution in vector%&#10; form, we obtain&#10;\@@amsalign$\displaystyle\begin{bmatrix}x_{1}\\&#10;x_{2}\\&#10;x_{3}\\&#10;x_{4}\\&#10;x_{5}\end{bmatrix}=\begin{bmatrix}7\\&#10;x_{2}\\&#10;3-x_{5}\\&#10;-2\\&#10;x_{5}\end{bmatrix}=\begin{bmatrix}7\\&#10;0\\&#10;3\\&#10;-2\\&#10;0\end{bmatrix}+x_{2}\begin{bmatrix}0\\&#10;1\\&#10;0\\&#10;0\\&#10;0\end{bmatrix}+x_{5}\begin{bmatrix}0\\&#10;0\\&#10;-1\\&#10;0\\&#10;1\end{bmatrix}$&#10;\par&#10; Thus there are infinitely many solutions, and the vector $\begin{bmatrix%&#10;}[r]7\\&#10;0\\&#10;3\\&#10;-2\\&#10;0\end{bmatrix}$ represents one particular solution to the system.&#10;\par&#10; Here is an important observation:&#10;\par&#10; If we examine the last part of the solution we have found, plugging in %&#10;the two vectors $\begin{bmatrix}0\\&#10;1\\&#10;0\\&#10;0\\&#10;0\end{bmatrix},\begin{bmatrix}[r]0\\&#10;0\\&#10;-1\\&#10;0\\&#10;1\end{bmatrix}$ into the system, then the result is zeroes:&#10;\@@amsalign$\displaystyle x_{2}\begin{bmatrix}0\\&#10;1\\&#10;0\\&#10;0\\&#10;0\end{bmatrix}+x_{5}\begin{bmatrix}[r]0\\&#10;0\\&#10;-1\\&#10;0\\&#10;1\end{bmatrix}$&amp;$$&amp;$\displaystyle\left\{\begin{aligned}\displaystyle x_{1}&amp;&amp;&amp;&amp;%&#10;&amp;&amp;&amp;&amp;&amp;\displaystyle=&amp;\displaystyle 0\\&#10;&amp;&amp;&amp;&amp;\displaystyle x_{3}&amp;\displaystyle+&amp;&amp;&amp;\displaystyle x_{5}&amp;\displaystyle=&amp;%&#10;\displaystyle 0\\&#10;&amp;&amp;&amp;&amp;&amp;&amp;\displaystyle x_{4}&amp;&amp;&amp;\displaystyle=&amp;\displaystyle 0\end{aligned}\right.%&#10;$&#10;\par&#10;\@@amsalign$\displaystyle\begin{bmatrix}x_{1}\\&#10;x_{2}\\&#10;x_{3}\\&#10;x_{4}\\&#10;x_{5}\end{bmatrix}=\begin{bmatrix}7\\&#10;x_{2}\\&#10;3-x_{5}\\&#10;-2\\&#10;x_{5}\end{bmatrix}=\begin{bmatrix}7\\&#10;0\\&#10;3\\&#10;-2\\&#10;0\end{bmatrix}+\overbrace{x_{2}\underbrace{\begin{bmatrix}0\\&#10;1\\&#10;0\\&#10;0\\&#10;0\end{bmatrix}}_{v_{1}}+x_{5}\underbrace{\begin{bmatrix}[r]0\\&#10;0\\&#10;-1\\&#10;0\\&#10;1\end{bmatrix}}_{v_{2}}}^{\mathclap{\text{Homogenous solutions}}}$&#10;\par&#10; The solution being in this form should remind us of the form of a plane.%&#10; In fact, this is the equation of a two dimensional plane within five %&#10;dimensions. We might draw it as&#10;\par&#10;\begin{figure}[H]&#10;\centering\tikzpicture&#10;\foreach\y/ \c{i}n {0/yellow} {&#10;\draw[fill=\c{]} (0,0+\y) to (1,1+\y) to (4,2+\y) to (3,1+\y) to (0,0+\y);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0+\y) to (1,1+\y);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0+\y) to (3,1+\y);&#10;\par&#10;\node at (.25,.75+\y) {$v_{1}$};&#10;\node at (2,.25+\y) {$v_{2}$};&#10;}&#10;\node[blk] at (0,0) {};&#10;\node at (0,-.5) {$(0,0)$};&#10;\@add@centering\end{figure}&#10;\par&#10; In which case the solution to the original system represents a %&#10;translation of this plane.&#10;\begin{figure}[H]&#10;\centering\tikzpicture&#10;\foreach\y/ \c{i}n {0/yellow,2/yellow!25} {&#10;\draw[fill=\c{]} (0,0+\y) to (1,1+\y) to (4,2+\y) to (3,1+\y) to (0,0+\y);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0+\y) to (1,1+\y);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,0+\y) to (3,1+\y);&#10;\par&#10;\node at (.25,.75+\y) {$v_{1}$};&#10;\node at (2,.25+\y) {$v_{2}$};&#10;}&#10;\node[blk] at (0,0) {};&#10;\node at (0,-.5) {$(0,0)$};&#10;\par&#10;\node[blk] at (0,2) {};&#10;\par&#10;\draw[dashed] (0,0) to (0,2);&#10;\@add@centering\end{figure}&#10;\par&#10; One may wonder whether a (consistent) linear system can have infinitely %&#10;many solutions and no free variables. The answer is no because there will only%&#10; be a particular solution.&#10;\par&#10;\@@section{paragraph}{Sx2.SS0.SSS0.Px4}{}{}{}{Question:}Does the %&#10;existence of a free variable guarantee infinitely many solutions?&#10;\par&#10; Consider the matrix&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[cccc|c]1&amp;0&amp;0&amp;0&amp;1\\&#10;0&amp;0&amp;0&amp;0&amp;2\end{matrix}\right]$&#10;Note that the second, third, and fourth columns have all zero entries, and so %&#10;they represent free variables. However, the second row indicates that the %&#10;system is inconsistent because a pivot has entered the constant column.&#10;\par&#10;\par&#10;\@@section{section}{Sx3}{}{}{}{Linear Span}&#10;\par&#10; Suppose we wish to `travel' in $\bbR^{2}$ from the origin. What points %&#10;can we reach? Suppose we can only move along a certain vector, $v_{1}$:&#10;\begin{figure}[H]&#10;\centering\subfigure[b]{.45}&#10;\@@amsalign$\displaystyle v_{1}=\begin{bmatrix}1\\&#10;0\end{bmatrix}$\\&#10;$$\\&#10;$$&#10;\subfigure[b]{.45}&#10;\tikzpicture&#10;\node[font = \Huge] at (1,2.5) {$\bbR^{2}$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (4,0);&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (1,0);&#10;\node at (1,-.5) {$v_{1}$};&#10;\par&#10;\node[circle,minimum size=6pt,fill=blue, inner sep=0pt] at (2,1) {};&#10;\node at (2.5,1.5) {$(2,1)$};&#10;\@add@centering\end{figure}&#10;It is apparent that for instance, we cannot reach the point $(2,1)$ solely by %&#10;moving along the direction of $v_{1}$. Then we cannot reach every point in $%&#10;\bbR^{2}$ by moving along $v_{1}$.&#10;\par&#10; If we go along $v_{1}$, what can we ``span''? In this case we can travel%&#10; along a single line: the $x$-axis.&#10;\par&#10; The answer is that in general, we can travel along the line in the %&#10;direction of $v_{1}$, which can be represented by $cv_{1}$, where $c$ is a %&#10;scaling factor.&#10;\par&#10;\par&#10; What if we are given two vectors that we can travel along? Suppose %&#10;we now can travel along the vectors $v_{1},v_{2}$:&#10;\begin{figure}[H]&#10;\centering\subfigure[b]{.45}&#10;\@@amsalign$\displaystyle v_{1}=\begin{bmatrix}1\\&#10;0\end{bmatrix}$&amp;$$&amp;$\displaystyle v_{2}=\begin{bmatrix}0\\&#10;1\end{bmatrix}$\\&#10;$$&#10;\subfigure[b]{.45}&#10;\tikzpicture&#10;\node[font = \Huge] at (1,2.5) {$\bbR^{2}$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (4,0);&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (1,0);&#10;\node at (1,-.5) {$v_{1}$};&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (0,1);&#10;\node at (-.5,1) {$v_{2}$};&#10;\par&#10;&#10;\@add@centering\end{figure}&#10;Can we now reach, for instance, the point $\begin{bmatrix}\pi\\&#10;e\end{bmatrix}$?&#10;\par&#10; We find this is possible, by moving `$\pi$' units along $v_{1}$ and `$e$%&#10;' units along $v_{2}$:&#10;\@@amsalign$\displaystyle\begin{bmatrix}\pi\\&#10;e\end{bmatrix}$&amp;$\displaystyle=\pi\begin{bmatrix}1\\&#10;0\end{bmatrix}+e\begin{bmatrix}0\\&#10;1\end{bmatrix}$\\&#10;$$&amp;$\displaystyle=\pi v_{1}+ev_{2}$&#10;\par&#10; In fact, we can reach any point in $\bbR^{2}$. Thus we say that the $%&#10;\text{Span}\left\{v_{1},v_{2}\right\}=\bbR^{2}$.&#10;\par&#10; Next, suppose that we have access to three vectors, $v_{1},v_{2},v_{3}$,%&#10; which we may move along.&#10;\par&#10;\begin{figure}[H]&#10;\centering\subfigure[b]{.45}&#10;\@@amsalign$\displaystyle v_{1}=\begin{bmatrix}1\\&#10;0\end{bmatrix}$&amp;$$&amp;$\displaystyle v_{2}=\begin{bmatrix}0\\&#10;1\end{bmatrix}$&amp;$$&amp;$\displaystyle v_{3}=\begin{bmatrix}1\\&#10;-1\end{bmatrix}$\\&#10;$$&#10;\subfigure[b]{.45}&#10;\tikzpicture&#10;\node[font = \Huge] at (1,2.5) {$\bbR^{2}$};&#10;\draw[-&gt;,&gt;=triangle 60,thick] (0,-1) to (0,2);&#10;\draw[-&gt;,&gt;=triangle 60,thick] (-1,0) to (4,0);&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (1,0);&#10;\node at (1,.5) {$v_{1}$};&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (0,1);&#10;\node at (-.5,1) {$v_{2}$};&#10;\par&#10;\draw[-&gt;,&gt;=triangle 60,line width=1.5pt, red] (0,0) to (1,-1);&#10;\node at (1.25,-.75) {$v_{3}$};&#10;\@add@centering\end{figure}&#10;\par&#10; We find that given one vector, we can travel along a line. Two vectors %&#10;allow us to travel all of $\bbR^{2}$, and a third vector doesn't add any extra%&#10; mobility apart from convenience in moving in a diagonal direction.&#10;\begin{table}[H]&#10;\centering\begin{tabular}[]{cc}$v_{1}=\begin{bmatrix}1\\&#10;0\end{bmatrix}$&amp;Line\\&#10;$v_{1},v_{2}=\begin{bmatrix}0\\&#10;1\end{bmatrix}$&amp;$\bbR^{2}$\\&#10;$v_{1},v_{2},v_{3}=\begin{bmatrix}1\\&#10;-1\end{bmatrix}$&amp;$\bbR^{2}$\end{tabular}&#10;\@add@centering\end{table}&#10;\par&#10; Now that we have an basic intuitive understanding of span, we can %&#10;introduce its definition:&#10;\par&#10;\@add@centering\framebox[][r]{&#10;\centering\begin{minipage}[t]{0.0pt}&#10;Let $\left\{v_{1},v_{2},\dots,v_{k}\right\}$ be a set of vectors in $\bbR^{n}$%&#10;. Then the {linear span} of $\left\{v_{1},v_{2},\dots,v_{k}\right\}$ is %&#10;defined as&#10;\@@amsalign$\displaystyle\text{Span}\left(\left\{v_{1},v_{2},\dots,v_{k}\right%&#10;\}\right)=\text{set of all possible linear combinations of $v_{1},v_{2},\dots,%&#10;v_{k}$}$&#10;\end{minipage}&#10;}&#10;\par&#10;\par&#10; The span of a set of vectors is every possible combination of the %&#10;vectors, and any such combination is said to be \emph{in the span} of the %&#10;vectors.&#10;\end{document}" display="block">
+  <mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>a</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+    <mi>n</mi>
+    <mi>o</mi>
+    <mi>d</mi>
+    <mi>e</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>3</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\geometry</mtext>
+    </merror>
+    <mi>l</mi>
+    <mi>e</mi>
+    <mi>t</mi>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mi>p</mi>
+    <mi>a</mi>
+    <mi>p</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>w</mi>
+    <mi>i</mi>
+    <mi>d</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mo>=</mo>
+    <mn>17</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mi>e</mi>
+    <mi>i</mi>
+    <mi>g</mi>
+    <mi>h</mi>
+    <mi>t</mi>
+    <mo>=</mo>
+    <mn>22</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>r</mi>
+    <mi>o</mi>
+    <mi>w</mi>
+    <mi>s</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>p</mi>
+    <mi>l</mi>
+    <mi>o</mi>
+    <mi>t</mi>
+    <mi>m</mi>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>k</mi>
+    <mi>s</mi>
+    <mtext xml:id="Sx1">Recall1.System of linear equations2.Augmented matrix from a system[[c|c]Ab→][[c|c]Ab→]3.Pivot entries and variables, and free variables4.Row operations to reduce matrices to ‘nice forms’5.Echelon form and row-reduced echelon form (rref.)Using these ideas, we will try to interpret the behavior of the system, and perhaps gain information about the solutions and types of solutions we will obtain, before even finding them.RankThe rank of a matrix A, written as r⁢(A) is the number of pivot columns in the row echelon form of A.One may wonder why this definition includes the pivot columns but not the pivot rows. We will find that in fact, they are equivalent. To see this, let us consider an example.Consider a matrix A of size 2×4.A=[123402-10]A=[123402-10]Suppose we want to find r⁢(A). The first step is to determine the row echelon form of A. Recalling the definition of row echelon form, we find that A satisfies the criteria that the leading non-zero entry in the second row is strictly to the right of the leading non-zero entry in the first row, so it is in echelon form. There are two pivot columns in A, so r⁢(A)=2.Next, we will look at A from the perspective of rows. Note that there are two pivot rows in A. In fact, the number of pivot columns should equal the number of pivot rows for any matrix.It is not yet apparent how the notion of rank is useful. Can the rank of a matrix help us in our goal of determining solutions to a system of linear equations?First, let us address a question. How can the dimensions of the matrix affect the possible value of its rank?Question:What is the maximum possible value of r⁢(A) if A is a matrix of size 4×6?Let us try to consider a general 4×6 matrix, and see what can happen after reducing it to row echelon form, since that will determine its rank.It is clear that we may obtain four pivots if the row echelon form turns out like so:[************************]→[\blacksquare*****0\blacksquare****00\blacksquare***000\blacksquare□*][************************]→[\blacksquare*****0\blacksquare****00\blacksquare***000\blacksquare□*]{*any number\blacksquarenon-zero0zero{*any number\blacksquarenon-zero0zeroAnd we see that there is no way to obtain a fifth pivot – any non-zero entry besides the already-existing pivots will not be a leading non-zero entry, and thus not be a pivot.Question:What if A is 6×4?[************************][************************]Since we can at most obtain one pivot per column, we are still limited to at most four pivots. Thus the maximum rank is still 4.It still remains to be seen how the notion of rank can be useful in solving a system.Consider the following system:{x+2⁢y-3⁢z=1x-y+z=03⁢x+3⁢y-5⁢z=3{x+2⁢y-3⁢z=1x-y+z=03⁢x+3⁢y-5⁢z=3and suppose that we wish to find the number of solutions of the system and what they are.First, we convert the augmented matrix of the system to row echelon form:[[rrr|r]12-311-11033-53]→-R1+R2-3⁢R1+R3[[rrr|r]12-310-34-10-340]→-R2+R3[[rrr|r]12-310-34-10001][[rrr|r]12-311-11033-53]→-R1+R2-3⁢R1+R3[[rrr|r]12-310-34-10-340]→-R2+R3[[rrr|r]12-310-34-10001]We find that the augmented matrix has three pivots. Then the entire matrix has rank 3.The last row says that 0=1. Thus the system is inconsistent.It is important to distinguish between the rank of the entire augmented matrix and the rank of the coefficient matrix. Note that in this example the augmented matrix has rank 3 whereas the coefficient matrix has rank 2.Let us re-examine the system in a slightly different way. We will introduce the parameter k:{x+2⁢y-3⁢z=1x-y+z=03⁢x+3⁢y-5⁢z=𝐤{x+2⁢y-3⁢z=1x-y+z=03⁢x+3⁢y-5⁢z=𝐤Find those values of k for which the system is consistent.One important thing to note is that changing values in the constant column really does not have an effect on the row reduction operations. Only the values in the constant column will change in the intermediate (and final) steps.[[rrr|c]12-311-11033-5𝐤]→-R1+R2-3⁢R1+R3[[rrr|c]12-310-34-10-34𝐤-𝟑]→-R2+R3[[rrr|c]12-310-34-1000𝐤-𝟐][[rrr|c]12-311-11033-5𝐤]→-R1+R2-3⁢R1+R3[[rrr|c]12-310-34-10-34𝐤-𝟑]→-R2+R3[[rrr|c]12-310-34-1000𝐤-𝟐]Recall what we have discussed previously: for consistency we cannot have a pivot appearing in the last column of the augmented matrix.The only way this can happen is if k-2=0 so that it is not a pivot. Then k=2 for the system to be consistent.Question:For k=2, find the number of solutions.For k=2, the augmented matrix becomes[[rrr|r]12-310-34-10000][[rrr|r]12-310-34-10000]which is in echelon form. Let us call the coefficient matrix A. ThenThe number of pivot columns =r⁢(A)=2.The number of free columns is 3-r⁢(A)=1.Because we are considering only the coefficient matrix and there is a free column, this means the system has a free variable.We have shown that the system is consistent in this case, so it has at least one solution. Since there is a free variable, there are in fact infinitely many solutions. Note that if the system were inconsistent, then there would be no solutions rather than infinitely many solutions.Note that we did not have to solve the system to determine the number of solutions that it has!Consider the following matrix:[[ccccc|c]10000s00101t00010u][[ccccc|c]10000s00101t00010u]Is the system consistent for all s,t,u? How many solutions are there?Let us again call the coefficient matrix of the augmented matrix A.Because of the placement of the 1’s in the coefficient matrix, none of s,t,u can become pivots for any values they may take on. They will never become leading non-zero entries, and thus never be pivots. This also tells us that a pivot will never enter the constant vector.Thus, the system will always be consistent and r⁢(A)=3 for all s,t,u. The number of free variables equals the number of columns of A minus r⁢(A); that is, 5-3=2.Since the system is consistent and there are two free variables, therefore the system has infinitely many solutions.Moreover, we now know quite a bit about how the solution will look. The solution will be a two dimensional object in five dimensions (\bbR5), and will have the form[x1x2x3x4x5]=[*****]⏟\mathclap⁢Particular solution+x2⁢[*****]+x5⁢[*****]⏞\mathclap⁢Solution to the homogeneous equation[x1x2x3x4x5]=[*****]⏟\mathclap⁢Particular solution+x2⁢[*****]+x5⁢[*****]⏞\mathclap⁢Solution to the homogeneous equationThis is because there are two free variables and five variables in total.Let us look at this example with actual values in place of the variables s,t,u:[[ccccc|r]10000700101300010-2]⟶{x1+0⁢x2+0⁢x3+0⁢x4+0⁢x5=7x3+x5=3x4=-2[[ccccc|r]10000700101300010-2]⟶{x1+0⁢x2+0⁢x3+0⁢x4+0⁢x5=7x3+x5=3x4=-2The system tells us that x3=5-x5. Writing the solution in vector form, we obtain[x1x2x3x4x5]=[7x23-x5-2x5]=[703-20]+x2⁢[01000]+x5⁢[00-101][x1x2x3x4x5]=[7x23-x5-2x5]=[703-20]+x2⁢[01000]+x5⁢[00-101]Thus there are infinitely many solutions, and the vector [[r]⁢703-20] represents one particular solution to the system.Here is an important observation:If we examine the last part of the solution we have found, plugging in the two vectors [01000],[[r]⁢00-101] into the system, then the result is zeroes:x2⁢[01000]+x5⁢[[r]⁢00-101]x2⁢[01000]+x5⁢[[r]⁢00-101]{x1=0x3+x5=0x4=0{x1=0x3+x5=0x4=0[x1x2x3x4x5]=[7x23-x5-2x5]=[703-20]+x2⁢[01000]⏟v1+x5⁢[[r]⁢00-101]⏟v2⏞\mathclap⁢Homogenous solutions[x1x2x3x4x5]=[7x23-x5-2x5]=[703-20]+x2⁢[01000]⏟v1+x5⁢[[r]⁢00-101]⏟v2⏞\mathclap⁢Homogenous solutionsThe solution being in this form should remind us of the form of a plane. In fact, this is the equation of a two dimensional plane within five dimensions. We might draw it as{tikzpicture}\foreach\y/ i̧n 0/yellow 
+\draw[fill=]̧ (0,0+\y) to (1,1+\y) to (4,2+\y) to (3,1+\y) to (0,0+\y);
+\draw[-¿,¿=triangle 60,thick] (0,0+\y) to (1,1+\y);
+\draw[-¿,¿=triangle 60,thick] (0,0+\y) to (3,1+\y);\nodeat (.25,.75+\y) v1;
+\nodeat (2,.25+\y) v2;
+
+\node[blk] at (0,0) ;
+\nodeat (0,-.5) (0,0);In which case the solution to the original system represents a translation of this plane.{tikzpicture}\foreach\y/ i̧n 0/yellow,2/yellow!25 
+\draw[fill=]̧ (0,0+\y) to (1,1+\y) to (4,2+\y) to (3,1+\y) to (0,0+\y);
+\draw[-¿,¿=triangle 60,thick] (0,0+\y) to (1,1+\y);
+\draw[-¿,¿=triangle 60,thick] (0,0+\y) to (3,1+\y);\nodeat (.25,.75+\y) v1;
+\nodeat (2,.25+\y) v2;
+
+\node[blk] at (0,0) ;
+\nodeat (0,-.5) (0,0);\node[blk] at (0,2) ;\draw[dashed] (0,0) to (0,2);One may wonder whether a (consistent) linear system can have infinitely many solutions and no free variables. The answer is no because there will only be a particular solution.Question:Does the existence of a free variable guarantee infinitely many solutions?Consider the matrix[[cccc|c]1000100002][[cccc|c]1000100002]Note that the second, third, and fourth columns have all zero entries, and so they represent free variables. However, the second row indicates that the system is inconsistent because a pivot has entered the constant column.Linear SpanSuppose we wish to ‘travel’ in \bbR2 from the origin. What points can we reach? Suppose we can only move along a certain vector, v1:{subfigure}[b].45v1=[10]v1=[10]{subfigure}[b].45
+{tikzpicture}
+\node[font = ] at (1,2.5) \bbR2;
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (4,0);\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (1,0);
+\nodeat (1,-.5) v1;\node[circle,minimum size=6pt,fill=blue, inner sep=0pt] at (2,1) ;
+\nodeat (2.5,1.5) (2,1);
+It is apparent that for instance, we cannot reach the point (2,1) solely by moving along the direction of v1. Then we cannot reach every point in \bbR2 by moving along v1.If we go along v1, what can we “span”? In this case we can travel along a single line: the x-axis.The answer is that in general, we can travel along the line in the direction of v1, which can be represented by c⁢v1, where c is a scaling factor.What if we are given two vectors that we can travel along? Suppose we now can travel along the vectors v1,v2:{subfigure}[b].45v1=[10]v1=[10]v2=[01]v2=[01]{subfigure}[b].45
+{tikzpicture}
+\node[font = ] at (1,2.5) \bbR2;
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (4,0);\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (1,0);
+\nodeat (1,-.5) v1;\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (0,1);
+\nodeat (-.5,1) v2;Can we now reach, for instance, the point [πe]?We find this is possible, by moving ‘π’ units along v1 and ‘e’ units along v2:[πe]=π⁢[10]+e⁢[01][πe]=π⁢[10]+e⁢[01]=π⁢v1+e⁢v2=π⁢v1+e⁢v2In fact, we can reach any point in \bbR2. Thus we say that the Span⁢{v1,v2}=\bbR2.Next, suppose that we have access to three vectors, v1,v2,v3, which we may move along.{subfigure}[b].45v1=[10]v1=[10]v2=[01]v2=[01]v3=[1-1]v3=[1-1]{subfigure}[b].45
+{tikzpicture}
+\node[font = ] at (1,2.5) \bbR2;
+\draw[-¿,¿=triangle 60,thick] (0,-1) to (0,2);
+\draw[-¿,¿=triangle 60,thick] (-1,0) to (4,0);\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (1,0);
+\nodeat (1,.5) v1;\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (0,1);
+\nodeat (-.5,1) v2;\draw[-¿,¿=triangle 60,line width=1.5pt, red] (0,0) to (1,-1);
+\nodeat (1.25,-.75) v3;
+We find that given one vector, we can travel along a line. Two vectors allow us to travel all of \bbR2, and a third vector doesn’t add any extra mobility apart from convenience in moving in a diagonal direction.v1=[10]Linev1,v2=[01]\bbR2v1,v2,v3=[1-1]\bbR2Now that we have an basic intuitive understanding of span, we can introduce its definition:
+Let {v1,v2,…,vk} be a set of vectors in \bbRn. Then the linear span of {v1,v2,…,vk} is defined asSpan⁢({v1,v2,…,vk})=set of all possible linear combinations of v1,v2,…,vkSpan⁢({v1,v2,…,vk})=set of all possible linear combinations of v1,v2,…,vk
+The span of a set of vectors is every possible combination of the vectors, and any such combination is said to be in the span of the vectors.</mtext>
+  </mrow>
+</math>

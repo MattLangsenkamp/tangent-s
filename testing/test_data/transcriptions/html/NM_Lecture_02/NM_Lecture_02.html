@@ -1,0 +1,463 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 2</title>
+<!--Generated on Sun Jun  4 01:55:56 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on December 7, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 2</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">December 7, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Recall</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">System of linear equations.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Number of solutions of a system.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Row picture and column picture.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">New Terminology</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Two terms characterize the number of solutions to an equation:</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Consistent systems</span> have at least one solution. This could mean the system has one solution or infinitely many solutions.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Inconsistent systems</span> have no solution.</p>
+</div>
+<div id="Sx2.p4" class="ltx_para">
+<p class="ltx_p">Consider a system of equations:</p>
+<table id="Sx5.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex1.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\
+\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mn>7</mn></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For such a system, we established that we can create an augmented matrix that represents it. The augmented matrix is made up of a coefficient matrix and a constant vector:</p>
+<table id="Sx5.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\
+5&amp;-4&amp;-7\end{matrix}\right]" display="inline"><mrow><mo>[</mo><mtable id="XM11"><mtr id="XM11a"><mtd columnalign="center" id="XM11b"><mn>1</mn></mtd><mtd columnalign="center" id="XM11c"><mn>3</mn></mtd><mtd columnalign="center" id="XM11d"><mn>4</mn></mtd></mtr><mtr id="XM11e"><mtd columnalign="center" id="XM11f"><mn>5</mn></mtd><mtd columnalign="center" id="XM11g"><mrow><mo>-</mo><mn>4</mn></mrow></mtd><mtd columnalign="center" id="XM11h"><mrow><mo>-</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx2.p5" class="ltx_para">
+<p class="ltx_p">Given an augmented matrix, we wish to reduce it to a ‘nice’ form.</p>
+<table id="Sx5.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\displaystyle\left[\begin{matrix}1&amp;3&amp;4\\
+5&amp;-4&amp;-7\end{matrix}\right]\xrightarrow[\text{to a nice form}]{\text{reduce %
+this}}\left[\begin{matrix}1&amp;0&amp;*\\
+0&amp;1&amp;*\end{matrix}\right]" display="inline"><mrow><mrow><mo>[</mo><mtable id="XM14"><mtr id="XM14a"><mtd columnalign="center" id="XM14b"><mn>1</mn></mtd><mtd columnalign="center" id="XM14c"><mn>3</mn></mtd><mtd columnalign="center" id="XM14d"><mn>4</mn></mtd></mtr><mtr id="XM14e"><mtd columnalign="center" id="XM14f"><mn>5</mn></mtd><mtd columnalign="center" id="XM14g"><mrow><mo>-</mo><mn>4</mn></mrow></mtd><mtd columnalign="center" id="XM14h"><mrow><mo>-</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><munder accentunder="true"><mover accent="true"><mo>→</mo><mtext>reduce this</mtext></mover><mtext>to a nice form</mtext></munder><mrow><mo>[</mo><mtable id="XM15"><mtr id="XM15a"><mtd columnalign="center" id="XM15b"><mn>1</mn></mtd><mtd columnalign="center" id="XM15c"><mn>0</mn></mtd><mtd columnalign="center" id="XM15d"><mo>*</mo></mtd></mtr><mtr id="XM15e"><mtd columnalign="center" id="XM15f"><mn>0</mn></mtd><mtd columnalign="center" id="XM15g"><mn>1</mn></mtd><mtd columnalign="center" id="XM15h"><mo>*</mo></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From this ‘nice’ form of the augmented matrix, we can get the solutions of the system fairly easily. This will also tell us whether the system is consistent or inconsistent.</p>
+</div>
+<div id="Sx2.p6" class="ltx_para">
+<p class="ltx_p">A good question is whether or not it is always possible for any augmented matrix to reduce the matrix to this type of form.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Row-operations</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Row-operations</span> or elementary row operations allow us <em class="ltx_emph">reduce</em> a matrix to achieve the matrix form that we want.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Swap rows</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Multiply one row by a non-zero scalar</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Adding a multiple of one row to another row</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">It is not immediately clear why these operations are the important ones or why we are focusing on them. To understand these operations, we will consider again some system of equations. The key to row-operations is that they do not alter the solutions to a system of equations.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">The first row operation is swapping the order of the equations. It is fairly intuitive that swapping the order of the equations will not change the solutions.</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">What about multiplication by a scalar? Consider the two systems below, where the second is obtained by multiplying the first equation by <math id="Sx3.p3.m1" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>:</p>
+</div>
+<div id="Sx3.p4" class="ltx_para">
+<table id="Sx5.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex4.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\
+\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}\Longrightarrow\left.%
+\begin{aligned}\displaystyle 2x+6y&amp;\displaystyle=8\\
+\displaystyle 5x-4y&amp;\displaystyle=-7\end{aligned}\right\}" display="inline"><mrow><mrow><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mn>7</mn></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow><mo>⟹</mo><mtable><mtr><mtd columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>8</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mn>7</mn></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx3.p5" class="ltx_para">
+<p class="ltx_p">Next consider the third operation: adding a multiple of one row to another row. Of the operations, it is least obvious why this one does not alter the solutions of the system. In essence this operation is the addition a multiple of one equation to another equation. Consider within the example, adding negative-five times the first equation to the second equation:</p>
+<table id="Sx5.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex5.m1" class="ltx_Math" alttext="\displaystyle\begin{aligned}\displaystyle\left[\text{equation 1}\right]\\
+\displaystyle\left[\text{equation 1}\right](-5)+\left[\text{equation 2}\right]%
+\end{aligned}" display="inline"><mtable><mtr><mtd columnalign="right"><mrow><mo>[</mo><mtext id="XM20">equation 1</mtext><mo>]</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mrow><mo>[</mo><mtext id="XM21">equation 1</mtext><mo>]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow id="XM22"><mo>-</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>[</mo><mtext id="XM23">equation 2</mtext><mo>]</mo></mrow></mrow></mtd></mtr></mtable></math>
+              </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex5.m3" class="ltx_Math" alttext="\displaystyle\longrightarrow" display="inline"><mo>⟶</mo></math>
+              </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex5.m5" class="ltx_Math" alttext="\displaystyle\begin{aligned}\displaystyle x+3y&amp;\displaystyle=4\\
+\displaystyle-19y&amp;\displaystyle=-27\end{aligned}" display="inline"><mtable><mtr><mtd columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mrow><mn>19</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mn>27</mn></mrow></mrow></mtd></mtr></mtable></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="Sx3.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Question:</h3>
+
+<div id="Sx3.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Will the solution set of the new system be the same as the solution set of the old system?</p>
+</div>
+<div id="Sx3.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">We can interpret this geometrically: each equation represents a line which we can plot.
+</p>
+</div>
+<figure id="Sx3.SS0.SSS0.Px1.fig1" class="ltx_figure"><img src="x1.png" id="Sx3.SS0.SSS0.Px1.g1" class="ltx_graphics ltx_centering" width="444" height="304" alt="">
+</figure>
+<div id="Sx3.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">It turns out that the line <math id="Sx3.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math> will intersect the first two lines at the mutual solution of those lines.</p>
+</div>
+<div id="Sx3.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">To interpret this algebraically, we can consider <em class="ltx_emph">adding</em> the lines. The line <math id="Sx3.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math> was obtained by adding <math id="Sx3.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="L_{2}" display="inline"><msub><mi>L</mi><mn>2</mn></msub></math> to <math id="Sx3.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="-5" display="inline"><mrow><mo>-</mo><mn>5</mn></mrow></math> times <math id="Sx3.SS0.SSS0.Px1.p4.m4" class="ltx_Math" alttext="L_{1}" display="inline"><msub><mi>L</mi><mn>1</mn></msub></math>:</p>
+<table id="Sx5.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex6.m1" class="ltx_Math" alttext="\displaystyle L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex6.m2" class="ltx_Math" alttext="\displaystyle=-5L_{1}+L_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>L</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>L</mi><mn>2</mn></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we consider replacing the expression “<math id="Sx3.SS0.SSS0.Px1.p4.m5" class="ltx_Math" alttext="L_{1}" display="inline"><msub><mi>L</mi><mn>1</mn></msub></math>” by the equation <math id="Sx3.SS0.SSS0.Px1.p4.m6" class="ltx_Math" alttext="x+3y-4" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></math> which algebraically represents it, and doing the same for <math id="Sx3.SS0.SSS0.Px1.p4.m7" class="ltx_Math" alttext="L_{2}" display="inline"><msub><mi>L</mi><mn>2</mn></msub></math>, then we obtain the following:</p>
+<table id="Sx5.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex7.m1" class="ltx_Math" alttext="\displaystyle L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex7.m2" class="ltx_Math" alttext="\displaystyle=-5L_{1}+L_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>L</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>L</mi><mn>2</mn></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex8.m2" class="ltx_Math" alttext="\displaystyle=-5(x+3y-4)+(5x-4y+7)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow id="XM26"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow id="XM27"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Whenever the expression <math id="Sx3.SS0.SSS0.Px1.p4.m8" class="ltx_Math" alttext="x+3y-4" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></math> is zero, then the point <math id="Sx3.SS0.SSS0.Px1.p4.m9" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi id="XM28">x</mi><mo>,</mo><mi id="XM29">y</mi><mo stretchy="false">)</mo></mrow></math> is on the line <math id="Sx3.SS0.SSS0.Px1.p4.m10" class="ltx_Math" alttext="L_{1}" display="inline"><msub><mi>L</mi><mn>1</mn></msub></math>, and similarly for <math id="Sx3.SS0.SSS0.Px1.p4.m11" class="ltx_Math" alttext="L_{2}" display="inline"><msub><mi>L</mi><mn>2</mn></msub></math>. Combining the two expressions, we arrive at an expression that will be zero only when the point lies on <em class="ltx_emph">both</em> lines.</p>
+<table id="Sx5.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex9.m1" class="ltx_Math" alttext="\displaystyle L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex9.m2" class="ltx_Math" alttext="\displaystyle=-5L_{1}+L_{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>L</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>L</mi><mn>2</mn></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex10.m2" class="ltx_Math" alttext="\displaystyle=-5(x+3y-4)+(5x-4y+7)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow id="XM32"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow id="XM33"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex11.m2" class="ltx_Math" alttext="\displaystyle=-19y+27" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>19</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mn>27</mn></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx3.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">That is, if a point <math id="Sx3.SS0.SSS0.Px1.p5.m1" class="ltx_Math" alttext="P=(x,y)" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi id="XM34">x</mi><mo>,</mo><mi id="XM35">y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a solution to both lines <math id="Sx3.SS0.SSS0.Px1.p5.m2" class="ltx_Math" alttext="L_{1}" display="inline"><msub><mi>L</mi><mn>1</mn></msub></math> and <math id="Sx3.SS0.SSS0.Px1.p5.m3" class="ltx_Math" alttext="L_{2}" display="inline"><msub><mi>L</mi><mn>2</mn></msub></math>, then it must be a solution to the line <math id="Sx3.SS0.SSS0.Px1.p5.m4" class="ltx_Math" alttext="L_{3}" display="inline"><msub><mi>L</mi><mn>3</mn></msub></math>:</p>
+<table id="Sx5.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex12.m1" class="ltx_Math" alttext="\displaystyle-5(\underbrace{x+3y-4}_{{\color{red}=0}})+(\underbrace{5x-4y+7}_{%
+{\color{red}=0}})=\underbrace{-19y+27}_{{\color{red}\Rightarrow\hskip{22.76220%
+5pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}" display="inline"><mrow><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><munder id="XM42"><munder accentunder="true"><mrow><mrow><mi>x</mi><mo movablelimits="false">+</mo><mrow><mn>3</mn><mo movablelimits="false">⁢</mo><mi>y</mi></mrow></mrow><mo movablelimits="false">-</mo><mn>4</mn></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi></mi><mo mathcolor="#FF0000">=</mo><mn mathcolor="#FF0000">0</mn></mrow></munder><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><munder id="XM43"><munder accentunder="true"><mrow><mrow><mrow><mn>5</mn><mo movablelimits="false">⁢</mo><mi>x</mi></mrow><mo movablelimits="false">-</mo><mrow><mn>4</mn><mo movablelimits="false">⁢</mo><mi>y</mi></mrow></mrow><mo movablelimits="false">+</mo><mn>7</mn></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi></mi><mo mathcolor="#FF0000">=</mo><mn mathcolor="#FF0000">0</mn></mrow></munder><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><munder><munder accentunder="true"><mrow><mrow><mo movablelimits="false">-</mo><mrow><mn>19</mn><mo movablelimits="false">⁢</mo><mi>y</mi></mrow></mrow><mo movablelimits="false">+</mo><mn>27</mn></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mo mathcolor="#FF0000" id="XM40">⇒</mo><mo mathvariant="italic" separator="true">   </mo><mo mathcolor="#FF0000">=</mo><mn mathcolor="#FF0000">0</mn><mo mathvariant="italic" separator="true">   </mo></mrow></munder></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Echelon form of a matrix</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">The nice matrix forms that we want come in two forms. The first is <span class="ltx_text ltx_font_bold">echelon form</span>.</p>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<span class="ltx_inline-block ltx_minipage ltx_align_top" style="width:411.9pt;">
+<span class="ltx_p">A matrix <math id="Sx4.p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is in echelon form if</span>
+<span id="I3" class="ltx_enumerate">
+<span id="I3.i1" class="ltx_item" style="list-style-type:none;"><span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<span id="I3.i1.p1" class="ltx_para">
+<span class="ltx_p">All the zero rows are at the bottom.</span>
+</span></span>
+<span id="I3.i2" class="ltx_item" style="list-style-type:none;"><span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<span id="I3.i2.p1" class="ltx_para">
+<span class="ltx_p">The leading non-zero entry of each row is to the right of the leading non-zero entry of the row above it.</span>
+</span></span>
+</span>
+</span>
+</div>
+<section id="Sx4.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Examples.</h3>
+
+<div id="Sx4.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Consider the following matrices</p>
+<table id="Sx5.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx4.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx4.Ex13.m1" class="ltx_Math" alttext="\displaystyle A" display="inline"><mi>A</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx4.Ex13.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;0&amp;0\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx4.Ex13.m2.xm1"><mtr id="Sx4.Ex13.m2.xm1a"><mtd columnalign="center" id="Sx4.Ex13.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m2.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m2.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx4.Ex13.m2.xm1e"><mtd columnalign="center" id="Sx4.Ex13.m2.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m2.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m2.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx4.Ex13.m3" class="ltx_Math" alttext="\displaystyle B" display="inline"><mi>B</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx4.Ex13.m4" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;1&amp;0\\
+0&amp;1&amp;0\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx4.Ex13.m4.xm1"><mtr id="Sx4.Ex13.m4.xm1a"><mtd columnalign="center" id="Sx4.Ex13.m4.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx4.Ex13.m4.xm1e"><mtd columnalign="center" id="Sx4.Ex13.m4.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1h"><mn>0</mn></mtd></mtr><mtr id="Sx4.Ex13.m4.xm1i"><mtd columnalign="center" id="Sx4.Ex13.m4.xm1j"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1k"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m4.xm1l"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx4.Ex13.m5" class="ltx_Math" alttext="\displaystyle C" display="inline"><mi>C</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx4.Ex13.m6" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
+0&amp;0&amp;1&amp;0\\
+0&amp;0&amp;0&amp;7\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx4.Ex13.m6.xm1"><mtr id="Sx4.Ex13.m6.xm1a"><mtd columnalign="center" id="Sx4.Ex13.m6.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1c"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1d"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1e"><mn>0</mn></mtd></mtr><mtr id="Sx4.Ex13.m6.xm1f"><mtd columnalign="center" id="Sx4.Ex13.m6.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1h"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1i"><mn>1</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1j"><mn>0</mn></mtd></mtr><mtr id="Sx4.Ex13.m6.xm1k"><mtd columnalign="center" id="Sx4.Ex13.m6.xm1l"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1m"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1n"><mn>0</mn></mtd><mtd columnalign="center" id="Sx4.Ex13.m6.xm1o"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The matrix <math id="Sx4.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfies condition (1) and since the first row is the only one with a leading non-zero entry and there is no row above it, <math id="Sx4.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfies condition (2) as well.</p>
+</div>
+<div id="Sx4.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Matrix <math id="Sx4.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> has no zero rows, so it satisfies condition (1). We see however that the leading non-zero entry of the third row is not to the right of the leading non-zero entry of the second row; thus matrix <math id="Sx4.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> does not satisfy condition (2).
+</p>
+</div>
+<div id="Sx4.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Matrix <math id="Sx4.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> satisfies condition (1) and (2), so it is in echelon form. We can see that the leading non-zero entries of each row are strictly to the right of the leading non-zero entry of the rows above it.</p>
+</div>
+</section>
+</section>
+<section id="Sx5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Row-reduced echelon form: (rref)</h2>
+
+<div id="Sx5.p1" class="ltx_para">
+<span class="ltx_inline-block ltx_minipage ltx_align_top" style="width:411.9pt;">
+<span class="ltx_p">A matrix <math id="Sx5.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is in row-reduced echelon form (rref) if</span>
+<span id="I4" class="ltx_enumerate">
+<span id="I4.i1" class="ltx_item" style="list-style-type:none;"><span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<span id="I4.i1.p1" class="ltx_para">
+<span class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is in echelon form</span>
+</span></span>
+<span id="I4.i2" class="ltx_item" style="list-style-type:none;"><span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<span id="I4.i2.p1" class="ltx_para">
+<span class="ltx_p">All the leading non-zero entries must be <math id="I4.i2.p1.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</span>
+</span></span>
+<span id="I4.i3" class="ltx_item" style="list-style-type:none;"><span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<span id="I4.i3.p1" class="ltx_para">
+<span class="ltx_p">All the other entries in the column with leading <math id="I4.i3.p1.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> should be <math id="I4.i3.p1.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</span>
+</span></span>
+</span>
+</span>
+</div>
+<div id="Sx5.p2" class="ltx_para">
+<p class="ltx_p">Consider again the matrices</p>
+<table id="Sx5.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx5.Ex14" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx5.Ex14.m1" class="ltx_Math" alttext="\displaystyle A" display="inline"><mi>A</mi></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx5.Ex14.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;0&amp;0\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx5.Ex14.m2.xm1"><mtr id="Sx5.Ex14.m2.xm1a"><mtd columnalign="center" id="Sx5.Ex14.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m2.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m2.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx5.Ex14.m2.xm1e"><mtd columnalign="center" id="Sx5.Ex14.m2.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m2.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m2.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx5.Ex14.m3" class="ltx_Math" alttext="\displaystyle B" display="inline"><mi>B</mi></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx5.Ex14.m4" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;1&amp;0\\
+0&amp;1&amp;0\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx5.Ex14.m4.xm1"><mtr id="Sx5.Ex14.m4.xm1a"><mtd columnalign="center" id="Sx5.Ex14.m4.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx5.Ex14.m4.xm1e"><mtd columnalign="center" id="Sx5.Ex14.m4.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1h"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex14.m4.xm1i"><mtd columnalign="center" id="Sx5.Ex14.m4.xm1j"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1k"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m4.xm1l"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx5.Ex14.m5" class="ltx_Math" alttext="\displaystyle C" display="inline"><mi>C</mi></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx5.Ex14.m6" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;0&amp;0&amp;0\\
+0&amp;0&amp;1&amp;0\\
+0&amp;0&amp;0&amp;7\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx5.Ex14.m6.xm1"><mtr id="Sx5.Ex14.m6.xm1a"><mtd columnalign="center" id="Sx5.Ex14.m6.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1c"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1d"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1e"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex14.m6.xm1f"><mtd columnalign="center" id="Sx5.Ex14.m6.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1h"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1i"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1j"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex14.m6.xm1k"><mtd columnalign="center" id="Sx5.Ex14.m6.xm1l"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1m"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1n"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex14.m6.xm1o"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx5.p3" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is in echelon form, but is it in row-reduced echelon form? It is, because all leading non-zero entries are <math id="Sx5.p3.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, and the other entries in that column are <math id="Sx5.p3.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="Sx5.p4" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.p4.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is not in echelon form, so it cannot be in row-reduced echelon form.</p>
+</div>
+<div id="Sx5.p5" class="ltx_para">
+<p class="ltx_p"><math id="Sx5.p5.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is in echelon form, but it has a leading non-zero entry that is <math id="Sx5.p5.m2" class="ltx_Math" alttext="7" display="inline"><mn>7</mn></math>, which violates condition (2).</p>
+</div>
+<figure id="Sx5.F1" class="ltx_figure">
+<table id="Sx5.Ex15" class="ltx_equation ltx_centering">
+
+<tr class="ltx_equation ltx_centering ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_align_center"><math id="Sx5.Ex15.m1" class="ltx_Math" alttext="\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;0&amp;0\end{bmatrix}" display="block"><mrow><mo>[</mo><mtable displaystyle="true" id="Sx5.Ex15.m1.xm1"><mtr id="Sx5.Ex15.m1.xm1a"><mtd columnalign="center" id="Sx5.Ex15.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex15.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx5.Ex15.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx5.Ex15.m1.xm1e"><mtd columnalign="center" id="Sx5.Ex15.m1.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex15.m1.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex15.m1.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Echelon and rref.</figcaption>
+</figure>
+<figure id="Sx5.F2" class="ltx_figure">
+<table id="Sx5.Ex16" class="ltx_equation ltx_centering">
+
+<tr class="ltx_equation ltx_centering ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_align_center"><math id="Sx5.Ex16.m1" class="ltx_Math" alttext="\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;1&amp;0\\
+0&amp;1&amp;0\end{bmatrix}" display="block"><mrow><mo>[</mo><mtable displaystyle="true" id="Sx5.Ex16.m1.xm1"><mtr id="Sx5.Ex16.m1.xm1a"><mtd columnalign="center" id="Sx5.Ex16.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx5.Ex16.m1.xm1e"><mtd columnalign="center" id="Sx5.Ex16.m1.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1h"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex16.m1.xm1i"><mtd columnalign="center" id="Sx5.Ex16.m1.xm1j"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1k"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex16.m1.xm1l"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Not echelon.</figcaption>
+</figure>
+<figure id="Sx5.F3" class="ltx_figure">
+<table id="Sx5.Ex17" class="ltx_equation ltx_centering">
+
+<tr class="ltx_equation ltx_centering ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_align_center"><math id="Sx5.Ex17.m1" class="ltx_Math" alttext="\begin{bmatrix}1&amp;0&amp;0&amp;0\\
+0&amp;0&amp;1&amp;0\\
+0&amp;0&amp;0&amp;7\end{bmatrix}" display="block"><mrow><mo>[</mo><mtable displaystyle="true" id="Sx5.Ex17.m1.xm1"><mtr id="Sx5.Ex17.m1.xm1a"><mtd columnalign="center" id="Sx5.Ex17.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1c"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1d"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1e"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex17.m1.xm1f"><mtd columnalign="center" id="Sx5.Ex17.m1.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1h"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1i"><mn>1</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1j"><mn>0</mn></mtd></mtr><mtr id="Sx5.Ex17.m1.xm1k"><mtd columnalign="center" id="Sx5.Ex17.m1.xm1l"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1m"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1n"><mn>0</mn></mtd><mtd columnalign="center" id="Sx5.Ex17.m1.xm1o"><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 3: </span>Echelon but not rref.</figcaption>
+</figure>
+<div id="Sx5.p6" class="ltx_para">
+<p class="ltx_p">From a theoretical perspective, echelon form and row-reduced echelon form are not very different. We can obtain the same information from a matrix in echelon form that we can from a matrix in row-reduced echelon form. From a matrix in row-reduced echelon form, we can fairly easily obtain the solutions, but it requires more computation to get a matrix into this form. Obtaining a solution from a matrix in echelon form may require back substitution to obtain answers.</p>
+</div>
+<div id="Sx5.p7" class="ltx_para">
+<p class="ltx_p">Given an augmented matrix, we wish to obtain its echelon form and row-reduced echelon form.</p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Jun  4 01:55:56 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

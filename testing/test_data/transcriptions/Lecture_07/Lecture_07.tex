@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vek}[1]{\vec{#1}}
+\newcommand{\note}{\textsc{Note:} }
+\title{Lecture 7}
+\author{A. Agarwal}
+\date{February 14, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Recall}
+
+\begin{enumerate}
+\item{
+A set of vectors $\left\{ \vek{v}_1, \vek{v}_2, \dots, \vek{v}_k \right\}$ in $\bbR^n$ is \emph{linearly independent} if the following \emph{homogenous} equation has only the zero (trivial) solution:
+\begin{align}
+c_1 \vek{v}_1 + c_2 \vek{v}_2 + \dots + c_k \vek{v}_k &= 0
+\label{eq:eq1}
+\end{align}
+
+Note that \eqref{eq:eq1} always has a solution, namely $c_1 = c_2 = \dots = c_k = 0$. Our interest is whether this is the \emph{only solution}, or if there are others.
+
+It is a common mistake when we first learn this to think that something like ``since we can form a linear combination with $c_1, c_2, \dots, c_k = 0$, thus the set is dependent.''. This is not the case; it must be a solution with at least one coefficient non-zero.
+}
+\item{
+If the number of vectors in $S$ is greater than the dimension of the space, then $S$ is dependent.
+
+Suppose $\left\{ \vek{v}_1, \vek{v}_2, \dots, \vek{v}_k \right\}$ is a \emph{dependent set}. Then there is at least one $c_i \neq 0$. Without loss of generality, say $c_1 \neq 0$. Then
+\begin{align*}
+c_1 \vek{v}_1 &= - c_2 \vek{v}_2 - \dots - c_k \vek{v}_k
+\\
+\vek{v}_1 &= -\frac{c_2}{c_1} \vek{v}_2 - \dots - \frac{c_k}{c_1} \vek{v}_k
+\end{align*}
+The righthand side of this equation should remind us of the span. In this case, of $\text{Span}\left\{ \vek{v}_2, \dots, \vek{v}_k \right\}$. That is, $\vek{v}_1$ lies in the span of the other $\vek{v}_i$'s.
+}
+\end{enumerate}
+
+\section*{Linear Independence}
+
+\ques Consider the set of vectors $S = \left\{ \vek{0}, \vek{v}_2, \dots, \vek{v}_k \right\}$. Is $S$ independent or dependent? To answer this, we must ask whether the following homogeneous equation has a non-zero solution:
+\begin{align*}
+c_1 \vek{0} + c_2 \vek{v}_2 + \dots + c_k \vek{v}_k &= \vek{0}
+\end{align*}
+Consider for instance the solution $c_1 = 3$, $c_2,c_3,\dots,c_k = 0$. This is a non-zero or non-trivial solution, hence $S$ must be dependent.
+
+\ques Let $S = \left\{ \vek{v}_1, \vek{v}_2, \vek{v}_3 \right\}$.
+Suppose none of the vectors in $S$ are zero vectors, and each is perpendicular to one another. That is,
+\begin{align*}
+\vek{v}_i \neq \vek{0}
+&&
+\vek{v}_i \perp \vek{v}_j \quad \text{for all $i \neq j$}
+\end{align*}
+Is $S$ independent or dependent? Before we answer this question, we should observe some noteworthy aspects of this question and how it is posed. If we can find some useful relationships between orthogonality and linear dependence, we will perhaps uncover illuminating geometric relationships.
+
+To answer the question at hand, we can start with the equation we already know: the linear combination of vectors that equals the zero vector:
+\begin{align*}
+c_1 \vek{v}_1 + c_2 \vek{v}_2 + c_3 \vek{v}_3 &= \vek{0}
+\end{align*}
+it is initially unclear how the orthogonality will come into play, but consider taking the dot product of both sides of the equation with $\vek{v}_1$:
+\begin{align*}
+\left( c_1 \vek{v}_1 + c_2 \vek{v}_2 + c_3 \vek{v}_3 \right) \cdot \vek{v}_1 &= \vek{0} \cdot \vek{v}_1
+\\
+c_1 \left( \vek{v}_1 \cdot \vek{v}_1 \right) +
+c_2 \left( \vek{v}_2 \cdot \vek{v}_1 \right) +
+c_3 \left( \vek{v}_3 \cdot \vek{v}_1 \right) &= 0 & \text{Distributive property of dot product}
+\\
+c_1 || \vek{v}_1 ||^2 + c_2(0) + c_3(0) &= 0 & \text{The vectors are orthogonal to each other}
+\\
+c_1 || \vek{v}_1 ||^2 &= 0
+\end{align*}
+Since $\vek{v}_1 \neq \vek{0}$, we know that $|| \vek{v}_1 ||^2 \neq 0$. Thus from the above, $c_1 = 0$.
+
+Likewise, we find that $c_2 = c_3 = 0$ by taking the dot product with $\vek{v}_2$ and $\vek{v}_3$.
+
+Therefore, the only solution is the zero solution. Thus $S$ must be independent.
+
+\note In an $n$-dimensional space we cannot have more than $n$ (non-zero) orthogonal vectors.
+
+\section*{Matrices}
+We have already seen some examples of matrices as means of storing systems of linear equations. They are simply arrays of numbers laid out in a way in which each entry has a convenient address.
+{\Large
+\begin{align*}
+\mat{A} = \begin{bmatrix}
+a_{1,1} & a_{1,2} & a_{1,3}
+\\[1ex]
+a_{2,1} & a_{2,2} & a_{2,3}
+\end{bmatrix}
+\qquad
+\mat{A}_{2 \times 3}
+\end{align*}
+}
+The $i-j^\text{th}$ entry is the entry found in row $i$ and column $j$. We always give the address of the entry row first and column second
+
+Every matrix is described by its entries, and we sometimes write it like below:
+\begin{align*}
+\mat{A} = \Big( a_{ij} \Big) \qquad a_{ij} \in \bbR, \bbC
+\end{align*}
+For our purposes, the entries will almost always be from $\bbR$ and $\bbC$, but keep in mind that the entries could be any object.
+
+It is also important to note the size of a matrix, and we often do this by saying that $\mat{A}$ is an $n \times m$ matrix, or writing $\mat{A}_{n \times m}$.
+\subsection*{Algebra of Matrices}
+Suppose $\mat{A}_{m \times n}$ and $\mat{B}_{m \times n}$ are matrices of the same size. We define several operations on matrices as follows:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | >{$}r<{$}@{$\,=\,$} >{$}l<{$} >{$}c<{$}}
+Operation & \multicolumn{2}{c}{\text{Definition by Entry}} & \text{Resultant Size}
+\\ \hline \hline
+Matrix addition &
+\mat{A} + \mat{B} &
+\Big( a_{ij} + b_{ij} \Big) &
+m \times n
+\\
+Matrix subtraction &
+\mat{A} - \mat{B} &
+\Big( a_{ij} - b_{ij} \Big) &
+m \times n
+\\
+Scalar multiplication &
+c \mat{A}    &
+\Big( c \, a_{ij} \Big) \qquad \text{$c$ is a scalar} &
+m \times n
+\end{tabular}
+\end{table}
+
+\paragraph{Example.}
+\begin{align*}
+\mat{A} = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 1 & -5\end{bmatrix}
+&&
+\mat{B} = \begin{bmatrix} 5 & 6 & -6 \\ 0 & 0 & 3\end{bmatrix}
+&&
+\mat{C} = \begin{bmatrix} 1 & 2 \\ 3 & 0\end{bmatrix}
+\end{align*}
+Then $\mat{A} + 5\mat{B}$ is given by
+\begin{align*}
+\mat{A} + 5\mat{B}
+=
+\begin{bmatrix} 1 & 2 & 3 \\ 0 & 1 & -5\end{bmatrix} +
+\begin{bmatrix} 25 & 30 & -30 \\ 0 & 0 & 15\end{bmatrix}
+=
+\begin{bmatrix} 26 & 32 & -27 \\ 0 & 1 & 10\end{bmatrix}
+\end{align*}
+
+Some may wonder what the result of an addition such as $\mat{A} + \mat{C}$ would be. Since the dimensions of these matrices do not match, such an addition is not defined. It is common to wonder whether we could just add a column of zeros to the matrix $\mat{C}$ in order to make the operation defined. The response to this is that of course we could do that, but it would completely change the matrix $\mat{C}$, so we do not allow this type of operation.
+
+These are the simplest types of operations we can define on matrices. Two elementary operations remain: multiplication and division. We might also wonder about operations such as logarithm and exponentiation. We will get to those types of operations later.
+
+\subsection*{Matrix Multiplication}
+Matrix multiplication at first seems very strange. If we consider trying to define a multiplication on two matrices, we might conclude from seeing addition and subtraction that to multiply matrices they should be the same size. In fact this is not the case.
+
+Before we discuss the full definition of matrix multiplication, consider the dot product:
+\begin{align*}
+\begin{bmatrix}1 & 2 & 3\end{bmatrix} \cdot
+\begin{bmatrix}a \\ b \\ c\end{bmatrix}
+=
+a + 2b + 3c
+\end{align*}
+If the vectors had an unequal number of components then the dot product would not be defined. If we consider the scalar $a + 2b + 3c$ to be the sole entry in a matrix of size $1 \times 1$, then this tells us one possible set of sizes for which matrix multiplication is defined:
+\begin{align*}
+\underbrace{\begin{bmatrix}1 & 2 & 3\end{bmatrix}}_{1 \times 3}
+\underbrace{\begin{bmatrix}a \\ b \\ c\end{bmatrix}}_{3 \times 1}
+=
+\underbrace{\begin{bmatrix}a + 2b + 3c\end{bmatrix}}_{1 \times 1}
+\end{align*}
+The dimensions of matrices that can be multiplied can be summarized as
+{\Large
+\begin{align*}
+\mat{A}_{m \times n} \, \mat{B}_{n \times p} = \mat{C}_{m \times p}
+\end{align*}
+}
+
+\paragraph{Example.}
+\begin{align*}
+\mat{A}_{2 \times 3} = \begin{bmatrix}1 & 2 & 3 \\ -1 & 4 & 0\end{bmatrix}
+&&
+\mat{B}_{3 \times 1} = \begin{bmatrix}p\\q\\r\end{bmatrix}
+\end{align*}
+Consider the product
+\begin{align*}
+\mat{A} \mat{B} &= \begin{bmatrix}1 & 2 & 3 \\ -1 & 4 & 0\end{bmatrix}\begin{bmatrix}p\\q\\r\end{bmatrix}
+\end{align*}
+We can evaluate this by ignoring one row at a time of $\mat{A}$:
+\begin{align*}
+\left.
+\begin{aligned}
+\mat{A} \mat{B} &= \begin{bmatrix}1 & 2 & 3 \\ \,\end{bmatrix} \begin{bmatrix}p\\q\\r\end{bmatrix}
+= \begin{bmatrix}p+2q+3r \\ \,\end{bmatrix}
+\\
+\mat{A} \mat{B} &= \begin{bmatrix} \\-1 & 4 & 0\end{bmatrix} \begin{bmatrix}p\\q\\r\end{bmatrix}
+= \begin{bmatrix}\\-p+4q+0r\end{bmatrix}
+\end{aligned}\right\}
+&&
+\longrightarrow
+&&
+\begin{aligned}
+\mat{A} \mat{B} &= \begin{bmatrix}1 & 2 & 3 \\ -1 & 4 & 0\end{bmatrix}\begin{bmatrix}p\\q\\r\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+p + 2q + 3r \\
+-p + 4q + 0r
+\end{bmatrix}_{2 \times 1}
+\end{aligned}
+\end{align*}
+
+It may be startling to observe the outcome of trying to multiply $\mat{B}$ by $\mat{A}$:
+\begin{align*}
+\mat{B}_{3 \times 1} \mat{A}_{2 \times 3} &= \text{Not defined}
+\end{align*}
+Because the dimensions of the two matrices do not correctly line up in this order, they cannot be multiplied in this way. The technical term for this is that, in general, matrix multiplication is \keyphrase{non-commutative}. That is, $\mat{A} \mat{B} \neq \mat{B} \mat{A}$. In fact, both need not be defined at all, depending on their sizes.
+
+\subsection*{Another Perspective on Matrix Multiplication}
+Consider again the matrix multiplication from the previous example. We can view this multiplication in a number of ways:
+\begin{align*}
+\mat{A} \mat{B} &= \begin{bmatrix}1 & 2 & 3 \\ -1 & 4 & 0\end{bmatrix}\begin{bmatrix}p\\q\\r\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+p + 2q + 3r \\
+-p + 4q + 0r
+\end{bmatrix} && \Longleftarrow \text{Each row is a linear combination of rows of $\mat{B}$}
+\\
+&=
+p \begin{bmatrix}1\\-1\end{bmatrix} +
+q \begin{bmatrix}2\\4\end{bmatrix} +
+r \begin{bmatrix}3\\0\end{bmatrix} && \Longleftarrow \text{Linear combination of the columns of $\mat{A}$}
+\end{align*}
+The three ways of viewing matrix multiplication are
+\begin{enumerate}
+\item{
+\begin{align*}
+c_{ij} =
+\begin{pmatrix} \leftarrow \text{row $i$ of $\mat{A}$} \rightarrow \end{pmatrix}
+\begin{pmatrix}
+\uparrow
+\\
+\text{col. $j$}
+\\
+\text{of $\mat{B}$}
+\\
+\downarrow
+\end{pmatrix}
+\end{align*}
+}
+\item{
+$i^\text{th}$ row of $\mat{C}$ is a linear combination of rows of $\mat{B}$ with coefficients from the $i^\text{th}$ row of $\mat{A}$.
+}
+\item{
+$j^\text{th}$ column of $\mat{C}$ is a linear combination of columns of $\mat{A}$ with coefficients from the $j^\text{th}$ column of $\mat{B}$.
+}
+\end{enumerate}
+
+\paragraph{Example.} We will try multiplication with each of the three ways of viewing matrix multiplication.
+\begin{align*}
+\mat{A} = \begin{bmatrix}1&2\\0&1\end{bmatrix}
+&&
+\mat{B} = \begin{bmatrix}1&2\\0&0\\-1&12\end{bmatrix}
+\end{align*}
+Note that $\mat{A} \mat{B}$ is not defined, but $\mat{B} \mat{A}$ is defined. Let $\mat{C} = \mat{B} \mat{A}$, the matrix whose entries we will try to find.
+
+\begin{enumerate}
+\item{
+First method:
+
+\begin{align*}
+\mat{C} = \begin{bmatrix}c_{11} & c_{12}\\c_{21} & c_{22}\\c_{31} & c_{32}\end{bmatrix}_{3 \times 2}
+\end{align*}
+\begin{align*}
+c_{11} &= \overbrace{\begin{pmatrix}1 & 2\end{pmatrix}}^{\text{Row $1$ of $\mat{B}$}}
+\cdot
+\underbrace{\begin{pmatrix}1 \\ 0\end{pmatrix}}_{\text{Column $1$ of $\mat{A}$}}
+ = 1
+\end{align*}
+Similarly,
+\begin{align*}
+c_{32} &=
+\begin{pmatrix}-1 & 12\end{pmatrix}
+\cdot \begin{pmatrix}2\\1\end{pmatrix} = 10
+\end{align*}
+So
+\begin{align*}
+\mat{C} = \begin{bmatrix}1 & c_{12}\\c_{21} & c_{22}\\c_{31} & 10\end{bmatrix}_{3 \times 2}
+\end{align*}
+
+}
+\item{
+Next, we will use the second method. This says that rows of $\mat{C}$ are linear combinations of rows of $\mat{A}$.
+\begin{align*}
+\text{Row 1} &=
+1 \begin{bmatrix}1 & 2\end{bmatrix} +
+2 \begin{bmatrix}0 & 1\end{bmatrix}
+\end{align*}
+The coefficients $1$ and $2$ in front of the rows of $\mat{A}$ are taken from the first row of $\mat{B}$.
+\begin{align*}
+\mat{C} = \begin{bmatrix}1 & 4\\c_{21} & c_{22}\\c_{31} & 10\end{bmatrix}_{3 \times 2}
+\end{align*}
+}
+\item{
+The next method states that columns of $\mat{C}$ are linear combinations of columns of $\mat{B}$.
+\begin{align*}
+\text{Column 2} &=
+2 \begin{bmatrix}1\\0\\-1\end{bmatrix} +
+1 \begin{bmatrix}2\\0\\12\end{bmatrix}
+\\
+&= \begin{bmatrix}4\\0\\10\end{bmatrix}
+\end{align*}
+This allows us to fill in another entry of $\mat{C}$:
+\begin{align*}
+\mat{C} = \begin{bmatrix}1 & 4\\c_{21} & 0\\c_{31} & 10\end{bmatrix}_{3 \times 2}
+\end{align*}
+}
+\end{enumerate}
+
+\end{document}

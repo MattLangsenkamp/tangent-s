@@ -1,0 +1,759 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 7</title>
+<!--Generated on Sat Jun  3 20:59:45 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on February 14, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 7</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">February 14, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Recall</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A set of vectors <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\left\{\vec{v}_{1},\vec{v}_{2},\dots,\vec{v}_{k}\right\}" display="inline"><mrow><mo>{</mo><msub id="XM53"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub id="XM54"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM51">…</mi><mo>,</mo><msub id="XM55"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo>}</mo></mrow></math> in <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathds{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is <em class="ltx_emph">linearly independent</em> if the following <em class="ltx_emph">homogenous</em> equation has only the zero (trivial) solution:</p>
+<table id="Sx3.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.E1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                      <math id="Sx1.E1.m1" class="ltx_Math" alttext="\displaystyle c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\dots+c_{k}\vec{v}_{k}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mrow></math>
+                    </td>
+<td class="ltx_td ltx_align_left">
+                      <math id="Sx1.E1.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                    </td>
+<td class="ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">Note that (<a href="#Sx1.E1" title="(1) ‣ 1. ‣ Recall ‣ Lecture 7" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) always has a solution, namely <math id="I1.i1.p2.m1" class="ltx_Math" alttext="c_{1}=c_{2}=\dots=c_{k}=0" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mi mathvariant="normal">…</mi><mo>=</mo><msub><mi>c</mi><mi>k</mi></msub><mo>=</mo><mn>0</mn></mrow></math>. Our interest is whether this is the <em class="ltx_emph">only solution</em>, or if there are others.</p>
+</div>
+<div id="I1.i1.p3" class="ltx_para">
+<p class="ltx_p">It is a common mistake when we first learn this to think that something like “since we can form a linear combination with <math id="I1.i1.p3.m1" class="ltx_Math" alttext="c_{1},c_{2},\dots,c_{k}=0" display="inline"><mrow><mrow><msub id="XM56"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM57"><mi>c</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM58">…</mi><mo>,</mo><msub id="XM59"><mi>c</mi><mi>k</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>, thus the set is dependent.”. This is not the case; it must be a solution with at least one coefficient non-zero.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If the number of vectors in <math id="I1.i2.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is greater than the dimension of the space, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is dependent.</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I1.i2.p2.m1" class="ltx_Math" alttext="\left\{\vec{v}_{1},\vec{v}_{2},\dots,\vec{v}_{k}\right\}" display="inline"><mrow><mo>{</mo><msub id="XM64"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub id="XM65"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM62">…</mi><mo>,</mo><msub id="XM66"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo>}</mo></mrow></math> is a <em class="ltx_emph">dependent set</em>. Then there is at least one <math id="I1.i2.p2.m2" class="ltx_Math" alttext="c_{i}\neq 0" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>. Without loss of generality, say <math id="I1.i2.p2.m3" class="ltx_Math" alttext="c_{1}\neq 0" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>. Then</p>
+<table id="Sx3.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                      <math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\displaystyle c_{1}\vec{v}_{1}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></math>
+                    </td>
+<td class="ltx_td ltx_align_left">
+                      <math id="Sx1.Ex1.m2" class="ltx_Math" alttext="\displaystyle=-c_{2}\vec{v}_{2}-\dots-c_{k}\vec{v}_{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mrow></mrow></math>
+                    </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                      <math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\displaystyle\vec{v}_{1}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></math>
+                    </td>
+<td class="ltx_td ltx_align_left">
+                      <math id="Sx1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=-\frac{c_{2}}{c_{1}}\vec{v}_{2}-\dots-\frac{c_{k}}{c_{1}}\vec{v}%
+_{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>c</mi><mn>2</mn></msub><msub><mi>c</mi><mn>1</mn></msub></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>c</mi><mi>k</mi></msub><msub><mi>c</mi><mn>1</mn></msub></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mrow></mrow></math>
+                    </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The righthand side of this equation should remind us of the span. In this case, of <math id="I1.i2.p2.m4" class="ltx_Math" alttext="\text{Span}\left\{\vec{v}_{2},\dots,\vec{v}_{k}\right\}" display="inline"><mrow><mtext>Span</mtext><mo>⁢</mo><mrow><mo>{</mo><msub id="XM70"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM68">…</mi><mo>,</mo><msub id="XM71"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo>}</mo></mrow></mrow></math>. That is, <math id="I1.i2.p2.m5" class="ltx_Math" alttext="\vec{v}_{1}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></math> lies in the span of the other <math id="I1.i2.p2.m6" class="ltx_Math" alttext="\vec{v}_{i}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>i</mi></msub></math>’s.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Linear Independence</h2>
+
+<section id="Sx2.SS0.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx2.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Consider the set of vectors <math id="Sx2.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="S=\left\{\vec{0},\vec{v}_{2},\dots,\vec{v}_{k}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mover accent="true" id="XM72"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>,</mo><msub id="XM76"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM74">…</mi><mo>,</mo><msub id="XM77"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo>}</mo></mrow></mrow></math>. Is <math id="Sx2.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> independent or dependent? To answer this, we must ask whether the following homogeneous equation has a non-zero solution:</p>
+<table id="Sx3.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\displaystyle c_{1}\vec{0}+c_{2}\vec{v}_{2}+\dots+c_{k}\vec{v}_{k}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\vec{0}" display="inline"><mrow><mi></mi><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consider for instance the solution <math id="Sx2.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="c_{1}=3" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn></mrow></math>, <math id="Sx2.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="c_{2},c_{3},\dots,c_{k}=0" display="inline"><mrow><mrow><msub id="XM78"><mi>c</mi><mn>2</mn></msub><mo>,</mo><msub id="XM79"><mi>c</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal" id="XM80">…</mi><mo>,</mo><msub id="XM81"><mi>c</mi><mi>k</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>. This is a non-zero or non-trivial solution, hence <math id="Sx2.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> must be dependent.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px2" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Question:</h4>
+
+<div id="Sx2.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx2.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="S=\left\{\vec{v}_{1},\vec{v}_{2},\vec{v}_{3}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><msub id="XM85"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub id="XM86"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><msub id="XM87"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>}</mo></mrow></mrow></math>.
+Suppose none of the vectors in <math id="Sx2.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> are zero vectors, and each is perpendicular to one another. That is,</p>
+<table id="Sx3.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex4.m1" class="ltx_Math" alttext="\displaystyle\vec{v}_{i}\neq\vec{0}" display="inline"><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>i</mi></msub><mo>≠</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex4.m3" class="ltx_Math" alttext="\displaystyle\vec{v}_{i}\perp\vec{v}_{j}\quad\text{for all $i\neq j$}" display="inline"><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>i</mi></msub><mo>⟂</mo><mrow><msub id="XM90"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo mathvariant="italic" separator="true"> </mo><mrow id="XM91"><mtext id="XM91a">for all </mtext><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Is <math id="Sx2.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> independent or dependent? Before we answer this question, we should observe some noteworthy aspects of this question and how it is posed. If we can find some useful relationships between orthogonality and linear dependence, we will perhaps uncover illuminating geometric relationships.</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">To answer the question at hand, we can start with the equation we already know: the linear combination of vectors that equals the zero vector:</p>
+<table id="Sx3.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\displaystyle c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+c_{3}\vec{v}_{3}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\vec{0}" display="inline"><mrow><mi></mi><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">it is initially unclear how the orthogonality will come into play, but consider taking the dot product of both sides of the equation with <math id="Sx2.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\vec{v}_{1}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></math>:</p>
+<table id="Sx3.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\displaystyle\left(c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+c_{3}\vec{v}_{3}\right)%
+\cdot\vec{v}_{1}" display="inline"><mrow><mrow><mo>(</mo><mrow id="XM93"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mrow><mo>)</mo></mrow><mo>⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\vec{0}\cdot\vec{v}_{1}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex7.m1" class="ltx_Math" alttext="\displaystyle c_{1}\left(\vec{v}_{1}\cdot\vec{v}_{1}\right)+c_{2}\left(\vec{v}%
+_{2}\cdot\vec{v}_{1}\right)+c_{3}\left(\vec{v}_{3}\cdot\vec{v}_{1}\right)" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow id="XM97"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow id="XM98"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow id="XM99"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex7.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right">Distributive property of dot product</td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex8.m1" class="ltx_Math" alttext="\displaystyle c_{1}||\vec{v}_{1}||^{2}+c_{2}(0)+c_{3}(0)" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo fence="true">||</mo><msub id="XM103"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo fence="true">||</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn id="XM104">0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn id="XM105">0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right">The vectors are orthogonal to each other</td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex9.m1" class="ltx_Math" alttext="\displaystyle c_{1}||\vec{v}_{1}||^{2}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo fence="true">||</mo><msub id="XM107"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo fence="true">||</mo></mrow><mn>2</mn></msup></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex9.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="Sx2.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="\vec{v}_{1}\neq\vec{0}" display="inline"><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>≠</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>, we know that <math id="Sx2.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="||\vec{v}_{1}||^{2}\neq 0" display="inline"><mrow><msup><mrow><mo fence="true">||</mo><msub id="XM108"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo fence="true">||</mo></mrow><mn>2</mn></msup><mo>≠</mo><mn>0</mn></mrow></math>. Thus from the above, <math id="Sx2.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="c_{1}=0" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">Likewise, we find that <math id="Sx2.SS0.SSS0.Px2.p3.m1" class="ltx_Math" alttext="c_{2}=c_{3}=0" display="inline"><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><msub><mi>c</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow></math> by taking the dot product with <math id="Sx2.SS0.SSS0.Px2.p3.m2" class="ltx_Math" alttext="\vec{v}_{2}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></math> and <math id="Sx2.SS0.SSS0.Px2.p3.m3" class="ltx_Math" alttext="\vec{v}_{3}" display="inline"><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></math>.</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px2.p4" class="ltx_para">
+<p class="ltx_p">Therefore, the only solution is the zero solution. Thus <math id="Sx2.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> must be independent.</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_smallcaps">Note:</span> In an <math id="Sx2.SS0.SSS0.Px2.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional space we cannot have more than <math id="Sx2.SS0.SSS0.Px2.p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (non-zero) orthogonal vectors.</p>
+</div>
+</section>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Matrices</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">We have already seen some examples of matrices as means of storing systems of linear equations. They are simply arrays of numbers laid out in a way in which each entry has a convenient address.</p>
+<table id="Sx3.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex10.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}=\begin{bmatrix}a_{1,1}&amp;a_{1,2}&amp;a_{1,3}\\
+a_{2,1}&amp;a_{2,2}&amp;a_{2,3}\end{bmatrix}\qquad\mathbf{A}_{2\times 3}" display="inline"><mrow><mi>𝐀</mi><mo>=</mo><mrow><mrow id="XM135b"><mo id="XM135">[</mo><mtable id="Sx3.Ex10.m1.xm1"><mtr id="Sx3.Ex10.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex10.m1.xm1b"><msub><mi>a</mi><mrow><mn id="XM123">1</mn><mo>,</mo><mn id="XM124">1</mn></mrow></msub></mtd><mtd columnalign="center" id="Sx3.Ex10.m1.xm1c"><msub><mi>a</mi><mrow><mn id="XM125">1</mn><mo>,</mo><mn id="XM126">2</mn></mrow></msub></mtd><mtd columnalign="center" id="Sx3.Ex10.m1.xm1d"><msub><mi>a</mi><mrow><mn id="XM127">1</mn><mo>,</mo><mn id="XM128">3</mn></mrow></msub></mtd></mtr><mtr id="Sx3.Ex10.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex10.m1.xm1f"><msub><mi>a</mi><mrow><mn id="XM129">2</mn><mo>,</mo><mn id="XM130">1</mn></mrow></msub></mtd><mtd columnalign="center" id="Sx3.Ex10.m1.xm1g"><msub><mi>a</mi><mrow><mn id="XM131">2</mn><mo>,</mo><mn id="XM132">2</mn></mrow></msub></mtd><mtd columnalign="center" id="Sx3.Ex10.m1.xm1h"><msub><mi>a</mi><mrow><mn id="XM133">2</mn><mo>,</mo><mn id="XM134">3</mn></mrow></msub></mtd></mtr></mtable><mo id="XM135a">]</mo></mrow><mo mathvariant="italic" separator="true">  </mo><msub id="XM136"><mi>𝐀</mi><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></msub></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <math id="Sx3.p1.m1" class="ltx_Math" alttext="i-j^{\text{th}}" display="inline"><mrow><mi>i</mi><mo>-</mo><msup><mi>j</mi><mtext>th</mtext></msup></mrow></math> entry is the entry found in row <math id="Sx3.p1.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and column <math id="Sx3.p1.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. We always give the address of the entry row first and column second</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">Every matrix is described by its entries, and we sometimes write it like below:</p>
+<table id="Sx3.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex11.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}=\Big(a_{ij}\Big)\qquad a_{ij}\in\mathds{R},\mathds{C}" display="inline"><mrow><mrow id="XM145"><mi>𝐀</mi><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><msub id="XM142"><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow id="XM146"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>∈</mo><mrow><mi id="XM143">ℝ</mi><mo>,</mo><mi id="XM144">ℂ</mi></mrow></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For our purposes, the entries will almost always be from <math id="Sx3.p2.m1" class="ltx_Math" alttext="\mathds{R}" display="inline"><mi>ℝ</mi></math> and <math id="Sx3.p2.m2" class="ltx_Math" alttext="\mathds{C}" display="inline"><mi>ℂ</mi></math>, but keep in mind that the entries could be any object.</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">It is also important to note the size of a matrix, and we often do this by saying that <math id="Sx3.p3.m1" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> is an <math id="Sx3.p3.m2" class="ltx_Math" alttext="n\times m" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow></math> matrix, or writing <math id="Sx3.p3.m3" class="ltx_Math" alttext="\mathbf{A}_{n\times m}" display="inline"><msub><mi>𝐀</mi><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow></msub></math>.</p>
+</div>
+<section id="Sx3.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Algebra of Matrices</h3>
+
+<div id="Sx3.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx3.SSx1.p1.m1" class="ltx_Math" alttext="\mathbf{A}_{m\times n}" display="inline"><msub><mi>𝐀</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></math> and <math id="Sx3.SSx1.p1.m2" class="ltx_Math" alttext="\mathbf{B}_{m\times n}" display="inline"><msub><mi>𝐁</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></math> are matrices of the same size. We define several operations on matrices as follows:</p>
+</div>
+<figure id="Sx3.SSx1.tab1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_border_r">Operation</th>
+<th class="ltx_td ltx_align_center" colspan="2">Definition by Entry</th>
+<th class="ltx_td ltx_align_center">
+                <span class="ltx_text ltx_markedasmath">Resultant Size</span>
+              </th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_border_r ltx_border_tt">Matrix addition</th>
+<td class="ltx_td ltx_align_right ltx_border_tt">
+                <math id="Sx3.SSx1.m2" class="ltx_Math" alttext="\mathbf{A}+\mathbf{B}" display="inline"><mrow><mi>𝐀</mi><mo>+</mo><mi>𝐁</mi></mrow></math>
+                <math id="Sx3.SSx1.m3" class="ltx_Math" alttext="\,=\," display="inline"><mo lspace="4.2pt" rspace="4.2pt">=</mo></math>
+              </td>
+<td class="ltx_td ltx_align_left ltx_border_tt">
+                <math id="Sx3.SSx1.m4" class="ltx_Math" alttext="\Big(a_{ij}+b_{ij}\Big)" display="inline"><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow id="XM147"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_center ltx_border_tt">
+                <math id="Sx3.SSx1.m5" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>
+              </td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_border_r">Matrix subtraction</th>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.SSx1.m6" class="ltx_Math" alttext="\mathbf{A}-\mathbf{B}" display="inline"><mrow><mi>𝐀</mi><mo>-</mo><mi>𝐁</mi></mrow></math>
+                <math id="Sx3.SSx1.m7" class="ltx_Math" alttext="\,=\," display="inline"><mo lspace="4.2pt" rspace="4.2pt">=</mo></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx3.SSx1.m8" class="ltx_Math" alttext="\Big(a_{ij}-b_{ij}\Big)" display="inline"><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow id="XM148"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>-</mo><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_center">
+                <math id="Sx3.SSx1.m9" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>
+              </td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_border_r">Scalar multiplication</th>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.SSx1.m10" class="ltx_Math" alttext="c\mathbf{A}" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>𝐀</mi></mrow></math>
+                <math id="Sx3.SSx1.m11" class="ltx_Math" alttext="\,=\," display="inline"><mo lspace="4.2pt" rspace="4.2pt">=</mo></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx3.SSx1.m12" class="ltx_Math" alttext="\Big(c\,a_{ij}\Big)\qquad\text{$c$ is a scalar}" display="inline"><mrow><mrow id="XM150b"><mo maxsize="160%" minsize="160%" id="XM150">(</mo><mrow id="XM149"><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo maxsize="160%" minsize="160%" id="XM150a">)</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mrow id="XM151"><mi>c</mi><mtext id="XM151b"> is a scalar</mtext></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_center">
+                <math id="Sx3.SSx1.m13" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math>
+              </td>
+</tr>
+</tbody>
+</table>
+</figure>
+<section id="Sx3.SSx1.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Example.</h4>
+
+<div id="Sx3.SSx1.SSS0.Px1.p1" class="ltx_para">
+<table id="Sx3.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex12.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;1&amp;-5\end{bmatrix}" display="inline"><mrow><mi>𝐀</mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex12.m1.xm1"><mtr id="Sx3.Ex12.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex12.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex12.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex12.m1.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m1.xm1g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m1.xm1h"><mrow><mo>-</mo><mn>5</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex12.m3" class="ltx_Math" alttext="\displaystyle\mathbf{B}=\begin{bmatrix}5&amp;6&amp;-6\\
+0&amp;0&amp;3\end{bmatrix}" display="inline"><mrow><mi>𝐁</mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex12.m3.xm1"><mtr id="Sx3.Ex12.m3.xm1a"><mtd columnalign="center" id="Sx3.Ex12.m3.xm1b"><mn>5</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m3.xm1c"><mn>6</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m3.xm1d"><mrow><mo>-</mo><mn>6</mn></mrow></mtd></mtr><mtr id="Sx3.Ex12.m3.xm1e"><mtd columnalign="center" id="Sx3.Ex12.m3.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m3.xm1g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m3.xm1h"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex12.m5" class="ltx_Math" alttext="\displaystyle\mathbf{C}=\begin{bmatrix}1&amp;2\\
+3&amp;0\end{bmatrix}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex12.m5.xm1"><mtr id="Sx3.Ex12.m5.xm1a"><mtd columnalign="center" id="Sx3.Ex12.m5.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m5.xm1c"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex12.m5.xm1d"><mtd columnalign="center" id="Sx3.Ex12.m5.xm1e"><mn>3</mn></mtd><mtd columnalign="center" id="Sx3.Ex12.m5.xm1f"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="Sx3.SSx1.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\mathbf{A}+5\mathbf{B}" display="inline"><mrow><mi>𝐀</mi><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>𝐁</mi></mrow></mrow></math> is given by</p>
+<table id="Sx3.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex13.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}+5\mathbf{B}=\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;1&amp;-5\end{bmatrix}+\begin{bmatrix}25&amp;30&amp;-30\\
+0&amp;0&amp;15\end{bmatrix}=\begin{bmatrix}26&amp;32&amp;-27\\
+0&amp;1&amp;10\end{bmatrix}" display="inline"><mrow><mrow><mi>𝐀</mi><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mi>𝐁</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex13.m1.xm1"><mtr id="Sx3.Ex13.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex13.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex13.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex13.m1.xm1f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm1g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm1h"><mrow><mo>-</mo><mn>5</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mo>[</mo><mtable id="Sx3.Ex13.m1.xm2"><mtr id="Sx3.Ex13.m1.xm2a"><mtd columnalign="center" id="Sx3.Ex13.m1.xm2b"><mn>25</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm2c"><mn>30</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm2d"><mrow><mo>-</mo><mn>30</mn></mrow></mtd></mtr><mtr id="Sx3.Ex13.m1.xm2e"><mtd columnalign="center" id="Sx3.Ex13.m1.xm2f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm2g"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm2h"><mn>15</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex13.m1.xm3"><mtr id="Sx3.Ex13.m1.xm3a"><mtd columnalign="center" id="Sx3.Ex13.m1.xm3b"><mn>26</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm3c"><mn>32</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm3d"><mrow><mo>-</mo><mn>27</mn></mrow></mtd></mtr><mtr id="Sx3.Ex13.m1.xm3e"><mtd columnalign="center" id="Sx3.Ex13.m1.xm3f"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm3g"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex13.m1.xm3h"><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx3.SSx1.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Some may wonder what the result of an addition such as <math id="Sx3.SSx1.SSS0.Px1.p2.m1" class="ltx_Math" alttext="\mathbf{A}+\mathbf{C}" display="inline"><mrow><mi>𝐀</mi><mo>+</mo><mi>𝐂</mi></mrow></math> would be. Since the dimensions of these matrices do not match, such an addition is not defined. It is common to wonder whether we could just add a column of zeros to the matrix <math id="Sx3.SSx1.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> in order to make the operation defined. The response to this is that of course we could do that, but it would completely change the matrix <math id="Sx3.SSx1.SSS0.Px1.p2.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>, so we do not allow this type of operation.</p>
+</div>
+<div id="Sx3.SSx1.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">These are the simplest types of operations we can define on matrices. Two elementary operations remain: multiplication and division. We might also wonder about operations such as logarithm and exponentiation. We will get to those types of operations later.</p>
+</div>
+</section>
+</section>
+<section id="Sx3.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Matrix Multiplication</h3>
+
+<div id="Sx3.SSx2.p1" class="ltx_para">
+<p class="ltx_p">Matrix multiplication at first seems very strange. If we consider trying to define a multiplication on two matrices, we might conclude from seeing addition and subtraction that to multiply matrices they should be the same size. In fact this is not the case.</p>
+</div>
+<div id="Sx3.SSx2.p2" class="ltx_para">
+<p class="ltx_p">Before we discuss the full definition of matrix multiplication, consider the dot product:</p>
+<table id="Sx3.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex14" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex14.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}1&amp;2&amp;3\end{bmatrix}\cdot\begin{bmatrix}a\\
+b\\
+c\end{bmatrix}=a+2b+3c" display="inline"><mrow><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex14.m1.xm1"><mtr id="Sx3.Ex14.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex14.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex14.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex14.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⋅</mo><mrow><mo>[</mo><mtable id="Sx3.Ex14.m1.xm2"><mtr id="Sx3.Ex14.m1.xm2a"><mtd columnalign="center" id="Sx3.Ex14.m1.xm2b"><mi>a</mi></mtd></mtr><mtr id="Sx3.Ex14.m1.xm2c"><mtd columnalign="center" id="Sx3.Ex14.m1.xm2d"><mi>b</mi></mtd></mtr><mtr id="Sx3.Ex14.m1.xm2e"><mtd columnalign="center" id="Sx3.Ex14.m1.xm2f"><mi>c</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>c</mi></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If the vectors had an unequal number of components then the dot product would not be defined. If we consider the scalar <math id="Sx3.SSx2.p2.m1" class="ltx_Math" alttext="a+2b+3c" display="inline"><mrow><mi>a</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>c</mi></mrow></mrow></math> to be the sole entry in a matrix of size <math id="Sx3.SSx2.p2.m2" class="ltx_Math" alttext="1\times 1" display="inline"><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow></math>, then this tells us one possible set of sizes for which matrix multiplication is defined:</p>
+<table id="Sx3.EGx12" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex15" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex15.m1" class="ltx_Math" alttext="\displaystyle\underbrace{\begin{bmatrix}1&amp;2&amp;3\end{bmatrix}}_{1\times 3}%
+\underbrace{\begin{bmatrix}a\\
+b\\
+c\end{bmatrix}}_{3\times 1}=\underbrace{\begin{bmatrix}a+2b+3c\end{bmatrix}}_{%
+1\times 1}" display="inline"><mrow><mrow><munder><munder accentunder="true"><mrow><mo movablelimits="false">[</mo><mtable id="Sx3.Ex15.m1.xm1"><mtr id="Sx3.Ex15.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex15.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex15.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex15.m1.xm1d"><mn>3</mn></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mn>1</mn><mo>×</mo><mn>3</mn></mrow></munder><mo>⁢</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false">[</mo><mtable id="Sx3.Ex15.m1.xm2"><mtr id="Sx3.Ex15.m1.xm2a"><mtd columnalign="center" id="Sx3.Ex15.m1.xm2b"><mi>a</mi></mtd></mtr><mtr id="Sx3.Ex15.m1.xm2c"><mtd columnalign="center" id="Sx3.Ex15.m1.xm2d"><mi>b</mi></mtd></mtr><mtr id="Sx3.Ex15.m1.xm2e"><mtd columnalign="center" id="Sx3.Ex15.m1.xm2f"><mi>c</mi></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mn>3</mn><mo>×</mo><mn>1</mn></mrow></munder></mrow><mo>=</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false">[</mo><mtable id="Sx3.Ex15.m1.xm3"><mtr id="Sx3.Ex15.m1.xm3a"><mtd columnalign="center" id="Sx3.Ex15.m1.xm3b"><mrow><mi>a</mi><mo movablelimits="false">+</mo><mrow><mn>2</mn><mo movablelimits="false">⁢</mo><mi>b</mi></mrow><mo movablelimits="false">+</mo><mrow><mn>3</mn><mo movablelimits="false">⁢</mo><mi>c</mi></mrow></mrow></mtd></mtr></mtable><mo movablelimits="false">]</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow></munder></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The dimensions of matrices that can be multiplied can be summarized as</p>
+<table id="Sx3.EGx13" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex16" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex16.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}_{m\times n}\,\mathbf{B}_{n\times p}=\mathbf{C}_{m%
+\times p}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><msub><mi>𝐀</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mpadded><mo>⁢</mo><msub><mi>𝐁</mi><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow></msub></mrow><mo>=</mo><msub><mi>𝐂</mi><mrow><mi>m</mi><mo>×</mo><mi>p</mi></mrow></msub></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="Sx3.SSx2.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Example.</h4>
+
+<div id="Sx3.SSx2.SSS0.Px1.p1" class="ltx_para">
+<table id="Sx3.EGx14" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex17" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex17.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}_{2\times 3}=\begin{bmatrix}1&amp;2&amp;3\\
+-1&amp;4&amp;0\end{bmatrix}" display="inline"><mrow><msub><mi>𝐀</mi><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></msub><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex17.m1.xm1"><mtr id="Sx3.Ex17.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex17.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex17.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex17.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex17.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex17.m1.xm1f"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex17.m1.xm1g"><mn>4</mn></mtd><mtd columnalign="center" id="Sx3.Ex17.m1.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex17.m3" class="ltx_Math" alttext="\displaystyle\mathbf{B}_{3\times 1}=\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}" display="inline"><mrow><msub><mi>𝐁</mi><mrow><mn>3</mn><mo>×</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex17.m3.xm1"><mtr id="Sx3.Ex17.m3.xm1a"><mtd columnalign="center" id="Sx3.Ex17.m3.xm1b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex17.m3.xm1c"><mtd columnalign="center" id="Sx3.Ex17.m3.xm1d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex17.m3.xm1e"><mtd columnalign="center" id="Sx3.Ex17.m3.xm1f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consider the product</p>
+<table id="Sx3.EGx15" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex18" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex18.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}\mathbf{B}" display="inline"><mi>𝐀𝐁</mi></math>
+                  </td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx3.Ex18.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+-1&amp;4&amp;0\end{bmatrix}\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex18.m2.xm1"><mtr id="Sx3.Ex18.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex18.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex18.m2.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex18.m2.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex18.m2.xm1e"><mtd columnalign="center" id="Sx3.Ex18.m2.xm1f"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex18.m2.xm1g"><mn>4</mn></mtd><mtd columnalign="center" id="Sx3.Ex18.m2.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex18.m2.xm2"><mtr id="Sx3.Ex18.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex18.m2.xm2b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex18.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex18.m2.xm2d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex18.m2.xm2e"><mtd columnalign="center" id="Sx3.Ex18.m2.xm2f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We can evaluate this by ignoring one row at a time of <math id="Sx3.SSx2.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math>:</p>
+<table id="Sx3.EGx16" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex19" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex19.m1" class="ltx_Math" alttext="\displaystyle\left.\begin{aligned}\displaystyle\mathbf{A}\mathbf{B}&amp;%
+\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+\end{bmatrix}\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}=\begin{bmatrix}p+2q+3r\\
+\end{bmatrix}\\
+\displaystyle\mathbf{A}\mathbf{B}&amp;\displaystyle=\begin{bmatrix}\\
+-1&amp;4&amp;0\end{bmatrix}\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}=\begin{bmatrix}\\
+-p+4q+0r\end{bmatrix}\end{aligned}\right\}" display="inline"><mrow><mtable><mtr><mtd columnalign="right"><mi>𝐀𝐁</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm1"><mtr id="Sx3.Ex19.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m1.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m1.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex19.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex19.m1.xm1f"><mi></mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm2"><mtr id="Sx3.Ex19.m1.xm2a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm2b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm2c"><mtd columnalign="center" id="Sx3.Ex19.m1.xm2d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm2e"><mtd columnalign="center" id="Sx3.Ex19.m1.xm2f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm3"><mtr id="Sx3.Ex19.m1.xm3a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm3b"><mrow><mi>p</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr><mtr id="Sx3.Ex19.m1.xm3c"><mtd columnalign="center" id="Sx3.Ex19.m1.xm3d"><mi></mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="right"><mi>𝐀𝐁</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm4"><mtr id="Sx3.Ex19.m1.xm4a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm4b"><mi></mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm4c"><mtd columnalign="center" id="Sx3.Ex19.m1.xm4d"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex19.m1.xm4e"><mn>4</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m1.xm4f"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm5"><mtr id="Sx3.Ex19.m1.xm5a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm5b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm5c"><mtd columnalign="center" id="Sx3.Ex19.m1.xm5d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm5e"><mtd columnalign="center" id="Sx3.Ex19.m1.xm5f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex19.m1.xm6"><mtr id="Sx3.Ex19.m1.xm6a"><mtd columnalign="center" id="Sx3.Ex19.m1.xm6b"><mi></mi></mtd></mtr><mtr id="Sx3.Ex19.m1.xm6c"><mtd columnalign="center" id="Sx3.Ex19.m1.xm6d"><mrow><mrow><mo>-</mo><mi>p</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex19.m3" class="ltx_Math" alttext="\displaystyle\longrightarrow" display="inline"><mo>⟶</mo></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex19.m5" class="ltx_Math" alttext="\displaystyle\begin{aligned}\displaystyle\mathbf{A}\mathbf{B}&amp;\displaystyle=%
+\begin{bmatrix}1&amp;2&amp;3\\
+-1&amp;4&amp;0\end{bmatrix}\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}\\
+&amp;\displaystyle=\begin{bmatrix}p+2q+3r\\
+-p+4q+0r\end{bmatrix}_{2\times 1}\end{aligned}" display="inline"><mtable><mtr><mtd columnalign="right"><mi>𝐀𝐁</mi></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex19.m5.xm1"><mtr id="Sx3.Ex19.m5.xm1a"><mtd columnalign="center" id="Sx3.Ex19.m5.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m5.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m5.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex19.m5.xm1e"><mtd columnalign="center" id="Sx3.Ex19.m5.xm1f"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex19.m5.xm1g"><mn>4</mn></mtd><mtd columnalign="center" id="Sx3.Ex19.m5.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex19.m5.xm2"><mtr id="Sx3.Ex19.m5.xm2a"><mtd columnalign="center" id="Sx3.Ex19.m5.xm2b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex19.m5.xm2c"><mtd columnalign="center" id="Sx3.Ex19.m5.xm2d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex19.m5.xm2e"><mtd columnalign="center" id="Sx3.Ex19.m5.xm2f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><msub><mrow><mo>[</mo><mtable id="Sx3.Ex19.m5.xm3"><mtr id="Sx3.Ex19.m5.xm3a"><mtd columnalign="center" id="Sx3.Ex19.m5.xm3b"><mrow><mi>p</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr><mtr id="Sx3.Ex19.m5.xm3c"><mtd columnalign="center" id="Sx3.Ex19.m5.xm3d"><mrow><mrow><mo>-</mo><mi>p</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mn>2</mn><mo>×</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx3.SSx2.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">It may be startling to observe the outcome of trying to multiply <math id="Sx3.SSx2.SSS0.Px1.p2.m1" class="ltx_Math" alttext="\mathbf{B}" display="inline"><mi>𝐁</mi></math> by <math id="Sx3.SSx2.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math>:</p>
+<table id="Sx3.EGx17" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex20" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex20.m1" class="ltx_Math" alttext="\displaystyle\mathbf{B}_{3\times 1}\mathbf{A}_{2\times 3}" display="inline"><mrow><msub><mi>𝐁</mi><mrow><mn>3</mn><mo>×</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐀</mi><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></msub></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left">
+                    <math id="Sx3.Ex20.m2" class="ltx_Math" alttext="\displaystyle=\text{Not defined}" display="inline"><mrow><mi></mi><mo>=</mo><mtext>Not defined</mtext></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because the dimensions of the two matrices do not correctly line up in this order, they cannot be multiplied in this way. The technical term for this is that, in general, matrix multiplication is <span class="ltx_text ltx_font_bold">non-commutative</span>. That is, <math id="Sx3.SSx2.SSS0.Px1.p2.m3" class="ltx_Math" alttext="\mathbf{A}\mathbf{B}\neq\mathbf{B}\mathbf{A}" display="inline"><mrow><mi>𝐀𝐁</mi><mo>≠</mo><mi>𝐁𝐀</mi></mrow></math>. In fact, both need not be defined at all, depending on their sizes.</p>
+</div>
+</section>
+</section>
+<section id="Sx3.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Another Perspective on Matrix Multiplication</h3>
+
+<div id="Sx3.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Consider again the matrix multiplication from the previous example. We can view this multiplication in a number of ways:</p>
+<table id="Sx3.EGx18" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex21" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx3.Ex21.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}\mathbf{B}" display="inline"><mi>𝐀𝐁</mi></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex21.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}1&amp;2&amp;3\\
+-1&amp;4&amp;0\end{bmatrix}\begin{bmatrix}p\\
+q\\
+r\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable id="Sx3.Ex21.m2.xm1"><mtr id="Sx3.Ex21.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex21.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex21.m2.xm1c"><mn>2</mn></mtd><mtd columnalign="center" id="Sx3.Ex21.m2.xm1d"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex21.m2.xm1e"><mtd columnalign="center" id="Sx3.Ex21.m2.xm1f"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex21.m2.xm1g"><mn>4</mn></mtd><mtd columnalign="center" id="Sx3.Ex21.m2.xm1h"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex21.m2.xm2"><mtr id="Sx3.Ex21.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex21.m2.xm2b"><mi>p</mi></mtd></mtr><mtr id="Sx3.Ex21.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex21.m2.xm2d"><mi>q</mi></mtd></mtr><mtr id="Sx3.Ex21.m2.xm2e"><mtd columnalign="center" id="Sx3.Ex21.m2.xm2f"><mi>r</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex22" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex22.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}p+2q+3r\\
+-p+4q+0r\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex22.m2.xm1"><mtr id="Sx3.Ex22.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex22.m2.xm1b"><mrow><mi>p</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr><mtr id="Sx3.Ex22.m2.xm1c"><mtd columnalign="center" id="Sx3.Ex22.m2.xm1d"><mrow><mrow><mo>-</mo><mi>p</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex22.m4" class="ltx_Math" alttext="\displaystyle\Longleftarrow\text{Each row is a linear combination of rows of $%
+\mathbf{B}$}" display="inline"><mrow><mi></mi><mo>⟸</mo><mrow><mtext>Each row is a linear combination of rows of </mtext><mi>𝐁</mi></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex23" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex23.m2" class="ltx_Math" alttext="\displaystyle=p\begin{bmatrix}1\\
+-1\end{bmatrix}+q\begin{bmatrix}2\\
+4\end{bmatrix}+r\begin{bmatrix}3\\
+0\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex23.m2.xm1"><mtr id="Sx3.Ex23.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex23.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx3.Ex23.m2.xm1c"><mtd columnalign="center" id="Sx3.Ex23.m2.xm1d"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex23.m2.xm2"><mtr id="Sx3.Ex23.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex23.m2.xm2b"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex23.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex23.m2.xm2d"><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex23.m2.xm3"><mtr id="Sx3.Ex23.m2.xm3a"><mtd columnalign="center" id="Sx3.Ex23.m2.xm3b"><mn>3</mn></mtd></mtr><mtr id="Sx3.Ex23.m2.xm3c"><mtd columnalign="center" id="Sx3.Ex23.m2.xm3d"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx3.Ex23.m4" class="ltx_Math" alttext="\displaystyle\Longleftarrow\text{Linear combination of the columns of $\mathbf%
+{A}$}" display="inline"><mrow><mi></mi><mo>⟸</mo><mrow><mtext>Linear combination of the columns of </mtext><mi>𝐀</mi></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The three ways of viewing matrix multiplication are</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<table id="Sx3.EGx19" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex24" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx3.Ex24.m1" class="ltx_Math" alttext="\displaystyle c_{ij}=\begin{pmatrix}\leftarrow\text{row $i$ of $\mathbf{A}$}%
+\rightarrow\end{pmatrix}\begin{pmatrix}\uparrow\\
+\text{col. $j$}\\
+\text{of $\mathbf{B}$}\\
+\downarrow\end{pmatrix}" display="inline"><mrow><msub><mi>c</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mrow><mo>(</mo><mtable id="Sx3.Ex24.m1.xm1"><mtr id="Sx3.Ex24.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex24.m1.xm1b"><mrow><mi></mi><mo>←</mo><mrow><mtext>row </mtext><mi>i</mi><mtext> of </mtext><mi>𝐀</mi></mrow><mo>→</mo><mi></mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx3.Ex24.m1.xm2"><mtr id="Sx3.Ex24.m1.xm2a"><mtd columnalign="center" id="Sx3.Ex24.m1.xm2b"><mo>↑</mo></mtd></mtr><mtr id="Sx3.Ex24.m1.xm2c"><mtd columnalign="center" id="Sx3.Ex24.m1.xm2d"><mrow><mtext>col. </mtext><mi>j</mi></mrow></mtd></mtr><mtr id="Sx3.Ex24.m1.xm2e"><mtd columnalign="center" id="Sx3.Ex24.m1.xm2f"><mrow><mtext>of </mtext><mi>𝐁</mi></mrow></mtd></mtr><mtr id="Sx3.Ex24.m1.xm2g"><mtd columnalign="center" id="Sx3.Ex24.m1.xm2h"><mo>↓</mo></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="i^{\text{th}}" display="inline"><msup><mi>i</mi><mtext>th</mtext></msup></math> row of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> is a linear combination of rows of <math id="I2.i2.p1.m3" class="ltx_Math" alttext="\mathbf{B}" display="inline"><mi>𝐁</mi></math> with coefficients from the <math id="I2.i2.p1.m4" class="ltx_Math" alttext="i^{\text{th}}" display="inline"><msup><mi>i</mi><mtext>th</mtext></msup></math> row of <math id="I2.i2.p1.m5" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="j^{\text{th}}" display="inline"><msup><mi>j</mi><mtext>th</mtext></msup></math> column of <math id="I2.i3.p1.m2" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> is a linear combination of columns of <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> with coefficients from the <math id="I2.i3.p1.m4" class="ltx_Math" alttext="j^{\text{th}}" display="inline"><msup><mi>j</mi><mtext>th</mtext></msup></math> column of <math id="I2.i3.p1.m5" class="ltx_Math" alttext="\mathbf{B}" display="inline"><mi>𝐁</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<section id="Sx3.SSx3.SSS0.Px1" class="ltx_paragraph">
+<h4 class="ltx_title ltx_title_paragraph">Example.</h4>
+
+<div id="Sx3.SSx3.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">We will try multiplication with each of the three ways of viewing matrix multiplication.</p>
+<table id="Sx3.EGx20" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex25" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex25.m1" class="ltx_Math" alttext="\displaystyle\mathbf{A}=\begin{bmatrix}1&amp;2\\
+0&amp;1\end{bmatrix}" display="inline"><mrow><mi>𝐀</mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex25.m1.xm1"><mtr id="Sx3.Ex25.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex25.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex25.m1.xm1c"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex25.m1.xm1d"><mtd columnalign="center" id="Sx3.Ex25.m1.xm1e"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex25.m1.xm1f"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx3.Ex25.m3" class="ltx_Math" alttext="\displaystyle\mathbf{B}=\begin{bmatrix}1&amp;2\\
+0&amp;0\\
+-1&amp;12\end{bmatrix}" display="inline"><mrow><mi>𝐁</mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex25.m3.xm1"><mtr id="Sx3.Ex25.m3.xm1a"><mtd columnalign="center" id="Sx3.Ex25.m3.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex25.m3.xm1c"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex25.m3.xm1d"><mtd columnalign="center" id="Sx3.Ex25.m3.xm1e"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex25.m3.xm1f"><mn>0</mn></mtd></mtr><mtr id="Sx3.Ex25.m3.xm1g"><mtd columnalign="center" id="Sx3.Ex25.m3.xm1h"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex25.m3.xm1i"><mn>12</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that <math id="Sx3.SSx3.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\mathbf{A}\mathbf{B}" display="inline"><mi>𝐀𝐁</mi></math> is not defined, but <math id="Sx3.SSx3.SSS0.Px1.p1.m2" class="ltx_Math" alttext="\mathbf{B}\mathbf{A}" display="inline"><mi>𝐁𝐀</mi></math> is defined. Let <math id="Sx3.SSx3.SSS0.Px1.p1.m3" class="ltx_Math" alttext="\mathbf{C}=\mathbf{B}\mathbf{A}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><mi>𝐁𝐀</mi></mrow></math>, the matrix whose entries we will try to find.</p>
+</div>
+<div id="Sx3.SSx3.SSS0.Px1.p2" class="ltx_para">
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">First method:</p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<table id="Sx3.EGx21" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex26" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex26.m1" class="ltx_Math" alttext="\displaystyle\mathbf{C}=\begin{bmatrix}c_{11}&amp;c_{12}\\
+c_{21}&amp;c_{22}\\
+c_{31}&amp;c_{32}\end{bmatrix}_{3\times 2}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><msub><mrow><mo>[</mo><mtable id="Sx3.Ex26.m1.xm1"><mtr id="Sx3.Ex26.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1b"><msub><mi>c</mi><mn>11</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1c"><msub><mi>c</mi><mn>12</mn></msub></mtd></mtr><mtr id="Sx3.Ex26.m1.xm1d"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1e"><msub><mi>c</mi><mn>21</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1f"><msub><mi>c</mi><mn>22</mn></msub></mtd></mtr><mtr id="Sx3.Ex26.m1.xm1g"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1h"><msub><mi>c</mi><mn>31</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1i"><msub><mi>c</mi><mn>32</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></msub></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="Sx3.EGx22" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex27" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex27.m1" class="ltx_Math" alttext="\displaystyle c_{11}" display="inline"><msub><mi>c</mi><mn>11</mn></msub></math>
+                        </td>
+<td class="ltx_td ltx_align_left">
+                          <math id="Sx3.Ex27.m2" class="ltx_Math" alttext="\displaystyle=\overbrace{\begin{pmatrix}1&amp;2\end{pmatrix}}^{\text{Row $1$ of $%
+\mathbf{B}$}}\cdot\underbrace{\begin{pmatrix}1\\
+0\end{pmatrix}}_{\text{Column $1$ of $\mathbf{A}$}}=1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mover><mover accent="true"><mrow><mo movablelimits="false">(</mo><mtable id="Sx3.Ex27.m2.xm1"><mtr id="Sx3.Ex27.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex27.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex27.m2.xm1c"><mn>2</mn></mtd></mtr></mtable><mo movablelimits="false">)</mo></mrow><mo movablelimits="false">⏞</mo></mover><mrow><mtext>Row </mtext><mn>1</mn><mtext> of </mtext><mi>𝐁</mi></mrow></mover><mo>⋅</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false">(</mo><mtable id="Sx3.Ex27.m2.xm2"><mtr id="Sx3.Ex27.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex27.m2.xm2b"><mn>1</mn></mtd></mtr><mtr id="Sx3.Ex27.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex27.m2.xm2d"><mn>0</mn></mtd></mtr></mtable><mo movablelimits="false">)</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mtext>Column </mtext><mn>1</mn><mtext> of </mtext><mi>𝐀</mi></mrow></munder></mrow><mo>=</mo><mn>1</mn></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly,</p>
+<table id="Sx3.EGx23" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex28" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex28.m1" class="ltx_Math" alttext="\displaystyle c_{32}" display="inline"><msub><mi>c</mi><mn>32</mn></msub></math>
+                        </td>
+<td class="ltx_td ltx_align_left">
+                          <math id="Sx3.Ex28.m2" class="ltx_Math" alttext="\displaystyle=\begin{pmatrix}-1&amp;12\end{pmatrix}\cdot\begin{pmatrix}2\\
+1\end{pmatrix}=10" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mtable id="Sx3.Ex28.m2.xm1"><mtr id="Sx3.Ex28.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex28.m2.xm1b"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center" id="Sx3.Ex28.m2.xm1c"><mn>12</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⋅</mo><mrow><mo>(</mo><mtable id="Sx3.Ex28.m2.xm2"><mtr id="Sx3.Ex28.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex28.m2.xm2b"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex28.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex28.m2.xm2d"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mn>10</mn></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So
+</p>
+<table id="Sx3.EGx24" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex29" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex29.m1" class="ltx_Math" alttext="\displaystyle\mathbf{C}=\begin{bmatrix}1&amp;c_{12}\\
+c_{21}&amp;c_{22}\\
+c_{31}&amp;10\end{bmatrix}_{3\times 2}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><msub><mrow><mo>[</mo><mtable id="Sx3.Ex29.m1.xm1"><mtr id="Sx3.Ex29.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex29.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex29.m1.xm1c"><msub><mi>c</mi><mn>12</mn></msub></mtd></mtr><mtr id="Sx3.Ex29.m1.xm1d"><mtd columnalign="center" id="Sx3.Ex29.m1.xm1e"><msub><mi>c</mi><mn>21</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex29.m1.xm1f"><msub><mi>c</mi><mn>22</mn></msub></mtd></mtr><mtr id="Sx3.Ex29.m1.xm1g"><mtd columnalign="center" id="Sx3.Ex29.m1.xm1h"><msub><mi>c</mi><mn>31</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex29.m1.xm1i"><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></msub></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Next, we will use the second method. This says that rows of <math id="I3.i2.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> are linear combinations of rows of <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math>.</p>
+<table id="Sx3.EGx25" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex30" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">Row 1</td>
+<td class="ltx_td ltx_align_left">
+                          <math id="Sx3.Ex30.m2" class="ltx_Math" alttext="\displaystyle=1\begin{bmatrix}1&amp;2\end{bmatrix}+2\begin{bmatrix}0&amp;1\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>1</mn><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex30.m2.xm1"><mtr id="Sx3.Ex30.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex30.m2.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex30.m2.xm1c"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex30.m2.xm2"><mtr id="Sx3.Ex30.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex30.m2.xm2b"><mn>0</mn></mtd><mtd columnalign="center" id="Sx3.Ex30.m2.xm2c"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The coefficients <math id="I3.i2.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="I3.i2.p1.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> in front of the rows of <math id="I3.i2.p1.m5" class="ltx_Math" alttext="\mathbf{A}" display="inline"><mi>𝐀</mi></math> are taken from the first row of <math id="I3.i2.p1.m6" class="ltx_Math" alttext="\mathbf{B}" display="inline"><mi>𝐁</mi></math>.</p>
+<table id="Sx3.EGx26" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex31" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex31.m1" class="ltx_Math" alttext="\displaystyle\mathbf{C}=\begin{bmatrix}1&amp;4\\
+c_{21}&amp;c_{22}\\
+c_{31}&amp;10\end{bmatrix}_{3\times 2}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><msub><mrow><mo>[</mo><mtable id="Sx3.Ex31.m1.xm1"><mtr id="Sx3.Ex31.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex31.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex31.m1.xm1c"><mn>4</mn></mtd></mtr><mtr id="Sx3.Ex31.m1.xm1d"><mtd columnalign="center" id="Sx3.Ex31.m1.xm1e"><msub><mi>c</mi><mn>21</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex31.m1.xm1f"><msub><mi>c</mi><mn>22</mn></msub></mtd></mtr><mtr id="Sx3.Ex31.m1.xm1g"><mtd columnalign="center" id="Sx3.Ex31.m1.xm1h"><msub><mi>c</mi><mn>31</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex31.m1.xm1i"><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></msub></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">The next method states that columns of <math id="I3.i3.p1.m1" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math> are linear combinations of columns of <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\mathbf{B}" display="inline"><mi>𝐁</mi></math>.</p>
+<table id="Sx3.EGx27" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex32" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">Column 2</td>
+<td class="ltx_td ltx_align_left">
+                          <math id="Sx3.Ex32.m2" class="ltx_Math" alttext="\displaystyle=2\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}+1\begin{bmatrix}2\\
+0\\
+12\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex32.m2.xm1"><mtr id="Sx3.Ex32.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex32.m2.xm1b"><mn>1</mn></mtd></mtr><mtr id="Sx3.Ex32.m2.xm1c"><mtd columnalign="center" id="Sx3.Ex32.m2.xm1d"><mn>0</mn></mtd></mtr><mtr id="Sx3.Ex32.m2.xm1e"><mtd columnalign="center" id="Sx3.Ex32.m2.xm1f"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>1</mn><mo>⁢</mo><mrow><mo>[</mo><mtable id="Sx3.Ex32.m2.xm2"><mtr id="Sx3.Ex32.m2.xm2a"><mtd columnalign="center" id="Sx3.Ex32.m2.xm2b"><mn>2</mn></mtd></mtr><mtr id="Sx3.Ex32.m2.xm2c"><mtd columnalign="center" id="Sx3.Ex32.m2.xm2d"><mn>0</mn></mtd></mtr><mtr id="Sx3.Ex32.m2.xm2e"><mtd columnalign="center" id="Sx3.Ex32.m2.xm2f"><mn>12</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex33" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                          <math id="Sx3.Ex33.m2" class="ltx_Math" alttext="\displaystyle=\begin{bmatrix}4\\
+0\\
+10\end{bmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mtable id="Sx3.Ex33.m2.xm1"><mtr id="Sx3.Ex33.m2.xm1a"><mtd columnalign="center" id="Sx3.Ex33.m2.xm1b"><mn>4</mn></mtd></mtr><mtr id="Sx3.Ex33.m2.xm1c"><mtd columnalign="center" id="Sx3.Ex33.m2.xm1d"><mn>0</mn></mtd></mtr><mtr id="Sx3.Ex33.m2.xm1e"><mtd columnalign="center" id="Sx3.Ex33.m2.xm1f"><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This allows us to fill in another entry of <math id="I3.i3.p1.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>:</p>
+<table id="Sx3.EGx28" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex34" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                          <math id="Sx3.Ex34.m1" class="ltx_Math" alttext="\displaystyle\mathbf{C}=\begin{bmatrix}1&amp;4\\
+c_{21}&amp;0\\
+c_{31}&amp;10\end{bmatrix}_{3\times 2}" display="inline"><mrow><mi>𝐂</mi><mo>=</mo><msub><mrow><mo>[</mo><mtable id="Sx3.Ex34.m1.xm1"><mtr id="Sx3.Ex34.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex34.m1.xm1b"><mn>1</mn></mtd><mtd columnalign="center" id="Sx3.Ex34.m1.xm1c"><mn>4</mn></mtd></mtr><mtr id="Sx3.Ex34.m1.xm1d"><mtd columnalign="center" id="Sx3.Ex34.m1.xm1e"><msub><mi>c</mi><mn>21</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex34.m1.xm1f"><mn>0</mn></mtd></mtr><mtr id="Sx3.Ex34.m1.xm1g"><mtd columnalign="center" id="Sx3.Ex34.m1.xm1h"><msub><mi>c</mi><mn>31</mn></msub></mtd><mtd columnalign="center" id="Sx3.Ex34.m1.xm1i"><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow></msub></mrow></math>
+                        </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Jun  3 20:59:45 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

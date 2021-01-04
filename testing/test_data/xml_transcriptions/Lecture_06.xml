@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\documentclass[11pt]{article}\usepackage{aahomework}\usepackage{mathtools}%&#10;\usepackage{subcaption}\usepackage{epstopdf}\usepackage{float}\usepackage{%&#10;xcolor}\usepackage{parskip}\tikzstyle{blk}=[circle,innersep=0pt,minimumsize=4%&#10;pt,draw,fill=black,linewidth=0.8pt]\tikzstyle{blanknode}=[circle,innersep=3pt,%&#10;minimumsize=8pt,draw,linewidth=0.8pt]\par&#10;\geometry{letterpaper,textwidth=17cm%&#10;,textheight=22cm}\par&#10;\usetikzlibrary{arrows}\usetikzlibrary{plotmarks}\par&#10;%&#10;\par&#10;\par&#10;\par&#10;\begin{document}&#10;\par&#10;\@@section{section}{Sx1}{}{}{}{Recall}&#10;\par&#10;\begin{enumerate}&#10;\enumerate@item{&#10;Solving a system of equations:&#10;$\mathbf{A}\vec{x}=\vec{b}$&#10;Given a matrix $\mathbf{A}$ and vector $\vec{b}$, we wish to find the vector $%&#10;\vec{x}$.&#10;}&#10;\enumerate@item{&#10;The augmented matrix&#10;\par&#10;$\left[\begin{matrix}[c|c]\mathbf{A}&amp;\vec{b}\end{matrix}\right]$&#10;}&#10;\enumerate@item{&#10;Terms associated with the augmented matrix that help with finding the %&#10;solutions to a system: \emph{rank, pivots, row echelon form, free variables}&#10;}&#10;\enumerate@item{&#10;The connection between the \emph{linear span} of a set of vectors and solving %&#10;a system of equations&#10;}&#10;\end{enumerate}&#10;\par&#10;\@@section{section}{Sx2}{}{}{}{Linear Independence of a Set of Vectors}&#10;\par&#10; Linear independence comes from a geometric way of understanding {%&#10;parallel vectors}. Given two vectors in the plane that are not parallel, any %&#10;point on the plane can be reached by moving in the directions of the two %&#10;vectors. In contrast, given two parallel vectors, many points cannot be %&#10;reached through such movements. Only points along the line that the vectors %&#10;lie in can be reached.&#10;\par&#10;\begin{figure}[H]&#10;\centering\subfigure{.45}&#10;\centering\tikzpicture&#10;\draw[-&gt;,&gt;=triangle 60, thick] (0,0) to (2,0);&#10;\draw[-&gt;,&gt;=triangle 60, thick] (0,0) to (1.5,1.5);&#10;\par&#10;\node at (1.5,-.5) {$\vec{v_{1}}$};&#10;\node at (.5,1) {$\vec{v_{2}}$};&#10;\par&#10;\node[blk] at (3,2) [label=above:$P$] {};&#10;\@@toccaption{{\@tag[][ ]{1}Non-parallel vectors. The point $P$ can be reached%&#10; from any points through movements along the two vectors $\vec{v_{1}}$ and $%&#10;\vec{v_{2}}$.}}\@@caption{{\@tag[][: ]{Figure~1}Non-parallel vectors. The %&#10;point $P$ can be reached from any points through movements along the two %&#10;vectors $\vec{v_{1}}$ and $\vec{v_{2}}$.}}&#10;\@add@centering&#10;   &#10;\subfigure{.45}&#10;\centering\tikzpicture&#10;\draw[-&gt;,&gt;=triangle 60, thick] (0,0) to (2,0);&#10;\draw[-&gt;,&gt;=triangle 60, thick] (0,1) to (1,1);&#10;\par&#10;\node at (1.5,-.5) {$\vec{v_{1}}$};&#10;\node at (.5,1.5) {$\vec{v_{2}}$};&#10;\par&#10;\node[blk] at (0,0) [label=below:$S$] {};&#10;\par&#10;\node[blk] at (3,2) [label=above:$Q$] {};&#10;\@@toccaption{{\@tag[][ ]{2}Parallel vectors. The point $Q$ cannot be reached %&#10;from the point $S$ through movements along the two vectors $\vec{v_{1}}$ and $%&#10;\vec{v_{2}}$.}}\@@caption{{\@tag[][: ]{Figure~2}Parallel vectors. The point $Q%&#10;$ cannot be reached from the point $S$ through movements along the two vectors%&#10; $\vec{v_{1}}$ and $\vec{v_{2}}$.}}&#10;\@add@centering&#10;\@add@centering\end{figure}&#10;\par&#10; It is useful to keep this geometric interpretation of parallel vectors %&#10;in mind, but we wish to generalize this concept and express it in algebraic %&#10;terms.&#10;\par&#10;\@@section{subsection}{Sx2.SSx1}{}{}{}{Algebraic Representation of %&#10;Parallelism}&#10;\par&#10; Here is a first attempt at defining parallelism in algebraic terms:&#10;\par&#10; Algebraically, we say that $\vec{v_{1}}$ and $\vec{v_{2}}$ are parallel %&#10;if $\vec{v_{1}}=c\vec{v_{2}}$ for some scalar $c$.&#10;\par&#10; This is equivalent to saying that&#10;\@@amsalign$\displaystyle\vec{v_{1}}$&amp;$\displaystyle=c\vec{v_{2}}$\\&#10;$\displaystyle(1)\vec{v_{1}}+(-c)\vec{v_{2}}$&amp;$\displaystyle=\vec{0}$&#10;or in other words, two vectors are parallel if a \emph{linear combination} of %&#10;$\vec{v_{1}}$ and $\vec{v_{2}}$ can produce the zero vector.&#10;\par&#10; What about higher dimensions, say $\bbR^{3}$? If we want to expand this %&#10;definition of parallelism, we may wish to express algebraically that $\vec{v_{%&#10;1}},\vec{v_{2}}$ lie in the same plane. If we consider this though, it is %&#10;apparent that \emph{any} two vectors lie in the same plane in $\bbR^{3}$. If %&#10;instead we consider the case of three vectors in $\bbR^{3}$, this is no longer%&#10; the case -- for instance, the three vectors that correspond to the three axes%&#10; $x,y,z$ do not lie in the same plane. It is of interest then to characterize %&#10;when exactly three vectors will lie in the same plane.&#10;\par&#10;\@@section{paragraph}{Sx2.SSx1.SSS0.Px1}{}{}{}{Question:}When will $\vec{%&#10;v_{1}},\vec{v_{2}},\vec{v_{3}}$ lie in the same plane in $\bbR^{3}$?&#10;\par&#10; We can think of this in the following way: if the three vectors lie in %&#10;the same plane, then a linear combination of $\vec{v_{1}}$ and $\vec{v_{2}}$ %&#10;should be able to produce $\vec{v_{3}}$:&#10;\@@amsalign$\displaystyle\vec{v_{3}}$&amp;$\displaystyle=c_{1}\vec{v_{1}}+c_{2}%&#10;\vec{v_{2}}$&#10;Again, we can rewrite this equation and find a familiar expression:&#10;\@@amsalign$\displaystyle\vec{v_{3}}+(-c_{1})\vec{v_{1}}+(-c_{2})\vec{v_{2}}$&#10;that is, $\vec{v_{1}},\vec{v_{2}},\vec{v_{3}}$ can form a linear combination %&#10;to produce the zero vector.&#10;\par&#10;\@@section{section}{Sx3}{}{}{}{Coplanarity}&#10;\par&#10; The idea of {coplanarity} can be thought of as the capacity for a linear%&#10; combination of vectors to produce the zero vector.&#10;\par&#10;\framebox[][r]{&#10;\begin{minipage}{0.0pt}&#10;Let $S$ be a set of vectors,&#10;\@@amsalign$\displaystyle S=\left\{\vec{v_{1}},\vec{v_{2}},\dots,\vec{v_{k}}%&#10;\right\}$&#10;$S$ is a {linearly dependent} set if a \emph{non-trivial} linear combination %&#10;of vectors can produce the zero vector.&#10;\par&#10;&#10;\par&#10;&#10;Otherwise, $S$ is {linearly independent}.&#10;\end{minipage}&#10;}&#10;\par&#10; There are some important points to understand with this definition. %&#10;First, when we say a linear combination that is equal to zero, we mean&#10;\@@amsalign$\displaystyle c_{1}\vec{v_{1}}+c_{2}\vec{v_{2}}+\dots+c_{k}\vec{v_%&#10;{k}}$&amp;$\displaystyle=\vec{0}$&#10;One solution to this equation is obvious: letting $c_{i}=0$ for all $i=1,2,%&#10;\dots,k$. This is called the {trivial} solution.&#10;\par&#10; A {non-trivial} linear combination resulting in the zero vector is one %&#10;in which at least one of the coefficients $c_{i}$ is nonzero.&#10;\par&#10;\@@section{paragraph}{Sx3.SSx1.SSS0.Px1}{}{}{}{Example.}&#10;Consider the set of vectors $S$ in the space $\bbR^{2}$:&#10;\@@amsalign$\displaystyle S=\left\{\begin{bmatrix}1\\&#10;2\end{bmatrix},\begin{bmatrix}-3\\&#10;4\end{bmatrix}\right\}$&#10;\par&#10;\@@section{paragraph}{Sx3.SSx1.SSS0.Px2}{}{}{}{Question:}Is $S$ (linearly%&#10;) independent or dependent?&#10;\@@amsalign$\displaystyle c_{1}\begin{bmatrix}1\\&#10;2\end{bmatrix}+c_{2}\begin{bmatrix}-3\\&#10;4\end{bmatrix}$&amp;$\displaystyle=\begin{bmatrix}0\\&#10;0\end{bmatrix}$&#10;This question boils down to: can a non-trivial linear combination equal $\vec{%&#10;0}$?&#10;\par&#10; If we look at this equation, it should remind us of the \emph{column %&#10;picture}. That is, we are looking for the solutions of the system&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rr|r]1&amp;-3&amp;0\\&#10;2&amp;4&amp;0\end{matrix}\right]$&#10;Thinking about it, it may be enlightening to consider what exactly we are %&#10;looking for. We now have the tools to solve the system, but are we simply %&#10;looking for a solution, or something more, or something less than a particular%&#10; solution?&#10;\par&#10; Observe that such a system will always be consistent. The reason for %&#10;this is that the trivial solution $c_{1}=c_{2}=0$ will always be a solution. A%&#10; system becomes inconsistent only when a pivot enters the constant column, and%&#10; since the entries in the constant column are all zero, none of the row %&#10;operations we know can ever produce a non-zero entry in that column. Thus this%&#10; system will always be consistent.&#10;\par&#10; The question of importance then is: does this system have a non-zero %&#10;solution? This equates to asking the question of whether this system has more %&#10;than one solution or not. If you recall, we have found that linear systems may%&#10; have either no solution, one solution, or infinitely many solutions. Since %&#10;this system has at least one solution, we want to know whether it in fact has %&#10;infinitely many solutions. When attempting to answer this question, what %&#10;should come to mind is the \emph{rank of a matrix}, or the presence of free %&#10;variables. If there are free variables, then the system will have infinitely %&#10;many solutions.&#10;\par&#10; Going back to the example at hand, we put the matrix in row echelon form%&#10;:&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rr|r]1&amp;-3&amp;0\\&#10;2&amp;4&amp;0\end{matrix}\right]\xrightarrow[]{-2R_{1}+R_{2}}\left[\begin{matrix}[rr|r%&#10;]1&amp;-3&amp;0\\&#10;0&amp;10&amp;0\end{matrix}\right]$&#10;This matrix has a rank of $2$, and thus has no free variables. Thus it has a %&#10;unique solution, which is the zero or trivial solution. Because of this, it %&#10;has no non-trivial linear combination that produces the zero vector. Thus the %&#10;set of vectors is independent. Here we have used the tools we have developed %&#10;to test the linear dependence of a set of vectors.&#10;\par&#10; An important thing to note is that we are looking at a specific type of %&#10;linear system. The right-hand side column vector in the case of determining %&#10;linear independence is the zero vector:&#10;\@@amsalign$\displaystyle c_{1}\begin{bmatrix}1\\&#10;2\end{bmatrix}+c_{2}\begin{bmatrix}-3\\&#10;4\end{bmatrix}$&amp;$\displaystyle=\begin{bmatrix}0\\&#10;0\end{bmatrix}\Leftarrow\text{Right hand side is zero vector}$&#10;This type of system is referred to as a {homogeneous system}:&#10;\@@amsalign$\displaystyle\mathbf{A}\vec{x}$&amp;$\displaystyle=\vec{0}$&#10;Such a system is associated with \emph{linear independence}, whereas a system %&#10;such as $\mathbf{A}\vec{x}=\vec{b}$ is associated with \emph{linear span}.&#10;\par&#10;\@@section{paragraph}{Sx3.SSx1.SSS0.Px3}{}{}{}{Example.}&#10;Let us consider another example. In the space $\bbR^{3}$, consider $S=\left\{%&#10;\vec{v_{1}},\vec{v_{2}},\vec{v_{3}}\right\}$, where&#10;\@@amsalign$\displaystyle\begin{aligned}\displaystyle\vec{v_{1}}&amp;\displaystyle%&#10;=\begin{bmatrix}1\\&#10;0\\&#10;1\end{bmatrix}&amp;\displaystyle\vec{v_{2}}&amp;\displaystyle=\begin{bmatrix}1\\&#10;3\\&#10;2\end{bmatrix}&amp;\displaystyle\vec{v_{3}}&amp;\displaystyle=\begin{bmatrix}3\\&#10;3\\&#10;4\end{bmatrix}\end{aligned}$&#10;To check for linear dependence, we again look for solutions of the equation&#10;\@@amsalign$\displaystyle c_{1}\vec{v_{1}}+c_{2}\vec{v_{2}}+c_{3}\vec{v_{3}}$&amp;%&#10;$\displaystyle=\vec{0}$&#10;We proceed by setting up the augmented matrix. One interesting thing to note %&#10;is that, at least in the question of linear dependence, the systems that we %&#10;set up will always have a zero right-hand side vector -- we may as well drop %&#10;this column out. We eventually will do this, but for now let us proceed %&#10;normally,&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|r]1&amp;1&amp;3&amp;0\\&#10;0&amp;3&amp;3&amp;0\\&#10;1&amp;2&amp;4&amp;0\end{matrix}\right]\xrightarrow[]{-R_{1}+R_{3}}\left[\begin{matrix}[rrr%&#10;|r]1&amp;1&amp;3&amp;0\\&#10;0&amp;3&amp;3&amp;0\\&#10;0&amp;1&amp;1&amp;0\end{matrix}\right]\xrightarrow[]{\frac{1}{3}R_{2}}\left[\begin{matrix}%&#10;[rrr|r]1&amp;1&amp;3&amp;0\\&#10;0&amp;1&amp;1&amp;0\\&#10;0&amp;1&amp;1&amp;0\end{matrix}\right]\xrightarrow[]{-R_{2}+R_{3}}\left[\begin{matrix}[rrr%&#10;|r]1&amp;1&amp;3&amp;0\\&#10;0&amp;1&amp;1&amp;0\\&#10;0&amp;0&amp;0&amp;0\end{matrix}\right]$&#10;In row echelon form, we see that the matrix has only two pivots. Then the %&#10;third column represents a free variable, and so there are infinitely many %&#10;solutions. Thus $S$ is a linearly dependent set.&#10;\par&#10; Since $S$ is a linearly dependent set, there must exist a non-zero %&#10;linear combination that produces the zero vector. An important question to ask%&#10; now is&#10;\par&#10;\@@section{paragraph}{Sx3.SSx1.SSS0.Px4}{}{}{}{Question:}What is the %&#10;dependency relation? Find $c_{1},c_{2},c_{3}$.&#10;\@@amsalign$\displaystyle\left.\begin{aligned}\displaystyle c_{1}+c_{2}+3c_{3}%&#10;&amp;\displaystyle=0\\&#10;\displaystyle c_{2}+c_{3}&amp;\displaystyle=0\end{aligned}\right\}\qquad c_{3}%&#10;\rightarrow\text{free variable}$&#10;This tells us that&#10;\@@amsalign$\displaystyle\begin{bmatrix}c_{1}\\&#10;c_{2}\\&#10;c_{3}\end{bmatrix}=\begin{bmatrix}-2c_{3}\\&#10;-c_{3}\\&#10;c_{3}\end{bmatrix}=c_{3}\begin{bmatrix}-2\\&#10;-1\\&#10;1\end{bmatrix}$&#10;Meaning the linear combination of $\vec{v_{1}},\vec{v_{2}},\vec{v_{3}}$&#10;\@@amsalign$\displaystyle-2\vec{v_{1}}-\vec{v_{2}}+\vec{v_{3}}$&amp;$\displaystyle%&#10;=\vec{0}$&#10;\par&#10;\@@section{paragraph}{Sx3.SSx1.SSS0.Px5}{}{}{}{Question:}What can we say %&#10;about linear dependence of a set in $\bbR^{2}$ in general? What if the set %&#10;contains one, two, three, four, or more vectors? Consider if $S=\left\{\vec{v_%&#10;{1}},\vec{v_{2}},\vec{v_{3}}\right\}$ with&#10;\@@amsalign$\displaystyle\vec{v_{1}}$&amp;$\displaystyle=\begin{bmatrix}a\\&#10;b\end{bmatrix}$&amp;$\displaystyle\vec{v_{2}}$&amp;$\displaystyle=\begin{bmatrix}p\\&#10;q\end{bmatrix}$&amp;$\displaystyle\vec{v_{3}}$&amp;$\displaystyle=\begin{bmatrix}s\\&#10;t\end{bmatrix}$&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|r]a&amp;p&amp;s&amp;0\\&#10;b&amp;q&amp;t&amp;0\end{matrix}\right]$&#10;Note that there are $3$ columns in the coefficient matrix, and that $\text{%&#10;Rank}(A)\leq 2$ since there are only two rows. Thus there must be at least one%&#10; free variable. Thus there will be infinitely many solutions, and so the set %&#10;if linearly dependent. Thus, through row operations, the matrix will %&#10;eventually be reduced to a form such as&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[rrr|r]a&amp;p&amp;s&amp;0\\&#10;b&amp;q&amp;t&amp;0\end{matrix}\right]\longrightarrow\left[\begin{matrix}[rrr|r]%&#10;\blacksquare&amp;*&amp;*&amp;0\\&#10;0&amp;\blacksquare&amp;*&amp;0\end{matrix}\right]\text{ or }\left[\begin{matrix}[rrr|r]%&#10;\blacksquare&amp;*&amp;*&amp;0\\&#10;0&amp;*&amp;\blacksquare&amp;0\end{matrix}\right]$&#10;It seems then that given more than two vectors in $\bbR^{2}$, they will always%&#10; be dependent. Given two or fewer vectors, they may remain independent.&#10;\par&#10;\theorem&#10;Let $S=\left\{\vec{v_{1}},\vec{v_{2}},\dots,\vec{v_{k}}\right\}$ in $\bbR^{n}$%&#10;. If $k&gt;n$, then $S$ will be a dependent set of vectors.&#10;\proof(Sketch)&#10;\par&#10;\@@amsalign$\displaystyle\left[\begin{matrix}[cccc|c]\uparrow&amp;\uparrow&amp;&amp;%&#10;\uparrow&amp;0\\&#10;\vec{v_{1}}&amp;\vec{v_{2}}&amp;\cdots&amp;\vec{v_{k}}&amp;0\\&#10;\downarrow&amp;\downarrow&amp;&amp;\downarrow&amp;0\end{matrix}\right]$&#10;The number of columns of the coefficient matrix is $k$, and the number of rows%&#10; is $n$. Given $n&lt;k$, with $\text{Rank}(A)\leq n$, then there are at least $n-%&#10;k$-many free variables with $n-k&gt;0$. Then the system will have infinitely many%&#10; solutions, and thus be dependent.&#10;\par&#10;&#10;\par&#10;\par&#10;\end{document}" display="block">
+  <mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>k</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>4</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>f</mi>
+      <mi>i</mi>
+      <mi>l</mi>
+      <mi>l</mi>
+      <mo>=</mo>
+      <mi>b</mi>
+      <mi>l</mi>
+      <mi>a</mi>
+      <mi>c</mi>
+      <mi>k</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\tikzstyle</mtext>
+    </merror>
+    <mi>b</mi>
+    <mi>l</mi>
+    <mi>a</mi>
+    <mi>n</mi>
+    <mi>k</mi>
+    <mi>n</mi>
+    <mi>o</mi>
+    <mi>d</mi>
+    <mi>e</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo stretchy="false">[</mo>
+      <mi>c</mi>
+      <mi>i</mi>
+      <mi>r</mi>
+      <mi>c</mi>
+      <mi>l</mi>
+      <mi>e</mi>
+      <mo>,</mo>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+      <mi>s</mi>
+      <mi>e</mi>
+      <mi>p</mi>
+      <mo>=</mo>
+      <mn>3</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>i</mi>
+      <mi>m</mi>
+      <mi>u</mi>
+      <mi>m</mi>
+      <mi>s</mi>
+      <mi>i</mi>
+      <mi>z</mi>
+      <mi>e</mi>
+      <mo>=</mo>
+      <mn>8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo>,</mo>
+      <mi>d</mi>
+      <mi>r</mi>
+      <mi>a</mi>
+      <mi>w</mi>
+      <mo>,</mo>
+      <mi>l</mi>
+      <mi>i</mi>
+      <mi>n</mi>
+      <mi>e</mi>
+      <mi>w</mi>
+      <mi>i</mi>
+      <mi>d</mi>
+      <mi>t</mi>
+      <mi>h</mi>
+      <mo>=</mo>
+      <mn>0.8</mn>
+      <mi>p</mi>
+      <mi>t</mi>
+      <mo stretchy="false">]</mo>
+    </mrow>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\geometry</mtext>
+    </merror>
+    <mi>l</mi>
+    <mi>e</mi>
+    <mi>t</mi>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mi>p</mi>
+    <mi>a</mi>
+    <mi>p</mi>
+    <mi>e</mi>
+    <mi>r</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>w</mi>
+    <mi>i</mi>
+    <mi>d</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mo>=</mo>
+    <mn>17</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <mo>,</mo>
+    <mi>t</mi>
+    <mi>e</mi>
+    <mi>x</mi>
+    <mi>t</mi>
+    <mi>h</mi>
+    <mi>e</mi>
+    <mi>i</mi>
+    <mi>g</mi>
+    <mi>h</mi>
+    <mi>t</mi>
+    <mo>=</mo>
+    <mn>22</mn>
+    <mi>c</mi>
+    <mi>m</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>r</mi>
+    <mi>o</mi>
+    <mi>w</mi>
+    <mi>s</mi>
+    <merror class="ltx_ERROR undefined undefined">
+      <mtext>\usetikzlibrary</mtext>
+    </merror>
+    <mi>p</mi>
+    <mi>l</mi>
+    <mi>o</mi>
+    <mi>t</mi>
+    <mi>m</mi>
+    <mi>a</mi>
+    <mi>r</mi>
+    <mi>k</mi>
+    <mi>s</mi>
+    <mtext xml:id="Sx1">Recall1.Solving a system of equations:
+𝐀⁢x→=b→
+Given a matrix 𝐀 and vector b→, we wish to find the vector x→.2.The augmented matrix[[c|c]𝐀b→]3.Terms associated with the augmented matrix that help with finding the solutions to a system: rank, pivots, row echelon form, free variables4.The connection between the linear span of a set of vectors and solving a system of equationsLinear Independence of a Set of VectorsLinear independence comes from a geometric way of understanding parallel vectors. Given two vectors in the plane that are not parallel, any point on the plane can be reached by moving in the directions of the two vectors. In contrast, given two parallel vectors, many points cannot be reached through such movements. Only points along the line that the vectors lie in can be reached.{subfigure}.45
+{tikzpicture}
+\draw[-¿,¿=triangle 60, thick] (0,0) to (2,0);
+\draw[-¿,¿=triangle 60, thick] (0,0) to (1.5,1.5);\nodeat (1.5,-.5) v1→;
+\nodeat (.5,1) v2→;\node[blk] at (3,2) [label=above:P] ;1Non-parallel vectors. The point P can be reached from any points through movements along the two vectors v1→ and v2→.Figure 1Non-parallel vectors. The point P can be reached from any points through movements along the two vectors v1→ and v2→.{subfigure}.45
+{tikzpicture}
+\draw[-¿,¿=triangle 60, thick] (0,0) to (2,0);
+\draw[-¿,¿=triangle 60, thick] (0,1) to (1,1);\nodeat (1.5,-.5) v1→;
+\nodeat (.5,1.5) v2→;\node[blk] at (0,0) [label=below:S] ;\node[blk] at (3,2) [label=above:Q] ;2Parallel vectors. The point Q cannot be reached from the point S through movements along the two vectors v1→ and v2→.Figure 2Parallel vectors. The point Q cannot be reached from the point S through movements along the two vectors v1→ and v2→.It is useful to keep this geometric interpretation of parallel vectors in mind, but we wish to generalize this concept and express it in algebraic terms.Algebraic Representation of ParallelismHere is a first attempt at defining parallelism in algebraic terms:Algebraically, we say that v1→ and v2→ are parallel if v1→=c⁢v2→ for some scalar c.This is equivalent to saying thatv1→=c⁢v2→v1→=c⁢v2→(1)⁢v1→+(-c)⁢v2→=0→(1)⁢v1→+(-c)⁢v2→=0→or in other words, two vectors are parallel if a linear combination of v1→ and v2→ can produce the zero vector.What about higher dimensions, say \bbR3? If we want to expand this definition of parallelism, we may wish to express algebraically that v1→,v2→ lie in the same plane. If we consider this though, it is apparent that any two vectors lie in the same plane in \bbR3. If instead we consider the case of three vectors in \bbR3, this is no longer the case – for instance, the three vectors that correspond to the three axes x,y,z do not lie in the same plane. It is of interest then to characterize when exactly three vectors will lie in the same plane.Question:When will v1→,v2→,v3→ lie in the same plane in \bbR3?We can think of this in the following way: if the three vectors lie in the same plane, then a linear combination of v1→ and v2→ should be able to produce v3→:v3→=c1⁢v1→+c2⁢v2→v3→=c1⁢v1→+c2⁢v2→Again, we can rewrite this equation and find a familiar expression:v3→+(-c1)⁢v1→+(-c2)⁢v2→v3→+(-c1)⁢v1→+(-c2)⁢v2→that is, v1→,v2→,v3→ can form a linear combination to produce the zero vector.CoplanarityThe idea of coplanarity can be thought of as the capacity for a linear combination of vectors to produce the zero vector.
+Let S be a set of vectors,S={v1→,v2→,…,vk→}S={v1→,v2→,…,vk→}S is a linearly dependent set if a non-trivial linear combination of vectors can produce the zero vector.Otherwise, S is linearly independent.
+There are some important points to understand with this definition. First, when we say a linear combination that is equal to zero, we meanc1⁢v1→+c2⁢v2→+…+ck⁢vk→=0→c1⁢v1→+c2⁢v2→+…+ck⁢vk→=0→One solution to this equation is obvious: letting ci=0 for all i=1,2,…,k. This is called the trivial solution.A non-trivial linear combination resulting in the zero vector is one in which at least one of the coefficients ci is nonzero.Example.Consider the set of vectors S in the space \bbR2:S={[12],[-34]}S={[12],[-34]}Question:Is S (linearly) independent or dependent?c1⁢[12]+c2⁢[-34]=[00]c1⁢[12]+c2⁢[-34]=[00]This question boils down to: can a non-trivial linear combination equal 0→?If we look at this equation, it should remind us of the column picture. That is, we are looking for the solutions of the system[[rr|r]1-30240][[rr|r]1-30240]Thinking about it, it may be enlightening to consider what exactly we are looking for. We now have the tools to solve the system, but are we simply looking for a solution, or something more, or something less than a particular solution?Observe that such a system will always be consistent. The reason for this is that the trivial solution c1=c2=0 will always be a solution. A system becomes inconsistent only when a pivot enters the constant column, and since the entries in the constant column are all zero, none of the row operations we know can ever produce a non-zero entry in that column. Thus this system will always be consistent.The question of importance then is: does this system have a non-zero solution? This equates to asking the question of whether this system has more than one solution or not. If you recall, we have found that linear systems may have either no solution, one solution, or infinitely many solutions. Since this system has at least one solution, we want to know whether it in fact has infinitely many solutions. When attempting to answer this question, what should come to mind is the rank of a matrix, or the presence of free variables. If there are free variables, then the system will have infinitely many solutions.Going back to the example at hand, we put the matrix in row echelon form:[[rr|r]1-30240]→-2⁢R1+R2[[rr|r]1-300100][[rr|r]1-30240]→-2⁢R1+R2[[rr|r]1-300100]This matrix has a rank of 2, and thus has no free variables. Thus it has a unique solution, which is the zero or trivial solution. Because of this, it has no non-trivial linear combination that produces the zero vector. Thus the set of vectors is independent. Here we have used the tools we have developed to test the linear dependence of a set of vectors.An important thing to note is that we are looking at a specific type of linear system. The right-hand side column vector in the case of determining linear independence is the zero vector:c1⁢[12]+c2⁢[-34]=[00]⇐Right hand side is zero vectorc1⁢[12]+c2⁢[-34]=[00]⇐Right hand side is zero vectorThis type of system is referred to as a homogeneous system:𝐀⁢x→=0→𝐀⁢x→=0→Such a system is associated with linear independence, whereas a system such as 𝐀⁢x→=b→ is associated with linear span.Example.Let us consider another example. In the space \bbR3, consider S={v1→,v2→,v3→}, wherev1→=[101]v2→=[132]v3→=[334]v1→=[101]v2→=[132]v3→=[334]To check for linear dependence, we again look for solutions of the equationc1⁢v1→+c2⁢v2→+c3⁢v3→=0→c1⁢v1→+c2⁢v2→+c3⁢v3→=0→We proceed by setting up the augmented matrix. One interesting thing to note is that, at least in the question of linear dependence, the systems that we set up will always have a zero right-hand side vector – we may as well drop this column out. We eventually will do this, but for now let us proceed normally,[[rrr|r]113003301240]→-R1+R3[[rrr|r]113003300110]→13⁢R2[[rrr|r]113001100110]→-R2+R3[[rrr|r]113001100000][[rrr|r]113003301240]→-R1+R3[[rrr|r]113003300110]→13⁢R2[[rrr|r]113001100110]→-R2+R3[[rrr|r]113001100000]In row echelon form, we see that the matrix has only two pivots. Then the third column represents a free variable, and so there are infinitely many solutions. Thus S is a linearly dependent set.Since S is a linearly dependent set, there must exist a non-zero linear combination that produces the zero vector. An important question to ask now isQuestion:What is the dependency relation? Find c1,c2,c3.c1+c2+3⁢c3=0c2+c3=0}  c3→free variablec1+c2+3⁢c3=0c2+c3=0}  c3→free variableThis tells us that[c1c2c3]=[-2⁢c3-c3c3]=c3⁢[-2-11][c1c2c3]=[-2⁢c3-c3c3]=c3⁢[-2-11]Meaning the linear combination of v1→,v2→,v3→-2⁢v1→-v2→+v3→=0→-2⁢v1→-v2→+v3→=0→Question:What can we say about linear dependence of a set in \bbR2 in general? What if the set contains one, two, three, four, or more vectors? Consider if S={v1→,v2→,v3→} withv1→=[ab]v1→=[ab]v2→=[pq]v2→=[pq]v3→=[st]v3→=[st][[rrr|r]aps0bqt0][[rrr|r]aps0bqt0]Note that there are 3 columns in the coefficient matrix, and that Rank⁢(A)≤2 since there are only two rows. Thus there must be at least one free variable. Thus there will be infinitely many solutions, and so the set if linearly dependent. Thus, through row operations, the matrix will eventually be reduced to a form such as[[rrr|r]aps0bqt0]⟶[[rrr|r]\blacksquare**00\blacksquare*0]⁢ or ⁢[[rrr|r]\blacksquare**00*\blacksquare0][[rrr|r]aps0bqt0]⟶[[rrr|r]\blacksquare**00\blacksquare*0]⁢ or ⁢[[rrr|r]\blacksquare**00*\blacksquare0]It seems then that given more than two vectors in \bbR2, they will always be dependent. Given two or fewer vectors, they may remain independent.{theorem}Let S={v1→,v2→,…,vk→} in \bbRn. If k&gt;n, then S will be a dependent set of vectors.
+
+{proof}(Sketch)[[cccc|c]↑↑↑0v1→v2→⋯vk→0↓↓↓0][[cccc|c]↑↑↑0v1→v2→⋯vk→0↓↓↓0]The number of columns of the coefficient matrix is k, and the number of rows is n. Given n&lt;k, with Rank⁢(A)≤n, then there are at least n-k-many free variables with n-k&gt;0. Then the system will have infinitely many solutions, and thus be dependent.</mtext>
+  </mrow>
+</math>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\begin{Bmatrix}1&amp;2&amp;3\end{Bmatrix}" display="block">
+   <mtable id="idp160448" rowspacing="0.2ex" columnspacing="0.4em">
+      <mtr id="idp161120">
+         <mtd id="idp161248">
+            <mrow id="idp161376">
+               <mi id="idp161504">i</mi>
+               <mo id="idp161760" movablelimits="false">=</mo>
+               <mn id="idp162288">1</mn>
+            </mrow>
+         </mtd>
+      </mtr>
+      <mtr id="idp162544">
+         <mtd id="idp162672">
+            <none id="idp162800" />
+         </mtd>
+      </mtr>
+   </mtable>
+</math>

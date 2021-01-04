@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/raid/des1613/wikipedia_math/tex"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" xml:id="Document">
+  <!-- %**** ̵String ̵Line ̵25 ̵**** 
+     %Some ̵control ̵structure ̵from ̵latex.ltx
+     %(amazing ̵that ̵it ̵actually ̵works!)
+     %How ̵much ̵of ̵this ̵control ̵struture ̵will ̵I ̵need?
+     %**** ̵String ̵Line ̵50 ̵****-->
+  <para xml:id="p1" fragid="p1">
+    <p>
+      <Math mode="inline" xml:id="p1.m1" tex="2\cdot 67" text="2 cdot 67" fragid="p1.m1">
+        <m:math alttext="2\cdot 67" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mn>2</m:mn>
+              <m:mo>⋅</m:mo>
+              <m:mn>67</m:mn>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">2\cdot 67</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+      <Math mode="inline" xml:id="p1.m2" tex="{}_{8}C_{1}+{}_{8}C_{3}+{}_{8}C_{4}" text="_ 8 C _ 1 + _ 8 C _ 3 + _ 8 C _ 4" fragid="p1.m2">
+        <m:math alttext="{}_{8}C_{1}+{}_{8}C_{3}+{}_{8}C_{4}" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:mmultiscripts>
+                <m:mi>C</m:mi>
+                <m:mn>1</m:mn>
+                <m:none/>
+                <m:mprescripts/>
+                <m:mn>8</m:mn>
+                <m:none/>
+              </m:mmultiscripts>
+              <m:mo>+</m:mo>
+              <m:mmultiscripts>
+                <m:mi>C</m:mi>
+                <m:mn>3</m:mn>
+                <m:none/>
+                <m:mprescripts/>
+                <m:mn>8</m:mn>
+                <m:none/>
+              </m:mmultiscripts>
+              <m:mo>+</m:mo>
+              <m:mmultiscripts>
+                <m:mi>C</m:mi>
+                <m:mn>4</m:mn>
+                <m:none/>
+                <m:mprescripts/>
+                <m:mn>8</m:mn>
+                <m:none/>
+              </m:mmultiscripts>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">{}_{8}C_{1}+{}_{8}C_{3}+{}_{8}C_{4}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+    </p>
+  </para>
+</document>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/des1613/wikipedia-math/small/tex"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" xml:id="Document">
+
+
+
+  <!-- %**** ̵String ̵Line ̵25 ̵**** 
+     %Some ̵control ̵structure ̵from ̵latex.ltx
+     %(amazing ̵that ̵it ̵actually ̵works!)
+     %How ̵much ̵of ̵this ̵control ̵struture ̵will ̵I ̵need?
+     %**** ̵String ̵Line ̵50 ̵****-->
+  <para xml:id="p1" fragid="p1">
+    <p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\left|p^{n}\frac{a}{b}\right|_{p}=p^{{-n}}." display="inline">
+          <semantics>
+            <mrow>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mo fence="true">|</mo>
+                    <mrow>
+                      <msup>
+                        <mi>p</mi>
+                        <mi>n</mi>
+                      </msup>
+                      <mo>⁢</mo>
+                      <mfrac>
+                        <mi>a</mi>
+                        <mi>b</mi>
+                      </mfrac>
+                    </mrow>
+                    <mo fence="true">|</mo>
+                  </mrow>
+                  <mi>p</mi>
+                </msub>
+                <mo>=</mo>
+                <msup>
+                  <mi>p</mi>
+                  <mrow>
+                    <mo>-</mo>
+                    <mi>n</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+            <annotation encoding="application/x-tex">\left|p^{n}\frac{a}{b}\right|_{p}=p^{{-n}}.</annotation>
+          </semantics>
+        </math>
+
+        <math alttext="|x/y|=|x|/|y|.\," display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <semantics>
+            <mrow>
+              <mrow>
+                <mrow>
+                  <mo fence="true">|</mo>
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>/</mo>
+                    <mi>y</mi>
+                  </mrow>
+                  <mo fence="true">|</mo>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mrow>
+                    <mo fence="true">|</mo>
+                    <mi>x</mi>
+                    <mo fence="true">|</mo>
+                  </mrow>
+                  <mo>/</mo>
+                  <mrow>
+                    <mo fence="true">|</mo>
+                    <mi>y</mi>
+                    <mo fence="true">|</mo>
+                  </mrow>
+                </mrow>
+              </mrow>
+              <mo>.</mo>
+            </mrow>
+            <annotation encoding="application/x-tex">|x/y|=|x|/|y|.\,</annotation>
+          </semantics>
+        </math>
+    </p>
+  </para>
+</document>

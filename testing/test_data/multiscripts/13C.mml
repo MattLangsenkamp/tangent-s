@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/raid/des1613/wikipedia_math/tex"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" xml:id="Document">
+  <!-- %**** ̵String ̵Line ̵25 ̵**** 
+     %Some ̵control ̵structure ̵from ̵latex.ltx
+     %(amazing ̵that ̵it ̵actually ̵works!)
+     %How ̵much ̵of ̵this ̵control ̵struture ̵will ̵I ̵need?
+     %**** ̵String ̵Line ̵50 ̵****-->
+  <para xml:id="p1" fragid="p1">
+    <p>
+      <Math mode="inline" xml:id="p1.m1" tex="\mathrm{\delta^{{13}}C}=\Biggl(\mathrm{\frac{\bigl(\frac{{}^{{13}}C}{{}^{{12}}%&#10;C}\bigr)_{{sample}}}{\bigl(\frac{{}^{{13}}C}{{}^{{12}}C}\bigr)_{{standard}}}}-%&#10;1\Biggr)\times 1000\ ^{{o}}\!/\!_{{oo}}" fragid="p1.m1">
+        <m:math alttext="\mathrm{\delta^{{13}}C}=\Biggl(\mathrm{\frac{\bigl(\frac{{}^{{13}}C}{{}^{{12}}&#10;C}\bigr)_{{sample}}}{\bigl(\frac{{}^{{13}}C}{{}^{{12}}C}\bigr)_{{standard}}}}-&#10;1\Biggr)\times 1000\ ^{{o}}\!/\!_{{oo}}" display="inline">
+          <m:semantics>
+            <m:mrow>
+              <m:msup>
+                <m:mi>δ</m:mi>
+                <m:mn>13</m:mn>
+              </m:msup>
+              <m:mi mathvariant="normal">C</m:mi>
+              <m:mo>=</m:mo>
+              <m:mrow>
+                <m:mo mathsize="2.5em">(</m:mo>
+                <m:mfrac>
+                  <m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mfrac>
+                        <m:mmultiscripts>
+                          <m:mi mathvariant="normal">C</m:mi>
+                          <m:mprescripts/>
+                          <m:none/>
+                          <m:mn>13</m:mn>
+                        </m:mmultiscripts>
+                        <m:mmultiscripts>
+                          <m:mi mathvariant="normal">C</m:mi>
+                          <m:mprescripts/>
+                          <m:none/>
+                          <m:mn>12</m:mn>
+                        </m:mmultiscripts>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>sample</m:mi>
+                  </m:msub>
+                  <m:msub>
+                    <m:mrow>
+                      <m:mo>(</m:mo>
+                      <m:mfrac>
+                        <m:mmultiscripts>
+                          <m:mi mathvariant="normal">C</m:mi>
+                          <m:mprescripts/>
+                          <m:none/>
+                          <m:mn>13</m:mn>
+                        </m:mmultiscripts>
+                        <m:mmultiscripts>
+                          <m:mi mathvariant="normal">C</m:mi>
+                          <m:mprescripts/>
+                          <m:none/>
+                          <m:mn>12</m:mn>
+                        </m:mmultiscripts>
+                      </m:mfrac>
+                      <m:mo>)</m:mo>
+                    </m:mrow>
+                    <m:mi>standard</m:mi>
+                  </m:msub>
+                </m:mfrac>
+                <m:mo>-</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo mathsize="2.5em">)</m:mo>
+              </m:mrow>
+              <m:mo>×</m:mo>
+              <m:mn>1000</m:mn>
+              <m:msup>
+                <m:mo mathvariant="italic" separator="true"> </m:mo>
+                <m:mi>o</m:mi>
+              </m:msup>
+              <m:msub>
+                <m:mo rspace="-1.666667pt">/</m:mo>
+                <m:mrow>
+                  <m:mi>o</m:mi>
+                  <m:mo>⁢</m:mo>
+                  <m:mi>o</m:mi>
+                </m:mrow>
+              </m:msub>
+            </m:mrow>
+            <m:annotation encoding="application/x-tex">\mathrm{\delta^{{13}}C}=\Biggl(\mathrm{\frac{\bigl(\frac{{}^{{13}}C}{{}^{{12}}%
+C}\bigr)_{{sample}}}{\bigl(\frac{{}^{{13}}C}{{}^{{12}}C}\bigr)_{{standard}}}}-%
+1\Biggr)\times 1000\ ^{{o}}\!/\!_{{oo}}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+    </p>
+  </para>
+</document>

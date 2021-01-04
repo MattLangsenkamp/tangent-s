@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/raid/des1613/wikipedia_math/tex"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" xmlns:m="http://www.w3.org/1998/Math/MathML" xml:id="Document">
+  <!-- %**** ̵String ̵Line ̵25 ̵**** 
+     %Some ̵control ̵structure ̵from ̵latex.ltx
+     %(amazing ̵that ̵it ̵actually ̵works!)
+     %How ̵much ̵of ̵this ̵control ̵struture ̵will ̵I ̵need?
+     %**** ̵String ̵Line ̵50 ̵****-->
+  <para xml:id="p1" fragid="p1">
+    <p>
+      <Math mode="inline" xml:id="p1.m1" tex="{}^{{65}}{\rm Zn}" text="^ 65 Zn" fragid="p1.m1">
+        <m:math alttext="{}^{{65}}{\rm Zn}" display="inline">
+          <m:semantics>
+            <m:mmultiscripts>
+              <m:mi>Zn</m:mi>
+              <m:mprescripts/>
+              <m:none/>
+              <m:mn>65</m:mn>
+            </m:mmultiscripts>
+            <m:annotation encoding="application/x-tex">{}^{{65}}{\rm Zn}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </Math>
+    </p>
+  </para>
+</document>

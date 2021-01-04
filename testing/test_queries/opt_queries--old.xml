@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topics>
+  <topic>
+    <num>B.1</num>
+    <query>
+      <formula id="q_4"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="f(x)=\frac{x^{2}+x+c}{x^{2}+2x+c}" display="block"> <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>𝑓</m:ci>       <m:ci>𝑥</m:ci>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:plus/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>         <m:ci>𝑥</m:ci>         <m:ci>𝑐</m:ci>       </m:apply>       <m:apply>         <m:plus/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>         <m:ci>𝑐</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.2</num>
+    <query>
+      <formula id="q_9"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\frac{df}{dx}=f(x+1)" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:divide/>       <m:apply>         <m:times/>         <m:ci>𝑑</m:ci>         <m:ci>𝑓</m:ci>       </m:apply>       <m:apply>         <m:times/>         <m:ci>𝑑</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑓</m:ci>       <m:apply>         <m:plus/>         <m:ci>𝑥</m:ci>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.3</num>
+    <query>
+      <formula id="q_13"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="10^{-10}" display="block">   <m:apply>     <m:csymbol cd="ambiguous">superscript</m:csymbol>     <m:cn type="integer">10</m:cn>     <m:apply>       <m:minus/>       <m:cn type="integer">10</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.4</num>
+    <query>
+      <formula id="q_22"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{k=0}^{n}\binom{n}{k}k" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:sum/>         <m:apply>           <m:eq/>           <m:ci>𝑘</m:ci>           <m:cn type="integer">0</m:cn>         </m:apply>       </m:apply>       <m:ci>𝑛</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:mtext>\binom</m:mtext>       <m:ci>𝑛</m:ci>       <m:ci>𝑘</m:ci>       <m:ci>𝑘</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.6</num>
+    <query>
+      <formula id="q_25"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="5^{133}\mod 8." display="block">   <m:apply>     <m:times/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:cn type="integer">5</m:cn>       <m:cn type="integer">133</m:cn>     </m:apply>     <m:mtext>\mod</m:mtext>     <m:cn type="integer">8</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.8</num>
+    <query>
+      <formula id="q_49"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lim_{n\rightarrow\infty}\sqrt[n]{\frac{(27)^{n}(n!)^{3}}{(3n)!}}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:limit/>       <m:apply>         <m:ci>→</m:ci>         <m:ci>𝑛</m:ci>         <m:infinity/>       </m:apply>     </m:apply>     <m:apply>       <m:root/>       <m:degree>         <m:ci>𝑛</m:ci>       </m:degree>       <m:apply>         <m:divide/>         <m:apply>           <m:times/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:cn type="integer">27</m:cn>             <m:ci>𝑛</m:ci>           </m:apply>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:apply>               <m:factorial/>               <m:ci>𝑛</m:ci>             </m:apply>             <m:cn type="integer">3</m:cn>           </m:apply>         </m:apply>         <m:apply>           <m:factorial/>           <m:apply>             <m:times/>             <m:cn type="integer">3</m:cn>             <m:ci>𝑛</m:ci>           </m:apply>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.9</num>
+    <query>
+      <formula id="q_52"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{n=0}^{N}nx^{n}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:sum/>         <m:apply>           <m:eq/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">0</m:cn>         </m:apply>       </m:apply>       <m:ci>𝑁</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑛</m:ci>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:ci>𝑛</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.10</num>
+    <query>
+      <formula id="q_55"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int_{0}^{\infty}\frac{\sin x}{x^{a}}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:int/>         <m:cn type="integer">0</m:cn>       </m:apply>       <m:infinity/>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:sin/>         <m:ci>𝑥</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:ci>𝑎</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.11</num>
+    <query>
+      <formula id="q_71"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\iint_{V}f(x,y)dx\ dy=\iint_{Q}f(\Phi(u,v)\Bigg{|}\frac{\partial{\Phi}}{%&amp;#10;\partial{u}}\times\frac{\partial{\Phi}}{\partial{v}}\Bigg{|}" display="block">   <m:cerror>     <m:csymbol cd="ambiguous">fragments</m:csymbol>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:mtext>\iint</m:mtext>       <m:ci>𝑉</m:ci>     </m:apply>     <m:csymbol cd="unknown">f</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">x</m:csymbol>       <m:ci>,</m:ci>       <m:csymbol cd="unknown">y</m:csymbol>       <m:ci>)</m:ci>     </m:cerror>     <m:csymbol cd="unknown">d</m:csymbol>     <m:csymbol cd="unknown">x</m:csymbol>     <m:csymbol cd="unknown">d</m:csymbol>     <m:csymbol cd="unknown">y</m:csymbol>     <m:eq/>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:mtext>\iint</m:mtext>       <m:ci>𝑄</m:ci>     </m:apply>     <m:csymbol cd="unknown">f</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">Φ</m:csymbol>       <m:cerror>         <m:csymbol cd="ambiguous">fragments</m:csymbol>         <m:ci>(</m:ci>         <m:csymbol cd="unknown">u</m:csymbol>         <m:ci>,</m:ci>         <m:csymbol cd="unknown">v</m:csymbol>         <m:ci>)</m:ci>       </m:cerror>       <m:ci>|</m:ci>       <m:apply>         <m:divide/>         <m:apply>           <m:partialdiff/>           <m:ci>Φ</m:ci>         </m:apply>         <m:apply>           <m:partialdiff/>           <m:ci>𝑢</m:ci>         </m:apply>       </m:apply>       <m:times/>       <m:apply>         <m:divide/>         <m:apply>           <m:partialdiff/>           <m:ci>Φ</m:ci>         </m:apply>         <m:apply>           <m:partialdiff/>           <m:ci>𝑣</m:ci>         </m:apply>       </m:apply>       <m:ci>|</m:ci>     </m:cerror>   </m:cerror> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.12</num>
+    <query>
+      <formula id="q_73"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(1+i\sqrt{3})^{1/2}" display="block">   <m:apply>     <m:csymbol cd="ambiguous">superscript</m:csymbol>     <m:apply>       <m:plus/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:times/>         <m:ci>𝑖</m:ci>         <m:apply>           <m:root/>           <m:cn type="integer">3</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:divide/>       <m:cn type="integer">1</m:cn>       <m:cn type="integer">2</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.13</num>
+    <query>
+      <formula id="q_76"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="bf(b)-af(a)" display="block">   <m:apply>     <m:minus/>     <m:apply>       <m:times/>       <m:ci>𝑏</m:ci>       <m:ci>𝑓</m:ci>       <m:ci>𝑏</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑎</m:ci>       <m:ci>𝑓</m:ci>       <m:ci>𝑎</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.14</num>
+    <query>
+      <formula id="q_77"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="y=xy^{\prime}+\frac{1}{2}(y^{\prime})^{2}" display="block">   <m:apply>     <m:eq/>     <m:ci>𝑦</m:ci>     <m:apply>       <m:plus/>       <m:apply>         <m:times/>         <m:ci>𝑥</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑦</m:ci>           <m:ci>′</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:apply>           <m:divide/>           <m:cn type="integer">1</m:cn>           <m:cn type="integer">2</m:cn>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑦</m:ci>             <m:ci>′</m:ci>           </m:apply>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.15</num>
+    <query>
+      <formula id="q_82"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="1+2x+3x^{2}+4x^{3}+5x^{4}+...+nx^{n-1}+..." display="block">   <m:apply>     <m:plus/>     <m:cn type="integer">1</m:cn>     <m:apply>       <m:times/>       <m:cn type="integer">2</m:cn>       <m:ci>𝑥</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:cn type="integer">3</m:cn>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:cn type="integer">4</m:cn>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:cn type="integer">3</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:cn type="integer">5</m:cn>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:cn type="integer">4</m:cn>       </m:apply>     </m:apply>     <m:ci>…</m:ci>     <m:apply>       <m:times/>       <m:ci>𝑛</m:ci>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:apply>           <m:minus/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:ci>…</m:ci>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.16</num>
+    <query>
+      <formula id="q_92"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int_{0}^{1}\frac{\ln(1+x)\ln(1-x)}{1+x}\,dx" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:int/>         <m:cn type="integer">0</m:cn>       </m:apply>       <m:cn type="integer">1</m:cn>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:divide/>         <m:apply>           <m:times/>           <m:apply>             <m:ln/>             <m:apply>               <m:plus/>               <m:cn type="integer">1</m:cn>               <m:ci>𝑥</m:ci>             </m:apply>           </m:apply>           <m:apply>             <m:ln/>             <m:apply>               <m:minus/>               <m:cn type="integer">1</m:cn>               <m:ci>𝑥</m:ci>             </m:apply>           </m:apply>         </m:apply>         <m:apply>           <m:plus/>           <m:cn type="integer">1</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:ci>d</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.17</num>
+    <query>
+      <formula id="q_97"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int_{x=0}^{\infty}\frac{\sin(x)}{x}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:int/>         <m:apply>           <m:eq/>           <m:ci>𝑥</m:ci>           <m:cn type="integer">0</m:cn>         </m:apply>       </m:apply>       <m:infinity/>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:sin/>         <m:ci>𝑥</m:ci>       </m:apply>       <m:ci>𝑥</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.18</num>
+    <query>
+      <formula id="q_111"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\log{2}+n\log\cfrac{n}{n+1}" display="block">   <m:apply>     <m:plus/>     <m:apply>       <m:log/>       <m:cn type="integer">2</m:cn>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑛</m:ci>       <m:apply>         <m:log/>         <m:apply>           <m:times/>           <m:mtext>\cfrac</m:mtext>           <m:ci>𝑛</m:ci>           <m:ci>𝑛</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:cn type="integer">1</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.20</num>
+    <query>
+      <formula id="q_130"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\phi(n)=40" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>italic-ϕ</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>     <m:cn type="integer">40</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.21</num>
+    <query>
+      <formula id="q_136"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="9^{9^{9^{…{{}^{9}}}}}≡x(\text{mod}100)" display="block">   <m:apply>     <m:times/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:cn type="integer">9</m:cn>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:cn type="integer">9</m:cn>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:cn type="integer">9</m:cn>           <m:cerror>             <m:csymbol cd="ambiguous">fragments</m:csymbol>             <m:csymbol cd="unknown">â</m:csymbol>             <m:csymbol cd="unknown"></m:csymbol>             <m:csymbol cd="unknown">¦</m:csymbol>             <m:apply>               <m:cn type="integer">9</m:cn>             </m:apply>           </m:cerror>         </m:apply>       </m:apply>     </m:apply>     <m:ci>italic-â</m:ci>     <m:ci></m:ci>     <m:ci>¡</m:ci>     <m:ci>𝑥</m:ci>     <m:apply>       <m:times/>       <m:mtext>\text</m:mtext>       <m:ci>𝑚</m:ci>       <m:ci>𝑜</m:ci>       <m:ci>𝑑</m:ci>       <m:cn type="integer">100</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.24</num>
+    <query>
+      <formula id="q_172"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sqrt{2i-1}?" display="block">   <m:apply>     <m:times/>     <m:apply>       <m:root/>       <m:apply>         <m:minus/>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝑖</m:ci>         </m:apply>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>     <m:ci>?</m:ci>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.25</num>
+    <query>
+      <formula id="q_199"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lim_{x→∞}\log_{x}P(x)" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:limit/>       <m:apply>         <m:times/>         <m:ci>𝑥</m:ci>         <m:ci>italic-â</m:ci>         <m:ci></m:ci>         <m:ci></m:ci>         <m:ci>italic-â</m:ci>         <m:ci></m:ci>         <m:ci></m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:log/>           <m:ci>𝑥</m:ci>         </m:apply>         <m:ci>𝑃</m:ci>       </m:apply>       <m:ci>𝑥</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.26</num>
+    <query>
+      <formula id="q_205"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="x-\frac{x^{3}}{3\times 3!}+\frac{x^{5}}{5\times 5!}-\frac{x^{7}}{7\times 7!}+%&amp;#10;\cdots=\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{(2n+1)}}{(2n+1)\times(2n+1)!}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:minus/>         <m:apply>           <m:plus/>           <m:apply>             <m:minus/>             <m:ci>𝑥</m:ci>             <m:apply>               <m:divide/>               <m:apply>                 <m:csymbol cd="ambiguous">superscript</m:csymbol>                 <m:ci>𝑥</m:ci>                 <m:cn type="integer">3</m:cn>               </m:apply>               <m:apply>                 <m:times/>                 <m:cn type="integer">3</m:cn>                 <m:apply>                   <m:factorial/>                   <m:cn type="integer">3</m:cn>                 </m:apply>               </m:apply>             </m:apply>           </m:apply>           <m:apply>             <m:divide/>             <m:apply>               <m:csymbol cd="ambiguous">superscript</m:csymbol>               <m:ci>𝑥</m:ci>               <m:cn type="integer">5</m:cn>             </m:apply>             <m:apply>               <m:times/>               <m:cn type="integer">5</m:cn>               <m:apply>                 <m:factorial/>                 <m:cn type="integer">5</m:cn>               </m:apply>             </m:apply>           </m:apply>         </m:apply>         <m:apply>           <m:divide/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑥</m:ci>             <m:cn type="integer">7</m:cn>           </m:apply>           <m:apply>             <m:times/>             <m:cn type="integer">7</m:cn>             <m:apply>               <m:factorial/>               <m:cn type="integer">7</m:cn>             </m:apply>           </m:apply>         </m:apply>       </m:apply>       <m:ci>⋯</m:ci>     </m:apply>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:sum/>           <m:apply>             <m:eq/>             <m:ci>𝑛</m:ci>             <m:cn type="integer">0</m:cn>           </m:apply>         </m:apply>         <m:infinity/>       </m:apply>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:apply>             <m:minus/>             <m:cn type="integer">1</m:cn>           </m:apply>           <m:ci>𝑛</m:ci>         </m:apply>         <m:apply>           <m:divide/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑥</m:ci>             <m:apply>               <m:plus/>               <m:apply>                 <m:times/>                 <m:cn type="integer">2</m:cn>                 <m:ci>𝑛</m:ci>               </m:apply>               <m:cn type="integer">1</m:cn>             </m:apply>           </m:apply>           <m:apply>             <m:times/>             <m:apply>               <m:plus/>               <m:apply>                 <m:times/>                 <m:cn type="integer">2</m:cn>                 <m:ci>𝑛</m:ci>               </m:apply>               <m:cn type="integer">1</m:cn>             </m:apply>             <m:apply>               <m:factorial/>               <m:apply>                 <m:plus/>                 <m:apply>                   <m:times/>                   <m:cn type="integer">2</m:cn>                   <m:ci>𝑛</m:ci>                 </m:apply>                 <m:cn type="integer">1</m:cn>               </m:apply>             </m:apply>           </m:apply>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.27</num>
+    <query>
+      <formula id="q_207"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="e^{3i\pi/2}" display="block">   <m:apply>     <m:csymbol cd="ambiguous">superscript</m:csymbol>     <m:ci>𝑒</m:ci>     <m:apply>       <m:divide/>       <m:apply>         <m:times/>         <m:cn type="integer">3</m:cn>         <m:ci>𝑖</m:ci>         <m:ci>𝜋</m:ci>       </m:apply>       <m:cn type="integer">2</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.28</num>
+    <query>
+      <formula id="q_213"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sin(18^{\circ})=\frac{a+\sqrt{b}}{c}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:sin/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:cn type="integer">18</m:cn>         <m:compose/>       </m:apply>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:plus/>         <m:ci>𝑎</m:ci>         <m:apply>           <m:root/>           <m:ci>𝑏</m:ci>         </m:apply>       </m:apply>       <m:ci>𝑐</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.29</num>
+    <query>
+      <formula id="q_238"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="i=\sqrt{-1}" display="block">   <m:apply>     <m:eq/>     <m:ci>𝑖</m:ci>     <m:apply>       <m:root/>       <m:apply>         <m:minus/>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.30</num>
+    <query>
+      <formula id="q_245"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="a^{3}+b^{3}+c^{3}-3abc" display="block">   <m:apply>     <m:minus/>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑎</m:ci>         <m:cn type="integer">3</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑏</m:ci>         <m:cn type="integer">3</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑐</m:ci>         <m:cn type="integer">3</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:cn type="integer">3</m:cn>       <m:ci>𝑎</m:ci>       <m:ci>𝑏</m:ci>       <m:ci>𝑐</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.32</num>
+    <query>
+      <formula id="q_262"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="Empty(x)\iff\not\exists y(y\in x)" display="block">   <m:cerror>     <m:csymbol cd="ambiguous">fragments</m:csymbol>     <m:csymbol cd="unknown">E</m:csymbol>     <m:csymbol cd="unknown">m</m:csymbol>     <m:csymbol cd="unknown">p</m:csymbol>     <m:csymbol cd="unknown">t</m:csymbol>     <m:csymbol cd="unknown">y</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">x</m:csymbol>       <m:ci>)</m:ci>     </m:cerror>     <m:csymbol cd="latexml">iff</m:csymbol>     <m:csymbol cd="latexml">not-exists</m:csymbol>     <m:csymbol cd="unknown">y</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">y</m:csymbol>       <m:in/>       <m:csymbol cd="unknown">x</m:csymbol>       <m:ci>)</m:ci>     </m:cerror>   </m:cerror> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.33</num>
+    <query>
+      <formula id="q_267"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\frac{\partial^{3}f}{\partial x^{3}}" display="block">   <m:apply>     <m:divide/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:partialdiff/>         <m:cn type="integer">3</m:cn>       </m:apply>       <m:ci>𝑓</m:ci>     </m:apply>     <m:apply>       <m:partialdiff/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:cn type="integer">3</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.34</num>
+    <query>
+      <formula id="q_278"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="a\uparrow^{n}b" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:ci>↑</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>     <m:ci>𝑎</m:ci>     <m:ci>𝑏</m:ci>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.35</num>
+    <query>
+      <formula id="q_290"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int e^{x^{2}}dx" display="block">   <m:apply>     <m:int/>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑒</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:ci>d</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.36</num>
+    <query>
+      <formula id="q_294"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lnot P\to A_{1}\to\ ...\ \to A_{n}\to P" display="block">   <m:apply>     <m:and/>     <m:apply>       <m:ci>→</m:ci>       <m:apply>         <m:times/>         <m:not/>         <m:ci>𝑃</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝐴</m:ci>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:ci>→</m:ci>       <m:share href="#.cmml"/>       <m:ci>…</m:ci>     </m:apply>     <m:apply>       <m:ci>→</m:ci>       <m:share href="#.cmml"/>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝐴</m:ci>         <m:ci>𝑛</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:ci>→</m:ci>       <m:share href="#.cmml"/>       <m:ci>𝑃</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.37</num>
+    <query>
+      <formula id="q_305"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="f\circ g=g\circ f?" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:compose/>       <m:ci>𝑓</m:ci>       <m:ci>𝑔</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:compose/>         <m:ci>𝑔</m:ci>         <m:ci>𝑓</m:ci>       </m:apply>       <m:ci>?</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.38</num>
+    <query>
+      <formula id="q_319"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="q,r:a=bq+r" display="block">   <m:apply>     <m:ci>:</m:ci>     <m:list>       <m:ci>𝑞</m:ci>       <m:ci>𝑟</m:ci>     </m:list>     <m:apply>       <m:eq/>       <m:ci>𝑎</m:ci>       <m:apply>         <m:plus/>         <m:apply>           <m:times/>           <m:ci>𝑏</m:ci>           <m:ci>𝑞</m:ci>         </m:apply>         <m:ci>𝑟</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.40</num>
+    <query>
+      <formula id="q_329"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="a(x)y+b(x)y^{\prime}+c(x)y&amp;quot;+d(x)y^{\prime\prime\prime}+...+q(x)=0" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:times/>         <m:ci>𝑎</m:ci>         <m:ci>𝑥</m:ci>         <m:ci>𝑦</m:ci>       </m:apply>       <m:apply>         <m:times/>         <m:ci>𝑏</m:ci>         <m:ci>𝑥</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑦</m:ci>           <m:ci>′</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:ci>𝑐</m:ci>         <m:ci>𝑥</m:ci>         <m:ci>𝑦</m:ci>         <m:ci>"</m:ci>       </m:apply>       <m:apply>         <m:times/>         <m:ci>𝑑</m:ci>         <m:ci>𝑥</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑦</m:ci>           <m:ci>′′′</m:ci>         </m:apply>       </m:apply>       <m:ci>…</m:ci>       <m:apply>         <m:times/>         <m:ci>𝑞</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>     <m:cn type="integer">0</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.41</num>
+    <query>
+      <formula id="q_336"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{r=1}^{n}(-1)^{(n-r)}{n\choose r}(r)^{m}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:sum/>         <m:apply>           <m:eq/>           <m:ci>𝑟</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:ci>𝑛</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:minus/>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:apply>           <m:minus/>           <m:ci>𝑛</m:ci>           <m:ci>𝑟</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:csymbol cd="latexml">binomial</m:csymbol>         <m:ci>𝑛</m:ci>         <m:ci>𝑟</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑟</m:ci>         <m:ci>𝑚</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.43</num>
+    <query>
+      <formula id="q_340"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{n\geq 1}\frac{1}{n^{2}+1}=\frac{\pi\coth\pi-1}{2}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:sum/>         <m:apply>           <m:geq/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:apply>           <m:plus/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑛</m:ci>             <m:cn type="integer">2</m:cn>           </m:apply>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:minus/>         <m:apply>           <m:times/>           <m:ci>𝜋</m:ci>           <m:apply>             <m:csymbol cd="latexml">hyperbolic-cotangent</m:csymbol>             <m:ci>𝜋</m:ci>           </m:apply>         </m:apply>         <m:cn type="integer">1</m:cn>       </m:apply>       <m:cn type="integer">2</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.44</num>
+    <query>
+      <formula id="q_351"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(\m:mathscr{M}_{2\times 2}(\m:mathbb{Q}),\times)" display="block">   <m:interval closure="open">     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>ℳ</m:ci>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:mtext>\m:mathbb</m:mtext>         <m:ci>𝑄</m:ci>       </m:apply>     </m:apply>     <m:times/>   </m:interval> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.45</num>
+    <query>
+      <formula id="q_362"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sin(x),\sin(2x),\sin(3x),...,\sin(nx)" display="block">   <m:list>     <m:apply>       <m:sin/>       <m:ci>𝑥</m:ci>     </m:apply>     <m:apply>       <m:sin/>       <m:apply>         <m:times/>         <m:cn type="integer">2</m:cn>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:sin/>       <m:apply>         <m:times/>         <m:cn type="integer">3</m:cn>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>     <m:ci>…</m:ci>     <m:apply>       <m:sin/>       <m:apply>         <m:times/>         <m:ci>𝑛</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:list> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.46</num>
+    <query>
+      <formula id="q_370"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int x^{k}f(x)dx=0" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:int/>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:ci>𝑘</m:ci>         </m:apply>         <m:ci>𝑓</m:ci>         <m:ci>𝑥</m:ci>         <m:apply>           <m:ci>d</m:ci>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:cn type="integer">0</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.47</num>
+    <query>
+      <formula id="q_402"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="rq\equiv 1\bmod p" display="block">   <m:apply>     <m:equivalent/>     <m:apply>       <m:times/>       <m:ci>𝑟</m:ci>       <m:ci>𝑞</m:ci>     </m:apply>     <m:apply>       <m:csymbol cd="latexml">modulo</m:csymbol>       <m:cn type="integer">1</m:cn>       <m:ci>𝑝</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.48</num>
+    <query>
+      <formula id="q_427"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(x+y)^{k}\geq x^{k}+y^{k}" display="block">   <m:apply>     <m:geq/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:plus/>         <m:ci>𝑥</m:ci>         <m:ci>𝑦</m:ci>       </m:apply>       <m:ci>𝑘</m:ci>     </m:apply>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑥</m:ci>         <m:ci>𝑘</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑦</m:ci>         <m:ci>𝑘</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.50</num>
+    <query>
+      <formula id="q_459"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum{\frac{1}{n^{2+\cos{n}}}}" display="block">   <m:apply>     <m:sum/>     <m:apply>       <m:divide/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑛</m:ci>         <m:apply>           <m:plus/>           <m:cn type="integer">2</m:cn>           <m:apply>             <m:cos/>             <m:ci>𝑛</m:ci>           </m:apply>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.51</num>
+    <query>
+      <formula id="q_472"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(1+x)^{n}+(1+x)^{n+1}\frac{1}{2}+(1+x)^{n+2}\frac{1}{2^{2}}+\cdots\cdots+(1+x)%&amp;#10;^{2n}\frac{1}{2^{n}}." display="block">   <m:apply>     <m:plus/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:plus/>         <m:cn type="integer">1</m:cn>         <m:ci>𝑥</m:ci>       </m:apply>       <m:ci>𝑛</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:plus/>           <m:cn type="integer">1</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>         <m:apply>           <m:plus/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:plus/>           <m:cn type="integer">1</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>         <m:apply>           <m:plus/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:cn type="integer">2</m:cn>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:ci>⋯</m:ci>       <m:ci>⋯</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:plus/>           <m:cn type="integer">1</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝑛</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:cn type="integer">2</m:cn>           <m:ci>𝑛</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.52</num>
+    <query>
+      <formula id="q_479"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="n=n_{1}n_{2}...n_{k}+1" display="block">   <m:apply>     <m:eq/>     <m:ci>𝑛</m:ci>     <m:apply>       <m:plus/>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>         <m:ci>…</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:ci>𝑘</m:ci>         </m:apply>       </m:apply>       <m:cn type="integer">1</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.53</num>
+    <query>
+      <formula id="q_501"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="AB=1\Rightarrow BA=1" display="block">   <m:apply>     <m:and/>     <m:apply>       <m:eq/>       <m:apply>         <m:times/>         <m:ci>𝐴</m:ci>         <m:ci>𝐵</m:ci>       </m:apply>       <m:cn type="integer">1</m:cn>     </m:apply>     <m:apply>       <m:ci>⇒</m:ci>       <m:share href="#.cmml"/>       <m:apply>         <m:times/>         <m:ci>𝐵</m:ci>         <m:ci>𝐴</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:eq/>       <m:share href="#.cmml"/>       <m:cn type="integer">1</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.54</num>
+    <query>
+      <formula id="q_503"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="P(N)=(S|S⊆N)" display="block">   <m:cerror>     <m:csymbol cd="ambiguous">fragments</m:csymbol>     <m:csymbol cd="unknown">P</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">N</m:csymbol>       <m:ci>)</m:ci>     </m:cerror>     <m:eq/>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:csymbol cd="unknown">S</m:csymbol>       <m:ci>|</m:ci>       <m:csymbol cd="unknown">S</m:csymbol>       <m:csymbol cd="unknown">â</m:csymbol>       <m:csymbol cd="unknown"></m:csymbol>       <m:csymbol cd="unknown"></m:csymbol>       <m:csymbol cd="unknown">N</m:csymbol>       <m:ci>)</m:ci>     </m:cerror>   </m:cerror> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.55</num>
+    <query>
+      <formula id="q_504"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\frac{1}{\sqrt{-1}}=\sqrt{-1}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:divide/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:root/>         <m:apply>           <m:minus/>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:root/>       <m:apply>         <m:minus/>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.56</num>
+    <query>
+      <formula id="q_510"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\exists p\ \bigl{(}\text{pisprime}\rightarrow\forall x\text{(xisprime)}\bigr{)}" display="block">   <m:cerror>     <m:csymbol cd="ambiguous">fragments</m:csymbol>     <m:exists/>     <m:csymbol cd="unknown">p</m:csymbol>     <m:cerror>       <m:csymbol cd="ambiguous">fragments</m:csymbol>       <m:ci>(</m:ci>       <m:mtext>\text</m:mtext>       <m:csymbol cd="unknown">p</m:csymbol>       <m:csymbol cd="unknown">i</m:csymbol>       <m:csymbol cd="unknown">s</m:csymbol>       <m:csymbol cd="unknown">p</m:csymbol>       <m:csymbol cd="unknown">r</m:csymbol>       <m:csymbol cd="unknown">i</m:csymbol>       <m:csymbol cd="unknown">m</m:csymbol>       <m:csymbol cd="unknown">e</m:csymbol>       <m:ci>→</m:ci>       <m:csymbol cd="latexml">for-all</m:csymbol>       <m:csymbol cd="unknown">x</m:csymbol>       <m:mtext>\text</m:mtext>       <m:cerror>         <m:csymbol cd="ambiguous">fragments</m:csymbol>         <m:ci>(</m:ci>         <m:csymbol cd="unknown">x</m:csymbol>         <m:csymbol cd="unknown">i</m:csymbol>         <m:csymbol cd="unknown">s</m:csymbol>         <m:csymbol cd="unknown">p</m:csymbol>         <m:csymbol cd="unknown">r</m:csymbol>         <m:csymbol cd="unknown">i</m:csymbol>         <m:csymbol cd="unknown">m</m:csymbol>         <m:csymbol cd="unknown">e</m:csymbol>         <m:ci>)</m:ci>       </m:cerror>       <m:ci>)</m:ci>     </m:cerror>   </m:cerror> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.57</num>
+    <query>
+      <formula id="q_514"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="f:B\to\m:mathbb{R}^{m}" display="block">   <m:apply>     <m:ci>:</m:ci>     <m:ci>𝑓</m:ci>     <m:apply>       <m:ci>→</m:ci>       <m:ci>𝐵</m:ci>       <m:apply>         <m:times/>         <m:mtext>\m:mathbb</m:mtext>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑅</m:ci>           <m:ci>𝑚</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.58</num>
+    <query>
+      <formula id="q_525"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="3\arcsin\frac{1}{4}+\arccos\frac{11}{16}=\frac{\pi}{2}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:times/>         <m:cn type="integer">3</m:cn>         <m:apply>           <m:arcsin/>           <m:apply>             <m:divide/>             <m:cn type="integer">1</m:cn>             <m:cn type="integer">4</m:cn>           </m:apply>         </m:apply>       </m:apply>       <m:apply>         <m:arccos/>         <m:apply>           <m:divide/>           <m:cn type="integer">11</m:cn>           <m:cn type="integer">16</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:divide/>       <m:ci>𝜋</m:ci>       <m:cn type="integer">2</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.59</num>
+    <query>
+      <formula id="q_528"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{d|n}{\phi(d)}=n" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:sum/>         <m:cerror>           <m:csymbol cd="ambiguous">fragments</m:csymbol>           <m:csymbol cd="unknown">d</m:csymbol>           <m:ci>|</m:ci>           <m:csymbol cd="unknown">n</m:csymbol>         </m:cerror>       </m:apply>       <m:apply>         <m:times/>         <m:ci>italic-ϕ</m:ci>         <m:ci>𝑑</m:ci>       </m:apply>     </m:apply>     <m:ci>𝑛</m:ci>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.60</num>
+    <query>
+      <formula id="q_535"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lim_{n\rightarrow\infty}a_{n}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:limit/>       <m:apply>         <m:ci>→</m:ci>         <m:ci>𝑛</m:ci>         <m:infinity/>       </m:apply>     </m:apply>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:ci>𝑎</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.62</num>
+    <query>
+      <formula id="q_561"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="|\m:mathbb{Q}|=|\m:mathbb{Z}|" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:abs/>       <m:apply>         <m:times/>         <m:mtext>\m:mathbb</m:mtext>         <m:ci>𝑄</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:abs/>       <m:apply>         <m:times/>         <m:mtext>\m:mathbb</m:mtext>         <m:ci>𝑍</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.63</num>
+    <query>
+      <formula id="q_569"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\text{lcm}(n_{1},n_{2})=\frac{n_{1}n_{2}}{\gcd(n_{1},n_{2})}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:mtext>\text</m:mtext>       <m:ci>𝑙</m:ci>       <m:ci>𝑐</m:ci>       <m:ci>𝑚</m:ci>       <m:interval closure="open">         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:interval>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:gcd/>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.64</num>
+    <query>
+      <formula id="q_574"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="f([a,b])\subset[a,b]" display="block">   <m:apply>     <m:subset/>     <m:apply>       <m:times/>       <m:ci>𝑓</m:ci>       <m:interval closure="closed">         <m:ci>𝑎</m:ci>         <m:ci>𝑏</m:ci>       </m:interval>     </m:apply>     <m:interval closure="closed">       <m:ci>𝑎</m:ci>       <m:ci>𝑏</m:ci>     </m:interval>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.65</num>
+    <query>
+      <formula id="q_604"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="t\lambda\leq e^{t\lambda-1}\tag 2." display="block">   <m:apply>     <m:leq/>     <m:apply>       <m:times/>       <m:ci>𝑡</m:ci>       <m:ci>𝜆</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑒</m:ci>         <m:apply>           <m:minus/>           <m:apply>             <m:times/>             <m:ci>𝑡</m:ci>             <m:ci>𝜆</m:ci>           </m:apply>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:mtext>\tag</m:mtext>       <m:cn type="integer">2</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.66</num>
+    <query>
+      <formula id="q_612"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(x^{T}Ah)^{T}=h^{T}A^{T}x" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:ci>𝑇</m:ci>         </m:apply>         <m:ci>𝐴</m:ci>         <m:ci>ℎ</m:ci>       </m:apply>       <m:ci>𝑇</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>ℎ</m:ci>         <m:ci>𝑇</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐴</m:ci>         <m:ci>𝑇</m:ci>       </m:apply>       <m:ci>𝑥</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.67</num>
+    <query>
+      <formula id="q_616"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\det{\bmatrix A&amp;amp;B\\&amp;#10;O&amp;amp;C}=\det(A)\det(C)" display="block">   <m:apply>     <m:eq/>     <m:list>       <m:apply>         <m:determinant/>         <m:apply>           <m:times/>           <m:mtext>{bmatrix}</m:mtext>           <m:ci>𝐴</m:ci>           <m:ci>&amp;</m:ci>           <m:ci>𝑎</m:ci>           <m:ci>𝑚</m:ci>           <m:ci>𝑝</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:ci>𝐵</m:ci>         <m:ci>𝑂</m:ci>         <m:ci>&amp;</m:ci>         <m:ci>𝑎</m:ci>         <m:ci>𝑚</m:ci>         <m:ci>𝑝</m:ci>       </m:apply>       <m:ci>𝐶</m:ci>     </m:list>     <m:apply>       <m:determinant/>       <m:apply>         <m:times/>         <m:ci>𝐴</m:ci>         <m:apply>           <m:determinant/>           <m:ci>𝐶</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.68</num>
+    <query>
+      <formula id="q_620"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="a^{n}+1" display="block">   <m:apply>     <m:plus/>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:ci>𝑎</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>     <m:cn type="integer">1</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.69</num>
+    <query>
+      <formula id="q_637"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\ {s\choose s}+{s+1\choose s}+...+{n\choose s}={n+1\choose s+1}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="latexml">binomial</m:csymbol>         <m:ci>𝑠</m:ci>         <m:ci>𝑠</m:ci>       </m:apply>       <m:apply>         <m:csymbol cd="latexml">binomial</m:csymbol>         <m:apply>           <m:plus/>           <m:ci>𝑠</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:ci>𝑠</m:ci>       </m:apply>       <m:ci>…</m:ci>       <m:apply>         <m:csymbol cd="latexml">binomial</m:csymbol>         <m:ci>𝑛</m:ci>         <m:ci>𝑠</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:csymbol cd="latexml">binomial</m:csymbol>       <m:apply>         <m:plus/>         <m:ci>𝑛</m:ci>         <m:cn type="integer">1</m:cn>       </m:apply>       <m:apply>         <m:plus/>         <m:ci>𝑠</m:ci>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.70</num>
+    <query>
+      <formula id="q_643"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{j=0}^{N-1}\cos\left(l\frac{\left(2j+1\right)\pi}{2N}\right)=0" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:sum/>           <m:apply>             <m:eq/>             <m:ci>𝑗</m:ci>             <m:cn type="integer">0</m:cn>           </m:apply>         </m:apply>         <m:apply>           <m:minus/>           <m:ci>𝑁</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:cos/>         <m:apply>           <m:times/>           <m:ci>𝑙</m:ci>           <m:apply>             <m:divide/>             <m:apply>               <m:times/>               <m:apply>                 <m:plus/>                 <m:apply>                   <m:times/>                   <m:cn type="integer">2</m:cn>                   <m:ci>𝑗</m:ci>                 </m:apply>                 <m:cn type="integer">1</m:cn>               </m:apply>               <m:ci>𝜋</m:ci>             </m:apply>             <m:apply>               <m:times/>               <m:cn type="integer">2</m:cn>               <m:ci>𝑁</m:ci>             </m:apply>           </m:apply>         </m:apply>       </m:apply>     </m:apply>     <m:cn type="integer">0</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.71</num>
+    <query>
+      <formula id="q_646"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="1^{2}+2^{2}+....+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="block">   <m:apply>     <m:csymbol cd="ambiguous">formulae-sequence</m:csymbol>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:cn type="integer">2</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:ci>…</m:ci>     </m:apply>     <m:apply>       <m:eq/>       <m:apply>         <m:plus/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:apply>           <m:times/>           <m:ci>𝑛</m:ci>           <m:apply>             <m:plus/>             <m:ci>𝑛</m:ci>             <m:cn type="integer">1</m:cn>           </m:apply>           <m:apply>             <m:plus/>             <m:apply>               <m:times/>               <m:cn type="integer">2</m:cn>               <m:ci>𝑛</m:ci>             </m:apply>             <m:cn type="integer">1</m:cn>           </m:apply>         </m:apply>         <m:cn type="integer">6</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.73</num>
+    <query>
+      <formula id="q_663"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\binom{n}{0}^{2}+\binom{n}{1}^{2}+...+\binom{n}{n}^{2}=\binom{2n}{n}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:times/>         <m:mtext>\binom</m:mtext>         <m:ci>𝑛</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:cn type="integer">0</m:cn>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:mtext>\binom</m:mtext>         <m:ci>𝑛</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:cn type="integer">1</m:cn>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:ci>…</m:ci>       <m:apply>         <m:times/>         <m:mtext>\binom</m:mtext>         <m:ci>𝑛</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑛</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:mtext>\binom</m:mtext>       <m:cn type="integer">2</m:cn>       <m:ci>𝑛</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.74</num>
+    <query>
+      <formula id="q_690"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="f(x)=x+\dfrac{1}{x}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>𝑓</m:ci>       <m:ci>𝑥</m:ci>     </m:apply>     <m:apply>       <m:plus/>       <m:ci>𝑥</m:ci>       <m:apply>         <m:times/>         <m:mtext>\dfrac</m:mtext>         <m:cn type="integer">1</m:cn>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.75</num>
+    <query>
+      <formula id="q_698"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lim_{u\to\infty}\frac{u^{m}}{e^{u}}=0" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:limit/>         <m:apply>           <m:ci>→</m:ci>           <m:ci>𝑢</m:ci>           <m:infinity/>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑢</m:ci>           <m:ci>𝑚</m:ci>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑒</m:ci>           <m:ci>𝑢</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:cn type="integer">0</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.76</num>
+    <query>
+      <formula id="q_707"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\bigcup_{i\in\m:mathbb{N}}(a_{i}+b_{i}\m:mathbb{Z})=\m:mathbb{Z}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:union/>         <m:apply>           <m:in/>           <m:ci>𝑖</m:ci>           <m:apply>             <m:times/>             <m:mtext>\m:mathbb</m:mtext>             <m:ci>𝑁</m:ci>           </m:apply>         </m:apply>       </m:apply>       <m:apply>         <m:plus/>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑎</m:ci>           <m:ci>𝑖</m:ci>         </m:apply>         <m:apply>           <m:times/>           <m:apply>             <m:csymbol cd="ambiguous">subscript</m:csymbol>             <m:ci>𝑏</m:ci>             <m:ci>𝑖</m:ci>           </m:apply>           <m:mtext>\m:mathbb</m:mtext>           <m:ci>𝑍</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:mtext>\m:mathbb</m:mtext>       <m:ci>𝑍</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.77</num>
+    <query>
+      <formula id="q_727"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="(-1)(-1)=1" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:apply>         <m:minus/>         <m:cn type="integer">1</m:cn>       </m:apply>       <m:apply>         <m:minus/>         <m:cn type="integer">1</m:cn>       </m:apply>     </m:apply>     <m:cn type="integer">1</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.79</num>
+    <query>
+      <formula id="q_739"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\displaystyle\left|{\frac{e^{-ixu}-1}{u}}\right|\leq|x|" display="block">   <m:apply>     <m:leq/>     <m:apply>       <m:abs/>       <m:apply>         <m:divide/>         <m:apply>           <m:minus/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑒</m:ci>             <m:apply>               <m:minus/>               <m:apply>                 <m:times/>                 <m:ci>𝑖</m:ci>                 <m:ci>𝑥</m:ci>                 <m:ci>𝑢</m:ci>               </m:apply>             </m:apply>           </m:apply>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:ci>𝑢</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:abs/>       <m:ci>𝑥</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.80</num>
+    <query>
+      <formula id="q_743"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\emptyset,\{1\},\{2\},\{1,2\},\{3\},\{1,3\},\{2,3\},\{1,2,3\},\{4\},\ldots" display="block">   <m:list>     <m:emptyset/>     <m:set>       <m:cn type="integer">1</m:cn>     </m:set>     <m:set>       <m:cn type="integer">2</m:cn>     </m:set>     <m:set>       <m:cn type="integer">1</m:cn>       <m:cn type="integer">2</m:cn>     </m:set>     <m:set>       <m:cn type="integer">3</m:cn>     </m:set>     <m:set>       <m:cn type="integer">1</m:cn>       <m:cn type="integer">3</m:cn>     </m:set>     <m:set>       <m:cn type="integer">2</m:cn>       <m:cn type="integer">3</m:cn>     </m:set>     <m:set>       <m:cn type="integer">1</m:cn>       <m:cn type="integer">2</m:cn>       <m:cn type="integer">3</m:cn>     </m:set>     <m:set>       <m:cn type="integer">4</m:cn>     </m:set>     <m:ci>…</m:ci>   </m:list> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.81</num>
+    <query>
+      <formula id="q_754"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\{1,\cdots,n\}" display="block">   <m:set>     <m:cn type="integer">1</m:cn>     <m:ci>⋯</m:ci>     <m:ci>𝑛</m:ci>   </m:set> </m:math> </formula>
+    </query>
+  </topic>
+   <topic>
+    <num>B.82</num>
+    <query>
+      <formula id="q_807"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="A=\displaystyle\int_{0}^{2\pi}{g(x)\cdot\cos(x)\m:mathrm{d}x}" display="block">   <m:apply>     <m:eq/>     <m:ci>𝐴</m:ci>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:int/>           <m:cn type="integer">0</m:cn>         </m:apply>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝜋</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:apply>           <m:ci>⋅</m:ci>           <m:apply>             <m:times/>             <m:ci>𝑔</m:ci>             <m:ci>𝑥</m:ci>           </m:apply>           <m:apply>             <m:cos/>             <m:ci>𝑥</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:ci>d</m:ci>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.83</num>
+    <query>
+      <formula id="q_819"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="1,1+\frac{1}{2},1+\frac{1}{2}+\frac{1}{3},1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4%&amp;#10;},..." display="block">   <m:list>     <m:cn type="integer">1</m:cn>     <m:apply>       <m:plus/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:plus/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">3</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:plus/>       <m:cn type="integer">1</m:cn>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">3</m:cn>       </m:apply>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">4</m:cn>       </m:apply>     </m:apply>     <m:ci>…</m:ci>   </m:list> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.84</num>
+    <query>
+      <formula id="q_825"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="I=&amp;lt;p,x&amp;gt;" display="block">   <m:apply>     <m:eq/>     <m:ci>𝐼</m:ci>     <m:list>       <m:apply>         <m:times/>         <m:ci>&amp;</m:ci>         <m:ci>𝑙</m:ci>         <m:ci>𝑡</m:ci>       </m:apply>       <m:ci>𝑝</m:ci>       <m:apply>         <m:times/>         <m:ci>𝑥</m:ci>         <m:ci>&amp;</m:ci>         <m:ci>𝑔</m:ci>         <m:ci>𝑡</m:ci>       </m:apply>     </m:list>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.85</num>
+    <query>
+      <formula id="q_840"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="p_{n}=\frac{1}{2}p_{n-1}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:ci>𝑝</m:ci>       <m:ci>𝑛</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:divide/>         <m:cn type="integer">1</m:cn>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝑝</m:ci>         <m:apply>           <m:minus/>           <m:ci>𝑛</m:ci>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.86</num>
+    <query>
+      <formula id="q_849"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{k=0}^{n}k\cdot\left(\begin{array}[]{l}{n}\\&amp;#10;{k}\end{array}\right)=O\left(2^{n\log_{3}n}\right)?" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:sum/>           <m:apply>             <m:eq/>             <m:ci>𝑘</m:ci>             <m:cn type="integer">0</m:cn>           </m:apply>         </m:apply>         <m:ci>𝑛</m:ci>       </m:apply>       <m:apply>         <m:ci>⋅</m:ci>         <m:ci>𝑘</m:ci>         <m:matrix>           <m:matrixrow>             <m:ci>𝑛</m:ci>           </m:matrixrow>           <m:matrixrow>             <m:ci>𝑘</m:ci>           </m:matrixrow>         </m:matrix>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑂</m:ci>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:cn type="integer">2</m:cn>         <m:apply>           <m:times/>           <m:ci>𝑛</m:ci>           <m:apply>             <m:apply>               <m:csymbol cd="ambiguous">subscript</m:csymbol>               <m:log/>               <m:cn type="integer">3</m:cn>             </m:apply>             <m:ci>𝑛</m:ci>           </m:apply>         </m:apply>       </m:apply>       <m:ci>?</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.87</num>
+    <query>
+      <formula id="q_854"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\forall n\in\Bbb{N}:\big{(}\sum_{i=1}^{n}a_{i}\big{)}\big{(}\sum_{i=1}^{n}%&amp;#10;\frac{1}{a_{i}}\big{)}\geq n^{2}" display="block">   <m:apply>     <m:ci>:</m:ci>     <m:apply>       <m:in/>       <m:apply>         <m:csymbol cd="latexml">for-all</m:csymbol>         <m:ci>𝑛</m:ci>       </m:apply>       <m:apply>         <m:times/>         <m:mtext>\Bbb</m:mtext>         <m:ci>𝑁</m:ci>       </m:apply>     </m:apply>     <m:apply>       <m:geq/>       <m:apply>         <m:times/>         <m:apply>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:apply>               <m:csymbol cd="ambiguous">subscript</m:csymbol>               <m:sum/>               <m:apply>                 <m:eq/>                 <m:ci>𝑖</m:ci>                 <m:cn type="integer">1</m:cn>               </m:apply>             </m:apply>             <m:ci>𝑛</m:ci>           </m:apply>           <m:apply>             <m:csymbol cd="ambiguous">subscript</m:csymbol>             <m:ci>𝑎</m:ci>             <m:ci>𝑖</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:apply>               <m:csymbol cd="ambiguous">subscript</m:csymbol>               <m:sum/>               <m:apply>                 <m:eq/>                 <m:ci>𝑖</m:ci>                 <m:cn type="integer">1</m:cn>               </m:apply>             </m:apply>             <m:ci>𝑛</m:ci>           </m:apply>           <m:apply>             <m:divide/>             <m:cn type="integer">1</m:cn>             <m:apply>               <m:csymbol cd="ambiguous">subscript</m:csymbol>               <m:ci>𝑎</m:ci>               <m:ci>𝑖</m:ci>             </m:apply>           </m:apply>         </m:apply>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑛</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.88</num>
+    <query>
+      <formula id="q_883"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\m:mathbb{Z}[x]" display="block">   <m:apply>     <m:times/>     <m:mtext>\m:mathbb</m:mtext>     <m:ci>𝑍</m:ci>     <m:apply>       <m:csymbol cd="latexml">delimited-[]</m:csymbol>       <m:ci>𝑥</m:ci>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.89</num>
+    <query>
+      <formula id="q_884"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="A^{2}+B^{2}=C^{2}+D^{2}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐴</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐵</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>     <m:apply>       <m:plus/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐶</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐷</m:ci>         <m:cn type="integer">2</m:cn>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.90</num>
+    <query>
+      <formula id="q_894"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="A^{-1}A=\m:mathbb I_{n}" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝐴</m:ci>         <m:apply>           <m:minus/>           <m:cn type="integer">1</m:cn>         </m:apply>       </m:apply>       <m:ci>𝐴</m:ci>     </m:apply>     <m:apply>       <m:times/>       <m:mtext>\m:mathbb</m:mtext>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝐼</m:ci>         <m:ci>𝑛</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.92</num>
+    <query>
+      <formula id="q_931"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="P(X,Y)=(X^{p-1}-1)XY-1" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>𝑃</m:ci>       <m:interval closure="open">         <m:ci>𝑋</m:ci>         <m:ci>𝑌</m:ci>       </m:interval>     </m:apply>     <m:apply>       <m:minus/>       <m:apply>         <m:times/>         <m:apply>           <m:minus/>           <m:apply>             <m:csymbol cd="ambiguous">superscript</m:csymbol>             <m:ci>𝑋</m:ci>             <m:apply>               <m:minus/>               <m:ci>𝑝</m:ci>               <m:cn type="integer">1</m:cn>             </m:apply>           </m:apply>           <m:cn type="integer">1</m:cn>         </m:apply>         <m:ci>𝑋</m:ci>         <m:ci>𝑌</m:ci>       </m:apply>       <m:cn type="integer">1</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.93</num>
+    <query>
+      <formula id="q_940"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="det(xI-AB)=det(xI-BA)" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>𝑑</m:ci>       <m:ci>𝑒</m:ci>       <m:ci>𝑡</m:ci>       <m:apply>         <m:minus/>         <m:apply>           <m:times/>           <m:ci>𝑥</m:ci>           <m:ci>𝐼</m:ci>         </m:apply>         <m:apply>           <m:times/>           <m:ci>𝐴</m:ci>           <m:ci>𝐵</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:times/>       <m:ci>𝑑</m:ci>       <m:ci>𝑒</m:ci>       <m:ci>𝑡</m:ci>       <m:apply>         <m:minus/>         <m:apply>           <m:times/>           <m:ci>𝑥</m:ci>           <m:ci>𝐼</m:ci>         </m:apply>         <m:apply>           <m:times/>           <m:ci>𝐵</m:ci>           <m:ci>𝐴</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.94</num>
+    <query>
+      <formula id="q_944"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="2^{\aleph_{0}}" display="block">   <m:apply>     <m:csymbol cd="ambiguous">superscript</m:csymbol>     <m:cn type="integer">2</m:cn>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:ci>ℵ</m:ci>       <m:cn type="integer">0</m:cn>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.95</num>
+    <query>
+      <formula id="q_954"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\lim_{x\to 0}\frac{\sin x}{x}=1" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:limit/>         <m:apply>           <m:ci>→</m:ci>           <m:ci>𝑥</m:ci>           <m:cn type="integer">0</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:divide/>         <m:apply>           <m:sin/>           <m:ci>𝑥</m:ci>         </m:apply>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>     <m:cn type="integer">1</m:cn>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.96</num>
+    <query>
+      <formula id="q_977"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\sum_{i}\frac{a_{i}}{a_{i}+a_{i+1}+a_{i+2}+\cdots}" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">subscript</m:csymbol>       <m:sum/>       <m:ci>𝑖</m:ci>     </m:apply>     <m:apply>       <m:divide/>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝑎</m:ci>         <m:ci>𝑖</m:ci>       </m:apply>       <m:apply>         <m:plus/>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑎</m:ci>           <m:ci>𝑖</m:ci>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑎</m:ci>           <m:apply>             <m:plus/>             <m:ci>𝑖</m:ci>             <m:cn type="integer">1</m:cn>           </m:apply>         </m:apply>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:ci>𝑎</m:ci>           <m:apply>             <m:plus/>             <m:ci>𝑖</m:ci>             <m:cn type="integer">2</m:cn>           </m:apply>         </m:apply>         <m:ci>⋯</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.97</num>
+    <query>
+      <formula id="q_997"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="lcm(b_{1},...,b_{m})" display="block">   <m:apply>     <m:times/>     <m:ci>𝑙</m:ci>     <m:ci>𝑐</m:ci>     <m:ci>𝑚</m:ci>     <m:vector>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝑏</m:ci>         <m:cn type="integer">1</m:cn>       </m:apply>       <m:ci>…</m:ci>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:ci>𝑏</m:ci>         <m:ci>𝑚</m:ci>       </m:apply>     </m:vector>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.98</num>
+    <query>
+      <formula id="q_1010"><m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="R(e^{2\pi ix})=e^{2\pi i(x+\alpha)}." display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:times/>       <m:ci>𝑅</m:ci>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑒</m:ci>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝜋</m:ci>           <m:ci>𝑖</m:ci>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:ci>𝑒</m:ci>       <m:apply>         <m:times/>         <m:cn type="integer">2</m:cn>         <m:ci>𝜋</m:ci>         <m:ci>𝑖</m:ci>         <m:apply>           <m:plus/>           <m:ci>𝑥</m:ci>           <m:ci>𝛼</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+    </query>
+  </topic>
+</topics>

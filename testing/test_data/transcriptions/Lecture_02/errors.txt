@@ -1,0 +1,188 @@
+latexml (LaTeXML version 0.8.1)
+processing started Sat Jun  3 20:13:58 2017
+
+(Digesting TeX Lecture_02...
+(Loading /usr/share/perl5/LaTeXML/Package/TeX.pool.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/eTeX.pool.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/pdfTeX.pool.ltxml... 0.01 sec) 0.12 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amsmath.sty.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/amsbsy.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amstext.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amsopn.sty.ltxml... 0.00 sec) 0.06 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amsfonts.sty.ltxml... 0.00 sec)
+(Processing definitions /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty...
+(Loading /usr/share/perl5/LaTeXML/Package/LaTeX.pool.ltxml... 0.15 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amsthm.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/dsfont.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/latexsym.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/amssymb.sty.ltxml... 0.03 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/alltt.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/array.sty.ltxml... 0.00 sec)
+(Processing definitions /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/enumitem.sty... 0.20 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/pstricks.sty.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/xcolor.sty.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/color.sty.ltxml... 0.01 sec) 0.05 sec) 0.08 sec)
+(Processing definitions /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/soul.sty...
+Info:unexpected:ectt1000 Unrecognized font name 'ectt1000'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/soul.sty; line 54 col 30
+	Font switch macro \SOUL@tt will have no effect
+ 0.11 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/colortbl.sty.ltxml... 0.01 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/fancyhdr.sty.ltxml... 0.00 sec)
+Error:missing_file:bbding Can't find package bbding
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 8 col 15
+	search paths are 
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+Error:missing_file:stmaryrd Can't find package stmaryrd
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 8 col 15
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+(Loading /usr/share/perl5/LaTeXML/Package/graphicx.sty.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/graphics.sty.ltxml... 0.00 sec) 0.02 sec)
+Error:missing_file:pgfpages Can't find package pgfpages
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 9 col 15
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+(Loading /usr/share/perl5/LaTeXML/Package/tikz.sty.ltxml...
+Error:missing_file:tikz Can't find package tikz
+	/usr/share/perl5/LaTeXML/Package/tikz.sty.ltxml line 24
+	Input is empty
+	In Core::Gullet[@0x4be8d28] /usr/share/perl5/LaTeXML/Package/tikz.sty.ltxml line 24
+	 <= \RequirePackage OptionalSemiverbatim ... <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+ 0.01 sec)
+Error:missing_file:fancybox Can't find package fancybox
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 11 col 15
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+Error:missing_file:Tabbing Can't find package Tabbing
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 11 col 15
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+(Loading /usr/share/perl5/LaTeXML/Package/geometry.sty.ltxml...
+(Loading /usr/share/perl5/LaTeXML/Package/keyval.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/ifpdf.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/ifvtex.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/ifxetex.sty.ltxml... 0.00 sec) 0.04 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/caption.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/wrapfig.sty.ltxml... 0.00 sec)
+(Processing definitions /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/shortlst.sty... 0.02 sec)
+Error:missing_file:multienum Can't find package multienum
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 16 col 15
+	Next token is T_CS[\RequirePackage]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+
+(Processing definitions /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty...
+Warning:expected:<number> Missing number, treated as zero
+	at /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty; line 212 col 19
+	while processing \et@xins
+	next token is \insc@unt
+	In Core::Gullet[@0x4be8d28] at /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty; line 212 col 19
+
+Error:undefined:\insc@unt The token T_CS[\insc@unt] is not defined.
+	at /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty; line 212 col 19
+	In Core::Stomach[@0x4efa4e0] at /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty; line 212 col 19
+	 <= Core::Gullet[@0x4be8d28] <= \RequirePackage OptionalSemiverbatim ... <= Core::Stomach[@0x4efa4e0] <= ...
+ 0.08 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/booktabs.sty.ltxml... 0.00 sec)
+Error:missing_file:ctable Can't find package ctable
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/aahomework.sty; line 19 col 1
+	Next token is T_CS[\par]
+	In \RequirePackage OptionalSemiverbatim ... from LaTeX.pool.ltxml line 586
+	 <= Core::Stomach[@0x4efa4e0] <= Core::Gullet[@0x4be8d28] <= ...
+ 1.14 sec)
+(Processing content /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex...
+(Loading /usr/share/perl5/LaTeXML/Package/article.cls.ltxml... 0.01 sec)
+Error:missing_file:mathtools Can't find package mathtools
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 4 col 11
+	Next token is T_CS[\usepackage]
+	In \usepackage OptionalSemiverbatim Semi... from LaTeX.pool.ltxml line 575
+	 <= Core::Stomach[@0x4efa4e0] <= ...
+
+Error:missing_file:subcaption Can't find package subcaption
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 5 col 11
+	Next token is T_CS[\usepackage]
+	In \usepackage OptionalSemiverbatim Semi... from LaTeX.pool.ltxml line 575
+	 <= Core::Stomach[@0x4efa4e0] <= ...
+
+(Loading /usr/share/perl5/LaTeXML/Package/epstopdf.sty.ltxml... 0.00 sec)
+(Loading /usr/share/perl5/LaTeXML/Package/float.sty.ltxml... 0.00 sec)
+Error:missing_file:parskip Can't find package parskip
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 14 col 1
+	Next token is T_CS[\par]
+	In \usepackage OptionalSemiverbatim Semi... from LaTeX.pool.ltxml line 575
+	 <= Core::Stomach[@0x4efa4e0] <= ...
+ 0.63 sec) 1.99 sec)
+(Building...
+(Loading compiled schema /usr/share/perl5/LaTeXML/resources/RelaxNG/LaTeXML.model... 0.01 sec)............................................... 0.67 sec)
+(Rewriting... 0.02 sec)
+(Math Parsing...86 formulae ...
+Warning:not_parsed:ATOM>CLOSE MathParser failed to match rule 'Anything'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 52 col 6
+	In "$\displaystyle\left.\begin{aligned}\displaystyle x+3y&\displaystyle=4\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}\@@ENDINLINEMATH"
+	Alignment[][[UNKNOWN]]
+	        > \right\}[[CLOSE]]
+[F1]
+Warning:not_parsed:ATOM>CLOSE MathParser failed to match rule 'Anything'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 52 col 6
+	In "$\displaystyle\left.\begin{aligned}\displaystyle x+3y&\displaystyle=4\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}$"
+	Alignment[][[UNKNOWN]]
+	        > \right\}[[CLOSE]]
+[F2][3][4][5][6][7]
+Warning:not_parsed:ATOM>CLOSE MathParser failed to match rule 'Anything'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 113 col 6
+	In "$\displaystyle\left.\begin{aligned}\displaystyle x+3y&\displaystyle=4\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}\Longrightarrow\left.%
+	\begin{aligned}\displaystyle 2x+6y&\displaystyle=8\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}\@@ENDINLINEMATH"
+	Alignment[][[UNKNOWN]]
+	        > \right\}[[CLOSE]] ⟹[[ARROW]] Alignment[][[UNKNOWN]] \right\}[[CLOSE]]
+[F8]
+Warning:not_parsed:ATOM>CLOSE MathParser failed to match rule 'Anything'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 113 col 6
+	In "$\displaystyle\left.\begin{aligned}\displaystyle x+3y&\displaystyle=4\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}\Longrightarrow\left.%
+	\begin{aligned}\displaystyle 2x+6y&\displaystyle=8\\
+	\displaystyle 5x-4y&\displaystyle=-7\end{aligned}\right\}$"
+	Alignment[][[UNKNOWN]]
+	        > \right\}[[CLOSE]] ⟹[[ARROW]] Alignment[][[UNKNOWN]] \right\}[[CLOSE]]
+[F9][10][11][12][13][14][15][16][17][18][19][20][21][22][23][24][25][26][27][28][29][30][31][32][33][34][35][36][37][38][39][40][41][42][43][44][45][46]
+Warning:not_parsed:PUNCT.RELOP.NUMBER>PUNCT MathParser failed to match rule 'Subscript'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 179 col 106
+	In "$\displaystyle-5(\underbrace{x+3y-4}_{{\color{red}=0}})+(\underbrace{5x-4y+7}_%
+	{{\color{red}=0}})=\underbrace{-19y+27}_{{\color{red}\Rightarrow\hskip{22.7622%
+	05pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}\@@ENDINLINEMATH"
+	⇒[[ARROW]] _{{\color{red}\Rightarrow\hskip{22.762205pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}[[PUNCT]] =[[RELOP]] 0[[NUMBER]]
+	        > _{{\color{red}\Rightarrow\hskip{22.762205pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}[[PUNCT]]
+[47]
+Warning:not_parsed:PUNCT.RELOP.NUMBER>PUNCT MathParser failed to match rule 'Subscript'
+	at /home/mauricio/Desktop/tangent-s/tangent-s/testing/test_data/transcriptions/Lecture_02/Lecture_02.tex; line 179 col 106
+	In "$\displaystyle-5(\underbrace{x+3y-4}_{{\color{red}=0}})+(\underbrace{5x-4y+7}_%
+	{{\color{red}=0}})=\underbrace{-19y+27}_{{\color{red}\Rightarrow\hskip{22.7622%
+	05pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}$"
+	⇒[[ARROW]] _{{\color{red}\Rightarrow\hskip{22.762205pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}[[PUNCT]] =[[RELOP]] 0[[NUMBER]]
+	        > _{{\color{red}\Rightarrow\hskip{22.762205pt}=0\hskip{22.762205pt}\hphantom{\Rightarrow}}}[[PUNCT]]
+[48][49][50][51][52][53][54][55][56][57][58][59][60][61][62][63][64][65][66][67][68][69][70][71][72][73][74][75][76][77][78][79][80][81][82][83][84][85][86]
+Math parsing succeeded:
+   ltx:XMArg: 261/263
+   ltx:XMath: 82/86
+   ltx:XMWrap: 15/15
+Symbols assumed as simple identifiers (with # of occurences):
+   'A{italic}' (2), 'B{italic}' (2), 'C{italic}' (2), 'L{italic}' (29), 'P{italic}' (1), 'x{italic}' (30), 'y{italic}' (36)
+ 1.04 sec)
+(Finalizing... 0.15 sec)
+Conversion complete: 7 warnings; 12 errors; 1 undefined macro[\insc@unt]; 11 missing files[ctable.sty, fancybox.sty, Tabbing.sty, tikz.sty, mathtools.sty, stmaryrd.sty, pgfpages.sty, subcaption.sty, parskip.sty, bbding.sty, multienum.sty].
+processing finished Sat Jun  3 20:14:02 2017

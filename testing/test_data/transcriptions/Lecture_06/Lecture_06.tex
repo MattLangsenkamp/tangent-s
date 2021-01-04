@@ -1,0 +1,324 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vek}[1]{\vec{#1}}
+
+\title{Lecture 6}
+\author{A. Agarwal}
+\date{February 8, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Recall}
+
+\begin{enumerate}
+\item{
+Solving a system of equations:
+$\mat{A} \vek{x} = \vek{b}$
+Given a matrix $\mat{A}$ and vector $\vek{b}$, we wish to find the vector $\vek{x}$.
+}
+\item{
+The augmented matrix
+
+$\left[
+\begin{matrix}
+\mat{A} & \vek{b}
+\end{matrix}
+\right]$
+}
+\item{
+Terms associated with the augmented matrix that help with finding the solutions to a system: \emph{rank, pivots, row echelon form, free variables}
+}
+\item{
+The connection between the \emph{linear span} of a set of vectors and solving a system of equations
+}
+\end{enumerate}
+
+\section*{Linear Independence of a Set of Vectors}
+
+Linear independence comes from a geometric way of understanding \keyphrase{parallel vectors}. Given two vectors in the plane that are not parallel, any point on the plane can be reached by moving in the directions of the two vectors. In contrast, given two parallel vectors, many points cannot be reached through such movements. Only points along the line that the vectors lie in can be reached.
+
+\begin{figure}
+\centering
+$\vek{v_1}$
+
+$\vek{v_2}$
+
+$(3,2)$ $P$
+\caption{Non-parallel vectors. The point $P$ can be reached from any points through movements along the two vectors $\vek{v_1}$ and $\vek{v_2}$.}
+\end{figure}
+
+\begin{figure}
+
+$\vek{v_1}$
+
+$\vek{v_2}$
+
+$(0,0)$ $S$
+
+$(3,2)$ $Q$
+\caption{Parallel vectors. The point $Q$ cannot be reached from the point $S$ through movements along the two vectors $\vek{v_1}$ and $\vek{v_2}$.}
+\end{figure}
+
+It is useful to keep this geometric interpretation of parallel vectors in mind, but we wish to generalize this concept and express it in algebraic terms.
+
+\subsection*{Algebraic Representation of Parallelism}
+
+Here is a first attempt at defining parallelism in algebraic terms:
+
+Algebraically, we say that $\vek{v_1}$ and $\vek{v_2}$ are parallel if $\vek{v_1} = c \vek{v_2}$ for some scalar $c$.
+
+This is equivalent to saying that
+\begin{align*}
+\vek{v_1} &= c \vek{v_2}
+\\
+(1) \vek{v_1} + (-c) \vek{v_2} &= \vek{0}
+\end{align*}
+or in other words, two vectors are parallel if a \emph{linear combination} of $\vek{v_1}$ and $\vek{v_2}$ can produce the zero vector.
+
+What about higher dimensions, say $\bbR^3$? If we want to expand this definition of parallelism, we may wish to express algebraically that $\vek{v_1}, \vek{v_2}$ lie in the same plane. If we consider this though, it is apparent that \emph{any} two vectors lie in the same plane in $\bbR^3$. If instead we consider the case of three vectors in $\bbR^3$, this is no longer the case -- for instance, the three vectors that correspond to the three axes $x,y,z$ do not lie in the same plane. It is of interest then to characterize when exactly three vectors will lie in the same plane.
+
+\ques When will $\vek{v_1}, \vek{v_2}, \vek{v_3}$ lie in the same plane in $\bbR^3$?
+
+We can think of this in the following way: if the three vectors lie in the same plane, then a linear combination of $\vek{v_1}$ and $\vek{v_2}$ should be able to produce $\vek{v_3}$:
+\begin{align*}
+\vek{v_3} &= c_1 \vek{v_1} + c_2 \vek{v_2}
+\end{align*}
+Again, we can rewrite this equation and find a familiar expression:
+\begin{align*}
+\vek{v_3} + (-c_1) \vek{v_1} + (-c_2) \vek{v_2}
+\end{align*}
+that is, $\vek{v_1}, \vek{v_2}, \vek{v_3}$ can form a linear combination to produce the zero vector.
+
+\section*{Coplanarity}
+
+The idea of \keyphrase{coplanarity} can be thought of as the capacity for a linear combination of vectors to produce the zero vector.
+
+\begin{minipage}{.95\textwidth}
+Let $S$ be a set of vectors,
+\begin{align*}
+S = \left\{\vek{v_1}, \vek{v_2}, \dots, \vek{v_k}\right\}
+\end{align*}
+$S$ is a \keyphrase{linearly dependent} set if a \emph{non-trivial} linear combination of vectors can produce the zero vector.
+\\
+\\
+Otherwise, $S$ is \keyphrase{linearly independent}.
+\end{minipage}
+
+
+There are some important points to understand with this definition. First, when we say a linear combination that is equal to zero, we mean
+\begin{align*}
+c_1 \vek{v_1} + c_2 \vek{v_2} + \dots + c_k \vek{v_k} &= \vek{0}
+\end{align*}
+One solution to this equation is obvious: letting $c_i = 0$ for all $i=1,2,\dots,k$. This is called the \keyphrase{trivial} solution.
+
+A \keyphrase{non-trivial} linear combination resulting in the zero vector is one in which at least one of the coefficients $c_i$ is nonzero.
+
+\paragraph{Example.}
+Consider the set of vectors $S$ in the space $\bbR^2$:
+\begin{align*}
+S = \left\{ \begin{bmatrix}1\\2\end{bmatrix}, \begin{bmatrix}-3\\4\end{bmatrix} \right\}
+\end{align*}
+
+\ques Is $S$ (linearly) independent or dependent?
+\begin{align*}
+c_1 \begin{bmatrix}1\\2\end{bmatrix} +
+c_2 \begin{bmatrix}-3\\4\end{bmatrix}
+&= \begin{bmatrix}0\\0\end{bmatrix}
+\end{align*}
+This question boils down to: can a non-trivial linear combination equal $\vek{0}$?
+
+If we look at this equation, it should remind us of the \emph{column picture}. That is, we are looking for the solutions of the system
+\begin{align*}
+\left[\begin{matrix}
+1 & -3 & 0
+\\
+2 & 4 & 0
+\end{matrix}\right]
+\end{align*}
+Thinking about it, it may be enlightening to consider what exactly we are looking for. We now have the tools to solve the system, but are we simply looking for a solution, or something more, or something less than a particular solution?
+
+Observe that such a system will always be consistent. The reason for this is that the trivial solution $c_1 = c_2 = 0$ will always be a solution. A system becomes inconsistent only when a pivot enters the constant column, and since the entries in the constant column are all zero, none of the row operations we know can ever produce a non-zero entry in that column. Thus this system will always be consistent.
+
+The question of importance then is: does this system have a non-zero solution? This equates to asking the question of whether this system has more than one solution or not. If you recall, we have found that linear systems may have either no solution, one solution, or infinitely many solutions. Since this system has at least one solution, we want to know whether it in fact has infinitely many solutions. When attempting to answer this question, what should come to mind is the \emph{rank of a matrix}, or the presence of free variables. If there are free variables, then the system will have infinitely many solutions.
+
+Going back to the example at hand, we put the matrix in row echelon form:
+\begin{align*}
+\left[\begin{matrix}
+1 & -3 & 0
+\\
+2 & 4 & 0
+\end{matrix}\right]
+\xrightarrow[]{-2 R_1 + R_2}
+\left[\begin{matrix}
+1 & -3 & 0
+\\
+0 & 10 & 0
+\end{matrix}\right]
+\end{align*}
+This matrix has a rank of $2$, and thus has no free variables. Thus it has a unique solution, which is the zero or trivial solution. Because of this, it has no non-trivial linear combination that produces the zero vector. Thus the set of vectors is independent. Here we have used the tools we have developed to test the linear dependence of a set of vectors.
+
+An important thing to note is that we are looking at a specific type of linear system. The right-hand side column vector in the case of determining linear independence is the zero vector:
+\begin{align*}
+c_1 \begin{bmatrix}1\\2\end{bmatrix} +
+c_2 \begin{bmatrix}-3\\4\end{bmatrix}
+&= \begin{bmatrix}0\\0\end{bmatrix} \Leftarrow \text{Right hand side is zero vector}
+\end{align*}
+This type of system is referred to as a \keyphrase{homogeneous system}:
+\begin{align*}
+\mat{A} \vek{x} &= \vek{0}
+\end{align*}
+Such a system is associated with \emph{linear independence}, whereas a system such as $\mat{A} \vek{x} = \vek{b}$ is associated with \emph{linear span}.
+
+\paragraph{Example.}
+Let us consider another example. In the space $\bbR^3$, consider $S = \left\{ \vek{v_1}, \vek{v_2}, \vek{v_3} \right\}$, where
+\begin{align*}
+\begin{aligned}
+\vek{v_1} &= \begin{bmatrix}1\\0\\1\end{bmatrix}
+&
+\vek{v_2} &= \begin{bmatrix}1\\3\\2\end{bmatrix}
+&
+\vek{v_3} &= \begin{bmatrix}3\\3\\4\end{bmatrix}
+\end{aligned}
+\end{align*}
+To check for linear dependence, we again look for solutions of the equation
+\begin{align*}
+c_1 \vek{v_1} + c_2 \vek{v_2} + c_3 \vek{v_3} &= \vek{0}
+\end{align*}
+We proceed by setting up the augmented matrix. One interesting thing to note is that, at least in the question of linear dependence, the systems that we set up will always have a zero right-hand side vector -- we may as well drop this column out. We eventually will do this, but for now let us proceed normally,
+\begin{align*}
+\left[\begin{matrix}
+1 & 1 & 3 & 0
+\\
+0 & 3 & 3 & 0
+\\
+1 & 2 & 4 & 0
+\end{matrix}\right]
+\xrightarrow[]{-R_1 + R_3}
+\left[\begin{matrix}
+1 & 1 & 3 & 0
+\\
+0 & 3 & 3 & 0
+\\
+0 & 1 & 1 & 0
+\end{matrix}\right]
+\xrightarrow[]{\frac{1}{3}R_2}
+\left[\begin{matrix}
+1 & 1 & 3 & 0
+\\
+0 & 1 & 1 & 0
+\\
+0 & 1 & 1 & 0
+\end{matrix}\right]
+\xrightarrow[]{-R_2 + R_3}
+\left[\begin{matrix}
+1 & 1 & 3 & 0
+\\
+0 & 1 & 1 & 0
+\\
+0 & 0 & 0 & 0
+\end{matrix}\right]
+\end{align*}
+In row echelon form, we see that the matrix has only two pivots. Then the third column represents a free variable, and so there are infinitely many solutions. Thus $S$ is a linearly dependent set.
+
+Since $S$ is a linearly dependent set, there must exist a non-zero linear combination that produces the zero vector. An important question to ask now is
+
+\ques What is the dependency relation? Find $c_1, c_2, c_3$.
+\begin{align*}
+\left.
+\begin{aligned}
+c_1 + c_2 + 3 c_3 &= 0
+\\
+c_2 + c_3 &= 0
+\end{aligned}
+\right\} \qquad c_3 \rightarrow \text{free variable}
+\end{align*}
+This tells us that
+\begin{align*}
+\begin{bmatrix}c_1\\c_2\\c_3\end{bmatrix}
+=
+\begin{bmatrix}-2c_3 \\ -c_3 \\ c_3\end{bmatrix}
+=
+c_3 \begin{bmatrix}-2\\-1\\1\end{bmatrix}
+\end{align*}
+Meaning the linear combination of $\vek{v_1}, \vek{v_2}, \vek{v_3}$
+\begin{align*}
+-2 \vek{v_1} - \vek{v_2} + \vek{v_3} &= \vek{0}
+\end{align*}
+
+\ques What can we say about linear dependence of a set in $\bbR^2$ in general? What if the set contains one, two, three, four, or more vectors? Consider if $S = \left\{ \vek{v_1}, \vek{v_2}, \vek{v_3} \right\}$ with
+\begin{align*}
+\vek{v_1} &= \begin{bmatrix}a\\b\end{bmatrix}
+&
+\vek{v_2} &= \begin{bmatrix}p\\q\end{bmatrix}
+&
+\vek{v_3} &= \begin{bmatrix}s\\t\end{bmatrix}
+\end{align*}
+\begin{align*}
+\left[\begin{matrix}
+a & p & s & 0
+\\
+b & q & t & 0
+\end{matrix}\right]
+\end{align*}
+Note that there are $3$ columns in the coefficient matrix, and that $\text{Rank}(A) \le 2$ since there are only two rows. Thus there must be at least one free variable. Thus there will be infinitely many solutions, and so the set if linearly dependent. Thus, through row operations, the matrix will eventually be reduced to a form such as
+\begin{align*}
+\left[\begin{matrix}
+a & p & s & 0
+\\
+b & q & t & 0
+\end{matrix}\right]
+\longrightarrow
+\left[\begin{matrix}
+\blacksquare & * & * & 0
+\\
+0 & \blacksquare & * & 0
+\end{matrix}\right]
+\text{ or }
+\left[\begin{matrix}
+\blacksquare & * & * & 0
+\\
+0 & * & \blacksquare & 0
+\end{matrix}\right]
+\end{align*}
+It seems then that given more than two vectors in $\bbR^2$, they will always be dependent. Given two or fewer vectors, they may remain independent.
+
+\begin{theorem}
+Let $S = \left\{ \vek{v_1}, \vek{v_2}, \dots, \vek{v_k} \right\}$ in $\bbR^n$. If $k > n$, then $S$ will be a dependent set of vectors.
+\end{theorem}
+\begin{proof}(Sketch)
+
+\begin{align*}
+\left[\begin{matrix}
+\uparrow & \uparrow & & \uparrow & 0
+\\
+\vek{v_1} & \vek{v_2} & \cdots & \vek{v_k} & 0
+\\
+\downarrow & \downarrow & & \downarrow & 0
+\end{matrix}\right]
+\end{align*}
+The number of columns of the coefficient matrix is $k$, and the number of rows is $n$. Given $n < k$, with $\text{Rank}(A) \le n$, then there are at least $n-k$-many free variables with $n-k > 0$. Then the system will have infinitely many solutions, and thus be dependent.
+
+\end{proof}
+
+
+\end{document}

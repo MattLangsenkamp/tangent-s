@@ -1,0 +1,571 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lecture 12</title>
+<!--Generated on Sat Jun  3 22:04:36 2017 by LaTeXML (version 0.8.1) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on August 6, 2012.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<h1 class="ltx_title ltx_title_document">Lecture 12</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">A. Agarwal
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">August 6, 2012</div>
+
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Recall</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Vector space: <math id="I1.i1.p1.m1" class="ltx_Math" alttext="(V,+,\cdot)" display="inline"><mrow><mo stretchy="false">(</mo><mi id="XM27">V</mi><mo>,</mo><mo id="XM28">+</mo><mo>,</mo><mo id="XM29">⋅</mo><mo stretchy="false">)</mo></mrow></math> with ten axioms</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Subspace: a subset of a vector space that is a vector space on its own.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">Recall that to ensure that a subset <math id="Sx1.p2.m1" class="ltx_Math" alttext="S\subseteq V" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>V</mi></mrow></math> is a subspace of <math id="Sx1.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, we must have that</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is nonempty.
+</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is closed under addition.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is closed under scalar multiplication.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">These last two items can be understood as <math id="Sx1.p2.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> being closed under <em class="ltx_emph">linear combinations</em>. That is, <math id="Sx1.p2.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a subspace if for every <math id="Sx1.p2.m5" class="ltx_Math" alttext="\vec{u},\vec{v}\in S" display="inline"><mrow><mrow><mover accent="true" id="XM30"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" id="XM31"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mi>S</mi></mrow></math> and <math id="Sx1.p2.m6" class="ltx_Math" alttext="c_{1},c_{2}\in\mathds{R}" display="inline"><mrow><mrow><msub id="XM32"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM33"><mi>c</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> (scalars), then <math id="Sx1.p2.m7" class="ltx_Math" alttext="c_{1}\vec{u}+c_{2}\vec{v}\in S" display="inline"><mrow><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Defining Operations</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">The usual definitions for addition and multiplication are not the only ones possible. Let us look at some examples. Consider the set</p>
+<table id="Sx3.EGx1" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex1" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex1.m1" class="ltx_Math" alttext="\displaystyle V=\left\{\begin{pmatrix}x\\
+y\end{pmatrix}:x,y\in\mathds{R}\right\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM40b"><mo id="XM40">(</mo><mtable id="Sx2.Ex1.m1.xm1"><mtr id="Sx2.Ex1.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex1.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex1.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex1.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo id="XM40a">)</mo></mrow><mo>:</mo><mrow id="XM41"><mrow><mi id="XM38">x</mi><mo>,</mo><mi id="XM39">y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mo>}</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with addition and scalar multiplication defined as</p>
+<table id="Sx3.EGx2" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex2" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}x\\
+y\end{pmatrix}+\begin{pmatrix}a\\
+b\end{pmatrix}" display="inline"><mrow><mrow><mo>(</mo><mtable id="Sx2.Ex2.m1.xm1"><mtr id="Sx2.Ex2.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex2.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex2.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex2.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mtable id="Sx2.Ex2.m1.xm2"><mtr id="Sx2.Ex2.m1.xm2a"><mtd columnalign="center" id="Sx2.Ex2.m1.xm2b"><mi>a</mi></mtd></mtr><mtr id="Sx2.Ex2.m1.xm2c"><mtd columnalign="center" id="Sx2.Ex2.m1.xm2d"><mi>b</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx2.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\begin{pmatrix}x+a\\
+y+b\end{pmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex2.m2.xm1"><mtr id="Sx2.Ex2.m2.xm1a"><mtd columnalign="center" id="Sx2.Ex2.m2.xm1b"><mrow><mi>x</mi><mo>+</mo><mi>a</mi></mrow></mtd></mtr><mtr id="Sx2.Ex2.m2.xm1c"><mtd columnalign="center" id="Sx2.Ex2.m2.xm1d"><mrow><mi>y</mi><mo>+</mo><mi>b</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex3" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\displaystyle c\begin{pmatrix}x\\
+y\end{pmatrix}" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx2.Ex3.m1.xm1"><mtr id="Sx2.Ex3.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex3.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex3.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex3.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx2.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\begin{pmatrix}x\\
+cy\end{pmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex3.m2.xm1"><mtr id="Sx2.Ex3.m2.xm1a"><mtd columnalign="center" id="Sx2.Ex3.m2.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex3.m2.xm1c"><mtd columnalign="center" id="Sx2.Ex3.m2.xm1d"><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="Sx2.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Question:</h3>
+
+<div id="Sx2.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx2.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> with these operations a vector space or not?</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">To answer this, we must check each of the requirements of a vector space.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px2" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Additive closure</h3>
+
+<div id="Sx2.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Since this is the usual definition of addition, it is closed under addition.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px3" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Scalar multiplication</h3>
+
+<div id="Sx2.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">To check whether the scalar multiplication defined here satisfies the axioms, let <math id="Sx2.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}x\\
+y\end{pmatrix}\in V" display="inline"><mrow><mrow><mo>(</mo><mtable id="Sx2.SS0.SSS0.Px3.p1.m1.xm1"><mtr id="Sx2.SS0.SSS0.Px3.p1.m1.xm1a"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.SS0.SSS0.Px3.p1.m1.xm1c"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><mi>V</mi></mrow></math> and <math id="Sx2.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="c\in\mathds{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then <math id="Sx2.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="c\begin{pmatrix}x\\
+y\end{pmatrix}=\begin{pmatrix}x\\
+cy\end{pmatrix}" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx2.SS0.SSS0.Px3.p1.m3.xm1"><mtr id="Sx2.SS0.SSS0.Px3.p1.m3.xm1a"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m3.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.SS0.SSS0.Px3.p1.m3.xm1c"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m3.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.SS0.SSS0.Px3.p1.m3.xm2"><mtr id="Sx2.SS0.SSS0.Px3.p1.m3.xm2a"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m3.xm2b"><mi>x</mi></mtd></mtr><mtr id="Sx2.SS0.SSS0.Px3.p1.m3.xm2c"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m3.xm2d"><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math> and since <math id="Sx2.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="x,cy\in\mathds{R}" display="inline"><mrow><mrow><mi id="XM42">x</mi><mo>,</mo><mrow id="XM43"><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, then <math id="Sx2.SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="\begin{pmatrix}x\\
+cy\end{pmatrix}\in V" display="inline"><mrow><mrow><mo>(</mo><mtable id="Sx2.SS0.SSS0.Px3.p1.m5.xm1"><mtr id="Sx2.SS0.SSS0.Px3.p1.m5.xm1a"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m5.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.SS0.SSS0.Px3.p1.m5.xm1c"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px3.p1.m5.xm1d"><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><mi>V</mi></mrow></math>, hence <math id="Sx2.SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is closed under scalar multiplication.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px4" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Zero vector</h3>
+
+<div id="Thmclaim1" class="ltx_theorem ltx_theorem_claim">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Claim 1</span>.</h6>
+<div id="Thmclaim1.p1" class="ltx_para">
+<p class="ltx_p">
+            <math id="Thmclaim1.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}0\\
+0\end{pmatrix}\in V" display="inline"><mrow><mrow><mo>(</mo><mtable id="Thmclaim1.p1.m1.xm1"><mtr id="Thmclaim1.p1.m1.xm1a"><mtd columnalign="center" id="Thmclaim1.p1.m1.xm1b"><mn>0</mn></mtd></mtr><mtr id="Thmclaim1.p1.m1.xm1c"><mtd columnalign="center" id="Thmclaim1.p1.m1.xm1d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><mi>V</mi></mrow></math>
+            <span class="ltx_text ltx_font_italic"> is the zero vector.</span>
+          </p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Sx2.SS0.SSS0.Px4.p1" class="ltx_para">
+<table id="Sx3.EGx3" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex4" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                    <math id="Sx2.Ex4.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}x\\
+y\end{pmatrix}+\begin{pmatrix}0\\
+0\end{pmatrix}=\begin{pmatrix}x+0\\
+y+0\end{pmatrix}=\begin{pmatrix}x\\
+y\end{pmatrix}" display="inline"><mrow><mrow><mrow><mo>(</mo><mtable id="Sx2.Ex4.m1.xm1"><mtr id="Sx2.Ex4.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex4.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex4.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex4.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mtable id="Sx2.Ex4.m1.xm2"><mtr id="Sx2.Ex4.m1.xm2a"><mtd columnalign="center" id="Sx2.Ex4.m1.xm2b"><mn>0</mn></mtd></mtr><mtr id="Sx2.Ex4.m1.xm2c"><mtd columnalign="center" id="Sx2.Ex4.m1.xm2d"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex4.m1.xm3"><mtr id="Sx2.Ex4.m1.xm3a"><mtd columnalign="center" id="Sx2.Ex4.m1.xm3b"><mrow><mi>x</mi><mo>+</mo><mn>0</mn></mrow></mtd></mtr><mtr id="Sx2.Ex4.m1.xm3c"><mtd columnalign="center" id="Sx2.Ex4.m1.xm3d"><mrow><mi>y</mi><mo>+</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex4.m1.xm4"><mtr id="Sx2.Ex4.m1.xm4a"><mtd columnalign="center" id="Sx2.Ex4.m1.xm4b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex4.m1.xm4c"><mtd columnalign="center" id="Sx2.Ex4.m1.xm4d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+                  </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Sx2.SS0.SSS0.Px4.p2" class="ltx_para">
+<p class="ltx_p">Since addition here is the same as the usual addition, if there is a problem with these definitions that prevents the space from being a vector space, it must have something to do with the multiplication operation.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px5" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Distributivity</h3>
+
+<div id="Sx2.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">A vector space must satisfy distributivity: <math id="Sx2.SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="(c+d)\vec{u}=c\vec{u}+d\vec{u}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM44"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.SS0.SSS0.Px5.p2" class="ltx_para">
+<p class="ltx_p">To check whether this holds in this space, let <math id="Sx2.SS0.SSS0.Px5.p2.m1" class="ltx_Math" alttext="\vec{u}=\begin{pmatrix}x\\
+y\end{pmatrix}" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.SS0.SSS0.Px5.p2.m1.xm1"><mtr id="Sx2.SS0.SSS0.Px5.p2.m1.xm1a"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px5.p2.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.SS0.SSS0.Px5.p2.m1.xm1c"><mtd columnalign="center" id="Sx2.SS0.SSS0.Px5.p2.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math> and <math id="Sx2.SS0.SSS0.Px5.p2.m2" class="ltx_Math" alttext="c,d\in\mathds{R}" display="inline"><mrow><mrow><mi id="XM45">c</mi><mo>,</mo><mi id="XM46">d</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then</p>
+<table id="Sx3.EGx4" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex5" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\displaystyle(c+d)\vec{u}=(c+d)\begin{pmatrix}x\\
+y\end{pmatrix}=\begin{pmatrix}x\\
+(c+d)y\end{pmatrix}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM51"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM52"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx2.Ex5.m1.xm1"><mtr id="Sx2.Ex5.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex5.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex5.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex5.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex5.m1.xm2"><mtr id="Sx2.Ex5.m1.xm2a"><mtd columnalign="center" id="Sx2.Ex5.m1.xm2b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex5.m1.xm2c"><mtd columnalign="center" id="Sx2.Ex5.m1.xm2d"><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM50"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="Sx3.EGx5" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex6" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\displaystyle c\vec{u}+d\vec{u}=c\begin{pmatrix}x\\
+y\end{pmatrix}+d\begin{pmatrix}x\\
+y\end{pmatrix}=\begin{pmatrix}x\\
+cy\end{pmatrix}+\begin{pmatrix}x\\
+dy\end{pmatrix}=\begin{pmatrix}2x\\
+(c+d)y\end{pmatrix}" display="inline"><mrow><mrow><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx2.Ex6.m1.xm1"><mtr id="Sx2.Ex6.m1.xm1a"><mtd columnalign="center" id="Sx2.Ex6.m1.xm1b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex6.m1.xm1c"><mtd columnalign="center" id="Sx2.Ex6.m1.xm1d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mtable id="Sx2.Ex6.m1.xm2"><mtr id="Sx2.Ex6.m1.xm2a"><mtd columnalign="center" id="Sx2.Ex6.m1.xm2b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex6.m1.xm2c"><mtd columnalign="center" id="Sx2.Ex6.m1.xm2d"><mi>y</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable id="Sx2.Ex6.m1.xm3"><mtr id="Sx2.Ex6.m1.xm3a"><mtd columnalign="center" id="Sx2.Ex6.m1.xm3b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex6.m1.xm3c"><mtd columnalign="center" id="Sx2.Ex6.m1.xm3d"><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mtable id="Sx2.Ex6.m1.xm4"><mtr id="Sx2.Ex6.m1.xm4a"><mtd columnalign="center" id="Sx2.Ex6.m1.xm4b"><mi>x</mi></mtd></mtr><mtr id="Sx2.Ex6.m1.xm4c"><mtd columnalign="center" id="Sx2.Ex6.m1.xm4d"><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable id="Sx2.Ex6.m1.xm5"><mtr id="Sx2.Ex6.m1.xm5a"><mtd columnalign="center" id="Sx2.Ex6.m1.xm5b"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd></mtr><mtr id="Sx2.Ex6.m1.xm5c"><mtd columnalign="center" id="Sx2.Ex6.m1.xm5d"><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM54"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="Sx2.SS0.SSS0.Px5.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> will not always equal <math id="Sx2.SS0.SSS0.Px5.p2.m4" class="ltx_Math" alttext="2x" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></math>, the result fails and we can conclude that <math id="Sx2.SS0.SSS0.Px5.p2.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> with these operations is <em class="ltx_emph">not</em> a vector space.</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px5.p3" class="ltx_para">
+<p class="ltx_p">Though this set with these operations is not a vector space, can it be that perhaps other operations would maintain the vector space structure?</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px5.p4" class="ltx_para">
+<p class="ltx_p">Consider the set</p>
+<table id="Sx3.EGx6" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex7" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex7.m1" class="ltx_Math" alttext="\displaystyle V=\left\{x|x&gt;0\right\}=\mathds{R}^{+}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM58"><mi>x</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">|</mo><mi id="XM57">x</mi><mo>&gt;</mo></mrow><mo>⁢</mo><mn>0</mn></mrow><mo>}</mo></mrow><mo>=</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For clarity, define addition <math id="Sx2.SS0.SSS0.Px5.p4.m1" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math> and scalar multiplication <math id="Sx2.SS0.SSS0.Px5.p4.m2" class="ltx_Math" alttext="\odot" display="inline"><mo>⊙</mo></math> as follows:</p>
+<table id="Sx3.EGx7" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex8" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex8.m1" class="ltx_Math" alttext="\displaystyle x\oplus y" display="inline"><mrow><mi>x</mi><mo>⊕</mo><mi>y</mi></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=xy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex9" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                  <math id="Sx2.Ex9.m1" class="ltx_Math" alttext="\displaystyle c\odot x" display="inline"><mrow><mi>c</mi><mo>⊙</mo><mi>x</mi></mrow></math>
+                </td>
+<td class="ltx_td ltx_align_left">
+                  <math id="Sx2.Ex9.m2" class="ltx_Math" alttext="\displaystyle=x^{c}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mi>x</mi><mi>c</mi></msup></mrow></math>
+                </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx2.SS0.SSS0.Px5.p4.m3" class="ltx_Math" alttext="x,y\in\mathds{R}^{+}" display="inline"><mrow><mrow><mi id="XM59">x</mi><mo>,</mo><mi id="XM60">y</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></math> (the vector space) and <math id="Sx2.SS0.SSS0.Px5.p4.m4" class="ltx_Math" alttext="c\in\mathds{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> (a scalar).</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px6" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Question:</h3>
+
+<div id="Sx2.SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx2.SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="(\mathds{R}^{+},\oplus,\odot)" display="inline"><mrow><mo stretchy="false">(</mo><msup id="XM61"><mi>ℝ</mi><mo>+</mo></msup><mo>,</mo><mo id="XM62">⊕</mo><mo>,</mo><mo id="XM63">⊙</mo><mo stretchy="false">)</mo></mrow></math> a vector space?</p>
+</div>
+<div id="Sx2.SS0.SSS0.Px6.p2" class="ltx_para">
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Closure under <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\oplus" display="inline"><mo>⊕</mo></math></p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i1.p2.m1" class="ltx_Math" alttext="x,y\in V" display="inline"><mrow><mrow><mi id="XM64">x</mi><mo>,</mo><mi id="XM65">y</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> (so <math id="I3.i1.p2.m2" class="ltx_Math" alttext="x,y&gt;0" display="inline"><mrow><mrow><mi id="XM66">x</mi><mo>,</mo><mi id="XM67">y</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>). Then</p>
+<table id="Sx3.EGx8" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex10" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex10.m1" class="ltx_Math" alttext="\displaystyle x\oplus y" display="inline"><mrow><mi>x</mi><mo>⊕</mo><mi>y</mi></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex10.m2" class="ltx_Math" alttext="\displaystyle=xy&gt;0" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore <math id="I3.i1.p2.m3" class="ltx_Math" alttext="x\oplus y\in V" display="inline"><mrow><mrow><mi>x</mi><mo>⊕</mo><mi>y</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Closure under <math id="I3.i2.p1.m1" class="ltx_Math" alttext="\odot" display="inline"><mo>⊙</mo></math></p>
+</div>
+<div id="I3.i2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i2.p2.m1" class="ltx_Math" alttext="c\in\mathds{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="I3.i2.p2.m2" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>. Then since <math id="I3.i2.p2.m3" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table id="Sx3.EGx9" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex11" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex11.m1" class="ltx_Math" alttext="\displaystyle c\odot x=x^{c}&gt;0" display="inline"><mrow><mrow><mi>c</mi><mo>⊙</mo><mi>x</mi></mrow><mo>=</mo><msup><mi>x</mi><mi>c</mi></msup><mo>&gt;</mo><mn>0</mn></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore <math id="I3.i2.p2.m4" class="ltx_Math" alttext="c\odot x\in V" display="inline"><mrow><mrow><mi>c</mi><mo>⊙</mo><mi>x</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">Zero element</p>
+</div>
+<div id="I3.i3.p2" class="ltx_para">
+<p class="ltx_p">Suppose some element <math id="I3.i3.p2.m1" class="ltx_Math" alttext="z\in V" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>V</mi></mrow></math> is the zero element. Then for any <math id="I3.i3.p2.m2" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>,</p>
+<table id="Sx3.EGx10" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex12" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex12.m1" class="ltx_Math" alttext="\displaystyle x\odot z" display="inline"><mrow><mi>x</mi><mo>⊙</mo><mi>z</mi></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex12.m2" class="ltx_Math" alttext="\displaystyle=x" display="inline"><mrow><mi></mi><mo>=</mo><mi>x</mi></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex13" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex13.m1" class="ltx_Math" alttext="\displaystyle xz" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>z</mi></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex13.m2" class="ltx_Math" alttext="\displaystyle=x" display="inline"><mrow><mi></mi><mo>=</mo><mi>x</mi></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex14" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex14.m1" class="ltx_Math" alttext="\displaystyle x(z-1)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow id="XM69"><mi>z</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex14.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <math id="I3.i3.p2.m3" class="ltx_Math" alttext="z=1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow></math> would have to be the zero element. Since <math id="I3.i3.p2.m4" class="ltx_Math" alttext="1&gt;0" display="inline"><mrow><mn>1</mn><mo>&gt;</mo><mn>0</mn></mrow></math>, thus <math id="I3.i3.p2.m5" class="ltx_Math" alttext="1\in V" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>V</mi></mrow></math> and so the zero element is in fact <math id="I3.i3.p2.m6" class="ltx_Math" alttext="z=1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">Inverse of an element</p>
+</div>
+<div id="I3.i4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i4.p2.m1" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>. Then we want some <math id="I3.i4.p2.m2" class="ltx_Math" alttext="t\in V" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>V</mi></mrow></math> such that</p>
+<table id="Sx3.EGx11" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex15" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex15.m1" class="ltx_Math" alttext="\displaystyle x\oplus t" display="inline"><mrow><mi>x</mi><mo>⊕</mo><mi>t</mi></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex15.m2" class="ltx_Math" alttext="\displaystyle=t\oplus x=z" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>t</mi><mo>⊕</mo><mi>x</mi></mrow><mo>=</mo><mi>z</mi></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I3.i4.p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is the zero vector. Remember that we have just found that <math id="I3.i4.p2.m4" class="ltx_Math" alttext="z=1" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>1</mn></mrow></math> is the zero element, rather than the usual <math id="I3.i4.p2.m5" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. Carrying out these operations, we have that</p>
+<table id="Sx3.EGx12" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex16" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex16.m1" class="ltx_Math" alttext="\displaystyle xt" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex16.m2" class="ltx_Math" alttext="\displaystyle=1" display="inline"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex17" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex17.m1" class="ltx_Math" alttext="\displaystyle t" display="inline"><mi>t</mi></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex17.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{x}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="I3.i4.p2.m6" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>, thus <math id="I3.i4.p2.m7" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, so <math id="I3.i4.p2.m8" class="ltx_Math" alttext="\frac{1}{x}&gt;0" display="inline"><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>&gt;</mo><mn>0</mn></mrow></math>. Thus <math id="I3.i4.p2.m9" class="ltx_Math" alttext="t=\frac{1}{x}\in V" display="inline"><mrow><mi>t</mi><mo>=</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>∈</mo><mi>V</mi></mrow></math>. That is, for each <math id="I3.i4.p2.m10" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>, the element <math id="I3.i4.p2.m11" class="ltx_Math" alttext="\frac{1}{x}" display="inline"><mfrac><mn>1</mn><mi>x</mi></mfrac></math> is its additive inverse.</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p">To check the axiom:</p>
+<table id="Sx3.EGx13" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex18" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex18.m1" class="ltx_Math" alttext="\displaystyle(c+d)\odot\vec{u}=c\odot\vec{u}\oplus d\odot\vec{u}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM71"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mi>c</mi><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>⊕</mo><mrow><mi>d</mi><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I3.i5.p1.m1" class="ltx_Math" alttext="c,d\in\mathds{R}" display="inline"><mrow><mrow><mi id="XM72">c</mi><mo>,</mo><mi id="XM73">d</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="I3.i5.p1.m2" class="ltx_Math" alttext="\vec{u}=x\in V" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> (so <math id="I3.i5.p1.m3" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>).</p>
+</div>
+<div id="I3.i5.p2" class="ltx_para">
+<p class="ltx_p">Starting with the left-hand side:</p>
+<table id="Sx3.EGx14" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx2.Ex19" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                        <math id="Sx2.Ex19.m1" class="ltx_Math" alttext="\displaystyle(c+d)\odot\vec{u}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM76"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></math>
+                      </td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex19.m2" class="ltx_Math" alttext="\displaystyle=(c+d)\odot x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM77"><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⊙</mo><mi>x</mi></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex20" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex20.m2" class="ltx_Math" alttext="\displaystyle=x^{c+d}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mi>x</mi><mrow><mi>c</mi><mo>+</mo><mi>d</mi></mrow></msup></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex21" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex21.m2" class="ltx_Math" alttext="\displaystyle=(x^{c})\cdot(x^{d})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><msup id="XM80"><mi>x</mi><mi>c</mi></msup><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><msup id="XM81"><mi>x</mi><mi>d</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex22" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex22.m2" class="ltx_Math" alttext="\displaystyle=(c\odot x)\cdot(d\odot x)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM84"><mi>c</mi><mo>⊙</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow id="XM85"><mi>d</mi><mo>⊙</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex23" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex23.m2" class="ltx_Math" alttext="\displaystyle=(c\odot x)\oplus(d\odot x)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow id="XM88"><mi>c</mi><mo>⊙</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⊕</mo><mrow><mo stretchy="false">(</mo><mrow id="XM89"><mi>d</mi><mo>⊙</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex24" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_left">
+                        <math id="Sx2.Ex24.m2" class="ltx_Math" alttext="\displaystyle=c\odot\vec{u}\oplus d\odot\vec{u}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>c</mi><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>⊕</mo><mrow><mi>d</mi><mo>⊙</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math>
+                      </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we arrive at the right-hand side, indicating the axiom holds.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">It turns out that this set does in fact satisfy all of the vector space axioms. With such strange operations, it brings to light that our standard vector spaces are by no means the only ones.</p>
+</div>
+</section>
+<section id="Sx2.SS0.SSS0.Px7" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Question:</h3>
+
+<div id="Sx2.SS0.SSS0.Px7.p1" class="ltx_para">
+<p class="ltx_p">Is <math id="Sx2.SS0.SSS0.Px7.p1.m1" class="ltx_Math" alttext="(V,+,\cdot)\cong(V,\oplus,\odot)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi id="XM90">V</mi><mo>,</mo><mo id="XM91">+</mo><mo>,</mo><mo id="XM92">⋅</mo><mo stretchy="false">)</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">(</mo><mi id="XM93">V</mi><mo>,</mo><mo id="XM94">⊕</mo><mo>,</mo><mo id="XM95">⊙</mo><mo stretchy="false">)</mo></mrow></mrow></math>?</p>
+</div>
+</section>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Subspaces of <math id="Sx3.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>
+</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">You may recall that all the subspaces of <math id="Sx3.p1.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> are:</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math></p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="\left\{\begin{pmatrix}0\\
+0\end{pmatrix}\right\}" display="inline"><mrow><mo>{</mo><mrow id="XM96b"><mo id="XM96">(</mo><mtable id="I4.i2.p1.m1.xm1"><mtr id="I4.i2.p1.m1.xm1a"><mtd columnalign="center" id="I4.i2.p1.m1.xm1b"><mn>0</mn></mtd></mtr><mtr id="I4.i2.p1.m1.xm1c"><mtd columnalign="center" id="I4.i2.p1.m1.xm1d"><mn>0</mn></mtd></mtr></mtable><mo id="XM96a">)</mo></mrow><mo>}</mo></mrow></math></p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">All straight lines through the origin.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">To see why this is the case, let us outline the proof:</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx3.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a subspace of <math id="Sx3.p2.m2" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>. Note that if <math id="Sx3.p2.m3" class="ltx_Math" alttext="S=\left\{\begin{pmatrix}0\\
+0\end{pmatrix}\right\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow id="XM97b"><mo id="XM97">(</mo><mtable id="Sx3.p2.m3.xm1"><mtr id="Sx3.p2.m3.xm1a"><mtd columnalign="center" id="Sx3.p2.m3.xm1b"><mn>0</mn></mtd></mtr><mtr id="Sx3.p2.m3.xm1c"><mtd columnalign="center" id="Sx3.p2.m3.xm1d"><mn>0</mn></mtd></mtr></mtable><mo id="XM97a">)</mo></mrow><mo>}</mo></mrow></mrow></math>, then <math id="Sx3.p2.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is indeed a subspace. Otherwise, let <math id="Sx3.p2.m5" class="ltx_Math" alttext="\vec{u}\in S" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><mi>S</mi></mrow></math> such that <math id="Sx3.p2.m6" class="ltx_Math" alttext="\vec{u}\neq\vec{0}" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>≠</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></math>. Then since <math id="Sx3.p2.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a subspace, thus <math id="Sx3.p2.m8" class="ltx_Math" alttext="c\vec{u}\in S" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mi>S</mi></mrow></math> for all <math id="Sx3.p2.m9" class="ltx_Math" alttext="c\in\mathds{R}" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Thus it contains the straight line along <math id="Sx3.p2.m10" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> that passes through the origin.</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.p3.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> has no other vector, then <math id="Sx3.p3.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is simply that straight line. Otherwise, assume there exists some non-zero <math id="Sx3.p3.m3" class="ltx_Math" alttext="\vec{v}\in S" display="inline"><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><mi>S</mi></mrow></math> that is linearly independent of <math id="Sx3.p3.m4" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math>.</p>
+</div>
+<div id="Sx3.p4" class="ltx_para">
+<p class="ltx_p">Note then that <math id="Sx3.p4.m1" class="ltx_Math" alttext="\text{span}\left\{\vec{u},\vec{v}\right\}=\mathds{R}^{2}" display="inline"><mrow><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo>{</mo><mover accent="true" id="XM98"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" id="XM99"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> (Why?)
+∎</p>
+</div>
+</div>
+<div id="Sx3.p5" class="ltx_para">
+<p class="ltx_p">The above proof is not quite complete. The question is why we can gaurantee that <math id="Sx3.p5.m1" class="ltx_Math" alttext="\text{span}\left\{\vec{u},\vec{v}\right\}=\mathds{R}^{2}" display="inline"><mrow><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo>{</mo><mover accent="true" id="XM100"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true" id="XM101"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>}</mo></mrow></mrow><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>?</p>
+</div>
+<div id="Sx3.p6" class="ltx_para">
+<p class="ltx_p">What this amounts to is whether for any vector <math id="Sx3.p6.m1" class="ltx_Math" alttext="\vec{w}\in\mathds{R}^{2}" display="inline"><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> there exist some scalars <math id="Sx3.p6.m2" class="ltx_Math" alttext="c_{1},c_{2}\in\mathds{R}" display="inline"><mrow><mrow><msub id="XM102"><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub id="XM103"><mi>c</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> such that</p>
+<table id="Sx3.EGx15" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex25" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex25.m1" class="ltx_Math" alttext="\displaystyle c_{1}\vec{u}+c_{2}\vec{v}" display="inline"><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math>
+              </td>
+<td class="ltx_td ltx_align_left">
+                <math id="Sx3.Ex25.m2" class="ltx_Math" alttext="\displaystyle=\vec{w}" display="inline"><mrow><mi></mi><mo>=</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is a linear system with corresponding augmented matrix looking like:</p>
+<table id="Sx3.EGx16" class="ltx_equationgroup ltx_eqn_align">
+
+<tr id="Sx3.Ex26" class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right">
+                <math id="Sx3.Ex26.m1" class="ltx_Math" alttext="\displaystyle\begin{bmatrix}\uparrow&amp;\uparrow&amp;\uparrow\\
+\vec{u}&amp;\vec{v}&amp;\vec{w}\\
+\downarrow&amp;\downarrow&amp;\downarrow\end{bmatrix}" display="inline"><mrow><mo>[</mo><mtable id="Sx3.Ex26.m1.xm1"><mtr id="Sx3.Ex26.m1.xm1a"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1b"><mo>↑</mo></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1c"><mo>↑</mo></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1d"><mo>↑</mo></mtd></mtr><mtr id="Sx3.Ex26.m1.xm1e"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1f"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1g"><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1h"><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mtd></mtr><mtr id="Sx3.Ex26.m1.xm1i"><mtd columnalign="center" id="Sx3.Ex26.m1.xm1j"><mo>↓</mo></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1k"><mo>↓</mo></mtd><mtd columnalign="center" id="Sx3.Ex26.m1.xm1l"><mo>↓</mo></mtd></mtr></mtable><mo>]</mo></mrow></math>
+              </td>
+<td class="ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="Sx3.p6.m3" class="ltx_Math" alttext="\vec{u}\neq c\vec{v}" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>≠</mo><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math>, that is, they are linearly independent, then the coefficient matrix portion of this augmented matrix is invertible. Thus its columns will span <math id="Sx3.p6.m4" class="ltx_Math" alttext="\mathds{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Jun  3 22:04:36 2017 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

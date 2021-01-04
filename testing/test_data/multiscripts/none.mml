@@ -1,0 +1,15 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{}_{{b}}X^{{c}}">
+    <mmultiscripts>
+
+
+        <mi>X</mi>      <!-- base expression -->
+
+        <none/>
+        <mi>c</mi>      <!-- postsuperscript -->
+
+        <mprescripts />
+        <mi>b</mi>      <!-- presubscript -->
+        <none/>
+
+    </mmultiscripts>
+</math>

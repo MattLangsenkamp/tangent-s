@@ -1,0 +1,411 @@
+\documentclass[11pt]{article}
+\usepackage{aahomework}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%\tikzstyle{blanknode}=[circle,inner sep=3pt,minimum size =8pt,draw,line width=0.8pt]
+%\tikzstyle{blk}=[circle,inner sep=0pt,minimum size =4pt,draw,fill=black,line width=0.8pt]
+%
+%\geometry{letterpaper, textwidth=17cm, textheight=22cm}
+
+%\usetikzlibrary{arrows}
+%\usetikzlibrary{plotmarks}
+
+\newcommand{\ques}{\paragraph{Question:}}
+\newcommand{\keyphrase}{\textbf}
+\newcommand{\boxit}[2]{\textcolor{#1}{\boxed{\textcolor{black}{#2}}}}
+
+\title{Lecture 5}
+\author{A. Agarwal}
+\date{January 17, 2012}
+
+
+\begin{document}
+%\maketitle
+
+\section*{Linear Span of a set of vectors}
+
+If we have a collection of vectors, and within that space we pick a vector, we want to know the \emph{span} of that vector. Geometrically, this is what we can reach by moving along the vector.
+
+If we next consider the span of two vectors, then their span contains everything we can reach by moving along either vector, but also those points that can be reached through a combination of the two vectors.
+
+The difference between the span of one vector and the span of two vectors is significant; in the first case it is a line, and in the second it is a plane. Depending on the space they are in, this might account for the entire space.
+
+This geometric interpretation is useful but we wish to understand this concept algebraically as well.
+
+Suppose we are working in an $n$-dimensional space, and we have a set $S$ of $k$ vectors:
+\begin{align*}
+\text{Space: } & \bbR^n
+&
+S &= \left\{ \vec{v_1}, \vec{v_2}, \dots, \vec{v_k} \right\}
+\end{align*}
+What exactly is the linear span of $S$?
+
+Intuitively, we have an idea of this concept: given all of these vectors along which we can travel, what places can be visited in the space? Can all points be visited or is it limited? In what way is it limited?
+
+Suppose, for instance, that we are dealing with the space $\bbR^3$. This space is similar to a room, so perhaps the vectors that we are given all lie on the floor of such a room. Then the span of those vectors would be restricted to the floor. No points above the floor can be reached by vectors lying in the floor. Thus the span of these vectors is confined to a plane. Formally: two vectors in the $xy$-plane may be able to span the entire $xy$-plane.
+
+Is the use of the phrase ``may be'' necessary here, or is it always the case that two vectors in the $xy$-plane will span the entire $xy$-plane? Consider a specific example: suppose the two vectors are
+\begin{align*}
+v_1 = \begin{bmatrix}1\\0\\0\end{bmatrix}
+&&
+v_2 = \begin{bmatrix}-3\\0\\0\end{bmatrix}
+\end{align*}
+Both vectors are aligned with the $x$-axis, so in this case their span is only a single line.
+
+%\begin{tikzpicture}
+%\clip (-2,-1) -- (-1,4) -- (4,4) -- (4,-1) -- cycle;
+%\draw[shorten >= -2cm, shorten <= -2cm] (0,0) to (3,1);
+%\draw[->,>=triangle 60] (0,0) to (3,1);
+%\node at (1,0) {$v_1$};
+%
+%\draw[->,>=triangle 60] (0,0) to (1,2);
+%\node at (0,1) {$v_2$};
+%\end{tikzpicture}
+
+
+Some key questions that we may ask ourselves now are:
+\ques Given a set of vectors describe geometric and algebraic picture of the span.
+
+\ques Given a vector $w$, does it lie in the span of $S$?
+
+\ques How many vectors are required to span $\bbR^n$? What is the \emph{minimum number} needed?
+
+First, let us introduce the definition of linear span.
+
+\begin{minipage}[t]{.95\textwidth}
+Let $S = \left\{ v_1, v_2, \dots, v_k \right\} \in \bbR^n$. The \keyphrase{linear span} $L(S)$ of the set of vectors $S$ is
+\begin{align*}
+L(S) &= \left\{ w \in \bbR^n \,|\, w = \text{linear combination of vectors in $S$} \right\}
+\\
+&= \text{collection of all possible linear combinations of vectors in $S$}
+\end{align*}
+\end{minipage}
+
+
+This is a very loaded definition, in particular, the phrase \keyphrase {linear combination} has a very precise meaning. We say that a vector $w$ is a linear combination of vectors in $S$ if
+\begin{align*}
+w &= c_1 v_1 + c_2 v_2 + \dots + c_k v_k \qquad c_i = \text{scalars from $\bbR$}
+\end{align*}
+
+\vspace{1cm}
+
+To explore these ideas, let us consider a familiar space: $\bbR^2$.
+
+Suppose we are given one vector. What is the linear span in this case?
+\begin{align*}
+S = \left\{ \vec{v_1} \right\}
+&&
+L(S) = \left\{ c \vec{v_1} \,|\, c \in \bbR \right\}
+\end{align*}
+In this case, the linear span is a line. This is the algebraic picture of the span. Geometrically, the span is a line in the direction of $\vec{v_1}$. But there are many lines in any given direction -- in fact, there are infinitely many.  Which one is the span? Considering that we can pick any value for the scalar $c$, we can pick $c=0$, and so the point $0 \vec{v_1} = \vec{0}$ is on the line. This means it must be the line in the direction of $\vec{v_1}$ through the origin.
+
+\begin{figure}[H]
+\centering
+$(0,0)$
+\end{figure}
+
+Next, consider if the set contains two vectors. Then
+\begin{align*}
+S = \left\{ v_1, v_2 \right\}
+&&
+L(S) = \left\{ c_1 v_1 + c_2 v_2 \,|\, c_1, c_2 \in \bbR \right\}
+\end{align*}
+How can we interpret this geometrically and algebraically? There are two cases to consider: if the two vectors are pointing in different directions, then their combinations will allow us to reach any point, so the span is the entire plane. If, on the other hand, the vectors point in the same direction, then their span will simply be a line -- \emph{the} line -- that they both point in.
+
+\begin{figure}[H]
+\centering
+{$v_1$}
+{$v_2$}
+$(0,0)$
+\end{figure}
+
+Next let us consider the case where we have a set of three vectors. For this case, let us consider a specific example.
+\begin{align*}
+S = \left\{ \begin{pmatrix}1\\0\end{pmatrix}, \begin{pmatrix}0\\1\end{pmatrix}, \begin{pmatrix}2\\3\end{pmatrix} \right\}
+\end{align*}
+Then the span is given algebraically by
+\begin{align*}
+L(S) = \left\{ c_1 \begin{pmatrix}1\\0\end{pmatrix} + c_2 \begin{pmatrix}0\\1\end{pmatrix} + c_3 \begin{pmatrix}2\\3\end{pmatrix} \,|\, c_1, c_2, c_3 \in \bbR \right\}
+\end{align*}
+This isn't very helpful for understanding the span. What is its geometric interpretation in this case?
+
+None of the vectors point in the same direction, so no matter which two we choose, we could travel the entire $\bbR^2$ space using only those two vectors. In a sense then, the third vector does not add anything to the span.
+
+\begin{figure}[H]
+\centering
+
+{$v_1$}
+{$v_2$}
+{$v_3$}
+
+$(0,0)$
+\end{figure}
+
+\vspace{1cm}
+
+These geometric and algebraic analyses are important to understanding a given set of vectors, but there must be some way of simplifying this process in order for it to be useful.
+
+Before going on, let us note some things we have observed in the span:
+\begin{enumerate}
+\item{
+The zero-vector is always in the linear span. That is, $\vec{0} \in L(S)$.
+}
+\item{
+$L(S)$ usually contains infinitely many vectors.
+}
+\end{enumerate}
+
+Is it true to say that $L(S)$ \emph{always} contains infinitely many vectors? That is, we should answer the question of:
+
+\ques Can the linear span be finite?
+
+Let us consider the simplest case: suppose $S$ contains one vector. Is it possible that the span of $S$ may be finite?
+\begin{align*}
+S = \left\{ \vec{v_1} \right\}
+&&
+L(S) = \left\{ c \vec{v_1} \,|\, c \in \bbR \right\}
+\end{align*}
+It would seem that since we can pick any $c \in \bbR$, we can obtain infinitely many vectors. However, there is one exception. Suppose $\vec{v_1} = \vec{0}$. Then
+\begin{align*}
+L(S) &= \left\{ c \vec{v_1} \,|\, c \in \bbR \right\}
+\\
+&= \left\{ c \vec{0} \,|\, c \in \bbR \right\}
+\\
+&= \left\{ \vec{0} \right\}
+\end{align*}
+Thus if the set of vectors contains just the zero vector, its span will be only the zero vector.
+
+
+\subsection*{Determining if a Vector is in the Span of a Set of Vectors}
+
+It is natural to wonder what this has to do with solving linear systems. What is the connection between linear systems and the concept of linear span? Let us try an example.
+\begin{align*}
+S = \left\{ \begin{pmatrix}1\\3\end{pmatrix}, \begin{pmatrix}-2\\0\end{pmatrix} \right\}
+\end{align*}
+\ques Is $w = \begin{pmatrix}\pi \\ e\end{pmatrix} \in L(S)$?
+
+Can we find $c_1, c_2 \in \bbR$ such that
+\begin{align*}
+w &= c_1 \begin{pmatrix}1\\3\end{pmatrix} + c_2 \begin{pmatrix}-2\\0\end{pmatrix}
+\end{align*}
+this system becomes
+\begin{align*}
+\begin{bmatrix}\pi \\ e\end{bmatrix} &=
+c_1 \begin{bmatrix}1\\3\end{bmatrix} +
+c_2 \begin{bmatrix}-2\\0\end{bmatrix}
+\quad\Longleftrightarrow\quad
+\left\{
+\begin{aligned}
+\pi &= c_1 - 2 c_2
+\\
+e &= 3 c_1
+\end{aligned}
+\right\}
+\end{align*}
+Note that the set up we have for the linear span is simply the \emph{column picture} of a system of equations.
+
+We will see soon that many of the concepts that we have studied so far will now be tied together. Checking whether a vector is in the span of a set of vectors is equivalent to solving a system of linear equations, for example. In the current example, we should proceed with solving the system using augmented matrices and row operations:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & -2 & \pi
+\\
+3 & 0 & e
+\end{matrix}
+\right]
+\xrightarrow[]{-3R_1 + R_2}
+\left[
+\begin{matrix}
+1 & -2 & \pi
+\\
+0 & 6 & e-3\pi
+\end{matrix}
+\right]
+\end{align*}
+After reducing the matrix, we find that
+\begin{enumerate}
+\item{
+This is echelon form.
+}
+\item{
+The rank is $2$.
+}
+item{
+There is no pivot in the rightmost column, so it is consistent.
+}
+\end{enumerate}
+Thus this vector is in the span, since the system has consistent solutions.
+
+This still doesn't tell us exactly how to achieve the desired vector $\begin{pmatrix}\pi \\ e\end{pmatrix}$. That is, we still need to find exactly what values of $c_1, c_2$ produce the desired linear combination. To obtain $c_1,c_2$, we convert the augmented matrix back into a system of equations:
+\begin{align*}
+\left.
+\begin{aligned}
+c_1 - 2 c_2 &= \pi
+\\
+6 c_2 &= e - 3\pi
+\end{aligned}
+\right\}
+\qquad
+\Longrightarrow
+\qquad
+\begin{aligned}
+c_2 &= \frac{e - 3\pi}{6}
+\\
+c_1 &= \pi + 2 c_2
+\\
+&= \pi + \frac{e-3\pi}{3}
+\\
+&= \frac{e}{3}
+\end{aligned}
+\end{align*}
+This tells us that
+\begin{align*}
+\begin{pmatrix}\pi\\e\end{pmatrix}
+= c_1 \begin{pmatrix}1\\3\end{pmatrix} + c_2 \begin{pmatrix}-2\\0\end{pmatrix}
+= \frac{e}{3} \begin{pmatrix}1\\3\end{pmatrix} + \frac{e - 3\pi}{6} \begin{pmatrix}-2\\0\end{pmatrix}
+\end{align*}
+
+\subsection*{Finding the Entire Linear Span}
+
+If we swap out the vector $\begin{pmatrix}\pi\\e\end{pmatrix}$ for some other vector we can follow a similar procedure. We would proceed with reducing the augmented matrix, finding its rank and checking for consistency. If it were consistent, then the vector would be in the span and we could determine the values of the coefficients. If it were inconsistent, then we would know that the vector is not in the span.
+
+A natural next question to ask is -- if we can check whether any given vector is in the span, is there some way of determining the entire span? What will the span look like geometrically?
+
+\ques What is the span of $S$?
+\begin{align*}
+S = \left\{ \begin{pmatrix}1\\3\end{pmatrix}, \begin{pmatrix}-2\\0\end{pmatrix} \right\}
+\end{align*}
+
+First, we can say that since both vectors come from $\bbR^2$, vectors in their span must also be from $\bbR^2$.
+
+Instead of asking what the values of $c_1,c_2$ should be for a given vector, we can instead ask: which vectors are in the span? That is, which vectors can be written as a linear combination of $\begin{pmatrix}1\\3\end{pmatrix}$ and $\begin{pmatrix}-2\\0\end{pmatrix}$?
+
+We can answer this question in a way similar to the previous example. The setup will be nearly the same, but instead of testing whether a specific vector will be in the span, we will keep the form of that vector general:
+\begin{align*}
+c_1 \begin{bmatrix}1\\3\end{bmatrix} + c_2 \begin{bmatrix}-2\\0\end{bmatrix} = \begin{bmatrix}b_1\\b_2\end{bmatrix}
+\end{align*}
+
+Now, the question we are concerned with is: what are those $b_1, b_2$ for which the system is consistent?
+\begin{align*}
+\left[
+\begin{matrix}
+1 & -2 & b_1
+\\
+3 & 0 & b_2
+\end{matrix}
+\right]
+\to
+\left[
+\begin{matrix}
+1 & -2 & b_1
+\\
+0 & 6 & b_2 - 3 b_1
+\end{matrix}
+\right]
+\end{align*}
+We find that the properties of this augmented matrix are similar to those of the previous example:
+\begin{enumerate}
+\item{
+This is echelon form.
+}
+\item{
+The rank is $2$.
+}
+item{
+There is no pivot in the rightmost column, since no matter the value of $b_2 - 3 b_1$, there is a $6$ in the column to the left of it.
+}
+\item{
+Thus the system is consistent for any values of $b_1, b_2$, so $L(S) = \bbR^2$.
+}
+\end{enumerate}
+This tells us that no matter the values of $b_1$ and $b_2$, we can always find $c_1, c_2$ to form a linear combination with the given vectors. Thus the vector $\begin{pmatrix}b_1\\b_2\end{pmatrix}$ is in the span for any $b_1,b_2$, so $L(S) = \bbR^2$. That is, the span is the entire space of $\bbR^2$.
+
+
+\subsection*{Another Example of Linear Span}
+
+This will not always be the case. Let us try this with another example to see how things might change.
+
+Suppose we have the same vectors as before, but we also have the vector $\begin{pmatrix}3\\10\end{pmatrix}$:
+\begin{align*}
+S = \left\{ \begin{pmatrix}1\\3\end{pmatrix}, \begin{pmatrix}-2\\0\end{pmatrix}, \begin{pmatrix}3\\10\end{pmatrix} \right\}
+\end{align*}
+Suppose we still want to know whether any given vector is in the span. Thinking about it, it is apparent that since we could achieve any vector with just the first two vectors, we will still be able to with an added vector. We can simply let the coefficient of the new vector be zero:
+\begin{align*}
+\begin{pmatrix}\pi\\e\end{pmatrix}
+= c_1 \begin{pmatrix}1\\3\end{pmatrix} +
+c_2 \begin{pmatrix}-2\\0\end{pmatrix} + 
+0 \begin{pmatrix}3\\10\end{pmatrix}
+\end{align*}
+and find $c_1$ and $c_2$ using the procedure from the last example.
+
+If we want to show this from scratch with a similar procedure as before, we would set it up in the same way:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & -2 & 3 & b_1
+\\
+3 & 0 & 10 & b_2
+\end{matrix}
+\right]
+\longrightarrow
+\left[
+\begin{matrix}
+1 & -2 & 3 & b_1
+\\
+0 & 6 & 1 & b_2 - 3b_1
+\end{matrix}
+\right]
+\end{align*}
+We still have that the matrix has two pivots and is of rank $2$, but we also have a third column which is in this case a free column. Thus, the system has a free variable. It is also consistent, and so it has infinitely many solutions. Thus the desired vector can be written as a linear combination of the three vectors in infinitely many ways. This is very different from the previous case in which there was one unique way to represent the desired vector.
+
+\subsection*{A Different Case for the Span}
+
+Suppose we have a set of vectors, $S$:
+\begin{align*}
+S = \left\{ \begin{pmatrix}1\\3\end{pmatrix}, \begin{pmatrix}-3\\-9\end{pmatrix} \right\}
+\end{align*}
+
+What is $L(S)$? That is, if we write the system as an augmented matrix:
+\begin{align*}
+\left[
+\begin{matrix}
+1 & -3 & b_1
+\\
+3 & -9 & b_2
+\end{matrix}
+\right]
+\end{align*}
+which righthand side vectors $\begin{pmatrix}b_1\\b_2\end{pmatrix}$ will make the system consistent?
+
+Performing the appropriate row operations, we find that
+\begin{align*}
+\left[
+\begin{matrix}
+1 & -3 & b_1
+\\
+3 & -9 & b_2
+\end{matrix}
+\right]
+\longrightarrow
+\left[
+\begin{matrix}
+1 & -3 & b_1
+\\
+0 & 0 & b_2 - 3 b_1
+\end{matrix}
+\right]
+\end{align*}
+In this case, the properties of the augmented matrix are not so obvious. In particular, the status of whether there is a pivot in the rightmost column depends on the choice of $b_1$ and $b_2$. For consistency, we must have that $b_2 - 3 b_1$ does not become a pivot. Thus we need $b_2 - 3b_1 = 0$, so $b_1 = b_2/3$ for the vector $\begin{pmatrix}b_1\\b_2\end{pmatrix}$ to be in the span.
+
+This gives a criterion for vectors to be in the span:
+\begin{align*}
+L(S) = \left\{ \begin{pmatrix}b_1\\b_2\end{pmatrix} | b_2 - 3 b_1 = 0 \right\}
+\end{align*}
+Geometrically, this has a very nice representation. It is a line in $\bbR^2$ passing through the origin.
+
+\end{document}

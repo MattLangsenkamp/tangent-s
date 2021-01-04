@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="\begin{Bmatrix}1&amp;2&amp;3\end{Bmatrix}" display="block">
+  <mrow>
+    <mo>{</mo>
+    <mtable rowspacing="0.2ex" columnspacing="0.4em">
+      <mtr>
+        <mtd columnalign="center">
+          <mn>1</mn>
+        </mtd>
+        <mtd columnalign="center">
+          <mn>2</mn>
+        </mtd>
+        <mtd columnalign="center">
+          <mn>3</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo>}</mo>
+  </mrow>
+</math>

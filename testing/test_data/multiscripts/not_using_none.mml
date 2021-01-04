@@ -1,0 +1,10 @@
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" alttext="{}^{{X}}A">>
+    <mmultiscripts>
+        <mi mathvariant="normal">A</mi>
+        <mprescripts/>
+        <none/>
+        <mi mathvariant="normal">X</mi>
+    </mmultiscripts>
+
+</math>

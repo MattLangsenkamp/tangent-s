@@ -1,0 +1,148 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{aahomework}[2012/07/10]%%format yyyy/dd/mm
+
+\RequirePackage{amsbsy,amsmath,amsfonts,amsthm,dsfont,latexsym,amssymb,alltt,array}
+\RequirePackage{enumitem} %for use in list,enumerate environments
+\RequirePackage{pstricks,soul,colortbl,color}
+\RequirePackage{fancyhdr,bbding,stmaryrd}
+\RequirePackage{graphicx,pgfpages,tikz}
+\RequirePackage{fancybox,Tabbing}
+%\RequirePackage{cancel,framed}
+\RequirePackage{geometry,caption,wrapfig}
+%\RequirePackage{fullpage} %% it sets the text height and width and the margins such that the page is almost full. It only leaves a uniform margin on all four sides.%%
+%\RequirePackage{auto-pst-pdf}%%added to make pdftex compiler work
+\RequirePackage{shortlst} %%to creat lists, enumerate, itemize in a horizonatl setting http://tug.org/tutorials/tugindia/chap13-scr.pdf
+\RequirePackage{multienum} %% to create lists like for solutions manual http://tug.org/tutorials/tugindia/chap13-scr.pdf
+\RequirePackage{etex} %%provides lots of additional features for package writers such as an increased number of registers. This should be used before the following line where booktabs package is used
+%% it has other uses as well http://tex.stackexchange.com/questions/2047/what-are-benefits-of-e-tex-for-latex-users
+\RequirePackage{booktabs,ctable}%%this package provides commands like \toprule \bottomrule \midrule for putting lines in tables instead of \hline http://www.tug.org/pracjourn/2007-1/mori/mori.pdf
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bO}{\mathbf{0}}
+\newcommand{\bbZ}{\mathds{Z}}
+\newcommand{\bbR}{\mathds{R}}
+\newcommand{\mcR}{\mathcal{R}}%%for rings
+\newcommand{\mcS}{\mathcal{S}}%%for rings
+\newcommand{\bbN}{\mathds{N}}
+\newcommand{\bbQ}{\mathds{Q}}
+\newcommand{\bbC}{\mathds{C}}
+\newcommand{\polyZ}[1][x]{\mathds{Z}\left[#1\right]} %%for polynomial ring over integers
+\newcommand{\bbZw}{\mathds{Z}[\omega]} %% eisenstein integers
+\newcommand{\bbZi}{\mathds{Z}[i]} %%gaussian integers
+\newcommand{\bbZp}{\mathds{Z}_p} %%prime field
+\newcommand{\bbF}{\mathds{F}} %%field
+\newcommand{\abs}[1]{\lvert #1 \rvert} %%for absolute value sign, better than ||
+\newcommand{\norm}[1]{\lVert #1 \rVert} %% for norms, better than || ||
+\newcommand{\ndv}{\mathbin\nmid} %% for non divisible, \mathbin adds space before and after the symbol
+\newcommand{\dv}{\mathbin\mid} %% for divide also \mathbin makes it binary symbol
+\newcommand{\iso}{\cong} %%isomorphism
+\newcommand{\niso}{\ncong} %%not isomorphic
+\newcommand{\power}[1][]{\mathcal{P}(#1)} %%power set
+\newcommand{\rel}[1][R]{\ensuremath{\mathcal{#1}}}
+\newcommand{\nZ}[1][n]{\ensuremath{\mathds{Z}/#1\mathds{Z}}}  %%quotient Z over nZ
+\newcommand{\Zn}[1][p]{\mathds{Z}_{#1}}
+\newcommand{\cyc}[1][]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\Id}[1][]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\Ker}[1][]{\ensuremath{\text{Ker}(#1)}}
+\newcommand{\floor}[1][]{\ensuremath{\left\lfloor #1 \right\rfloor}}
+\newcommand{\ceil}[1][]{\ensuremath{\left\lceil #1 \right\rceil}}
+\newcommand{\xvec} {\mathbf{x}_{1}, \mathbf{x}_{2}, \ldots , \mathbf{x}_{n}}
+\newcommand{\yvec} {\mathbf{y}_{1}, \mathbf{y}_{2}, \ldots , \mathbf{y}_{n}}
+\newcommand{\vvec} {\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots , \mathbf{v}_{m}}
+\newcommand{\Sstirl}[2][n]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}} %%second stirling number
+\newcommand{\Fstirl}[2][n]{\genfrac{[}{]}{0pt}{}{#1}{#2}} %%first stirling number
+\newcommand{\prob}[1][]{\ensuremath{\textsf{Pr}[#1]}}
+\newcommand{\legen}[2][p]{\ensuremath{\left(\frac{#2}{#1}\right)}} %%Legendre symbol
+\newcommand{\fCF}[2][n]{[#2_{0};#2_{1},#2_{2}, \ldots #2_{#1}]} %%(finite continued fractions)
+\newcommand{\iCF}[1][a]{[#1_{0};#1_{1},#1_{2}, \ldots]} %%(infinite continued fractions)
+
+
+%%crypto related commands
+\newcommand{\Fp}[1][p]{\mathds{F}_{#1}}
+\newcommand{\Fps}[1][p]{\mathds{F}_{#1}^{\ast}}
+\newcommand{\mcK}{\mathcal{K}} %key space
+\newcommand{\mcM}{\mathcal{M}} % message space
+\newcommand{\mcC}{\mathcal{C}} % ciphertext space
+\newcommand{\mcE}{\mathcal{E}} % space of encryption functions
+\newcommand{\mcD}{\mathcal{D}} % space of decryption functions
+\newcommand{\Zns}[1]{\mathds{Z}_{#1}^{\ast}}
+
+
+%%\genfrac{leftbracket}{rightbracket}{linethickness}{style}{numerator}{denominator}
+%% \newenvironment{nam}[args]{begdef}{enddef}
+
+%These make formatting your homework a little easier.
+\newenvironment{problem}[1]{\noindent\textbf{Problem #1}.}{\vskip 6pt}
+\newenvironment{solution}{\noindent\textsf{\blue \fbox{Solution: }}}{\vskip 12pt}
+%\theoremstyle{remark}
+%\newtheorem*{solution}{Solu:}
+\newenvironment{enumalph}{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\alph{enumi})}}}{\end{enumerate}}
+\newenvironment{enumroman}{\begin{enumerate}\renewcommand{\labelenumi}{\textnormal{(\roman{enumi})}}}{\end{enumerate}}
+\newenvironment{subenumalph}{\begin{enumerate}\renewcommand{\labelenumii}{\textnormal{(\alph{enumii})}}}{\end{enumerate}}
+\newenvironment{subenumroman}{\begin{enumerate}\renewcommand{\labelenumii}{\textnormal{(\roman{enumii})}}}{\end{enumerate}}
+
+%\newcommand{\question}[1]{\vskip 12pt \noindent {\bf Ques(#1).\ }}
+%\newcommand{\subexercise}{\vskip 6pt \noindent }
+%\newcommand{\solution}{\par \noindent {\bf Answer:}\ }
+%\newcommand{\theproof}{\par \noindent {\bf Proof:}\ }
+
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\inn}{Inn}
+\DeclareMathOperator{\Deg}{Deg}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\Hom}{Hom}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem*{main}{Main Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{define}{Definition}
+\theoremstyle{remark}
+\newtheorem*{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{remark}
+\newtheorem{example}{\textbf{Example}}%[section]
+
+%% see ftp://indian.cse.msu.edu/pub/mirrors/CTAN/macros/latex/contrib/fancybox/fancybox.pdf for explanation
+\newenvironment{quesbox}[1][14cm]{\begin{Sbox}\begin{minipage}{#1}}{\end{minipage}\end{Sbox}\fbox{\TheSbox}\par \vspace*{0.7cm}\textbf{Solu:}\par}
+
+
+%% If you put the following lines into your document preamble the pmatrix, bmatrix, vmatrix, Bmatrix, Vmatrix etc.
+%% environments will accept an optional parameter. If you don’t provide this parameter those
+%% environments will work like usual.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topics xmlns="http://ntcir-math.nii.ac.jp/" xmlns:m="http://www.w3.org/1998/Math/MathML">
+
+  <topic>
+    <num>NTCIR11-Math-28</num>
+    <query>
+      <formula id="f1.0">
+        <m:math>
+          <m:semantics xml:id="m40.1a" xref="m40.1.pmml">
+            <m:apply xml:id="m40.1.3" xref="m40.1.3.pmml">
+              <m:csymbol cd="ambiguous" xml:id="m40.1.3.1">superscript</m:csymbol>
+              <m:ci xml:id="m40.1.1" xref="m40.1.1.pmml">normal-Φ</m:ci>
+              <m:cn type="integer" xml:id="m40.1.2.1" xref="m40.1.2.1.pmml">4</m:cn>
+            </m:apply>
+            <m:annotation-xml encoding="MathML-Presentation" xml:id="m40.1.pmml" xref="m40.1">
+              <m:msup xml:id="m40.1.3.pmml" xref="m40.1.3">
+                <m:mi mathvariant="normal" xml:id="m40.1.1.pmml" xref="m40.1.1">Φ</m:mi>
+                <m:mn xml:id="m40.1.2.1.pmml" xref="m40.1.2.1">4</m:mn>
+              </m:msup>
+            </m:annotation-xml>
+            <m:annotation encoding="application/x-tex" xml:id="m40.1b" xref="m40.1.pmml">\Phi^{4}</m:annotation>
+          </m:semantics>
+        </m:math>
+      </formula>
+      <keyword id="w1.0">Quantum</keyword>
+      <keyword id="w1.1">Field</keyword>
+      <keyword id="w1.2">Theory</keyword>
+    </query>
+    
+  </topic>
+ </topics>
