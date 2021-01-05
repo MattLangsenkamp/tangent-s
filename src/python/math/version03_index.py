@@ -4,11 +4,11 @@ import csv
 import socket
 import time
 
-from TangentS.utility.control import Control
-from TangentS.text import text_engine_client as tec
-from TangentS.ranking.query import Query
-from TangentS.utility.text_query import TQuery
-from TangentS.utility.comp_query import CompQuery
+from src.python.utility.control import Control
+from src.python.text import text_engine_client as tec
+from src.python.ranking.query import Query
+from src.python.utility.text_query import TQuery
+from src.python.utility.comp_query import CompQuery
 from .math_document import MathDocument
 
 MAX_UNCOMMITED = 1000

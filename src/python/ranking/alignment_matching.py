@@ -6,13 +6,13 @@ from .matching_result import MatchingResult
 from .scoring_helper import ScoringHelper
 from .wildcard_alignment import WildcardAlignment
 
-from TangentS.math.math_symbol import MathSymbol
-from TangentS.math.layout_symbol import LayoutSymbol
-from TangentS.math.semantic_symbol import SemanticSymbol
+from src.python.math.layout_symbol import LayoutSymbol
+from src.python.math.semantic_symbol import SemanticSymbol
 
 # =========================================================
 #  Helper class with alignment-based matching functions
 # =========================================================
+
 
 class AlignmentMatching:
     OPTComb_none = 0            # Match without considering combinations (original order)

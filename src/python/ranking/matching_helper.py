@@ -3,8 +3,8 @@ from .scoring_helper import ScoringHelper
 from .alignment_matching import AlignmentMatching
 from .pairs_matching import PairsMatching
 from .matching_result import MatchingResult
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.math.math_symbol import MathSymbol
+from src.python.math.symbol_tree import SymbolTree
+from src.python.math.math_symbol import MathSymbol
 
 class MatchingHelper:
     MatchingPairs = 1

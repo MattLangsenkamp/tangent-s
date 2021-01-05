@@ -1,5 +1,5 @@
 
-from TangentS.math.math_symbol import MathSymbol
+from src.python.math.math_symbol import MathSymbol
 
 class MatchingResult:
     def __init__(self):

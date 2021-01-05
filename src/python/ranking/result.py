@@ -2,9 +2,9 @@ __author__ = 'KMDC'
 
 import xml
 import io
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.math.layout_symbol import LayoutSymbol
-from TangentS.math.math_extractor import MathExtractor
+from src.python.math.symbol_tree import SymbolTree
+from src.python.math.layout_symbol import LayoutSymbol
+from src.python.math.math_extractor import MathExtractor
 
 class Result:
     def __init__(self, query, expression, original_ranking, original_score, mathml=None, operator=False):

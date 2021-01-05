@@ -24,9 +24,9 @@
 
 __author__ = 'KDavila'
 
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
-from TangentS.math.math_extractor import MathExtractor
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
+from src.python.math.math_extractor import MathExtractor
 
 
 class MathMLCache:

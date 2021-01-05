@@ -9,15 +9,15 @@ import csv
 import pickle
 import re # RZ - ARQMath
 
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.math.layout_symbol import LayoutSymbol
-from TangentS.math.semantic_symbol import SemanticSymbol
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.math.mathml import MathML
-from TangentS.ranking.alignment import Alignment
-from TangentS.ranking.result import Result
-from TangentS.ranking.document_rank_info import DocumentRankInfo
-from TangentS.ranking.constraint_info import ConstraintInfo
+from src.python.math.symbol_tree import SymbolTree
+from src.python.math.layout_symbol import LayoutSymbol
+from src.python.math.semantic_symbol import SemanticSymbol
+from src.python.math.math_extractor import MathExtractor
+from src.python.math.mathml import MathML
+from src.python.ranking.alignment import Alignment
+from src.python.ranking.result import Result
+from src.python.ranking.document_rank_info import DocumentRankInfo
+from src.python.ranking.constraint_info import ConstraintInfo
 
 class Query:
     HTML_ResultColumns = 3

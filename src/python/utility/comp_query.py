@@ -3,13 +3,13 @@ __author__ = 'FWTompa'
 
 import os
 
-from TangentS.ranking.query import Query
-from TangentS.utility.text_query import TQuery
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.math.layout_symbol import LayoutSymbol
-#from TangentS.ranking.ranking_functions import similarity_v06, similarity_v09, similarity_v10, similarity_v11
-from TangentS.ranking.reranker import Reranker
-from TangentS.math.math_document import MathDocument
+from src.python.ranking.query import Query
+from src.python.utility.text_query import TQuery
+from src.python.math.symbol_tree import SymbolTree
+from src.python.math.layout_symbol import LayoutSymbol
+#from src.python.ranking.ranking_functions import similarity_v06, similarity_v09, similarity_v10, similarity_v11
+from src.python.ranking.reranker import Reranker
+from src.python.math.math_document import MathDocument
 
 class MathScore:
 

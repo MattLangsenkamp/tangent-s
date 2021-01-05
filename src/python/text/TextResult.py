@@ -1,6 +1,6 @@
 
 __author__ = 'Nidhin,FWTompa'
-from TangentS.text.porter import stem
+from src.python.text.porter import stem
 
 
 class TextResult:

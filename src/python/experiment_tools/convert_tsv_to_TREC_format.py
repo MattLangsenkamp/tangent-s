@@ -8,10 +8,10 @@ import xml
 import pickle
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[0]))))
-# from TangentS.math.symbol_tree import SymbolTree
-from TangentS.utility.control import Control
-from TangentS.ranking.mathml_cache import MathMLCache
-from TangentS.math.math_document import MathDocument
+# from src.python.math.symbol_tree import SymbolTree
+from src.python.utility.control import Control
+from src.python.ranking.mathml_cache import MathMLCache
+from src.python.math.math_document import MathDocument
 
 def convert_from_tsv_to_trec(tsv_lines, math_doc, mathml_cache, run_name, best_only, max_k):
     result_lines = []

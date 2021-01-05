@@ -30,13 +30,13 @@ import codecs
 import pickle
 import csv
 
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
 
-from TangentS.ranking.query import Query
-from TangentS.ranking.mathml_cache import MathMLCache
+from src.python.ranking.query import Query
+from src.python.ranking.mathml_cache import MathMLCache
 
-from TangentS.ranking.reranker import Reranker
+from src.python.ranking.reranker import Reranker
 
 def optional_parameters(args):
     values = {}

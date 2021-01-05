@@ -4,8 +4,8 @@ import ast
 
 import urllib
 import requests
-from TangentS.utility.control import Control
-from TangentS.text.TextResult import TextResult
+from src.python.utility.control import Control
+from src.python.text.TextResult import TextResult
 
 
 __author__ = 'FWTompa'

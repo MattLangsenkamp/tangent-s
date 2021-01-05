@@ -1,10 +1,10 @@
 __author__ = 'KDavila, FWTompa'
 
 import os
-from TangentS.ranking.query import Query
-from TangentS.utility.text_query import TQuery
-from TangentS.utility.comp_query import CompQuery
-from TangentS.math.math_document import MathDocument
+from src.python.ranking.query import Query
+from src.python.utility.text_query import TQuery
+from src.python.utility.comp_query import CompQuery
+from src.python.math.math_document import MathDocument
 
 class ReadResults:
     @classmethod

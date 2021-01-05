@@ -1,7 +1,7 @@
 __author__ = 'KMDC'
 
-from TangentS.math.layout_symbol import LayoutSymbol
-from TangentS.math.semantic_symbol import SemanticSymbol
+from src.python.math.layout_symbol import LayoutSymbol
+from src.python.math.semantic_symbol import SemanticSymbol
 
 class WildcardAlignment:
     def __init__(self, q_variable, q_location, c_tree, c_location):

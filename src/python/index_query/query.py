@@ -30,10 +30,10 @@ from bs4 import BeautifulSoup
 import time
 import re
 
-from TangentS.math.version03_index import Version03Index
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.utility.control import Control
-from TangentS.utility.Stats import Stats
+from src.python.math.version03_index import Version03Index
+from src.python.math.math_extractor import MathExtractor
+from src.python.utility.control import Control
+from src.python.utility.Stats import Stats
 
 sys.setrecursionlimit(10000)
 

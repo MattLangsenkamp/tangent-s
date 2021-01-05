@@ -2,8 +2,8 @@ import codecs
 import sys
 from sys import argv
 
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
 
 __author__ = 'FWTompa'
 

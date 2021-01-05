@@ -5,7 +5,7 @@ import os
 from sys import argv
 from bs4 import BeautifulSoup
 
-from TangentS.utility.control import Control
+from src.python.utility.control import Control
 from .latex_mml import LatexToMathML
 from .math_extractor import MathExtractor
 

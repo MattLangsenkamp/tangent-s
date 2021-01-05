@@ -6,15 +6,15 @@ import xml
 import pickle
 import re  # RZ - addition
 import time
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.ranking.mathml_cache import CompoundMathMLCache
-from TangentS.ranking.query import Query
-from TangentS.ranking.reranker import Reranker
+from src.python.math.math_extractor import MathExtractor
+from src.python.math.symbol_tree import SymbolTree
+from src.python.ranking.mathml_cache import CompoundMathMLCache
+from src.python.ranking.query import Query
+from src.python.ranking.reranker import Reranker
 
 # RZ: additions for ARQMath id lookup.
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
 from operator import itemgetter
 
 class TreeRepMatch:

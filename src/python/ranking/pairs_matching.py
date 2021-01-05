@@ -2,7 +2,7 @@
 from .matching_result import MatchingResult
 from .scoring_helper import ScoringHelper
 
-from TangentS.math.math_symbol import MathSymbol
+from src.python.math.math_symbol import MathSymbol
 
 # ==================================================
 #  Helper class with pair-based matching functions

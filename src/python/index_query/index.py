@@ -27,14 +27,14 @@ import multiprocessing
 import sys
 import codecs
 import time
-from TangentS.utility.Stats import Stats
-from TangentS.math.version03_index import Version03Index
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
-
+from src.python.utility.Stats import Stats
+from src.python.math.version03_index import Version03Index
+from src.python.math.math_extractor import MathExtractor
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
 
 from multiprocessing import Lock
+
 sys.setrecursionlimit(10000)
 from sys import argv, exit
 import math
@@ -44,6 +44,7 @@ Indexer is a standalone script that indexes a collection
 
 Supports mathml,.xhtml and tex files
 """
+
 
 def print_help_and_exit():
     """
@@ -76,17 +77,17 @@ def read_file(filename, file_id, semantic, missing_tags=None, problem_files=None
     :rtype: list(SymbolTree)
     :return list of Symbol trees found in the file
     """
-    #s = time.time()
-    (ext,content) = MathDocument.read_doc_file(filename)
+    # s = time.time()
+    (ext, content) = MathDocument.read_doc_file(filename)
 
     if ext == '.tex' and not semantic:
         t = MathExtractor.parse_from_tex(content, file_id)
-        #print("file %s took %s"%(file_id,time.time()-s))
+        # print("file %s took %s"%(file_id,time.time()-s))
         return [t], 0
     elif ext in {'.xhtml', '.mathml', '.mml', '.html'}:
         t, n_err = MathExtractor.parse_from_xml(content, file_id, operator=semantic, missing_tags=missing_tags,
                                                 problem_files=problem_files)
-        #print("file %s took %s per expr"%(file_id,(time.time()-s)/len(t)))
+        # print("file %s took %s per expr"%(file_id,(time.time()-s)/len(t)))
         return t, n_err
     else:
         if ext == '.tex' and semantic:
@@ -101,6 +102,7 @@ def read_file(filename, file_id, semantic, missing_tags=None, problem_files=None
             problem_files["unknown_filetype"].add(filename)
             print('Unknown filetype %s for %s' % (ext, filename))
         return [], 0
+
 
 def math_indexer_task(pargs):
     """
@@ -119,8 +121,8 @@ def math_indexer_task(pargs):
     semantic_trees = cntl.read("tree_model", num=False, default="layout").lower() == "operator"
 
     seen_docs = []  # just dump them as they come
-    for (doc_id, filename) in enumerate(mappings,start=chunkid*chunk_size):
-##        print('parsing %s, id:%s ' % (filename, doc_id),flush=True)
+    for (doc_id, filename) in enumerate(mappings, start=chunkid * chunk_size):
+        # print('parsing %s, id:%s ' % (filename, doc_id),flush=True)
 
         try:
             # get all the symbol trees found in file
@@ -137,22 +139,22 @@ def math_indexer_task(pargs):
         except Exception as err:
             reason = str(err)
             print(reason)
-            print("Failed to process document "+reason + "\n" + filename + "\n", file=sys.stderr)
+            print("Failed to process document " + reason + "\n" + filename + "\n", file=sys.stderr)
             combined_stats.problem_files[reason] = combined_stats.problem_files.get(reason, set())
             combined_stats.problem_files[reason].add(doc_id)
 
     fileid = math_index.add(seen_docs)
-    print("%s is done saving to database %s" % (chunkid,fileid), flush=True)
+    print("%s is done saving to database %s" % (chunkid, fileid), flush=True)
 
     return fileid, combined_stats
 
 
 def main():
     if sys.stdout.encoding != 'utf8':
-      sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer, 'strict')
+        sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer, 'strict')
     if sys.stderr.encoding != 'utf8':
-      sys.stderr = codecs.getwriter('utf8')(sys.stderr.buffer, 'strict')
-      
+        sys.stderr = codecs.getwriter('utf8')(sys.stderr.buffer, 'strict')
+
     if (len(argv) > 2 or (len(argv) == 2 and argv[1] == 'help')):  # uses control file to control all parameters
         print_help_and_exit()
     else:
@@ -160,9 +162,9 @@ def main():
         try:
             cntl = Control(argv[1]) if len(argv) == 2 else Control()
         except Exception as err:
-            print("Error in reading <cntl-file>: " +str(err))
+            print("Error in reading <cntl-file>: " + str(err))
             print_help_and_exit()
-        
+
         doc_id_mapping_path = cntl.read("doc_list")
         if not doc_id_mapping_path:
             print("<cntl-file> missing doc_list")
@@ -190,19 +192,19 @@ def main():
                     if num_docs % chunk_size == 0:
                         del filepos[-1]
                     break
-        cntl.store("file_skips",str(filepos))
-        
+        cntl.store("file_skips", str(filepos))
+
         print("There are " + str(num_docs) + " documents to index", flush=True)
         combined_stats = Stats()
 
         if num_docs > 0:
             math_index = Version03Index(cntl, window=window)
 
-            max_jobs = min(10,num_docs)
+            max_jobs = min(10, num_docs)
             manager = multiprocessing.Manager()
             lock = manager.Lock()
 
-            #identify chunks to be indexed by each process
+            # identify chunks to be indexed by each process
             args = [(math_index, cntl, chunkid) for chunkid in list(range(len(filepos)))]
 
             fileids = set()
@@ -210,15 +212,15 @@ def main():
             with ProcessPoolExecutor(max_workers=max_jobs) as executor:
 
                 # single process .. .for debugging ...
-                #for fileid, stats in map(math_indexer_task, args):
+                # for fileid, stats in map(math_indexer_task, args):
                 for fileid, stats in executor.map(math_indexer_task, args):
                     fileids.add(fileid)
                     combined_stats.add(stats)
 
             for fileid in fileids:
                 math_index.closeDB(fileid, mode="i")
-            cntl.store("index_fileids",str(fileids))
-            
+            cntl.store("index_fileids", str(fileids))
+
         print("Done indexing collection %s" % (doc_id_mapping_path))
         combined_stats.dump()
 
@@ -228,6 +230,7 @@ def main():
         elapsed = end - start
 
         print("Elapsed time %s" % (elapsed))
+
 
 if __name__ == '__main__':
     main()

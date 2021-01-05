@@ -7,10 +7,10 @@ from bs4 import BeautifulSoup
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[0]))))
 
-from TangentS.utility.control import Control
-from TangentS.math.math_document import MathDocument
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.math.symbol_tree import SymbolTree
+from src.python.utility.control import Control
+from src.python.math.math_document import MathDocument
+from src.python.math.math_extractor import MathExtractor
+from src.python.math.symbol_tree import SymbolTree
 
 def load_trec_format(trec_filename, rel_col, max_k):
     input_file = open(trec_filename, "r")

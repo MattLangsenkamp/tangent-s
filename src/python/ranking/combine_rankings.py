@@ -7,11 +7,11 @@ import xml
 import pickle
 import re  # RZ - addition
 
-from TangentS.math.math_extractor import MathExtractor
-from TangentS.math.symbol_tree import SymbolTree
-from TangentS.ranking.mathml_cache import CompoundMathMLCache
-from TangentS.ranking.query import Query
-from TangentS.ranking.reranker import Reranker
+from src.python.math.math_extractor import MathExtractor
+from src.python.math.symbol_tree import SymbolTree
+from src.python.ranking.mathml_cache import CompoundMathMLCache
+from src.python.ranking.query import Query
+from src.python.ranking.reranker import Reranker
 
 class TreeRepMatch:
     def __init__(self, matches_slt=None, matches_opt=None):
