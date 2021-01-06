@@ -8,6 +8,7 @@ from src.python.math.math_symbol import MathSymbol
 #  Helper class with pair-based matching functions
 # ==================================================
 
+
 class PairsMatching:
     @staticmethod
     def unique_ancestors(pairs_list):

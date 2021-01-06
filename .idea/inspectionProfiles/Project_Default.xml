@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="7">
+          <list size="8">
             <item index="0" class="java.lang.String" itemvalue="pytest-ordering" />
             <item index="1" class="java.lang.String" itemvalue="selenium" />
             <item index="2" class="java.lang.String" itemvalue="pytest" />
@@ -12,6 +12,7 @@
             <item index="4" class="java.lang.String" itemvalue="setuptools" />
             <item index="5" class="java.lang.String" itemvalue="bs4" />
             <item index="6" class="java.lang.String" itemvalue="mapi_interface" />
+            <item index="7" class="java.lang.String" itemvalue="requests" />
           </list>
         </value>
       </option>

@@ -1,5 +1,5 @@
-
 from src.python.math.math_symbol import MathSymbol
+
 
 class MatchingResult:
     def __init__(self):
@@ -16,7 +16,6 @@ class MatchingResult:
         self.var_q_unified = None       # Dict from q tag to c tag
         self.var_c_unified = None       # Dict from c tag to q tag
         self.qvar_unified = None        # List of accepted WildcardAlignment
-
 
         # alignment-based matches (should be lists of alignments)...
         self.matches_unified = None
@@ -103,7 +102,6 @@ class MatchingResult:
             loc = MathSymbol.get_child_path(match.c_location, "")
             self.locs_c_unified[loc] = match.c_element
 
-
     def set_unification_info(self, var_q_unified, var_c_unified, qvar_unified):
         self.var_q_unified = var_q_unified
         self.var_c_unified = var_c_unified
@@ -167,7 +165,6 @@ class MatchingResult:
         self.unifiable_vars += other.unifiable_vars
         self.unifiable_const += other.unifiable_const
         self.total_unmatched_q += other.total_unmatched_q
-
 
     @staticmethod
     def FromPairs(matched_pairs_query, total_pairs_q, matched_pairs_candidate, total_pairs_c,
@@ -252,7 +249,7 @@ class MatchingResult:
             current_len = max_len
             while current_len > min_len:
                 # check ...
-                if (current_len in full_locations):
+                if current_len in full_locations:
 
                     start_len = min_len if max_window == 0 else max(current_len - max_window, min_len)
 

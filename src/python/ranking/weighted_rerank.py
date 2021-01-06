@@ -5,6 +5,8 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import linear_model
+from src.python.experiment_tools.qrels_to_tsv import *
+from src.python.ranking.regression_reranking import load_topic_groups, separate_training_data
 
 
 def load_combined_input(input_filename, choose_fields):
@@ -127,7 +129,7 @@ def main():
     all_interceptors = []
 
     final_results = {}
-    #for fold_idx, topic_group in enumerate(topic_groups):
+    for fold_idx, topic_group in enumerate(topic_groups):
         # ... Prepare training/testing data ...
         training_data = []
         training_labels = []

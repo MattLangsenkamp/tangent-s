@@ -1195,7 +1195,6 @@ class Query:
                     current_name = parts[1]
                     current_query = None
 
-
                 elif parts[0][0] == "E":
                     if current_name is None:
                         print("invalid expression at " + str(idx) + ": query name expected first")
@@ -1203,12 +1202,12 @@ class Query:
                         query_expression = parts[1]
 
                         # query_offset = len(all_queries)
-                        #query_offset = int(current_name.split("-")[-1]) - 1
+                        # query_offset = int(current_name.split("-")[-1]) - 1
 
                         # RZ: modify for ARQMath topic names.
                         query_offset = int(re.split('\.|-',current_name)[-1]) - 1
 
-                        if html_prefix != None:
+                        if html_prefix is not None:
                             mathml = mathml_cache.get(-1, query_offset, query_expression, True)
 
                             # create empty directories for this query ...
