@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ $# -lt 5 ]
+then
+	echo "Usage: arqmath-search-combine <output.tsv>"
+	echo "                              <slt.cntl> <slt-results.tsv>"
+	echo "                              <opt.cntl> <opt-results.tsv>"
+	echo ""
+	echo "Where file*.cntl are control files that produced the corresponding"
+	echo "results (one in SLT, one in OPT)."
+	echo ""
+        echo "The order of arguments matters: the tool interprets results using"
+        echo "specific tree types."
+	exit 0
+fi
+
+# Invoke this complex command.
+# '12' is the identifier for the ranking metric - see our SIGIR'17 paper:
+#
+# Davila, K. and Zanibbi, R. (2017) Layout and Semantics: Combining
+# Representations for Math Formula Search. Proc. ACM Special Interest Group on
+# Information Retrieval (SIGIR), pp. 1165-1168, Tokyo, Japan. 
+
+python3 ./arqmath_search_combine.py $1 __COMBINE_CACHE -r $2 $3 -r $4 $5 
+
+# ?? Optional regression weights?

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+	echo "Usage: arqmath-search <file1.cntl> [1]"
+	echo ""
+	echo "Where file.cntl indicates which index and query files"
+	echo "to use."
+	exit 0
+fi
+
+FILEHEAD=`basename $1 .cntl`
+
+echo "Generating query .tsv data..."
+python3 query.py $1
+
+echo "Running queries..."
+DBPREFIX=`grep database $1 | awk '{print $2}'`
+echo $DBPREFIX
+
+# Andrew's command for search.
+ls db-index/$DBPREFIX*
+
+cat db-index/$DBPREFIX* | ./mathindex.exe > $FILEHEAD-results.tsv
+
+echo "finished. [arqmath-search]"
+echo "Results written to $FILEHEAD-results.tsv"
+

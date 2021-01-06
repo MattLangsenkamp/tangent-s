@@ -1,0 +1,16 @@
+#!/bin/bash 
+
+echo "Are you *sure* you want to delete all query files in db-index? (y/n)"
+read decision
+
+if [ "$decision" = "y" ]
+then
+	echo "Deleting query files in db-index/...."
+	rm -f db-index/*_q_*
+	echo "done."
+else
+	echo "Query file deletion aborted."
+fi
+
+
+

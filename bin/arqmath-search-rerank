@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]
+then
+	echo "Usage: arqmath-search-rerank <file.cntl> <results.tsv> <outfile> [html]"
+	echo ""
+	echo "Where file.cntl is a collection/query control file,"
+	echo "and results.tsv is a file with research results obtained"
+	echo "using the passed control file. Any fourth arument generates HTML results"
+	echo "(warning: this slows down run-time substantially)."
+	echo ""
+	echo "Results are written to the results/ directory using the passed file."
+	echo "HTML results are written to the html/ directory, with one subdirectory"
+	echo "per query."
+	echo ""
+	echo "[ Output Score Vectors ]"
+	echo ""
+	echo "Reranked results replace single stage 1 (tuple) scores at the end of"
+       	echo "each .tsv results entry with a list of three score values:"
+	echo ""
+	echo "  1. Maximum subtree similarity"
+        echo "  2. Candidate match precision (unified)"
+	echo "  3. Query recall (non-unified)"
+	echo ""
+	exit 0
+fi
+
+# Note: '12' is the identifier for the tree distance metric used for the SIGIR
+# 2017 version of the system (see paper for details).
+#
+# Davila, K. and Zanibbi, R. (2017) Layout and Semantics: Combining
+# Representations for Math Formula Search. Proc. ACM Special Interest Group on
+# Information Retrieval (SIGIR), pp. 1165-1168, Tokyo, Japan. 
+
+if [ $# -gt 3 ]
+then
+	# Generate HTML if there is a fourth argument.
+	python3 rerank_results.py $1 $2 12 $3 -h ./html
+else
+	python3 rerank_results.py $1 $2 12 $3
+fi

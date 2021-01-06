@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+	echo "Usage: arqmath-index <file.cntl>"
+	echo ""
+	echo "Index using control file file.cntl (see README.txt for"
+	echo "control file detailes)."
+	echo ""
+	echo "Note: use arqmath-delete-index to remove all index files from"
+	echo "db-index."
+
+	exit 0
+fi
+
+for file in "$@"
+do
+	echo "Indexing $file (log: $file-indexing.log)"
+	python3 index.py $file &> $file-indexing.log 
+done
+
+echo "finished."
