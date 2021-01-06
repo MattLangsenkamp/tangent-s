@@ -6,7 +6,6 @@ import os
 import io
 import xml
 import csv
-import pickle
 import re # RZ - ARQMath
 
 from src.python.math.symbol_tree import SymbolTree

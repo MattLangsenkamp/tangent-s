@@ -279,6 +279,7 @@ class MathExtractor:
             return list(groupUnique.values()), n_error
         except UnknownTagException as e:
             reason = "Unknown tag in file or query "+str(content_id)+": "+e.tag
+            print(reason)
             missing_tags[e.tag] = missing_tags.get(e.tag, set())
             missing_tags[e.tag].add([content_id,idx])
             raise Exception(reason)  # pass on the exception to identify the document or query

@@ -6,7 +6,7 @@ Tangent uses python version 3, including the requests and beautiful soup modules
 make (use dmake on Windows):
    creates executable for prototype search engine
 
-** PREPARING FOR INDEXING
+### PREPARING FOR INDEXING
 
 python index.py help
    displays help text for creating tuples for indexing
@@ -20,7 +20,7 @@ python index.py my-own-file.cntl
     appropriate lines in it to specify database name, mapping file name, etc. See the help
     text for more detailed information.
 
-** QUERYING
+### QUERYING
 
 python query.py help
    displays help text for creating tuples for searching
@@ -51,7 +51,7 @@ python3 regression_reranking.py
 
 
 
-** UTILITIES
+### UTILITIES
 
 python get_mathml.py <cntl> <docnum> <position>
    reads the MathML stored in the ith document at the jth relative position.

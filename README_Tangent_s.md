@@ -1,4 +1,4 @@
-## Tangent-S Math Formula Search Engine##
+## Tangent-S Math Formula Search Engine
 
 *Released August 2017*
 

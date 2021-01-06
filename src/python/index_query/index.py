@@ -33,11 +33,9 @@ from src.python.math.math_extractor import MathExtractor
 from src.python.utility.control import Control
 from src.python.math.math_document import MathDocument
 
-from multiprocessing import Lock
 
 sys.setrecursionlimit(10000)
 from sys import argv, exit
-import math
 
 """
 Indexer is a standalone script that indexes a collection

@@ -175,7 +175,6 @@ def main():
                 print(qid,hit)
         else:
             topk = ntcir_wiki_count if system == 'Wikipedia' else ntcir_main_count
-
             with open(query_file, encoding='utf-8') as file:
                 parsed = BeautifulSoup(file, "lxml")
 

@@ -6,5 +6,5 @@ database	test
 chunk_size	5
 tree_model	operator
 file_skips	[0, 238, 510, 764, 1004, 1263, 1500, 1809]
-index_fileids	{16618, 16619, 16620, 16622, 16625, 16626, 16627, 16630}
+index_fileids	{10344, 10345, 10347, 10349, 10351, 10353, 10355, 10357}
 query_fileids	set()
