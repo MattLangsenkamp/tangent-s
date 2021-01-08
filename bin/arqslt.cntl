@@ -1,0 +1,10 @@
+cntl	arqslt.cntl
+window	4
+queries	../testing/test_queries/slt_task1_mod.xml
+doc_list	../cntl/semantic_list.txt
+database	dbarqmathslt
+chunk_size	20
+tree_model	layout
+query_fileids	{31393}
+file_skips	[0, 1064]
+index_fileids	{13323, 13324}
