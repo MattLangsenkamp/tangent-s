@@ -15,8 +15,9 @@ fi
 
 for file in "$@"
 do
-	echo "Indexing $file (log: $file-indexing.log)"
-	python3 ../src/python/index_query/index.py $file
+  filename="$(basename "$file")"
+	echo "Indexing $file (log: log/$filename-indexing.log)"
+	python3 ../src/python/index_query/index.py "$file" > ../log/$filename-indexing.log
 done
 
 echo "finished."
