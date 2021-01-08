@@ -35,7 +35,7 @@ fi
 if [ $# -gt 3 ]
 then
 	# Generate HTML if there is a fourth argument.
-	python3 rerank_results.py $1 $2 12 $3 -h ./html
+	python3 ../src/python/ranking/rerank_results.py $1 $2 12 $3 -h ./html
 else
-	python3 rerank_results.py $1 $2 12 $3
+	python3 ../src/python/ranking/rerank_results.py $1 $2 12 $3
 fi

@@ -12,17 +12,17 @@ fi
 FILEHEAD=`basename $1 .cntl`
 
 echo "Generating query .tsv data..."
-python3 query.py $1
+python3 ../src/python/index_query/query.py $1
 
 echo "Running queries..."
 DBPREFIX=`grep database $1 | awk '{print $2}'`
 echo $DBPREFIX
 
 # Andrew's command for search.
-ls db-index/$DBPREFIX*
+ls ../db-index/$DBPREFIX*
 
-cat db-index/$DBPREFIX* | ./mathindex.exe > $FILEHEAD-results.tsv
+cat ../db-index/$DBPREFIX* | ./mathindex.exe > ../results/$FILEHEAD-results.tsv
 
 echo "finished. [arqmath-search]"
-echo "Results written to $FILEHEAD-results.tsv"
+echo "Results written to results/$FILEHEAD-results.tsv"
 

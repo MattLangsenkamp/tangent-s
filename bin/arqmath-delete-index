@@ -6,7 +6,7 @@ read decision
 if [ "$decision" = "y" ]
 then
 	echo "Deleting index files in db-index/...."
-	rm -f db-index/*_i_*
+	rm -f ../db-index/*_i_*
 	echo "done."
 else
 	echo "Index deletion aborted."

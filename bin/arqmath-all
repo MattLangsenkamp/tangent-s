@@ -6,16 +6,16 @@
 
 #./arqmath-delete-index
 #./arqmath-delete-queries
-#./arqmath-index arqslt.cntl arqopt.cntl
+./arqmath-index ../cntl/arqslt.cntl ../cntl/arqopt.cntl
 
 # Run SLT and OPT queries
-./arqmath-search arqslt.cntl 
-./arqmath-search arqopt.cntl
+./arqmath-search ../cntl/arqslt.cntl
+./arqmath-search ../cntl/arqopt.cntl
 
 # Now rerank and combine OPT and SLT results.
-./arqmath-search-rerank arqslt.cntl arqslt-results.tsv arqslt-reranked.tsv
-./arqmath-search-rerank arqopt.cntl arqopt-results.tsv arqopt-reranked.tsv
-./arqmath-search-combine arq-slt-opt-results.tsv arqslt.cntl arqslt-reranked.tsv \
-	arqopt.cntl arqopt-reranked.tsv
+./arqmath-search-rerank ../cntl/arqslt.cntl ../results/arqslt-results.tsv ../results/arqslt-reranked.tsv
+./arqmath-search-rerank ../cntl/arqopt.cntl ../results/arqopt-results.tsv ../results/arqopt-reranked.tsv
+./arqmath-search-combine ../results/arq-slt-opt-results.tsv ../cntl/arqslt.cntl ../results/arqslt-reranked.tsv \
+	../cntl/arqopt.cntl ../results/arqopt-reranked.tsv
 
 # done. Results are in arq-slt-opt-results.tsv

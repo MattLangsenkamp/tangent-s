@@ -16,7 +16,7 @@ fi
 for file in "$@"
 do
 	echo "Indexing $file (log: $file-indexing.log)"
-	python3 index.py $file &> $file-indexing.log 
+	python3 ../src/python/index_query/index.py $file
 done
 
 echo "finished."
