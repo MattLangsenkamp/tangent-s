@@ -218,7 +218,9 @@ class MathExtractor:
 
         """
 
-        #print("Parsing tex doc %s" % file_id,flush=True)
+        print("Parsing tex doc %s" % file_id,flush=True)
+        print("here")
+
         mathml=LatexToMathML.convert_to_mathml(tex)
         pmml = cls.isolate_pmml(mathml)
 ##        print('LaTeX converted to MathML: \n' )

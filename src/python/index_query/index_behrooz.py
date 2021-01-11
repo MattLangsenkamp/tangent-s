@@ -30,7 +30,7 @@ import time
 from src.python.utility.Stats import Stats
 from src.python.math.version03_index import Version03Index
 from src.python.math.math_extractor import MathExtractor
-from src.python.utility.control import Control
+from src.python.utility.control import Control as cntl
 from src.python.math.math_document import MathDocument
 
 

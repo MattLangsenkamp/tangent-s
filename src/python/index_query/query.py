@@ -65,6 +65,7 @@ def print_help_and_exit():
     print("as well as other pairs.")
     exit()
 
+
 def process_query_batch(args):
     """
     Given a query, generate query tuples for the math index

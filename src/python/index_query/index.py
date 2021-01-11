@@ -77,7 +77,6 @@ def read_file(filename, file_id, semantic, missing_tags=None, problem_files=None
     """
     # s = time.time()
     (ext, content) = MathDocument.read_doc_file(filename)
-
     if ext == '.tex' and not semantic:
         t = MathExtractor.parse_from_tex(content, file_id)
         # print("file %s took %s"%(file_id,time.time()-s))

@@ -38,6 +38,7 @@ from src.python.ranking.mathml_cache import MathMLCache
 
 from src.python.ranking.reranker import Reranker
 
+
 def optional_parameters(args):
     values = {}
 

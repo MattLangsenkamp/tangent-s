@@ -3,8 +3,7 @@ import os
 import csv
 import socket
 import time
-
-from src.python.utility.control import Control
+from pathlib import Path
 from src.python.text import text_engine_client as tec
 from src.python.ranking.query import Query
 from src.python.utility.text_query import TQuery
@@ -21,6 +20,7 @@ __author__ = 'FWTompa'
 #   (and calls text engine client as needed)
 # or writes files for offline processing
 
+
 class Version03Index:
     def __init__(self, cntl, ranker=None, window=None, process_id=""):
         self.cntl = cntl
@@ -31,7 +31,7 @@ class Version03Index:
         self.window = window
         self.semantic_trees = cntl.read("tree_model", num=False, default="layout").lower() == "operator"
         # check for directory
-        self.directory = os.path.join(os.getcwd(), "db-index")
+        self.directory = os.path.join(Path().resolve().parent, "db-index")
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 

@@ -5,7 +5,7 @@ class MathML:
     """
     List of recognized tags (general MathML)
     """
-    namespace = '{http://www.w3.org/1998/Math/MathML}'
+    namespace = '{http://www.w3.org/1998/Math/MathML} '
     math = namespace + 'math'
 
     """

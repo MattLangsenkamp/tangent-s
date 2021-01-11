@@ -3,6 +3,7 @@ __author__ = 'KMDC'
 from src.python.math.layout_symbol import LayoutSymbol
 from src.python.math.semantic_symbol import SemanticSymbol
 
+
 class WildcardAlignment:
     def __init__(self, q_variable, q_location, c_tree, c_location):
         self.q_variable = q_variable
@@ -14,15 +15,12 @@ class WildcardAlignment:
 
         self.score = 0.0
 
-
-
     def __eq__(self, other):
         if isinstance(other, WildcardAlignment):
             return (self.q_location == other.q_location and
                     self.c_location == other.c_location)
         else:
             return False
-
 
     def same_substitution(self, other):
         if isinstance(other, WildcardAlignment):

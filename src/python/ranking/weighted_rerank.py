@@ -40,12 +40,11 @@ def load_combined_input(input_filename, choose_fields):
             for field in choose_fields:
                 query_results[query_name][formula_id].append(scores[field])
 
-
     return query_results
 
 
 def var_to_relevance_levels_boxplot(x_values, rel_values, graph_dir, var_name):
-    #paired = sorted(zip(rel_values, x_values))
+    # paired = sorted(zip(rel_values, x_values))
 
     min_rel = int(min(rel_values))
     max_rel = int(max(rel_values))
@@ -116,9 +115,9 @@ def main():
 
     # RZ: disabling 
     # Do cross-validation
-    #print("\tTrain\tTest\tTrain\tTest\t")
-    #print("Fold\tSize\tSize\tMSE\tMSE\t" + "\t".join(["W" + str(idx) for idx in range(n_features + 1)]))
-    #row_str = "{0:s}\t{1:d}\t{2:d}\t{3:.4f}\t{4:.4f}"
+    # print("\tTrain\tTest\tTrain\tTest\t")
+    # print("Fold\tSize\tSize\tMSE\tMSE\t" + "\t".join(["W" + str(idx) for idx in range(n_features + 1)]))
+    # row_str = "{0:s}\t{1:d}\t{2:d}\t{3:.4f}\t{4:.4f}"
 
     crossvalidated_predictions = []
     all_train_sizes = []
