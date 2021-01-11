@@ -31,7 +31,7 @@ class Version03Index:
         self.window = window
         self.semantic_trees = cntl.read("tree_model", num=False, default="layout").lower() == "operator"
         # check for directory
-        self.directory = os.path.join(Path().resolve().parent, "db-index")
+        self.directory = os.path.join(Path(__file__).resolve().parent, "db-index")
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 
@@ -44,7 +44,7 @@ class Version03Index:
         param topk: (maximum) number of matches to return
         type  topk: int
         """
-        if (self.runmode == "now"):
+        if self.runmode == "now":
             w = self.window if self.window else 0
             try:
                 url = self.cntl.read("mathURL")
