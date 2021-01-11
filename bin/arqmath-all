@@ -5,8 +5,8 @@
 #    see README.txt for details about .cntl files.
 
 #./arqmath-delete-index
-#./arqmath-delete-queries
-./arqmath-index ../cntl/arqslt.cntl ../cntl/arqopt.cntl
+# ./arqmath-delete-queries
+# ./arqmath-index ../cntl/arqslt.cntl ../cntl/arqopt.cntl
 
 # Run SLT and OPT queries
 ./arqmath-search ../cntl/arqslt.cntl

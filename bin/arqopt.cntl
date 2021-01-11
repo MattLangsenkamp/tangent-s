@@ -7,4 +7,4 @@ chunk_size	200
 tree_model	operator
 file_skips	[0]
 index_fileids	{3530}
-query_fileids	{23618}
+query_fileids	set()
