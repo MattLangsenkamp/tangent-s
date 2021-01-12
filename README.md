@@ -5,9 +5,10 @@
 2. [data and configuration](#data-and-configuration)
    1. [cntl file](#cntl-file)
    2. [tsv files](#tsv-files)
-      1. [db index](#db-index)
-      2. [results](#results)
-   3. [ok](#ok)
+      1. [db index](#index)
+      2. [results](#query)
+      3. [1st results](#1st-results)
+      4. [re-ranked results](#re-ranked-results)
 3. [all in one bash script](#all-in-one-bash-script)
 4. [running parts individually](#running-parts-individually)
    1. [indexing](#indexing)
@@ -171,7 +172,7 @@ R	3726843	0	[U!eq,0[U!times,0[V!𝑓],1[V!𝑥]],1[O!divide,0[U!plus,0[O!SUP,0[V
 `R` a tuple defined as such (DocId, Score, Formula, retrieval time)
 
 
-#### reranking results
+#### re-ranked results
 <details>
 <summary>example results/[cntl]_results.tsv</summary>
 
@@ -197,9 +198,21 @@ R	20014085	0	[U!eq,0[U!times,0[V!𝑓],1[V!𝑥]],1[O!divide,0[U!plus,0[O!SUP,0[
 run all commands from the tangent-s directory
 ### indexing
 run `python3 ../src/python/index_query/index.py example.cntl`  
-this will generate a file in `/db-index` called `database_i_<number>.tsv` depending 
+this will generate a file in `/db-index` called `<database>_i_<number>.tsv` depending 
 on the database name specified in the .cntl file. the format of this file
 is discussed in [index](#index)
 ### querying
-### testing
-### example
+run `python3 ../src/python/index_query/query.py example.cntl`  
+this will generate a file in `/db-index` called `<database>_q_<number>.tsv` depending 
+on the database name specified in the .cntl file. the format of this file
+is discussed in [query](#query)
+### finding top K results (prior to re-rank)
+pipe the output of the indexes and queries to the math 
+index tool and save that output to a results tsv  
+``cat mathdata.tsv mathqueries.tsv | ./bin/mathindex.exe [-v] > mathresults.tsv``  
+In the case in which the index and query files 
+have just been generated in the db-index directory the command
+would look as such  
+`` cat ../db-index/[database]* | ./mathindex.exe > ../results/[cntl]-results.tsv``
+
+### re-ranking
