@@ -1,5 +1,4 @@
 
-from concurrent.futures import ProcessPoolExecutor
 import os
 from sys import argv
 import sys
@@ -16,6 +15,9 @@ from src.python.utility.Stats import Stats
 sys.setrecursionlimit(10000)
 
 """
+    thus fil is a modification of index.py. this is a single threaded program created for debugging purpposes
+    this should not be used in production or for large tests. - matt
+
     The main application that given an nticr-like query file, queries the collection and returns the results
     Code is based on tangent/ntcir/ntcir11.py
 """
@@ -54,11 +56,11 @@ def process_query_batch(args):
     fileid = os.getpid()
 
     system, db, run_tag, query_list, topk, math_index, strategy, semantic_trees = args
-    math_index.openDB(fileid,topk)
+    math_index.openDB(fileid, topk)
 
     stats.num_documents = len(query_list)
 
-    for (query_num,query_string) in query_list:
+    for (query_num, query_string) in query_list:
         trees, n_error = MathExtractor.parse_from_xml(query_string, query_num, semantic_trees,
                                                       stats.missing_tags, stats.problem_files)
         stats.num_expressions += len(trees)
@@ -79,11 +81,11 @@ def get_query(query_obj):
     :param query_obj:
     :return: query num, doc = '<doc>' formula* keyword* '</doc>'
     """
-    query_num = query_obj.num.text.strip().translate({10:r"\n",9:r"\t"})
+    query_num = query_obj.num.text.strip().translate({10: r"\n", 9: r"\t"})
     query_list = []
     # get formulas
     for f in query_obj.findAll("formula"):
-        math = f.find("m:math")  # assumes m is used for namespace
+        math = f.find("math")  # assumes m is used for namespace
         query_list.append(str(math))
 
     # get keywords
@@ -134,8 +136,8 @@ def main():
             window = 1
         run_tag = cntl.read("run",default="")
         run_tag = 'rit_' + run_tag
-        weighting_strategy = cntl.read("weights",default='math_only')
-        if weighting_strategy not in ['math_only', 'math_focused' , 'ntcir_default', 'math_text_equal']:
+        weighting_strategy = cntl.read("weights", default='math_only')
+        if weighting_strategy not in ['math_only', 'math_focused', 'ntcir_default', 'math_text_equal']:
             print("Invalid weighting strategy. Using 'math_only' instead of %s\n" % weighting_strategy)
             weighting_strategy = 'math_only'
         system = cntl.read("system",default='Wikipedia')
@@ -169,16 +171,16 @@ def main():
                 args = [(system, db, run_tag, query_list_m, topk, math_index, weighting_strategy, semantic_trees)]
 
                 for p in args:  # single-process execution
-                    (fileid,stats) = process_query_batch(p)
+                    (fileid, stats) = process_query_batch(p)
                     fileids.add(fileid)
                     combined_stats.add(stats)
             except Exception as err:
                 reason = str(err)
-                print("Failed to process document "+ query_file +": "+reason, file=sys.stderr)
+                print("Failed to process document " + query_file + ": "+reason, file=sys.stderr)
                 combined_stats.problem_files[reason] = combined_stats.problem_files.get(reason, set())
                 combined_stats.problem_files[reason].add(query_file)
 
-            cntl.store("query_fileids",str(fileids))
+            cntl.store("query_fileids", str(fileids))
             
             print("Done preparing query batch for %s against %s" % (query_file, db))
             combined_stats.dump()

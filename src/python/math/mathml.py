@@ -5,7 +5,7 @@ class MathML:
     """
     List of recognized tags (general MathML)
     """
-    namespace = '{http://www.w3.org/1998/Math/MathML} '
+    namespace = '{http://www.w3.org/1998/Math/MathML}'
     math = namespace + 'math'
 
     """
@@ -39,7 +39,7 @@ class MathML:
     mmultiscripts = namespace + 'mmultiscripts'
     mprescripts = namespace + 'mprescripts'
     mqvar = '{http://search.mathweb.org/ns}qvar'
-    mqvar2 = namespace + 'qvar' # for erroneous namespace
+    mqvar2 = namespace + 'qvar'  # for erroneous namespace
     merror = namespace + 'merror'  # To deal with Errors in MathML conversion from tools (KMD)
 
     """
@@ -55,7 +55,6 @@ class MathML:
     matrixrow = namespace + "matrixrow"
     share = namespace + "share"
     vector = namespace + "vector"
-
 
     _abs = namespace + "abs"
     _and = namespace + "and"
@@ -87,7 +86,7 @@ class MathML:
     coth = namespace + "coth"
     csc = namespace + "csc"
     csch = namespace + "csch"
-    degree = namespace  + "degree"
+    degree = namespace + "degree"
     determinant = namespace + "determinant"
     divide = namespace + "divide"
     emptyset = namespace + "emptyset"

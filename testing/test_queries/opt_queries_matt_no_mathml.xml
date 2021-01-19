@@ -1,27 +1,28 @@
 <xml version="1.0">
 <topics>
-<topic>
-    <num>B.16</num>
-    <query>
-      <formula id="q_92"><m:xml version="1.0" encoding="UTF-8"> <m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int_{0}^{1}\frac{\ln(1+x)\ln(1-x)}{1+x}\,dx" display="block">   <m:apply>     <m:apply>       <m:csymbol cd="ambiguous">superscript</m:csymbol>       <m:apply>         <m:csymbol cd="ambiguous">subscript</m:csymbol>         <m:int/>         <m:cn type="integer">0</m:cn>       </m:apply>       <m:cn type="integer">1</m:cn>     </m:apply>     <m:apply>       <m:times/>       <m:apply>         <m:divide/>         <m:apply>           <m:times/>           <m:apply>             <m:ln/>             <m:apply>               <m:plus/>               <m:cn type="integer">1</m:cn>               <m:ci>𝑥</m:ci>             </m:apply>           </m:apply>           <m:apply>             <m:ln/>             <m:apply>               <m:minus/>               <m:cn type="integer">1</m:cn>               <m:ci>𝑥</m:ci>             </m:apply>           </m:apply>         </m:apply>         <m:apply>           <m:plus/>           <m:cn type="integer">1</m:cn>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:ci>d</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
-    </query>
-  </topic>
-  <topic>
+    <topic>
+        <num>B.16</num>
+        <query>
+          <formula id="q_92"><math alttext="\int_{0}^{1}\frac{\ln(1+x)\ln(1-x)}{1+x}\,dx" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <int/>         <cn type="integer">0</cn>       </apply>       <cn type="integer">1</cn>     </apply>     <apply>       <times/>       <apply>         <divide/>         <apply>           <times/>           <apply>             <ln/>             <apply>               <plus/>               <cn type="integer">1</cn>               <ci>𝑥</ci>             </apply>           </apply>           <apply>             <ln/>             <apply>               <minus/>               <cn type="integer">1</cn>               <ci>𝑥</ci>             </apply>           </apply>         </apply>         <apply>           <plus/>           <cn type="integer">1</cn>           <ci>𝑥</ci>         </apply>       </apply>       <apply>         <ci>d</ci>         <ci>𝑥</ci>       </apply>     </apply>   </apply> </math> </formula>
+        </query>
+    </topic>
+    <topic>
     <num>B.35</num>
     <query>
-      <formula id="q_290"><m:xml version="1.0" encoding="UTF-8"> <m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int e^{x^{2}}dx" display="block">   <m:apply>     <m:int/>     <m:apply>       <m:times/>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:ci>𝑒</m:ci>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:cn type="integer">2</m:cn>         </m:apply>       </m:apply>       <m:apply>         <m:ci>d</m:ci>         <m:ci>𝑥</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+      <formula id="q_290"><math alttext="\int e^{x^{2}}dx" display="block">   <apply>     <int/>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑒</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <ci>d</ci>         <ci>𝑥</ci>       </apply>     </apply>   </apply> </math> </formula>
     </query>
-  </topic>
-<topic>
+    </topic>
+    <topic>
     <num>B.46</num>
     <query>
-      <formula id="q_370"><m:xml version="1.0" encoding="UTF-8"> <m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="\int x^{k}f(x)dx=0" display="block">   <m:apply>     <m:eq/>     <m:apply>       <m:int/>       <m:apply>         <m:times/>         <m:apply>           <m:csymbol cd="ambiguous">superscript</m:csymbol>           <m:ci>𝑥</m:ci>           <m:ci>𝑘</m:ci>         </m:apply>         <m:ci>𝑓</m:ci>         <m:ci>𝑥</m:ci>         <m:apply>           <m:ci>d</m:ci>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>     </m:apply>     <m:cn type="integer">0</m:cn>   </m:apply> </m:math> </formula>
+      <formula id="q_370"><math alttext="\int x^{k}f(x)dx=0" display="block">   <apply>     <eq/>     <apply>       <int/>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <ci>𝑘</ci>         </apply>         <ci>𝑓</ci>         <ci>𝑥</ci>         <apply>           <ci>d</ci>           <ci>𝑥</ci>         </apply>       </apply>     </apply>     <cn type="integer">0</cn>   </apply> </math> </formula>
     </query>
   </topic>
  <topic>
     <num>B.82</num>
     <query>
-      <formula id="q_807"><m:xml version="1.0" encoding="UTF-8"> <m:math xmlns="http://www.w3.org/1998/m:math/m:mathML" alttext="A=\displaystyle\int_{0}^{2\pi}{g(x)\cdot\cos(x)\m:mathrm{d}x}" display="block">   <m:apply>     <m:eq/>     <m:ci>𝐴</m:ci>     <m:apply>       <m:apply>         <m:csymbol cd="ambiguous">superscript</m:csymbol>         <m:apply>           <m:csymbol cd="ambiguous">subscript</m:csymbol>           <m:int/>           <m:cn type="integer">0</m:cn>         </m:apply>         <m:apply>           <m:times/>           <m:cn type="integer">2</m:cn>           <m:ci>𝜋</m:ci>         </m:apply>       </m:apply>       <m:apply>         <m:times/>         <m:apply>           <m:ci>⋅</m:ci>           <m:apply>             <m:times/>             <m:ci>𝑔</m:ci>             <m:ci>𝑥</m:ci>           </m:apply>           <m:apply>             <m:cos/>             <m:ci>𝑥</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:ci>d</m:ci>           <m:ci>𝑥</m:ci>         </m:apply>       </m:apply>     </m:apply>   </m:apply> </m:math> </formula>
+      <formula id="q_807"><math alttext="A=\displaystyle\int_{0}^{2\pi}{g(x)\cdot\cos(x)\mathrm{d}x}" display="block">   <apply>     <eq/>     <ci>𝐴</ci>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <int/>           <cn type="integer">0</cn>         </apply>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝜋</ci>         </apply>       </apply>       <apply>         <times/>         <apply>           <ci>⋅</ci>           <apply>             <times/>             <ci>𝑔</ci>             <ci>𝑥</ci>           </apply>           <apply>             <cos/>             <ci>𝑥</ci>           </apply>         </apply>         <apply>           <ci>d</ci>           <ci>𝑥</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
     </query>
   </topic>
 </topics>
+</xml>

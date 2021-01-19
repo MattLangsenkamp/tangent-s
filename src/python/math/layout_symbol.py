@@ -11,6 +11,7 @@ __author__ = 'Nidhin, FWTompa, KDavila'
 
 # many changes throughout to encode simplified and more consistent node and edge structure. FWT
 
+
 class LayoutSymbol(MathSymbol):
     """
     Symbol in a symbol layout tree
@@ -24,13 +25,13 @@ class LayoutSymbol(MathSymbol):
         self.next = next_elem
         self.above = above
         self.below = below
-        self.over = over #FWT
-        self.under = under #FWT
+        self.over = over  # FWT
+        self.under = under  # FWT
         self.within = within
-        self.pre_above = pre_above #FWT
-        self.pre_below = pre_below #FWT
-        self.element = element # FWT
-        self.mathml = mathml  #KMD
+        self.pre_above = pre_above  # FWT
+        self.pre_below = pre_below  # FWT
+        self.element = element  # FWT
+        self.mathml = mathml  # KMD
 
     def get_size(self):
         current_size = 1
@@ -407,10 +408,7 @@ class LayoutSymbol(MathSymbol):
         :type  elem: a MathML node
         """
 
-##        print(elem.tag,flush=True)
-        
-
-        if not elem.tag.startswith('{'): # handle missing namespace declaration (FWT) -- should be reported as warning!
+        if not elem.tag.startswith('{'):  # handle missing namespace declaration (FWT) -- should be reported as warning!
             elem.tag = MathML.namespace+elem.tag
 
         if elem.tag == MathML.math:
@@ -439,13 +437,14 @@ class LayoutSymbol(MathSymbol):
             if len(children) > 0:
                 # handle parenthesized sub-expressions (FWT)
                 if (len(children) > 2 and (children[0].tag in '({|∥' or children[0].tag == "&lsqb;")
-                    and (children[-1].tag in ')}|∥' or children[-1].tag == "&rsqb;")):  # bracketed expression: treat as matrix
-                    return cls.list2matrix(children , ',', elem)
+                                      and (children[-1].tag in ')}|∥' or children[-1].tag == "&rsqb;")):
+                                        # bracketed expression: treat as matrix
+                    return cls.list2matrix(children, ',', elem)
                 else: # just eliminate mrow and connect its children
                     elem = children[0]
-                    for i in range(1,len(children)):
+                    for i in range(1, len(children)):
                         if elem.tag.startswith('M!') and children[i].tag.startswith('M!'):
-                            elem = cls.matrixMerge(elem,children[i])
+                            elem = cls.matrixMerge(elem, children[i])
                         else:
                             while elem.next:
                                 elem = elem.next
@@ -469,7 +468,7 @@ class LayoutSymbol(MathSymbol):
             row.append(cls(closing))
             return cls.list2matrix(row, separators, elem)
         elif elem.tag == MathML.menclose:
-            root = cls(elem.attrib.get('notation', 'longdiv'),mathml=[elem])
+            root = cls(elem.attrib.get('notation', 'longdiv'), mathml=[elem])
             children = list(map(cls.parse_from_mathml, elem))
             if len(children) >= 1:   # allowed in standard (FWT)
                 elem = children[0] if children[0] or len(children) == 1 else cls('W!')
@@ -482,7 +481,8 @@ class LayoutSymbol(MathSymbol):
         elif elem.tag == MathML.mn:
             content = MathSymbol.clean(elem.text)
             return cls('N!' + content if content != '' else 'W!',mathml=[elem])
-        elif elem.tag == MathML.mo:  # future: improve representation (and equivalences) by recognizing and preserving fence="true" and separator="true"
+        elif elem.tag == MathML.mo:  # future: improve representation
+            # (and equivalences) by recognizing and preserving fence="true" and separator="true"
             return cls(MathSymbol.clean(elem.text),mathml=[elem])
         elif elem.tag == MathML.mi:
             content = MathSymbol.clean(elem.text)
@@ -491,7 +491,7 @@ class LayoutSymbol(MathSymbol):
             content = MathSymbol.clean(elem.text)
             return cls('T!' + content if content != '' else 'W!',mathml=[elem])  # to prevent accidental mis-typing
         elif elem.tag == MathML.mspace:
-            return cls('W!',mathml=[elem])
+            return cls('W!', mathml=[elem])
         elif elem.tag == MathML.msub:
             children = list(map(cls.parse_from_mathml, elem))
             if len(children) == 0:
@@ -562,7 +562,7 @@ class LayoutSymbol(MathSymbol):
                 if len(children) == 0:
                     return None
                 elem = children[0]
-                for i in range(1,len(children)):
+                for i in range(1, len(children)):
                     while elem.next:
                         elem = elem.next
                     elem.next = children[i]
@@ -572,7 +572,7 @@ class LayoutSymbol(MathSymbol):
             # FWT handle operators such as \sum_{i+1}^n so that they parse as "under" and "over"
             if children[0].tag[0] == '?' or (len(children[0].tag) > 1 and children[0].tag[1] == '!'): # root is not an operator
                 if children[0].next or children[0].above:  # might have a sup on a sup: {x^y}^z, but not necessarily associative
-                    root = cls.make_matrix([children[0]],elem)
+                    root = cls.make_matrix([children[0]], elem)
                 else:
                     root = children[0]                
                 root.above = children[1]

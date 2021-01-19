@@ -31,11 +31,11 @@ class Version03Index:
         self.window = window
         self.semantic_trees = cntl.read("tree_model", num=False, default="layout").lower() == "operator"
         # check for directory
-        self.directory = os.path.join(Path(__file__).resolve().parent, "db-index")
-        if not os.path.exists(self.directory):
-            os.makedirs(self.directory)
+        self.db_index_directory = os.path.join(Path(__file__).parent.parent.parent.parent, "db-index")
+        if not os.path.exists(self.db_index_directory):
+            os.makedirs(self.db_index_directory)
 
-    def openDB(self,fileid,topk):
+    def openDB(self, fileid, topk):
         """
         Start a file for collecting query tuples to pass to search engine
 
@@ -58,7 +58,7 @@ class Version03Index:
                 writer = self.writer
                 print("created reader and write for math engine")
                 filename = self.cntl.read("resultFile")
-                file_path = os.path.join(self.directory, filename)
+                file_path = os.path.join(self.db_index_directory, filename)
                 self.out_file = open(file_path, "w", encoding='UTF-8') # initialize result file
             except Exception as err:
                 reason = str(err)
@@ -67,15 +67,15 @@ class Version03Index:
             self.topk = topk # save the value for text engine and for output
         else:
             filename = "%s_q_%s.tsv" % (self.db, fileid)
-            file_path = os.path.join(self.directory, filename)
+            file_path = os.path.join(self.db_index_directory, filename)
             file = open(file_path, mode='w', encoding='utf-8', newline='')
             writer = csv.writer(file, delimiter='\t', lineterminator='\n', quoting=csv.QUOTE_NONE, escapechar="\\")
         #writer.writerow(["K",10*topk])
-        writer.writerow(["K",topk])
-        writer.writerow(["W",self.window if self.window else 0])
+        writer.writerow(["K", topk])
+        writer.writerow(["W", self.window if self.window else 0])
         writer.writerow(["O", "1" if self.semantic_trees else "0"])
 
-    def closeDB(self,fileid,mode="q"):
+    def closeDB(self, fileid, mode="q"):
         """
         Terminate a file for collecting query tuples to pass to search engine
 
@@ -92,7 +92,7 @@ class Version03Index:
             self.out_file.close()
         else:
             filename = "%s_%s_%s.tsv" % (self.db, mode, fileid)
-            file_path = os.path.join(self.directory, filename)
+            file_path = os.path.join(self.db_index_directory, filename)
             with open(file_path, mode='a', encoding='utf-8', newline='') as file:
                 writer = csv.writer(file, delimiter='\t', lineterminator='\n', quoting=csv.QUOTE_NONE, escapechar="\\")
                 writer.writerow([])
@@ -123,7 +123,7 @@ class Version03Index:
         """
         fileid = os.getpid()
         filename = "%s_i_%s.tsv" % (self.db, fileid)
-        file_path = os.path.join(self.directory, filename)
+        file_path = os.path.join(self.db_index_directory, filename)
         new = not os.path.exists(file_path) # starting a new file
         with open(file_path, mode='a', encoding='utf-8', newline='') as file:
             writer = csv.writer(file, delimiter='\t', lineterminator='\n', quoting=csv.QUOTE_NONE, escapechar="\\")
@@ -148,7 +148,7 @@ class Version03Index:
 ##                        writer.writerow(["T",lp,rp,rel,loc])
         return(fileid)
 
-    def search(self, fileid, query_id, trees, keywords,topk):
+    def search(self, fileid, query_id, trees, keywords, topk):
         """
         prepare query tuples for all trees in the query
 
@@ -180,7 +180,7 @@ class Version03Index:
             writer.writerow(["W",self.window if self.window else 0])
         else:
             filename = "%s_q_%s.tsv" % (self.db, fileid)
-            file_path = os.path.join(self.directory, filename)
+            file_path = os.path.join(self.db_index_directory, filename)
             file = open(file_path, mode='a', encoding='utf-8', newline='')
             writer = csv.writer(file, delimiter='\t', lineterminator='\n', quoting=csv.QUOTE_NONE, escapechar="\\")
             writer.writerow([])
@@ -265,7 +265,7 @@ class Version03Index:
             reader = self.reader
         else:
             filename = "%s_r_%s.tsv" % (self.db, fileid)
-            file_path = os.path.join(self.directory, filename)
+            file_path = os.path.join(self.db_index_directory, filename)
             file = open(file_path, mode='r', encoding='utf-8', newline='')
             reader = csv.reader(file, delimiter='\t', lineterminator='\n', quoting=csv.QUOTE_NONE, escapechar="\\")
         print("Reading from math engine")

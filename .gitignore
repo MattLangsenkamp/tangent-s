@@ -2,4 +2,6 @@
 **/log
 **/results
 **/REMOVED-FILES
+**/raw-data
+*.tar.gz
 

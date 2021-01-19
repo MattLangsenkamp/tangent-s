@@ -80,7 +80,8 @@ def process_optional_params(optional_parameters):
 
     return result_files, rerank_metrics
 
-def load_result_files(result_files): # RZ: mod #, comp_mathml_cache):
+
+def load_result_files(result_files):  # RZ: mod #, comp_mathml_cache):
 
     # query index by query name ....
     # for each query, record {name as index, full mathml, SLT, OPT, candidates={}}
@@ -98,8 +99,8 @@ def load_result_files(result_files): # RZ: mod #, comp_mathml_cache):
         current_query_name = None
 
         # RZ: Prepare to access ARQMath ids for result formulas.
-        cntl = Control( control_filename )
-        md = MathDocument( cntl )
+        cntl = Control(control_filename)
+        md = MathDocument(cntl)
         print("   Operator tree: " + str(md.operator_tree))
 
         # read all results to re-rank
@@ -109,7 +110,7 @@ def load_result_files(result_files): # RZ: mod #, comp_mathml_cache):
 
                 print("--> Current query: " + current_query_name, end="\r", flush=True)
 
-                #query_offset = int(re.split("\.|-", current_query_name)[-1]) - 1
+                # query_offset = int(re.split("\.|-", current_query_name)[-1]) - 1
                 if current_query_name not in queries:
                     # RZ: Hack to support ARQMath results directly.
                     
@@ -133,14 +134,19 @@ def load_result_files(result_files): # RZ: mod #, comp_mathml_cache):
                     raise Exception("Result listed before a query, file " + result_filename + " line " + str(idx))
 
                 location = int(parts[2])
-                formula_mml = md.find_doc_file( int(parts[1]) )
-                formula_id = int( os.path.splitext( os.path.split( formula_mml )[1] )[0] )
+                formula_mml = md.find_doc_file(int(parts[1]))
+                file_name_with_ext = os.path.split(formula_mml)[1]
+
+                # this only accounts for when the file names are numbers - MLang
+                # no_ext = os.path.splitext(file_name_with_ext)[0]
+                # formula_id = int(no_ext)
+                # keeping name as string should only have the effect of searching the candidates be slower
+                formula_id = file_name_with_ext
 
                 # DEBUG
                 # print(  "doc_id: " + parts[1] )
                 # print(formula_mml)
                 # print(os.path.splitext( os.path.split( formula_mml )[1] )[0]) 
-
                 if not formula_id in queries[current_query_name]["candidates"]:
                     score_list = list(map(float, parts[4].replace(" ","").replace("[","")\
                             .replace("]","").split(",")))
@@ -271,7 +277,7 @@ def save_results(queries, output_file):
             cand_lines.append(line)
 
         # Reverse sort by weighted score to avoid errors.
-        out_lines += sorted( cand_lines, key=itemgetter(2), reverse=True )
+        out_lines += sorted(cand_lines, key=itemgetter(2), reverse=True)
 
     out_file = open(output_file, 'w', encoding='utf-8')
     for line in out_lines:
@@ -337,6 +343,7 @@ def main():
     # Output results
     save_results(queries, output_filename)
     print("Complete!")
+
 
 if __name__ == '__main__':
     main()

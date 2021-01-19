@@ -64,13 +64,13 @@ def process_query_batch(args):
         stats.num_expressions += len(trees)
 
         # also need to handle keyword queries if present
-        terms =  re.findall(r"<keyword[^>]*>\s*([^<]*\S)\s*</keyword>",query_string)
+        terms = re.findall(r"<keyword[^>]*>\s*([^<]*\S)\s*</keyword>",query_string)
         stats.num_keywords += len(terms)
 
         math_index.search(fileid, query_num, trees, terms, topk)
     
     math_index.closeDB(fileid)
-    return (fileid,stats)
+    return fileid, stats
 
 
 def get_query(query_obj):
@@ -93,6 +93,7 @@ def get_query(query_obj):
 
     return query_num, "<doc>" + " ".join(query_list) + "</doc>"
 
+
 def main():
     ntcir_main_count = 1000  # main task require 1000 results returned
     # RZ: Hack - always choose top - 1000
@@ -103,7 +104,7 @@ def main():
     if sys.stderr.encoding != 'utf8':
       sys.stderr = codecs.getwriter('utf8')(sys.stderr.buffer, 'strict')
       
-    if (len(argv) > 2 or (len(argv) == 2 and argv[1] == 'help')):  # uses control file to control all parameters
+    if len(argv) > 2 or (len(argv) == 2 and argv[1] == 'help'):  # uses control file to control all parameters
         print_help_and_exit()
         return
     else:
@@ -112,7 +113,7 @@ def main():
         try:
             cntl = Control(argv[1]) if len(argv) == 2 else Control()
         except Exception as err:
-            print("Error in reading <cntl-file>: " +str(err))
+            print("Error in reading <cntl-file>: " + str(err))
             print_help_and_exit()
             return
         
@@ -127,7 +128,7 @@ def main():
             print_help_and_exit()
             return
 
-        window = cntl.read("window",num=True)
+        window = cntl.read("window", num=True)
         if window and window < 1:  # window values smaller than 1 make no sense
             print('Window values smaller than 1 not permitted -- using 1')
             window = 1
@@ -173,11 +174,11 @@ def main():
                     combined_stats.add(stats)
             except Exception as err:
                 reason = str(err)
-                print("Failed to process document "+ query_file +": "+reason, file=sys.stderr)
+                print("Failed to process document " + query_file + ": " + reason, file=sys.stderr)
                 combined_stats.problem_files[reason] = combined_stats.problem_files.get(reason, set())
                 combined_stats.problem_files[reason].add(query_file)
 
-            cntl.store("query_fileids",str(fileids))
+            cntl.store("query_fileids", str(fileids))
             
             print("Done preparing query batch for %s against %s" % (query_file, db))
             combined_stats.dump()
@@ -188,6 +189,7 @@ def main():
             elapsed = end - start
 
             print("Elapsed time %s" % (elapsed))
+
 
 if __name__ == '__main__':
     main()

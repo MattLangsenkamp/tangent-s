@@ -11,6 +11,7 @@ from .math_extractor import MathExtractor
 
 __author__ = 'Nidhin, FWTompa'
 
+
 class MathDocument:
     """
     Math document reading and searching
@@ -21,10 +22,10 @@ class MathDocument:
         :param cntl: control information for indexing
         :type  cntl: Control
         """
-        self.chunk_size = cntl.read("chunk_size",num=True,default=200)
+        self.chunk_size = cntl.read("chunk_size", num=True, default=200)
         self.queries = cntl.read("queries")
         self.doc_list = cntl.read("doc_list")
-        
+
         try:
             # BINARY: set tree_type to True if operator tree, similar to 
             # index.
@@ -38,9 +39,9 @@ class MathDocument:
         file_skips = cntl.read("file_skips")
         if not file_skips:
             raise Exception("<cntl-file> missing file_skips")
-        self.file_skips = file_skips.strip("[]").replace(" ","").split(",")
+        self.file_skips = file_skips.strip("[]").replace(" ", "").split(",")
 
-    def find_doc_file(self,docid):
+    def find_doc_file(self, docid):
         """
         Find name of math document file
 
@@ -51,18 +52,18 @@ class MathDocument:
         :rtype: string or None
         """
 
-        (chunkid,offset) = divmod(docid, self.chunk_size)
+        (chunkid, offset) = divmod(docid, self.chunk_size)
         if chunkid >= len(self.file_skips):
-            print("Cannot find document: doc_id %i too large" %docid)
+            print("Cannot find document: doc_id %i too large" % docid)
             return None
-        (devnull,mappings) = self.read_mapping_file(chunkid)
+        (devnull, mappings) = self.read_mapping_file(chunkid)
         if offset >= len(mappings):
-            print("Cannot find document: doc_id %i too large" %docid)
+            print("Cannot find document: doc_id %i too large" % docid)
             return None
         return mappings[offset]
 
     @classmethod
-    def read_doc_file(cls,filename):
+    def read_doc_file(cls, filename):
         """
         Read math document file
 
@@ -74,9 +75,9 @@ class MathDocument:
         """
         ext = os.path.splitext(filename)[1]
         with open(filename, 'r', encoding='utf-8') as f:
-            return (ext,f.read())
+            return (ext, f.read())
 
-    def read_mapping_file(self,chunkid):
+    def read_mapping_file(self, chunkid):
         """
         Read mapping file
           3 columns before Version 0.33
@@ -96,9 +97,9 @@ class MathDocument:
             for idx, row in enumerate(reader):
                 if idx >= self.chunk_size: break
                 mappings.append(row[0])
-        return (self.chunk_size,mappings) # return chunk_size in case not filled
+        return (self.chunk_size, mappings)  # return chunk_size in case not filled
 
-    def find_mathml(self,docid,position):
+    def find_mathml(self, docid, position):
         """
         Find a specific math expression
         :param docid: document number or -1 (to read query)
@@ -109,22 +110,22 @@ class MathDocument:
         :return MathML or None
         :rtype: string
         """
-        if docid < 0: # hack to allow for reading queries instead
-            (ext,content) = self.read_doc_file(self.queries)
+        if docid < 0:  # hack to allow for reading queries instead
+            (ext, content) = self.read_doc_file(self.queries)
         else:
-            (ext,content) = self.read_doc_file(self.find_doc_file(docid))
+            (ext, content) = self.read_doc_file(self.find_doc_file(docid))
         if ext == '.tex':
             if position > 0:
-                print("Warning: .tex documents have only one expression; position %i ignored\n"%position)
+                print("Warning: .tex documents have only one expression; position %i ignored\n" % position)
             mathml = LatexToMathML.convert_to_mathml(content)
         else:
             maths = MathExtractor.math_tokens(content)
             if position >= len(maths):
-                print("Cannot find MathML expression: position %i too large"%position)
+                print("Cannot find MathML expression: position %i too large" % position)
                 return None
             mathml = maths[position]
-        return(mathml)
-    
+        return (mathml)
+
     def find_mathml_id(self, docid, position):
         """
         Find the id for a specific math expression
@@ -135,22 +136,22 @@ class MathDocument:
         :return value of xml:id or None
         :rtype: string
         """
-        mathml = self.find_mathml(docid,position)
+        mathml = self.find_mathml(docid, position)
         if not mathml:
             return None
-        parsed_xml=BeautifulSoup(mathml)
-        math_root=parsed_xml.find("math") # namespaces have been removed (FWT)
+        parsed_xml = BeautifulSoup(mathml)
+        math_root = parsed_xml.find("math")  # namespaces have been removed (FWT)
         tagid = math_root["id"]
         return tagid
-        
+
+
 if __name__ == '__main__':
 
     if sys.stdout.encoding != 'utf8':
-      sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer, 'strict')
+        sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer, 'strict')
     if sys.stderr.encoding != 'utf8':
-      sys.stderr = codecs.getwriter('utf8')(sys.stderr.buffer, 'strict')
+        sys.stderr = codecs.getwriter('utf8')(sys.stderr.buffer, 'strict')
 
-    cntl = Control(argv[1]) # control file name (after indexing)
+    cntl = Control(argv[1])  # control file name (after indexing)
     d = MathDocument(cntl)
-    print(d.find_mathml_id(int(argv[2]),int(argv[3])))  # doc_num and pos_num
-
+    print(d.find_mathml_id(int(argv[2]), int(argv[3])))  # doc_num and pos_num

@@ -34,9 +34,9 @@ class AlignmentMatching:
         p_alignments = list(all_alignments)
         #print("")
 
-        #print("Total Alignments: " + str(len(p_alignments)))
-        #print("Query size: " + str(q_size))
-        #print("Candidate size: " + str(c_size))
+        # print("Total Alignments: " + str(len(p_alignments)))
+        # print("Query size: " + str(q_size))
+        # print("Candidate size: " + str(c_size))
 
         scored_alignments = []
 
@@ -53,7 +53,7 @@ class AlignmentMatching:
 
         scored_alignments = sorted(scored_alignments, reverse=True, key=lambda x: x[0])
 
-        #print("Actual alignment roots tested: " + str(len(scored_alignments)))
+        # print("Actual alignment roots tested: " + str(len(scored_alignments)))
 
         # select final matches ....
         if len(scored_alignments) > 0:

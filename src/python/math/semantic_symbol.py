@@ -8,6 +8,7 @@ from .exceptions import UnknownTagException
 
 import html
 
+
 class SemanticSymbol(MathSymbol):
     """
     Symbol in an operator tree
@@ -62,6 +63,7 @@ class SemanticSymbol(MathSymbol):
     def parse_from_mathml(cls, elem, parent=None, identified=None):
         """
         Parse operator tree from content mathml using recursive descent
+        :param parent:
         :param elem: a node in MathML structure on which an iterator is defined to select children
         :param identified: a hash table of nodes marked with identifiers
         :return: SemanticSymbol instance representing the root of the tree ...

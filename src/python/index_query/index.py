@@ -47,6 +47,10 @@ def read_file(filename, file_id, semantic, missing_tags=None, problem_files=None
     """
     Read file for parsing
 
+    :param problem_files:
+    :param missing_tags:
+    :param semantic:
+    :param file_id:
     :type filename: string
     :param filename: file to be parsed
 

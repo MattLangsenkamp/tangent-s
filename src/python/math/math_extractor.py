@@ -13,6 +13,7 @@ from .exceptions import UnknownTagException
 
 __author__ = 'Nidhin, FWTompa, KDavila'
 
+
 ## TODO: produce cleaned_file_content for text indexing on a separate pass (called separately in Version 0.2)
 ## simplify math extraction by creating simple list of math expressions and then grouping them by SLT, rather than by LaTeX
 
@@ -23,22 +24,22 @@ class MathExtractor:
 
     namespace = r"(?:[^> :]*:)?"
     attributes = r"(?: [^>]*)?"
-    math_expr = "<"+namespace+"math"+attributes+r">.*?</"+namespace+"math>"
+    math_expr = "<" + namespace + "math" + attributes + r">.*?</" + namespace + r"math>|(?<!\\)\$[^\$\<\>]+(?<!\\)\$"
     dollars = r"(?<!\\)\$+"
-    latex_expr = dollars+".{1,200}?"+dollars # converted to math_expr in cleaned text
+    latex_expr = dollars + ".{1,200}?" + dollars  # converted to math_expr in cleaned text
     # latex could also be surrounded by \(..\) or \[..\], but these are ignored for now (FWT)
     text_token = r"[^<\s]+"
- 
+
     math_pattern = re.compile(math_expr, re.DOTALL)  # TODO: allow for LaTeX as well
     # split_pattern = re.compile(math_expr+"|"+latex_expr+"|"+text_token, re.DOTALL)
 
-    inner_math = re.compile(".*(<"+math_expr+")", re.DOTALL)  # rightmost <*:math 
-    open_tag = re.compile("<(?!/)(?!mws:qvar)"+namespace, re.DOTALL) # up to and including namespace
-    close_tag = re.compile("</(?!mws:qvar)"+namespace, re.DOTALL)    # but keep qvar namespace
+    inner_math = re.compile(".*(<" + math_expr + ")", re.DOTALL)  # rightmost <*:math
+    open_tag = re.compile("<(?!/)(?!mws:qvar)" + namespace, re.DOTALL)  # up to and including namespace
+    close_tag = re.compile("</(?!mws:qvar)" + namespace, re.DOTALL)  # but keep qvar namespace
 
-##    @classmethod
-##    def get_string_tokenized(cls, content):
-##        return cls.split_pattern.findall(content)
+    ##    @classmethod
+    ##    def get_string_tokenized(cls, content):
+    ##        return cls.split_pattern.findall(content)
 
     @classmethod
     def math_tokens(cls, content):
@@ -58,24 +59,23 @@ class MathExtractor:
         for token in tokens:
             # print("Token = "+token,flush=True)
 
-            if token.endswith("math>"): # MathML token
-##                # Does not handle the case where one math expression is nested inside another
-##                #       (likely with different namespaces)
-##                # N.B. Removing this check speeds up processing significantly (FWT)
-##                token = cls.inner_math.sub(r"\0",token)  # find innermost <*:math 
-                token = cls.close_tag.sub("</",token) # drop namespaces (FWT)
-                token = cls.open_tag.sub("<",token)
+            if token.endswith("math>"):  # MathML token
+                ##                # Does not handle the case where one math expression is nested inside another
+                ##                #       (likely with different namespaces)
+                ##                # N.B. Removing this check speeds up processing significantly (FWT)
+                ##                token = cls.inner_math.sub(r"\0",token)  # find innermost <*:math
+                token = cls.close_tag.sub("</", token)  # drop namespaces (FWT)
+                token = cls.open_tag.sub("<", token)
                 math.append(token)
-                
+
             else:  # LaTeX math expression
-                tex = token.strip("$") # TODO: handle other latex delimiters
-                math.append(LatexToMathML.convert_to_mathml(tex))           
+                tex = token.strip("$")  # TODO: handle other latex delimiters
+                math.append(LatexToMathML.convert_to_mathml(tex))
 
         return math
 
-
     @classmethod
-    def isolate_pmml(cls,tree):
+    def isolate_pmml(cls, tree):
         """
         extract the Presentation MathML from a MathML expr
         
@@ -84,28 +84,27 @@ class MathExtractor:
         return: Presentation MathML
         rtype:  string
         """
-        parsed_xml=BeautifulSoup(tree, "lxml")
+        parsed_xml = BeautifulSoup(tree, "lxml")
 
-
-        math_root=parsed_xml.find("math") # namespaces have been removed (FWT)
-        application_tex= math_root.find("annotation",{"encoding":"application/x-tex"})
+        math_root = parsed_xml.find("math")  # namespaces have been removed (FWT)
+        application_tex = math_root.find("annotation", {"encoding": "application/x-tex"})
 
         if application_tex:
             application_tex.decompose()
 
-        pmml_markup=math_root.find("annotation-xml",{"encoding":"MathML-Presentation"})
+        pmml_markup = math_root.find("annotation-xml", {"encoding": "MathML-Presentation"})
         if pmml_markup:
             pmml_markup.name = "math"
         else:
-            pmml_markup=math_root
-            cmml_markup=math_root.find("annotation-xml",{"encoding":"MathML-Content"})
+            pmml_markup = math_root
+            cmml_markup = math_root.find("annotation-xml", {"encoding": "MathML-Content"})
             if cmml_markup:
-                cmml_markup.decompose() # delete any Content MML
-        pmml_markup['xmlns']="http://www.w3.org/1998/Math/MathML" # set the default namespace
+                cmml_markup.decompose()  # delete any Content MML
+        pmml_markup['xmlns'] = "http://www.w3.org/1998/Math/MathML"  # set the default namespace
         return str(pmml_markup)
 
     @classmethod
-    def isolate_cmml(cls,tree):
+    def isolate_cmml(cls, tree):
         """
         extract the Content MathML from a MathML expr
 
@@ -114,26 +113,24 @@ class MathExtractor:
         return: Content MathML
         rtype:  string
         """
-        parsed_xml=BeautifulSoup(tree, "lxml")
+        parsed_xml = BeautifulSoup(tree, "lxml")
 
-
-        math_root=parsed_xml.find("math") # namespaces have been removed (FWT)
-        application_tex= math_root.find("annotation",{"encoding":"application/x-tex"})
+        math_root = parsed_xml.find("math")  # namespaces have been removed (FWT)
+        application_tex = math_root.find("annotation", {"encoding": "application/x-tex"})
 
         if application_tex:
             application_tex.decompose()
 
-
-        cmml_markup = math_root.find("annotation-xml",{"encoding":"MathML-Content"})
+        cmml_markup = math_root.find("annotation-xml", {"encoding": "MathML-Content"})
         if cmml_markup:
             cmml_markup.name = "math"
         else:
             cmml_markup = math_root
-            pmml_markup = math_root.find("annotation-xml",{"encoding":"MathML-Presentation"})
+            pmml_markup = math_root.find("annotation-xml", {"encoding": "MathML-Presentation"})
             if pmml_markup:
-                pmml_markup.decompose() # delete any Content MML
+                pmml_markup.decompose()  # delete any Content MML
 
-        cmml_markup['xmlns']="http://www.w3.org/1998/Math/MathML" # set the default namespace
+        cmml_markup['xmlns'] = "http://www.w3.org/1998/Math/MathML"  # set the default namespace
         return str(cmml_markup)
 
     @classmethod
@@ -149,12 +146,12 @@ class MathExtractor:
         :return root of symbol tree
 
         """
-        if (len(elem) == 0):
+        if len(elem) == 0:
             return None
 
-        elem_content = io.StringIO(elem) # treat the string as if a file
+        elem_content = io.StringIO(elem)  # treat the string as if a file
         root = xml.etree.ElementTree.parse(elem_content).getroot()
-##        print("parse_from_mathml tree: " + xml.etree.ElementTree.tostring(root,encoding="unicode"))
+        ##        print("parse_from_mathml tree: " + xml.etree.ElementTree.tostring(root,encoding="unicode"))
         return LayoutSymbol.parse_from_mathml(root)
 
     @classmethod
@@ -172,11 +169,10 @@ class MathExtractor:
         if (len(elem) == 0):
             return None
 
-        elem_content = io.StringIO(elem) # treat the string as if a file
+        elem_content = io.StringIO(elem)  # treat the string as if a file
         root = xml.etree.ElementTree.parse(elem_content).getroot()
 
         return SemanticSymbol.parse_from_mathml(root)
-
 
     @classmethod
     def convert_and_link_mathml(cls, elem, document=None, position=None):
@@ -194,13 +190,12 @@ class MathExtractor:
         if (len(elem) == 0):
             return None
 
-        elem_content = io.StringIO(elem) # treat the string as if a file
+        elem_content = io.StringIO(elem)  # treat the string as if a file
         root = xml.etree.ElementTree.parse(elem_content).getroot()
-##        print("parse_from_mathml tree: " + xml.etree.ElementTree.tostring(root,encoding="unicode"))
+        ##        print("parse_from_mathml tree: " + xml.etree.ElementTree.tostring(root,encoding="unicode"))
         symbol_root = LayoutSymbol.parse_from_mathml(root)
 
         return SymbolTree(symbol_root, document, position, root)
-
 
     @classmethod
     def parse_from_tex(cls, tex, file_id=-1, position=[0]):
@@ -208,6 +203,7 @@ class MathExtractor:
         Parse expression from Tex string using latexmlmath to convert to presentation markup language
 
 
+        :param position:
         :param tex: tex string
         :type tex string
         :param file_id: file identifier
@@ -218,20 +214,20 @@ class MathExtractor:
 
         """
 
-        print("Parsing tex doc %s" % file_id,flush=True)
+        print("Parsing tex doc %s" % file_id, flush=True)
         print("here")
 
-        mathml=LatexToMathML.convert_to_mathml(tex)
+        mathml = LatexToMathML.convert_to_mathml(tex)
         pmml = cls.isolate_pmml(mathml)
-##        print('LaTeX converted to MathML: \n' )
+        ##        print('LaTeX converted to MathML: \n' )
         return SymbolTree(cls.convert_to_layoutsymbol(pmml), file_id, position)
-
 
     @classmethod
     def parse_from_xml(cls, content, content_id, operator=False, missing_tags=None, problem_files=None):
         """
         Parse expressions from XML file
 
+        :param operator:
         :param content: XML content to be parsed
         :type  content: string
         :param content_id: fileid for indexing or querynum for querying
@@ -252,8 +248,8 @@ class MathExtractor:
             groupUnique = {}
 
             for idx, tree in enumerate(trees):
-                #print("Parsing doc %s, expr %i" % (content_id,idx),flush=True)
-                #print(tree)
+                # print("Parsing doc %s, expr %i" % (content_id,idx),flush=True)
+                # print(tree)
                 if operator:
                     # parse from content mathml, build an operator tree ...
                     cmml = cls.isolate_cmml(tree)
@@ -268,7 +264,7 @@ class MathExtractor:
                 if current_tree:
                     s = current_tree.tostring()
                     if s not in groupUnique:
-                        groupUnique[s] = SymbolTree(current_tree,content_id,[idx])
+                        groupUnique[s] = SymbolTree(current_tree, content_id, [idx])
                     else:
                         groupUnique[s].position.append(idx)
 
@@ -280,13 +276,12 @@ class MathExtractor:
 
             return list(groupUnique.values()), n_error
         except UnknownTagException as e:
-            reason = "Unknown tag in file or query "+str(content_id)+": "+e.tag
+            reason = "Unknown tag in file or query " + str(content_id) + ": " + e.tag
             print(reason)
             missing_tags[e.tag] = missing_tags.get(e.tag, set())
-            missing_tags[e.tag].add([content_id,idx])
+            missing_tags[e.tag].add([content_id, idx])
             raise Exception(reason)  # pass on the exception to identify the document or query
         except Exception as err:
             reason = str(err)
-            print("Parse error in file or query "+str(content_id)+": "+reason+": "+str(tree), file=sys.stderr)
-            raise Exception(reason) # pass on the exception to identify the document or query
-
+            print("Parse error in file or query " + str(content_id) + ": " + reason + ": " + str(tree), file=sys.stderr)
+            raise Exception(reason)  # pass on the exception to identify the document or query

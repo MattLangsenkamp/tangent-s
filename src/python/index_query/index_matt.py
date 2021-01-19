@@ -12,10 +12,12 @@ from src.python.utility.control import Control
 from src.python.math.math_document import MathDocument
 
 
-sys.setrecursionlimit(10000)
+#sys.setrecursionlimit(10000)
 from sys import argv, exit
 
 """
+    thus fil is a modification of index.py. this is a single threaded program created for debugging purpposes
+    this should not be used in production or for large tests. - matt
 Indexer is a standalone script that indexes a collection
 
 Supports mathml,.xhtml and tex files
@@ -179,22 +181,22 @@ def main():
         if num_docs > 0:
             math_index = Version03Index(cntl, window=window)
 
-            max_jobs = min(10, num_docs)
-            manager = multiprocessing.Manager()
-            lock = manager.Lock()
+            # max_jobs = min(10, num_docs)
+            # manager = multiprocessing.Manager()
+            # lock = manager.Lock()
 
             # identify chunks to be indexed by each process
             args = [(math_index, cntl, chunkid) for chunkid in list(range(len(filepos)))]
 
             fileids = set()
 
-            with ProcessPoolExecutor(max_workers=max_jobs) as executor:
 
-                # single process .. .for debugging ...
-                # for fileid, stats in map(math_indexer_task, args):
-                for fileid, stats in executor.map(math_indexer_task, args):
-                    fileids.add(fileid)
-                    combined_stats.add(stats)
+            # single process .. .for debugging ...
+            # for fileid, stats in map(math_indexer_task, args):
+            for arg in args:
+                fileid, stats = math_indexer_task(arg)
+                fileids.add(fileid)
+                combined_stats.add(stats)
 
             for fileid in fileids:
                 math_index.closeDB(fileid, mode="i")

@@ -1,5 +1,6 @@
 __author__ = 'KMDC'
 
+
 class Alignment:
     def __init__(self, q_element, q_location, c_element, c_location, constraint=None):
         self.q_element = q_element
