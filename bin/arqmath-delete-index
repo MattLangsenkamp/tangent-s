@@ -1,10 +1,18 @@
 #!/bin/bash 
 
 echo "Are you *sure* you want to delete all index files in db-index? (y/n)"
-read decision
+read -r decision
 
 if [ "$decision" = "y" ]
 then
+  echo "would you link to archive the index files to be deleted (y/n)"
+  read -r archive
+  if [ "$archive" = "y" ]
+  then
+    echo "enter archive name (just file name, no extension example: 'arqmath-index-backup') "
+    read -r archiveName
+    tar -zcvf ../"$archiveName".tar.gz ../db-index/*_q_*
+  fi
 	echo "Deleting index files in db-index/...."
 	rm -f ../db-index/*_i_*
 	echo "done."

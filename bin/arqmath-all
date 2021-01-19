@@ -4,18 +4,27 @@
 # !! ASSUMES that the .cntl files to use are arqslt.cntl and arqopt.cntl
 #    see README.txt for details about .cntl files.
 
-#./arqmath-delete-index
-# ./arqmath-delete-queries
-# ./arqmath-index ../cntl/arqslt.cntl ../cntl/arqopt.cntl
+OPT_CNTL=../cntl/arqopt.cntl
+SLT_CNTL=../cntl/arqslt.cntl
+
+SLT_RESULTS=../results/arqslt-results.tsv
+SLT_RERANKED=../results/arqslt-reranked.tsv
+
+OPT_RESULTS=../results/arqopt-results.tsv
+OPT_RERANKED=../results/arqopt-reranked.tsv
+
+
+./arqmath-delete-index
+./arqmath-delete-queries
+./arqmath-index $SLT_CNTL $OPT_CNTL
 
 # Run SLT and OPT queries
-./arqmath-search ../cntl/arqslt.cntl
-./arqmath-search ../cntl/arqopt.cntl
+./arqmath-search $SLT_CNTL
+./arqmath-search $OPT_CNTL
 
 # Now rerank and combine OPT and SLT results.
-./arqmath-search-rerank ../cntl/arqslt.cntl ../results/arqslt-results.tsv ../results/arqslt-reranked.tsv
-./arqmath-search-rerank ../cntl/arqopt.cntl ../results/arqopt-results.tsv ../results/arqopt-reranked.tsv
-./arqmath-search-combine ../results/arq-slt-opt-results.tsv ../cntl/arqslt.cntl ../results/arqslt-reranked.tsv \
-	../cntl/arqopt.cntl ../results/arqopt-reranked.tsv
+./arqmath-search-rerank $SLT_CNTL $SLT_RESULTS $SLT_RERANKED html
+./arqmath-search-rerank $OPT_CNTL $OPT_RESULTS $OPT_RERANKED html
+./arqmath-search-combine ../results/arq-slt-opt-results.tsv $SLT_CNTL $SLT_RERANKED $OPT_CNTL $OPT_RERANKED
 
 # done. Results are in arq-slt-opt-results.tsv

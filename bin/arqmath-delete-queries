@@ -5,6 +5,14 @@ read decision
 
 if [ "$decision" = "y" ]
 then
+  echo "would you link to archive the query files to be deleted (y/n)"
+  read -r archive
+  if [ "$archive" = "y" ]
+  then
+    echo "enter archive name (just file name, no extension example: 'arqmath-query-backup') "
+    read -r archiveName
+    tar -zcvf ../"$archiveName".tar.gz ../db-index/*_i_*
+  fi
 	echo "Deleting query files in db-index/...."
 	rm -f ../db-index/*_q_*
 	echo "done."
