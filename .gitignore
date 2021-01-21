@@ -9,4 +9,5 @@
 *.cache
 *-big.txt
 *-ok.txt
+*.pyc
 
