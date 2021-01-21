@@ -1,7 +1,12 @@
 **/db-index
 **/log
 **/results
+**/html
 **/REMOVED-FILES
 **/raw-data
 *.tar.gz
+.idea
+*.cache
+*-big.txt
+*-ok.txt
 

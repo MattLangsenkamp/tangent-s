@@ -18,6 +18,7 @@ from src.python.ranking.result import Result
 from src.python.ranking.document_rank_info import DocumentRankInfo
 from src.python.ranking.constraint_info import ConstraintInfo
 
+
 class Query:
     HTML_ResultColumns = 3
 

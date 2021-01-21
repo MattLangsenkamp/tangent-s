@@ -24,13 +24,16 @@ class MathExtractor:
 
     namespace = r"(?:[^> :]*:)?"
     attributes = r"(?: [^>]*)?"
-    math_expr = "<" + namespace + "math" + attributes + r">.*?</" + namespace + r"math>|(?<!\\)\$[^\$\<\>]+(?<!\\)\$"
+    math_expr = "<" + namespace + "math" + attributes + r">.*?</" + namespace + \
+                r'math>|<[^\/]+class="math-container".*?>.*?<\/.*?>'
     dollars = r"(?<!\\)\$+"
+    inner_latex = r"(?<!\\)\$[^\$\<\>]+(?<!\\)\$"
     latex_expr = dollars + ".{1,200}?" + dollars  # converted to math_expr in cleaned text
     # latex could also be surrounded by \(..\) or \[..\], but these are ignored for now (FWT)
     text_token = r"[^<\s]+"
 
     math_pattern = re.compile(math_expr, re.DOTALL)  # TODO: allow for LaTeX as well
+    inner_latex_pattern = re.compile(latex_expr, re.DOTALL)
     # split_pattern = re.compile(math_expr+"|"+latex_expr+"|"+text_token, re.DOTALL)
 
     inner_math = re.compile(".*(<" + math_expr + ")", re.DOTALL)  # rightmost <*:math
@@ -69,7 +72,10 @@ class MathExtractor:
                 math.append(token)
 
             else:  # LaTeX math expression
-                tex = token.strip("$")  # TODO: handle other latex delimiters
+                latex = cls.inner_latex_pattern.findall(token)[0]
+                latex = latex[latex.index('$')+1:]
+                latex = latex[:latex.index('$')]
+                tex = latex.strip("$")  # TODO: handle other latex delimiters
                 math.append(LatexToMathML.convert_to_mathml(tex))
 
         return math

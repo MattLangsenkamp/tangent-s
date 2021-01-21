@@ -5,6 +5,13 @@ import sys
 from sys import argv
 
 
+def create_doclist(outfile, directories):
+    with open(outfile, "w") as f:
+        for dir_path in directories:
+            abs_dir_path = str(pathlib.Path(dir_path).absolute().resolve())
+            print("\t"+abs_dir_path)
+            add_files_in_directory(f, abs_dir_path)
+
 def add_files_in_directory(f, directory_path):
     """
     recursively searches a directory and any subdirectory it has for files and adds them to the output file
@@ -44,11 +51,7 @@ if __name__ == "__main__":
             print("directory "+abs_path+" does not exist. please run python3 dir2doclist.py help for instructions ")
             exit(1)
 
-    with open(argv[1], "w") as f:
-        for dir_path in argv[2:]:
-            abs_path = str(pathlib.Path(dir_path).absolute().resolve())
-            print("\t"+abs_path)
-            add_files_in_directory(f, abs_path)
+    create_doclist(argv[1], argv[2:])
 
 
 
