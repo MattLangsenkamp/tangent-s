@@ -11,7 +11,7 @@ then
   then
     echo "enter archive name (just file name, no extension example: 'arqmath-index-backup') "
     read -r archiveName
-    tar -zcvf ../"$archiveName".tar.gz ../db-index/*_q_*
+    tar -zcvf ../"$archiveName".tar.gz ../db-index/*_i_*
   fi
 	echo "Deleting index files in db-index/...."
 	rm -f ../db-index/*_i_*

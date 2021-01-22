@@ -1185,7 +1185,7 @@ class Query:
         current_name = None
         tuple_ret_time = 'undefined'
         all_queries = []
-
+        query_count = -1
         # read all results to re-rank
         for idx, line in enumerate(lines):
             # parts = line.strip().split("\t")
@@ -1194,6 +1194,7 @@ class Query:
             if len(parts) == 2:
                 if parts[0][0] == "Q":
                     current_name = parts[1]
+                    query_count = query_count + 1
                     current_query = None
 
                 elif parts[0][0] == "E":
@@ -1206,10 +1207,13 @@ class Query:
                         # query_offset = int(current_name.split("-")[-1]) - 1
 
                         # RZ: modify for ARQMath topic names.
-                        query_offset = int(re.split('\.|-',current_name)[-1]) - 1
+                        if current_query == "B.85":
+                            print("here")
+                        # query_offset = int(re.split('\.|-',current_name)[-1]) - 1
 
                         if html_prefix is not None:
-                            mathml = mathml_cache.get(-1, query_offset, query_expression, True)
+
+                            mathml = mathml_cache.get(-1, query_count, query_expression, True)
 
                             # create empty directories for this query ...
                             if not os.path.isdir(html_prefix + "/" + current_name):
@@ -1259,6 +1263,8 @@ class Query:
                         scores = [float(parts[4])]
 
                     if html_prefix != None:
+                        if location != 0:
+                            print("here")
                         mathml = mathml_cache.get(doc_id, location, expression)
                     else:
                         mathml = None

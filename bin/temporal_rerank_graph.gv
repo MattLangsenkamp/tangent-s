@@ -1,0 +1,27 @@
+digraph expression{
+            rankdir="LR";
+            compound=true; edge [arrowhead=none];
+        n_0[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ n_1[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ n_2[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ n_3[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ subgraph cluster4 {
+ style= "dashed";
+ color= "#000000";
+ fontcolor= "#000000";
+ label="";
+n_5[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ n_6[label="" style="dashed" color="#000000" fontcolor="#000000"];
+ n_7[label="" style="dashed" color="#000000" fontcolor="#000000"];
+n_6 -> n_7 [label="" weight="5" ];
+ n_5 -> n_6 [label="" weight="5" ];
+}
+ n_8[label="=" style="bold" color="#008800" fontcolor="#000000"];
+ n_9[label="0" style="bold" color="#008800" fontcolor="#000000"];
+n_8 -> n_9 [label="" weight="5" ];
+ n_7 -> n_8 [label="", ltail="cluster4" weight="5" ];
+ n_3 -> n_5 [label="", lhead="cluster4" weight="5" ];
+ n_2 -> n_3 [label="" weight="5" ];
+ n_1 -> n_2 [label="" weight="5" ];
+ n_0 -> n_1 [label="" weight="5" ];
+}
