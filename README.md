@@ -327,12 +327,15 @@ would look as such
 
 ### Re-ranking
 
-to 
-`../src/python/ranking/rerank_results.py $1 $2 12 $3`
+to rerank results run  
+`../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step 12 ../results/reranked-result-file-to-be-generated`  
+To rerank and generate a folder container html files giving insight to the re-rankings run  
+`../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step 12 ../results/reranked-result-file-to-be-generated -h ../html`
 
-
-`../src/python/ranking/rerank_results.py $1 $2 12 $3 -h ../html`
 ### Combining
+Combining results can be done with the following command. It is normally done to combine results from opt and slt representations.   
+
+`./arqmath-search-combine ../results/arq-slt-opt-results.tsv ../cntl/slt-cntl ../results/reranked-slt-result $../cntl/opt-cntl ../results/reranked-opt-result`
 ### Debugging
 The index.py portion of the pipeline using multi-process programming. 
 This can cause IDE debuggers to lose track of the process you would like to monitor. 
