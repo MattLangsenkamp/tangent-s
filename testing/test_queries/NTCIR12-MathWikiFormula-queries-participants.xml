@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<topics xmlns="http://www.w3.org/1998/Math/MathML">
+<topics xmlns:m="http://www.w3.org/1998/Math/MathML">
   <topic>
     <num>NTCIR12-MathWiki-1</num>
     <query>
@@ -37,7 +37,7 @@
   <m:semantics>
 	<m:mi>𝔓</m:mi>
 	<m:annotation-xml encoding="MathML-Content">
-	  <ci>𝔓</m:ci>
+	  <m:ci>𝔓</m:ci>
 	</m:annotation-xml>
 	<m:annotation encoding="application/x-tex">\mathfrak{P}</m:annotation>
   </m:semantics>
