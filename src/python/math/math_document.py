@@ -57,6 +57,8 @@ class MathDocument:
             print("Cannot find document: doc_id %i too large" % docid)
             return None
         (devnull, mappings) = self.read_mapping_file(chunkid)
+        if mappings is None:
+            return None
         if offset >= len(mappings):
             print("Cannot find document: doc_id %i too large" % docid)
             return None
@@ -96,7 +98,10 @@ class MathDocument:
                                 quoting=csv.QUOTE_ALL)
             for idx, row in enumerate(reader):
                 if idx >= self.chunk_size: break
-                mappings.append(row[0])
+                try:
+                    mappings.append(row[0])
+                except:
+                    return (self.chunk_size, None)
         return (self.chunk_size, mappings)  # return chunk_size in case not filled
 
     def find_mathml(self, docid, position):

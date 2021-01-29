@@ -1263,8 +1263,6 @@ class Query:
                         scores = [float(parts[4])]
 
                     if html_prefix != None:
-                        if location != 0:
-                            print("here")
                         mathml = mathml_cache.get(doc_id, location, expression)
                     else:
                         mathml = None

@@ -83,7 +83,7 @@ def get_query(query_obj):
     query_list = []
     # get formulas
     for f in query_obj.findAll("formula"):
-        math = f.find("m:math")  # assumes m is used for namespace
+        math = f.find("math")  # assumes m is used for namespace
         query_list.append(str(math))
 
     # get keywords

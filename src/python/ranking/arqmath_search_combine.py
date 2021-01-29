@@ -133,9 +133,10 @@ def load_result_files(result_files):  # RZ: mod #, comp_mathml_cache):
                 if current_query_name is None:
                     raise Exception("Result listed before a query, file " + result_filename + " line " + str(idx))
 
-                location = int(parts[2])
-                formula_mml = md.find_doc_file(int(parts[1]))
-                file_name_with_ext = os.path.split(formula_mml)[1]
+                location = int(parts[1])
+                formula_mml = md.find_doc_file(location)
+                file_name_with_ext = os.path.basename(formula_mml)
+                # file_name_with_ext = os.path.split(formula_mml)[1]
 
                 # this only accounts for when the file names are numbers - MLang
                 # no_ext = os.path.splitext(file_name_with_ext)[0]
