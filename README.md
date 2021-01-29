@@ -29,6 +29,7 @@
 ## Setup and Installation
 Tested on linux
 ### Python
+#### Conda
 (optional) install anaconda distribution https://www.anaconda.com/products/individual
 ```zsh
 $ conda create -n tangent-s python=3.6.9
@@ -37,13 +38,18 @@ $ cd /path/to/tangent-s
 $ pip install -r requirements.txt
 $ export PYTHONPATH=$PYTHONPATH:/full/path/to/tangent-s/
 ```
-Add the export line to the .bash_profile file to avoid having
-to export it every time a console is opened.  
-standalone python
+To avoid having to reset the pythonpath every time a new 
+terminal is opened run `conda develop $(pwd)` from the tangent-s directory
+
+
+####Standalone Python
 ```zsh
 $ cd /path/to/tangent-s 
 $ pip install -r requirements.txt
-```
+$ export PYTHONPATH=$PYTHONPATH:/full/path/to/tangent-s/
+```  
+Add the export line to the .bash_profile file to avoid having
+to export it every time a console is opened.  
 
 ### cpp
 Build c++ indexing tool
@@ -318,7 +324,7 @@ this will generate a file in `/db-index` called `<database>_i_<number>.tsv` depe
 on the database name specified in the .cntl file. the format of this file
 is discussed in [index](#index)
 #### Using Precomputed Indices
-A zip file called precomputed indices is located at the root of this project. 
+A zip file called precomputed indices is located https://drive.google.com/drive/folders/1iJ5C6CW1WgBS2reh61_iiPzsNHBEFEEk. 
 Overwrite the existing db-index directory with the contents of the one contained 
 in precomputed-indices. Use/modify the cntl files contained as necessary.
 ### Querying
@@ -338,14 +344,14 @@ would look as such
 ### Re-Ranking
 
 to rerank results run  
-`../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step 12 ../results/reranked-result-file-to-be-generated`  
+`python3 ../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step.tsv 12 ../results/reranked-result-file-to-be-generated.tsv`  
 To rerank and generate a folder container html files giving insight to the re-rankings run  
-`../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step 12 ../results/reranked-result-file-to-be-generated -h ../html`
+`python3 ../src/python/ranking/rerank_results.py ../cntl/control-file.cntl ../results/result-file-from-previous-step.tsv 12 ../results/reranked-result-file-to-be-generated.tsv -h ../html`
 
 ### Combining
 Combining results can be done with the following command. It is normally done to combine results from opt and slt representations.   
 
-`./arqmath-search-combine ../results/arq-slt-opt-results.tsv ../cntl/slt-cntl ../results/reranked-slt-result $../cntl/opt-cntl ../results/reranked-opt-result`
+`python3 ../src/python/ranking/combine_rankings.py ../results/arq-slt-opt-results.tsv ../cntl/slt-cntl ../results/reranked-slt-result $../cntl/opt-cntl ../results/reranked-opt-result`
 ### Debugging
 The index.py portion of the pipeline using multi-process programming. 
 This can cause IDE debuggers to lose track of the process you would like to monitor. 
