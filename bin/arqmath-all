@@ -13,6 +13,7 @@ SLT_RERANKED=../results/arqslt-reranked.tsv
 OPT_RESULTS=../results/arqopt-results.tsv
 OPT_RERANKED=../results/arqopt-reranked.tsv
 
+
 # if you intend on indexing yourself uncomment this section
 #./arqmath-delete-index
 #./arqmath-delete-queries

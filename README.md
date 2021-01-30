@@ -351,6 +351,7 @@ To rerank and generate a folder container html files giving insight to the re-ra
 ### Combining
 Combining results can be done with the following command. It is normally done to combine results from opt and slt representations.   
 
+
 `python3 ../src/python/ranking/combine_rankings.py ../results/arq-slt-opt-results.tsv  __COMBINE_CACHE -r ../cntl/slt-cntl ../results/reranked-slt-result -r ../cntl/opt-cntl ../results/reranked-opt-result`
 ### Debugging
 The index.py portion of the pipeline using multi-process programming. 
