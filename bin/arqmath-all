@@ -16,7 +16,7 @@ OPT_RERANKED=../results/arqopt-reranked.tsv
 
 # if you intend on indexing yourself uncomment this section
 #./arqmath-delete-index
-#./arqmath-delete-queries
+./arqmath-delete-queries
 #./arqmath-index $SLT_CNTL $OPT_CNTL
 
 # Run SLT and OPT queries

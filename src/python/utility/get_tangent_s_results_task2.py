@@ -32,6 +32,7 @@ def read_latex_files(latex_dir):
                 result[formula_id] = post_id
     return result
 
+
 def get_top_1000(retrieval_results, dic_formula_id_to_answer_id):
     retrieval_results = {k: v for k, v in sorted(retrieval_results.items(), key=lambda item: item[1], reverse=True)}
     result = {}

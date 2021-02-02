@@ -22,8 +22,12 @@
    3. [Finding top K results](#Finding-top-K-results)
    4. [Re-ranking](#re-ranking)
    5. [Combining](#combining)
-5. [Debugging](#debugging)
-6. [Community Contributions](#community-contributions)
+   
+5. [Evaluation](#Evaluation)
+   1. [Task 1](#Task-1)
+   2. [Task 2](#task-2)
+6. [Debugging](#debugging)
+7. [Community Contributions](#community-contributions)
 
 
 ## Setup and Installation
@@ -148,9 +152,9 @@ to speed up computation, the chunk size options dictates how many files are
 processed by a python process at a given time. Systems with less RAM can lower
 this value if problems occur.  
 `tree_model` operator or layout   
-`file skips`   
-`index_fileids` This field represents the ids of the index files stored in `db-index`  
-`query_fileids` This field represents the ids of the query files stored in `db-index`  
+`file_skips` Data cached for the sake of computational speedup. This field will be automatically populated when indexing    
+`index_fileids` This field represents the ids of the index files stored in `db-index`.  This field will be automatically populated when indexing    
+`query_fileids` This field represents the ids of the query files stored in `db-index`.  This field will be automatically populated when building queries    
 
 
 ### Raw Data
@@ -161,12 +165,12 @@ is referenced in the cntl file.
 #### ARQMath
 Originally the ARQMath dataset exists as a series of html files with embedded latex. These 
 files are then cleaned and parsed to generated TSV files in which the latex has been extracted 
-and converted to MathML for both slt and opt representations. those files can be found here: https://drive.google.com/drive/folders/18bHlAWkhIJkLeS9CHvBQQ-BLSn4rrlvE
-this tsv can then be transformed into individual 
+and converted to MathML for both slt and opt representations. those files can be found here: https://drive.google.com/drive/folders/18bHlAWkhIJkLeS9CHvBQQ-BLSn4rrlvE.
+these tsv files can then be transformed into individual 
 files containing just the mathml using the script below. 
 Change parameters within main function of script as necessary.
 This script may take multiple hours to run and will generate files that can 
-take up a significant amount of hard drive space (>50GB). 
+take up a significant amount of hard drive space (>100GB). 
 If one does not have the space to do this, they can just use the precomputed indices discussed [here](#using-precomputed-indices).
 ```shell
 cd  /path/to/tangent-s/src/python/converters/
@@ -316,7 +320,7 @@ file, be mindful of where these commands are run.
 In these examples commands are being run from the `bin` directory
 ### Indexing
 #### Generating Indices  
-if this is just a test it is recommended not to use the full ARQMath dataset
+If this is just a test it is recommended not to use the full ARQMath dataset
 to achieve this run `head -20000 /path/to/full/doclist/ > new-doclist-small.txt` and use this
 new doclist in the cntl file.  
 run `python3 ../src/python/index_query/index.py example.cntl`  
@@ -324,7 +328,7 @@ this will generate a file in `/db-index` called `<database>_i_<number>.tsv` depe
 on the database name specified in the .cntl file. the format of this file
 is discussed in [index](#index)
 #### Using Precomputed Indices
-A zip file called precomputed indices is located https://drive.google.com/drive/folders/1iJ5C6CW1WgBS2reh61_iiPzsNHBEFEEk. 
+A zip file called precomputed indices is located https://drive.google.com/drive/folders/1Qbrl7OpoMUpvJ-TJ65tNz3FRjVIV6CX4. 
 Overwrite the existing db-index directory with the contents of the one contained 
 in precomputed-indices. copy the control files and doc_list files into the cntl directory.
 ### Querying

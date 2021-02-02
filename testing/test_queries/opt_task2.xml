@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topics>
+  <topic>
+    <num>B.1</num>
+    <query>
+      <formula id="q_4"><math  alttext="f(x)=\frac{x^{2}+x+c}{x^{2}+2x+c}" display="block"> <apply>     <eq/>     <apply>       <times/>       <ci>𝑓</ci>       <ci>𝑥</ci>     </apply>     <apply>       <divide/>       <apply>         <plus/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <cn type="integer">2</cn>         </apply>         <ci>𝑥</ci>         <ci>𝑐</ci>       </apply>       <apply>         <plus/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <cn type="integer">2</cn>         </apply>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝑥</ci>         </apply>         <ci>𝑐</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.2</num>
+    <query>
+      <formula id="q_9"><math  alttext="\frac{df}{dx}=f(x+1)" display="block">   <apply>     <eq/>     <apply>       <divide/>       <apply>         <times/>         <ci>𝑑</ci>         <ci>𝑓</ci>       </apply>       <apply>         <times/>         <ci>𝑑</ci>         <ci>𝑥</ci>       </apply>     </apply>     <apply>       <times/>       <ci>𝑓</ci>       <apply>         <plus/>         <ci>𝑥</ci>         <cn type="integer">1</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.3</num>
+    <query>
+      <formula id="q_13"><math  alttext="10^{-10}" display="block">   <apply>     <csymbol cd="ambiguous">superscript</csymbol>     <cn type="integer">10</cn>     <apply>       <minus/>       <cn type="integer">10</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.4</num>
+    <query>
+      <formula id="q_22"><math  alttext="\sum_{k=0}^{n}\binom{n}{k}k" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <sum/>         <apply>           <eq/>           <ci>𝑘</ci>           <cn type="integer">0</cn>         </apply>       </apply>       <ci>𝑛</ci>     </apply>     <apply>       <times/>       <mtext>\binom</mtext>       <ci>𝑛</ci>       <ci>𝑘</ci>       <ci>𝑘</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.6</num>
+    <query>
+      <formula id="q_25"><math  alttext="5^{133}\mod 8." display="block">   <apply>     <times/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <cn type="integer">5</cn>       <cn type="integer">133</cn>     </apply>     <mtext>\mod</mtext>     <cn type="integer">8</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.8</num>
+    <query>
+      <formula id="q_49"><math  alttext="\lim_{n\rightarrow\infty}\sqrt[n]{\frac{(27)^{n}(n!)^{3}}{(3n)!}}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <limit/>       <apply>         <ci>→</ci>         <ci>𝑛</ci>         <infinity/>       </apply>     </apply>     <apply>       <root/>       <degree>         <ci>𝑛</ci>       </degree>       <apply>         <divide/>         <apply>           <times/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <cn type="integer">27</cn>             <ci>𝑛</ci>           </apply>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <apply>               <factorial/>               <ci>𝑛</ci>             </apply>             <cn type="integer">3</cn>           </apply>         </apply>         <apply>           <factorial/>           <apply>             <times/>             <cn type="integer">3</cn>             <ci>𝑛</ci>           </apply>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.9</num>
+    <query>
+      <formula id="q_52"><math  alttext="\sum_{n=0}^{N}nx^{n}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <sum/>         <apply>           <eq/>           <ci>𝑛</ci>           <cn type="integer">0</cn>         </apply>       </apply>       <ci>𝑁</ci>     </apply>     <apply>       <times/>       <ci>𝑛</ci>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <ci>𝑛</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.10</num>
+    <query>
+      <formula id="q_55"><math  alttext="\int_{0}^{\infty}\frac{\sin x}{x^{a}}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <int/>         <cn type="integer">0</cn>       </apply>       <infinity/>     </apply>     <apply>       <divide/>       <apply>         <sin/>         <ci>𝑥</ci>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <ci>𝑎</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.11</num>
+    <query>
+      <formula id="q_71"><math  alttext="\iint_{V}f(x,y)dx\ dy=\iint_{Q}f(\Phi(u,v)\Bigg{|}\frac{\partial{\Phi}}{%&amp;#10;\partial{u}}\times\frac{\partial{\Phi}}{\partial{v}}\Bigg{|}" display="block">   <cerror>     <csymbol cd="ambiguous">fragments</csymbol>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <mtext>\iint</mtext>       <ci>𝑉</ci>     </apply>     <csymbol cd="unknown">f</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">x</csymbol>       <ci>,</ci>       <csymbol cd="unknown">y</csymbol>       <ci>)</ci>     </cerror>     <csymbol cd="unknown">d</csymbol>     <csymbol cd="unknown">x</csymbol>     <csymbol cd="unknown">d</csymbol>     <csymbol cd="unknown">y</csymbol>     <eq/>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <mtext>\iint</mtext>       <ci>𝑄</ci>     </apply>     <csymbol cd="unknown">f</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">Φ</csymbol>       <cerror>         <csymbol cd="ambiguous">fragments</csymbol>         <ci>(</ci>         <csymbol cd="unknown">u</csymbol>         <ci>,</ci>         <csymbol cd="unknown">v</csymbol>         <ci>)</ci>       </cerror>       <ci>|</ci>       <apply>         <divide/>         <apply>           <partialdiff/>           <ci>Φ</ci>         </apply>         <apply>           <partialdiff/>           <ci>𝑢</ci>         </apply>       </apply>       <times/>       <apply>         <divide/>         <apply>           <partialdiff/>           <ci>Φ</ci>         </apply>         <apply>           <partialdiff/>           <ci>𝑣</ci>         </apply>       </apply>       <ci>|</ci>     </cerror>   </cerror> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.12</num>
+    <query>
+      <formula id="q_73"><math  alttext="(1+i\sqrt{3})^{1/2}" display="block">   <apply>     <csymbol cd="ambiguous">superscript</csymbol>     <apply>       <plus/>       <cn type="integer">1</cn>       <apply>         <times/>         <ci>𝑖</ci>         <apply>           <root/>           <cn type="integer">3</cn>         </apply>       </apply>     </apply>     <apply>       <divide/>       <cn type="integer">1</cn>       <cn type="integer">2</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.13</num>
+    <query>
+      <formula id="q_76"><math  alttext="bf(b)-af(a)" display="block">   <apply>     <minus/>     <apply>       <times/>       <ci>𝑏</ci>       <ci>𝑓</ci>       <ci>𝑏</ci>     </apply>     <apply>       <times/>       <ci>𝑎</ci>       <ci>𝑓</ci>       <ci>𝑎</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.14</num>
+    <query>
+      <formula id="q_77"><math  alttext="y=xy^{\prime}+\frac{1}{2}(y^{\prime})^{2}" display="block">   <apply>     <eq/>     <ci>𝑦</ci>     <apply>       <plus/>       <apply>         <times/>         <ci>𝑥</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑦</ci>           <ci>′</ci>         </apply>       </apply>       <apply>         <times/>         <apply>           <divide/>           <cn type="integer">1</cn>           <cn type="integer">2</cn>         </apply>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑦</ci>             <ci>′</ci>           </apply>           <cn type="integer">2</cn>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.15</num>
+    <query>
+      <formula id="q_82"><math  alttext="1+2x+3x^{2}+4x^{3}+5x^{4}+...+nx^{n-1}+..." display="block">   <apply>     <plus/>     <cn type="integer">1</cn>     <apply>       <times/>       <cn type="integer">2</cn>       <ci>𝑥</ci>     </apply>     <apply>       <times/>       <cn type="integer">3</cn>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <cn type="integer">2</cn>       </apply>     </apply>     <apply>       <times/>       <cn type="integer">4</cn>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <cn type="integer">3</cn>       </apply>     </apply>     <apply>       <times/>       <cn type="integer">5</cn>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <cn type="integer">4</cn>       </apply>     </apply>     <ci>…</ci>     <apply>       <times/>       <ci>𝑛</ci>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <apply>           <minus/>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>       </apply>     </apply>     <ci>…</ci>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.16</num>
+    <query>
+      <formula id="q_92"><math  alttext="\int_{0}^{1}\frac{\ln(1+x)\ln(1-x)}{1+x}\,dx" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <int/>         <cn type="integer">0</cn>       </apply>       <cn type="integer">1</cn>     </apply>     <apply>       <times/>       <apply>         <divide/>         <apply>           <times/>           <apply>             <ln/>             <apply>               <plus/>               <cn type="integer">1</cn>               <ci>𝑥</ci>             </apply>           </apply>           <apply>             <ln/>             <apply>               <minus/>               <cn type="integer">1</cn>               <ci>𝑥</ci>             </apply>           </apply>         </apply>         <apply>           <plus/>           <cn type="integer">1</cn>           <ci>𝑥</ci>         </apply>       </apply>       <apply>         <ci>d</ci>         <ci>𝑥</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.17</num>
+    <query>
+      <formula id="q_97"><math  alttext="\int_{x=0}^{\infty}\frac{\sin(x)}{x}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <int/>         <apply>           <eq/>           <ci>𝑥</ci>           <cn type="integer">0</cn>         </apply>       </apply>       <infinity/>     </apply>     <apply>       <divide/>       <apply>         <sin/>         <ci>𝑥</ci>       </apply>       <ci>𝑥</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.18</num>
+    <query>
+      <formula id="q_111"><math  alttext="\log{2}+n\log\cfrac{n}{n+1}" display="block">   <apply>     <plus/>     <apply>       <log/>       <cn type="integer">2</cn>     </apply>     <apply>       <times/>       <ci>𝑛</ci>       <apply>         <log/>         <apply>           <times/>           <mtext>\cfrac</mtext>           <ci>𝑛</ci>           <ci>𝑛</ci>         </apply>       </apply>     </apply>     <cn type="integer">1</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.20</num>
+    <query>
+      <formula id="q_130"><math  alttext="\phi(n)=40" display="block">   <apply>     <eq/>     <apply>       <times/>       <ci>italic-ϕ</ci>       <ci>𝑛</ci>     </apply>     <cn type="integer">40</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.21</num>
+    <query>
+      <formula id="q_136"><math  alttext="9^{9^{9^{…{{}^{9}}}}}≡x(\text{mod}100)" display="block">   <apply>     <times/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <cn type="integer">9</cn>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <cn type="integer">9</cn>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <cn type="integer">9</cn>           <cerror>             <csymbol cd="ambiguous">fragments</csymbol>             <csymbol cd="unknown">â</csymbol>             <csymbol cd="unknown"></csymbol>             <csymbol cd="unknown">¦</csymbol>             <apply>               <cn type="integer">9</cn>             </apply>           </cerror>         </apply>       </apply>     </apply>     <ci>italic-â</ci>     <ci></ci>     <ci>¡</ci>     <ci>𝑥</ci>     <apply>       <times/>       <mtext>\text</mtext>       <ci>𝑚</ci>       <ci>𝑜</ci>       <ci>𝑑</ci>       <cn type="integer">100</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.24</num>
+    <query>
+      <formula id="q_172"><math  alttext="\sqrt{2i-1}?" display="block">   <apply>     <times/>     <apply>       <root/>       <apply>         <minus/>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝑖</ci>         </apply>         <cn type="integer">1</cn>       </apply>     </apply>     <ci>?</ci>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.25</num>
+    <query>
+      <formula id="q_199"><math  alttext="\lim_{x→∞}\log_{x}P(x)" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <limit/>       <apply>         <times/>         <ci>𝑥</ci>         <ci>italic-â</ci>         <ci></ci>         <ci></ci>         <ci>italic-â</ci>         <ci></ci>         <ci></ci>       </apply>     </apply>     <apply>       <times/>       <apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <log/>           <ci>𝑥</ci>         </apply>         <ci>𝑃</ci>       </apply>       <ci>𝑥</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.26</num>
+    <query>
+      <formula id="q_205"><math  alttext="x-\frac{x^{3}}{3\times 3!}+\frac{x^{5}}{5\times 5!}-\frac{x^{7}}{7\times 7!}+%&amp;#10;\cdots=\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{(2n+1)}}{(2n+1)\times(2n+1)!}" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <minus/>         <apply>           <plus/>           <apply>             <minus/>             <ci>𝑥</ci>             <apply>               <divide/>               <apply>                 <csymbol cd="ambiguous">superscript</csymbol>                 <ci>𝑥</ci>                 <cn type="integer">3</cn>               </apply>               <apply>                 <times/>                 <cn type="integer">3</cn>                 <apply>                   <factorial/>                   <cn type="integer">3</cn>                 </apply>               </apply>             </apply>           </apply>           <apply>             <divide/>             <apply>               <csymbol cd="ambiguous">superscript</csymbol>               <ci>𝑥</ci>               <cn type="integer">5</cn>             </apply>             <apply>               <times/>               <cn type="integer">5</cn>               <apply>                 <factorial/>                 <cn type="integer">5</cn>               </apply>             </apply>           </apply>         </apply>         <apply>           <divide/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑥</ci>             <cn type="integer">7</cn>           </apply>           <apply>             <times/>             <cn type="integer">7</cn>             <apply>               <factorial/>               <cn type="integer">7</cn>             </apply>           </apply>         </apply>       </apply>       <ci>⋯</ci>     </apply>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <sum/>           <apply>             <eq/>             <ci>𝑛</ci>             <cn type="integer">0</cn>           </apply>         </apply>         <infinity/>       </apply>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <apply>             <minus/>             <cn type="integer">1</cn>           </apply>           <ci>𝑛</ci>         </apply>         <apply>           <divide/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑥</ci>             <apply>               <plus/>               <apply>                 <times/>                 <cn type="integer">2</cn>                 <ci>𝑛</ci>               </apply>               <cn type="integer">1</cn>             </apply>           </apply>           <apply>             <times/>             <apply>               <plus/>               <apply>                 <times/>                 <cn type="integer">2</cn>                 <ci>𝑛</ci>               </apply>               <cn type="integer">1</cn>             </apply>             <apply>               <factorial/>               <apply>                 <plus/>                 <apply>                   <times/>                   <cn type="integer">2</cn>                   <ci>𝑛</ci>                 </apply>                 <cn type="integer">1</cn>               </apply>             </apply>           </apply>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.27</num>
+    <query>
+      <formula id="q_207"><math  alttext="e^{3i\pi/2}" display="block">   <apply>     <csymbol cd="ambiguous">superscript</csymbol>     <ci>𝑒</ci>     <apply>       <divide/>       <apply>         <times/>         <cn type="integer">3</cn>         <ci>𝑖</ci>         <ci>𝜋</ci>       </apply>       <cn type="integer">2</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.28</num>
+    <query>
+      <formula id="q_213"><math  alttext="\sin(18^{\circ})=\frac{a+\sqrt{b}}{c}" display="block">   <apply>     <eq/>     <apply>       <sin/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <cn type="integer">18</cn>         <compose/>       </apply>     </apply>     <apply>       <divide/>       <apply>         <plus/>         <ci>𝑎</ci>         <apply>           <root/>           <ci>𝑏</ci>         </apply>       </apply>       <ci>𝑐</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.29</num>
+    <query>
+      <formula id="q_238"><math  alttext="i=\sqrt{-1}" display="block">   <apply>     <eq/>     <ci>𝑖</ci>     <apply>       <root/>       <apply>         <minus/>         <cn type="integer">1</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.30</num>
+    <query>
+      <formula id="q_245"><math  alttext="a^{3}+b^{3}+c^{3}-3abc" display="block">   <apply>     <minus/>     <apply>       <plus/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑎</ci>         <cn type="integer">3</cn>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑏</ci>         <cn type="integer">3</cn>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑐</ci>         <cn type="integer">3</cn>       </apply>     </apply>     <apply>       <times/>       <cn type="integer">3</cn>       <ci>𝑎</ci>       <ci>𝑏</ci>       <ci>𝑐</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.32</num>
+    <query>
+      <formula id="q_262"><math  alttext="Empty(x)\iff\not\exists y(y\in x)" display="block">   <cerror>     <csymbol cd="ambiguous">fragments</csymbol>     <csymbol cd="unknown">E</csymbol>     <csymbol cd="unknown">m</csymbol>     <csymbol cd="unknown">p</csymbol>     <csymbol cd="unknown">t</csymbol>     <csymbol cd="unknown">y</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">x</csymbol>       <ci>)</ci>     </cerror>     <csymbol cd="latexml">iff</csymbol>     <csymbol cd="latexml">not-exists</csymbol>     <csymbol cd="unknown">y</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">y</csymbol>       <in/>       <csymbol cd="unknown">x</csymbol>       <ci>)</ci>     </cerror>   </cerror> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.33</num>
+    <query>
+      <formula id="q_267"><math  alttext="\frac{\partial^{3}f}{\partial x^{3}}" display="block">   <apply>     <divide/>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <partialdiff/>         <cn type="integer">3</cn>       </apply>       <ci>𝑓</ci>     </apply>     <apply>       <partialdiff/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <cn type="integer">3</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.34</num>
+    <query>
+      <formula id="q_278"><math  alttext="a\uparrow^{n}b" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <ci>↑</ci>       <ci>𝑛</ci>     </apply>     <ci>𝑎</ci>     <ci>𝑏</ci>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.35</num>
+    <query>
+      <formula id="q_290"><math  alttext="\int e^{x^{2}}dx" display="block">   <apply>     <int/>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑒</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <ci>d</ci>         <ci>𝑥</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.36</num>
+    <query>
+      <formula id="q_294"><math  alttext="\lnot P\to A_{1}\to\ ...\ \to A_{n}\to P" display="block">   <apply>     <and/>     <apply>       <ci>→</ci>       <apply>         <times/>         <not/>         <ci>𝑃</ci>       </apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝐴</ci>         <cn type="integer">1</cn>       </apply>     </apply>     <apply>       <ci>→</ci>             <ci>…</ci>     </apply>     <apply>       <ci>→</ci>              <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝐴</ci>         <ci>𝑛</ci>       </apply>     </apply>     <apply>       <ci>→</ci>             <ci>𝑃</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.37</num>
+    <query>
+      <formula id="q_305"><math  alttext="f\circ g=g\circ f?" display="block">   <apply>     <eq/>     <apply>       <compose/>       <ci>𝑓</ci>       <ci>𝑔</ci>     </apply>     <apply>       <times/>       <apply>         <compose/>         <ci>𝑔</ci>         <ci>𝑓</ci>       </apply>       <ci>?</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.38</num>
+    <query>
+      <formula id="q_319"><math  alttext="q,r:a=bq+r" display="block">   <apply>     <ci>:</ci>     <list>       <ci>𝑞</ci>       <ci>𝑟</ci>     </list>     <apply>       <eq/>       <ci>𝑎</ci>       <apply>         <plus/>         <apply>           <times/>           <ci>𝑏</ci>           <ci>𝑞</ci>         </apply>         <ci>𝑟</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.40</num>
+    <query>
+      <formula id="q_329"><math  alttext="a(x)y+b(x)y^{\prime}+c(x)y&amp;quot;+d(x)y^{\prime\prime\prime}+...+q(x)=0" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <times/>         <ci>𝑎</ci>         <ci>𝑥</ci>         <ci>𝑦</ci>       </apply>       <apply>         <times/>         <ci>𝑏</ci>         <ci>𝑥</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑦</ci>           <ci>′</ci>         </apply>       </apply>       <apply>         <times/>         <ci>𝑐</ci>         <ci>𝑥</ci>         <ci>𝑦</ci>         <ci>"</ci>       </apply>       <apply>         <times/>         <ci>𝑑</ci>         <ci>𝑥</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑦</ci>           <ci>′′′</ci>         </apply>       </apply>       <ci>…</ci>       <apply>         <times/>         <ci>𝑞</ci>         <ci>𝑥</ci>       </apply>     </apply>     <cn type="integer">0</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.41</num>
+    <query>
+      <formula id="q_336"><math  alttext="\sum_{r=1}^{n}(-1)^{(n-r)}{n\choose r}(r)^{m}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <sum/>         <apply>           <eq/>           <ci>𝑟</ci>           <cn type="integer">1</cn>         </apply>       </apply>       <ci>𝑛</ci>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <minus/>           <cn type="integer">1</cn>         </apply>         <apply>           <minus/>           <ci>𝑛</ci>           <ci>𝑟</ci>         </apply>       </apply>       <apply>         <csymbol cd="latexml">binomial</csymbol>         <ci>𝑛</ci>         <ci>𝑟</ci>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑟</ci>         <ci>𝑚</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.43</num>
+    <query>
+      <formula id="q_340"><math  alttext="\sum_{n\geq 1}\frac{1}{n^{2}+1}=\frac{\pi\coth\pi-1}{2}" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <sum/>         <apply>           <geq/>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <apply>           <plus/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑛</ci>             <cn type="integer">2</cn>           </apply>           <cn type="integer">1</cn>         </apply>       </apply>     </apply>     <apply>       <divide/>       <apply>         <minus/>         <apply>           <times/>           <ci>𝜋</ci>           <apply>             <csymbol cd="latexml">hyperbolic-cotangent</csymbol>             <ci>𝜋</ci>           </apply>         </apply>         <cn type="integer">1</cn>       </apply>       <cn type="integer">2</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.44</num>
+    <query>
+      <formula id="q_351"><math  alttext="(\mathscr{M}_{2\times 2}(\mathbb{Q}),\times)" display="block">   <interval closure="open">     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>ℳ</ci>         <apply>           <times/>           <cn type="integer">2</cn>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <times/>         <mtext>\mathbb</mtext>         <ci>𝑄</ci>       </apply>     </apply>     <times/>   </interval> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.45</num>
+    <query>
+      <formula id="q_362"><math  alttext="\sin(x),\sin(2x),\sin(3x),...,\sin(nx)" display="block">   <list>     <apply>       <sin/>       <ci>𝑥</ci>     </apply>     <apply>       <sin/>       <apply>         <times/>         <cn type="integer">2</cn>         <ci>𝑥</ci>       </apply>     </apply>     <apply>       <sin/>       <apply>         <times/>         <cn type="integer">3</cn>         <ci>𝑥</ci>       </apply>     </apply>     <ci>…</ci>     <apply>       <sin/>       <apply>         <times/>         <ci>𝑛</ci>         <ci>𝑥</ci>       </apply>     </apply>   </list> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.46</num>
+    <query>
+      <formula id="q_370"><math  alttext="\int x^{k}f(x)dx=0" display="block">   <apply>     <eq/>     <apply>       <int/>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <ci>𝑘</ci>         </apply>         <ci>𝑓</ci>         <ci>𝑥</ci>         <apply>           <ci>d</ci>           <ci>𝑥</ci>         </apply>       </apply>     </apply>     <cn type="integer">0</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.47</num>
+    <query>
+      <formula id="q_402"><math  alttext="rq\equiv 1\bmod p" display="block">   <apply>     <equivalent/>     <apply>       <times/>       <ci>𝑟</ci>       <ci>𝑞</ci>     </apply>     <apply>       <csymbol cd="latexml">modulo</csymbol>       <cn type="integer">1</cn>       <ci>𝑝</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.48</num>
+    <query>
+      <formula id="q_427"><math  alttext="(x+y)^{k}\geq x^{k}+y^{k}" display="block">   <apply>     <geq/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <plus/>         <ci>𝑥</ci>         <ci>𝑦</ci>       </apply>       <ci>𝑘</ci>     </apply>     <apply>       <plus/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑥</ci>         <ci>𝑘</ci>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑦</ci>         <ci>𝑘</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.50</num>
+    <query>
+      <formula id="q_459"><math  alttext="\sum{\frac{1}{n^{2+\cos{n}}}}" display="block">   <apply>     <sum/>     <apply>       <divide/>       <cn type="integer">1</cn>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑛</ci>         <apply>           <plus/>           <cn type="integer">2</cn>           <apply>             <cos/>             <ci>𝑛</ci>           </apply>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.51</num>
+    <query>
+      <formula id="q_472"><math  alttext="(1+x)^{n}+(1+x)^{n+1}\frac{1}{2}+(1+x)^{n+2}\frac{1}{2^{2}}+\cdots\cdots+(1+x)%&amp;#10;^{2n}\frac{1}{2^{n}}." display="block">   <apply>     <plus/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <plus/>         <cn type="integer">1</cn>         <ci>𝑥</ci>       </apply>       <ci>𝑛</ci>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <plus/>           <cn type="integer">1</cn>           <ci>𝑥</ci>         </apply>         <apply>           <plus/>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <plus/>           <cn type="integer">1</cn>           <ci>𝑥</ci>         </apply>         <apply>           <plus/>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <cn type="integer">2</cn>           <cn type="integer">2</cn>         </apply>       </apply>     </apply>     <apply>       <times/>       <ci>⋯</ci>       <ci>⋯</ci>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <plus/>           <cn type="integer">1</cn>           <ci>𝑥</ci>         </apply>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝑛</ci>         </apply>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <cn type="integer">2</cn>           <ci>𝑛</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.52</num>
+    <query>
+      <formula id="q_479"><math  alttext="n=n_{1}n_{2}...n_{k}+1" display="block">   <apply>     <eq/>     <ci>𝑛</ci>     <apply>       <plus/>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>         <ci>…</ci>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <ci>𝑘</ci>         </apply>       </apply>       <cn type="integer">1</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.53</num>
+    <query>
+      <formula id="q_501"><math  alttext="AB=1\Rightarrow BA=1" display="block">   <apply>     <and/>     <apply>       <eq/>       <apply>         <times/>         <ci>𝐴</ci>         <ci>𝐵</ci>       </apply>       <cn type="integer">1</cn>     </apply>     <apply>       <ci>⇒</ci>              <apply>         <times/>         <ci>𝐵</ci>         <ci>𝐴</ci>       </apply>     </apply>     <apply>       <eq/>              <cn type="integer">1</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.54</num>
+    <query>
+      <formula id="q_503"><math  alttext="P(N)=(S|S⊆N)" display="block">   <cerror>     <csymbol cd="ambiguous">fragments</csymbol>     <csymbol cd="unknown">P</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">N</csymbol>       <ci>)</ci>     </cerror>     <eq/>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <csymbol cd="unknown">S</csymbol>       <ci>|</ci>       <csymbol cd="unknown">S</csymbol>       <csymbol cd="unknown">â</csymbol>       <csymbol cd="unknown"></csymbol>       <csymbol cd="unknown"></csymbol>       <csymbol cd="unknown">N</csymbol>       <ci>)</ci>     </cerror>   </cerror> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.55</num>
+    <query>
+      <formula id="q_504"><math  alttext="\frac{1}{\sqrt{-1}}=\sqrt{-1}" display="block">   <apply>     <eq/>     <apply>       <divide/>       <cn type="integer">1</cn>       <apply>         <root/>         <apply>           <minus/>           <cn type="integer">1</cn>         </apply>       </apply>     </apply>     <apply>       <root/>       <apply>         <minus/>         <cn type="integer">1</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.56</num>
+    <query>
+      <formula id="q_510"><math  alttext="\exists p\ \bigl{(}\text{pisprime}\rightarrow\forall x\text{(xisprime)}\bigr{)}" display="block">   <cerror>     <csymbol cd="ambiguous">fragments</csymbol>     <exists/>     <csymbol cd="unknown">p</csymbol>     <cerror>       <csymbol cd="ambiguous">fragments</csymbol>       <ci>(</ci>       <mtext>\text</mtext>       <csymbol cd="unknown">p</csymbol>       <csymbol cd="unknown">i</csymbol>       <csymbol cd="unknown">s</csymbol>       <csymbol cd="unknown">p</csymbol>       <csymbol cd="unknown">r</csymbol>       <csymbol cd="unknown">i</csymbol>       <csymbol cd="unknown">m</csymbol>       <csymbol cd="unknown">e</csymbol>       <ci>→</ci>       <csymbol cd="latexml">for-all</csymbol>       <csymbol cd="unknown">x</csymbol>       <mtext>\text</mtext>       <cerror>         <csymbol cd="ambiguous">fragments</csymbol>         <ci>(</ci>         <csymbol cd="unknown">x</csymbol>         <csymbol cd="unknown">i</csymbol>         <csymbol cd="unknown">s</csymbol>         <csymbol cd="unknown">p</csymbol>         <csymbol cd="unknown">r</csymbol>         <csymbol cd="unknown">i</csymbol>         <csymbol cd="unknown">m</csymbol>         <csymbol cd="unknown">e</csymbol>         <ci>)</ci>       </cerror>       <ci>)</ci>     </cerror>   </cerror> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.57</num>
+    <query>
+      <formula id="q_514"><math  alttext="f:B\to\mathbb{R}^{m}" display="block">   <apply>     <ci>:</ci>     <ci>𝑓</ci>     <apply>       <ci>→</ci>       <ci>𝐵</ci>       <apply>         <times/>         <mtext>\mathbb</mtext>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑅</ci>           <ci>𝑚</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.58</num>
+    <query>
+      <formula id="q_525"><math  alttext="3\arcsin\frac{1}{4}+\arccos\frac{11}{16}=\frac{\pi}{2}" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <times/>         <cn type="integer">3</cn>         <apply>           <arcsin/>           <apply>             <divide/>             <cn type="integer">1</cn>             <cn type="integer">4</cn>           </apply>         </apply>       </apply>       <apply>         <arccos/>         <apply>           <divide/>           <cn type="integer">11</cn>           <cn type="integer">16</cn>         </apply>       </apply>     </apply>     <apply>       <divide/>       <ci>𝜋</ci>       <cn type="integer">2</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.59</num>
+    <query>
+      <formula id="q_528"><math  alttext="\sum_{d|n}{\phi(d)}=n" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <sum/>         <cerror>           <csymbol cd="ambiguous">fragments</csymbol>           <csymbol cd="unknown">d</csymbol>           <ci>|</ci>           <csymbol cd="unknown">n</csymbol>         </cerror>       </apply>       <apply>         <times/>         <ci>italic-ϕ</ci>         <ci>𝑑</ci>       </apply>     </apply>     <ci>𝑛</ci>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.60</num>
+    <query>
+      <formula id="q_535"><math  alttext="\lim_{n\rightarrow\infty}a_{n}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <limit/>       <apply>         <ci>→</ci>         <ci>𝑛</ci>         <infinity/>       </apply>     </apply>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <ci>𝑎</ci>       <ci>𝑛</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.62</num>
+    <query>
+      <formula id="q_561"><math  alttext="|\mathbb{Q}|=|\mathbb{Z}|" display="block">   <apply>     <eq/>     <apply>       <abs/>       <apply>         <times/>         <mtext>\mathbb</mtext>         <ci>𝑄</ci>       </apply>     </apply>     <apply>       <abs/>       <apply>         <times/>         <mtext>\mathbb</mtext>         <ci>𝑍</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.63</num>
+    <query>
+      <formula id="q_569"><math  alttext="\text{lcm}(n_{1},n_{2})=\frac{n_{1}n_{2}}{\gcd(n_{1},n_{2})}" display="block">   <apply>     <eq/>     <apply>       <times/>       <mtext>\text</mtext>       <ci>𝑙</ci>       <ci>𝑐</ci>       <ci>𝑚</ci>       <interval closure="open">         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </interval>     </apply>     <apply>       <divide/>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <gcd/>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.64</num>
+    <query>
+      <formula id="q_574"><math  alttext="f([a,b])\subset[a,b]" display="block">   <apply>     <subset/>     <apply>       <times/>       <ci>𝑓</ci>       <interval closure="closed">         <ci>𝑎</ci>         <ci>𝑏</ci>       </interval>     </apply>     <interval closure="closed">       <ci>𝑎</ci>       <ci>𝑏</ci>     </interval>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.65</num>
+    <query>
+      <formula id="q_604"><math  alttext="t\lambda\leq e^{t\lambda-1}\tag 2." display="block">   <apply>     <leq/>     <apply>       <times/>       <ci>𝑡</ci>       <ci>𝜆</ci>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑒</ci>         <apply>           <minus/>           <apply>             <times/>             <ci>𝑡</ci>             <ci>𝜆</ci>           </apply>           <cn type="integer">1</cn>         </apply>       </apply>       <mtext>\tag</mtext>       <cn type="integer">2</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.66</num>
+    <query>
+      <formula id="q_612"><math  alttext="(x^{T}Ah)^{T}=h^{T}A^{T}x" display="block">   <apply>     <eq/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <apply>         <times/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑥</ci>           <ci>𝑇</ci>         </apply>         <ci>𝐴</ci>         <ci>ℎ</ci>       </apply>       <ci>𝑇</ci>     </apply>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>ℎ</ci>         <ci>𝑇</ci>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐴</ci>         <ci>𝑇</ci>       </apply>       <ci>𝑥</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.67</num>
+    <query>
+      <formula id="q_616"><math  alttext="\det{\bmatrix A&amp;amp;B\\&amp;#10;O&amp;amp;C}=\det(A)\det(C)" display="block">   <apply>     <eq/>     <list>       <apply>         <determinant/>         <apply>           <times/>           <mtext>{bmatrix}</mtext>           <ci>𝐴</ci>           <ci>&amp;</ci>           <ci>𝑎</ci>           <ci>𝑚</ci>           <ci>𝑝</ci>         </apply>       </apply>       <apply>         <times/>         <ci>𝐵</ci>         <ci>𝑂</ci>         <ci>&amp;</ci>         <ci>𝑎</ci>         <ci>𝑚</ci>         <ci>𝑝</ci>       </apply>       <ci>𝐶</ci>     </list>     <apply>       <determinant/>       <apply>         <times/>         <ci>𝐴</ci>         <apply>           <determinant/>           <ci>𝐶</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.68</num>
+    <query>
+      <formula id="q_620"><math  alttext="a^{n}+1" display="block">   <apply>     <plus/>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <ci>𝑎</ci>       <ci>𝑛</ci>     </apply>     <cn type="integer">1</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.69</num>
+    <query>
+      <formula id="q_637"><math  alttext="\ {s\choose s}+{s+1\choose s}+...+{n\choose s}={n+1\choose s+1}" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <csymbol cd="latexml">binomial</csymbol>         <ci>𝑠</ci>         <ci>𝑠</ci>       </apply>       <apply>         <csymbol cd="latexml">binomial</csymbol>         <apply>           <plus/>           <ci>𝑠</ci>           <cn type="integer">1</cn>         </apply>         <ci>𝑠</ci>       </apply>       <ci>…</ci>       <apply>         <csymbol cd="latexml">binomial</csymbol>         <ci>𝑛</ci>         <ci>𝑠</ci>       </apply>     </apply>     <apply>       <csymbol cd="latexml">binomial</csymbol>       <apply>         <plus/>         <ci>𝑛</ci>         <cn type="integer">1</cn>       </apply>       <apply>         <plus/>         <ci>𝑠</ci>         <cn type="integer">1</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.70</num>
+    <query>
+      <formula id="q_643"><math  alttext="\sum_{j=0}^{N-1}\cos\left(l\frac{\left(2j+1\right)\pi}{2N}\right)=0" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <sum/>           <apply>             <eq/>             <ci>𝑗</ci>             <cn type="integer">0</cn>           </apply>         </apply>         <apply>           <minus/>           <ci>𝑁</ci>           <cn type="integer">1</cn>         </apply>       </apply>       <apply>         <cos/>         <apply>           <times/>           <ci>𝑙</ci>           <apply>             <divide/>             <apply>               <times/>               <apply>                 <plus/>                 <apply>                   <times/>                   <cn type="integer">2</cn>                   <ci>𝑗</ci>                 </apply>                 <cn type="integer">1</cn>               </apply>               <ci>𝜋</ci>             </apply>             <apply>               <times/>               <cn type="integer">2</cn>               <ci>𝑁</ci>             </apply>           </apply>         </apply>       </apply>     </apply>     <cn type="integer">0</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.71</num>
+    <query>
+      <formula id="q_646"><math  alttext="1^{2}+2^{2}+....+n^{2}=\frac{n(n+1)(2n+1)}{6}" display="block">   <apply>     <csymbol cd="ambiguous">formulae-sequence</csymbol>     <apply>       <plus/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <cn type="integer">2</cn>         <cn type="integer">2</cn>       </apply>       <ci>…</ci>     </apply>     <apply>       <eq/>       <apply>         <plus/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <divide/>         <apply>           <times/>           <ci>𝑛</ci>           <apply>             <plus/>             <ci>𝑛</ci>             <cn type="integer">1</cn>           </apply>           <apply>             <plus/>             <apply>               <times/>               <cn type="integer">2</cn>               <ci>𝑛</ci>             </apply>             <cn type="integer">1</cn>           </apply>         </apply>         <cn type="integer">6</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.73</num>
+    <query>
+      <formula id="q_663"><math  alttext="\binom{n}{0}^{2}+\binom{n}{1}^{2}+...+\binom{n}{n}^{2}=\binom{2n}{n}" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <times/>         <mtext>\binom</mtext>         <ci>𝑛</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <cn type="integer">0</cn>           <cn type="integer">2</cn>         </apply>       </apply>       <apply>         <times/>         <mtext>\binom</mtext>         <ci>𝑛</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <cn type="integer">1</cn>           <cn type="integer">2</cn>         </apply>       </apply>       <ci>…</ci>       <apply>         <times/>         <mtext>\binom</mtext>         <ci>𝑛</ci>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑛</ci>           <cn type="integer">2</cn>         </apply>       </apply>     </apply>     <apply>       <times/>       <mtext>\binom</mtext>       <cn type="integer">2</cn>       <ci>𝑛</ci>       <ci>𝑛</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.74</num>
+    <query>
+      <formula id="q_690"><math  alttext="f(x)=x+\dfrac{1}{x}" display="block">   <apply>     <eq/>     <apply>       <times/>       <ci>𝑓</ci>       <ci>𝑥</ci>     </apply>     <apply>       <plus/>       <ci>𝑥</ci>       <apply>         <times/>         <mtext>\dfrac</mtext>         <cn type="integer">1</cn>         <ci>𝑥</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.75</num>
+    <query>
+      <formula id="q_698"><math  alttext="\lim_{u\to\infty}\frac{u^{m}}{e^{u}}=0" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <limit/>         <apply>           <ci>→</ci>           <ci>𝑢</ci>           <infinity/>         </apply>       </apply>       <apply>         <divide/>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑢</ci>           <ci>𝑚</ci>         </apply>         <apply>           <csymbol cd="ambiguous">superscript</csymbol>           <ci>𝑒</ci>           <ci>𝑢</ci>         </apply>       </apply>     </apply>     <cn type="integer">0</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.76</num>
+    <query>
+      <formula id="q_707"><math  alttext="\bigcup_{i\in\mathbb{N}}(a_{i}+b_{i}\mathbb{Z})=\mathbb{Z}" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <union/>         <apply>           <in/>           <ci>𝑖</ci>           <apply>             <times/>             <mtext>\mathbb</mtext>             <ci>𝑁</ci>           </apply>         </apply>       </apply>       <apply>         <plus/>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑎</ci>           <ci>𝑖</ci>         </apply>         <apply>           <times/>           <apply>             <csymbol cd="ambiguous">subscript</csymbol>             <ci>𝑏</ci>             <ci>𝑖</ci>           </apply>           <mtext>\mathbb</mtext>           <ci>𝑍</ci>         </apply>       </apply>     </apply>     <apply>       <times/>       <mtext>\mathbb</mtext>       <ci>𝑍</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.77</num>
+    <query>
+      <formula id="q_727"><math  alttext="(-1)(-1)=1" display="block">   <apply>     <eq/>     <apply>       <times/>       <apply>         <minus/>         <cn type="integer">1</cn>       </apply>       <apply>         <minus/>         <cn type="integer">1</cn>       </apply>     </apply>     <cn type="integer">1</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.79</num>
+    <query>
+      <formula id="q_739"><math  alttext="\displaystyle\left|{\frac{e^{-ixu}-1}{u}}\right|\leq|x|" display="block">   <apply>     <leq/>     <apply>       <abs/>       <apply>         <divide/>         <apply>           <minus/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑒</ci>             <apply>               <minus/>               <apply>                 <times/>                 <ci>𝑖</ci>                 <ci>𝑥</ci>                 <ci>𝑢</ci>               </apply>             </apply>           </apply>           <cn type="integer">1</cn>         </apply>         <ci>𝑢</ci>       </apply>     </apply>     <apply>       <abs/>       <ci>𝑥</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.80</num>
+    <query>
+      <formula id="q_743"><math  alttext="\emptyset,\{1\},\{2\},\{1,2\},\{3\},\{1,3\},\{2,3\},\{1,2,3\},\{4\},\ldots" display="block">   <list>     <emptyset/>     <set>       <cn type="integer">1</cn>     </set>     <set>       <cn type="integer">2</cn>     </set>     <set>       <cn type="integer">1</cn>       <cn type="integer">2</cn>     </set>     <set>       <cn type="integer">3</cn>     </set>     <set>       <cn type="integer">1</cn>       <cn type="integer">3</cn>     </set>     <set>       <cn type="integer">2</cn>       <cn type="integer">3</cn>     </set>     <set>       <cn type="integer">1</cn>       <cn type="integer">2</cn>       <cn type="integer">3</cn>     </set>     <set>       <cn type="integer">4</cn>     </set>     <ci>…</ci>   </list> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.81</num>
+    <query>
+      <formula id="q_754"><math  alttext="\{1,\cdots,n\}" display="block">   <set>     <cn type="integer">1</cn>     <ci>⋯</ci>     <ci>𝑛</ci>   </set> </math> </formula>
+    </query>
+  </topic>
+   <topic>
+    <num>B.82</num>
+    <query>
+      <formula id="q_807"><math  alttext="A=\displaystyle\int_{0}^{2\pi}{g(x)\cdot\cos(x)\mathrm{d}x}" display="block">   <apply>     <eq/>     <ci>𝐴</ci>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <int/>           <cn type="integer">0</cn>         </apply>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝜋</ci>         </apply>       </apply>       <apply>         <times/>         <apply>           <ci>⋅</ci>           <apply>             <times/>             <ci>𝑔</ci>             <ci>𝑥</ci>           </apply>           <apply>             <cos/>             <ci>𝑥</ci>           </apply>         </apply>         <apply>           <ci>d</ci>           <ci>𝑥</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.83</num>
+    <query>
+      <formula id="q_819"><math  alttext="1,1+\frac{1}{2},1+\frac{1}{2}+\frac{1}{3},1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4%&amp;#10;},..." display="block">   <list>     <cn type="integer">1</cn>     <apply>       <plus/>       <cn type="integer">1</cn>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>     </apply>     <apply>       <plus/>       <cn type="integer">1</cn>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">3</cn>       </apply>     </apply>     <apply>       <plus/>       <cn type="integer">1</cn>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">3</cn>       </apply>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">4</cn>       </apply>     </apply>     <ci>…</ci>   </list> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.84</num>
+    <query>
+      <formula id="q_825"><math  alttext="I=&amp;lt;p,x&amp;gt;" display="block">   <apply>     <eq/>     <ci>𝐼</ci>     <list>       <apply>         <times/>         <ci>&amp;</ci>         <ci>𝑙</ci>         <ci>𝑡</ci>       </apply>       <ci>𝑝</ci>       <apply>         <times/>         <ci>𝑥</ci>         <ci>&amp;</ci>         <ci>𝑔</ci>         <ci>𝑡</ci>       </apply>     </list>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.85</num>
+    <query>
+      <formula id="q_840"><math  alttext="p_{n}=\frac{1}{2}p_{n-1}" display="block">   <apply>     <eq/>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <ci>𝑝</ci>       <ci>𝑛</ci>     </apply>     <apply>       <times/>       <apply>         <divide/>         <cn type="integer">1</cn>         <cn type="integer">2</cn>       </apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝑝</ci>         <apply>           <minus/>           <ci>𝑛</ci>           <cn type="integer">1</cn>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.86</num>
+    <query>
+      <formula id="q_849"><math  alttext="\sum_{k=0}^{n}k\cdot\left(\begin{array}[]{l}{n}\\&amp;#10;{k}\end{array}\right)=O\left(2^{n\log_{3}n}\right)?" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <sum/>           <apply>             <eq/>             <ci>𝑘</ci>             <cn type="integer">0</cn>           </apply>         </apply>         <ci>𝑛</ci>       </apply>       <apply>         <ci>⋅</ci>         <ci>𝑘</ci>         <matrix>           <matrixrow>             <ci>𝑛</ci>           </matrixrow>           <matrixrow>             <ci>𝑘</ci>           </matrixrow>         </matrix>       </apply>     </apply>     <apply>       <times/>       <ci>𝑂</ci>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <cn type="integer">2</cn>         <apply>           <times/>           <ci>𝑛</ci>           <apply>             <apply>               <csymbol cd="ambiguous">subscript</csymbol>               <log/>               <cn type="integer">3</cn>             </apply>             <ci>𝑛</ci>           </apply>         </apply>       </apply>       <ci>?</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.87</num>
+    <query>
+      <formula id="q_854"><math  alttext="\forall n\in\Bbb{N}:\big{(}\sum_{i=1}^{n}a_{i}\big{)}\big{(}\sum_{i=1}^{n}%&amp;#10;\frac{1}{a_{i}}\big{)}\geq n^{2}" display="block">   <apply>     <ci>:</ci>     <apply>       <in/>       <apply>         <csymbol cd="latexml">for-all</csymbol>         <ci>𝑛</ci>       </apply>       <apply>         <times/>         <mtext>\Bbb</mtext>         <ci>𝑁</ci>       </apply>     </apply>     <apply>       <geq/>       <apply>         <times/>         <apply>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <apply>               <csymbol cd="ambiguous">subscript</csymbol>               <sum/>               <apply>                 <eq/>                 <ci>𝑖</ci>                 <cn type="integer">1</cn>               </apply>             </apply>             <ci>𝑛</ci>           </apply>           <apply>             <csymbol cd="ambiguous">subscript</csymbol>             <ci>𝑎</ci>             <ci>𝑖</ci>           </apply>         </apply>         <apply>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <apply>               <csymbol cd="ambiguous">subscript</csymbol>               <sum/>               <apply>                 <eq/>                 <ci>𝑖</ci>                 <cn type="integer">1</cn>               </apply>             </apply>             <ci>𝑛</ci>           </apply>           <apply>             <divide/>             <cn type="integer">1</cn>             <apply>               <csymbol cd="ambiguous">subscript</csymbol>               <ci>𝑎</ci>               <ci>𝑖</ci>             </apply>           </apply>         </apply>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑛</ci>         <cn type="integer">2</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.88</num>
+    <query>
+      <formula id="q_883"><math  alttext="\mathbb{Z}[x]" display="block">   <apply>     <times/>     <mtext>\mathbb</mtext>     <ci>𝑍</ci>     <apply>       <csymbol cd="latexml">delimited-[]</csymbol>       <ci>𝑥</ci>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.89</num>
+    <query>
+      <formula id="q_884"><math  alttext="A^{2}+B^{2}=C^{2}+D^{2}" display="block">   <apply>     <eq/>     <apply>       <plus/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐴</ci>         <cn type="integer">2</cn>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐵</ci>         <cn type="integer">2</cn>       </apply>     </apply>     <apply>       <plus/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐶</ci>         <cn type="integer">2</cn>       </apply>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐷</ci>         <cn type="integer">2</cn>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.90</num>
+    <query>
+      <formula id="q_894"><math  alttext="A^{-1}A=\mathbb I_{n}" display="block">   <apply>     <eq/>     <apply>       <times/>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝐴</ci>         <apply>           <minus/>           <cn type="integer">1</cn>         </apply>       </apply>       <ci>𝐴</ci>     </apply>     <apply>       <times/>       <mtext>\mathbb</mtext>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝐼</ci>         <ci>𝑛</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.92</num>
+    <query>
+      <formula id="q_931"><math  alttext="P(X,Y)=(X^{p-1}-1)XY-1" display="block">   <apply>     <eq/>     <apply>       <times/>       <ci>𝑃</ci>       <interval closure="open">         <ci>𝑋</ci>         <ci>𝑌</ci>       </interval>     </apply>     <apply>       <minus/>       <apply>         <times/>         <apply>           <minus/>           <apply>             <csymbol cd="ambiguous">superscript</csymbol>             <ci>𝑋</ci>             <apply>               <minus/>               <ci>𝑝</ci>               <cn type="integer">1</cn>             </apply>           </apply>           <cn type="integer">1</cn>         </apply>         <ci>𝑋</ci>         <ci>𝑌</ci>       </apply>       <cn type="integer">1</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.93</num>
+    <query>
+      <formula id="q_940"><math  alttext="det(xI-AB)=det(xI-BA)" display="block">   <apply>     <eq/>     <apply>       <times/>       <ci>𝑑</ci>       <ci>𝑒</ci>       <ci>𝑡</ci>       <apply>         <minus/>         <apply>           <times/>           <ci>𝑥</ci>           <ci>𝐼</ci>         </apply>         <apply>           <times/>           <ci>𝐴</ci>           <ci>𝐵</ci>         </apply>       </apply>     </apply>     <apply>       <times/>       <ci>𝑑</ci>       <ci>𝑒</ci>       <ci>𝑡</ci>       <apply>         <minus/>         <apply>           <times/>           <ci>𝑥</ci>           <ci>𝐼</ci>         </apply>         <apply>           <times/>           <ci>𝐵</ci>           <ci>𝐴</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.94</num>
+    <query>
+      <formula id="q_944"><math  alttext="2^{\aleph_{0}}" display="block">   <apply>     <csymbol cd="ambiguous">superscript</csymbol>     <cn type="integer">2</cn>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <ci>ℵ</ci>       <cn type="integer">0</cn>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.95</num>
+    <query>
+      <formula id="q_954"><math  alttext="\lim_{x\to 0}\frac{\sin x}{x}=1" display="block">   <apply>     <eq/>     <apply>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <limit/>         <apply>           <ci>→</ci>           <ci>𝑥</ci>           <cn type="integer">0</cn>         </apply>       </apply>       <apply>         <divide/>         <apply>           <sin/>           <ci>𝑥</ci>         </apply>         <ci>𝑥</ci>       </apply>     </apply>     <cn type="integer">1</cn>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.96</num>
+    <query>
+      <formula id="q_977"><math  alttext="\sum_{i}\frac{a_{i}}{a_{i}+a_{i+1}+a_{i+2}+\cdots}" display="block">   <apply>     <apply>       <csymbol cd="ambiguous">subscript</csymbol>       <sum/>       <ci>𝑖</ci>     </apply>     <apply>       <divide/>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝑎</ci>         <ci>𝑖</ci>       </apply>       <apply>         <plus/>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑎</ci>           <ci>𝑖</ci>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑎</ci>           <apply>             <plus/>             <ci>𝑖</ci>             <cn type="integer">1</cn>           </apply>         </apply>         <apply>           <csymbol cd="ambiguous">subscript</csymbol>           <ci>𝑎</ci>           <apply>             <plus/>             <ci>𝑖</ci>             <cn type="integer">2</cn>           </apply>         </apply>         <ci>⋯</ci>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.97</num>
+    <query>
+      <formula id="q_997"><math  alttext="lcm(b_{1},...,b_{m})" display="block">   <apply>     <times/>     <ci>𝑙</ci>     <ci>𝑐</ci>     <ci>𝑚</ci>     <vector>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝑏</ci>         <cn type="integer">1</cn>       </apply>       <ci>…</ci>       <apply>         <csymbol cd="ambiguous">subscript</csymbol>         <ci>𝑏</ci>         <ci>𝑚</ci>       </apply>     </vector>   </apply> </math> </formula>
+    </query>
+  </topic>
+  <topic>
+    <num>B.98</num>
+    <query>
+      <formula id="q_1010"><math  alttext="R(e^{2\pi ix})=e^{2\pi i(x+\alpha)}." display="block">   <apply>     <eq/>     <apply>       <times/>       <ci>𝑅</ci>       <apply>         <csymbol cd="ambiguous">superscript</csymbol>         <ci>𝑒</ci>         <apply>           <times/>           <cn type="integer">2</cn>           <ci>𝜋</ci>           <ci>𝑖</ci>           <ci>𝑥</ci>         </apply>       </apply>     </apply>     <apply>       <csymbol cd="ambiguous">superscript</csymbol>       <ci>𝑒</ci>       <apply>         <times/>         <cn type="integer">2</cn>         <ci>𝜋</ci>         <ci>𝑖</ci>         <apply>           <plus/>           <ci>𝑥</ci>           <ci>𝛼</ci>         </apply>       </apply>     </apply>   </apply> </math> </formula>
+    </query>
+  </topic>
+</topics>
