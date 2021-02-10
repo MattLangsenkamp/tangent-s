@@ -67,7 +67,7 @@ def generate_rankings(df: pd.DataFrame) -> pd.DataFrame:
         # sort based on score break ties with post_id
         certain_query = df[df["Query_Id"] == topic].sort_values(["Score", "Post_Id"], ascending=False)[:1000]
         # get only the
-        certain_query["Rank"] = np.arange(len(certain_query))
+        certain_query["Rank"] = np.arange(1, len(certain_query)+1)
         df_with_ranks = pd.concat([df_with_ranks, certain_query])
 
     return df_with_ranks
