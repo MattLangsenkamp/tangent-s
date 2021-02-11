@@ -19,7 +19,7 @@ def load_and_clean_results_df(file_name: str, run_name: str, latex: pd.DataFrame
     # setting run number passed on command line input
     df.Run_Number = run_name
     # convert Post_Id to int as expected
-    df.loc[:, ['Post_Id']] = df['Post_Id'].apply(lambda x: int(x.strip('.mml')))
+    # df.loc[:, ['Post_Id']] = df['Post_Id'].apply(lambda x: int(x.strip('.mml')))
     ''' 
     Before indexing, the latex from original posts 
     are extracted to TSVs containing the latex, opts and slt formats

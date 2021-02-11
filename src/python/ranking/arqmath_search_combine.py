@@ -139,10 +139,10 @@ def load_result_files(result_files):  # RZ: mod #, comp_mathml_cache):
                 # file_name_with_ext = os.path.split(formula_mml)[1]
 
                 # this only accounts for when the file names are numbers - MLang
-                # no_ext = os.path.splitext(file_name_with_ext)[0]
-                # formula_id = int(no_ext)
+                no_ext = os.path.splitext(file_name_with_ext)[0]
+                formula_id = int(no_ext)
                 # keeping name as string should only have the effect of searching the candidates be slower
-                formula_id = file_name_with_ext
+                #formula_id = file_name_with_ext
 
                 # DEBUG
                 # print(  "doc_id: " + parts[1] )

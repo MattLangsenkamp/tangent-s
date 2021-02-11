@@ -44,16 +44,16 @@ def get_top_1000(retrieval_results, dic_formula_id_to_answer_id):
     return {k: v for k, v in sorted(result.items(), key=lambda item: item[1], reverse=True)}
 
 def main():
-    dic_formula_id_to_answer_id = read_latex_files("/home/bm3302/latex_representation/")
+    dic_formula_id_to_answer_id = read_latex_files("/home/mattlangsenkamp/Documents/dprl/latex_representation_v2/")
     # dic_formula_id_to_answer_id = read_latex_files("/home/bm3302/slt_representation_V1.0/")
     print("read_latex_files")
     print(len(dic_formula_id_to_answer_id))
 
-    tangent_s = read_result_file("/home/bm3302/source/tangent-s/task2_res.tsv")
+    tangent_s = read_result_file("/home/mattlangsenkamp/Documents/dprl/eval/garbage/arq-slt-opt-results-matt-3.tsv")
     print("read tangent-s results")
     print(len(tangent_s))
 
-    csv_file_path = "TangentS_Res_Task2"
+    csv_file_path = "TangentS_Res_Task2-matt"
     result_file = open(csv_file_path, "w", newline='', encoding="utf-8")
     csv_writer = csv.writer(result_file, delimiter='\t', quoting=csv.QUOTE_MINIMAL)
     for topic_id in tangent_s:
