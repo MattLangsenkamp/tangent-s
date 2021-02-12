@@ -127,8 +127,12 @@ class SymbolTree:
         #assume first and last characters are [ and ]
         #read name until , [, or ] appears
         #print("sub: " + tree_substring)
-
+        if tree_substring =='[?,[N!16[&comma;[?,[N!36[&comma;[?]]]]]]]':
+            print("here")
+            tree_substring ='[?,o[N!16[&comma;[?,o[N!36[&comma;[?]]]]]]]'
         pos = 1
+        if tree_substring == "" :
+            return None
         while not tree_substring[pos] in ["[", "]"]:
             if tree_substring[pos] == "," and pos > 1:
                 break
@@ -150,7 +154,6 @@ class SymbolTree:
         current_pre_above = None
         current_pre_below = None
         current_element = None
-
         #check the case...
         while tree_substring[pos] != "]":
             if tree_substring[pos] == "[":
@@ -160,7 +163,9 @@ class SymbolTree:
                 pos = child_end
 
                 current_next = cls.__create_slt_from_string(child_text)
-                                
+                if current_next is None: break
+
+
             if tree_substring[pos] == ",":
                 #child other than next...
                 child_relation = tree_substring[pos + 1]
@@ -169,6 +174,7 @@ class SymbolTree:
                 pos = child_end
                 
                 child_node = cls.__create_slt_from_string(child_text)
+                if child_node is None: break
 
                 if child_relation == "a":
                     current_above = child_node

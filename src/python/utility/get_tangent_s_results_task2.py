@@ -49,7 +49,7 @@ def main():
     print("read_latex_files")
     print(len(dic_formula_id_to_answer_id))
 
-    tangent_s = read_result_file("/home/mattlangsenkamp/Documents/dprl/eval/garbage/arq-slt-opt-results-matt-3.tsv")
+    tangent_s = read_result_file("/home/mattlangsenkamp/Documents/dprl/tangent-s/results/arq-slt-opt-results.tsv")
     print("read tangent-s results")
     print(len(tangent_s))
 

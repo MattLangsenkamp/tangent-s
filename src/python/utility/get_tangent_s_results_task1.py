@@ -7,14 +7,12 @@ import os
 def load_and_clean_results_df(file_name: str, run_name: str, latex: pd.DataFrame, task: str) -> pd.DataFrame:
     """
     returns a df with a schema matching arqmath evaluation specification for Task 1
-
     :param task: task 1 or 2
     :param latex: Dataframe containing latex representation along with post metadata
     :param run_name: string to be used as Run_Number identifier
     :param file_name: path to tsv file to load
     :return: populated dataframe with columns [topic
     """
-
     df = pd.read_csv(file_name, sep='\t', names=["Query_Id", "Post_Id", "Score", "Rank", "Run_Number"])
     # setting run number passed on command line input
     df.Run_Number = run_name
@@ -31,15 +29,12 @@ def load_and_clean_results_df(file_name: str, run_name: str, latex: pd.DataFrame
     '''
     representation_ids = df['Post_Id']-1
     df.loc[:, ['Post_Id']] = latex.loc[representation_ids, :]['post_id'].values
-
     # reorder columns
     if task == '1':
         df = df[["Query_Id", "Post_Id", "Rank", "Score", "Run_Number"]]
-
     elif task == '2':
         df['Formula_Id'] = latex.loc[representation_ids, :]['visual_id'].values
         df = df[["Query_Id", "Formula_Id", "Post_Id", "Rank", "Score", "Run_Number"]]
-
     return df
 
 
@@ -58,18 +53,30 @@ def generate_rankings(df: pd.DataFrame) -> pd.DataFrame:
     :param df: DataFrame with Columns ["Query_Id", "Post_Id", "Rank", "Score", "Run_Number"]]
     :return: DataFrame with Columns ["Query_Id", "Post_Id", "Rank", "Score", "Run_Number"]] and Rank populated
     """
-
     df_with_ranks = pd.DataFrame()
     # iterate over 'A.1', 'A.2', 'A.3'... in that order
     topics = df["Query_Id"].unique()  # np.sort()
     for topic in topics:
         print("Generating ranks for query: ", topic)
         # sort based on score break ties with post_id
-        certain_query = df[df["Query_Id"] == topic].sort_values(["Score", "Post_Id"], ascending=False)[:1000]
-        # get only the
+        certain_query = df[df["Query_Id"] == topic].sort_values(["Score", "Post_Id"], ascending=False).reset_index()
+        # get top 1000 unique posts:
+        '''post_ids = []
+        rows_to_remove = []
+        ind = 0
+        while (len(post_ids) < 1000) and (len(post_ids) < len(certain_query)):
+            row = certain_query.ix[ind]
+            ind += 1
+            if row['Post_Id'] in post_ids:
+                rows_to_remove.append(row.name)
+            else:
+                post_ids.append(row['Post_Id'])
+
+        certain_query = certain_query.drop(rows_to_remove)'''
+        # get only the top 1000
+        certain_query = certain_query[:1000]
         certain_query["Rank"] = np.arange(1, len(certain_query)+1)
         df_with_ranks = pd.concat([df_with_ranks, certain_query])
-
     return df_with_ranks
 
 

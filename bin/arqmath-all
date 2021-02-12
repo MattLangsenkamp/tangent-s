@@ -20,12 +20,12 @@ OPT_RERANKED=../results/arqopt-reranked.tsv
 #./arqmath-index $SLT_CNTL $OPT_CNTL
 
 # Run SLT and OPT queries
-./arqmath-search $SLT_CNTL
-./arqmath-search $OPT_CNTL
+#./arqmath-search $SLT_CNTL
+#./arqmath-search $OPT_CNTL
 
 # Now rerank and combine OPT and SLT results.
-./arqmath-search-rerank $SLT_CNTL $SLT_RESULTS $SLT_RERANKED #html
-./arqmath-search-rerank $OPT_CNTL $OPT_RESULTS $OPT_RERANKED #html
+#./arqmath-search-rerank $SLT_CNTL $SLT_RESULTS $SLT_RERANKED #html
+#./arqmath-search-rerank $OPT_CNTL $OPT_RESULTS $OPT_RERANKED #html
 ./arqmath-search-combine ../results/arq-slt-opt-results.tsv $SLT_CNTL $SLT_RERANKED $OPT_CNTL $OPT_RERANKED
 
 # done. Results are in arq-slt-opt-results.tsv
