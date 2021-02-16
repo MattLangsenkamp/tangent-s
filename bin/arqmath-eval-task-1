@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+echo "All trec ,prim, and submission files in the trec, prim, and sub directories will be deleted. Are you sure you want to continue (y/n)"
+read decision
+
+if [ "$decision" = "y" ]
+then
+  rm -f ../evaluation/Task1/prim/
+  rm -f ../evaluation/Task1/trec/
+  rm -f ../evaluation/Task1/sub/
+
+  python3 ../evaluation/Task1/
+
+	echo "done."
+else
+	echo "Evaluation aborted."
+fi

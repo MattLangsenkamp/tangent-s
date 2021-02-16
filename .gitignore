@@ -12,3 +12,10 @@
 *.pyc
 cntl/arqmath_docs_opt
 cntl/arqmath_docs_slt
+evaluation/Task1/trec/*
+evaluation/Task1/prim/*
+evaluation/Task1/sub/*
+!evaluation/Task1/trec/.gitkeep
+!evaluation/Task1/prim/.gitkeep
+!evaluation/Task1/sub/.gitkeep
+
