@@ -124,15 +124,9 @@ class SymbolTree:
 
     @classmethod
     def __create_slt_from_string(cls, tree_substring):
-        #assume first and last characters are [ and ]
-        #read name until , [, or ] appears
-        #print("sub: " + tree_substring)
-        if tree_substring =='[?,[N!16[&comma;[?,[N!36[&comma;[?]]]]]]]':
-            print("here")
-            tree_substring ='[?,o[N!16[&comma;[?,o[N!36[&comma;[?]]]]]]]'
+
         pos = 1
-        if tree_substring == "" :
-            return None
+
         while not tree_substring[pos] in ["[", "]"]:
             if tree_substring[pos] == "," and pos > 1:
                 break
@@ -163,7 +157,6 @@ class SymbolTree:
                 pos = child_end
 
                 current_next = cls.__create_slt_from_string(child_text)
-                if current_next is None: break
 
 
             if tree_substring[pos] == ",":
@@ -174,7 +167,6 @@ class SymbolTree:
                 pos = child_end
                 
                 child_node = cls.__create_slt_from_string(child_text)
-                if child_node is None: break
 
                 if child_relation == "a":
                     current_above = child_node

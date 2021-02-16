@@ -1207,8 +1207,6 @@ class Query:
                         # query_offset = int(current_name.split("-")[-1]) - 1
 
                         # RZ: modify for ARQMath topic names.
-                        if current_query == "B.85":
-                            print("here")
                         # query_offset = int(re.split('\.|-',current_name)[-1]) - 1
 
                         if html_prefix is not None:
@@ -1270,7 +1268,10 @@ class Query:
                     if current_query is None:
                         print("Error: result listed before a query, line " + str(idx))
                     else:
-                        current_query.add_result(doc_id, doc_name, location, expression, scores, mathml)
+                        try:
+                            current_query.add_result(doc_id, doc_name, location, expression, scores, mathml)
+                        except Exception as e:
+                            print(e)
 
         return all_queries
 

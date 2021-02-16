@@ -39,11 +39,12 @@ def load_and_clean_results_df(file_name: str, run_name: str, latex: pd.DataFrame
 
 
 def load_latex_df(latex_dir: str) -> pd.DataFrame:
-    cumulative_df = pd.DataFrame()
+    dfs = []
     for filename in sorted(os.listdir(latex_dir), key=lambda x: float(x.strip('.tsv'))):
         filename_with_dir = os.path.join(latex_dir, filename)
         df = pd.read_csv(filename_with_dir, sep='\t')
-        cumulative_df = pd.concat([cumulative_df, df], ignore_index=True)
+        dfs.append(df)
+    cumulative_df = pd.concat(dfs, ignore_index=True)
     return cumulative_df
 
 
