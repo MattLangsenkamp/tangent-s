@@ -5,7 +5,9 @@ import argparse
 
 def calculated_ndcg(res_directory, trec_eval_tool, qre_file_path):
     result = {}
-    for file in os.listdir(res_directory):
+    submission_files = os.listdir(res_directory)
+    if ".gitkeep" in submission_files: submission_files.remove(".gitkeep")
+    for file in submission_files:
         output = check_output([trec_eval_tool, qre_file_path, res_directory+file, "-m", "ndcg"])
         output = output.decode('utf-8')
         score = output.split("\t")[2].strip()
@@ -16,7 +18,9 @@ def calculated_ndcg(res_directory, trec_eval_tool, qre_file_path):
 
 def calculated_map(res_directory, trec_eval_tool, qre_file_path):
     result = {}
-    for file in os.listdir(res_directory):
+    submission_files = os.listdir(res_directory)
+    if ".gitkeep" in submission_files: submission_files.remove(".gitkeep")
+    for file in submission_files:
         output = check_output([trec_eval_tool, qre_file_path, res_directory+file, "-l2", "-m", "map"])
         output = output.decode('utf-8')
         score = output.split("\t")[2].strip()
@@ -27,7 +31,9 @@ def calculated_map(res_directory, trec_eval_tool, qre_file_path):
 
 def calculated_p_at_10(res_directory, trec_eval_tool, qre_file_path):
     result = {}
-    for file in os.listdir(res_directory):
+    submission_files = os.listdir(res_directory)
+    if ".gitkeep" in submission_files: submission_files.remove(".gitkeep")
+    for file in submission_files:
         output = check_output([trec_eval_tool, qre_file_path, res_directory + file, "-l2", "-m", "P.10"])
         output = output.decode('utf-8').split("\n")[0]
         score = output.split("\t")[2].strip()

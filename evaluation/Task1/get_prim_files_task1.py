@@ -11,7 +11,9 @@ def convert_result_files_to_trec(submission_dir, qrel_result_dic, trec_dir, prim
     @param trec_dir: the destination to keep the trec_formatted files
     @param prim_dir: the destination to keep the prim_trec_formatted files
     """
-    for file in os.listdir(submission_dir):
+    submission_files = os.listdir(submission_dir)
+    if ".gitkeep" in submission_files: submission_files.remove(".gitkeep")
+    for file in submission_files:
         topic_result = {}
         result_file = open(submission_dir + file, newline='', encoding="utf-8")
         csv_reader = csv.reader(result_file, delimiter='\t', quoting=csv.QUOTE_MINIMAL)

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+SUB_DIR=../evaluation/Task2/sub/
+RESULTS_PATH=../results/arq-slt-opt-results.tsv
+
+DEDUP_DIR=../evaluation/Task2/dedup/
+SLT_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/formulas_slt_string.tsv
+VISUAL_FILE_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/qrel_official_visual_ids_2020
+EVAL_TOOL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/trec_eval
+LATEX_DIR=/home/mattlangsenkamp/Documents/dprl/latex_representation_v2/
+QREL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/qrel_task2
+
+METRICS_RES_FILE=../evaluation/Task1/metrics
+
+echo "$SUB_DIR"cool
+
+echo "All trec ,prim, and submission files in the dedup and sub directories will be deleted. Are you sure you want to continue (y/n)"
+read decision
+
+if [ "$decision" = "y" ]
+then
+
+  rm -f "$DEDUP_DIR"*
+  rm -f "$SUB_DIR"*
+  echo "converting to arqmath form"
+  python3 ../evaluation/Task2/convert_tangents_to_arqmath_task2.py -res $RESULTS_PATH -arq "$SUB_DIR"arqmath-format-results.tsv
+
+  echo "generating trec and prim files"
+  python3 ../evaluation/Task2/get_deduplicated_2020.py -sub $SUB_DIR -de $DEDUP_DIR -lat $LATEX_DIR -slt $SLT_PATH -qre $QREL_PATH -v $VISUAL_FILE_PATH
+
+  echo "generating metrics"
+  python3 ../evaluation/Task2/task1_get_results.py -eva $EVAL_TOOL_PATH -qre $QREL_PATH -de $DEDUP_DIR -res $METRICS_RES_FILE
+
+	echo "done."
+else
+	echo "Evaluation aborted."
+fi

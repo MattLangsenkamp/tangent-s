@@ -1,17 +1,37 @@
 #!/bin/bash
 
+TREC_DIR=../evaluation/Task1/trec/
+SUB_DIR=../evaluation/Task1/sub/
+PRIM_DIR=../evaluation/Task1/prim/
+RESULTS_DIR=../results/arq-slt-opt-results.tsv
+
+EVAL_TOOL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task1-recreate/trec_eval
+LATEX_DIR=/home/mattlangsenkamp/Documents/dprl/latex_representation_v2/
+QREL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task1-recreate/qrel_task1
+
+METRICS_RES_FILE=../evaluation/Task1/metrics
+
+echo "$SUB_DIR"cool
 
 echo "All trec ,prim, and submission files in the trec, prim, and sub directories will be deleted. Are you sure you want to continue (y/n)"
 read decision
 
 if [ "$decision" = "y" ]
 then
-  rm -f ../evaluation/Task1/prim/
-  rm -f ../evaluation/Task1/trec/
-  rm -f ../evaluation/Task1/sub/
+  rm -f "$TREC_DIR"*
+  rm -f "$PRIM_DIR"*
+  rm -f "$SUB_DIR"*
 
-  python3 ../evaluation/Task1/
+  echo "converting to arqmath form"
+  python3 ../evaluation/Task1/convert_tangents_to_arqmath.py -ldir $LATEX_DIR -res $RESULTS_DIR -arq "$SUB_DIR"arqmath-format-results.tsv
 
+  echo "generating trec and prim files"
+  python3 ../evaluation/Task1/get_prim_files_task1.py -qre $QREL_PATH -sub $SUB_DIR -tre $TREC_DIR -pri $PRIM_DIR
+
+  echo "generating metrics"
+  python3 ../evaluation/Task1/task1_get_results.py -eva $EVAL_TOOL_PATH -qre $QREL_PATH -tre $TREC_DIR -pri $PRIM_DIR -res $METRICS_RES_FILE
+
+  cat $METRICS_RES_FILE
 	echo "done."
 else
 	echo "Evaluation aborted."
