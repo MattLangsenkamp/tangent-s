@@ -95,9 +95,9 @@ def get_query(query_obj):
 
 
 def main():
-    ntcir_main_count = 1000  # main task require 1000 results returned
+    ntcir_main_count = 2000  # main task require 1000 results returned
     # RZ: Hack - always choose top - 1000
-    ntcir_wiki_count = 1000
+    ntcir_wiki_count = 2000
     
     if sys.stdout.encoding != 'utf8':
       sys.stdout = codecs.getwriter('utf8')(sys.stdout.buffer, 'strict')

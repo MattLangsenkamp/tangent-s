@@ -7,7 +7,7 @@ def calculated_measures(directory, trec_eval_tool_file_path, qrel_file_path):
     result = {}
     submission_files = os.listdir(directory)
     if ".gitkeep" in submission_files: submission_files.remove(".gitkeep")
-    for file in os.listdir(submission_files):
+    for file in submission_files:
         output = check_output([trec_eval_tool_file_path, qrel_file_path, directory+file, "-m", "ndcg"])
         output = output.decode('utf-8')
         ndcg = output.split("\t")[2].strip()
