@@ -19,7 +19,7 @@ https://drive.google.com/drive/folders/1Qbrl7OpoMUpvJ-TJ65tNz3FRjVIV6CX4
 After extracting the files move all index files to the `tangent-s/db-index` folder  
 ![Indices](imgs/indices.png)
 ### Control and Doclist Files
-Move the doclist files and control files to the `tangent-s/cntl` folder 
+Move the doclist files and control files to the `tangent-s/cntl` folder   
 ![Files](imgs/cntl.png)
 ### Trec Eval Tool
 Download trec eval tool shown here, outside the tangent-s directory.  
