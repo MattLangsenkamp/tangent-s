@@ -13,6 +13,7 @@ This Readme is supplemental to the main readme. If things are unclear consider r
 Download the zip file here.  
 https://drive.google.com/drive/folders/1Qbrl7OpoMUpvJ-TJ65tNz3FRjVIV6CX4  
 After extracting the files move all index files to the db-index folder  
+![Indices](imgs/indices.png)
 ### Control and Doclist Files
 ### Trec Eval Tool
 https://github.com/usnistgov/trec_eval
