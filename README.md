@@ -76,7 +76,7 @@ an example cntl file is shown below. explanations for each field can be found be
 ```shell
 cntl	arqopt.cntl
 window	4
-queries	../testing/test_queries/opt_task1_mod.xml
+queries	../testing/test_queries/opt_task1.xml
 doc_list	../cntl/testlist.txt
 database	dbarqmathopt-new
 chunk_size	200

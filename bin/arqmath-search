@@ -12,7 +12,7 @@ fi
 FILEHEAD=$(basename "$1" .cntl)
 
 echo "Generating query .tsv data based on $1"
-python3 ../src/python/index_query/query_matt.py "$1"
+python3 ../src/python/index_query/query.py "$1"
 
 echo "Running queries..."
 DBPREFIX=$(grep database "$1" | awk '{print $2}')
