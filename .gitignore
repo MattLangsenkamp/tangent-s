@@ -17,7 +17,7 @@ evaluation/Task1/prim/*
 evaluation/Task1/sub/*
 evaluation/Task2/dedup/*
 evaluation/Task2/sub/*
-
+evaluation/data/latex_representation_v2/
 
 !evaluation/Task1/trec/.gitkeep
 !evaluation/Task1/prim/.gitkeep
