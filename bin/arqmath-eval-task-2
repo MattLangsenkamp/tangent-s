@@ -6,9 +6,9 @@ RESULTS_PATH=../results/arq-slt-opt-results.tsv
 DEDUP_DIR=../evaluation/Task2/dedup/
 SLT_PATH=../evaluation/data/formulas_slt_string.tsv
 VISUAL_FILE_PATH=../evaluation/data/visual_id_file.tsv
-EVAL_TOOL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/trec_eval
-LATEX_DIR=/home/mattlangsenkamp/Documents/dprl/latex_representation_v2/
-QREL_PATH=/home/mattlangsenkamp/Documents/dprl/eval/Task2-recreate/qrel_task2_official_2020_visual_id.tsv
+EVAL_TOOL_PATH=../evaluation/data/trec_eval
+LATEX_DIR=../evaluation/data/latex_representation_v2/
+QREL_PATH=../evaluation/data/qrel_task2_official_2020_visual_id.tsv
 
 METRICS_RES_FILE=../evaluation/Task2/metrics
 

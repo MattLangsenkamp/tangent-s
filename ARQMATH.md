@@ -5,7 +5,7 @@ This Readme is supplemental to the main readme. If things are unclear consider r
    1. [Indices](#indices)
    2. [Control and Doclist Files](#control-and-doclist-files)
    4. [Trec Eval Tool](#trec-eval-tool)
-   5. []
+   5. [LaTex Representation](#latex-representation)
 2. [Run It]($run it)
 3. [Evaluation](#evaluation)
 
@@ -25,7 +25,11 @@ Navigate the directory it is downloaded in and edit the Makefile so that the fir
 line BIN variable points to the `tangent-s/evaluation/data/` folder as such  
 ![bin](imgs/bin.png)  
 Run `make install` and ensure a `trec_eval` executable populated in the `tangent-s/evaluation/data/` folder  
-![trec](imgs/trec.png)  
+![trec](imgs/trec.png)   
+### LaTex Representation
+Download the latex_representation_v2.zip from https://drive.google.com/drive/folders/18bHlAWkhIJkLeS9CHvBQQ-BLSn4rrlvE   
+extract the repo to `tangent-s/evaluation/data/`
+![bin]
 
 
 
