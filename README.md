@@ -24,8 +24,7 @@
    5. [Combining](#combining)
    
 5. [Evaluation](#Evaluation)
-   1. [Task 1](#Task-1)
-   2. [Task 2](#task-2)
+
 6. [Debugging](#debugging)
 7. [Community Contributions](#community-contributions)
 
@@ -363,6 +362,8 @@ This can cause IDE debuggers to lose track of the process you would like to moni
 index_matt.py is a modified version of index.py that will run with only one process,
 and will allow for proper debugging. This script will be orders of magnitude slower than
 the original index.py and should not be run in production settings.
+### Evaluation
+To evaluate the Arqmath tasks please view the separate ARQMATH.md file in this repo
 ### Community Contributions
 There are other datasets that can be applied to tangent-s. If you 
 come across one you want to use, but have to do some cleaning in order for the dataset to

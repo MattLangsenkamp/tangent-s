@@ -11,6 +11,8 @@ This Readme is supplemental to the main readme. If things are unclear consider r
    2. [Task 2](#task-2)
 3. [Evaluation](#evaluation)
    1. [Task 1](#task1)
+      1. [Just Math](#just-math)
+      2. [Combine Math and Text](#math-and-text)
    2. [Task 2](#task2)
 
 ## Download Files and Installation
