@@ -9,10 +9,9 @@ This Readme is supplemental to the main readme. If things are unclear consider r
 2. [Run It](#run-it)
    1. [Task 1](#task-1)
    2. [Task 2](#task-2)
-
 3. [Evaluation](#evaluation)
-   1. [Task 1](#task-1)
-   2. [Task 2](#task-2)
+   1. [Task 1](#task1)
+   2. [Task 2](#task2)
 
 ## Download Files and Installation
 ### Indices 
