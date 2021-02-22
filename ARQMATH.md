@@ -39,8 +39,20 @@ Many of the finer details of running the core tangent-s system are highlighted
 Within the arqslt.cntl and arqopt.cntl files set the paths to queries argument`../testing/test_queries/slt_task1.xml` and `../testing/test_queries/opt_task1.xml`
 respectively  
 ![slt1](imgs/slt1.png)
-![opt1](imgs/opt1.png)
+![opt1](imgs/opt1.png)  
 Set the top-k retrieval parameter to 1000 by opening the `src/python/index_query/query.py` file and changing the first two 
-variables in the main method as such
+variables in the main method as such   
+![topk](imgs/topk.png)   
+At this point navigate to `bin` directory and run `./arqmath-all` as specified in the main readme.
 ### Task 2
-
+Similarly to task 1 change the query paths to `../testing/test_queries/slt_task2.xml` and
+`../testing/test_queries/opt_task2.xml` respectively.
+Set the top-k retrieval parameter to 2000 by opening the `src/python/index_query/query.py` file and changing the first two 
+variables in the main method as such   
+![top2000](imgs/top2000.png)   
+At this point navigate to `bin` directory and run `./arqmath-all` as specified in the main readme.
+## Evaluation 
+### Task1
+After running the `./arqmath-all` script run `./arqmath-eval-task-1`. The metrics should then be output in the terminal.
+### Task2
+After running the `./arqmath-all` script run `./arqmath-eval-task-2`. The metrics should then be output in the terminal.
