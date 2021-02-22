@@ -11,6 +11,8 @@ This Readme is supplemental to the main readme. If things are unclear consider r
    2. [Task 2](#task-2)
 
 3. [Evaluation](#evaluation)
+   1. [Task 1](#task-1)
+   2. [Task 2](#task-2)
 
 ## Download Files and Installation
 ### Indices 
@@ -56,3 +58,6 @@ At this point navigate to `bin` directory and run `./arqmath-all` as specified i
 After running the `./arqmath-all` script run `./arqmath-eval-task-1`. The metrics should then be output in the terminal.
 ### Task2
 After running the `./arqmath-all` script run `./arqmath-eval-task-2`. The metrics should then be output in the terminal.
+### Evaluation scripts
+To understand the scripts referenced in `./arqmath-eval-task-1` and `./arqmath-eval-task-2`
+it is best to just open the files and see how they are used. 
