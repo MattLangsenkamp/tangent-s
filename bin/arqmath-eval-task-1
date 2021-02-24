@@ -8,6 +8,7 @@ RESULTS_DIR=../results/arq-slt-opt-results.tsv
 EVAL_TOOL_PATH=../evaluation/data/trec_eval
 LATEX_DIR=../evaluation/data/latex_representation_v2/
 QREL_PATH=../evaluation/data/qrel_task1
+TF_IDF_PATH=../evaluation/data/tf_idf_task1_final.tsv
 
 METRICS_RES_FILE=../evaluation/Task1/metrics
 
@@ -15,6 +16,9 @@ echo "$SUB_DIR"cool
 
 echo "All trec ,prim, and submission files in the trec, prim, and sub directories will be deleted. Are you sure you want to continue (y/n)"
 read decision
+
+echo "Would you like to combine tangentS results with tf-idf text results? (y/n)"
+read combine_decision
 
 if [ "$decision" = "y" ]
 then
@@ -24,7 +28,12 @@ then
 
   echo "converting to arqmath form"
   python3 ../evaluation/Task1/convert_tangents_to_arqmath.py -ldir $LATEX_DIR -res $RESULTS_DIR -arq "$SUB_DIR"arqmath-format-results.tsv
-
+  if [ "$decision" = "y" ]
+  then
+    echo "combining text and math results"
+    python ../evaluation/Task1/linear_combination.py -tan "$SUB_DIR"arqmath-format-results.tsv -te $TF_IDF_PATH -res "$SUB_DIR"arqmath-format-results-text-combined.tsv
+    rm "$SUB_DIR"arqmath-format-results.tsv
+  fi
   echo "generating trec and prim files"
   python3 ../evaluation/Task1/get_prim_files_task1.py -qre $QREL_PATH -sub $SUB_DIR -tre $TREC_DIR -pri $PRIM_DIR
 

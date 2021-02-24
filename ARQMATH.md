@@ -56,7 +56,13 @@ variables in the main method as such
 At this point navigate to `bin` directory and run `./arqmath-all` as specified in the main readme.
 ## Evaluation 
 ### Task1
+#### Just Math
 After running the `./arqmath-all` script run `./arqmath-eval-task-1`. The metrics should then be output in the terminal.
+When prompted with `Would you like to combine tangentS results with tf-idf text results? (y/n)` enter `n`
+#### Math and Text
+Download the tf_idf_task1_final.tsv https://drive.google.com/drive/folders/1DDUI4AUDpfH2r7JDQGZgnL2DiUhV8uBS to `evaluation/data/`
+After running the `./arqmath-all` script run `./arqmath-eval-task-1`. The metrics should then be output in the terminal.
+When prompted with `Would you like to combine tangentS results with tf-idf text results? (y/n)` enter `y`
 ### Task2
 After running the `./arqmath-all` script run `./arqmath-eval-task-2`. The metrics should then be output in the terminal.
 ### Evaluation scripts
