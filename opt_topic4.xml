@@ -1,0 +1,3946 @@
+<?xml version="1.0" ?>
+<topics >
+	<topic>
+		<num>B.201</num>
+		<query>
+			<formula id="q_1">
+				<math >
+					<apply>
+						<times/>
+						<ci>𝑛</ci>
+						<ci>𝑛</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.202</num>
+		<query>
+			<formula id="q_8">
+				<math >
+					<cerror>
+						<csymbol cd="ambiguous">fragments</csymbol>
+						<cerror>
+							<csymbol cd="ambiguous">fragments</csymbol>
+							<ci>[</ci>
+							<csymbol cd="unknown">E</csymbol>
+							<ci>:</ci>
+							<csymbol cd="unknown">F</csymbol>
+							<ci>]</ci>
+						</cerror>
+						<lt/>
+						<infinity/>
+						<ci>;</ci>
+					</cerror>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.203</num>
+		<query>
+			<formula id="q_12">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<minus/>
+							<apply>
+								<minus/>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+						<ci>𝑥</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.204</num>
+		<query>
+			<formula id="q_26">
+				<math >
+					<apply>
+						<ci>:</ci>
+						<ci>𝛿</ci>
+						<apply>
+							<ci>→</ci>
+							<ci>𝑌</ci>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<times/>
+									<ci>𝑍</ci>
+								</apply>
+								<ci>𝑌</ci>
+								<ci>𝑌</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.205</num>
+		<query>
+			<formula id="q_30">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑛</ci>
+							<ci>𝑥</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.206</num>
+		<query>
+			<formula id="q_33">
+				<math >
+					<apply>
+						<csymbol cd="ambiguous">superscript</csymbol>
+						<apply>
+							<plus/>
+							<cn type="integer">1</cn>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<ci>𝑛</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.207</num>
+		<query>
+			<formula id="q_38">
+				<math >
+					<apply>
+						<csymbol cd="latexml">similar-to</csymbol>
+						<apply>
+							<times/>
+							<ci>𝑓</ci>
+							<ci>𝑁</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<geq/>
+									<ci>𝑘</ci>
+									<cn type="integer">0</cn>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<factorial/>
+									<ci>𝑘</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑁</ci>
+									<ci>𝑘</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.208</num>
+		<query>
+			<formula id="q_47">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝐻</ci>
+								<ci>𝑛</ci>
+							</apply>
+							<ci>𝑘</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑖</ci>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑖</ci>
+									<ci>𝑘</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.209</num>
+		<query>
+			<formula id="q_49">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<int/>
+								<cn type="integer">0</cn>
+							</apply>
+							<infinity/>
+						</apply>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑒</ci>
+								<apply>
+									<minus/>
+									<apply>
+										<times/>
+										<ci>ℎ</ci>
+										<apply>
+											<csymbol cd="ambiguous">superscript</csymbol>
+											<ci>𝑥</ci>
+											<cn type="integer">2</cn>
+										</apply>
+									</apply>
+								</apply>
+							</apply>
+							<apply>
+								<csymbol cd="latexml">differential-d</csymbol>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.210</num>
+		<query>
+			<formula id="q_52">
+				<math >
+					<apply>
+						<leq/>
+						<apply>
+							<times/>
+							<ci>𝑥</ci>
+							<apply>
+								<minus/>
+								<cn type="integer">1</cn>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+						<apply>
+							<divide/>
+							<cn type="integer">1</cn>
+							<cn type="integer">4</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.211</num>
+		<query>
+			<formula id="q_58">
+				<math >
+					<apply>
+						<int/>
+						<apply>
+							<times/>
+							<apply>
+								<root/>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑥</ci>
+										<cn type="integer">2</cn>
+									</apply>
+									<apply>
+										<root/>
+										<apply>
+											<times/>
+											<apply>
+												<csymbol cd="ambiguous">superscript</csymbol>
+												<ci>𝑥</ci>
+												<cn type="integer">3</cn>
+											</apply>
+											<apply>
+												<root/>
+												<apply>
+													<times/>
+													<apply>
+														<csymbol cd="ambiguous">superscript</csymbol>
+														<ci>𝑥</ci>
+														<cn type="integer">4</cn>
+													</apply>
+													<apply>
+														<root/>
+														<apply>
+															<times/>
+															<apply>
+																<csymbol cd="ambiguous">superscript</csymbol>
+																<ci>𝑥</ci>
+																<cn type="integer">5</cn>
+															</apply>
+															<apply>
+																<root/>
+																<apply>
+																	<times/>
+																	<apply>
+																		<csymbol cd="ambiguous">superscript</csymbol>
+																		<ci>𝑥</ci>
+																		<cn type="integer">6</cn>
+																	</apply>
+																	<apply>
+																		<root/>
+																		<apply>
+																			<times/>
+																			<apply>
+																				<csymbol cd="ambiguous">superscript</csymbol>
+																				<ci>𝑥</ci>
+																				<cn type="integer">7</cn>
+																			</apply>
+																			<apply>
+																				<root/>
+																				<apply>
+																					<times/>
+																					<apply>
+																						<csymbol cd="ambiguous">superscript</csymbol>
+																						<ci>𝑥</ci>
+																						<cn type="integer">8</cn>
+																					</apply>
+																					<ci>…</ci>
+																				</apply>
+																			</apply>
+																		</apply>
+																	</apply>
+																</apply>
+															</apply>
+														</apply>
+													</apply>
+												</apply>
+											</apply>
+										</apply>
+									</apply>
+								</apply>
+							</apply>
+							<apply>
+								<csymbol cd="latexml">differential-d</csymbol>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.212</num>
+		<query>
+			<formula id="q_70">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝑓</ci>
+							<ci>𝑥</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑛</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+								<infinity/>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<plus/>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑛</ci>
+									</apply>
+									<cn type="integer">1</cn>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑥</ci>
+									</apply>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑛</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.213</num>
+		<query>
+			<formula id="q_73">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑥</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<infinity/>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<minus/>
+								<ci>𝑥</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<cn type="integer">2</cn>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.214</num>
+		<query>
+			<formula id="q_75">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<apply>
+										<minus/>
+										<infinity/>
+									</apply>
+								</apply>
+								<infinity/>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑒</ci>
+									<apply>
+										<minus/>
+										<apply>
+											<times/>
+											<ci>𝜋</ci>
+											<apply>
+												<csymbol cd="ambiguous">superscript</csymbol>
+												<ci>𝑥</ci>
+												<cn type="integer">2</cn>
+											</apply>
+										</apply>
+									</apply>
+								</apply>
+								<apply>
+									<csymbol cd="latexml">differential-d</csymbol>
+									<ci>𝑥</ci>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">1</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.215</num>
+		<query>
+			<formula id="q_90">
+				<math >
+					<apply>
+						<eq/>
+						<ci>𝐴</ci>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<union/>
+									<apply>
+										<eq/>
+										<ci>𝑛</ci>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+								<infinity/>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝐴</ci>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.216</num>
+		<query>
+			<formula id="q_104">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<limit/>
+							<apply>
+								<ci>→</ci>
+								<ci>𝑡</ci>
+								<apply>
+									<plus/>
+									<infinity/>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<cn type="integer">0</cn>
+								</apply>
+								<apply>
+									<plus/>
+									<infinity/>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<times/>
+									<ci>d</ci>
+									<ci>𝑥</ci>
+								</apply>
+								<apply>
+									<plus/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑒</ci>
+										<ci>𝑥</ci>
+									</apply>
+									<apply>
+										<sin/>
+										<apply>
+											<times/>
+											<ci>𝑡</ci>
+											<ci>𝑥</ci>
+										</apply>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.217</num>
+		<query>
+			<formula id="q_130">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<plus/>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑎</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑦</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑏</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">1</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.218</num>
+		<query>
+			<formula id="q_135">
+				<math >
+					<apply>
+						<leq/>
+						<apply>
+							<times/>
+							<ci>𝑅</ci>
+							<interval closure="open">
+								<ci>𝑚</ci>
+								<ci>𝑛</ci>
+							</interval>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<times/>
+								<ci>𝑅</ci>
+								<interval closure="open">
+									<apply>
+										<minus/>
+										<ci>𝑚</ci>
+										<cn type="integer">1</cn>
+									</apply>
+									<ci>𝑛</ci>
+								</interval>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑅</ci>
+								<interval closure="open">
+									<ci>𝑚</ci>
+									<apply>
+										<minus/>
+										<ci>𝑛</ci>
+										<cn type="integer">1</cn>
+									</apply>
+								</interval>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.219</num>
+		<query>
+			<formula id="q_139">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="latexml">binomial</csymbol>
+							<apply>
+								<plus/>
+								<ci>𝑛</ci>
+								<ci>𝑟</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<ci>𝑟</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑘</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+								<ci>𝑟</ci>
+							</apply>
+							<apply>
+								<csymbol cd="latexml">binomial</csymbol>
+								<apply>
+									<plus/>
+									<ci>𝑛</ci>
+									<ci>𝑘</ci>
+								</apply>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.220</num>
+		<query>
+			<formula id="q_140">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑘</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<csymbol cd="latexml">binomial</csymbol>
+								<apply>
+									<plus/>
+									<ci>𝑥</ci>
+									<ci>𝑘</ci>
+								</apply>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="latexml">binomial</csymbol>
+							<apply>
+								<plus/>
+								<ci>𝑥</ci>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.221</num>
+		<query>
+			<formula id="q_164">
+				<math >
+					<apply>
+						<leq/>
+						<apply>
+							<times/>
+							<ci>𝑔</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑘</ci>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+								<apply>
+									<times/>
+									<ci>ℓ</ci>
+									<ci>𝑛</ci>
+								</apply>
+							</apply>
+							<apply>
+								<plus/>
+								<apply>
+									<times/>
+									<ci>𝑔</ci>
+									<ci>𝑘</ci>
+								</apply>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.222</num>
+		<query>
+			<formula id="q_174">
+				<math >
+					<apply>
+						<csymbol cd="ambiguous">superscript</csymbol>
+						<apply>
+							<plus/>
+							<ci>𝑥</ci>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<apply>
+									<factorial/>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">3</cn>
+								</apply>
+								<apply>
+									<factorial/>
+									<cn type="integer">3</cn>
+								</apply>
+							</apply>
+							<ci>…</ci>
+						</apply>
+						<cn type="integer">4</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.223</num>
+		<query>
+			<formula id="q_176">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑖</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="latexml">binomial</csymbol>
+									<apply>
+										<plus/>
+										<ci>𝑛</ci>
+										<ci>𝑖</ci>
+									</apply>
+									<ci>𝑖</ci>
+								</apply>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<cn type="integer">2</cn>
+										<ci>𝑖</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<cn type="integer">2</cn>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.224</num>
+		<query>
+			<formula id="q_213">
+				<math >
+					<apply>
+						<lt/>
+						<apply>
+							<abs/>
+							<apply>
+								<minus/>
+								<apply>
+									<times/>
+									<ci>𝑓</ci>
+									<ci>𝑥</ci>
+								</apply>
+								<apply>
+									<times/>
+									<ci>𝑓</ci>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<ci>𝑥</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<ci>𝜀</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.225</num>
+		<query>
+			<formula id="q_221">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<plus/>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝛼</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝛼</ci>
+								<cn type="integer">2</cn>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝛼</ci>
+								<cn type="integer">3</cn>
+							</apply>
+						</apply>
+						<cn type="integer">3</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.226</num>
+		<query>
+			<formula id="q_224">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑥</ci>
+								<ci>𝑦</ci>
+							</apply>
+						</apply>
+						<ci>𝑦</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.227</num>
+		<query>
+			<formula id="q_236">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<plus/>
+							<cn type="integer">1</cn>
+							<cn type="integer">2</cn>
+							<apply>
+								<times/>
+								<cn type="integer">3</cn>
+								<ci>…</ci>
+							</apply>
+						</apply>
+						<apply>
+							<minus/>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<cn type="integer">12</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.228</num>
+		<query>
+			<formula id="q_251">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝐹</ci>
+							<interval closure="open">
+								<ci>𝑥</ci>
+								<ci>𝑦</ci>
+							</interval>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<apply>
+										<minus/>
+										<infinity/>
+									</apply>
+								</apply>
+								<apply>
+									<plus/>
+									<infinity/>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑓</ci>
+								<apply>
+									<plus/>
+									<ci>𝑡</ci>
+									<ci>𝑥</ci>
+								</apply>
+								<ci>𝑓</ci>
+								<apply>
+									<plus/>
+									<ci>𝑡</ci>
+									<ci>𝑦</ci>
+								</apply>
+								<apply>
+									<csymbol cd="latexml">differential-d</csymbol>
+									<ci>𝑡</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.229</num>
+		<query>
+			<formula id="q_252">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<int/>
+								<cn type="integer">0</cn>
+							</apply>
+							<cn type="integer">1</cn>
+						</apply>
+						<apply>
+							<times/>
+							<set>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<ci>𝑥</ci>
+								</apply>
+							</set>
+							<set>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<minus/>
+										<cn type="integer">1</cn>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</set>
+							<set>
+								<apply>
+									<minus/>
+									<cn type="integer">1</cn>
+									<apply>
+										<divide/>
+										<cn type="integer">1</cn>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</set>
+							<apply>
+								<csymbol cd="latexml">differential-d</csymbol>
+								<ci>𝑥</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.230</num>
+		<query>
+			<formula id="q_259">
+				<math >
+					<apply>
+						<times/>
+						<ci>𝑅</ci>
+						<vector>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<ci>…</ci>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑛</ci>
+								<ci>𝑐</ci>
+							</apply>
+						</vector>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.231</num>
+		<query>
+			<formula id="q_267">
+				<math >
+					<apply>
+						<csymbol cd="ambiguous">subscript</csymbol>
+						<ci>א</ci>
+						<cn type="integer">0</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.232</num>
+		<query>
+			<formula id="q_271">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="latexml">norm</csymbol>
+							<ci>𝐴</ci>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<max/>
+								<apply>
+									<eq/>
+									<apply>
+										<csymbol cd="latexml">norm</csymbol>
+										<ci>𝐰</ci>
+									</apply>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<apply>
+								<csymbol cd="latexml">norm</csymbol>
+								<apply>
+									<times/>
+									<ci>𝐴</ci>
+									<ci>𝐰</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.233</num>
+		<query>
+			<formula id="q_281">
+				<math >
+					<apply>
+						<in/>
+						<ci>𝑓</ci>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝐶</ci>
+								<infinity/>
+							</apply>
+							<ci>𝑀</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.234</num>
+		<query>
+			<formula id="q_299">
+				<math >
+					<apply>
+						<eq/>
+						<ci>𝑍</ci>
+						<apply>
+							<csymbol cd="latexml">conditional-set</csymbol>
+							<apply>
+								<in/>
+								<ci>𝑎</ci>
+								<ci>𝑋</ci>
+							</apply>
+							<apply>
+								<eq/>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑓</ci>
+										<ci>′</ci>
+									</apply>
+									<ci>𝑎</ci>
+								</apply>
+								<cn type="integer">0</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.235</num>
+		<query>
+			<formula id="q_302">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<plus/>
+							<apply>
+								<times/>
+								<ci>𝑎</ci>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑏</ci>
+								<ci>𝑥</ci>
+							</apply>
+							<ci>𝑐</ci>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑦</ci>
+							<cn type="integer">2</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.236</num>
+		<query>
+			<formula id="q_311">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝐷</ci>
+							<vector>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">1</cn>
+								</apply>
+								<ci>…</ci>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑥</ci>
+									<ci>𝐾</ci>
+								</apply>
+							</vector>
+						</apply>
+						<apply>
+							<times/>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<apply>
+									<times/>
+									<ci>B</ci>
+									<ci>𝜶</ci>
+								</apply>
+							</apply>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<csymbol cd="latexml">product</csymbol>
+										<apply>
+											<eq/>
+											<ci>𝑖</ci>
+											<cn type="integer">1</cn>
+										</apply>
+									</apply>
+									<ci>𝐾</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<ci>𝑥</ci>
+										<ci>𝑖</ci>
+									</apply>
+									<apply>
+										<minus/>
+										<apply>
+											<csymbol cd="ambiguous">subscript</csymbol>
+											<ci>𝛼</ci>
+											<ci>𝑖</ci>
+										</apply>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.237</num>
+		<query>
+			<formula id="q_335">
+				<math >
+					<apply>
+						<and/>
+						<ci>𝑝</ci>
+						<apply>
+							<times/>
+							<not/>
+							<ci>𝑞</ci>
+						</apply>
+						<ci>𝑟</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.238</num>
+		<query>
+			<formula id="q_352">
+				<math >
+					<apply>
+						<csymbol cd="latexml">similar-to</csymbol>
+						<ci>𝑎</ci>
+						<ci>𝑎</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.239</num>
+		<query>
+			<formula id="q_369">
+				<math >
+					<apply>
+						<in/>
+						<interval closure="open">
+							<ci>𝑥</ci>
+							<ci>𝑦</ci>
+						</interval>
+						<ci>𝑅</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.240</num>
+		<query>
+			<formula id="q_374">
+				<math >
+					<apply>
+						<eq/>
+						<ci>Δ</ci>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑏</ci>
+								<cn type="integer">2</cn>
+							</apply>
+							<ci>–</ci>
+							<cn type="integer">4</cn>
+							<ci>𝑎</ci>
+							<ci>𝑐</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.241</num>
+		<query>
+			<formula id="q_376">
+				<math >
+					<apply>
+						<minus/>
+						<apply>
+							<plus/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑛</ci>
+								<cn type="integer">3</cn>
+							</apply>
+							<apply>
+								<times/>
+								<cn type="integer">6</cn>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑛</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<times/>
+							<cn type="integer">7</cn>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.242</num>
+		<query>
+			<formula id="q_388">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<apply>
+								<plus/>
+								<ci>𝑝</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<minus/>
+								<ci>𝑝</ci>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+						<apply>
+							<minus/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑝</ci>
+								<cn type="integer">2</cn>
+							</apply>
+							<cn type="integer">1</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.243</num>
+		<query>
+			<formula id="q_393">
+				<math >
+					<cerror>
+						<csymbol cd="ambiguous">fragments</csymbol>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<cn type="integer">2</cn>
+							<apply>
+								<times/>
+								<cn type="integer">2</cn>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+						<minus/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<cn type="integer">2</cn>
+						</apply>
+						<ci>|</ci>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<cn type="integer">2</cn>
+							<apply>
+								<times/>
+								<cn type="integer">2</cn>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+						<minus/>
+						<cn type="integer">1</cn>
+					</cerror>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.244</num>
+		<query>
+			<formula id="q_407">
+				<math >
+					<apply>
+						<abs/>
+						<apply>
+							<divide/>
+							<ci>ℝ</ci>
+							<ci>𝑅</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.245</num>
+		<query>
+			<formula id="q_411">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝑓</ci>
+							<apply>
+								<times/>
+								<ci>𝑓</ci>
+								<ci>𝑧</ci>
+							</apply>
+						</apply>
+						<apply>
+							<sin/>
+							<ci>𝑧</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.246</num>
+		<query>
+			<formula id="q_424">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csc/>
+							<ci>𝜃</ci>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<csc/>
+								<apply>
+									<times/>
+									<cn type="integer">2</cn>
+									<ci>𝜃</ci>
+								</apply>
+							</apply>
+							<apply>
+								<csc/>
+								<apply>
+									<times/>
+									<cn type="integer">3</cn>
+									<ci>𝜃</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.247</num>
+		<query>
+			<formula id="q_436">
+				<math >
+					<apply>
+						<eq/>
+						<ci>𝑥</ci>
+						<apply>
+							<times/>
+							<cn type="integer">5</cn>
+							<apply>
+								<cos/>
+								<ci>𝜃</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.248</num>
+		<query>
+			<formula id="q_443">
+				<math >
+					<apply>
+						<csymbol cd="latexml">assign</csymbol>
+						<ci>𝑀</ci>
+						<apply>
+							<csymbol cd="latexml">conditional-set</csymbol>
+							<apply>
+								<in/>
+								<ci>𝑔</ci>
+								<ci>𝐺</ci>
+							</apply>
+							<apply>
+								<eq/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑔</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<ci>𝑒</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.249</num>
+		<query>
+			<formula id="q_466">
+				<math >
+					<vector>
+						<ci>𝐺</ci>
+						<times/>
+						<ci>𝑒</ci>
+					</vector>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.250</num>
+		<query>
+			<formula id="q_470">
+				<math >
+					<apply>
+						<leq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑎</ci>
+									<cn type="integer">1</cn>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑎</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<ci>…</ci>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑎</ci>
+									<ci>𝑛</ci>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<sum/>
+										<apply>
+											<eq/>
+											<ci>𝑖</ci>
+											<cn type="integer">1</cn>
+										</apply>
+									</apply>
+									<ci>𝑛</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑎</ci>
+									<ci>𝑖</ci>
+								</apply>
+							</apply>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.251</num>
+		<query>
+			<formula id="q_481">
+				<math >
+					<apply>
+						<lt/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<plus/>
+								<ci>𝑘</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<apply>
+									<plus/>
+									<ci>𝑘</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑘</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.252</num>
+		<query>
+			<formula id="q_484">
+				<math >
+					<apply>
+						<and/>
+						<apply>
+							<eq/>
+							<apply>
+								<times/>
+								<ci>𝜁</ci>
+								<cn type="integer">2</cn>
+							</apply>
+							<apply>
+								<plus/>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<cn type="integer">1</cn>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<cn type="integer">2</cn>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<cn type="integer">3</cn>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+								<ci>⋯</ci>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝜋</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<cn type="integer">6</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.253</num>
+		<query>
+			<formula id="q_496">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<apply>
+										<minus/>
+										<infinity/>
+									</apply>
+								</apply>
+								<infinity/>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<divide/>
+									<apply>
+										<minus/>
+										<apply>
+											<cos/>
+											<apply>
+												<times/>
+												<ci>𝑏</ci>
+												<ci>𝑥</ci>
+											</apply>
+										</apply>
+										<apply>
+											<cos/>
+											<apply>
+												<times/>
+												<ci>𝑎</ci>
+												<ci>𝑥</ci>
+											</apply>
+										</apply>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑥</ci>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+								<apply>
+									<csymbol cd="latexml">differential-d</csymbol>
+									<ci>𝑥</ci>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<times/>
+							<ci>𝜋</ci>
+							<apply>
+								<minus/>
+								<ci>𝑎</ci>
+								<ci>𝑏</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.254</num>
+		<query>
+			<formula id="q_497">
+				<math >
+					<apply>
+						<eq/>
+						<ci>𝐼</ci>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<cn type="integer">0</cn>
+								</apply>
+								<ci>𝜋</ci>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<times/>
+									<ci>𝑥</ci>
+									<ci>𝑑</ci>
+									<ci>𝑥</ci>
+								</apply>
+								<apply>
+									<minus/>
+									<cn type="integer">1</cn>
+									<apply>
+										<times/>
+										<ci>𝑠</ci>
+										<ci>𝑖</ci>
+										<ci>𝑛</ci>
+										<ci>𝑥</ci>
+										<ci>𝑐</ci>
+										<ci>𝑜</ci>
+										<ci>𝑠</ci>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.255</num>
+		<query>
+			<formula id="q_500">
+				<math >
+					<apply>
+						<csymbol cd="latexml">proportional-to</csymbol>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑓</ci>
+								<list>
+									<ci>𝑋</ci>
+									<ci>𝑌</ci>
+								</list>
+							</apply>
+							<interval closure="open">
+								<ci>𝑥</ci>
+								<ci>𝑦</ci>
+							</interval>
+						</apply>
+						<apply>
+							<exp/>
+							<apply>
+								<minus/>
+								<apply>
+									<times/>
+									<cn type="integer">13</cn>
+									<ci>𝑥</ci>
+									<ci>𝑦</ci>
+								</apply>
+								<apply>
+									<times/>
+									<cn type="integer">94</cn>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑥</ci>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+								<apply>
+									<times/>
+									<apply>
+										<divide/>
+										<cn type="integer">1</cn>
+										<cn type="integer">2</cn>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑦</ci>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.256</num>
+		<query>
+			<formula id="q_508">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<limit/>
+							<apply>
+								<ci>→</ci>
+								<ci>𝑥</ci>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<minus/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">2</cn>
+								</apply>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<minus/>
+								<ci>𝑥</ci>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.257</num>
+		<query>
+			<formula id="q_511">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑥</ci>
+									<ci>𝑘</ci>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑐</ci>
+								<apply>
+									<plus/>
+									<apply>
+										<times/>
+										<ci>𝑓</ci>
+										<ci>𝑥</ci>
+									</apply>
+									<apply>
+										<times/>
+										<ci>𝑔</ci>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<times/>
+								<ci>𝑐</ci>
+								<apply>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<limit/>
+										<apply>
+											<ci>→</ci>
+											<ci>𝑥</ci>
+											<ci>𝑘</ci>
+										</apply>
+									</apply>
+									<apply>
+										<times/>
+										<ci>𝑓</ci>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑐</ci>
+								<apply>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<limit/>
+										<apply>
+											<ci>→</ci>
+											<ci>𝑥</ci>
+											<ci>𝑘</ci>
+										</apply>
+									</apply>
+									<apply>
+										<times/>
+										<ci>𝑔</ci>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.258</num>
+		<query>
+			<formula id="q_513">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑥</ci>
+									<infinity/>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<ci>𝑘</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑒</ci>
+									<ci>𝑥</ci>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">0</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.259</num>
+		<query>
+			<formula id="q_530">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑛</ci>
+									<infinity/>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<cn type="integer">2</cn>
+									<ci>𝑛</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑛</ci>
+									<ci>𝑐</ci>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">0</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.260</num>
+		<query>
+			<formula id="q_534">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<limit/>
+							<apply>
+								<ci>→</ci>
+								<interval closure="open">
+									<ci>𝑥</ci>
+									<ci>𝑦</ci>
+								</interval>
+								<interval closure="open">
+									<cn type="integer">0</cn>
+									<cn type="integer">0</cn>
+								</interval>
+							</apply>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<times/>
+								<ci>𝑥</ci>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑦</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<plus/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑥</ci>
+									<cn type="integer">4</cn>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑦</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.261</num>
+		<query>
+			<formula id="q_540">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<determinant/>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑇</ci>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<sum/>
+									<apply>
+										<eq/>
+										<ci>𝑘</ci>
+										<cn type="integer">0</cn>
+									</apply>
+								</apply>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝛼</ci>
+									<apply>
+										<minus/>
+										<ci>𝑛</ci>
+										<ci>𝑘</ci>
+									</apply>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝛽</ci>
+									<ci>𝑘</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.262</num>
+		<query>
+			<formula id="q_555">
+				<math >
+					<apply>
+						<eq/>
+						<ci>𝑎</ci>
+						<apply>
+							<minus/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑎</ci>
+								<plus/>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑎</ci>
+								<minus/>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.263</num>
+		<query>
+			<formula id="q_558">
+				<math >
+					<cerror>
+						<csymbol cd="ambiguous">fragments</csymbol>
+						<cerror>
+							<csymbol cd="ambiguous">fragments</csymbol>
+							<ci>(</ci>
+							<csymbol cd="unknown">a</csymbol>
+							<and/>
+							<cerror>
+								<csymbol cd="ambiguous">fragments</csymbol>
+								<ci>(</ci>
+								<csymbol cd="unknown">a</csymbol>
+								<ci>→</ci>
+								<csymbol cd="unknown">b</csymbol>
+								<ci>)</ci>
+							</cerror>
+							<ci>)</ci>
+						</cerror>
+						<ci>→</ci>
+						<csymbol cd="unknown">b</csymbol>
+					</cerror>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.264</num>
+		<query>
+			<formula id="q_561">
+				<math >
+					<cerror>
+						<csymbol cd="ambiguous">fragments</csymbol>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑎</ci>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="latexml">percent</csymbol>
+									<ci>𝑏</ci>
+								</apply>
+								<ci>𝑝</ci>
+							</apply>
+						</apply>
+						<ci>)</ci>
+						<csymbol cd="latexml">percent</csymbol>
+						<csymbol cd="unknown">p</csymbol>
+					</cerror>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.265</num>
+		<query>
+			<formula id="q_562">
+				<math >
+					<apply>
+						<csymbol cd="ambiguous">superscript</csymbol>
+						<apply>
+							<divide/>
+							<ci>𝑎</ci>
+							<ci>𝑏</ci>
+						</apply>
+						<cn type="integer">2</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.266</num>
+		<query>
+			<formula id="q_581">
+				<math >
+					<apply>
+						<and/>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">14</cn>
+								<cn type="integer">3</cn>
+							</apply>
+							<apply>
+								<plus/>
+								<cn type="integer">4</cn>
+								<apply>
+									<divide/>
+									<cn type="integer">2</cn>
+									<cn type="integer">3</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">8</cn>
+								<cn type="integer">3</cn>
+							</apply>
+						</apply>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<plus/>
+								<cn type="integer">2</cn>
+								<apply>
+									<divide/>
+									<cn type="integer">2</cn>
+									<cn type="integer">3</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">4</cn>
+								<cn type="integer">3</cn>
+							</apply>
+						</apply>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<plus/>
+								<cn type="integer">1</cn>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<cn type="integer">3</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<ci>→</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<cn type="integer">3</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.267</num>
+		<query>
+			<formula id="q_589">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝐿</ci>
+							<interval closure="open">
+								<ci>𝑥</ci>
+								<ci>𝜆</ci>
+							</interval>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑓</ci>
+									<cn type="integer">0</cn>
+								</apply>
+								<ci>𝑥</ci>
+							</apply>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<sum/>
+										<apply>
+											<eq/>
+											<ci>𝑖</ci>
+											<cn type="integer">1</cn>
+										</apply>
+									</apply>
+									<ci>𝑚</ci>
+								</apply>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<ci>𝜆</ci>
+										<ci>𝑖</ci>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<ci>𝑓</ci>
+										<ci>𝑖</ci>
+									</apply>
+									<ci>𝑥</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.268</num>
+		<query>
+			<formula id="q_591">
+				<math >
+					<apply>
+						<divide/>
+						<cn type="integer">1</cn>
+						<apply>
+							<plus/>
+							<cn type="integer">1</cn>
+							<ci>𝑍</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.269</num>
+		<query>
+			<formula id="q_598">
+				<math >
+					<apply>
+						<and/>
+						<apply>
+							<eq/>
+							<apply>
+								<times/>
+								<ci>𝑃</ci>
+								<apply>
+									<csymbol cd="latexml">conditional</csymbol>
+									<ci>𝐸</ci>
+									<ci>𝐹</ci>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<times/>
+									<ci>𝑃</ci>
+									<apply>
+										<intersect/>
+										<ci>𝐸</ci>
+										<ci>𝐹</ci>
+									</apply>
+								</apply>
+								<apply>
+									<times/>
+									<ci>𝑃</ci>
+									<ci>𝐹</ci>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<divide/>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<cn type="integer">3</cn>
+								</apply>
+								<apply>
+									<divide/>
+									<cn type="integer">2</cn>
+									<cn type="integer">3</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<cn type="integer">2</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.270</num>
+		<query>
+			<formula id="q_600">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝐸</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<times/>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<cn type="integer">2</cn>
+								</apply>
+								<apply>
+									<plus/>
+									<apply>
+										<times/>
+										<ci>𝐸</ci>
+										<ci>𝑛</ci>
+									</apply>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<cn type="integer">2</cn>
+								</apply>
+								<apply>
+									<times/>
+									<ci>𝐸</ci>
+									<apply>
+										<minus/>
+										<ci>𝑛</ci>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.271</num>
+		<query>
+			<formula id="q_607">
+				<math >
+					<cerror>
+						<csymbol cd="ambiguous">fragments</csymbol>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<csymbol cd="latexml">limit-supremum</csymbol>
+							<apply>
+								<ci>→</ci>
+								<ci>𝑛</ci>
+								<infinity/>
+							</apply>
+						</apply>
+						<cerror>
+							<csymbol cd="ambiguous">fragments</csymbol>
+							<ci>{</ci>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑋</ci>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑋</ci>
+								<apply>
+									<plus/>
+									<ci>𝑛</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<gt/>
+							<cn type="integer">0</cn>
+							<ci>}</ci>
+						</cerror>
+					</cerror>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.272</num>
+		<query>
+			<formula id="q_626">
+				<math >
+					<apply>
+						<and/>
+						<apply>
+							<eq/>
+							<cn type="integer">1</cn>
+							<apply>
+								<root/>
+								<apply>
+									<times/>
+									<apply>
+										<minus/>
+										<cn type="integer">1</cn>
+									</apply>
+									<apply>
+										<minus/>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<times/>
+								<apply>
+									<root/>
+									<apply>
+										<minus/>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+								<apply>
+									<root/>
+									<apply>
+										<minus/>
+										<cn type="integer">1</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<times/>
+								<ci>𝑖</ci>
+								<ci>𝑖</ci>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑖</ci>
+								<cn type="integer">2</cn>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<apply>
+								<minus/>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.273</num>
+		<query>
+			<formula id="q_630">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<root/>
+							<degree>
+								<apply>
+									<csymbol cd="latexml">continued-fraction</csymbol>
+									<cn type="integer">1</cn>
+									<cn type="integer">2</cn>
+								</apply>
+							</degree>
+							<ci>𝑥</ci>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<apply>
+									<csymbol cd="latexml">continued-fraction</csymbol>
+									<cn type="integer">1</cn>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.274</num>
+		<query>
+			<formula id="q_640">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝐻</ci>
+								<ci>𝑠</ci>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝐑</ci>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="latexml">conditional-set</csymbol>
+							<apply>
+								<in/>
+								<ci>𝑓</ci>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝒮</ci>
+										<ci>′</ci>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝐑</ci>
+										<ci>𝑛</ci>
+									</apply>
+								</apply>
+							</apply>
+							<apply>
+								<in/>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<apply>
+											<plus/>
+											<cn type="integer">1</cn>
+											<apply>
+												<csymbol cd="ambiguous">superscript</csymbol>
+												<apply>
+													<abs/>
+													<ci>𝜉</ci>
+												</apply>
+												<cn type="integer">2</cn>
+											</apply>
+										</apply>
+										<apply>
+											<divide/>
+											<ci>𝑠</ci>
+											<cn type="integer">2</cn>
+										</apply>
+									</apply>
+									<ci>ℱ</ci>
+									<ci>𝑓</ci>
+								</apply>
+								<apply>
+									<times/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝐿</ci>
+										<cn type="integer">2</cn>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝐑</ci>
+										<ci>𝑛</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.275</num>
+		<query>
+			<formula id="q_647">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<apply>
+								<minus/>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<int/>
+									<cn type="integer">0</cn>
+								</apply>
+								<infinity/>
+							</apply>
+							<apply>
+								<times/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑒</ci>
+									<apply>
+										<minus/>
+										<apply>
+											<times/>
+											<ci>𝑥</ci>
+											<ci>𝑡</ci>
+										</apply>
+									</apply>
+								</apply>
+								<apply>
+									<csymbol cd="latexml">differential-d</csymbol>
+									<ci>𝑡</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.276</num>
+		<query>
+			<formula id="q_650">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑛</ci>
+									<infinity/>
+								</apply>
+							</apply>
+							<apply>
+								<divide/>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑛</ci>
+									<ci>𝑘</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝑎</ci>
+									<ci>𝑛</ci>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">0</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.277</num>
+		<query>
+			<formula id="q_656">
+				<math >
+					<apply>
+						<geq/>
+						<apply>
+							<divide/>
+							<ci>𝑆</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<root/>
+							<degree>
+								<ci>𝑛</ci>
+							</degree>
+							<ci>𝑃</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.278</num>
+		<query>
+			<formula id="q_662">
+				<math >
+					<apply>
+						<subset/>
+						<apply>
+							<times/>
+							<ci>𝑓</ci>
+							<ci>ℚ</ci>
+						</apply>
+						<ci>ℚ</ci>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.279</num>
+		<query>
+			<formula id="q_671">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑥</ci>
+									<cn type="integer">0</cn>
+								</apply>
+							</apply>
+							<apply>
+								<plus/>
+								<apply>
+									<times/>
+									<ci>𝑓</ci>
+									<ci>𝑥</ci>
+								</apply>
+								<apply>
+									<divide/>
+									<cn type="integer">1</cn>
+									<apply>
+										<times/>
+										<ci>𝑓</ci>
+										<ci>𝑥</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">2</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.280</num>
+		<query>
+			<formula id="q_680">
+				<math >
+					<apply>
+						<and/>
+						<apply>
+							<eq/>
+							<apply>
+								<divide/>
+								<apply>
+									<times/>
+									<ci>𝑑</ci>
+									<ci>
+										<mtext mathsize="70%">ExecutionTime</mtext>
+									</ci>
+									<interval closure="open">
+										<ci>𝑛</ci>
+										<ci>𝑘</ci>
+									</interval>
+								</apply>
+								<apply>
+									<times/>
+									<ci>𝑑</ci>
+									<ci>𝑘</ci>
+								</apply>
+							</apply>
+							<apply>
+								<minus/>
+								<apply>
+									<times/>
+									<cn type="integer">4</cn>
+									<ci>Δ</ci>
+								</apply>
+								<apply>
+									<divide/>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑛</ci>
+										<ci>Δ</ci>
+									</apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑘</ci>
+										<cn type="integer">2</cn>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<eq/>
+							<cn type="integer">0</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.281</num>
+		<query>
+			<formula id="q_689">
+				<math >
+					<apply>
+						<ci>→</ci>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑛</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<cn type="integer">1</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.282</num>
+		<query>
+			<formula id="q_704">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑛</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<infinity/>
+						</apply>
+						<apply>
+							<divide/>
+							<cn type="integer">1</cn>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑛</ci>
+								<cn type="integer">2</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.283</num>
+		<query>
+			<formula id="q_709">
+				<math >
+					<apply>
+						<csymbol cd="latexml">assign</csymbol>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<ci>𝑥</ci>
+							<apply>
+								<plus/>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<ci>𝑥</ci>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑥</ci>
+									<ci>𝑛</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.284</num>
+		<query>
+			<formula id="q_729">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<divide/>
+							<ci>𝑚</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+							<ci>…</ci>
+							<apply>
+								<divide/>
+								<cn type="integer">1</cn>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.285</num>
+		<query>
+			<formula id="q_732">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<csymbol cd="ambiguous">subscript</csymbol>
+							<ci>𝑈</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<plus/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑛</ci>
+								<cn type="integer">2</cn>
+							</apply>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.286</num>
+		<query>
+			<formula id="q_738">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<limit/>
+								<apply>
+									<ci>→</ci>
+									<ci>𝑛</ci>
+									<apply>
+										<plus/>
+										<infinity/>
+									</apply>
+								</apply>
+							</apply>
+							<apply>
+								<times/>
+								<ci>𝑛</ci>
+								<apply>
+									<csymbol cd="ambiguous">subscript</csymbol>
+									<ci>𝑎</ci>
+									<ci>𝑛</ci>
+								</apply>
+							</apply>
+						</apply>
+						<cn type="integer">0</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.287</num>
+		<query>
+			<formula id="q_740">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑖</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<times/>
+								<cn type="integer">2</cn>
+								<ci>𝑖</ci>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<cn type="integer">2</cn>
+								<ci>𝑖</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.288</num>
+		<query>
+			<formula id="q_745">
+				<math >
+					<list>
+						<apply>
+							<sum/>
+							<apply>
+								<divide/>
+								<apply>
+									<times/>
+									<ci>
+										<mtext mathsize="70%">sgn</mtext>
+									</ci>
+									<apply>
+										<sin/>
+										<ci>𝑛</ci>
+									</apply>
+								</apply>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+						<ci>
+							<mtext>or</mtext>
+						</ci>
+						<apply>
+							<sum/>
+							<apply>
+								<divide/>
+								<apply>
+									<sin/>
+									<ci>𝑛</ci>
+								</apply>
+								<apply>
+									<times/>
+									<ci>𝑛</ci>
+									<apply>
+										<abs/>
+										<apply>
+											<sin/>
+											<ci>𝑛</ci>
+										</apply>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+					</list>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.289</num>
+		<query>
+			<formula id="q_766">
+				<math >
+					<apply>
+						<plus/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑥</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑦</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑧</ci>
+							<ci>𝑛</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.290</num>
+		<query>
+			<formula id="q_772">
+				<math >
+					<apply>
+						<minus/>
+						<apply>
+							<times/>
+							<cn type="integer">7</cn>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<cn type="integer">11</cn>
+								<apply>
+									<plus/>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑛</ci>
+									</apply>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<cn type="integer">3</cn>
+							<apply>
+								<minus/>
+								<apply>
+									<times/>
+									<cn type="integer">4</cn>
+									<ci>𝑛</ci>
+								</apply>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.291</num>
+		<query>
+			<formula id="q_780">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑛</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<infinity/>
+						</apply>
+						<apply>
+							<divide/>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<csymbol cd="latexml">product</csymbol>
+										<apply>
+											<eq/>
+											<ci>𝑘</ci>
+											<cn type="integer">1</cn>
+										</apply>
+									</apply>
+									<ci>𝑛</ci>
+								</apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑘</ci>
+									</apply>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<factorial/>
+								<apply>
+									<plus/>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝑛</ci>
+									</apply>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.292</num>
+		<query>
+			<formula id="q_794">
+				<math >
+					<apply>
+						<geq/>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<plus/>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<ci>𝑘</ci>
+						</apply>
+						<apply>
+							<plus/>
+							<cn type="integer">1</cn>
+							<apply>
+								<times/>
+								<ci>𝑛</ci>
+								<ci>𝑘</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.293</num>
+		<query>
+			<formula id="q_795">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑗</ci>
+									<cn type="integer">2</cn>
+								</apply>
+							</apply>
+							<apply>
+								<minus/>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+						</apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<ci>𝑗</ci>
+							<cn type="integer">2</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.294</num>
+		<query>
+			<formula id="q_804">
+				<math >
+					<apply>
+						<approx/>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝐻</ci>
+								<ci>𝑖</ci>
+							</apply>
+							<interval closure="open">
+								<ci>𝑋</ci>
+								<ci>ℱ</ci>
+							</interval>
+						</apply>
+						<apply>
+							<times/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>ℍ</ci>
+								<ci>𝑖</ci>
+							</apply>
+							<interval closure="open">
+								<ci>𝑋</ci>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<ci>𝒢</ci>
+									<ci>∙</ci>
+								</apply>
+							</interval>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.295</num>
+		<query>
+			<formula id="q_808">
+				<math >
+					<apply>
+						<apply>
+							<csymbol cd="ambiguous">superscript</csymbol>
+							<apply>
+								<csymbol cd="ambiguous">subscript</csymbol>
+								<sum/>
+								<apply>
+									<eq/>
+									<ci>𝑛</ci>
+									<cn type="integer">1</cn>
+								</apply>
+							</apply>
+							<infinity/>
+						</apply>
+						<apply>
+							<times/>
+							<ci>𝑛</ci>
+							<apply>
+								<plus/>
+								<ci>𝑛</ci>
+								<cn type="integer">1</cn>
+							</apply>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑥</ci>
+								<ci>𝑛</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.296</num>
+		<query>
+			<formula id="q_811">
+				<math >
+					<apply>
+						<csymbol cd="ambiguous">formulae-sequence</csymbol>
+						<apply>
+							<eq/>
+							<apply>
+								<csymbol cd="ambiguous">superscript</csymbol>
+								<ci>𝑒</ci>
+								<ci>𝑥</ci>
+							</apply>
+							<apply>
+								<apply>
+									<csymbol cd="ambiguous">superscript</csymbol>
+									<apply>
+										<csymbol cd="ambiguous">subscript</csymbol>
+										<sum/>
+										<apply>
+											<eq/>
+											<ci>𝑛</ci>
+											<cn type="integer">0</cn>
+										</apply>
+									</apply>
+									<infinity/>
+								</apply>
+								<apply>
+									<divide/>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ci>𝑥</ci>
+										<ci>𝑛</ci>
+									</apply>
+									<apply>
+										<factorial/>
+										<ci>𝑛</ci>
+									</apply>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<in/>
+							<ci>𝑥</ci>
+							<ci>ℝ</ci>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.297</num>
+		<query>
+			<formula id="q_814">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>italic-ϕ</ci>
+							<ci>𝑛</ci>
+						</apply>
+						<cn type="integer">320</cn>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.298</num>
+		<query>
+			<formula id="q_816">
+				<math >
+					<apply>
+						<ci>→</ci>
+						<apply>
+							<times/>
+							<ci>𝛿</ci>
+							<apply>
+								<minus/>
+								<apply>
+									<times/>
+									<ci>𝑎</ci>
+									<ci>𝜒</ci>
+									<ci>𝑧</ci>
+								</apply>
+								<ci>𝑏</ci>
+							</apply>
+						</apply>
+						<apply>
+							<times/>
+							<ci>𝛿</ci>
+							<apply>
+								<minus/>
+								<ci>𝑧</ci>
+								<ci>𝑐</ci>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.299</num>
+		<query>
+			<formula id="q_834">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<minus/>
+							<apply>
+								<cos/>
+								<apply>
+									<divide/>
+									<ci>𝜋</ci>
+									<cn type="integer">5</cn>
+								</apply>
+							</apply>
+							<apply>
+								<cos/>
+								<apply>
+									<divide/>
+									<apply>
+										<times/>
+										<cn type="integer">2</cn>
+										<ci>𝜋</ci>
+									</apply>
+									<cn type="integer">5</cn>
+								</apply>
+							</apply>
+						</apply>
+						<apply>
+							<divide/>
+							<cn type="integer">1</cn>
+							<cn type="integer">2</cn>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+	<topic>
+		<num>B.300</num>
+		<query>
+			<formula id="q_837">
+				<math >
+					<apply>
+						<eq/>
+						<apply>
+							<times/>
+							<ci>𝑓</ci>
+							<ci>𝑥</ci>
+						</apply>
+						<apply>
+							<divide/>
+							<cn type="integer">1</cn>
+							<apply>
+								<plus/>
+								<cn type="integer">1</cn>
+								<apply>
+									<apply>
+										<csymbol cd="ambiguous">superscript</csymbol>
+										<ln/>
+										<cn type="integer">2</cn>
+									</apply>
+									<ci>𝑥</ci>
+								</apply>
+							</apply>
+						</apply>
+					</apply>
+				</math>
+			</formula>
+		</query>
+	</topic>
+</topics>
